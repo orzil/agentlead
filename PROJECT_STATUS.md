@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-07-16 (end of session)*
+*Last updated: 2026-08-06 (end of session)*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -206,20 +206,80 @@ so "the YouTube algorithm" rescues video-editing spam from `SPAM_RE`. Cross-post
 via fuzzy dedup and the scorer rates it 1–2, so it costs ~1 Gemini call. Left alone — narrowing
 `algorithm` risks losing real algorithm gigs (a core niche).
 
+## Session 2026-08-06 — went live: keys, cloud deploy, FB discovery, Easy Apply
+
+**The agent had been dead for 11 days** (last run 2026-07-26) and was both blind and mute:
+no Gemini key, no Telegram chat id. Both now configured and verified end-to-end.
+
+**Live now**
+- **Telegram**: chat id `[configured in .env]`, `--test-telegram` delivered. Bot `@hametziut_deals_bot`.
+- **Gemini**: key works, 50 models, `gemini-flash-latest` selected; sample Hebrew-OCR gig scored 10/10.
+- **Cloud**: repo `orzil/agentlead` (private), 3 secrets set, both workflows registered and running.
+  `.gitignore` widened to `*.csv` + `rc.txt` — those held scraped posts with real posters' names.
+
+**Freelancer.com dropped** (decision was 3 weeks overdue). Fetcher deleted, auto-bid path removed
+from `replier.py`, config cleaned, `SUPPORTED` now Reddit-only. **482 unscored Freelancer leads
+retired** — they were 35% of the backlog and would have eaten a third of the daily Gemini quota on
+a dead source. Backlog 1,380 → 898.
+
+**New: `discover_fb_groups.py`** (mirrors `discover_whatsapp_groups.py`; new `facebook_groups`
+table). Public groups graduate into `FACEBOOK_GROUPS`; private ones become a ranked join list
+(`facebook_groups.md`, **14 private groups**) + a Telegram ping. The agent never sends a join
+request. New weekly workflow `.github/workflows/fbgroups.yml` runs discovery **and** probing in the
+cloud — decided after measuring that both surfaces wall the home IP.
+
+**LinkedIn Easy Apply pass** — `f_AL=true`, source label `linkedin/easyapply`, `⚡ Easy Apply` in
+the push, sorted after Israel in the detail-fetch priority. 9 → 17 queries/run.
+
+### Measured this session (all changed a decision)
+- **`f_AL=true` IS honoured; `f_JT` is NOT.** Easy Apply returned only 3/10 overlap with the
+  unfiltered baseline (real filtering), while `f_JT=C` returned 10/10 identical ids and 4/4 detail
+  pages said "Employment type: Full-time". Confirms and sharpens the July finding.
+- **Easy Apply cannot be detected per-job logged-out.** Every guest detail page carries the same
+  `apply-link-offsite…contextual-sign-in-modal` markers — sign-in chrome, not a job signal. No
+  `applyUrl`, no "Easy Apply" string. Hence the flag comes from *which query found the job*.
+- **DuckDuckGo is the only search engine still serving organic results** (8 FB slugs, 4 new).
+  Bing, Startpage, Mojeek captcha-walled; Brave 429'd. DDG then challenged this IP (HTTP 202)
+  mid-session, POST and `/lite/` included → moved to cloud.
+- **`mine_db` is useless for Facebook**: all 17 slugs in 6,794 stored posts were already in config,
+  0 new. Opposite of WhatsApp, where DB-mining was the best surface — FB posts link their own group.
+- **LinkedIn job alerts are ALREADY arriving in Gmail daily** (this doc previously said "awaiting
+  user setup" — wrong). `jobalerts-noreply@linkedin.com` is delivering on-target leads right now:
+  *"Computer Vision & ML Expert at Alignerr: up to $150/hour"* (recurring), *"Senior Computer Vision
+  Engineer at ShipIn Systems"*, *"Data Engineer (5-month part-time contract) at Dragons Group"*.
+  **The only missing piece is the Gmail app password.** This is now the highest-value user action.
+- **Or's `facebookmail.com` mail carries no professional groups** — his joined groups are
+  apartment/neighborhood groups (נווה אביבים, דירות בתל אביב), and no group has "All posts" on. So
+  the FB email channel currently yields exactly zero. Only real find: the Hebrew group
+  *"בינה מלאכותית בגובה העיניים | AI פרקטי"* (slug not yet resolved).
+
 ## Open items
-- **User action (5 min, unlocks the reliable half of LinkedIn):** create the LinkedIn saved-search
-  job alerts → README §5. Until then only the best-effort guest scraper runs.
+- **⭐ User action, highest value (3 min): Gmail app password** → `IMAP_USER`/`IMAP_PASSWORD` +
+  the two GitHub secrets. LinkedIn job alerts are *already* arriving daily with on-target
+  $100–150/hr CV leads; the agent simply can't read them. This also unlocks every private FB group
+  and Upwork/Wellfound. Nothing else on this list comes close in value per minute.
+- **User action:** review `facebook_groups.md` (14 private groups, ranked) → join the relevant
+  ones, then 🔔 **All posts**. Mark them with `discover_fb_groups.py --joined <slug>`.
+  Pointless until the app password above exists — the notifications land in Gmail unread.
 - **User action:** review `whatsapp_groups.md` and join the 2–3 ranked groups (top hit is the
   Israeli dev-jobs group). Then re-run `--write` to refresh, or `--joined <code>` to mark them.
+- The LinkedIn **saved-search alerts are already set up** — this was previously listed as a pending
+  user action and was wrong. Verified 2026-08-06 in Gmail.
 - 15 WhatsApp invites still `pending` (behind the per-run cap) — the daily job drains 10/day, or
   run `discover_whatsapp_groups.py --cap 25` once to clear them.
 - Watch LinkedIn yield for a few days: guest filters are unreliable, so most of each run gates out
   as full-time. If yield stays ~0 while the email alerts deliver, demote the scraper to a longer
   interval (or drop it) and keep the email path.
-- 18 FB groups still `public=None` (throttle allows ~9/session;
-  run `python -X utf8 probe_fb_groups.py --write` on a fresh day BEFORE any scan)
-- 5 IL public groups unreached in the 2026-07-14 scan (listed above) — scrape next fresh day
-- Freelancer.com go/no-go decision (~July 15) — **now overdue**
+- 17 FB groups still unprobed — now handled by the weekly **cloud** `fbgroups.yml` run
+  (12/run). Never probe from the home IP: a Facebook throttle there surfaces as a
+  login/checkpoint wall on Or's own account.
+- 5 IL public groups unreached in the 2026-07-14 scan (listed above) — the cloud scraper's
+  rotation covers them now.
+- Resolve the slug for *"בינה מלאכותית בגובה העיניים | AI פרקטי"* (found in Gmail, looks like a
+  genuinely relevant Hebrew AI group) and add it to the discovery table.
+- Watch the LinkedIn Easy Apply pass for a few days. Expect most of it to gate out as
+  `gate_full_time` — that's correct. If yield stays ~0, drop the dimension rather than loosening
+  `FT_RE`; no-full-time is a hard user rule.
 - Idea parked: ingest Google-indexed FB post snippets (`site:facebook.com/groups/<slug>`) for public groups the scraper can't render
 - Idea parked: local Ollama scoring if the user prefers not to use Gemini
 - Idea parked: Reddit subs evaluated and rejected — r/slavelabour (low pay), r/INAT (unpaid

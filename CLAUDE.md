@@ -5,10 +5,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 **AgentLead** is a zero-cost lead-generation agent for a freelance AI engineer (Or) based in
-Israel. It polls ~17 families of free sources for freelance/contract gigs in computer vision,
+Israel. It polls ~16 families of free sources for freelance/contract gigs in computer vision,
 OCR, image processing, ML, algorithms, data viz, and AI-integrated web, filters noise with a
 regex gate + free-tier LLM scoring (1–10), pushes strong leads to Telegram, and can auto-reply
-on the two channels with legitimate posting APIs (Reddit, Freelancer.com).
+on Reddit — the only remaining channel with a legitimate posting API.
+
+It runs on **GitHub Actions** (repo `orzil/agentlead`, private): `leadagent.yml` 4×/day and
+`fbgroups.yml` weekly. `leads.db` lives in the Actions cache, never in git. Anything that
+touches Facebook or a search engine **must run in the cloud** — see the IP rules below.
 
 **Hard constraint: everything must stay free-tier.** No paid APIs, no VPS, no Apify. Scoring is
 Gemini free tier (or local Ollama); notifications are a Telegram bot; most sources are public
@@ -38,7 +42,13 @@ python -X utf8 main.py --replies             # list pending/failed/sent auto-rep
 python -X utf8 main.py --approve-reply 3     # approve+send one reply (or 'all')
 python -X utf8 probe_fb_groups.py --write    # probe unresolved FB group slugs public/private
 python -X utf8 discover_whatsapp_groups.py --search --write   # find joinable WhatsApp groups
+python -X utf8 discover_fb_groups.py --write # FB group join list (add --search/--probe in CLOUD)
 ```
+
+**Never run `--search` or `--probe` (Facebook or DuckDuckGo) from Or's machine.** A Facebook
+throttle on his home IP surfaces as a login/checkpoint wall on *his account*, and DDG challenges
+the IP (HTTP 202) after a handful of queries — both measured. Trigger the cloud instead:
+`gh workflow run "Facebook group discovery" --repo orzil/agentlead`.
 
 No test suite, linter, or build step exists — this is a script-run project. `pip install -r
 requirements.txt` to set up (`rapidfuzz` and `praw` degrade gracefully if missing; `playwright`
@@ -91,6 +101,15 @@ one job tuple.
   `/comm/` links — that canonical form is the shared dedup key between the scraper and the
   email path. On a 999/403 bot-wall it sets a 6h cooldown in `kv` and stops; retrying extends
   the block. **The email-alert path is the robust half** — if the scraper dies, it keeps working.
+  Verified 2026-08-06: those saved-search alerts are **already arriving daily** in Or's Gmail with
+  on-target $100–150/hr CV leads. Only the Gmail app password is missing.
+- **LinkedIn Easy Apply** — `f_AL=true` **is** honoured (measured: only 3/10 job ids overlapped the
+  unfiltered baseline), unlike `f_JT`, which is ignored outright (10/10 identical, and every detail
+  page said "Employment type: Full-time"). Easy Apply is **not detectable per-job** logged-out:
+  every guest detail page carries the same `apply-link-offsite…contextual-sign-in-modal` markers,
+  with no `applyUrl` and no "Easy Apply" string — that's sign-in chrome, not a job signal. So the
+  flag comes from *which query found the job* (source label `linkedin/easyapply`), never from
+  parsing the page. Expect most of this pass to gate out as full-time; that is correct.
 - **Reddit sitewide search** (`reddit_fetcher.fetch_search`) — plain keyword queries rank
   semantically and return career-advice threads and seeker self-promos (measured: 14/20 passed
   the gate, 0 real). Queries anchor on `title:(hiring OR task)` instead. `search.rss` also mixes
@@ -104,19 +123,26 @@ several `config.py` sets key off it (`DOMAIN_REQUIRED_SOURCES`, `INTENT_REQUIRED
 adding or renaming a fetcher. Sources fall back gracefully (e.g. `reddit_fetcher` uses the public
 RSS feed when no API creds are set).
 
-**Discovery scripts (not fetchers).** `probe_fb_groups.py` (FB group public/private) and
-`discover_whatsapp_groups.py` (joinable WhatsApp invite links → `whatsapp_groups` table +
-`whatsapp_groups.md`) produce lists for the *user* to act on; they never enter the lead
-pipeline. WhatsApp is discovery-only **by design** — there is no logged-out read surface, and
+**Discovery scripts (not fetchers).** `probe_fb_groups.py` (re-probes slugs already in config),
+`discover_fb_groups.py` (finds groups *not* in config → `facebook_groups` table +
+`facebook_groups.md`), and `discover_whatsapp_groups.py` (joinable WhatsApp invite links →
+`whatsapp_groups` table + `whatsapp_groups.md`) produce lists for the *user* to act on; they never
+enter the lead pipeline. `discover_fb_groups.py` splits its output by privacy: **public** groups
+graduate into `FACEBOOK_GROUPS` and get scraped logged-out; **private** ones become a ranked join
+list the user acts on by hand — the agent never sends a join request. Two surfaces, both measured
+2026-08-06: DB-mining is free but yields **0** for Facebook (all 17 slugs in 6,794 stored posts
+were already known — the opposite of WhatsApp, where invite links get shared constantly), and
+DuckDuckGo is the **only** engine still returning organic results (Bing/Startpage/Mojeek
+captcha-walled, Brave 429). WhatsApp is discovery-only **by design** — there is no logged-out read surface, and
 driving WhatsApp Web would risk the user's personal number, so the agent finds the doors and the
 user walks through them. If a joined group proves valuable, cover it via notification emails
 (the private-Facebook-group trick), never by automation.
 
-**Outreach (`replier.py` + `notifier.py`).** Auto-reply is **Reddit and Freelancer.com only** —
-Facebook is deliberately excluded because automating the user's account risks a ban. Safety rails
-are load-bearing: `REPLY_MODE=approve` by default (nothing sends without `--approve-reply`), one
-reply per lead ever (UNIQUE on `replies.lead_id`), `REPLY_DAILY_CAP`/day, senders no-op when
-credentials are missing. `notifier.py` falls back to `outbox.log` when Telegram is unconfigured
+**Outreach (`replier.py` + `notifier.py`).** Auto-reply is **Reddit only** — Facebook and LinkedIn
+are deliberately excluded because automating the user's account risks a ban, and Freelancer.com was
+dropped 2026-08-06 (bid floods, budgets below rate). Safety rails are load-bearing:
+`REPLY_MODE=approve` by default (nothing sends without `--approve-reply`), one reply per lead ever
+(UNIQUE on `replies.lead_id`), `REPLY_DAILY_CAP`/day, senders no-op when credentials are missing. `notifier.py` falls back to `outbox.log` when Telegram is unconfigured
 so nothing is lost.
 
 ## config.py — the tuning surface
