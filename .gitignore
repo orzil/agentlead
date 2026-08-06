@@ -1,0 +1,22 @@
+# secrets & local state — NEVER commit
+.env
+leads.db
+leads.db-*
+*.log
+outbox.log
+
+# exports / scratch — lead data (incl. posters' names) stays out of git; the
+# cloud run keeps leads.db in the Actions cache instead. See SETUP_CLOUD.md.
+leads.html
+*.csv
+rc.txt
+*.tmp
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# playwright
+/ms-playwright/
