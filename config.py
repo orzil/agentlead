@@ -52,7 +52,10 @@ GEMINI_MODEL_PREFERENCE = [
     m.strip()
     for m in env(
         "GEMINI_MODELS",
-        "gemini-flash-latest,gemini-3-flash,gemini-2.5-flash,gemini-2.0-flash",
+        # gemini-2.5-flash removed 2026-08-06: "no longer available to new users".
+        # The *-latest aliases point at preview models whose free-tier daily
+        # request budget is tiny, so the stable 2.0 models come first.
+        "gemini-2.0-flash,gemini-2.0-flash-lite,gemini-flash-latest,gemini-3-flash",
     ).split(",")
     if m.strip()
 ]
