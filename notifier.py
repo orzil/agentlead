@@ -60,6 +60,10 @@ def notify_lead(row: sqlite3.Row, pitch: str | None = None) -> bool:
     ]
     if row["budget"]:
         lines.append(f"\U0001F4B0 {html.escape(row['budget'])}")
+    # Easy Apply comes from the source label, not the post text - LinkedIn's
+    # logged-out pages never expose it (see config.LINKEDIN_EASYAPPLY).
+    if row["source"].endswith("/easyapply"):
+        lines.append("⚡ <b>Easy Apply</b> - one tap, no cover letter")
     if red_flags:
         lines.append("⚠️ " + html.escape(", ".join(red_flags)))
     if pitch:

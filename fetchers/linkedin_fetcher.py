@@ -97,8 +97,8 @@ def _get(client, url: str, params: dict | None = None):
 
 
 def _search(client, keywords: str, location: str, geo_id: str, remote: bool,
-            region: str = "WW") -> list[dict]:
-    """One search query -> list of {job_id, url, title, company, location, posted_at, region}."""
+            region: str = "WW", easy: bool = False) -> list[dict]:
+    """One search query -> list of {job_id, url, title, company, location, posted_at, region, easy}."""
     from bs4 import BeautifulSoup
 
     params = {
@@ -112,6 +112,10 @@ def _search(client, keywords: str, location: str, geo_id: str, remote: bool,
         params["geoId"] = geo_id
     if remote:
         params["f_WT"] = "2"
+    if easy:
+        # f_AL is the one filter measured to actually work (see config).
+        params["f_AL"] = "true"
+        params["f_TPR"] = config.LINKEDIN_EASYAPPLY_TPR
 
     r = _get(client, SEARCH_URL, params)
     soup = BeautifulSoup(r.text, "html.parser")
@@ -141,6 +145,7 @@ def _search(client, keywords: str, location: str, geo_id: str, remote: bool,
             "location": loc.get_text(strip=True) if loc else "",
             "posted_at": posted,
             "region": region,
+            "easy": easy,
         })
     return out
 
@@ -179,9 +184,16 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
     except ValueError:
         pass
 
-    queries = [(kw, "Worldwide", "92000000", True, "WW") for kw in config.LINKEDIN_QUERIES]
+    queries = [(kw, "Worldwide", "92000000", True, "WW", False) for kw in config.LINKEDIN_QUERIES]
     # Israel searches drop the remote filter so on-site-in-Israel gigs surface too
-    queries += [(kw, "Israel", "", False, "IL") for kw in config.LINKEDIN_IL_QUERIES]
+    queries += [(kw, "Israel", "", False, "IL", False) for kw in config.LINKEDIN_IL_QUERIES]
+    # Easy Apply pass: one-tap applications, so they're worth surfacing separately
+    # even though most will gate out as full-time. Israel first, then worldwide-remote.
+    if config.LINKEDIN_EASYAPPLY:
+        queries += [(kw, "Israel", "", False, "IL", True)
+                    for kw in config.LINKEDIN_EASYAPPLY_QUERIES]
+        queries += [(kw, "Worldwide", "92000000", True, "WW", True)
+                    for kw in config.LINKEDIN_EASYAPPLY_QUERIES]
 
     headers = {"User-Agent": config.USER_AGENT,
                "Accept": "text/html,application/xhtml+xml"}
@@ -190,11 +202,11 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
 
     with httpx.Client(headers=headers, timeout=25, follow_redirects=True) as client:
         try:
-            for i, (kw, loc, geo, remote, region) in enumerate(queries):
+            for i, (kw, loc, geo, remote, region, easy) in enumerate(queries):
                 if i:
                     time.sleep(_SEARCH_SLEEP)
                 try:
-                    for c in _search(client, kw, loc, geo, remote, region):
+                    for c in _search(client, kw, loc, geo, remote, region, easy):
                         cards.setdefault(c["url"], c)   # dedup across queries
                 except _Blocked:
                     raise
@@ -202,12 +214,16 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
                     log.error("search %r/%s failed: %s", kw, loc, e)
 
             fresh = [c for c in cards.values() if not _known(conn, c["url"])]
-            # Israel first: the engineer is in Israel, so IL gigs (remote OR on-site)
-            # are the highest-value segment. Without this the worldwide queries -
-            # which run first - would eat the detail-fetch cap every time.
-            fresh.sort(key=lambda c: 0 if c["region"] == "IL" else 1)
-            log.info("%d cards, %d new (%d IL)", len(cards), len(fresh),
-                     sum(1 for c in fresh if c["region"] == "IL"))
+            # Israel first, then Easy Apply: the engineer is in Israel, so IL gigs
+            # (remote OR on-site) are the highest-value segment, and a one-tap
+            # application is worth more than an equivalent 20-minute one. Without
+            # this sort the worldwide queries - which run first - would eat the
+            # detail-fetch cap every time.
+            fresh.sort(key=lambda c: (0 if c["region"] == "IL" else 1,
+                                      0 if c.get("easy") else 1))
+            log.info("%d cards, %d new (%d IL, %d easy-apply)", len(cards), len(fresh),
+                     sum(1 for c in fresh if c["region"] == "IL"),
+                     sum(1 for c in fresh if c.get("easy")))
             if len(fresh) > config.LINKEDIN_DETAIL_CAP:
                 log.info("capping detail fetches at %d; the rest come next run",
                          config.LINKEDIN_DETAIL_CAP)
@@ -223,11 +239,12 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
                     continue
                 if not desc:
                     continue
+                easy_line = "Application: LinkedIn Easy Apply (one-tap)\n" if c.get("easy") else ""
                 text = (f"{c['title']} at {c['company']}\n"
-                        f"Location: {c['location']}\n"
+                        f"Location: {c['location']}\n{easy_line}"
                         f"{criteria}\n\n{desc[:3500]}")
                 leads.append(Lead(
-                    source="linkedin",
+                    source="linkedin/easyapply" if c.get("easy") else "linkedin",
                     url=c["url"],
                     raw_text=text,
                     author=c["company"] or None,

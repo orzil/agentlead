@@ -87,6 +87,26 @@ CREATE TABLE IF NOT EXISTS whatsapp_groups (
                                       -- clears the per-run validation cap
 );
 CREATE INDEX IF NOT EXISTS idx_wa_status ON whatsapp_groups(status);
+
+-- Facebook groups DISCOVERED by discover_fb_groups.py (distinct from the curated
+-- config.FACEBOOK_GROUPS list the scraper reads). Public ones graduate into that
+-- config; private ones become a join list for the user - the agent never sends a
+-- join request, because automating the user's FB account risks a ban.
+CREATE TABLE IF NOT EXISTS facebook_groups (
+    slug TEXT PRIMARY KEY,            -- facebook.com/groups/<slug>
+    url TEXT NOT NULL,
+    name TEXT,                        -- og:title / page title once probed
+    status TEXT NOT NULL DEFAULT 'pending',  -- pending|public|private|gone|unknown
+    relevance INTEGER DEFAULT 0,      -- keyword hits in the group name
+    region TEXT,                      -- IL (Hebrew name) | GLOBAL
+    found_via TEXT,                   -- leads_db | ddg | gmail | config
+    first_seen TEXT NOT NULL,
+    last_checked TEXT,
+    in_config INTEGER DEFAULT 0,      -- already in config.FACEBOOK_GROUPS
+    joined INTEGER DEFAULT 0,         -- user joined it (private ones)
+    notified INTEGER DEFAULT 0        -- per-row, same reasoning as whatsapp_groups
+);
+CREATE INDEX IF NOT EXISTS idx_fb_status ON facebook_groups(status);
 """
 
 # Columns added after a table first shipped. ALTER TABLE ADD COLUMN is cheap and

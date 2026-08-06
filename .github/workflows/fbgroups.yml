@@ -1,0 +1,84 @@
+name: Facebook group discovery
+
+# Finds new Facebook groups and classifies them public/private ON GITHUB'S IPs.
+#
+# Why this can't run on the user's machine (both surfaces, same reason):
+#   * Facebook rate-limits per IP. A block on the machine Or browses Facebook
+#     from surfaces as a login/checkpoint wall on HIS account.
+#   * DuckDuckGo challenges (HTTP 202) an IP after a handful of queries -
+#     measured on the home IP 2026-08-06, mid-session.
+# A GitHub runner gets a fresh IP every run, so both problems disappear.
+#
+# Output: facebook_groups.md (a ranked JOIN list for private groups) + a Telegram
+# ping. Public groups print as paste-ready config.FACEBOOK_GROUPS lines.
+# The agent NEVER sends a join request - that would risk Or's account.
+
+on:
+  schedule:
+    - cron: "23 3 * * 1"    # Mondays, ahead of the week
+  workflow_dispatch:
+    inputs:
+      probe_cap:
+        description: "Max groups to probe this run (FB throttles ~10 quick loads)"
+        default: "12"
+      search:
+        description: "Run the DuckDuckGo discovery surface"
+        type: boolean
+        default: true
+
+concurrency:
+  group: leadagent          # shares leads.db with the main run
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Restore lead DB
+        uses: actions/cache/restore@v4
+        with:
+          path: leads.db
+          key: leadsdb-${{ github.run_id }}
+          restore-keys: leadsdb-
+
+      - name: Discover and classify groups
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python -X utf8 discover_fb_groups.py \
+            ${{ (github.event_name == 'schedule' || inputs.search) && '--search' || '' }} \
+            --probe --cap ${{ inputs.probe_cap || '12' }} \
+            --write --notify --config-lines
+
+      - name: Save lead DB
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: leads.db
+          key: leadsdb-${{ github.run_id }}
+
+      - name: Upload join list
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: facebook-groups-${{ github.run_id }}
+          path: facebook_groups.md
+          if-no-files-found: warn
+          retention-days: 30

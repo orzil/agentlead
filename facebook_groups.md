@@ -1,0 +1,87 @@
+# Facebook groups
+
+*Generated 2026-08-06T19:06:27+00:00 by `discover_fb_groups.py`.*
+
+## Join these by hand (private groups)
+
+The agent never sends join requests — automating your Facebook account is
+the one thing that can get it banned. After joining, open the group and set
+**🔔 → All posts**; Facebook then emails every new post and the agent ingests
+it over IMAP. This is the ban-proof channel and it scales to unlimited groups.
+
+| rel | region | group | link |
+|----:|:-------|:------|:-----|
+| 4 | GLOBAL | AI/ML/Data Mining/Chatbots JOBS | https://www.facebook.com/groups/aimlpljobs/ |
+| 3 | GLOBAL | Remote Jobs & Projects for Developers | https://www.facebook.com/groups/539394463145974/ |
+| 2 | GLOBAL | AI Automation Experts | https://www.facebook.com/groups/aiautomationexperts/ |
+| 2 | GLOBAL | Referral - Data Science Jobs Worldwide | https://www.facebook.com/groups/datasciencejob/ |
+| 2 | IL | דרושים - עבודות פרילנסרים | https://www.facebook.com/groups/458346604817578/ |
+| 2 | IL | מתכנתים פרילנסרים | https://www.facebook.com/groups/1502756793303704/ |
+| 2 | IL | קהילת יזמים/סטארטאפים (Apps) | https://www.facebook.com/groups/appsentrepreneur/ |
+| 1 | GLOBAL | Computer Vision Israel | https://www.facebook.com/groups/1831991027038183/ |
+| 1 | GLOBAL | Freelancers UK | https://www.facebook.com/groups/freelanceuk/ |
+| 1 | GLOBAL | London Startups | https://www.facebook.com/groups/LDNstartups/ |
+| 1 | GLOBAL | Mobile Developers Israel | https://www.facebook.com/groups/Mobile.Developers.Israel/ |
+| 1 | IL | מפתחים בשביל אחוזים | https://www.facebook.com/groups/1644220639231386/ |
+| 1 | IL | עבודה למפתחי אינטרנט (Web Devs IL) | https://www.facebook.com/groups/111444215533299/ |
+| 0 | GLOBAL | SaaS Founders | https://www.facebook.com/groups/saasfoundersnetwork/ |
+
+## Scraped automatically (public, 22)
+
+No action needed — the logged-out scraper reads these on GitHub's IPs.
+
+| rel | region | group | in config |
+|----:|:-------|:------|:----------|
+| 5 | GLOBAL | Data Science / ML / AI Freelance Jobs | yes |
+| 3 | GLOBAL | Data Science/ML Jobs | yes |
+| 3 | GLOBAL | ML & Data Science Jobs Israel | yes |
+| 3 | IL | דרושים מפתחים ומתכנתים | yes |
+| 3 | IL | דרושים מתכנתים ואנשי פיתוח | yes |
+| 2 | GLOBAL | AI gigs - Jobs in AI | yes |
+| 2 | GLOBAL | Israel Freelance Developers | yes |
+| 2 | GLOBAL | Python Jobs (Israel) | yes |
+| 2 | GLOBAL | Software Developer Jobs London/UK | yes |
+| 2 | IL | AI ISRAEL - בינה מלאכותית | yes |
+| 2 | IL | דרושים פרילנסרים וטאלנטים בדיגיטל | yes |
+| 2 | IL | פרילנסרים בהייטק | yes |
+| 1 | GLOBAL | Freelancers Networking - Israel | yes |
+| 1 | GLOBAL | Fullstack Developers Israel | yes |
+| 1 | GLOBAL | Jobs for Devs JLM (Jerusalem) | yes |
+| 1 | GLOBAL | Machine & Deep Learning Israel | yes |
+| 1 | GLOBAL | UK Software Developers Group | yes |
+| 1 | GLOBAL | UK Startups Group | yes |
+| 1 | IL | דרושים מפתחי אפליקציות | yes |
+| 1 | IL | זירת פרילנסרים | yes |
+| 1 | IL | משרות WEB | yes |
+| 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
+
+## Not yet probed (26)
+
+Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
+
+- `2133987156657804` (found via config)
+- `1271378943826323` (found via config)
+- `aibusinesstools` (found via config)
+- `aiautomationagency.aaa` (found via config)
+- `3501761776707095` (found via config)
+- `chatbotjobs` (found via config)
+- `361717460552082` (found via config)
+- `556739801135588` (found via config)
+- `developersmeetstartups` (found via config)
+- `ComputerVisionGroup` (found via config)
+- `makeautomation` (found via config)
+- `inventivehub` (found via config)
+- `remotestartupjobs` (found via config)
+- `nodemation` (found via config)
+- `473051352513816` (found via ddg)
+- `832763754922199` (found via ddg)
+- `236845247011853` (found via ddg)
+- `1217610615947693` (found via ddg)
+- `1417623821789515` (found via ddg)
+- `386010697745869` (found via ddg)
+- `738857980085389` (found via ddg)
+- `freelanceIL` (found via ddg)
+- `1243544029906375` (found via ddg)
+- `findyourcofounder` (found via config)
+- `Founder.CEOs` (found via config)
+- `foundersspace` (found via config)

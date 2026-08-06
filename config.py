@@ -103,6 +103,26 @@ LINKEDIN_IL_QUERIES = ["machine learning", "computer vision", "algorithm"]
 # Descriptions cost one request each; the rest roll over to the next run.
 LINKEDIN_DETAIL_CAP = int(env("LINKEDIN_DETAIL_CAP", "15"))
 
+# --- LinkedIn "Easy Apply" pass (f_AL=true) ----------------------------------
+# Measured 2026-08-06 against the live guest endpoint: f_AL=true IS honoured
+# (only 3/10 job ids overlapped the unfiltered baseline), unlike f_JT, which was
+# ignored outright (10/10 identical to baseline, and every detail page said
+# "Employment type: Full-time"). Easy Apply is therefore targetable at the QUERY
+# level only - it cannot be detected per-job, because the logged-out detail page
+# shows the same sign-in modal chrome
+# ("apply-link-offsite...contextual-sign-in-modal") on every single job, with no
+# applyUrl and no "Easy Apply" string. So the flag comes from which query found
+# the job, never from parsing the page.
+#
+# Easy Apply skews heavily full-time, so expect most of this pass to gate out as
+# gate_full_time - that is correct, not a bug. If the pass yields ~0 real leads
+# over a few days, drop it rather than loosening FT_RE; no-full-time is a hard
+# user rule. Volume is lower than the main pass, hence the 7-day window.
+LINKEDIN_EASYAPPLY = env("LINKEDIN_EASYAPPLY", "1") in ("1", "true", "yes")
+LINKEDIN_EASYAPPLY_QUERIES = ["computer vision", "machine learning",
+                              "AI engineer", "data visualization"]
+LINKEDIN_EASYAPPLY_TPR = env("LINKEDIN_EASYAPPLY_TPR", "r604800")  # 7 days
+
 # --- Gmail IMAP (Facebook notifications, Upwork/Wellfound/LinkedIn alerts) ---
 IMAP_HOST = env("IMAP_HOST", "imap.gmail.com")
 IMAP_USER = env("IMAP_USER")            # your gmail address
@@ -218,6 +238,55 @@ EMAIL_SOURCES = {
     "angel.co": "wellfound",
     "linkedin.com": "linkedin/alert",
 }
+
+# --- Facebook group DISCOVERY (discover_fb_groups.py) -------------------------
+# Finds groups that aren't in FACEBOOK_GROUPS yet. Probed 2026-08-06: DuckDuckGo
+# HTML is the ONLY search engine still returning organic results from this IP
+# (Bing, Startpage, Mojeek captcha-walled; Brave 429'd), so it is the single
+# network surface - it degrades gracefully when it walls.
+#
+# Hebrew queries are load-bearing, not a nicety: Israeli clients post work in
+# Hebrew, and the English-only queries never surface those groups.
+FB_DDG_QUERIES = [
+    # --- Israel: client-side groups (business owners posting work) ---
+    'site:facebook.com/groups פרילנסרים',
+    'site:facebook.com/groups "דרוש מתכנת"',
+    'site:facebook.com/groups "דרוש מפתח"',
+    'site:facebook.com/groups "מחפש מפתח" פרויקט',
+    'site:facebook.com/groups דרושים תוכנה ישראל',
+    'site:facebook.com/groups סטארטאפים יזמים ישראל',
+    'site:facebook.com/groups "בינה מלאכותית" ישראל',
+    'site:facebook.com/groups אוטומציה עסקים ישראל',
+    'site:facebook.com/groups "ראייה ממוחשבת" OR "עיבוד תמונה"',
+    'site:facebook.com/groups משרות הייטק פרילנס',
+    # --- Worldwide remote: freelance/contract AI work ---
+    'site:facebook.com/groups freelance developers hiring remote',
+    'site:facebook.com/groups "AI automation" clients projects',
+    'site:facebook.com/groups computer vision freelance',
+    'site:facebook.com/groups "machine learning" freelance projects',
+    'site:facebook.com/groups remote software projects contract',
+    'site:facebook.com/groups startup founders need developer',
+]
+
+# Relevance = distinct keyword hits in the group NAME (same shape as the
+# WhatsApp scorer). Bilingual on purpose.
+FB_RELEVANT_RE = re.compile(
+    r"(freelanc|פרילנס|הייטק|high[\s-]?tech|\bAI\b|בינה מלאכותית|machine learning"
+    r"|למידת מכונה|deep learning|computer vision|ראייה ממוחשבת|עיבוד תמונה"
+    r"|\bdata\b|דאטה|\bML\b|\bdev\b|developer|פיתוח|מתכנתים|מפתחים|jobs|משרות"
+    r"|עבודה|דרושים|\bgig\b|startup|סטארטאפ|יזמים|python|תכנות|אלגוריתמ|algorithm"
+    r"|automation|אוטומציה|project|פרויקט|outsourc|מיקור חוץ)", re.IGNORECASE)
+
+# Groups that match the domain words but never carry client work. Same lesson as
+# WA_NOISE_RE: on the WhatsApp run, student-cohort groups dominated the search
+# surface and three of them scored high enough to trigger a Telegram ping.
+# "buy/sell", "second hand" etc. catch the huge Israeli marketplace groups.
+FB_NOISE_RE = re.compile(
+    r"(internship|training\s+program|freshers?|batch\s*\d|cohort|semester|admission"
+    r"|m\.?tech|b\.?tech|\bmba\b|\bmsc\b|\bbsc\b|placement|college|university|alumni"
+    r"|meetup|\bevents?\b|webinar|\bcourse\b|קורס|bootcamp|סדנה"
+    r"|יד שנייה|יד שניה|second\s*hand|buy\s*(and|&)\s*sell|קנייה ומכירה|מכירות"
+    r"|dating|שידוכים|memes|בדיחות)", re.IGNORECASE)
 
 # --- WhatsApp group DISCOVERY (never automated - see discover_whatsapp_groups) -
 # WhatsApp has no logged-out read surface, so the agent only finds joinable
