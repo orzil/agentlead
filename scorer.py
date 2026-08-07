@@ -211,8 +211,9 @@ def _score_gemini(lead: Lead) -> LeadScore | None:
         )
         if r.status_code == 429 and _is_daily_quota_error(r):
             _daily_quota_exhausted = True
-            log.warning("Gemini DAILY free-tier quota exhausted - storing the rest "
-                        "unscored; run --score-backlog tomorrow")
+            log.warning("Gemini DAILY free-tier quota exhausted - %s",
+                        "falling back to local Ollama" if config.LLM_FALLBACK_OLLAMA
+                        else "storing the rest unscored; run --score-backlog tomorrow")
             return None
         if r.status_code in (429, 500, 503) and attempt < 3:
             time.sleep(20 * attempt)
@@ -242,15 +243,41 @@ def _score_ollama(lead: Lead) -> LeadScore:
     return LeadScore.from_dict(json.loads(r.json()["message"]["content"]))
 
 
+_ollama_unavailable = False
+
+
+def _score_ollama_safe(lead: Lead) -> LeadScore | None:
+    """Ollama scoring that degrades to None instead of raising.
+
+    The fallback has to be silent where Ollama isn't installed - notably the
+    GitHub Actions runner - so the first connection failure disables it for the
+    process rather than logging once per lead.
+    """
+    global _ollama_unavailable
+    if _ollama_unavailable:
+        return None
+    try:
+        return _score_ollama(lead)
+    except Exception as e:
+        _ollama_unavailable = True
+        log.warning("Ollama unavailable (%s); storing leads unscored", str(e)[:120])
+        return None
+
+
 def score_lead(lead: Lead) -> LeadScore | None:
     """Returns a LeadScore, or None when no backend is configured (store-only mode)."""
     backend = config.LLM_BACKEND
     if backend == "gemini" and config.GEMINI_API_KEY:
-        if _daily_quota_exhausted:
-            return None    # store unscored; --score-backlog picks it up tomorrow
-        return _score_gemini(lead)
+        if not _daily_quota_exhausted:
+            score = _score_gemini(lead)
+            if score is not None:
+                return score
+            # fall through: the call above just flagged the daily quota as gone
+        if config.LLM_FALLBACK_OLLAMA:
+            return _score_ollama_safe(lead)
+        return None        # store unscored; --score-backlog picks it up tomorrow
     if backend == "ollama":
-        return _score_ollama(lead)
+        return _score_ollama_safe(lead)
     return None
 
 

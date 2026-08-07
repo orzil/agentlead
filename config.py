@@ -61,6 +61,12 @@ GEMINI_MODEL_PREFERENCE = [
 ]
 OLLAMA_URL = env("OLLAMA_URL", "http://localhost:11434")
 OLLAMA_MODEL = env("OLLAMA_MODEL", "qwen2.5:7b")
+# Hybrid scoring: use Gemini while its (small) free daily quota lasts, then fall
+# back to local Ollama, which has no quota at all. Gemini gives the better
+# judgement; Ollama gives unlimited volume - together they clear a backlog that
+# neither could alone. No-ops harmlessly where Ollama isn't installed (e.g. the
+# GitHub Actions runner), because the fallback swallows connection errors.
+LLM_FALLBACK_OLLAMA = env("LLM_FALLBACK_OLLAMA", "1") in ("1", "true", "yes")
 
 # --- Reddit -----------------------------------------------------------------
 REDDIT_CLIENT_ID = env("REDDIT_CLIENT_ID")
