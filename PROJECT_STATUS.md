@@ -231,6 +231,23 @@ cloud — decided after measuring that both surfaces wall the home IP.
 **LinkedIn Easy Apply pass** — `f_AL=true`, source label `linkedin/easyapply`, `⚡ Easy Apply` in
 the push, sorted after Israel in the detail-fetch priority. 9 → 17 queries/run.
 
+**Two blockers hit and fixed late in the session**
+- **GitHub refused runners for the private repo** — `"The job was not acquired by Runner of type
+  hosted even after multiple attempts"` after 15 min. Not a queue delay: private-repo Actions need
+  free minutes available on the account. **Repo flipped to public** (user's call) and a run picked
+  up a runner within seconds. Before flipping, git history was scanned for secrets — the Telegram
+  chat id had leaked into this file, so it was purged with `filter-branch` and force-pushed. `.env`,
+  `leads.db`, `*.csv`, `*.log`, `rc.txt` were all confirmed absent from history.
+- **Gemini free tier is far smaller than assumed.** The key died after **~20 scoring calls** with
+  `GenerateRequestsPerDayPerProjectPerModel-FreeTier`, and then *every* model 429'd — including ones
+  never called — so the daily cap behaves project-wide. `scorer.py` had claimed ~1,500/day.
+  Two fixes: (1) a per-day 429 now short-circuits instead of retrying 3× with 20s/40s backoff
+  (~70s wasted per lead, measured 12 cycles); (2) **hybrid scoring** — Gemini first for judgement,
+  then automatic fallback to **local Ollama** (`qwen2.5:7b` on the RTX 4060), which has no quota.
+  The fallback self-disables after one connection error so it no-ops on the Actions runner.
+  Verified: a Hebrew CV post scored 8/10 in 8.8s locally, budget + work_type parsed correctly.
+  Also dropped `gemini-2.5-flash` (now closed to new users) from the preference list.
+
 ### Measured this session (all changed a decision)
 - **`f_AL=true` IS honoured; `f_JT` is NOT.** Easy Apply returned only 3/10 overlap with the
   unfiltered baseline (real filtering), while `f_JT=C` returned 10/10 identical ids and 4/4 detail

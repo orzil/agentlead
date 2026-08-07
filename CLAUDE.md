@@ -14,6 +14,11 @@ It runs on **GitHub Actions** (repo `orzil/agentlead`, private): `leadagent.yml`
 `fbgroups.yml` weekly. `leads.db` lives in the Actions cache, never in git. Anything that
 touches Facebook or a search engine **must run in the cloud** — see the IP rules below.
 
+**Scoring is a hybrid** (`scorer.py`): Gemini free tier first, then **local Ollama**
+(`qwen2.5:7b`) once Gemini's daily quota dies. Measured 2026-08-06: that quota is ~20 requests/day
+on Or's key and behaves project-wide, so Ollama does most of the volume. A per-day 429 short-
+circuits rather than retrying — retrying it cost ~70s per lead and never succeeded.
+
 **Hard constraint: everything must stay free-tier.** No paid APIs, no VPS, no Apify. Scoring is
 Gemini free tier (or local Ollama); notifications are a Telegram bot; most sources are public
 endpoints, RSS, or alert emails read over Gmail IMAP. Never introduce a paid dependency.
