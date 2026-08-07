@@ -212,7 +212,7 @@ via fuzzy dedup and the scorer rates it 1–2, so it costs ~1 Gemini call. Left 
 no Gemini key, no Telegram chat id. Both now configured and verified end-to-end.
 
 **Live now**
-- **Telegram**: chat id `[configured in .env]`, `--test-telegram` delivered. Bot `@hametziut_deals_bot`.
+- **Telegram**: chat id configured in `.env` (gitignored), `--test-telegram` delivered.
 - **Gemini**: key works, 50 models, `gemini-flash-latest` selected; sample Hebrew-OCR gig scored 10/10.
 - **Cloud**: repo `orzil/agentlead` (private), 3 secrets set, both workflows registered and running.
   `.gitignore` widened to `*.csv` + `rc.txt` — those held scraped posts with real posters' names.
