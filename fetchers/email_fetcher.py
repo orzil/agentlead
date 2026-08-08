@@ -103,6 +103,12 @@ def _parse_job_alert(source: str, html_body: str, job_link_pat: re.Pattern,
                    carries the saved-search name ('"computer vision": 12 new jobs')
                    and so guarantees a domain-keyword hit for domain-gated sources
                    whose job titles alone ("Senior Data Scientist") wouldn't match.
+                   It is FENCED, because LinkedIn titles its alerts after one
+                   promoted job ("Computer Vision & ML Expert at Alignerr: up to
+                   $150/hour"). Unfenced, that rate leaked into every other job in
+                   the same email and the scorer billed Mobileye and Wayve
+                   full-time roles as "$150/hour contract" - measured 2026-08-08,
+                   three false 7-8s at the top of the lead list.
     canonicalise - optional url -> url mapper, so alert links dedup against the
                    same job fetched by a scraper (see linkedin_fetcher).
     """
@@ -132,7 +138,10 @@ def _parse_job_alert(source: str, html_body: str, job_link_pat: re.Pattern,
         idx = full_text.find(anchor)
         context = full_text[idx: idx + 700] if idx >= 0 else anchor
         if prefix:
-            context = f"{prefix}\n{context}"
+            context = (f"[ALERT EMAIL SUBJECT - this names the saved search or a "
+                       f"promoted job, NOT the listing below. Ignore any pay rate, "
+                       f"company or work type in it: {prefix}]\n\n"
+                       f"--- THE ACTUAL LISTING ---\n{context}")
         leads.append(Lead(source=source, url=url, raw_text=context))
     return leads
 
