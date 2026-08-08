@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-08T23:26:02+00:00",
- "count": 189,
+ "generated": "2026-08-08T23:58:26+00:00",
+ "count": 207,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -408,6 +408,21 @@
    "last_checked": null
   },
   {
+   "slug": "2018989461513326",
+   "name": "UK Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "202402986297944",
    "name": "Women Entrepreneur and Founders Helping Each Other",
    "status": "pending",
@@ -678,6 +693,36 @@
    "last_checked": null
   },
   {
+   "slug": "699367219356902",
+   "name": "Small Business owner UK/USA",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "761000443963542",
+   "name": "Small business owners UK",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "932457121284600",
    "name": "בינה מלאכותית ישראל - AI",
    "status": "pending",
@@ -705,6 +750,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "TESNetwork",
+   "name": "Toronto Entrepreneurs And Startup Network",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:40+00:00",
    "last_checked": null
   },
   {
@@ -1053,6 +1113,51 @@
    "last_checked": null
   },
   {
+   "slug": "smallbusinessownercommunityuk",
+   "name": "Small Business Owner Community",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbusinessownersuk2020",
+   "name": "Small Business Owners UK",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "socialmediaforsmallbusinessownersuk",
+   "name": "Small business owners & start ups UK",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "software.devopers.jobs",
    "name": "AI & IT Tech Jobs (Europe / USA)",
    "status": "pending",
@@ -1065,6 +1170,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T19:56:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startup.canada",
+   "name": "Startup Canada: for entrepreneurs, by entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:40+00:00",
    "last_checked": null
   },
   {
@@ -1128,6 +1248,21 @@
    "last_checked": null
   },
   {
+   "slug": "uksmallbusinessesadvertsfree",
+   "name": "UK Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "uxdesignercommunity",
    "name": "UX & UI DESIGNER COMMUNITY | i am looking for a developer ...",
    "status": "pending",
@@ -1155,7 +1290,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
-   "last_checked": "2026-08-08T23:25:27+00:00"
+   "last_checked": "2026-08-08T23:57:51+00:00"
   },
   {
    "slug": "1100802378915693",
@@ -1200,6 +1335,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1374006380366953",
+   "name": "Small businesses Uk community group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:30+00:00",
    "last_checked": null
   },
   {
@@ -1413,6 +1563,21 @@
    "last_checked": null
   },
   {
+   "slug": "810698363860855",
+   "name": "Canada StartUp VISA",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:40+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "832763754922199",
    "name": "קבוצת מחפשי עבודות פרילנסרים - הבית לפירילנסר",
    "status": "pending",
@@ -1488,6 +1653,21 @@
    "last_checked": null
   },
   {
+   "slug": "CanadaStartup",
+   "name": "Tech Canada: Canadian Startups in Toronto / Waterloo , Montreal ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:40+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "FounderNation",
    "name": "Founder Nation UK",
    "status": "pending",
@@ -1533,6 +1713,21 @@
    "last_checked": null
   },
   {
+   "slug": "bsbnetwork",
+   "name": "British Small Business Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "buildingblackentrepreneurs",
    "name": "Building Black Entrepreneurs",
    "status": "pending",
@@ -1560,6 +1755,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "findingsuvfounders",
+   "name": "Founders finding founders - Canada Start-up Visa",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:40+00:00",
    "last_checked": null
   },
   {
@@ -1653,6 +1863,21 @@
    "last_checked": null
   },
   {
+   "slug": "montreal.startup.people",
+   "name": "Montréal + Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:40+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "optimizedstoreowner",
    "name": "The Optimized Store Owner",
    "status": "pending",
@@ -1698,6 +1923,21 @@
    "last_checked": null
   },
   {
+   "slug": "startup.montreal.canada",
+   "name": "Montréal: Tech Startup Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:40+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "startupdirectoryuk",
    "name": "Startup Directory UK",
    "status": "pending",
@@ -1725,6 +1965,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "vancouverstartupcommunity",
+   "name": "Vancouver Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:40+00:00",
    "last_checked": null
   },
   {
@@ -2821,6 +3076,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:29:54+00:00",
    "last_checked": "2026-08-08T08:37:27+00:00"
+  },
+  {
+   "slug": "toronto.entrepreneurs.startups",
+   "name": "Toronto Entrepreneurs & Startups ⭐Events ⭐ ...",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:57:40+00:00",
+   "last_checked": null
   },
   {
    "slug": "traveltipsrome",
