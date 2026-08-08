@@ -104,7 +104,8 @@ CREATE TABLE IF NOT EXISTS facebook_groups (
     last_checked TEXT,
     in_config INTEGER DEFAULT 0,      -- already in config.FACEBOOK_GROUPS
     joined INTEGER DEFAULT 0,         -- user joined it (private ones)
-    notified INTEGER DEFAULT 0        -- per-row, same reasoning as whatsapp_groups
+    notified INTEGER DEFAULT 0,       -- per-row, same reasoning as whatsapp_groups
+    activity TEXT                     -- "posts=N recent=N members=N" from the probe
 );
 CREATE INDEX IF NOT EXISTS idx_fb_status ON facebook_groups(status);
 """
@@ -113,6 +114,11 @@ CREATE INDEX IF NOT EXISTS idx_fb_status ON facebook_groups(status);
 # idempotent here (sqlite has no ADD COLUMN IF NOT EXISTS), so just try each one.
 _MIGRATIONS = [
     ("whatsapp_groups", "notified", "INTEGER DEFAULT 0"),
+    # The cloud carries leads.db forward in the Actions cache, so a table that
+    # already exists there never picks up a new column from SCHEMA - it has to
+    # come through here. Skipping this broke a cloud probe run with
+    # "no such column: activity" while the local DB was fine.
+    ("facebook_groups", "activity", "TEXT"),
 ]
 
 
