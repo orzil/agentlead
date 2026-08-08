@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-08T19:12:56+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-08T19:57:19+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,12 +55,16 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (69)
+## Not yet probed (76)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
 - `289504808119115` (found via ddg)
 - `JuniorJobs` (found via ddg)
+- `software.devopers.jobs` (found via ddg)
+- `699051796861691` (found via ddg)
+- `5354513511301326` (found via ddg)
+- `uxdesignercommunity` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
 - `292556467949631` (found via ddg)
@@ -78,6 +82,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `israel.hightech` (found via ddg)
 - `no.experience` (found via ddg)
 - `noexpjobs` (found via ddg)
+- `177842636144129` (found via ddg)
+- `webdevelopersglobal` (found via ddg)
 - `magia.israel` (found via ddg)
 - `980725725352474` (found via ddg)
 - `1657329921376731` (found via ddg)
@@ -127,4 +133,5 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `bunkerradio` (found via reddit_search)
 - `1765017954926236` (found via reddit_search)
 - `1238614982979857` (found via reddit_search)
+- `fivemserverdevelopmenthelp2025` (found via ddg)
 - `462672717191788` (found via ddg)
