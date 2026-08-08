@@ -230,6 +230,14 @@ def probe_pending(conn: sqlite3.Connection, cap: int = 12) -> list[sqlite3.Row]:
 
     log.info("probe: %d group(s), %ds apart", len(rows), _PROBE_SLEEP)
     out = []
+    # A throttled IP and a dead slug produce the IDENTICAL signature (bare
+    # "Facebook" title, no articles), so a run of them means the IP is walled,
+    # not that 20 groups vanished. Measured 2026-08-08: a cap of 40 on a GitHub
+    # runner returned 40/40 "gone", including groups already verified real -
+    # all of it garbage that overwrote good rows. Bail out and leave the rest
+    # pending, mirroring facebook_public_fetcher's early abort on a login wall.
+    consecutive_gone = 0
+    _GONE_LIMIT = 3
     with sync_playwright() as pw:
         b = pw.chromium.launch(headless=True)
         ctx = b.new_context(user_agent=config.USER_AGENT, locale="en-US",
@@ -262,6 +270,16 @@ def probe_pending(conn: sqlite3.Connection, cap: int = 12) -> list[sqlite3.Row]:
                     status = "private"
             except Exception as e:
                 log.error("probe %s failed: %s", slug, str(e)[:60])
+            if status == "gone":
+                consecutive_gone += 1
+                if consecutive_gone >= _GONE_LIMIT:
+                    log.warning("%d consecutive 'gone' results - this IP is being "
+                                "throttled by Facebook, not %d dead groups. Aborting; "
+                                "the rest stay pending for the next run.",
+                                consecutive_gone, consecutive_gone)
+                    break
+            else:
+                consecutive_gone = 0
             relevance, region = _score(name or "")
             conn.execute(
                 "UPDATE facebook_groups SET status=?, name=?, relevance=?, region=?,"

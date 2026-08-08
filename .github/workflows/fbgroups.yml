@@ -20,7 +20,7 @@ on:
     inputs:
       probe_cap:
         description: "Max groups to probe this run (FB throttles ~10 quick loads)"
-        default: "12"
+        default: "10"
       search:
         description: "Run the DuckDuckGo discovery surface"
         type: boolean
@@ -64,7 +64,7 @@ jobs:
         run: |
           python -X utf8 discover_fb_groups.py \
             ${{ (github.event_name == 'schedule' || inputs.search) && '--search' || '' }} \
-            --probe --cap ${{ inputs.probe_cap || '12' }} \
+            --probe --cap ${{ inputs.probe_cap || '10' }} \
             --write --notify --config-lines
 
       - name: Save lead DB
