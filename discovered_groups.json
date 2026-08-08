@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-08T20:25:04+00:00",
- "count": 113,
+ "generated": "2026-08-08T21:01:59+00:00",
+ "count": 132,
  "groups": [
   {
    "slug": "289504808119115",
@@ -33,6 +33,36 @@
    "last_checked": null
   },
   {
+   "slug": "us.small.business.startup.founderss",
+   "name": "United States Small Business & Startup Founders",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1248313253326186",
+   "name": "Startup Founders USA",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1786020114969358",
    "name": "דרושים עבודות הייטק, חומרה, תוכנה, סייבר, סיסטם, אבטחת מידע, IT, Help ...",
    "status": "pending",
@@ -45,6 +75,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1900357930607912",
+   "name": "SaaS Founders Hub",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:16+00:00",
    "last_checked": null
   },
   {
@@ -63,6 +108,21 @@
    "last_checked": null
   },
   {
+   "slug": "2120217412101108",
+   "name": "Startup Founders Network",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "223303087850326",
    "name": "המשבשים : יזמים, משקיעים וסטארטאפים",
    "status": "pending",
@@ -75,6 +135,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "25573135598945626",
+   "name": "SaaS Founders Club",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:16+00:00",
    "last_checked": null
   },
   {
@@ -93,6 +168,21 @@
    "last_checked": null
   },
   {
+   "slug": "345613409204417",
+   "name": "Startup Founders Network",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "370277302613861",
    "name": "Ai Israel - בינה מלאכותית",
    "status": "pending",
@@ -105,6 +195,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "4808168705943904",
+   "name": "SaaS Founders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:16+00:00",
    "last_checked": null
   },
   {
@@ -228,6 +333,21 @@
    "last_checked": null
   },
   {
+   "slug": "founderx",
+   "name": "The Founders Exchange ~ Startup Founder | Co-founder | Angel Investors",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "iec.org.il",
    "name": "Iec - קהילת היזמות של ישראל | סטארטאפים | יזמים | משקיעים | קרנות הון ...",
    "status": "pending",
@@ -318,6 +438,81 @@
    "last_checked": null
   },
   {
+   "slug": "saasfounder",
+   "name": "SaaS Founders Mastermind",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasfoundergroup",
+   "name": "Saas Founder Group - Free Speech",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasfoundersclub",
+   "name": "SaaS Founders Club",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasfounderscommunity",
+   "name": "SaaS Founders Community",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasfoundersgroup",
+   "name": "SaaS Founders and Leaders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:16+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "software.devopers.jobs",
    "name": "AI & IT Tech Jobs (Europe / USA)",
    "status": "pending",
@@ -330,6 +525,51 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T19:56:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupfounderclub",
+   "name": "Startup Founder Club | USA • UK • UAE • AU • DE • SG",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupfounderforum",
+   "name": "Startup Founder Forum",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupfounders",
+   "name": "Startup Founders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:05+00:00",
    "last_checked": null
   },
   {
@@ -360,7 +600,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
-   "last_checked": "2026-08-08T20:24:28+00:00"
+   "last_checked": "2026-08-08T21:01:25+00:00"
   },
   {
    "slug": "1338202816787610",
@@ -678,6 +918,21 @@
    "last_checked": null
   },
   {
+   "slug": "startupfrat",
+   "name": "Startup-Frat Hangout",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "webdevelopersglobal",
    "name": "Web Developers Global",
    "status": "pending",
@@ -946,6 +1201,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:42:59+00:00"
+  },
+  {
+   "slug": "210047219696253",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T20:58:17+00:00",
+   "last_checked": null
   },
   {
    "slug": "2132155233765060",
@@ -1501,6 +1771,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:46:41+00:00"
+  },
+  {
+   "slug": "datdestroyerstudygroup",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T20:58:17+00:00",
+   "last_checked": null
   },
   {
    "slug": "expatsbali",

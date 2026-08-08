@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-08T20:25:04+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-08T21:01:59+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,15 +55,31 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (77)
+## Not yet probed (96)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
 - `289504808119115` (found via ddg)
+- `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `software.devopers.jobs` (found via ddg)
 - `699051796861691` (found via ddg)
+- `4808168705943904` (found via ddg)
+- `saasfoundersclub` (found via ddg)
+- `25573135598945626` (found via ddg)
+- `saasfounderscommunity` (found via ddg)
+- `1900357930607912` (found via ddg)
+- `saasfounder` (found via ddg)
+- `saasfoundersgroup` (found via ddg)
+- `saasfoundergroup` (found via ddg)
 - `5354513511301326` (found via ddg)
+- `startupfounderclub` (found via ddg)
+- `startupfounderforum` (found via ddg)
+- `startupfounders` (found via ddg)
+- `2120217412101108` (found via ddg)
+- `345613409204417` (found via ddg)
+- `1248313253326186` (found via ddg)
+- `founderx` (found via ddg)
 - `uxdesignercommunity` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
@@ -83,6 +99,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `no.experience` (found via ddg)
 - `noexpjobs` (found via ddg)
 - `freelancersrequired` (found via ddg)
+- `startupfrat` (found via ddg)
 - `177842636144129` (found via ddg)
 - `webdevelopersglobal` (found via ddg)
 - `magia.israel` (found via ddg)
@@ -134,5 +151,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `bunkerradio` (found via reddit_search)
 - `1765017954926236` (found via reddit_search)
 - `1238614982979857` (found via reddit_search)
+- `210047219696253` (found via reddit_search)
+- `datdestroyerstudygroup` (found via reddit_search)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
 - `462672717191788` (found via ddg)
