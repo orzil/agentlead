@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-08T22:24:46+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-08T23:01:10+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (132)
+## Not yet probed (144)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -73,10 +73,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1418563452142232` (found via ddg)
 - `agencybusinessowners` (found via ddg)
 - `1527705608867878` (found via ddg)
+- `216499291720732` (found via ddg)
 - `2815042615255352` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `software.devopers.jobs` (found via ddg)
+- `1057648599597645` (found via ddg)
+- `560810556893848` (found via ddg)
+- `1184176781736143` (found via ddg)
 - `659198409489977` (found via ddg)
 - `storeownertips` (found via ddg)
 - `ecommercestoreowner` (found via ddg)
@@ -85,6 +89,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `entrepreneursstartup` (found via ddg)
 - `699051796861691` (found via ddg)
 - `gohighlevelagencyowners` (found via ddg)
+- `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
+- `2254265064668702` (found via ddg)
+- `outsourceitprojects` (found via ddg)
+- `1674526216166974` (found via ddg)
+- `103362243079109` (found via ddg)
 - `4808168705943904` (found via ddg)
 - `saasfoundersclub` (found via ddg)
 - `25573135598945626` (found via ddg)
@@ -95,6 +104,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `saasfoundergroup` (found via ddg)
 - `1479200462154545` (found via ddg)
 - `5354513511301326` (found via ddg)
+- `637831372970457` (found via ddg)
 - `startupfounderclub` (found via ddg)
 - `startupfounderforum` (found via ddg)
 - `startupfounders` (found via ddg)
@@ -106,6 +116,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `202402986297944` (found via ddg)
 - `beehexaecommercegroup` (found via ddg)
 - `ecommercesuccessgroup` (found via ddg)
+- `612254275568501` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
 - `292556467949631` (found via ddg)
@@ -190,4 +201,5 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aitoolsandpromptsthatactuallywork` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
 - `640514310704403` (found via ddg)
+- `n8nofficial` (found via ddg)
 - `462672717191788` (found via ddg)
