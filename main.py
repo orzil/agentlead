@@ -282,13 +282,25 @@ def regate(conn) -> None:
     import prefilter
     from models import Lead
 
+    # Also reconsider gated_out rows: widening the keyword gate (e.g. adding YOLO
+    # and OpenCV in 2026-08) only helps future posts unless what it already
+    # rejected gets a second look. Rows killed for reasons that cannot change
+    # (stale, closed) are skipped - re-running those wastes an LLM call each.
     rows = conn.execute(
-        "SELECT id, source, url, raw_text FROM leads "
-        "WHERE (status='scored' AND score IS NULL) OR status='partnership'"
+        "SELECT id, source, url, raw_text, posted_at FROM leads "
+        "WHERE (status='scored' AND score IS NULL) OR status='partnership' "
+        "   OR (status='gated_out' AND COALESCE(reasoning,'') NOT LIKE '%stale%' "
+        "       AND COALESCE(reasoning,'') NOT LIKE '%closed%')"
     ).fetchall()
     counts: dict[str, int] = {}
     for r in rows:
-        lead = Lead(source=r["source"], url=r["url"], raw_text=r["raw_text"])
+        posted = None
+        try:
+            posted = datetime.fromisoformat(r["posted_at"]) if r["posted_at"] else None
+        except (TypeError, ValueError):
+            pass
+        lead = Lead(source=r["source"], url=r["url"], raw_text=r["raw_text"],
+                    posted_at=posted)   # the staleness gate needs this
         verdict = prefilter.classify(lead)
         counts[verdict] = counts.get(verdict, 0) + 1
         if verdict == "pass":

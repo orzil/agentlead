@@ -22,12 +22,21 @@ import imaplib
 import logging
 import re
 import sqlite3
+import time
 from datetime import datetime, timedelta
 from urllib.parse import urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
 
 import config
+
+# LinkedIn keeps emailing jobs after they stop accepting applications, so the
+# alert itself is no signal of whether the job is still open - only the page is.
+CLOSED_RE = re.compile(
+    r"(no longer accepting applications|this job is no longer available"
+    r"|applications are closed|position has been filled)", re.I)
+CLOSED_MARKER = "[CLOSED - no longer accepting applications]"
+_LI_DETAIL_SLEEP = 8   # same pacing the scraper uses; LinkedIn bot-walls fast
 import db
 from fetchers import linkedin_fetcher
 from models import Lead
@@ -93,6 +102,74 @@ def _parse_facebook(subject: str, html_body: str, text_body: str) -> list[Lead]:
         text = text_body
     text = FB_BOILERPLATE.sub("", text).strip()
     return [Lead(source="facebook", url=url, raw_text=f"{subject}\n\n{text[:4000]}")]
+
+
+_AGO_RE = re.compile(r"(\d+)\s*(minute|hour|day|week|month)", re.I)
+
+
+def _days_from_ago(text: str) -> int | None:
+    """'5 days ago' / '3 weeks ago' -> age in days."""
+    m = _AGO_RE.search(text or "")
+    if not m:
+        return None
+    n, unit = int(m.group(1)), m.group(2).lower()
+    return {"minute": 0, "hour": 0, "day": n, "week": n * 7, "month": n * 30}[unit]
+
+
+def enrich_linkedin_alerts(leads: list[Lead], cap: int = 25) -> list[Lead]:
+    """Fetch each LinkedIn alert job's real page before it is gated or scored.
+
+    An alert email carries only "<title> <company> · <location>" - about ten
+    words. That is not enough to judge anything: FT_RE has no "Employment type"
+    line to match, so full-time roles sail through the gate, and the LLM is left
+    guessing the engagement model. Measured 2026-08-08: KLA and Cybord full-time
+    roles were scored "contract" and "part_time" and pushed to the user, who
+    correctly rejected both.
+
+    The scraper path never had this problem because it detail-fetches. This
+    reuses the very same endpoint, so both paths now judge the same text.
+    Also detects closed postings, which the email can't know about - LinkedIn
+    keeps mailing jobs that stopped accepting applications.
+    """
+    import httpx
+
+    from fetchers import linkedin_fetcher
+
+    todo = [l for l in leads if l.source == "linkedin/alert"][:cap]
+    if not todo:
+        return leads
+    headers = {"User-Agent": config.USER_AGENT,
+               "Accept": "text/html,application/xhtml+xml"}
+    enriched = closed = 0
+    with httpx.Client(headers=headers, timeout=25, follow_redirects=True) as client:
+        for i, lead in enumerate(todo):
+            m = linkedin_fetcher.JOB_ID_RE.search(lead.url)
+            if not m:
+                continue
+            if i:
+                time.sleep(_LI_DETAIL_SLEEP)
+            try:
+                d = linkedin_fetcher._detail_meta(client, m.group(1))
+            except Exception as e:
+                log.info("alert enrich %s failed: %s", m.group(1), str(e)[:80])
+                continue
+            if not d["desc"] and not d["criteria"]:
+                continue
+            if CLOSED_RE.search(d["desc"]):
+                lead.raw_text = f"{CLOSED_MARKER}\n{lead.raw_text}"
+                closed += 1
+                continue
+            # posted_ago is the real post date; the email's own date is just when
+            # LinkedIn mailed the digest, which can be weeks later.
+            age = _days_from_ago(d["posted_ago"])
+            if age is not None:
+                lead.posted_at = datetime.now(timezone.utc) - timedelta(days=age)
+            meta = " | ".join(x for x in (d["posted_ago"], d["applicants"]) if x)
+            lead.raw_text = (f"{lead.raw_text}\n{meta}\n{d['criteria']}\n\n"
+                             f"{d['desc'][:3000]}")
+            enriched += 1
+    log.info("linkedin alerts: enriched %d, %d closed", enriched, closed)
+    return leads
 
 
 def _parse_job_alert(source: str, html_body: str, job_link_pat: re.Pattern,
@@ -215,4 +292,6 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
             pass
 
     log.info("Email: extracted %d leads", len(leads))
-    return leads
+    # Alert emails carry ~10 words per job, which is not enough to gate or score
+    # on. Pull the real listing before the pipeline sees them.
+    return enrich_linkedin_alerts(leads)

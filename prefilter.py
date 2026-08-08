@@ -12,6 +12,8 @@ classify() returns a reason string:
                       engineer is in Israel (remote or IL only)
   gate_spam        -> design/typing/marketing gig with no strong domain term
   gate_offtopic    -> fails the domain/intent keyword requirements
+  gate_closed      -> the posting says it stopped accepting applications
+  gate_stale       -> older than MAX_LEAD_AGE_DAYS; almost certainly filled
 
 Order matters: identity of the POSTER (seeker) and the ASK (community/noise)
 trump everything; then engagement model (FT/partnership); then topic.
@@ -19,18 +21,56 @@ trump everything; then engagement model (FT/partnership); then topic.
 from __future__ import annotations
 
 import re
+from datetime import datetime, timezone
 
 import config
 from models import Lead
 
 
+def _too_old(lead: Lead) -> bool:
+    """True when the gig is old enough that it is almost certainly filled.
+
+    Uses the fetcher's post date when there is one, and otherwise falls back to
+    a date written in the post body - Facebook supplies no date at all, so a
+    2-year-old post looked as fresh as today's until this existed.
+    """
+    cutoff_days = config.MAX_LEAD_AGE_DAYS
+    now = datetime.now(timezone.utc)
+    if lead.posted_at:
+        posted = lead.posted_at
+        if posted.tzinfo is None:
+            posted = posted.replace(tzinfo=timezone.utc)
+        if (now - posted).days > cutoff_days:
+            return True
+    # Facebook renders an explicit year only on OLD posts ("March 31, 2024");
+    # fresh ones show "2h" or "June 18", so a match here is already suspicious.
+    m = config.STALE_DATE_RE.search("\n".join(lead.raw_text.splitlines()[:6]))
+    if m:
+        try:
+            when = datetime.strptime(f"{m.group(1)} {m.group(2)} {m.group(3)}",
+                                     "%B %d %Y").replace(tzinfo=timezone.utc)
+            if (now - when).days > cutoff_days:
+                return True
+        except ValueError:
+            pass
+    return False
+
+
 def classify(lead: Lead) -> str:
     src_root = lead.source.split("/")[0]
-    if src_root in config.GATE_BYPASS_SOURCES:
-        return "pass"
     text = lead.raw_text
     if not text or len(text) < 25:
         return "gate_offtopic"
+
+    # Closed/expired beats everything, including the bypass sources: a filled
+    # gig is worth nothing no matter how well it matches.
+    if "[CLOSED" in text[:120]:
+        return "gate_closed"
+    if _too_old(lead):
+        return "gate_stale"
+
+    if src_root in config.GATE_BYPASS_SOURCES:
+        return "pass"
 
     if config.SEEKER_RE.search(text):
         return "gate_seeker"

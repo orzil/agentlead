@@ -150,8 +150,20 @@ def _search(client, keywords: str, location: str, geo_id: str, remote: bool,
     return out
 
 
-def _detail(client, job_id: str) -> tuple[str, str]:
-    """Job id -> (description text, 'Employment type: Contract' style criteria lines)."""
+def _detail_meta(client, job_id: str) -> dict:
+    """Job id -> description, criteria, real post age, and applicant count.
+
+    The applicant count is the competition signal the user actually rates on -
+    a 200-applicant posting is the LinkedIn equivalent of a marketplace bid war
+    and is worth near zero, however well it matches. The "N days ago" line is
+    the only reliable post date for the email path, whose own date is just when
+    the alert was mailed.
+
+    Note what is NOT here: whether the job still accepts applications. Probed
+    2026-08-08 - the logged-out page carries no such marker (0 occurrences of
+    "no longer accepting"); that banner only renders for signed-in viewers. So
+    closed postings can only be caught by age and applicant count, not directly.
+    """
     from bs4 import BeautifulSoup
 
     r = _get(client, DETAIL_URL.format(job_id=job_id))
@@ -164,7 +176,21 @@ def _detail(client, job_id: str) -> tuple[str, str]:
         val = li.select_one("span")
         if head and val:
             criteria.append(f"{head.get_text(strip=True)}: {val.get_text(strip=True)}")
-    return desc, "\n".join(criteria)
+
+    def _txt(sel):
+        el = soup.select_one(sel)
+        return el.get_text(strip=True) if el else ""
+
+    posted_ago = _txt(".posted-time-ago__text")
+    applicants = _txt(".num-applicants__caption")
+    return {"desc": desc, "criteria": "\n".join(criteria),
+            "posted_ago": posted_ago, "applicants": applicants}
+
+
+def _detail(client, job_id: str) -> tuple[str, str]:
+    """Job id -> (description text, 'Employment type: Contract' style criteria lines)."""
+    d = _detail_meta(client, job_id)
+    return d["desc"], d["criteria"]
 
 
 def _known(conn: sqlite3.Connection, url: str) -> bool:
@@ -231,18 +257,21 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
                 if i:
                     time.sleep(_DETAIL_SLEEP)
                 try:
-                    desc, criteria = _detail(client, c["job_id"])
+                    d = _detail_meta(client, c["job_id"])
                 except _Blocked:
                     raise
                 except Exception as e:
                     log.error("detail %s failed: %s", c["job_id"], e)
                     continue
+                desc, criteria = d["desc"], d["criteria"]
                 if not desc:
                     continue
                 easy_line = "Application: LinkedIn Easy Apply (one-tap)\n" if c.get("easy") else ""
+                # applicant count = the competition signal the user rates on
+                meta = " | ".join(x for x in (d["posted_ago"], d["applicants"]) if x)
                 text = (f"{c['title']} at {c['company']}\n"
                         f"Location: {c['location']}\n{easy_line}"
-                        f"{criteria}\n\n{desc[:3500]}")
+                        f"{meta}\n{criteria}\n\n{desc[:3500]}")
                 leads.append(Lead(
                     source="linkedin/easyapply" if c.get("easy") else "linkedin",
                     url=c["url"],

@@ -79,8 +79,15 @@ HARD RULES
 - Treat Hebrew and English posts identically; write summary in English.
 - If key details are missing, score on what is stated - do not invent details.
   Uncertainty about scope lowers the score by 1, not to zero.
+- Competition matters as much as fit. When the post states how many people have
+  already applied or bid ("32 applicants", "60 bids"), treat a crowded posting
+  as a much weaker lead: 50+ applicants caps the score at 5 and must carry the
+  red_flag "crowded"; 150+ caps it at 3. A direct approach to one person beats
+  a queue, so posts reachable by DM with no applicant count are not penalised.
+- Freshness matters. If the post says how old it is ("3 weeks ago") and it is
+  over a month old, lower the score by 2 and add the red_flag "may be filled".
 - red_flags: note things like "no budget", "vague scope", "agency middleman",
-  "equity only", "student homework".
+  "equity only", "student homework", "crowded", "may be filled".
 
 Return only a JSON object with keys: score (integer 1-10), category (one of
 cv_image, ocr, ml_general, algorithms, data_viz, ai_web, other), work_type

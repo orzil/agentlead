@@ -374,6 +374,17 @@ _DOMAIN_EN = [
     r"classification", r"\bLLM\b", r"\bGPT\b", r"\bRAG\b", r"chatbot",
     r"\bAI\b", r"artificial\s+intelligence", r"document\s+(processing|intelligence|extraction)",
     r"video\s+analytics", r"anomaly\s+detection", r"point\s*cloud", r"\b3D\s+reconstruction",
+    # Practitioner vocabulary. Added 2026-08-08 after the user picked out a YOLO
+    # defect-detection POC as the best lead of the batch - and it turned out to
+    # have passed the gate only by incidentally containing "AI". None of the
+    # words people ACTUALLY use for this work were in the list, so the whole
+    # category was surviving on luck.
+    r"\bYOLO\w*\b", r"opencv", r"roboflow", r"ultralytics", r"detectron",
+    r"defect\s+detection", r"bounding\s+box", r"pose\s+estimation", r"keypoint",
+    r"image\s+(classification|recognition|annotation|labell?ing)",
+    r"tesseract", r"paddle\s*ocr", r"\bLayoutLM\b", r"handwrit",
+    r"fine[\s-]?tun", r"\binference\b", r"embedding", r"vector\s+(db|database|search)",
+    r"text\s+extraction", r"invoice\s+(parsing|extraction|processing)",
 ]
 _DOMAIN_HE = [
     "ראייה ממוחשבת", "ראיה ממוחשבת", "עיבוד תמונה", "למידת מכונה",
@@ -402,6 +413,11 @@ _STRONG_EN = [
     r"face\s+recognition", r"video\s+analytics", r"anomaly\s+detection",
     r"document\s+(processing|intelligence|extraction)", r"point\s*cloud",
     r"automation\s+(agent|workflow|pipeline)", r"\bn8n\b", r"make\.com", r"zapier",
+    # same additions as _DOMAIN_EN: these are strong enough to rescue a post from
+    # SPAM_RE, since no design/typing gig says "YOLO" or "tesseract"
+    r"\bYOLO\w*\b", r"opencv", r"roboflow", r"ultralytics", r"detectron",
+    r"defect\s+detection", r"pose\s+estimation", r"tesseract", r"paddle\s*ocr",
+    r"handwrit", r"invoice\s+(parsing|extraction|processing)",
 ]
 STRONG_DOMAIN_RE = re.compile("|".join(_STRONG_EN + _DOMAIN_HE), re.IGNORECASE)
 
@@ -527,3 +543,19 @@ INTENT_REQUIRED_SOURCES = {"r/computervision", "r/MachineLearningJobs",
 
 # Fuzzy-dedup: posts >= this similar (0-100) within 7 days are duplicates.
 DEDUP_SIMILARITY = 90
+
+# --- Staleness ---------------------------------------------------------------
+# A filled gig is worth nothing, and the user rejected leads that were expired or
+# closed. Two independent checks, because they catch different things:
+#   * MAX_LEAD_AGE_DAYS   - the post is simply too old to still be open. Applied
+#     when a real post date is known. 45 days is deliberately generous: Reddit
+#     and Facebook posts stay live and answerable far longer than a job board ad.
+#   * CLOSED_RE (email_fetcher) - the posting itself says it stopped accepting
+#     applications, which age alone never reveals.
+# A date written INSIDE the post body ("March 31, 2024" on a Facebook post) is
+# parsed by STALE_DATE_RE, because Facebook gives the fetcher no post date at
+# all - measured: a 2-year-old OCR gig scored 7 and reached the user's table.
+MAX_LEAD_AGE_DAYS = int(env("MAX_LEAD_AGE_DAYS", "45"))
+STALE_DATE_RE = re.compile(
+    r"\b(January|February|March|April|May|June|July|August|September|October"
+    r"|November|December)\s+(\d{1,2}),?\s+(20\d{2})\b", re.I)
