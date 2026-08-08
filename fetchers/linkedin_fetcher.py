@@ -58,6 +58,9 @@ DETAIL_URL = "https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{job_id}"
 # also matches the bare "/jobs/view/4440682438" form used in alert emails
 JOB_ID_RE = re.compile(r"/jobs/view/(?:[^/?#]*?-)?(\d{6,})")
 
+# Rendered in the topcard of a closed posting, for signed-out visitors too.
+CLOSED_RE = re.compile(r"no longer accepting applications", re.I)
+
 _SEARCH_SLEEP = 10          # seconds between search queries
 _DETAIL_SLEEP = 8           # seconds between detail fetches
 _BLOCK_COOLDOWN = 6 * 3600  # after a 999/403 bot-wall
@@ -159,10 +162,13 @@ def _detail_meta(client, job_id: str) -> dict:
     the only reliable post date for the email path, whose own date is just when
     the alert was mailed.
 
-    Note what is NOT here: whether the job still accepts applications. Probed
-    2026-08-08 - the logged-out page carries no such marker (0 occurrences of
-    "no longer accepting"); that banner only renders for signed-in viewers. So
-    closed postings can only be caught by age and applicant count, not directly.
+    "closed" reports whether the posting stopped accepting applications. An
+    earlier probe concluded this was invisible logged-out and that was WRONG -
+    it checked a job that happened to still be open. The banner does render for
+    signed-out visitors ("... 3 weeks ago Be among the first 25 applicants ...
+    No longer accepting applications"), but it lives in the topcard, NOT in the
+    description div, which is why a description-only search kept missing it.
+    Hence the whole-page text below.
     """
     from bs4 import BeautifulSoup
 
@@ -183,8 +189,10 @@ def _detail_meta(client, job_id: str) -> dict:
 
     posted_ago = _txt(".posted-time-ago__text")
     applicants = _txt(".num-applicants__caption")
+    page_text = soup.get_text(" ", strip=True)
+    closed = bool(CLOSED_RE.search(page_text))
     return {"desc": desc, "criteria": "\n".join(criteria),
-            "posted_ago": posted_ago, "applicants": applicants}
+            "posted_ago": posted_ago, "applicants": applicants, "closed": closed}
 
 
 def _detail(client, job_id: str) -> tuple[str, str]:
@@ -265,6 +273,10 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
                     continue
                 desc, criteria = d["desc"], d["criteria"]
                 if not desc:
+                    continue
+                if d.get("closed"):
+                    log.info("skipping %s - no longer accepting applications",
+                             c["job_id"])
                     continue
                 easy_line = "Application: LinkedIn Easy Apply (one-tap)\n" if c.get("easy") else ""
                 # applicant count = the competition signal the user rates on

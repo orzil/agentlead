@@ -476,7 +476,23 @@ SEEKER_RE = re.compile(
     r"|available\s+for\s+(hire|work|freelance|projects|contract)"
     r"|my\s+resume|review\s+my\s+(cv|resume)|hire\s+me\b|\[hiring\s+me\]"
     r"|i\s+need\s+clients|need\s+clients\b"
-    r"|refer\s+me|am\s+i\s+.{0,20}ready|\[for\s+hire\])", re.IGNORECASE)
+    r"|refer\s+me|am\s+i\s+.{0,20}ready|\[for\s+hire\]"
+    # Added 2026-08-08: a self-promo slipped through titled "Python Developer
+    # Available - Bots, Automation & Custom Scripts", body "I'm a Python
+    # developer currently looking to take on freelance work. I can help with:".
+    # None of the phrasings above matched - "available" was not followed by
+    # "for", and "looking to take on" is not "looking for".
+    r"|\b(developer|engineer|programmer|freelancer|consultant|designer)s?\s+"
+    r"available\b"
+    r"|\bcurrently\s+available\b|\bavailable\s+(now|immediately|to\s+start)\b"
+    r"|looking\s+to\s+(take\s+on|work\s+on|help|collaborate|partner|join)"
+    r"|i\s+can\s+help\s+(you\s+)?with"
+    r"|i\s*(?:'m|’m|\s+am)\s+a\s+[\w\s]{0,25}(developer|engineer|programmer"
+    r"|data\s+scientist|freelancer|consultant)\b"
+    r"|my\s+(services|rates|portfolio|skills)\b|services\s+i\s+offer"
+    r"|open\s+to\s+work\b|\bfor\s+hire\b"
+    # Hebrew equivalents
+    r"|אני\s+מפתח|אני\s+מתכנת|זמין\s+לעבודה|מציע\s+שירותי)", re.IGNORECASE)
 
 # Unpaid community / volunteer / data-collection / survey asks
 COMMUNITY_RE = re.compile(

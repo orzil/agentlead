@@ -155,7 +155,9 @@ def enrich_linkedin_alerts(leads: list[Lead], cap: int = 25) -> list[Lead]:
                 continue
             if not d["desc"] and not d["criteria"]:
                 continue
-            if CLOSED_RE.search(d["desc"]):
+            # d["closed"] reads the whole page: the banner sits in the topcard,
+            # not the description, so searching only the description missed it.
+            if d["closed"] or CLOSED_RE.search(d["desc"]):
                 lead.raw_text = f"{CLOSED_MARKER}\n{lead.raw_text}"
                 closed += 1
                 continue
