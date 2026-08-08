@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-08T19:57:19+00:00",
- "count": 112,
+ "generated": "2026-08-08T20:25:04+00:00",
+ "count": 113,
  "groups": [
   {
    "slug": "289504808119115",
@@ -360,7 +360,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
-   "last_checked": "2026-08-08T19:56:44+00:00"
+   "last_checked": "2026-08-08T20:24:28+00:00"
   },
   {
    "slug": "1338202816787610",
@@ -615,6 +615,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T19:12:12+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "freelancersrequired",
+   "name": "Hire a Freelancer",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T20:24:18+00:00",
    "last_checked": null
   },
   {
