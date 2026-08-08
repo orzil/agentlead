@@ -105,7 +105,11 @@ CREATE TABLE IF NOT EXISTS facebook_groups (
     in_config INTEGER DEFAULT 0,      -- already in config.FACEBOOK_GROUPS
     joined INTEGER DEFAULT 0,         -- user joined it (private ones)
     notified INTEGER DEFAULT 0,       -- per-row, same reasoning as whatsapp_groups
-    activity TEXT                     -- "posts=N recent=N members=N" from the probe
+    activity TEXT,                    -- "posts=N recent=N members=N" from the probe
+    in_rotation INTEGER DEFAULT 0,    -- promoted: the scraper reads it like a config group
+    posts_seen INTEGER DEFAULT 0,     -- smoke-scrape totals, used to demote dead groups
+    gate_passed INTEGER DEFAULT 0,
+    scrapes INTEGER DEFAULT 0
 );
 CREATE INDEX IF NOT EXISTS idx_fb_status ON facebook_groups(status);
 """
@@ -119,6 +123,11 @@ _MIGRATIONS = [
     # come through here. Skipping this broke a cloud probe run with
     # "no such column: activity" while the local DB was fine.
     ("facebook_groups", "activity", "TEXT"),
+    # Promotion + measured yield, so discovery can feed the scraper on its own.
+    ("facebook_groups", "in_rotation", "INTEGER DEFAULT 0"),
+    ("facebook_groups", "posts_seen", "INTEGER DEFAULT 0"),
+    ("facebook_groups", "gate_passed", "INTEGER DEFAULT 0"),
+    ("facebook_groups", "scrapes", "INTEGER DEFAULT 0"),
 ]
 
 

@@ -175,12 +175,44 @@ class _LoginWall(Exception):
     pass
 
 
+def _group_pool(conn) -> list[dict]:
+    """Curated config groups PLUS the ones discovery promoted.
+
+    Until 2026-08-08 this read config.FACEBOOK_GROUPS alone, which made
+    discovery decorative: discover_fb_groups.py could find and verify a group
+    and nothing would ever scrape it. Promoted rows (public, cleared the quality
+    bar) are appended AFTER the config groups, deliberately - the existing
+    rotation order is Or's and stays untouched.
+    """
+    pool = [g for g in config.FACEBOOK_GROUPS if g.get("public")]
+    known = {g["slug"].lower() for g in pool}
+    try:
+        rows = conn.execute(
+            "SELECT slug, name, region FROM facebook_groups "
+            "WHERE status='public' AND COALESCE(in_rotation,0)=1 "
+            "ORDER BY relevance DESC, slug").fetchall()
+    except Exception as e:      # table missing on a very old DB - not fatal
+        log.debug("facebook: no discovered-group table (%s)", e)
+        return pool
+    added = 0
+    for r in rows:
+        if r["slug"].lower() in known:
+            continue
+        pool.append({"slug": r["slug"], "name": r["name"] or r["slug"],
+                     "public": True, "region": r["region"] or "GLOBAL",
+                     "discovered": True})
+        added += 1
+    if added:
+        log.info("facebook: pool = %d config + %d discovered", len(pool) - added, added)
+    return pool
+
+
 def fetch(conn) -> list[Lead]:
     if config.env("FB_PUBLIC_ENABLED", "0") not in ("1", "true", "yes"):
         log.debug("facebook_public disabled (set FB_PUBLIC_ENABLED=1 to enable)")
         return []
 
-    groups = [g for g in config.FACEBOOK_GROUPS if g.get("public")]
+    groups = _group_pool(conn)
     if not groups:
         return []
 

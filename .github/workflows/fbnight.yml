@@ -1,0 +1,123 @@
+name: FB night run
+
+# Ten hours of small, spaced-out group discovery - 20:00 to 05:00 Israel time.
+#
+# Why many small runs instead of one long one, which is the whole design:
+# DuckDuckGo challenges an IP after roughly ONE query, and Facebook throttles an
+# IP after a handful of group loads. A single long job keeps a single IP and
+# would be walled within minutes. Every GitHub run gets a FRESH IP, so twenty
+# 12-minute runs get twenty clean shots at both, and the cursors already in
+# discover_fb_groups.py (fb_ddg_cursor, probe ordering) carry state between them.
+#
+# Per-run budget is deliberately below every measured wall:
+#   2 DDG queries | 5 probes | 3 smoke-scrapes
+#
+# NEVER run this on Or's machine. A Facebook throttle on the IP he browses from
+# surfaces as a login/checkpoint wall on his own account.
+
+on:
+  schedule:
+    - cron: "0,30 17-23 * * *"   # 20:00-02:59 Israel
+    - cron: "0,30 0-2 * * *"     # 03:00-05:59 Israel
+  workflow_dispatch:
+    inputs:
+      probe_cap:
+        description: "Groups to probe this run"
+        default: "5"
+      smoke_cap:
+        description: "Promoted groups to test-scrape this run"
+        default: "3"
+
+concurrency:
+  group: leadagent            # shares leads.db with the other two workflows
+  cancel-in-progress: false
+
+jobs:
+  night:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25       # must finish inside the 30-minute cadence
+    permissions:
+      contents: write         # commits the findings back so they survive
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Restore lead DB
+        uses: actions/cache/restore@v4
+        with:
+          path: leads.db
+          key: leadsdb-${{ github.run_id }}
+          restore-keys: leadsdb-
+
+      - name: Discover, probe, promote, test
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # MUST stay empty. The other workflow sets IL,US,EU, which would
+          # silently discard every newly discovered AU/CA/GLOBAL group -
+          # facebook_public_fetcher filters the pool on this.
+          FB_REGIONS: ""
+          FB_PUBLIC_ENABLED: "1"
+          FB_IGNORE_DAILY_CAP: "1"
+          FB_GROUP_GAP_SECONDS: "90"
+        run: |
+          python -X utf8 discover_fb_groups.py \
+            --search \
+            --probe --cap ${{ inputs.probe_cap || '5' }} \
+            --promote \
+            --smoke ${{ inputs.smoke_cap || '3' }} \
+            --write --json --notify
+
+      - name: Nightly summary (last slot only)
+        if: github.event_name == 'schedule'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # github.event.schedule only gives the cron STRING, not the firing
+          # time, so the final slot is identified by the clock instead.
+          if [ "$(date -u +%H:%M)" \> "02:15" ] && [ "$(date -u +%H:%M)" \< "02:59" ]; then
+            python -X utf8 discover_fb_groups.py --summary
+          else
+            echo "not the last slot ($(date -u +%H:%M) UTC) - no summary"
+          fi
+
+      - name: Save lead DB
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: leads.db
+          key: leadsdb-${{ github.run_id }}
+
+      - name: Commit findings
+        if: always()
+        run: |
+          git config user.name "agentlead-bot"
+          git config user.email "noreply@github.com"
+          git add discovered_groups.json facebook_groups.md 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no change in findings"
+          else
+            git commit -m "night run: group discovery $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase --autostash origin main || true
+            git push origin HEAD:main
+          fi
+
+      - name: Upload DB snapshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: leadsdb-${{ github.run_id }}
+          path: leads.db
+          if-no-files-found: ignore
+          retention-days: 3

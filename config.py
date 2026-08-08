@@ -268,25 +268,42 @@ FB_DDG_QUERIES = [
     'site:facebook.com/groups אוטומציה עסקים ישראל',
     'site:facebook.com/groups "ראייה ממוחשבת" OR "עיבוד תמונה"',
     'site:facebook.com/groups משרות הייטק פרילנס',
-    # --- Worldwide remote: freelance/contract AI work ---
-    'site:facebook.com/groups freelance developers hiring remote',
-    'site:facebook.com/groups "AI automation" clients projects',
-    'site:facebook.com/groups computer vision freelance',
-    'site:facebook.com/groups "machine learning" freelance projects',
-    'site:facebook.com/groups remote software projects contract',
-    'site:facebook.com/groups startup founders need developer',
-    # --- USA: client-side groups, added 2026-08-08 on user request ---
-    'site:facebook.com/groups "AI automation agency"',
-    'site:facebook.com/groups n8n OR make.com automation freelance',
-    'site:facebook.com/groups saas founders hiring developer',
-    'site:facebook.com/groups "data science" jobs group USA',
-    'site:facebook.com/groups "looking for a developer" project',
-    'site:facebook.com/groups entrepreneurs need app built',
-    # --- UK ---
-    'site:facebook.com/groups UK freelancers tech',
-    'site:facebook.com/groups london tech jobs developers',
-    'site:facebook.com/groups UK startups founders',
-    'site:facebook.com/groups "freelance" UK software contract',
+    # --- ENGLISH-SPEAKING WORLD, CLIENT SIDE (rewritten 2026-08-08) ---
+    #
+    # The old US/UK queries asked for DEVELOPER COMMUNITIES and that is exactly
+    # why they failed: 0 good leads from 44 posts, while the Israeli "דרושים"
+    # (wanted) groups produced all 10. The difference was never the country - it
+    # is WHO POSTS. Devs talking to devs is not a lead source; founders and
+    # business owners looking for someone to build a thing is.
+    #
+    # So every query below targets the buyer's phrasing, not the builder's, and
+    # names like "Developers Group" / "Programmers Community" are deliberately
+    # absent. Or works remotely, so all English-speaking markets qualify.
+    'site:facebook.com/groups "looking for a developer"',
+    'site:facebook.com/groups "need a developer" project',
+    'site:facebook.com/groups "need an app built"',
+    'site:facebook.com/groups "hire a freelancer" business',
+    'site:facebook.com/groups startup founders network',
+    'site:facebook.com/groups "SaaS founders"',
+    'site:facebook.com/groups "agency owners" automation',
+    'site:facebook.com/groups "small business owners" automation AI',
+    'site:facebook.com/groups ecommerce store owners help',
+    'site:facebook.com/groups entrepreneurs need help building',
+    'site:facebook.com/groups "no code" founders build',
+    'site:facebook.com/groups "AI automation agency" clients',
+    'site:facebook.com/groups n8n OR make.com automation business',
+    'site:facebook.com/groups outsourcing software projects clients',
+    'site:facebook.com/groups "computer vision" OR OCR project help',
+    # market-specific, same client-side framing
+    'site:facebook.com/groups startup founders UK',
+    'site:facebook.com/groups small business owners UK tech help',
+    'site:facebook.com/groups startup founders Canada',
+    'site:facebook.com/groups Australia business owners tech help',
+    'site:facebook.com/groups "New Zealand" business owners website app',
+    'site:facebook.com/groups Ireland startups founders',
+    'site:facebook.com/groups "South Africa" business owners tech',
+    'site:facebook.com/groups Singapore startups founders',
+    'site:facebook.com/groups Dubai OR UAE entrepreneurs tech',
 ]
 
 # Reddit's search.rss is keyless and does not captcha - the same property that
@@ -311,7 +328,12 @@ FB_RELEVANT_RE = re.compile(
     r"|למידת מכונה|deep learning|computer vision|ראייה ממוחשבת|עיבוד תמונה"
     r"|\bdata\b|דאטה|\bML\b|\bdev\b|developer|פיתוח|מתכנתים|מפתחים|jobs|משרות"
     r"|עבודה|דרושים|\bgig\b|startup|סטארטאפ|יזמים|python|תכנות|אלגוריתמ|algorithm"
-    r"|automation|אוטומציה|project|פרויקט|outsourc|מיקור חוץ)", re.IGNORECASE)
+    r"|automation|אוטומציה|project|פרויקט|outsourc|מיקור חוץ"
+    # CLIENT-SIDE signals, added 2026-08-08. These are the words that appear in
+    # the name of a group where someone BUYS work rather than performs it, which
+    # is the distinction that separated Israel's 10 good leads from US/UK's 0.
+    r"|founder|entrepreneur|\bowners?\b|\bSaaS\b|agency|ecommerce|e-commerce"
+    r"|small business|\bclients?\b|hiring|\bneed a\b|looking for)", re.IGNORECASE)
 
 # Groups that match the domain words but never carry client work. Same lesson as
 # WA_NOISE_RE: on the WhatsApp run, student-cohort groups dominated the search
@@ -322,7 +344,15 @@ FB_NOISE_RE = re.compile(
     r"|m\.?tech|b\.?tech|\bmba\b|\bmsc\b|\bbsc\b|placement|college|university|alumni"
     r"|meetup|\bevents?\b|webinar|\bcourse\b|קורס|bootcamp|סדנה"
     r"|יד שנייה|יד שניה|second\s*hand|buy\s*(and|&)\s*sell|קנייה ומכירה|מכירות"
-    r"|dating|שידוכים|memes|בדיחות)", re.IGNORECASE)
+    r"|dating|שידוכים|memes|בדיחות"
+    # English DEV-COMMUNITY groups: devs talking to devs. Measured 0 good leads
+    # from 44 posts. Hebrew "דרושים מפתחים" is the opposite - clients wanting
+    # devs - so this stays English-only on purpose.
+    r"|developers?\s+(group|community|club|forum|network|hub)"
+    r"|programmers?\s+(group|community|club|forum)"
+    r"|coding\s+(group|community|club|help)|code\s+newbies?"
+    r"|learn\s+(to\s+)?(code|programming|python)|study\s+group"
+    r"|interview\s+(prep|questions)|leetcode|hackathon)", re.IGNORECASE)
 
 # --- WhatsApp group DISCOVERY (never automated - see discover_whatsapp_groups) -
 # WhatsApp has no logged-out read surface, so the agent only finds joinable

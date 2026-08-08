@@ -361,6 +361,166 @@ def probe_pending(conn: sqlite3.Connection, cap: int = 12) -> list[sqlite3.Row]:
     return out
 
 
+# --- promotion + measured testing ---------------------------------------------
+
+_ACT_RE = re.compile(r"posts=(\d+)\s+recent=(\d+)")
+
+MIN_RELEVANCE = 2       # distinct client-side keyword hits in the NAME
+MIN_POSTS = 2           # the probe actually rendered posts
+MIN_RECENT = 1          # at least one carried a recent relative timestamp
+DEMOTE_AFTER = 2        # zero-yield smoke-scrapes before dropping a group
+
+
+def _activity_ok(activity: str | None) -> bool:
+    m = _ACT_RE.search(activity or "")
+    if not m:
+        return False
+    return int(m.group(1)) >= MIN_POSTS and int(m.group(2)) >= MIN_RECENT
+
+
+def promote(conn: sqlite3.Connection) -> list[sqlite3.Row]:
+    """Move qualifying public groups into the scrape rotation.
+
+    Two independent bars, because either alone lets junk through: a good NAME
+    (relevance >= 2, which is what separates "SaaS Founders" from "UK Software
+    Developers Group") AND evidence the group is actually alive - a public group
+    with no recent posts is worth nothing to scrape.
+    """
+    rows = conn.execute(
+        "SELECT * FROM facebook_groups WHERE status='public'"
+        " AND COALESCE(in_rotation,0)=0 AND COALESCE(in_config,0)=0"
+        " AND relevance >= ?", (MIN_RELEVANCE,)).fetchall()
+    promoted = []
+    for r in rows:
+        if not _activity_ok(r["activity"]):
+            continue
+        conn.execute("UPDATE facebook_groups SET in_rotation=1 WHERE slug=?", (r["slug"],))
+        promoted.append(r)
+    conn.commit()
+    if promoted:
+        log.info("promoted %d group(s) into the scrape rotation", len(promoted))
+    return promoted
+
+
+def smoke_scrape(conn: sqlite3.Connection, cap: int = 3) -> dict:
+    """Read real posts from promoted groups and measure how many look like work.
+
+    The measurement uses prefilter.classify() - the FREE regex gate - on purpose.
+    A cloud runner has no Ollama, and the Gemini key's free tier dies after ~20
+    calls a day, so an LLM-based group test would stall on the first run. The
+    keyword gate is unlimited and answers exactly the question being asked:
+    does this group contain client work at all?
+    """
+    import prefilter
+    from fetchers import facebook_public_fetcher as fbf
+
+    rows = conn.execute(
+        "SELECT * FROM facebook_groups WHERE COALESCE(in_rotation,0)=1"
+        " AND COALESCE(scrapes,0) < ? ORDER BY relevance DESC LIMIT ?",
+        (DEMOTE_AFTER, cap)).fetchall()
+    if not rows:
+        log.info("smoke-scrape: nothing new to test")
+        return {}
+
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        log.warning("smoke-scrape: playwright missing; skipping")
+        return {}
+
+    gap = int(config.env("FB_GROUP_GAP_SECONDS", "90")) * 1000
+    out: dict[str, tuple[int, int]] = {}
+    with sync_playwright() as pw:
+        b = pw.chromium.launch(headless=True)
+        ctx = b.new_context(user_agent=config.USER_AGENT, locale="en-US",
+                            viewport={"width": 1280, "height": 900})
+        page = ctx.new_page()
+        try:
+            for i, r in enumerate(rows):
+                if i:
+                    page.wait_for_timeout(gap)
+                group = {"slug": r["slug"], "name": r["name"] or r["slug"]}
+                try:
+                    leads = fbf._scrape_group(page, group, 10)
+                except fbf._LoginWall:
+                    log.warning("smoke-scrape: login wall - stopping this run")
+                    break
+                except Exception as e:
+                    log.error("smoke-scrape %s failed: %s", r["slug"], str(e)[:70])
+                    continue
+                passed = sum(1 for l in leads if prefilter.classify(l) == "pass")
+                conn.execute(
+                    "UPDATE facebook_groups SET posts_seen=COALESCE(posts_seen,0)+?,"
+                    " gate_passed=COALESCE(gate_passed,0)+?, scrapes=COALESCE(scrapes,0)+1"
+                    " WHERE slug=?", (len(leads), passed, r["slug"]))
+                conn.commit()
+                out[r["slug"]] = (len(leads), passed)
+                log.info("  tested %-28s posts=%d gate_passed=%d",
+                         r["slug"][:28], len(leads), passed)
+        finally:
+            b.close()
+
+    # A group that produced nothing usable across two visits stops costing us
+    # scrape budget. Config groups are never demoted - that list is Or's.
+    dead = conn.execute(
+        "UPDATE facebook_groups SET in_rotation=0 WHERE COALESCE(in_rotation,0)=1"
+        " AND COALESCE(in_config,0)=0 AND COALESCE(scrapes,0) >= ?"
+        " AND COALESCE(gate_passed,0) = 0", (DEMOTE_AFTER,)).rowcount
+    conn.commit()
+    if dead:
+        log.info("demoted %d group(s) after %d zero-yield scrapes", dead, DEMOTE_AFTER)
+    return out
+
+
+def export_json(conn: sqlite3.Connection, path: str = "discovered_groups.json") -> str:
+    """Durable hand-off. The cloud keeps leads.db in the Actions cache, which is
+    a DIFFERENT database from the local one - without a file committed back to
+    the repo, everything found overnight would be invisible in the morning."""
+    import json
+
+    rows = conn.execute(
+        "SELECT slug,name,status,relevance,region,found_via,activity,in_rotation,"
+        " posts_seen,gate_passed,scrapes,first_seen,last_checked"
+        " FROM facebook_groups WHERE COALESCE(in_config,0)=0"
+        " ORDER BY in_rotation DESC, relevance DESC, slug").fetchall()
+    data = [dict(r) for r in rows]
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"generated": _now(), "count": len(data), "groups": data},
+                  f, ensure_ascii=False, indent=1)
+    log.info("wrote %s (%d discovered groups)", path, len(data))
+    return path
+
+
+def night_summary(conn: sqlite3.Connection) -> bool:
+    """One Telegram message describing the night's haul."""
+    c = conn.execute(
+        "SELECT COUNT(*) total,"
+        " SUM(CASE WHEN status='public' THEN 1 ELSE 0 END) pub,"
+        " SUM(CASE WHEN status='private' THEN 1 ELSE 0 END) priv,"
+        " SUM(CASE WHEN COALESCE(in_rotation,0)=1 THEN 1 ELSE 0 END) rot,"
+        " SUM(CASE WHEN status IN ('pending','gone','unknown') THEN 1 ELSE 0 END) todo"
+        " FROM facebook_groups WHERE COALESCE(in_config,0)=0").fetchone()
+    best = conn.execute(
+        "SELECT slug,name,gate_passed,posts_seen FROM facebook_groups"
+        " WHERE COALESCE(gate_passed,0) > 0 ORDER BY gate_passed DESC LIMIT 8").fetchall()
+    lines = [f"\U0001F319 <b>Night run — Facebook groups</b>",
+             f"discovered {c['total']} | public {c['pub'] or 0} | private {c['priv'] or 0}"
+             f" | scraping {c['rot'] or 0} | unprobed {c['todo'] or 0}"]
+    if best:
+        lines += ["", "<b>Producing real posts:</b>"]
+        for r in best:
+            lines.append(f"  {r['gate_passed']}/{r['posts_seen']} — {r['name'] or r['slug']}")
+    priv = conn.execute(
+        "SELECT name,url FROM facebook_groups WHERE status='private' AND relevance>=2"
+        " AND COALESCE(joined,0)=0 AND COALESCE(in_config,0)=0"
+        " ORDER BY relevance DESC LIMIT 6").fetchall()
+    if priv:
+        lines += ["", "<b>Worth joining by hand:</b>"]
+        for r in priv:
+            lines.append(f"  {r['name']}\n  {r['url']}")
+    return notifier._send_raw("\n".join(lines))
+
+
 # --- output ------------------------------------------------------------------
 
 def _rows(conn: sqlite3.Connection, status: str) -> list[sqlite3.Row]:
@@ -486,6 +646,12 @@ def main() -> None:
     ap.add_argument("--config-lines", action="store_true",
                     help="print paste-ready config entries for new public groups")
     ap.add_argument("--joined", metavar="SLUG", help="mark a private group as joined")
+    ap.add_argument("--promote", action="store_true",
+                    help="move qualifying public groups into the scrape rotation")
+    ap.add_argument("--smoke", nargs="?", const=3, type=int, metavar="N",
+                    help="CLOUD ONLY: read posts from N promoted groups and measure yield")
+    ap.add_argument("--json", action="store_true", help="write discovered_groups.json")
+    ap.add_argument("--summary", action="store_true", help="Telegram night summary")
     args = ap.parse_args()
 
     logging.basicConfig(level=logging.INFO,
@@ -506,12 +672,21 @@ def main() -> None:
     if args.probe:
         probe_pending(conn, cap=args.cap)
     rescore(conn)
+    if args.promote:
+        for r in promote(conn):
+            log.info("  + rotation: %s (rel=%d) %s", r["slug"], r["relevance"], r["activity"])
+    if args.smoke:
+        smoke_scrape(conn, cap=args.smoke)
     if args.notify:
         notify_new(conn)
     if args.write:
         print(f"\nwrote {write_md(conn)}")
     if args.config_lines:
         config_lines(conn)
+    if args.json:
+        export_json(conn)
+    if args.summary:
+        night_summary(conn)
     print_table(conn)
 
 
