@@ -10,7 +10,9 @@ name: FB night run
 # discover_fb_groups.py (fb_ddg_cursor, probe ordering) carry state between them.
 #
 # Per-run budget is deliberately below every measured wall:
-#   2 DDG queries | 5 probes | 3 smoke-scrapes
+#   2 DDG queries | 2 probes | 4 smoke-scrapes  (probe throttles at ~2, so the
+#   smoke-scrape carries the verification - it proves public, measures yield,
+#   and demotes duds, all in the one page load a probe would have spent)
 #
 # NEVER run this on Or's machine. A Facebook throttle on the IP he browses from
 # surfaces as a login/checkpoint wall on his own account.
@@ -22,11 +24,11 @@ on:
   workflow_dispatch:
     inputs:
       probe_cap:
-        description: "Groups to probe this run"
-        default: "5"
+        description: "Groups to probe this run (probing throttles fast - keep low)"
+        default: "2"
       smoke_cap:
         description: "Promoted groups to test-scrape this run"
-        default: "3"
+        default: "4"
 
 concurrency:
   group: leadagent            # shares leads.db with the other two workflows
@@ -73,9 +75,9 @@ jobs:
         run: |
           python -X utf8 discover_fb_groups.py \
             --search \
-            --probe --cap ${{ inputs.probe_cap || '5' }} \
+            --probe --cap ${{ inputs.probe_cap || '2' }} \
             --promote \
-            --smoke ${{ inputs.smoke_cap || '3' }} \
+            --smoke ${{ inputs.smoke_cap || '4' }} \
             --write --json --notify
 
       - name: Nightly summary (last slot only)

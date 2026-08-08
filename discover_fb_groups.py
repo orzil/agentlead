@@ -379,20 +379,36 @@ def _activity_ok(activity: str | None) -> bool:
 
 
 def promote(conn: sqlite3.Connection) -> list[sqlite3.Row]:
-    """Move qualifying public groups into the scrape rotation.
+    """Move qualifying groups into the scrape rotation.
 
-    Two independent bars, because either alone lets junk through: a good NAME
-    (relevance >= 2, which is what separates "SaaS Founders" from "UK Software
-    Developers Group") AND evidence the group is actually alive - a public group
-    with no recent posts is worth nothing to scrape.
+    Originally this demanded a successful PROBE first (status='public' plus
+    recorded activity). Measured on the first live night run, that made the
+    whole pipeline a no-op: Facebook throttled the GitHub runner after TWO probe
+    requests, so nothing ever reached status='public' and nothing was ever
+    promoted.
+
+    The deeper problem was doing the work twice - a probe and a smoke-scrape are
+    the same action, loading the group page, against the scarcest budget we
+    have. So promotion now rests on the NAME (relevance >= 2, the bar that
+    separates "SaaS Founders" from "UK Software Developers Group"), and the
+    smoke-scrape becomes the verification: it confirms the group is public,
+    measures real yield, and demotes anything that fails twice. Names come from
+    DDG result titles, so this bar costs no Facebook requests at all.
+
+    A probe result, when we do get one, still counts: an already-verified public
+    group with activity jumps the queue.
     """
     rows = conn.execute(
-        "SELECT * FROM facebook_groups WHERE status='public'"
-        " AND COALESCE(in_rotation,0)=0 AND COALESCE(in_config,0)=0"
-        " AND relevance >= ?", (MIN_RELEVANCE,)).fetchall()
+        "SELECT * FROM facebook_groups"
+        " WHERE status IN ('public','pending') AND COALESCE(in_rotation,0)=0"
+        " AND COALESCE(in_config,0)=0 AND relevance >= ?"
+        " ORDER BY CASE WHEN status='public' THEN 0 ELSE 1 END, relevance DESC",
+        (MIN_RELEVANCE,)).fetchall()
     promoted = []
     for r in rows:
-        if not _activity_ok(r["activity"]):
+        # A probe that positively said "no posts, nothing recent" is real
+        # evidence of a dead group - trust it. Absence of a probe is not.
+        if r["activity"] and not _activity_ok(r["activity"]):
             continue
         conn.execute("UPDATE facebook_groups SET in_rotation=1 WHERE slug=?", (r["slug"],))
         promoted.append(r)
@@ -449,10 +465,14 @@ def smoke_scrape(conn: sqlite3.Connection, cap: int = 3) -> dict:
                     log.error("smoke-scrape %s failed: %s", r["slug"], str(e)[:70])
                     continue
                 passed = sum(1 for l in leads if prefilter.classify(l) == "pass")
+                # Rendering posts logged-out IS the definition of public, so a
+                # successful scrape settles the status a probe never managed to.
+                status = "public" if leads else r["status"]
                 conn.execute(
                     "UPDATE facebook_groups SET posts_seen=COALESCE(posts_seen,0)+?,"
-                    " gate_passed=COALESCE(gate_passed,0)+?, scrapes=COALESCE(scrapes,0)+1"
-                    " WHERE slug=?", (len(leads), passed, r["slug"]))
+                    " gate_passed=COALESCE(gate_passed,0)+?, scrapes=COALESCE(scrapes,0)+1,"
+                    " status=?, last_checked=? WHERE slug=?",
+                    (len(leads), passed, status, _now(), r["slug"]))
                 conn.commit()
                 out[r["slug"]] = (len(leads), passed)
                 log.info("  tested %-28s posts=%d gate_passed=%d",
