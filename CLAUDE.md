@@ -128,6 +128,30 @@ several `config.py` sets key off it (`DOMAIN_REQUIRED_SOURCES`, `INTENT_REQUIRED
 adding or renaming a fetcher. Sources fall back gracefully (e.g. `reddit_fetcher` uses the public
 RSS feed when no API creds are set).
 
+**Facebook group discovery runs at night, in many small cloud runs.**
+`.github/workflows/fbnight.yml` fires every 30 min from 20:00–05:00 Israel. The cadence *is* the
+design: DuckDuckGo challenges an IP after ~1 query and Facebook throttles after a handful of group
+loads, but **every GitHub run gets a fresh IP**, so ~20 small runs beat one long one that would be
+walled in minutes. Cursors in `discover_fb_groups.py` carry state between runs. Per run: 2 DDG
+queries, 2 probes, 4 smoke-scrapes. `FB_REGIONS` must stay **empty** there — the value `IL,US,EU`
+used by `leadagent.yml` would silently discard every new AU/CA/GLOBAL group.
+
+**Group promotion is name-first, verified by scraping.** A discovered group enters the scrape
+rotation on its NAME alone (`relevance >= 2`, scored from DDG result titles — no Facebook request),
+then the smoke-scrape proves it is public, counts how many posts survive `prefilter.classify()`,
+and demotes it after two zero-yield visits. Requiring a successful probe first was tried and was a
+no-op: the runner is throttled after ~2 probes, so nothing ever reached `status='public'`. Probing
+and scraping are the same action against the same scarce budget — don't spend it twice.
+
+**The scrape pool is config ∪ promoted** (`facebook_public_fetcher._group_pool`). Before
+2026-08-08 the fetcher read `config.FACEBOOK_GROUPS` only, which made all discovery decorative.
+
+**Client-side, not developer-side.** The query set targets who *posts the work*: founders, SaaS
+and agency owners, "looking for a developer", "need an app built" — across US/UK/CA/AU/NZ/IE/ZA/SG/
+UAE. Names like "Developers Group" are in `FB_NOISE_RE`. This came from measurement: Israel's
+"דרושים" (wanted) groups produced all 10 good leads while US/UK developer communities produced 0
+from 44 posts. The variable was never the country.
+
 **Discovery scripts (not fetchers).** `probe_fb_groups.py` (re-probes slugs already in config),
 `discover_fb_groups.py` (finds groups *not* in config → `facebook_groups` table +
 `facebook_groups.md`), and `discover_whatsapp_groups.py` (joinable WhatsApp invite links →

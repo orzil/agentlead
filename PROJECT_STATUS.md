@@ -248,6 +248,34 @@ the push, sorted after Israel in the detail-fetch priority. 9 → 17 queries/run
   Verified: a Hebrew CV post scored 8/10 in 8.8s locally, budget + work_type parsed correctly.
   Also dropped `gemini-2.5-flash` (now closed to new users) from the preference list.
 
+## Session 2026-08-08 (night) — worldwide client-side group discovery
+
+**Why US/UK produced nothing** — answered, and it was our fault, not the market's. The 16 Israeli
+groups are **"דרושים" groups where clients post work**; the 6 US/UK ones were **developer
+communities**. All 10 good FB leads came from the former, 0 from 44 posts in the latter. The
+variable was never the country — it is who posts.
+
+- **Query set rewritten around buyers**: founders, SaaS/agency/business owners, "looking for a
+  developer", "need an app built", across US/UK/CA/AU/NZ/IE/ZA/SG/UAE. 34 queries. Dev-community
+  names moved to `FB_NOISE_RE`; client-side words score relevance. Hebrew set untouched.
+- **The gap that made discovery pointless**: `facebook_public_fetcher` read only
+  `config.FACEBOOK_GROUPS`, so a discovered group was never scraped. Pool is now config ∪ promoted.
+- **`fbnight.yml`** — every 30 min, 20:00–05:00 Israel, ~19 runs. Many small runs on fresh IPs is
+  the whole point; one long run gets walled in minutes. 2 DDG queries + 2 probes + 4 smoke-scrapes
+  per run. Commits `discovered_groups.json` back to the repo, because the cloud's `leads.db` lives
+  in the Actions cache and is a different database from the local one.
+- **Promotion redesigned after the first live run.** Requiring a successful probe was a no-op —
+  Facebook throttled the runner after 2 probes, so nothing reached `status='public'`. Promotion now
+  rests on the name (relevance ≥2 from DDG titles, zero Facebook cost) and the smoke-scrape does
+  the verifying: proves public, counts gate-passing posts, demotes after 2 zero-yield visits.
+  It uses the **free regex gate, not the LLM** — cloud runners have no Ollama and the Gemini free
+  tier dies after ~20 calls/day.
+- **Measured after two verification runs:** 96 groups discovered, **15 promoted into the rotation**
+  (`automationisrael`, `n8nil`, `ai.israel.official`, `israelaiorg`, `israel.hightech`, …).
+- **Known limiter, not a bug:** Facebook throttles the runner within ~2 page loads, so probes and
+  smoke-scrapes abort early most runs. The 3-consecutive-`gone` guard reports it rather than
+  writing garbage. Realistic yield is tens of verified groups per night, not hundreds.
+
 ## Session 2026-08-08 — email path live, two real bugs found
 
 - **Gmail IMAP connected** (app password added; the first attempt was the real Google password, the
