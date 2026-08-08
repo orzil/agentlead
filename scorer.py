@@ -79,6 +79,13 @@ HARD RULES
 - Treat Hebrew and English posts identically; write summary in English.
 - If key details are missing, score on what is stated - do not invent details.
   Uncertainty about scope lowers the score by 1, not to zero.
+- Money. The engineer's target is $80-150/hour, and he will not take scraps.
+  Convert any other currency to USD before judging (INR/PHP/BDT figures look
+  large and are worth little). Hourly $80+ is a strong signal, worth +1. Hourly
+  $25-79 caps the score at 6 with the red_flag "below target rate". A fixed
+  budget under a few hundred dollars caps at 4 with the red_flag "low budget".
+  Judge an hourly rate as an hourly rate - $50/hour is respectable, $50 for a
+  whole project is not. No budget stated is NOT a negative on its own.
 - Competition matters as much as fit. When the post states how many people have
   already applied or bid ("32 applicants", "60 bids"), treat a crowded posting
   as a much weaker lead: 50+ applicants caps the score at 5 and must carry the

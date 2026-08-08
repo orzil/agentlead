@@ -14,6 +14,7 @@ classify() returns a reason string:
   gate_offtopic    -> fails the domain/intent keyword requirements
   gate_closed      -> the posting says it stopped accepting applications
   gate_stale       -> older than MAX_LEAD_AGE_DAYS; almost certainly filled
+  gate_lowbudget   -> stated budget (converted to USD) is below the floor
 
 Order matters: identity of the POSTER (seeker) and the ASK (community/noise)
 trump everything; then engagement model (FT/partnership); then topic.
@@ -23,6 +24,7 @@ from __future__ import annotations
 import re
 from datetime import datetime, timezone
 
+import budget
 import config
 from models import Lead
 
@@ -98,6 +100,12 @@ def classify(lead: Lead) -> str:
 
     if config.PARTNER_RE.search(text) and not config.BUDGET_SIGNAL_RE.search(text):
         return "partnership"
+
+    # Pays too little to be worth the engineer's time. Runs after the identity
+    # and engagement gates so the reason recorded is the most informative one.
+    low, _why = budget.too_low(text)
+    if low:
+        return "gate_lowbudget"
 
     # Spam kill: pure design/typing/marketing gigs that only matched via a weak
     # "AI ..." tag. A STRONG domain term (CV/OCR/ML/algorithm/...) rescues them.

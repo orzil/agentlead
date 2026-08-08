@@ -556,6 +556,53 @@ INTENT_REQUIRED_SOURCES = {"r/computervision", "r/MachineLearningJobs",
 # Fuzzy-dedup: posts >= this similar (0-100) within 7 days are duplicates.
 DEDUP_SIMILARITY = 90
 
+# --- Budget floor -------------------------------------------------------------
+# The user will not work for scraps. Two different floors, because the SAME
+# number means opposite things: $50/hour is a fine rate, $50 for a whole project
+# is not. Anything quoted in another currency is converted first - gig boards are
+# full of INR/PHP postings whose numbers look large and are worth very little.
+#
+# A lead is only gated when a budget was actually found AND it is clearly below
+# the floor. No budget mentioned => not gated; plenty of good direct-approach
+# posts name no number at all.
+MIN_BUDGET_USD = float(env("MIN_BUDGET_USD", "50"))    # fixed-price / total
+MIN_HOURLY_USD = float(env("MIN_HOURLY_USD", "25"))    # per-hour rate
+TARGET_HOURLY_USD = float(env("TARGET_HOURLY_USD", "80"))  # what "good" looks like
+
+# Static rates to USD. Deliberately not a live FX API: this is a coarse
+# threshold, the project must stay free, and a rate moving 10% never flips a
+# $20 gig into an $80 one. Refresh occasionally if a currency drifts badly.
+FX_TO_USD = {
+    "usd": 1.0, "eur": 1.08, "gbp": 1.27, "ils": 0.27, "inr": 0.012,
+    "aud": 0.65, "cad": 0.73, "php": 0.017, "pkr": 0.0036, "bdt": 0.0085,
+    "brl": 0.18, "zar": 0.054, "mxn": 0.05, "rub": 0.011, "uah": 0.024,
+    "try": 0.029, "pln": 0.25, "sek": 0.095, "nok": 0.093, "dkk": 0.145,
+    "chf": 1.12, "jpy": 0.0067, "cny": 0.14, "sgd": 0.74, "aed": 0.27,
+    "egp": 0.021, "ngn": 0.00065, "kes": 0.0077, "lkr": 0.0033, "vnd": 0.00004,
+    "idr": 0.000062, "thb": 0.028, "myr": 0.22, "nzd": 0.60,
+}
+
+# Symbol / word -> currency code. Order matters when scanning: the longer,
+# more specific tokens must be tried before bare symbols.
+CURRENCY_TOKENS = [
+    (r"₪|ש\"ח|שח|\bNIS\b|\bILS\b", "ils"),
+    (r"₹|\bRs\.?\b|\bINR\b", "inr"),
+    (r"\bAUD\b|\bA\$", "aud"), (r"\bCAD\b|\bC\$", "cad"),
+    (r"\bNZD\b", "nzd"), (r"\bSGD\b", "sgd"), (r"\bAED\b", "aed"),
+    (r"\bPHP\b|\b₱", "php"), (r"\bPKR\b", "pkr"), (r"\bBDT\b|\b৳", "bdt"),
+    (r"\bBRL\b|\bR\$", "brl"), (r"\bZAR\b", "zar"), (r"\bMXN\b", "mxn"),
+    (r"₽|\bRUB\b", "rub"), (r"\bUAH\b|₴", "uah"), (r"\bTRY\b|₺", "try"),
+    (r"\bPLN\b|\bzł", "pln"), (r"\bSEK\b", "sek"), (r"\bCHF\b", "chf"),
+    (r"¥|\bJPY\b|\bCNY\b|\bRMB\b", "jpy"),
+    (r"€|\bEUR\b", "eur"), (r"£|\bGBP\b", "gbp"),
+    (r"\$|\bUSD\b", "usd"),
+]
+
+# "per hour" in the languages this pipeline sees
+HOURLY_RE = re.compile(
+    r"(/\s*(hr|hour)\b|per\s+hour|hourly|an\s+hour|a[n]?\s*/\s*hr\b"
+    r"|לשעה|בשעה|שעתי)", re.IGNORECASE)
+
 # --- Staleness ---------------------------------------------------------------
 # A filled gig is worth nothing, and the user rejected leads that were expired or
 # closed. Two independent checks, because they catch different things:
