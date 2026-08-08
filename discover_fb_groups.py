@@ -172,6 +172,26 @@ def search_reddit(conn: sqlite3.Connection) -> int:
     return new
 
 
+def _ddg_results(html: str) -> list[tuple[str, str]]:
+    """DDG /lite/ HTML -> [(slug, group name)]. The result title is normally
+    '<Group name> | Facebook', so it gives the name without ever loading
+    facebook.com - which matters, because Facebook throttles every IP we have."""
+    from bs4 import BeautifulSoup
+
+    out: list[tuple[str, str]] = []
+    soup = BeautifulSoup(html, "html.parser")
+    for a in soup.find_all("a", href=True):
+        m = FB_GROUP_RE.search(a["href"])
+        if not m:
+            continue
+        title = a.get_text(" ", strip=True)
+        for suffix in (" | Facebook", " - Facebook", " | פייסבוק"):
+            if title.endswith(suffix):
+                title = title[: -len(suffix)].strip()
+        out.append((m.group(1), title if len(title) > 2 else ""))
+    return out
+
+
 def search_ddg(conn: sqlite3.Connection, per_run: int = 2) -> int:
     """DuckDuckGo, ROTATING a couple of queries per run.
 
@@ -210,10 +230,21 @@ def search_ddg(conn: sqlite3.Connection, per_run: int = 2) -> int:
                                 r.status_code, i)
                     return new
                 found = 0
-                for slug in FB_GROUP_RE.findall(r.text):
+                # Take the NAME from the result title too. Facebook throttles
+                # both the home IP and GitHub runners, so probing is scarce -
+                # but a search title gives the group's name for free, which is
+                # all the relevance scorer needs to rank it.
+                for slug, title in _ddg_results(r.text):
                     if _add(conn, slug, "ddg"):
                         new += 1
                         found += 1
+                    if title:
+                        relevance, region = _score(title)
+                        conn.execute(
+                            "UPDATE facebook_groups SET name=COALESCE(name, ?),"
+                            " relevance=?, region=COALESCE(region, ?) WHERE slug=?",
+                            (title, relevance, region, slug))
+                conn.commit()
                 log.info("  %-52s -> %d new", query[:52], found)
             except Exception as e:
                 log.error("ddg %r failed: %s", query, e)
