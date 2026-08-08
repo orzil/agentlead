@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-08T18:25:58+00:00",
- "count": 96,
+ "generated": "2026-08-08T19:12:56+00:00",
+ "count": 105,
  "groups": [
   {
    "slug": "289504808119115",
@@ -15,6 +15,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "JuniorJobs",
+   "name": "משרות הייטק ושיווק ללא ניסיון | Junior Jobs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T19:12:12+00:00",
    "last_checked": null
   },
   {
@@ -105,6 +120,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "609641652802760",
+   "name": "משרות בהייטק ובסטארט אפים- עם או בלי נסיון",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T19:12:12+00:00",
    "last_checked": null
   },
   {
@@ -228,6 +258,36 @@
    "last_checked": null
   },
   {
+   "slug": "no.experience",
+   "name": "משרות הייטק ושיווק ללא ניסיון",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T19:12:12+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "noexpjobs",
+   "name": "משרות הייטק ללא ניסיון",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T19:12:12+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "720332212292765",
    "name": "דרושים בהייטק בישראל - High Tech Jobs | משרות הייטק | גיוס טכנולוגי",
    "status": "gone",
@@ -240,7 +300,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
-   "last_checked": "2026-08-08T18:25:23+00:00"
+   "last_checked": "2026-08-08T19:12:22+00:00"
   },
   {
    "slug": "1338202816787610",
@@ -303,6 +363,21 @@
    "last_checked": null
   },
   {
+   "slug": "540065381608725",
+   "name": "עבודות ביקנעם והסביבה דרושים יקנעם",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T19:12:01+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "544976585999596",
    "name": "סטארטאפים בישראל",
    "status": "pending",
@@ -333,6 +408,21 @@
    "last_checked": null
   },
   {
+   "slug": "735395363138298",
+   "name": "משרות היי-טק בישראל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T19:12:01+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "7602972273135565",
    "name": "אוטומציות ובינה מלאכותית",
    "status": "pending",
@@ -345,6 +435,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "832763754922199",
+   "name": "קבוצת מחפשי עבודות פרילנסרים - הבית לפירילנסר",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T08:34:39+00:00",
    "last_checked": null
   },
   {
@@ -423,6 +528,21 @@
    "last_checked": null
   },
   {
+   "slug": "freelanceisrael",
+   "name": "הייטק פרילאנסר בישראל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T19:12:12+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "israel.hitech.jobs",
    "name": "משרות מחברות היי-טק בישראל",
    "status": "pending",
@@ -435,6 +555,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "lost.geographers",
+   "name": "גיאוגרפים הולכים לאיבוד | עבור מכרז לשירותי ייעוץ ותכנון לרשות לפיתוח ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T19:12:01+00:00",
    "last_checked": null
   },
   {
@@ -918,6 +1053,21 @@
    "last_checked": "2026-08-08T08:49:27+00:00"
   },
   {
+   "slug": "462672717191788",
+   "name": "לימודים - כל מסלולי הלימוד",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T19:12:01+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "470820686443715",
    "name": null,
    "status": "pending",
@@ -1065,21 +1215,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:12:01+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "832763754922199",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "ddg",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T08:34:39+00:00",
    "last_checked": null
   },
   {

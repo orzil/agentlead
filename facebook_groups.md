@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-08T18:25:58+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-08T19:12:56+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,11 +55,12 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (60)
+## Not yet probed (69)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
 - `289504808119115` (found via ddg)
+- `JuniorJobs` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
 - `292556467949631` (found via ddg)
@@ -73,19 +74,27 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1786020114969358` (found via ddg)
 - `automationisrael` (found via ddg)
 - `223303087850326` (found via ddg)
+- `609641652802760` (found via ddg)
 - `israel.hightech` (found via ddg)
+- `no.experience` (found via ddg)
+- `noexpjobs` (found via ddg)
 - `magia.israel` (found via ddg)
 - `980725725352474` (found via ddg)
 - `1657329921376731` (found via ddg)
 - `7602972273135565` (found via ddg)
 - `1338202816787610` (found via ddg)
 - `289118210401946` (found via ddg)
+- `lost.geographers` (found via ddg)
 - `917351158306121` (found via ddg)
+- `freelanceisrael` (found via ddg)
 - `940674812655793` (found via ddg)
+- `735395363138298` (found via ddg)
 - `israel.hitech.jobs` (found via ddg)
 - `544976585999596` (found via ddg)
+- `540065381608725` (found via ddg)
 - `IsraeliFreelancersUSA` (found via ddg)
 - `610199959120671` (found via ddg)
+- `832763754922199` (found via ddg)
 - `919359532765118` (found via ddg)
 - `206071852932684` (found via ddg)
 - `traveltipsrome` (found via reddit_search)
@@ -100,7 +109,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `491513598224058` (found via reddit_search)
 - `2475192752695227` (found via reddit_search)
 - `804417720029561` (found via reddit_search)
-- `832763754922199` (found via ddg)
 - `473051352513816` (found via ddg)
 - `freelancerneeded` (found via ddg)
 - `freelanceIL` (found via ddg)
@@ -119,3 +127,4 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `bunkerradio` (found via reddit_search)
 - `1765017954926236` (found via reddit_search)
 - `1238614982979857` (found via reddit_search)
+- `462672717191788` (found via ddg)
