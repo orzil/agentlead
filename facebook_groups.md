@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-06T19:06:27+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-08T18:16:42+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -15,6 +15,7 @@ it over IMAP. This is the ban-proof channel and it scales to unlimited groups.
 | 3 | GLOBAL | Remote Jobs & Projects for Developers | https://www.facebook.com/groups/539394463145974/ |
 | 2 | GLOBAL | AI Automation Experts | https://www.facebook.com/groups/aiautomationexperts/ |
 | 2 | GLOBAL | Referral - Data Science Jobs Worldwide | https://www.facebook.com/groups/datasciencejob/ |
+| 2 | GLOBAL | SaaS Founders | https://www.facebook.com/groups/saasfoundersnetwork/ |
 | 2 | IL | דרושים - עבודות פרילנסרים | https://www.facebook.com/groups/458346604817578/ |
 | 2 | IL | מתכנתים פרילנסרים | https://www.facebook.com/groups/1502756793303704/ |
 | 2 | IL | קהילת יזמים/סטארטאפים (Apps) | https://www.facebook.com/groups/appsentrepreneur/ |
@@ -24,7 +25,6 @@ it over IMAP. This is the ban-proof channel and it scales to unlimited groups.
 | 1 | GLOBAL | Mobile Developers Israel | https://www.facebook.com/groups/Mobile.Developers.Israel/ |
 | 1 | IL | מפתחים בשביל אחוזים | https://www.facebook.com/groups/1644220639231386/ |
 | 1 | IL | עבודה למפתחי אינטרנט (Web Devs IL) | https://www.facebook.com/groups/111444215533299/ |
-| 0 | GLOBAL | SaaS Founders | https://www.facebook.com/groups/saasfoundersnetwork/ |
 
 ## Scraped automatically (public, 22)
 
@@ -48,40 +48,56 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | GLOBAL | Fullstack Developers Israel | yes |
 | 1 | GLOBAL | Jobs for Devs JLM (Jerusalem) | yes |
 | 1 | GLOBAL | Machine & Deep Learning Israel | yes |
-| 1 | GLOBAL | UK Software Developers Group | yes |
 | 1 | GLOBAL | UK Startups Group | yes |
 | 1 | IL | דרושים מפתחי אפליקציות | yes |
 | 1 | IL | זירת פרילנסרים | yes |
 | 1 | IL | משרות WEB | yes |
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
+| 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (26)
+## Not yet probed (42)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
-- `2133987156657804` (found via config)
-- `1271378943826323` (found via config)
-- `aibusinesstools` (found via config)
-- `aiautomationagency.aaa` (found via config)
-- `3501761776707095` (found via config)
-- `chatbotjobs` (found via config)
-- `361717460552082` (found via config)
-- `556739801135588` (found via config)
-- `developersmeetstartups` (found via config)
-- `ComputerVisionGroup` (found via config)
-- `makeautomation` (found via config)
-- `inventivehub` (found via config)
-- `remotestartupjobs` (found via config)
-- `nodemation` (found via config)
-- `473051352513816` (found via ddg)
+- `289504808119115` (found via ddg)
+- `iec.org.il` (found via ddg)
+- `Software.Developers.Israel` (found via ddg)
+- `1786020114969358` (found via ddg)
+- `223303087850326` (found via ddg)
+- `israel.hightech` (found via ddg)
+- `917351158306121` (found via ddg)
+- `israel.hitech.jobs` (found via ddg)
+- `544976585999596` (found via ddg)
+- `IsraeliFreelancersUSA` (found via ddg)
+- `206071852932684` (found via ddg)
+- `traveltipsrome` (found via reddit_search)
+- `noisefloorav` (found via reddit_search)
+- `2467185587` (found via reddit_search)
+- `1662205858220651` (found via reddit_search)
+- `470820686443715` (found via reddit_search)
+- `SouthernMaineFilmMakers` (found via reddit_search)
+- `1272029417395485` (found via reddit_search)
+- `245452732238952` (found via reddit_search)
+- `lakeatitlanguatemalatravel` (found via reddit_search)
+- `491513598224058` (found via reddit_search)
+- `2475192752695227` (found via reddit_search)
+- `804417720029561` (found via reddit_search)
 - `832763754922199` (found via ddg)
-- `236845247011853` (found via ddg)
+- `473051352513816` (found via ddg)
+- `freelancerneeded` (found via ddg)
+- `freelanceIL` (found via ddg)
+- `107914806514702` (found via ddg)
+- `126182808134629` (found via ddg)
+- `738857980085389` (found via ddg)
 - `1217610615947693` (found via ddg)
 - `1417623821789515` (found via ddg)
-- `386010697745869` (found via ddg)
-- `738857980085389` (found via ddg)
-- `freelanceIL` (found via ddg)
-- `1243544029906375` (found via ddg)
-- `findyourcofounder` (found via config)
-- `Founder.CEOs` (found via config)
-- `foundersspace` (found via config)
+- `154062152055554` (found via ddg)
+- `2786770884931764` (found via ddg)
+- `396641690362272` (found via ddg)
+- `fed.israel` (found via ddg)
+- `redlighttherapy101` (found via reddit_search)
+- `222047816070167` (found via reddit_search)
+- `80466465571` (found via reddit_search)
+- `bunkerradio` (found via reddit_search)
+- `1765017954926236` (found via reddit_search)
+- `1238614982979857` (found via reddit_search)
