@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-08T21:29:59+00:00",
- "count": 148,
+ "generated": "2026-08-08T22:14:34+00:00",
+ "count": 168,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -153,6 +153,51 @@
    "last_checked": null
   },
   {
+   "slug": "203443828052088",
+   "name": "Business Owner USA | Entrepreneurs & Founders",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2815042615255352",
+   "name": "Small business owners/entrepreneurs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "872702652095435",
+   "name": "E-commerce Shopify Business Owners (Ecommerce)",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "JuniorJobs",
    "name": "משרות הייטק ושיווק ללא ניסיון | Junior Jobs",
    "status": "pending",
@@ -270,6 +315,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:01:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "202402986297944",
+   "name": "Women Entrepreneur and Founders Helping Each Other",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:51+00:00",
    "last_checked": null
   },
   {
@@ -528,6 +588,96 @@
    "last_checked": null
   },
   {
+   "slug": "beehexaecommercegroup",
+   "name": "eCommerce Store Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommercegrowthtribe",
+   "name": "Ecommerce Growth for Store Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommercestoreowner",
+   "name": "E-commerce Store Owner",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommercesuccessgroup",
+   "name": "eCommerce Store Owners Support Group and Marketing Tips",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "entrepreneurandsmallbusinessguide",
+   "name": "Entrepreneur & Small Business Support Group",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "entrepreneursstartup",
+   "name": "Entrepreneurs Startup",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "founderx",
    "name": "The Founders Exchange ~ Startup Founder | Co-founder | Angel Investors",
    "status": "pending",
@@ -783,6 +933,21 @@
    "last_checked": null
   },
   {
+   "slug": "storeownertips",
+   "name": "E-Commerce Store Owner Tips",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "uxdesignercommunity",
    "name": "UX & UI DESIGNER COMMUNITY | i am looking for a developer ...",
    "status": "pending",
@@ -810,7 +975,22 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
-   "last_checked": "2026-08-08T21:29:25+00:00"
+   "last_checked": "2026-08-08T22:14:00+00:00"
+  },
+  {
+   "slug": "1100802378915693",
+   "name": "Help with ecommerce store",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
   },
   {
    "slug": "1338202816787610",
@@ -828,6 +1008,21 @@
    "last_checked": null
   },
   {
+   "slug": "165114167522089",
+   "name": "Entrepreneurs Business Help",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1657329921376731",
    "name": "אוטומציה - עסקים אוטונומיים - עסקים שמבינים ומיישמים אוטומציה",
    "status": "pending",
@@ -840,6 +1035,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1766511223953040",
+   "name": "Building Entrepreneurs!",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:51+00:00",
    "last_checked": null
   },
   {
@@ -870,6 +1080,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2126268814575239",
+   "name": "eCommerce Operations Support",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:41+00:00",
    "last_checked": null
   },
   {
@@ -963,6 +1188,21 @@
    "last_checked": null
   },
   {
+   "slug": "789382672475266",
+   "name": "SHOPIFY STORE OWNERS",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "832763754922199",
    "name": "קבוצת מחפשי עבודות פרילנסרים - הבית לפירילנסר",
    "status": "pending",
@@ -1053,6 +1293,36 @@
    "last_checked": null
   },
   {
+   "slug": "buildingblackentrepreneurs",
+   "name": "Building Black Entrepreneurs",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "entrepreneurA1",
+   "name": "Entrepreneur",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "freelanceisrael",
    "name": "הייטק פרילאנסר בישראל",
    "status": "pending",
@@ -1125,6 +1395,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "optimizedstoreowner",
+   "name": "The Optimized Store Owner",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "pyterssupportsmallbusiness",
+   "name": "Support Small Business",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T22:13:51+00:00",
    "last_checked": null
   },
   {

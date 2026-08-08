@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-08T21:29:59+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-08T22:14:34+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (112)
+## Not yet probed (132)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -68,13 +68,21 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2004638959986462` (found via ddg)
 - `1182155486119040` (found via ddg)
 - `aibizgrowth` (found via ddg)
+- `203443828052088` (found via ddg)
+- `872702652095435` (found via ddg)
 - `1418563452142232` (found via ddg)
 - `agencybusinessowners` (found via ddg)
 - `1527705608867878` (found via ddg)
+- `2815042615255352` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `software.devopers.jobs` (found via ddg)
 - `659198409489977` (found via ddg)
+- `storeownertips` (found via ddg)
+- `ecommercestoreowner` (found via ddg)
+- `ecommercegrowthtribe` (found via ddg)
+- `entrepreneurandsmallbusinessguide` (found via ddg)
+- `entrepreneursstartup` (found via ddg)
 - `699051796861691` (found via ddg)
 - `gohighlevelagencyowners` (found via ddg)
 - `4808168705943904` (found via ddg)
@@ -95,6 +103,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1248313253326186` (found via ddg)
 - `founderx` (found via ddg)
 - `uxdesignercommunity` (found via ddg)
+- `202402986297944` (found via ddg)
+- `beehexaecommercegroup` (found via ddg)
+- `ecommercesuccessgroup` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
 - `292556467949631` (found via ddg)
@@ -112,10 +123,19 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `israel.hightech` (found via ddg)
 - `no.experience` (found via ddg)
 - `noexpjobs` (found via ddg)
+- `buildingblackentrepreneurs` (found via ddg)
+- `1766511223953040` (found via ddg)
+- `entrepreneurA1` (found via ddg)
+- `165114167522089` (found via ddg)
+- `1100802378915693` (found via ddg)
 - `freelancersrequired` (found via ddg)
+- `789382672475266` (found via ddg)
 - `startupfrat` (found via ddg)
+- `pyterssupportsmallbusiness` (found via ddg)
+- `optimizedstoreowner` (found via ddg)
 - `177842636144129` (found via ddg)
 - `webdevelopersglobal` (found via ddg)
+- `2126268814575239` (found via ddg)
 - `magia.israel` (found via ddg)
 - `980725725352474` (found via ddg)
 - `1657329921376731` (found via ddg)
