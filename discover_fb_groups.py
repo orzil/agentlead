@@ -221,8 +221,11 @@ def probe_pending(conn: sqlite3.Connection, cap: int = 12) -> list[sqlite3.Row]:
     """
     from playwright.sync_api import sync_playwright
 
+    # 'gone' is included on purpose: it is not a trustworthy verdict (a throttled
+    # IP produces it too), so those rows get another chance on a later run with a
+    # presumably un-throttled IP. 'public'/'private' are settled and skipped.
     rows = conn.execute(
-        "SELECT * FROM facebook_groups WHERE status='pending' OR status='unknown'"
+        "SELECT * FROM facebook_groups WHERE status IN ('pending','unknown','gone')"
         " ORDER BY relevance DESC, first_seen LIMIT ?", (cap,)).fetchall()
     if not rows:
         log.info("probe: nothing pending")
