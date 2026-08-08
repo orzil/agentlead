@@ -4,8 +4,6 @@
                    Europe-centric; explicit job_types incl. Freelance/Contract.
   - Working Nomads https://www.workingnomads.com/api/exposed_jobs/
                    Curated remote dev jobs.
-  - Himalayas      https://himalayas.app/jobs/api?limit=N
-                   Large remote pool; employmentType + salary fields.
 
 All three are in DOMAIN_REQUIRED_SOURCES, so only listings matching a domain
 keyword (CV/ML/OCR/algorithms/...) survive the gate.
@@ -70,23 +68,6 @@ def _workingnomads(client) -> list[Lead]:
     return leads
 
 
-def _himalayas(client) -> list[Lead]:
-    # their API is slow; a small page + generous timeout keeps it reliable
-    r = client.get("https://himalayas.app/jobs/api", params={"limit": 20}, timeout=90)
-    r.raise_for_status()
-    leads = []
-    for j in r.json().get("jobs", []):
-        emp = ", ".join(j.get("employmentType", []) or []) \
-            if isinstance(j.get("employmentType"), list) else (j.get("employmentType") or "")
-        url = j.get("applicationLink") or j.get("guid") or ""
-        text = (f"{j.get('title','')} at {j.get('companyName','')}\n"
-                f"Employment: {emp} | Categories: {', '.join(j.get('categories', []) or [])}\n\n"
-                f"{_clean(j.get('description') or j.get('excerpt') or '')}")
-        leads.append(Lead(source="himalayas", url=url,
-                          raw_text=text[:4000], author=j.get("companyName"),
-                          posted_at=_parse_when(j.get("pubDate"))))
-    return leads
-
 
 def _jobspresso(client) -> list[Lead]:
     """WP Job Manager RSS with a working keyword filter."""
@@ -125,7 +106,6 @@ def fetch() -> list[Lead]:
     with httpx.Client(headers=headers, timeout=25, follow_redirects=True) as client:
         for name, fn in (("arbeitnow", _arbeitnow),
                          ("workingnomads", _workingnomads),
-                         ("himalayas", _himalayas),
                          ("jobspresso", _jobspresso)):
             try:
                 got = fn(client)

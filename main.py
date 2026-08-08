@@ -31,7 +31,6 @@ from fetchers import (
     jobicy_fetcher,
     linkedin_fetcher,
     reddit_fetcher,
-    remoteok_fetcher,
     remotive_fetcher,
     secrettlv_fetcher,
     telegram_fetcher,
@@ -99,10 +98,6 @@ def job_xplace(conn) -> None:
 
 def job_secrettlv(conn) -> None:
     pipeline.ingest_many(conn, secrettlv_fetcher.fetch(), "secrettlv")
-
-
-def job_remoteok(conn) -> None:
-    pipeline.ingest_many(conn, remoteok_fetcher.fetch(), "remoteok")
 
 
 def job_remotive(conn) -> None:
@@ -174,9 +169,8 @@ JOBS = [
     ("aijobs", 2 * 3600, job_aijobs),          # dedicated AI/ML board
     ("companies", 6 * 3600, job_companies),    # curated AI/CV company boards
     ("telegram", 45 * 60, job_telegram),       # public channel previews
-    ("remoteok", 90 * 60, job_remoteok),
     ("weworkremotely", 2 * 3600, job_weworkremotely),
-    ("jobboards", 3 * 3600, job_jobboards),    # arbeitnow + workingnomads + himalayas
+    ("jobboards", 3 * 3600, job_jobboards),    # arbeitnow + workingnomads + jobspresso
     ("jobicy", 4 * 3600, job_jobicy),          # remote AI/ML/data, has freelance/part-time flag
     ("remotive", 8 * 3600, job_remotive),      # rate-limited ~4/day, 24h-delayed
     ("facebook", 8 * 3600, job_facebook),      # public groups; self-caps at 3 runs/day

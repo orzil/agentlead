@@ -537,8 +537,10 @@ GATE_BYPASS_SOURCES = {"upwork", "wellfound"}
 
 # Broad job boards where every listing is a job: require a DOMAIN keyword match
 # (not just an engagement word) so generic remote roles don't flood the pipeline.
-DOMAIN_REQUIRED_SOURCES = {"remoteok", "weworkremotely", "remotive",
-                           "arbeitnow", "workingnomads", "himalayas", "aijobs",
+# remoteok + himalayas dropped 2026-08-08: both gate applying behind a paid
+# plan, so a lead there costs money to act on - same reasoning as Freelancer.com.
+DOMAIN_REQUIRED_SOURCES = {"weworkremotely", "remotive",
+                           "arbeitnow", "workingnomads", "aijobs",
                            "telegram", "braintrust", "jobspresso", "companies",
                            "jobicy", "linkedin"}
 
