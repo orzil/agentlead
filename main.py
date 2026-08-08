@@ -137,6 +137,14 @@ def job_telegram(conn) -> None:
     pipeline.ingest_many(conn, telegram_fetcher.fetch(), "telegram")
 
 
+def job_linkcheck(conn) -> None:
+    """Verify the leads the user is about to act on are still live. Age alone is
+    a poor proxy: boards pull postings early and community threads stay open
+    for months."""
+    import linkcheck
+    linkcheck.verify(conn, limit=40, min_score=config.DIGEST_THRESHOLD)
+
+
 def job_digest(conn) -> None:
     """Send the daily digest of borderline (6-7) leads once per day after DIGEST_HOUR."""
     today = datetime.now().strftime("%Y-%m-%d")
@@ -173,6 +181,7 @@ JOBS = [
     ("remotive", 8 * 3600, job_remotive),      # rate-limited ~4/day, 24h-delayed
     ("facebook", 8 * 3600, job_facebook),      # public groups; self-caps at 3 runs/day
     ("whatsapp", 24 * 3600, job_whatsapp),     # mine invite links out of stored posts
+    ("linkcheck", 6 * 3600, job_linkcheck),   # drop leads whose posting died
     ("digest", 10 * 60, job_digest),
 ]
 
@@ -543,6 +552,8 @@ def main() -> None:
                     help="approve+send drafted replies, e.g. --approve-reply 3 or 'all'")
     ap.add_argument("--reply-test", type=int, metavar="LEAD_ID",
                     help="dry-run: draft a reply for one lead, print it, send nothing")
+    ap.add_argument("--verify-links", nargs="?", const=60, type=int, metavar="N",
+                    help="check the top N leads' URLs and gate the dead ones")
     ap.add_argument("--regate", action="store_true",
                     help="re-run the (stricter) keyword classifier over stored candidates")
     ap.add_argument("--include-partnerships", action="store_true",
@@ -579,6 +590,10 @@ def main() -> None:
         n = export_html(db.connect(), args.export_html, args.min_score,
                         args.include_partnerships)
         print(f"exported {n} leads -> {args.export_html}")
+        return
+    if args.verify_links is not None:
+        import linkcheck
+        print(linkcheck.verify(db.connect(), limit=args.verify_links))
         return
     if args.regate:
         regate(db.connect())
