@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-08T23:01:10+00:00",
- "count": 180,
+ "generated": "2026-08-08T23:26:02+00:00",
+ "count": 189,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -390,6 +390,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:01:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "201748110567171",
+   "name": "Entrepreneurs, Business & Startup UK",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:25:18+00:00",
    "last_checked": null
   },
   {
@@ -1140,7 +1155,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
-   "last_checked": "2026-08-08T23:00:36+00:00"
+   "last_checked": "2026-08-08T23:25:27+00:00"
   },
   {
    "slug": "1100802378915693",
@@ -1155,6 +1170,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1266602687180357",
+   "name": "UK Innovator Founder Visa",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:25:18+00:00",
    "last_checked": null
   },
   {
@@ -1275,6 +1305,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "290592000669370",
+   "name": "Founders & CEOs UK",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:25:18+00:00",
    "last_checked": null
   },
   {
@@ -1443,6 +1488,21 @@
    "last_checked": null
   },
   {
+   "slug": "FounderNation",
+   "name": "Founder Nation UK",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "IsraeliFreelancersUSA",
    "name": "פרילנסרים ובעלי עסקים קטנים בארה\"ב",
    "status": "pending",
@@ -1455,6 +1515,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T15:40:10+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "UKEntrepreneursandStartups",
+   "name": "UK Entrepreneurs & Start-ups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:25:18+00:00",
    "last_checked": null
   },
   {
@@ -1533,6 +1608,21 @@
    "last_checked": null
   },
   {
+   "slug": "londontechstartups",
+   "name": "London Tech Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "lost.geographers",
    "name": "גיאוגרפים הולכים לאיבוד | עבור מכרז לשירותי ייעוץ ותכנון לרשות לפיתוח ...",
    "status": "pending",
@@ -1590,6 +1680,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "sleekuk",
+   "name": "New Business Owners in the UK",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupdirectoryuk",
+   "name": "Startup Directory UK",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:25:18+00:00",
    "last_checked": null
   },
   {
@@ -2341,6 +2461,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:29:54+00:00",
    "last_checked": "2026-08-08T08:37:55+00:00"
+  },
+  {
+   "slug": "NelsonBC",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T23:22:21+00:00",
+   "last_checked": null
   },
   {
    "slug": "NewHavenUltimate",

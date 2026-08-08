@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-08T23:01:10+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-08T23:26:02+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (144)
+## Not yet probed (153)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -87,6 +87,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ecommercegrowthtribe` (found via ddg)
 - `entrepreneurandsmallbusinessguide` (found via ddg)
 - `entrepreneursstartup` (found via ddg)
+- `201748110567171` (found via ddg)
 - `699051796861691` (found via ddg)
 - `gohighlevelagencyowners` (found via ddg)
 - `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
@@ -138,12 +139,19 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1766511223953040` (found via ddg)
 - `entrepreneurA1` (found via ddg)
 - `165114167522089` (found via ddg)
+- `FounderNation` (found via ddg)
+- `290592000669370` (found via ddg)
 - `1100802378915693` (found via ddg)
 - `freelancersrequired` (found via ddg)
+- `londontechstartups` (found via ddg)
+- `sleekuk` (found via ddg)
 - `789382672475266` (found via ddg)
+- `startupdirectoryuk` (found via ddg)
 - `startupfrat` (found via ddg)
 - `pyterssupportsmallbusiness` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
+- `UKEntrepreneursandStartups` (found via ddg)
+- `1266602687180357` (found via ddg)
 - `177842636144129` (found via ddg)
 - `webdevelopersglobal` (found via ddg)
 - `2126268814575239` (found via ddg)
@@ -199,6 +207,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `210047219696253` (found via reddit_search)
 - `datdestroyerstudygroup` (found via reddit_search)
 - `aitoolsandpromptsthatactuallywork` (found via ddg)
+- `NelsonBC` (found via reddit_search)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
 - `640514310704403` (found via ddg)
 - `n8nofficial` (found via ddg)
