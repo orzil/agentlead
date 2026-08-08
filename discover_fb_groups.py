@@ -172,30 +172,45 @@ def search_reddit(conn: sqlite3.Connection) -> int:
     return new
 
 
-def search_ddg(conn: sqlite3.Connection) -> int:
-    """DuckDuckGo HTML. The only engine still serving organic results (measured);
-    captcha-walls datacenter IPs, so detect and skip rather than fail."""
+def search_ddg(conn: sqlite3.Connection, per_run: int = 2) -> int:
+    """DuckDuckGo, ROTATING a couple of queries per run.
+
+    Measured 2026-08-08: DDG now challenges (HTTP 202) after a SINGLE query from
+    this IP, and it challenged the GitHub runner too. Firing the whole query list
+    in one run therefore harvests one query's worth of results and wastes the
+    rest. So the list is consumed a couple of queries at a time across runs, with
+    a cursor in kv - the same rotation trick the group scraper uses. Slow, but it
+    never trips the wall and the list grows every run.
+
+    Uses the /lite/ endpoint via POST: measured to still return organic results
+    when /html/ was already returning 202.
+    """
     import httpx
+
+    queries = config.FB_DDG_QUERIES
+    if not queries:
+        return 0
+    cursor = int(db.kv_get(conn, "fb_ddg_cursor", "0") or "0") % len(queries)
+    batch = [queries[(cursor + i) % len(queries)] for i in range(min(per_run, len(queries)))]
+    db.kv_set(conn, "fb_ddg_cursor", str((cursor + len(batch)) % len(queries)))
 
     new = 0
     headers = {"User-Agent": config.USER_AGENT,
+               "Accept": "text/html",
                "Accept-Language": "en-US,en;q=0.9,he;q=0.8"}
     with httpx.Client(headers=headers, timeout=20, follow_redirects=True) as client:
-        for i, query in enumerate(config.FB_DDG_QUERIES):
+        for i, query in enumerate(batch):
             if i:
                 time.sleep(_DDG_SLEEP)
             try:
-                r = client.get("https://html.duckduckgo.com/html/", params={"q": query})
+                r = client.post("https://lite.duckduckgo.com/lite/", data={"q": query})
                 if r.status_code != 200 or "anomaly" in r.text.lower():
-                    log.warning("DDG challenge (HTTP %s) - skipping the DDG surface",
-                                r.status_code)
-                    return new
-                hits = FB_GROUP_RE.findall(r.text)
-                if not hits and "result__a" not in r.text:
-                    log.warning("DDG returned no organic results - skipping")
+                    log.warning("DDG challenge (HTTP %s) after %d quer(y/ies) - "
+                                "stopping; the cursor resumes here next run",
+                                r.status_code, i)
                     return new
                 found = 0
-                for slug in hits:
+                for slug in FB_GROUP_RE.findall(r.text):
                     if _add(conn, slug, "ddg"):
                         new += 1
                         found += 1
@@ -203,7 +218,7 @@ def search_ddg(conn: sqlite3.Connection) -> int:
             except Exception as e:
                 log.error("ddg %r failed: %s", query, e)
                 return new
-    log.info("search_ddg: %d new group(s)", new)
+    log.info("search_ddg: %d new group(s) (cursor %d/%d)", new, cursor, len(queries))
     return new
 
 
@@ -211,6 +226,14 @@ def search_ddg(conn: sqlite3.Connection) -> int:
 
 _PRIV = re.compile(r"(this group is private|private group|join this group to see|"
                    r"קבוצה פרטית|הצטרפ)", re.I)
+
+# "2h", "15 m", "3 d", "Yesterday", "לפני שעה" - Facebook uses relative stamps on
+# RECENT posts and an explicit date on old ones, so counting these is a cheap
+# liveness proxy. The user asked for groups with actual traffic, not just groups
+# that exist.
+_RECENT_RE = re.compile(r"(\d{1,2}\s?[hmd]|yesterday|hours? ago|minutes? ago"
+                        r"|לפני|אתמול)", re.I)
+_MEMBERS_RE = re.compile(r"([\d.,]+[KMk]?)\s*(?:members|חברים)", re.I)
 
 
 def probe_pending(conn: sqlite3.Connection, cap: int = 12) -> list[sqlite3.Row]:
@@ -250,6 +273,7 @@ def probe_pending(conn: sqlite3.Connection, cap: int = 12) -> list[sqlite3.Row]:
             if i:
                 page.wait_for_timeout(_PROBE_SLEEP * 1000)
             slug, status, name = row["slug"], "unknown", row["name"]
+            notes = ""
             try:
                 page.goto(row["url"], wait_until="domcontentloaded", timeout=45000)
                 page.wait_for_timeout(3500)
@@ -271,6 +295,15 @@ def probe_pending(conn: sqlite3.Connection, cap: int = 12) -> list[sqlite3.Row]:
                     status = "public"
                 else:
                     status = "private"
+                # A public group with no recent posts is worth nothing to scrape,
+                # so record how alive it looks: rendered posts, plus whether any
+                # carry a recent-relative timestamp ("2h", "3 d", "Yesterday").
+                # Facebook shows an explicit date only on older posts.
+                members = _MEMBERS_RE.search(body)
+                activity = len(_RECENT_RE.findall(body))
+                notes = f"posts={arts} recent={activity}"
+                if members:
+                    notes += f" members={members.group(1)}"
             except Exception as e:
                 log.error("probe %s failed: %s", slug, str(e)[:60])
             if status == "gone":
@@ -286,10 +319,11 @@ def probe_pending(conn: sqlite3.Connection, cap: int = 12) -> list[sqlite3.Row]:
             relevance, region = _score(name or "")
             conn.execute(
                 "UPDATE facebook_groups SET status=?, name=?, relevance=?, region=?,"
-                " last_checked=? WHERE slug=?",
-                (status, name, relevance, region, _now(), slug))
+                " last_checked=?, activity=? WHERE slug=?",
+                (status, name, relevance, region, _now(), notes, slug))
             conn.commit()
-            log.info("  %-8s rel=%d %-28s %s", status, relevance, slug[:28], (name or "")[:40])
+            log.info("  %-8s rel=%d %-26s %-34s %s", status, relevance, slug[:26],
+                     (name or "")[:34], notes)
             out.append(conn.execute("SELECT * FROM facebook_groups WHERE slug=?",
                                     (slug,)).fetchone())
         b.close()

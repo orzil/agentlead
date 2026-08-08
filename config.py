@@ -275,6 +275,18 @@ FB_DDG_QUERIES = [
     'site:facebook.com/groups "machine learning" freelance projects',
     'site:facebook.com/groups remote software projects contract',
     'site:facebook.com/groups startup founders need developer',
+    # --- USA: client-side groups, added 2026-08-08 on user request ---
+    'site:facebook.com/groups "AI automation agency"',
+    'site:facebook.com/groups n8n OR make.com automation freelance',
+    'site:facebook.com/groups saas founders hiring developer',
+    'site:facebook.com/groups "data science" jobs group USA',
+    'site:facebook.com/groups "looking for a developer" project',
+    'site:facebook.com/groups entrepreneurs need app built',
+    # --- UK ---
+    'site:facebook.com/groups UK freelancers tech',
+    'site:facebook.com/groups london tech jobs developers',
+    'site:facebook.com/groups UK startups founders',
+    'site:facebook.com/groups "freelance" UK software contract',
 ]
 
 # Reddit's search.rss is keyless and does not captcha - the same property that
