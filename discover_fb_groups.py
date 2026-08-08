@@ -62,6 +62,7 @@ _NOT_A_SLUG = {"search", "feed", "discover", "create", "permalink", "posts",
                "joins", "member", "members", "about", "www", "groups"}
 
 _DDG_SLEEP = 10
+_REDDIT_SLEEP = 8
 _PROBE_SLEEP = 20   # FB throttles ~10 quick loads; matches probe_fb_groups.py
 
 
@@ -138,6 +139,36 @@ def mine_db(conn: sqlite3.Connection) -> int:
             if _add(conn, slug, "leads_db"):
                 new += 1
     log.info("mine_db: %d new group(s) from %d stored posts", new, len(rows))
+    return new
+
+
+def search_reddit(conn: sqlite3.Connection) -> int:
+    """Reddit search.rss for shared FB group links. Keyless and never captchas -
+    the surface that stayed reliable for WhatsApp discovery, and the reason this
+    exists is that DDG now challenges both the home IP and the GitHub runner."""
+    import httpx
+
+    from fetchers import reddit_fetcher
+
+    new = 0
+    headers = {"User-Agent": config.REDDIT_USER_AGENT}
+    with httpx.Client(headers=headers, timeout=20, follow_redirects=True) as client:
+        for i, query in enumerate(config.FB_REDDIT_QUERIES):
+            if i:
+                time.sleep(_REDDIT_SLEEP)
+            try:
+                r = reddit_fetcher._get_with_backoff(
+                    client, "https://www.reddit.com/search.rss",
+                    {"q": query, "sort": "new", "t": "year"}, "fb/reddit")
+                found = 0
+                for slug in FB_GROUP_RE.findall(r.text):
+                    if _add(conn, slug, "reddit_search"):
+                        new += 1
+                        found += 1
+                log.info("  %-50s -> %d new", query[:50], found)
+            except Exception as e:
+                log.error("reddit search %r failed: %s", query, e)
+    log.info("search_reddit: %d new group(s)", new)
     return new
 
 
@@ -384,6 +415,7 @@ def main() -> None:
     seed_from_config(conn)
     mine_db(conn)
     if args.search:
+        search_reddit(conn)
         search_ddg(conn)
     if args.probe:
         probe_pending(conn, cap=args.cap)

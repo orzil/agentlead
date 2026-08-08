@@ -277,6 +277,21 @@ FB_DDG_QUERIES = [
     'site:facebook.com/groups startup founders need developer',
 ]
 
+# Reddit's search.rss is keyless and does not captcha - the same property that
+# made it the reliable surface for WhatsApp discovery. Added 2026-08-08 after
+# DuckDuckGo challenged BOTH the home IP and the GitHub runner (HTTP 202), which
+# left the DDG surface effectively dead. People post FB group links in threads
+# about finding freelance work, so the recall is real if narrower than a search
+# engine's.
+FB_REDDIT_QUERIES = [
+    '"facebook.com/groups" freelance developer',
+    '"facebook.com/groups" hiring developers',
+    '"facebook.com/groups" "computer vision" OR "machine learning"',
+    '"facebook.com/groups" AI automation clients',
+    '"facebook.com/groups" israel developers',
+    '"facebook.com/groups" remote work projects',
+]
+
 # Relevance = distinct keyword hits in the group NAME (same shape as the
 # WhatsApp scorer). Bilingual on purpose.
 FB_RELEVANT_RE = re.compile(
