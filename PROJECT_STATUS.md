@@ -248,6 +248,26 @@ the push, sorted after Israel in the detail-fetch priority. 9 → 17 queries/run
   Verified: a Hebrew CV post scored 8/10 in 8.8s locally, budget + work_type parsed correctly.
   Also dropped `gemini-2.5-flash` (now closed to new users) from the preference list.
 
+## Session 2026-08-08 — email path live, two real bugs found
+
+- **Gmail IMAP connected** (app password added; the first attempt was the real Google password, the
+  second had the 16 chars but kept its spaces). Inbox holds **236 LinkedIn job-alert emails**, 189
+  facebookmail. First ingest of 30 days: 98 leads → **3 instant Telegram pushes**.
+- **Backlog fully cleared**: 0 unscored, 1,123 scored, via the Ollama fallback. 60 leads ≥7, 7 ≥8.
+- **BUG (fixed): alert-email subject leaked into every job.** LinkedIn names each alert after one
+  promoted job (*"Computer Vision & ML Expert at Alignerr: up to $150/hour"*), and the subject is
+  prepended to every job parsed from that email — deliberately, for the domain gate. Unfenced, the
+  scorer billed **Mobileye and Wayve full-time roles as "$150/hour contract"**, putting three false
+  8s at the top of the list. The subject is now fenced with an explicit "ignore any pay rate in
+  this" marker. Re-scoring the 42 stored alert leads: 36 low, 4 digest, **2 genuine** pushes.
+- **BUG (fixed): the FB prober wrote garbage when throttled.** A throttled IP and a dead slug share
+  one signature (bare "Facebook" title, no articles). Run with `probe_cap=40`, a GitHub runner
+  returned **40/40 "gone"** — including groups already verified real. Now 3 consecutive "gone"
+  aborts the run, `gone` is re-probeable rather than final, and the default cap is 10.
+- **Reddit search added as an FB-discovery surface** — DDG challenged the GitHub runner too
+  (HTTP 202), so it was the only network surface left. From the cloud it found **47 new groups**
+  (13 locally), which is now the main way the group list grows.
+
 ### Measured this session (all changed a decision)
 - **`f_AL=true` IS honoured; `f_JT` is NOT.** Easy Apply returned only 3/10 overlap with the
   unfiltered baseline (real filtering), while `f_JT=C` returned 10/10 identical ids and 4/4 detail
