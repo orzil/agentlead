@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-09T02:03:17+00:00",
- "count": 226,
+ "generated": "2026-08-09T03:55:33+00:00",
+ "count": 240,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -63,6 +63,21 @@
    "last_checked": null
   },
   {
+   "slug": "ai.ireland.community",
+   "name": "AI Ireland Automation, Agent, n8n, Startup, SaaS ...",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "aiforsmallbusinessgrowth",
    "name": "AI for Small Business Owners | Automation & Growth",
    "status": "pending",
@@ -90,6 +105,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startups.investors.entrepreneurs.mentors.founders",
+   "name": "Startups | Investors | Entrepreneurs | eCommerce | Founders & CEO's",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:39+00:00",
    "last_checked": null
   },
   {
@@ -768,6 +798,21 @@
    "last_checked": null
   },
   {
+   "slug": "EABOSA",
+   "name": "Entrepreneurs and Business Owners South Africa",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:49+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "Software.Developers.Israel",
    "name": "דרושים - משרות הנדסת תוכנה - Java, C#, C++, C, RT, .Net Devlopers",
    "status": "pending",
@@ -1158,6 +1203,21 @@
    "last_checked": null
   },
   {
+   "slug": "sastartups",
+   "name": "South Africa Business Startups & Entrepreneurs Network",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:49+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "smallbusinessownercommunityuk",
    "name": "Small Business Owner Community",
    "status": "pending",
@@ -1335,7 +1395,22 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
-   "last_checked": "2026-08-09T02:02:42+00:00"
+   "last_checked": "2026-08-09T03:54:59+00:00"
+  },
+  {
+   "slug": "1094677854022218",
+   "name": "Startup Ireland Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:39+00:00",
+   "last_checked": null
   },
   {
    "slug": "1100802378915693",
@@ -1545,6 +1620,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "395969970606328",
+   "name": "Entrepreneurs of South Africa",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:49+00:00",
    "last_checked": null
   },
   {
@@ -1848,6 +1938,21 @@
    "last_checked": null
   },
   {
+   "slug": "Speedcamalerts",
+   "name": "Irish Small Business Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "UKEntrepreneursandStartups",
    "name": "UK Entrepreneurs & Start-ups",
    "status": "pending",
@@ -1950,6 +2055,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "dublin.ireland.startups",
+   "name": "Dublin Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:39+00:00",
    "last_checked": null
   },
   {
@@ -2145,6 +2265,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "sasmallbusinessnetwork",
+   "name": "Small Business Network South Africa",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:49+00:00",
    "last_checked": null
   },
   {
@@ -2373,6 +2508,21 @@
    "last_checked": null
   },
   {
+   "slug": "131710772378400",
+   "name": "Pak Irish Platform | Are there any consultants in Dublin who can ...",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1417623821789515",
    "name": null,
    "status": "pending",
@@ -2506,6 +2656,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:42:59+00:00"
+  },
+  {
+   "slug": "1999738013632903",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:38+00:00",
+   "last_checked": null
   },
   {
    "slug": "210047219696253",
@@ -2913,6 +3078,21 @@
    "last_checked": null
   },
   {
+   "slug": "827453710776253",
+   "name": "The SA Business Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:49+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "955986932937796",
    "name": null,
    "status": "gone",
@@ -3015,6 +3195,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T08:34:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "StartupIreland",
+   "name": "Ireland Connected - Irish Business Networking",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:39+00:00",
    "last_checked": null
   },
   {
@@ -3361,6 +3556,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:29:54+00:00",
    "last_checked": "2026-08-08T08:37:27+00:00"
+  },
+  {
+   "slug": "southafricanbusiness",
+   "name": "South African Business Directory",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T03:54:49+00:00",
+   "last_checked": null
   },
   {
    "slug": "toronto.entrepreneurs.startups",
