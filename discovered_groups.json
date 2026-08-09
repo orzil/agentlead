@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-09T19:12:20+00:00",
- "count": 260,
+ "generated": "2026-08-09T19:34:02+00:00",
+ "count": 261,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -3811,6 +3811,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:43:27+00:00"
+  },
+  {
+   "slug": "needwebsitedesignerordeveloper",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T19:34:02+00:00",
+   "last_checked": null
   },
   {
    "slug": "noisefloorav",
