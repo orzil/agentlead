@@ -54,6 +54,40 @@ def looks_like_content(text: str) -> tuple[bool, str]:
     return hits >= 3, f"{hits} timestamp-ish tokens"
 
 
+def test_search_index() -> None:
+    """The one surface that never touches facebook.com: the search index.
+
+    Search engines crawl public group posts, so a `site:facebook.com/groups/<slug>`
+    query can surface individual POSTS with a snippet of their text and a direct
+    permalink. Or reads and replies logged in, as a human - the agent only finds
+    the door. If this works it replaces scraping entirely and carries zero ban
+    risk, since we never request anything from Facebook.
+    """
+    print("\n=== SEARCH-INDEX SURFACE (no facebook.com request at all) ===")
+    post_re = re.compile(r"facebook\.com/groups/[A-Za-z0-9._-]+/(?:posts|permalink)/\d+")
+    queries = [
+        'site:facebook.com/groups/freelance.hightech',
+        'site:facebook.com/groups "looking for a developer"',
+        'site:facebook.com/groups "דרוש מפתח"',
+        'site:facebook.com/groups/1920854911477422',
+    ]
+    for q in queries:
+        try:
+            r = httpx.post("https://lite.duckduckgo.com/lite/", data={"q": q},
+                           headers={"User-Agent": DESKTOP, "Accept": "text/html"},
+                           timeout=20, follow_redirects=True)
+            if r.status_code != 200 or "anomaly" in r.text.lower():
+                print(f"  [{r.status_code}] walled  | {q[:52]}")
+                continue
+            posts = sorted(set(post_re.findall(r.text)))
+            text = re.sub(r"\s+", " ", r.text)
+            print(f"  [200] posts={len(posts):<3} | {q[:52]}")
+            for p in posts[:3]:
+                print(f"          {p}")
+        except Exception as e:
+            print(f"  ERR {type(e).__name__} | {q[:52]}")
+
+
 def main() -> None:
     out = []
     for slug in SLUGS[:2]:
