@@ -10,9 +10,13 @@ name: FB night run
 # discover_fb_groups.py (fb_ddg_cursor, probe ordering) carry state between them.
 #
 # Per-run budget is deliberately below every measured wall:
-#   2 DDG queries | 2 probes | 4 smoke-scrapes  (probe throttles at ~2, so the
-#   smoke-scrape carries the verification - it proves public, measures yield,
-#   and demotes duds, all in the one page load a probe would have spent)
+#   2 DDG queries | 0 probes | 5 smoke-scrapes
+#
+# NO probing here, learned the hard way on the first night: Facebook walls the
+# runner after ~2 page loads, and the probe step spent exactly those two before
+# the smoke-scrape ever ran - 14 runs, 0 groups tested. The smoke-scrape does
+# everything a probe did (proves the group renders posts logged-out) AND counts
+# how many survive the gate, so the whole Facebook allowance goes to it.
 #
 # NEVER run this on Or's machine. A Facebook throttle on the IP he browses from
 # surfaces as a login/checkpoint wall on his own account.
@@ -23,12 +27,9 @@ on:
     - cron: "0,30 0-2 * * *"     # 03:00-05:59 Israel
   workflow_dispatch:
     inputs:
-      probe_cap:
-        description: "Groups to probe this run (probing throttles fast - keep low)"
-        default: "2"
       smoke_cap:
         description: "Promoted groups to test-scrape this run"
-        default: "4"
+        default: "5"
 
 concurrency:
   group: leadagent            # shares leads.db with the other two workflows
@@ -61,7 +62,7 @@ jobs:
           key: leadsdb-${{ github.run_id }}
           restore-keys: leadsdb-
 
-      - name: Discover, probe, promote, test
+      - name: Discover, promote, test
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -75,9 +76,8 @@ jobs:
         run: |
           python -X utf8 discover_fb_groups.py \
             --search \
-            --probe --cap ${{ inputs.probe_cap || '2' }} \
             --promote \
-            --smoke ${{ inputs.smoke_cap || '4' }} \
+            --smoke ${{ inputs.smoke_cap || '5' }} \
             --write --json --notify
 
       - name: Nightly summary (last slot only)
