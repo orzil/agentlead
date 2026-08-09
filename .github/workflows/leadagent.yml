@@ -67,7 +67,11 @@ jobs:
           IMAP_USER: ${{ secrets.IMAP_USER }}
           IMAP_PASSWORD: ${{ secrets.IMAP_PASSWORD }}
           # Gentle cloud Facebook settings
-          FB_PUBLIC_ENABLED: "1"
+          # OFF since 2026-08-09: measured 0 leads across every cloud run,
+          # walled on the first group each time - Meta blocks datacenter IPs
+          # outright. fbsearch_fetcher covers Facebook through the search index
+          # instead. Local scraping still works if ever re-enabled by hand.
+          FB_PUBLIC_ENABLED: "0"
           FB_IGNORE_DAILY_CAP: "1"
           FB_REGIONS: ${{ github.event.inputs.fb_regions || 'IL,US,EU' }}
           FB_GROUPS_PER_RUN: ${{ github.event.inputs.fb_groups_per_run || '6' }}

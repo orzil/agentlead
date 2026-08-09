@@ -26,6 +26,7 @@ from fetchers import (
     companies_fetcher,
     email_fetcher,
     facebook_public_fetcher,
+    fbsearch_fetcher,
     hn_fetcher,
     jobboards_fetcher,
     jobicy_fetcher,
@@ -90,6 +91,14 @@ def job_email(conn) -> None:
 
 def job_facebook(conn) -> None:
     pipeline.ingest_many(conn, facebook_public_fetcher.fetch(conn), "facebook")
+
+
+def job_fbsearch(conn) -> None:
+    """Facebook group posts via the search index. Replaces the logged-out
+    scraper, which is dead from every datacenter IP (measured: all surfaces
+    redirect to login, 0 leads across three cloud runs). Touches no Facebook
+    URL, so it carries no ban risk and no rate limit of its own."""
+    pipeline.ingest_many(conn, fbsearch_fetcher.fetch(conn), "fbsearch")
 
 
 def job_xplace(conn) -> None:
@@ -173,6 +182,7 @@ JOBS = [
     ("jobboards", 3 * 3600, job_jobboards),    # arbeitnow + workingnomads + jobspresso
     ("jobicy", 4 * 3600, job_jobicy),          # remote AI/ML/data, has freelance/part-time flag
     ("remotive", 8 * 3600, job_remotive),      # rate-limited ~4/day, 24h-delayed
+    ("fbsearch", 3 * 3600, job_fbsearch),    # post permalinks from the search index
     ("facebook", 8 * 3600, job_facebook),      # public groups; self-caps at 3 runs/day
     ("whatsapp", 24 * 3600, job_whatsapp),     # mine invite links out of stored posts
     ("linkcheck", 6 * 3600, job_linkcheck),   # drop leads whose posting died

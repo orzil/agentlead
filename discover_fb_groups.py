@@ -361,6 +361,115 @@ def probe_pending(conn: sqlite3.Connection, cap: int = 12) -> list[sqlite3.Row]:
     return out
 
 
+# --- the night's shared search budget -----------------------------------------
+
+def _rotation() -> list[tuple[str, str]]:
+    """One interleaved list of (family, query) across all three purposes.
+
+    A single rotation with a single cursor, because DuckDuckGo allows only ~1-2
+    queries per IP: separate per-family budgets would mean the family that ran
+    first consumed the whole allowance and the others never executed at all.
+    Weights in config decide how much of the night each family gets.
+    """
+    pools = {
+        "fbpost": config.fb_post_queries(),
+        "fbgroup": config.FB_DDG_QUERIES,
+        "wa": config.WHATSAPP_DDG_QUERIES,
+    }
+    out: list[tuple[str, str]] = []
+    idx = {k: 0 for k in pools}
+    # round-robin, taking `weight` queries from each family per lap
+    while any(idx[k] < len(pools[k]) for k in pools):
+        for fam, weight in config.NIGHT_SEARCH_WEIGHTS.items():
+            for _ in range(weight):
+                if idx[fam] < len(pools[fam]):
+                    out.append((fam, pools[fam][idx[fam]]))
+                    idx[fam] += 1
+    return out
+
+
+def night_search(conn: sqlite3.Connection, budget: int | None = None) -> dict:
+    """Spend this run's few queries, then advance the shared cursor."""
+    from fetchers import fbsearch_fetcher
+    import pipeline
+
+    rot = _rotation()
+    if not rot:
+        return {}
+    budget = budget or config.NIGHT_SEARCH_PER_RUN
+    cursor = int(db.kv_get(conn, "night_search_cursor", "0") or "0") % len(rot)
+    batch = [rot[(cursor + i) % len(rot)] for i in range(min(budget, len(rot)))]
+    db.kv_set(conn, "night_search_cursor", str((cursor + len(batch)) % len(rot)))
+    log.info("night search: cursor %d/%d -> %s", cursor, len(rot),
+             [f for f, _ in batch])
+
+    counts: dict[str, int] = {}
+    for fam, q in batch:
+        if fam == "fbpost":
+            leads = fbsearch_fetcher.search([q])
+            if leads:
+                pipeline.ingest_many(conn, leads, "fbsearch")
+            counts["fbpost_leads"] = counts.get("fbpost_leads", 0) + len(leads)
+        elif fam == "fbgroup":
+            counts["fbgroups"] = counts.get("fbgroups", 0) + _ddg_group_query(conn, q)
+        elif fam == "wa":
+            counts["wa"] = counts.get("wa", 0) + _ddg_whatsapp_query(conn, q)
+    log.info("night search: %s", counts)
+    return counts
+
+
+def _ddg_group_query(conn: sqlite3.Connection, query: str) -> int:
+    """One Facebook-group discovery query (the body of search_ddg, for one query)."""
+    import httpx
+
+    headers = {"User-Agent": config.USER_AGENT, "Accept": "text/html",
+               "Accept-Language": "en-US,en;q=0.9,he;q=0.8"}
+    new = 0
+    try:
+        with httpx.Client(headers=headers, timeout=20, follow_redirects=True) as c:
+            r = c.post("https://lite.duckduckgo.com/lite/", data={"q": query})
+        if r.status_code != 200 or "anomaly" in r.text.lower():
+            log.warning("DDG challenge (HTTP %s) on group query", r.status_code)
+            return 0
+        for slug, title in _ddg_results(r.text):
+            if _add(conn, slug, "ddg"):
+                new += 1
+            if title:
+                relevance, region = _score(title)
+                conn.execute(
+                    "UPDATE facebook_groups SET name=COALESCE(name, ?), relevance=?,"
+                    " region=COALESCE(region, ?) WHERE slug=?",
+                    (title, relevance, region, slug))
+        conn.commit()
+        log.info("  [fbgroup] %-46s -> %d new", query[:46], new)
+    except Exception as e:
+        log.error("group query failed: %s", e)
+    return new
+
+
+def _ddg_whatsapp_query(conn: sqlite3.Connection, query: str) -> int:
+    """One WhatsApp invite-discovery query, reusing the existing WA table."""
+    import httpx
+
+    import discover_whatsapp_groups as wa
+
+    headers = {"User-Agent": config.USER_AGENT, "Accept": "text/html"}
+    new = 0
+    try:
+        with httpx.Client(headers=headers, timeout=20, follow_redirects=True) as c:
+            r = c.post("https://lite.duckduckgo.com/lite/", data={"q": query})
+        if r.status_code != 200 or "anomaly" in r.text.lower():
+            log.warning("DDG challenge (HTTP %s) on whatsapp query", r.status_code)
+            return 0
+        for code in wa.WA_INVITE_RE.findall(r.text):
+            if wa._add(conn, code, "ddg_night"):
+                new += 1
+        log.info("  [wa]      %-46s -> %d new invite(s)", query[:46], new)
+    except Exception as e:
+        log.error("whatsapp query failed: %s", e)
+    return new
+
+
 # --- promotion + measured testing ---------------------------------------------
 
 _ACT_RE = re.compile(r"posts=(\d+)\s+recent=(\d+)")
@@ -509,6 +618,79 @@ def export_json(conn: sqlite3.Connection, path: str = "discovered_groups.json") 
                   f, ensure_ascii=False, indent=1)
     log.info("wrote %s (%d discovered groups)", path, len(data))
     return path
+
+
+def _why(name: str, region: str, kind: str) -> str:
+    """One line explaining why this group is worth Or's time."""
+    n = (name or "").lower()
+    if region == "IL":
+        if re.search(r"דרוש|משרות|jobs", n):
+            return "Israeli jobs group — clients post work here"
+        if re.search(r"פרילנס|freelanc", n):
+            return "Israeli freelancers group — direct client contact"
+        if re.search(r"בינה|\bai\b|אוטומציה|automation", n):
+            return "Israeli AI/automation crowd — your exact niche"
+        return "Israeli tech group"
+    if re.search(r"founder|entrepreneur|owner|saas|agency", n):
+        return "Buyers, not builders — the pattern that actually pays"
+    if re.search(r"computer vision|machine learning|\bai\b|automation", n):
+        return "Your niche, worldwide remote"
+    return f"{kind} group in your domain"
+
+
+def join_shortlist(conn: sqlite3.Connection, top: int = 8) -> list[dict]:
+    """The 5-10 groups worth joining, and nothing more.
+
+    Or has been handed 38 WhatsApp invites and 14 private Facebook groups and
+    joined none of them - a long list is the same as no list. This merges both
+    channels, ranks them, and keeps only the top few with a reason each.
+    """
+    rows: list[dict] = []
+    for r in conn.execute(
+            "SELECT name, url, relevance, region FROM facebook_groups"
+            " WHERE status='private' AND COALESCE(joined,0)=0 AND relevance>=2"
+            " ORDER BY relevance DESC").fetchall():
+        rows.append({"kind": "Facebook", "name": r["name"], "url": r["url"],
+                     "rel": r["relevance"], "region": r["region"] or "GLOBAL"})
+    try:
+        for r in conn.execute(
+                "SELECT name, url, relevance, region FROM whatsapp_groups"
+                " WHERE status='live' AND COALESCE(joined,0)=0 AND relevance>=1"
+                " ORDER BY relevance DESC").fetchall():
+            rows.append({"kind": "WhatsApp", "name": r["name"], "url": r["url"],
+                         "rel": r["relevance"], "region": r["region"] or "GLOBAL"})
+    except Exception:
+        pass
+    # Israel first at equal relevance: that is where every measured lead came from.
+    rows.sort(key=lambda x: (-x["rel"], 0 if x["region"] == "IL" else 1))
+    short = rows[:top]
+    for x in short:
+        x["why"] = _why(x["name"], x["region"], x["kind"])
+    return short
+
+
+def notify_shortlist(conn: sqlite3.Connection, top: int = 8) -> bool:
+    """Send the shortlist, but only when it has actually changed."""
+    import hashlib
+
+    short = join_shortlist(conn, top)
+    if not short:
+        return False
+    sig = hashlib.sha256("|".join(x["url"] for x in short).encode()).hexdigest()[:16]
+    if db.kv_get(conn, "shortlist_sig") == sig:
+        log.info("shortlist unchanged - not re-sending")
+        return False
+    lines = [f"\U0001F4CB <b>Join these {len(short)} groups</b>",
+             "<i>the whole list, ranked — nothing else needed from you</i>", ""]
+    for i, x in enumerate(short, 1):
+        lines.append(f"{i}. <b>{x['name']}</b> ({x['kind']}, {x['region']})\n"
+                     f"   {x['why']}\n   {x['url']}")
+    lines += ["", "<i>After joining a Facebook group: 🔔 → All posts, so the "
+              "agent gets every post by email.</i>"]
+    sent = notifier._send_raw("\n".join(lines))
+    if sent:
+        db.kv_set(conn, "shortlist_sig", sig)
+    return sent
 
 
 def night_summary(conn: sqlite3.Connection) -> bool:
@@ -672,6 +854,10 @@ def main() -> None:
                     help="CLOUD ONLY: read posts from N promoted groups and measure yield")
     ap.add_argument("--json", action="store_true", help="write discovered_groups.json")
     ap.add_argument("--summary", action="store_true", help="Telegram night summary")
+    ap.add_argument("--night", action="store_true",
+                    help="spend this run's shared search budget (fb posts + groups + whatsapp)")
+    ap.add_argument("--shortlist", action="store_true",
+                    help="Telegram the ranked 'join these' list (only if changed)")
     args = ap.parse_args()
 
     logging.basicConfig(level=logging.INFO,
@@ -685,6 +871,8 @@ def main() -> None:
         return
 
     seed_from_config(conn)
+    if args.night:
+        night_search(conn)
     mine_db(conn)
     if args.search:
         search_reddit(conn)
@@ -705,6 +893,8 @@ def main() -> None:
         config_lines(conn)
     if args.json:
         export_json(conn)
+    if args.shortlist:
+        notify_shortlist(conn)
     if args.summary:
         night_summary(conn)
     print_table(conn)

@@ -306,6 +306,54 @@ FB_DDG_QUERIES = [
     'site:facebook.com/groups Dubai OR UAE entrepreneurs tech',
 ]
 
+# --- Facebook POST search (fbsearch_fetcher) ---------------------------------
+# Finds individual posts through the search index instead of scraping Facebook,
+# which is impossible from any datacenter IP (measured: every surface redirects
+# to login.php, 0 leads across three cloud runs). Zero facebook.com requests.
+#
+# Intent phrasing, not topic phrasing: a client writes "looking for a developer",
+# never "computer vision engineer wanted". Bilingual, because the Israeli half of
+# the pipeline is where the measured yield is.
+FB_POST_INTENT_QUERIES = [
+    'site:facebook.com/groups "looking for a developer"',
+    'site:facebook.com/groups "need a developer"',
+    'site:facebook.com/groups "need an app built"',
+    'site:facebook.com/groups "looking for a freelancer" project',
+    'site:facebook.com/groups "anyone know a developer"',
+    'site:facebook.com/groups "computer vision" freelance project',
+    'site:facebook.com/groups OCR "extract data" project',
+    'site:facebook.com/groups "AI automation" "looking for someone"',
+    'site:facebook.com/groups "machine learning" consultant needed',
+    'site:facebook.com/groups "דרוש מפתח"',
+    'site:facebook.com/groups "מחפש מפתח" פרויקט',
+    'site:facebook.com/groups "דרוש פרילנסר"',
+    'site:facebook.com/groups "מחפשת מפתח" OR "מחפשים מפתח"',
+    'site:facebook.com/groups "ראייה ממוחשבת" OR "עיבוד תמונה" פרויקט',
+    'site:facebook.com/groups אוטומציה "מחפש מישהו"',
+]
+
+# Groups worth querying individually - the curated public ones the scraper can
+# no longer read. Built at call time so newly promoted groups are included.
+FB_POST_GROUP_QUERY_CAP = int(env("FB_POST_GROUP_QUERY_CAP", "12"))
+
+
+def fb_post_queries() -> list[str]:
+    """Intent queries interleaved with per-group queries.
+
+    Interleaved rather than concatenated because DDG allows only ~2 queries per
+    IP: a run must get a mix, not fifteen intent queries before the first group.
+    """
+    groups = [g["slug"] for g in FACEBOOK_GROUPS if g.get("public")][:FB_POST_GROUP_QUERY_CAP]
+    per_group = [f"site:facebook.com/groups/{s}" for s in groups]
+    out: list[str] = []
+    for i in range(max(len(FB_POST_INTENT_QUERIES), len(per_group))):
+        if i < len(FB_POST_INTENT_QUERIES):
+            out.append(FB_POST_INTENT_QUERIES[i])
+        if i < len(per_group):
+            out.append(per_group[i])
+    return out
+
+
 # Reddit's search.rss is keyless and does not captcha - the same property that
 # made it the reliable surface for WhatsApp discovery. Added 2026-08-08 after
 # DuckDuckGo challenged BOTH the home IP and the GitHub runner (HTTP 202), which
@@ -365,14 +413,37 @@ WHATSAPP_REDDIT_QUERIES = [
     '"chat.whatsapp.com" AI developers',
     '"chat.whatsapp.com" hiring',
 ]
+# Widened 2026-08-09. The first pass ran five generic strings and surfaced
+# mostly student-cohort groups; nothing here targeted Or's actual niche. These
+# add the CV/OCR/automation vocabulary and the Hebrew job-posting phrasings that
+# Israeli groups name themselves with. WA_NOISE_RE still kills the cohort junk.
 WHATSAPP_DDG_QUERIES = [
+    # worldwide, English
     "site:chat.whatsapp.com freelance AI",
     'site:chat.whatsapp.com "computer vision"',
     "site:chat.whatsapp.com data science",
+    'site:chat.whatsapp.com "deep learning" jobs',
+    "site:chat.whatsapp.com OCR OR document AI",
+    'site:chat.whatsapp.com "AI automation" n8n',
+    'site:chat.whatsapp.com "remote developer" jobs',
+    'site:chat.whatsapp.com "AI jobs"',
+    # Israel / Hebrew
     "site:chat.whatsapp.com פרילנסרים",
     "site:chat.whatsapp.com הייטק",
     "site:chat.whatsapp.com בינה מלאכותית",
+    "site:chat.whatsapp.com ראייה ממוחשבת",
+    "site:chat.whatsapp.com דרושים מפתחים",
+    "site:chat.whatsapp.com משרות הייטק ישראל",
+    "site:chat.whatsapp.com אוטומציה עסקים",
 ]
+
+# --- Night search rotation ----------------------------------------------------
+# DuckDuckGo challenges an IP after ~1-2 queries, so the three query families
+# cannot each keep their own budget - they share ONE. Weighted toward post
+# search because that finds leads tonight, while group discovery only finds
+# doors that still need Or to walk through them.
+NIGHT_SEARCH_WEIGHTS = {"fbpost": 2, "fbgroup": 1, "wa": 1}
+NIGHT_SEARCH_PER_RUN = int(env("NIGHT_SEARCH_PER_RUN", "2"))
 
 # --- Auto-reply (Reddit only) -------------------------------------------------
 # Freelancer.com was dropped 2026-08-06 after the trial: bid floods (20+ bids on
