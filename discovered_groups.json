@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-09T18:01:41+00:00",
- "count": 256,
+ "generated": "2026-08-09T18:35:36+00:00",
+ "count": 259,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1563,6 +1563,21 @@
    "last_checked": null
   },
   {
+   "slug": "1301121656949348",
+   "name": "משרות סטודנט/ג'וניור וטיפים - מדמ\"ח, הנדסת תוכנה ומערכות מידע",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T18:35:15+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1338202816787610",
    "name": "בינה מלאכותית ישראל",
    "status": "pending",
@@ -1860,6 +1875,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "705061861437260",
+   "name": "דרושים מדעי המחשב/מערכות מידע/Pcמחשבים/Qa/Help Desk/It/Sap/מפתח/סיסטם ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T18:35:15+00:00",
    "last_checked": null
   },
   {
@@ -3271,6 +3301,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:44:50+00:00"
+  },
+  {
+   "slug": "748259480517030",
+   "name": "הנדסת תוכנה ישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T18:35:15+00:00",
+   "last_checked": null
   },
   {
    "slug": "804417720029561",
