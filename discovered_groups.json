@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-08T23:58:26+00:00",
- "count": 207,
+ "generated": "2026-08-09T02:03:17+00:00",
+ "count": 226,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -318,6 +318,21 @@
    "last_checked": null
   },
   {
+   "slug": "1198024408768649",
+   "name": "New Zealand Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:33+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1248313253326186",
    "name": "Startup Founders USA",
    "status": "pending",
@@ -525,6 +540,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "341776853891812",
+   "name": "New Zealand Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:33+00:00",
    "last_checked": null
   },
   {
@@ -780,6 +810,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "australiansmallbusinesowners",
+   "name": "Australian Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:22+00:00",
    "last_checked": null
   },
   {
@@ -1290,7 +1335,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
-   "last_checked": "2026-08-08T23:57:51+00:00"
+   "last_checked": "2026-08-09T02:02:42+00:00"
   },
   {
    "slug": "1100802378915693",
@@ -1335,6 +1380,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1356416033271840",
+   "name": "NZ Business Owners Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:33+00:00",
    "last_checked": null
   },
   {
@@ -1443,6 +1503,21 @@
    "last_checked": null
   },
   {
+   "slug": "2259425897651792",
+   "name": "Australian Business Owners Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "289118210401946",
    "name": "בינה מלאכותית ישראל - הקהילה הרשמית למשתמשים יוצרים",
    "status": "pending",
@@ -1470,6 +1545,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "464376085736538",
+   "name": "Australian Business Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "487009714795019",
+   "name": "Australian Business Owner Discussions",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:22+00:00",
    "last_checked": null
   },
   {
@@ -1575,6 +1680,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:57:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "811045979419418",
+   "name": "Australian Business Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:22+00:00",
    "last_checked": null
   },
   {
@@ -1698,6 +1818,36 @@
    "last_checked": null
   },
   {
+   "slug": "NewZealandSmallBusinessOwnersNetworking",
+   "name": "New Zealand Business Owner Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:33+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "SBClassifiedsAustralia",
+   "name": "Business Owners Australia",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "UKEntrepreneursandStartups",
    "name": "UK Entrepreneurs & Start-ups",
    "status": "pending",
@@ -1710,6 +1860,51 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ausbizownersclub",
+   "name": "Australia Business Owners Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aussbn",
+   "name": "Australian small business network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "australianbusinessowners",
+   "name": "Accounting & Finance Support for Australian Business Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:22+00:00",
    "last_checked": null
   },
   {
@@ -1740,6 +1935,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "businessowneraustralia",
+   "name": "I am a business owner in Australia",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:22+00:00",
    "last_checked": null
   },
   {
@@ -1878,6 +2088,36 @@
    "last_checked": null
   },
   {
+   "slug": "newzealandbusinessowners",
+   "name": "New Zealand Business Owners Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:33+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "nzsmallbusinessnetwork",
+   "name": "New Zealand Small Business Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:33+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "optimizedstoreowner",
    "name": "The Optimized Store Owner",
    "status": "pending",
@@ -1920,6 +2160,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbusinessnz24",
+   "name": "Small Business New Zealand",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:33+00:00",
    "last_checked": null
   },
   {
@@ -2820,6 +3075,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:12:01+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "businessnetworkingnewzealand",
+   "name": "Business Networking NZ",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:33+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "businessnz",
+   "name": "New Zealand Business Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T02:02:33+00:00",
    "last_checked": null
   },
   {

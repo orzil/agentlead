@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-08T23:58:26+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-09T02:03:17+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (171)
+## Not yet probed (190)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -79,6 +79,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `JuniorJobs` (found via ddg)
 - `software.devopers.jobs` (found via ddg)
 - `1057648599597645` (found via ddg)
+- `australiansmallbusinesowners` (found via ddg)
 - `560810556893848` (found via ddg)
 - `1184176781736143` (found via ddg)
 - `659198409489977` (found via ddg)
@@ -91,6 +92,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `699051796861691` (found via ddg)
 - `gohighlevelagencyowners` (found via ddg)
 - `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
+- `1198024408768649` (found via ddg)
+- `341776853891812` (found via ddg)
 - `2254265064668702` (found via ddg)
 - `outsourceitprojects` (found via ddg)
 - `1674526216166974` (found via ddg)
@@ -144,9 +147,17 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `israel.hightech` (found via ddg)
 - `no.experience` (found via ddg)
 - `noexpjobs` (found via ddg)
+- `australianbusinessowners` (found via ddg)
+- `ausbizownersclub` (found via ddg)
+- `487009714795019` (found via ddg)
+- `811045979419418` (found via ddg)
+- `464376085736538` (found via ddg)
+- `2259425897651792` (found via ddg)
+- `aussbn` (found via ddg)
 - `bsbnetwork` (found via ddg)
 - `buildingblackentrepreneurs` (found via ddg)
 - `1766511223953040` (found via ddg)
+- `SBClassifiedsAustralia` (found via ddg)
 - `810698363860855` (found via ddg)
 - `entrepreneurA1` (found via ddg)
 - `165114167522089` (found via ddg)
@@ -155,11 +166,17 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `findingsuvfounders` (found via ddg)
 - `1100802378915693` (found via ddg)
 - `freelancersrequired` (found via ddg)
+- `businessowneraustralia` (found via ddg)
 - `londontechstartups` (found via ddg)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
+- `1356416033271840` (found via ddg)
 - `sleekuk` (found via ddg)
+- `NewZealandSmallBusinessOwnersNetworking` (found via ddg)
+- `newzealandbusinessowners` (found via ddg)
+- `nzsmallbusinessnetwork` (found via ddg)
 - `789382672475266` (found via ddg)
+- `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
 - `startupdirectoryuk` (found via ddg)
 - `startupfrat` (found via ddg)
@@ -225,8 +242,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `datdestroyerstudygroup` (found via reddit_search)
 - `aitoolsandpromptsthatactuallywork` (found via ddg)
 - `NelsonBC` (found via reddit_search)
+- `businessnetworkingnewzealand` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
 - `640514310704403` (found via ddg)
+- `businessnz` (found via ddg)
 - `toronto.entrepreneurs.startups` (found via ddg)
 - `n8nofficial` (found via ddg)
 - `462672717191788` (found via ddg)
