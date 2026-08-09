@@ -593,7 +593,13 @@ SEEKER_RE = re.compile(
     r"|my\s+(services|rates|portfolio|skills)\b|services\s+i\s+offer"
     r"|open\s+to\s+work\b|\bfor\s+hire\b"
     # Hebrew equivalents
-    r"|אני\s+מפתח|אני\s+מתכנת|זמין\s+לעבודה|מציע\s+שירותי)", re.IGNORECASE)
+    r"|אני\s+מפתח|אני\s+מתכנת|זמין\s+לעבודה|מציע\s+שירותי"
+    # "שמי טל כהן, מהנדס תוכנה ויועץ פיתוח" - the Hebrew self-introduction, which
+    # is how Israeli freelancers open a self-promo. Slipped through as a 7/10
+    # lead on the first facebook/search run.
+    r"|שמי\s+[֐-׿\s]{2,20}(מהנדס|מפתח|מתכנת|יועץ|פרילנסר)"
+    r"|בעל\s+ניסיון\s+ב(פיתוח|תכנות)"
+    r"|מחפש\s+פרויקטים|לקוחות\s+חדשים)", re.IGNORECASE)
 
 # Unpaid community / volunteer / data-collection / survey asks
 COMMUNITY_RE = re.compile(
@@ -735,5 +741,9 @@ HOURLY_RE = re.compile(
 # all - measured: a 2-year-old OCR gig scored 7 and reached the user's table.
 MAX_LEAD_AGE_DAYS = int(env("MAX_LEAD_AGE_DAYS", "45"))
 STALE_DATE_RE = re.compile(
-    r"\b(January|February|March|April|May|June|July|August|September|October"
-    r"|November|December)\s+(\d{1,2}),?\s+(20\d{2})\b", re.I)
+    # Abbreviated forms matter: search-index results render Facebook dates as
+    # "Mar 7, 2022", and a full-month-only pattern let a 2022 post through as
+    # fresh (measured 2026-08-09 on a facebook/search lead).
+    r"\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)"
+    r"(?:uary|ruary|ch|il|e|y|ust|tember|ober|ember)?\.?"
+    r"\s+(\d{1,2}),?\s+(20\d{2})\b", re.I)

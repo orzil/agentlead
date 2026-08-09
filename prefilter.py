@@ -48,13 +48,17 @@ def _too_old(lead: Lead) -> bool:
     # fresh ones show "2h" or "June 18", so a match here is already suspicious.
     m = config.STALE_DATE_RE.search("\n".join(lead.raw_text.splitlines()[:6]))
     if m:
-        try:
-            when = datetime.strptime(f"{m.group(1)} {m.group(2)} {m.group(3)}",
-                                     "%B %d %Y").replace(tzinfo=timezone.utc)
+        stamp = f"{m.group(1)} {m.group(2)} {m.group(3)}"
+        # %b for "Mar", %B for "March". Trying only %B silently swallowed every
+        # abbreviated date - which is exactly the form search-index results use.
+        for fmt in ("%b %d %Y", "%B %d %Y"):
+            try:
+                when = datetime.strptime(stamp, fmt).replace(tzinfo=timezone.utc)
+            except ValueError:
+                continue
             if (now - when).days > cutoff_days:
                 return True
-        except ValueError:
-            pass
+            break
     return False
 
 
