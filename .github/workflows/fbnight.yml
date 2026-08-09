@@ -18,8 +18,11 @@ name: FB night run
 
 on:
   schedule:
-    - cron: "0,30 17-23 * * *"   # 20:00-02:59 Israel
-    - cron: "0,30 0-2 * * *"     # 03:00-05:59 Israel
+    # Every 15 min. Cadence IS throughput here: DuckDuckGo allows ~2 queries
+    # per IP and each GitHub run gets a fresh one, so doubling the runs doubles
+    # the night's query budget. Runs are ~3 min now that no browser is involved.
+    - cron: "0,15,30,45 17-23 * * *"   # 20:00-02:59 Israel
+    - cron: "0,15,30,45 0-2 * * *"     # 03:00-05:59 Israel
   workflow_dispatch:
     inputs:
       budget:

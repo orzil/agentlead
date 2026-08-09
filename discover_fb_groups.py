@@ -376,15 +376,28 @@ def _rotation() -> list[tuple[str, str]]:
         "fbgroup": config.FB_DDG_QUERIES,
         "wa": config.WHATSAPP_DDG_QUERIES,
     }
+    pools = {k: v for k, v in pools.items() if v}
+    if not pools:
+        return []
+    # Smaller pools CYCLE rather than run dry, so the 2:1:1 mix holds for the
+    # whole rotation. Letting them exhaust meant post-search - the family that
+    # finds actual leads - stopped after the first night and the tail became
+    # pure group discovery, once the group pool grew to 81 queries.
+    # Re-running a post query is useful anyway: the index keeps changing, so the
+    # same search surfaces new posts. Re-running a group query mostly does not,
+    # which is exactly why the big pool is the one that sets the length.
+    laps = max((len(v) + w - 1) // w
+               for k, v in pools.items()
+               for w in [config.NIGHT_SEARCH_WEIGHTS.get(k, 1)])
     out: list[tuple[str, str]] = []
     idx = {k: 0 for k in pools}
-    # round-robin, taking `weight` queries from each family per lap
-    while any(idx[k] < len(pools[k]) for k in pools):
+    for _ in range(laps):
         for fam, weight in config.NIGHT_SEARCH_WEIGHTS.items():
+            if fam not in pools:
+                continue
             for _ in range(weight):
-                if idx[fam] < len(pools[fam]):
-                    out.append((fam, pools[fam][idx[fam]]))
-                    idx[fam] += 1
+                out.append((fam, pools[fam][idx[fam] % len(pools[fam])]))
+                idx[fam] += 1
     return out
 
 

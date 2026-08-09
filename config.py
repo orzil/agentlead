@@ -304,6 +304,67 @@ FB_DDG_QUERIES = [
     'site:facebook.com/groups "South Africa" business owners tech',
     'site:facebook.com/groups Singapore startups founders',
     'site:facebook.com/groups Dubai OR UAE entrepreneurs tech',
+
+    # === EXPANSION 2026-08-09, after Or joined the first shortlist ===========
+    # Three axes, because a single phrasing only ever finds one shape of group:
+    # (1) more Hebrew phrasings, (2) US verticals - a client identifies by their
+    # INDUSTRY ("Shopify store owners"), not by the technology they need, and
+    # (3) the AI-tooling communities where automation buyers now congregate.
+
+    # --- Israel, more phrasings ---
+    'site:facebook.com/groups "מחפש פרילנסר"',
+    'site:facebook.com/groups "דרושים מתכנתים"',
+    'site:facebook.com/groups "בעלי עסקים" ישראל טכנולוגיה',
+    'site:facebook.com/groups "בעלי עסקים קטנים" ישראל',
+    'site:facebook.com/groups יזמים דיגיטליים ישראל',
+    'site:facebook.com/groups "חנויות אונליין" OR "מסחר אלקטרוני" ישראל',
+    'site:facebook.com/groups שיווק דיגיטלי ישראל בעלי עסקים',
+    'site:facebook.com/groups "פיתוח אפליקציות" ישראל',
+    'site:facebook.com/groups נדל"ן טכנולוגיה ישראל יזמים',
+    'site:facebook.com/groups "סטארטאפ ישראלי" מייסדים',
+    'site:facebook.com/groups "מיקור חוץ" פיתוח ישראל',
+    'site:facebook.com/groups קהילת יזמים ישראל',
+
+    # --- US / worldwide verticals: the buyer names their industry ---
+    'site:facebook.com/groups "Shopify store owners"',
+    'site:facebook.com/groups "Amazon FBA" sellers',
+    'site:facebook.com/groups "real estate investors" technology',
+    'site:facebook.com/groups "insurance agency" owners automation',
+    'site:facebook.com/groups "law firm" owners technology',
+    'site:facebook.com/groups "medical practice" owners software',
+    'site:facebook.com/groups "restaurant owners" technology',
+    'site:facebook.com/groups "construction" business owners software',
+    'site:facebook.com/groups "logistics" OR "trucking" business owners software',
+    'site:facebook.com/groups "manufacturing" business owners automation',
+    'site:facebook.com/groups "coaches" OR "consultants" automation clients',
+    'site:facebook.com/groups "marketing agency owners"',
+    'site:facebook.com/groups "digital agency" owners outsourcing',
+    'site:facebook.com/groups "ecommerce entrepreneurs"',
+    'site:facebook.com/groups "dropshipping" store owners help',
+
+    # --- AI tooling communities: where automation buyers gather now ---
+    'site:facebook.com/groups "n8n" community',
+    'site:facebook.com/groups "make.com" OR integromat community',
+    'site:facebook.com/groups zapier automation community',
+    'site:facebook.com/groups "GPT" builders business',
+    'site:facebook.com/groups "AI agents" business owners',
+    'site:facebook.com/groups "ChatGPT for business"',
+    'site:facebook.com/groups "AI tools" for entrepreneurs',
+    'site:facebook.com/groups "prompt engineering" business',
+    'site:facebook.com/groups "computer vision" OR "image recognition" business',
+    'site:facebook.com/groups "document automation" OR "invoice automation"',
+
+    # --- more English markets ---
+    'site:facebook.com/groups "United States" small business owners tech',
+    'site:facebook.com/groups Texas OR Florida business owners technology',
+    'site:facebook.com/groups "New York" startups founders tech',
+    'site:facebook.com/groups California startup founders',
+    'site:facebook.com/groups Toronto OR Vancouver startups founders',
+    'site:facebook.com/groups Sydney OR Melbourne business owners tech',
+    'site:facebook.com/groups India startups founders outsourcing',
+    'site:facebook.com/groups Europe remote startup founders',
+    'site:facebook.com/groups "Middle East" entrepreneurs technology',
+    'site:facebook.com/groups "remote work" entrepreneurs hiring',
 ]
 
 # --- Facebook POST search (fbsearch_fetcher) ---------------------------------

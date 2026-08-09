@@ -79,6 +79,17 @@ jobs:
           FB_POSTS_PER_GROUP: "12"
         run: python -X utf8 main.py --once
 
+      # Each run is a fresh IP, so it can afford its own 2 search queries on
+      # top of the main pass - free extra throughput against the DDG wall.
+      - name: Extra search slice
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FB_REGIONS: ""
+          FB_PUBLIC_ENABLED: "0"
+        run: python -X utf8 discover_fb_groups.py --night --promote --json || true
+
       - name: Save lead DB
         if: always()
         uses: actions/cache/save@v4
