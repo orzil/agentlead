@@ -1,0 +1,24 @@
+name: FB surface research
+
+# One-off experiment, manual only. Tests which Facebook surfaces still serve
+# public group content from a GitHub runner, now that www.facebook.com walls the
+# first request every time. Runs in the cloud so Or's home IP is never involved.
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: leadagent
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install httpx
+      - run: python -X utf8 research_fb_surfaces.py
