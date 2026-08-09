@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-09T21:36:02+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-09T22:10:46+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (225)
+## Not yet probed (226)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -158,6 +158,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `israel.hightech` (found via ddg)
 - `no.experience` (found via ddg)
 - `noexpjobs` (found via ddg)
+- `fed.israel` (found via ddg)
 - `126182808134629` (found via ddg)
 - `1217610615947693` (found via ddg)
 - `australianbusinessowners` (found via ddg)
@@ -215,6 +216,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `webdevelopersglobal` (found via ddg)
 - `2126268814575239` (found via ddg)
 - `magia.israel` (found via ddg)
+- `webflowIL` (found via ddg)
 - `980725725352474` (found via ddg)
 - `1657329921376731` (found via ddg)
 - `7602972273135565` (found via ddg)
@@ -250,7 +252,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2475192752695227` (found via reddit_search)
 - `804417720029561` (found via reddit_search)
 - `107914806514702` (found via ddg)
-- `fed.israel` (found via ddg)
 - `redlighttherapy101` (found via reddit_search)
 - `222047816070167` (found via reddit_search)
 - `80466465571` (found via reddit_search)

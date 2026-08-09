@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-09T21:36:02+00:00",
- "count": 261,
+ "generated": "2026-08-09T22:10:46+00:00",
+ "count": 262,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1095,6 +1095,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "fed.israel",
+   "name": "מתכנתים CSS, HTML, JavaScript | לפרויקט קטן מחפש מפתח ג'אווה",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T15:48:15+00:00",
    "last_checked": null
   },
   {
@@ -2688,6 +2703,21 @@
    "last_checked": null
   },
   {
+   "slug": "webflowIL",
+   "name": "Webflow Israel | וובפלו ישראל | # מחפש מפתח וובפלואו לפרויקט לאתר של ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T22:10:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "107914806514702",
    "name": null,
    "status": "pending",
@@ -3706,21 +3736,6 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:32:20+00:00",
    "last_checked": "2026-08-08T08:51:45+00:00"
-  },
-  {
-   "slug": "fed.israel",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "ddg",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T15:48:15+00:00",
-   "last_checked": null
   },
   {
    "slug": "fivemserverdevelopmenthelp2025",
