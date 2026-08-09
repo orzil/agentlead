@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-09T03:55:33+00:00",
- "count": 240,
+ "generated": "2026-08-09T09:19:30+00:00",
+ "count": 256,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -213,6 +213,21 @@
    "last_checked": null
   },
   {
+   "slug": "256977734759027",
+   "name": "Singapore CEO & Business Owners & Founders & Entrepreneurs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:10+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2815042615255352",
    "name": "Small business owners/entrepreneurs",
    "status": "pending",
@@ -285,6 +300,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "singaporeentrepreneurship",
+   "name": "Singapore Entrepreneurship - Startups / SME Business, Investors, & Jobs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:10+00:00",
    "last_checked": null
   },
   {
@@ -570,6 +600,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "295534280879418",
+   "name": "Entrepreneurs and Startups of Singapore",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:10+00:00",
    "last_checked": null
   },
   {
@@ -1593,6 +1638,21 @@
    "last_checked": null
   },
   {
+   "slug": "242604115854061",
+   "name": "Singapore Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:10+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "289118210401946",
    "name": "בינה מלאכותית ישראל - הקהילה הרשמית למשתמשים יוצרים",
    "status": "pending",
@@ -1938,6 +1998,36 @@
    "last_checked": null
   },
   {
+   "slug": "SGStartups",
+   "name": "Singapore Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:10+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "Singaporestartupclub",
+   "name": "Singapore Start-Up Club - Web3 & AI Edition",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:10+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "Speedcamalerts",
    "name": "Irish Small Business Group",
    "status": "pending",
@@ -1950,6 +2040,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T03:54:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "StartupGrindSingapore",
+   "name": "Startup Grind Singapore",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:10+00:00",
    "last_checked": null
   },
   {
@@ -2283,6 +2388,51 @@
    "last_checked": null
   },
   {
+   "slug": "singapore.startups.tech",
+   "name": "Singapore Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:10+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "singaporecofounders",
+   "name": "Singapore Co-Founders",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:10+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "singstartups",
+   "name": "Singapore Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:10+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "sleekuk",
    "name": "New Business Owners in the UK",
    "status": "pending",
@@ -2433,6 +2583,21 @@
    "last_checked": "2026-08-08T08:45:45+00:00"
   },
   {
+   "slug": "1214004729205497",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:16:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1215365102854787",
    "name": null,
    "status": "gone",
@@ -2568,6 +2733,21 @@
    "last_checked": null
   },
   {
+   "slug": "1599920498133141",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:16:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1662205858220651",
    "name": null,
    "status": "pending",
@@ -2670,6 +2850,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T03:54:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2028340807593612",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:16:23+00:00",
    "last_checked": null
   },
   {
@@ -3093,6 +3288,21 @@
    "last_checked": null
   },
   {
+   "slug": "943673020157553",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:16:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "955986932937796",
    "name": null,
    "status": "gone",
@@ -3151,6 +3361,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:29:54+00:00",
    "last_checked": "2026-08-08T08:37:55+00:00"
+  },
+  {
+   "slug": "Dubaiexpat",
+   "name": "Dubai Expat Community (by Katie Jones)",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:21+00:00",
+   "last_checked": null
   },
   {
    "slug": "NelsonBC",
@@ -3360,6 +3585,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T20:58:17+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "dubaisocialsandbusinesses",
+   "name": "UAE Business Circle",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T09:19:21+00:00",
    "last_checked": null
   },
   {
