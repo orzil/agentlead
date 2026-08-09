@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-09T17:28:58+00:00",
+ "generated": "2026-08-09T18:01:41+00:00",
  "count": 256,
  "groups": [
   {
@@ -1773,6 +1773,21 @@
    "last_checked": null
   },
   {
+   "slug": "396641690362272",
+   "name": "מפתחים בישראל - R&D Israel | ***An Expert Full Stack",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T15:48:05+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "464376085736538",
    "name": "Australian Business Owners",
    "status": "pending",
@@ -3049,10 +3064,10 @@
   },
   {
    "slug": "2786770884931764",
-   "name": null,
+   "name": "דרוש מפתח/ת Full Stack",
    "status": "pending",
    "relevance": 0,
-   "region": null,
+   "region": "IL",
    "found_via": "ddg",
    "activity": null,
    "in_rotation": 0,
@@ -3106,21 +3121,6 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:29:54+00:00",
    "last_checked": "2026-08-08T08:39:46+00:00"
-  },
-  {
-   "slug": "396641690362272",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "ddg",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T15:48:05+00:00",
-   "last_checked": null
   },
   {
    "slug": "448483074571372",

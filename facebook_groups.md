@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-09T17:28:58+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-09T18:01:41+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -223,6 +223,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `917351158306121` (found via ddg)
 - `freelanceisrael` (found via ddg)
 - `940674812655793` (found via ddg)
+- `396641690362272` (found via ddg)
 - `735395363138298` (found via ddg)
 - `israel.hitech.jobs` (found via ddg)
 - `544976585999596` (found via ddg)
@@ -246,8 +247,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2475192752695227` (found via reddit_search)
 - `804417720029561` (found via reddit_search)
 - `107914806514702` (found via ddg)
-- `2786770884931764` (found via ddg)
-- `396641690362272` (found via ddg)
 - `fed.israel` (found via ddg)
 - `redlighttherapy101` (found via reddit_search)
 - `222047816070167` (found via reddit_search)
@@ -276,6 +275,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `toronto.entrepreneurs.startups` (found via ddg)
 - `dubaisocialsandbusinesses` (found via ddg)
 - `n8nofficial` (found via ddg)
+- `2786770884931764` (found via ddg)
 - `473051352513816` (found via ddg)
 - `462672717191788` (found via ddg)
 - `1417623821789515` (found via ddg)
