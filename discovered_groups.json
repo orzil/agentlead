@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-09T09:19:30+00:00",
+ "generated": "2026-08-09T17:28:58+00:00",
  "count": 256,
  "groups": [
   {
@@ -168,6 +168,21 @@
    "last_checked": null
   },
   {
+   "slug": "154062152055554",
+   "name": "מתכנתים ביחד :) | **דרוש מתכנת פרילנסר במשרה מלאה - פיתוח אפליקציית ...",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T08:34:49+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2004638959986462",
    "name": "AI & Automation for Shop Owners",
    "status": "pending",
@@ -240,6 +255,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "738857980085389",
+   "name": "עבודה מהבית, פרילנסרים דרושים ומציעים",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T08:34:39+00:00",
    "last_checked": null
   },
   {
@@ -393,6 +423,21 @@
    "last_checked": null
   },
   {
+   "slug": "1217610615947693",
+   "name": "פרילנסרים עבודה מהבית",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T08:34:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1248313253326186",
    "name": "Startup Founders USA",
    "status": "pending",
@@ -405,6 +450,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "126182808134629",
+   "name": "פרילנסרים בישראל Freelancers in Israel",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T08:34:39+00:00",
    "last_checked": null
   },
   {
@@ -1050,6 +1110,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "freelancerneeded",
+   "name": "דרושים פרילנסרים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T08:34:39+00:00",
    "last_checked": null
   },
   {
@@ -2208,6 +2283,21 @@
    "last_checked": null
   },
   {
+   "slug": "freelanceIL",
+   "name": "פרילאנסרים מחפשים פרויקטים",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T08:34:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "freelanceisrael",
    "name": "הייטק פרילאנסר בישראל",
    "status": "pending",
@@ -2613,21 +2703,6 @@
    "last_checked": "2026-08-08T08:43:54+00:00"
   },
   {
-   "slug": "1217610615947693",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "ddg",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T08:34:39+00:00",
-   "last_checked": null
-  },
-  {
    "slug": "1238614982979857",
    "name": null,
    "status": "pending",
@@ -2640,21 +2715,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:12:01+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "126182808134629",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "ddg",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T08:34:39+00:00",
    "last_checked": null
   },
   {
@@ -2689,10 +2749,10 @@
   },
   {
    "slug": "1417623821789515",
-   "name": null,
+   "name": "פרילאנסרים שעובדים מהבית",
    "status": "pending",
    "relevance": 0,
-   "region": null,
+   "region": "IL",
    "found_via": "ddg",
    "activity": null,
    "in_rotation": 0,
@@ -2716,21 +2776,6 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:46:13+00:00"
-  },
-  {
-   "slug": "154062152055554",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "ddg",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T08:34:49+00:00",
-   "last_checked": null
   },
   {
    "slug": "1599920498133141",
@@ -3124,10 +3169,10 @@
   },
   {
    "slug": "473051352513816",
-   "name": null,
+   "name": "דרושים פרילנסרים | עבודה מהבית | אנשי מכירות",
    "status": "pending",
    "relevance": 0,
-   "region": null,
+   "region": "IL",
    "found_via": "ddg",
    "activity": null,
    "in_rotation": 0,
@@ -3226,21 +3271,6 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:44:50+00:00"
-  },
-  {
-   "slug": "738857980085389",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "ddg",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T08:34:39+00:00",
-   "last_checked": null
   },
   {
    "slug": "804417720029561",
@@ -3645,36 +3675,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T19:56:25+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "freelanceIL",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "ddg",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T08:34:39+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "freelancerneeded",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "ddg",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T08:34:39+00:00",
    "last_checked": null
   },
   {
