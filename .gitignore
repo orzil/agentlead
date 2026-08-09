@@ -20,3 +20,6 @@ venv/
 
 # playwright
 /ms-playwright/
+
+# WhatsApp linked-device session - these ARE credentials
+wa_session/

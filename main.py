@@ -68,6 +68,16 @@ def job_linkedin(conn) -> None:
     pipeline.ingest_many(conn, linkedin_fetcher.fetch(conn), "linkedin")
 
 
+def job_whatsapp_read(conn) -> None:
+    """Ingest messages the WhatsApp reader collected on the DEDICATED number.
+    No-ops when unpaired, which is the normal state until Or sets up a second
+    number - it must never break the scheduler."""
+    import whatsapp_reader
+    leads = whatsapp_reader.fetch(conn)
+    if leads:
+        pipeline.ingest_many(conn, leads, "whatsapp_read")
+
+
 def job_whatsapp(conn) -> None:
     """Daily: harvest WhatsApp invite links out of already-stored posts and
     validate them. Discovery only - these are groups for the user to JOIN by
@@ -184,6 +194,7 @@ JOBS = [
     ("remotive", 8 * 3600, job_remotive),      # rate-limited ~4/day, 24h-delayed
     ("fbsearch", 3 * 3600, job_fbsearch),    # post permalinks from the search index
     ("facebook", 8 * 3600, job_facebook),      # public groups; self-caps at 3 runs/day
+    ("whatsapp_read", 15 * 60, job_whatsapp_read),  # dedicated-number reader (local, dormant until paired)
     ("whatsapp", 24 * 3600, job_whatsapp),     # mine invite links out of stored posts
     ("linkcheck", 6 * 3600, job_linkcheck),   # drop leads whose posting died
     ("digest", 10 * 60, job_digest),
