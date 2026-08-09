@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-09T22:51:26+00:00",
- "count": 262,
+ "generated": "2026-08-09T23:34:51+00:00",
+ "count": 264,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -483,6 +483,21 @@
    "last_checked": null
   },
   {
+   "slug": "160203507496748",
+   "name": "דרושים היי טק - מתכנתים | בודקי תוכנה | אבטחת מידע",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T23:34:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1674526216166974",
    "name": "Outsourcing Non-Voice Projects",
    "status": "pending",
@@ -630,6 +645,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:00:26+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2323579111384503",
+   "name": "דרושים בכל הארץ | מרכז המשרות של ישראל",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T23:34:51+00:00",
    "last_checked": null
   },
   {
