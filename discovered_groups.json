@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-09T18:45:26+00:00",
- "count": 259,
+ "generated": "2026-08-09T19:12:20+00:00",
+ "count": 260,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1125,6 +1125,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T08:34:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "freelancersautocadandmore",
+   "name": "הצעות עבודה לשרטטים פרילנסרים בלבד - אוטוקאד ועוד",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-09T19:12:19+00:00",
    "last_checked": null
   },
   {
