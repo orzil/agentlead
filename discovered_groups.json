@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-10T22:00:15+00:00",
- "count": 299,
+ "generated": "2026-08-10T22:50:22+00:00",
+ "count": 302,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2958,6 +2958,21 @@
    "last_checked": null
   },
   {
+   "slug": "1319151062237383",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T22:50:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1329241984892387",
    "name": null,
    "status": "pending",
@@ -3166,6 +3181,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:42:59+00:00"
+  },
+  {
+   "slug": "196799535583425",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T22:50:22+00:00",
+   "last_checked": null
   },
   {
    "slug": "199941563383600",
@@ -4290,6 +4320,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T08:34:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "liatn2",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T22:50:22+00:00",
    "last_checked": null
   },
   {
