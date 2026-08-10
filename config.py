@@ -67,6 +67,11 @@ OLLAMA_MODEL = env("OLLAMA_MODEL", "qwen2.5:7b")
 # neither could alone. No-ops harmlessly where Ollama isn't installed (e.g. the
 # GitHub Actions runner), because the fallback swallows connection errors.
 LLM_FALLBACK_OLLAMA = env("LLM_FALLBACK_OLLAMA", "1") in ("1", "true", "yes")
+# Spend the ~20 free Gemini calls/day on PITCHES, not scoring. Scoring runs on
+# hundreds of leads and Ollama handles structured classification well; a pitch
+# is written for the two or three leads that reach the push threshold and is
+# the one thing Or actually pastes to a client, so it gets the better model.
+GEMINI_RESERVE_FOR_PITCH = env("GEMINI_RESERVE_FOR_PITCH", "1") in ("1", "true", "yes")
 
 # --- Reddit -----------------------------------------------------------------
 REDDIT_CLIENT_ID = env("REDDIT_CLIENT_ID")
