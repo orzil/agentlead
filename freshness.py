@@ -22,14 +22,19 @@ from datetime import datetime, timezone
 
 import config
 
-# Penalty by age. Deliberately gentle in the first week and steep after a month,
-# which is roughly how a freelance post's odds actually decay: still open for a
-# few days, contested within two weeks, cold after a month.
-PENALTY_TIERS = [
-    (7, 0),      # this week - full score
-    (14, 1),     # last week
-    (30, 2),     # this month
-    (10_000, 3),  # older; MAX_LEAD_AGE_DAYS gates most of these out entirely
+# Score adjustment by age: POSITIVE is a bonus, negative a penalty. Roughly how
+# a freelance post's odds actually decay - barely touched in the first 48 hours,
+# contested within two weeks, cold after a month.
+#
+# The +1 for a two-day-old post is not just symmetry with the penalty: being
+# early is most of the advantage on a direct channel. Few replies so far, the
+# poster is still reading the thread, and nobody has been chosen yet.
+ADJUST_TIERS = [
+    (2, +1),      # posted in the last 48h - get in before the crowd
+    (7, 0),       # this week - full score, no adjustment
+    (14, -1),     # last week
+    (30, -2),     # this month
+    (10_000, -3),  # older; MAX_LEAD_AGE_DAYS gates most of these out entirely
 ]
 
 
@@ -75,29 +80,38 @@ def age_days(posted_at=None, raw_text: str = "", fetched_at=None) -> int | None:
     return max(0, (now - oldest).days)
 
 
-def penalty(days: int | None) -> int:
+def adjustment(days: int | None) -> int:
+    """Score delta for this age. Positive = bonus, negative = penalty."""
     if days is None:
         return 0
-    for limit, cost in PENALTY_TIERS:
+    for limit, delta in ADJUST_TIERS:
         if days <= limit:
-            return cost
-    return PENALTY_TIERS[-1][1]
+            return delta
+    return ADJUST_TIERS[-1][1]
+
+
+# kept for callers/tests that think in penalties
+def penalty(days: int | None) -> int:
+    return -min(0, adjustment(days))
 
 
 def apply(score, posted_at=None, raw_text: str = "", fetched_at=None):
-    """Lower a LeadScore for age, in place, and flag why. Returns (score, days).
+    """Adjust a LeadScore for age, in place, and flag why. Returns (score, days).
 
-    Never drops below 1, and records the original in `reasoning` so a demoted
+    Stays within 1-10, and records the original in `reasoning` so an adjusted
     lead can still be understood later.
     """
     days = age_days(posted_at, raw_text, fetched_at)
-    cost = penalty(days)
-    if not cost or score is None:
+    delta = adjustment(days)
+    if not delta or score is None:
         return score, days
     original = score.score
-    score.score = max(1, original - cost)
-    label = f"{days}d old"
+    score.score = max(1, min(10, original + delta))
+    if score.score == original:      # already at the ceiling/floor
+        return score, days
+    label = f"{days}d old" if delta < 0 else f"fresh ({days}d)"
     if label not in (score.red_flags or []):
         score.red_flags = list(score.red_flags or []) + [label]
-    score.reasoning = f"[age -{cost}: was {original}/10, {label}] {score.reasoning or ''}".strip()
+    score.reasoning = (f"[age {delta:+d}: was {original}/10, {label}] "
+                       f"{score.reasoning or ''}").strip()
     return score, days

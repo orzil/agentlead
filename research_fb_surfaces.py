@@ -119,3 +119,32 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+def check_reddit_account(username: str = "Specific-Ad-1716") -> None:
+    """Is this account safe to auto-reply from? Reddit silently filters comments
+    from thin accounts, so karma and age decide whether replying is worth doing
+    at all. Public endpoint - runs here because Reddit 403s the home IP."""
+    from datetime import datetime, timezone
+    print(f"\n=== REDDIT ACCOUNT u/{username} ===")
+    try:
+        r = httpx.get(f"https://www.reddit.com/user/{username}/about.json",
+                      headers={"User-Agent": "agentlead:reply-preflight:1.0"},
+                      timeout=20, follow_redirects=True)
+        print("  HTTP", r.status_code)
+        if r.status_code != 200:
+            print("  (blocked or missing)")
+            return
+        d = r.json().get("data", {})
+        karma = (d.get("link_karma") or 0) + (d.get("comment_karma") or 0)
+        created = datetime.fromtimestamp(d.get("created_utc", 0), tz=timezone.utc)
+        age = (datetime.now(timezone.utc) - created).days
+        print(f"  karma    : {karma} (link {d.get('link_karma')}, comment {d.get('comment_karma')})")
+        print(f"  created  : {created:%Y-%m-%d} ({age} days old)")
+        print(f"  verified : email={d.get('has_verified_email')}")
+        print(f"  KARMA >=10 : {karma >= 10}")
+        print(f"  AGE  >=30d : {age >= 30}")
+    except Exception as e:
+        print("  ERR", type(e).__name__, str(e)[:60])
+
+
