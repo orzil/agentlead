@@ -1,0 +1,9 @@
+2026-08-10 21:55:04,277 INFO    [audit] auditing 2271 gated-out leads from the last 5 days
+2026-08-10 21:55:08,828 INFO    [httpx] HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-10 21:55:13,452 INFO    [httpx] HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-10 21:55:18,368 INFO    [httpx] HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-10 21:55:22,906 INFO    [httpx] HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-10 21:55:27,832 INFO    [httpx] HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-10 21:55:33,013 INFO    [httpx] HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-10 21:55:38,241 INFO    [httpx] HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-10 21:55:43,653 INFO    [httpx] HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
