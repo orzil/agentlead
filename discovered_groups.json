@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-10T03:24:33+00:00",
- "count": 273,
+ "generated": "2026-08-10T17:54:11+00:00",
+ "count": 298,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -360,6 +360,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1033256336792721",
+   "name": "הליגה לעסקים - שיווק דיגיטלי | בינה מלאכותית | אוטומציה",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:05:28+00:00",
    "last_checked": null
   },
   {
@@ -993,6 +1008,21 @@
    "last_checked": null
   },
   {
+   "slug": "all.ai.israel",
+   "name": "AI Israel - בינה מלאכותית ישראל",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:05:17+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "australiansmallbusinesowners",
    "name": "Australian Small Business Owners",
    "status": "pending",
@@ -1590,7 +1620,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
-   "last_checked": "2026-08-09T03:54:59+00:00"
+   "last_checked": "2026-08-10T05:05:38+00:00"
   },
   {
    "slug": "1094677854022218",
@@ -1680,6 +1710,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T02:02:33+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1362579304090573",
+   "name": "בינה מלאכותית - הקהילה הישראלית",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:05:17+00:00",
    "last_checked": null
   },
   {
@@ -2763,6 +2808,21 @@
    "last_checked": null
   },
   {
+   "slug": "1045081961342736",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "107914806514702",
    "name": null,
    "status": "pending",
@@ -2898,6 +2958,21 @@
    "last_checked": null
   },
   {
+   "slug": "1404116417142065",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1417623821789515",
    "name": "פרילאנסרים שעובדים מהבית",
    "status": "pending",
@@ -2910,6 +2985,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T08:34:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1482303418674425",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
    "last_checked": null
   },
   {
@@ -2926,6 +3016,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:46:13+00:00"
+  },
+  {
+   "slug": "1558644918960653",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
   },
   {
    "slug": "1599920498133141",
@@ -2988,6 +3093,21 @@
    "last_checked": "2026-08-08T08:41:36+00:00"
   },
   {
+   "slug": "1713389685540919",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1765017954926236",
    "name": null,
    "status": "pending",
@@ -3031,6 +3151,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:42:59+00:00"
+  },
+  {
+   "slug": "199941563383600",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
   },
   {
    "slug": "1999738013632903",
@@ -3198,6 +3333,21 @@
    "last_checked": null
   },
   {
+   "slug": "248675758568554",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2786770884931764",
    "name": "דרוש מפתח/ת Full Stack",
    "status": "pending",
@@ -3226,6 +3376,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:29:54+00:00",
    "last_checked": "2026-08-08T08:38:23+00:00"
+  },
+  {
+   "slug": "309101452541796",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
   },
   {
    "slug": "35730592219889536",
@@ -3348,6 +3513,21 @@
    "last_checked": null
   },
   {
+   "slug": "476185033769654",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "491513598224058",
    "name": null,
    "status": "pending",
@@ -3378,6 +3558,36 @@
    "last_checked": "2026-08-08T08:41:09+00:00"
   },
   {
+   "slug": "520516866042193",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "521541921327327",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "567281480430235",
    "name": null,
    "status": "gone",
@@ -3405,6 +3615,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "642956896699643",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
    "last_checked": null
   },
   {
@@ -3498,6 +3723,21 @@
    "last_checked": null
   },
   {
+   "slug": "934055404122435",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "943673020157553",
    "name": null,
    "status": "pending",
@@ -3558,6 +3798,21 @@
    "last_checked": "2026-08-08T08:52:12+00:00"
   },
   {
+   "slug": "961481447272242",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "AdoptableTH",
    "name": null,
    "status": "gone",
@@ -3571,6 +3826,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:47:08+00:00"
+  },
+  {
+   "slug": "AskCalgarians",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
   },
   {
    "slug": "DigitalNomadEngagementExchange",
@@ -3663,6 +3933,36 @@
    "last_checked": null
   },
   {
+   "slug": "StopCPSFromLegallyKidnapping",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "XboxIN",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "agenticly",
    "name": null,
    "status": "gone",
@@ -3720,6 +4020,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "bluewavedemocrats",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
    "last_checked": null
   },
   {
@@ -3873,6 +4188,21 @@
    "last_checked": "2026-08-08T08:51:45+00:00"
   },
   {
+   "slug": "fipglobalcats",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "fivemserverdevelopmenthelp2025",
    "name": "FiveM Server Development Help 2025-2026 | Hi there,I am ...",
    "status": "pending",
@@ -3885,6 +4215,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T19:56:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "gohighlevel1",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T17:54:11+00:00",
    "last_checked": null
   },
   {
@@ -3945,6 +4290,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-10T00:35:56+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "mlban",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T17:54:11+00:00",
    "last_checked": null
   },
   {
@@ -4020,6 +4380,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:12:01+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "rivercitycards",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T05:02:31+00:00",
    "last_checked": null
   },
   {

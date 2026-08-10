@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-10T03:24:33+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-10T17:54:11+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (237)
+## Not yet probed (262)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -139,6 +139,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `beehexaecommercegroup` (found via ddg)
 - `ecommercesuccessgroup` (found via ddg)
 - `612254275568501` (found via ddg)
+- `all.ai.israel` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
 - `yazamutIsrael` (found via ddg)
@@ -155,6 +156,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1786020114969358` (found via ddg)
 - `freelancerneeded` (found via ddg)
 - `automationisrael` (found via ddg)
+- `1033256336792721` (found via ddg)
 - `223303087850326` (found via ddg)
 - `freelancersautocadandmore` (found via ddg)
 - `609641652802760` (found via ddg)
@@ -223,6 +225,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `980725725352474` (found via ddg)
 - `1657329921376731` (found via ddg)
 - `7602972273135565` (found via ddg)
+- `1362579304090573` (found via ddg)
 - `1338202816787610` (found via ddg)
 - `289118210401946` (found via ddg)
 - `lost.geographers` (found via ddg)
@@ -279,6 +282,28 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `claudecommunity` (found via leads_db)
 - `434998574369387` (found via leads_db)
 - `953425205227694` (found via leads_db)
+- `rivercitycards` (found via reddit_search)
+- `XboxIN` (found via reddit_search)
+- `1404116417142065` (found via reddit_search)
+- `AskCalgarians` (found via reddit_search)
+- `1482303418674425` (found via reddit_search)
+- `309101452541796` (found via reddit_search)
+- `521541921327327` (found via reddit_search)
+- `199941563383600` (found via reddit_search)
+- `1045081961342736` (found via reddit_search)
+- `642956896699643` (found via reddit_search)
+- `fipglobalcats` (found via reddit_search)
+- `1558644918960653` (found via reddit_search)
+- `bluewavedemocrats` (found via reddit_search)
+- `1713389685540919` (found via reddit_search)
+- `520516866042193` (found via reddit_search)
+- `934055404122435` (found via reddit_search)
+- `StopCPSFromLegallyKidnapping` (found via reddit_search)
+- `248675758568554` (found via reddit_search)
+- `961481447272242` (found via reddit_search)
+- `476185033769654` (found via reddit_search)
+- `mlban` (found via leads_db)
+- `gohighlevel1` (found via leads_db)
 - `businessnetworkingnewzealand` (found via ddg)
 - `Dubaiexpat` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
