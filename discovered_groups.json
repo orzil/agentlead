@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-09T23:34:51+00:00",
- "count": 264,
+ "generated": "2026-08-10T00:35:56+00:00",
+ "count": 268,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2868,6 +2868,21 @@
    "last_checked": null
   },
   {
+   "slug": "1329241984892387",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T00:35:56+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1417623821789515",
    "name": "פרילאנסרים שעובדים מהבית",
    "status": "pending",
@@ -3226,6 +3241,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:29:54+00:00",
    "last_checked": "2026-08-08T08:39:46+00:00"
+  },
+  {
+   "slug": "3diot.laptrinhnhungiot",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T00:35:56+00:00",
+   "last_checked": null
   },
   {
    "slug": "448483074571372",
@@ -3828,6 +3858,21 @@
    "last_checked": null
   },
   {
+   "slug": "miaigroup",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T00:35:56+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "n8nofficial",
    "name": "n8n (Official Community)",
    "status": "pending",
@@ -3960,6 +4005,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T08:33:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "vn.ros",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-10T00:35:56+00:00",
    "last_checked": null
   }
  ]
