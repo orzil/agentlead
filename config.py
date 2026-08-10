@@ -81,8 +81,7 @@ GEMINI_RESERVE_FOR_PITCH = env("GEMINI_RESERVE_FOR_PITCH", "1") in ("1", "true",
 #
 # Order is deliberate - quality first, since these are used for the PITCH (the
 # text Or actually sends someone) and for scoring only when Ollama is down:
-#   openrouter : free tier includes nvidia/nemotron-3-ultra-550b (1M context) and
-#                gemma-4-31b. Strongest free models found, no card required.
+#   openrouter : free tier includes several strong models, no card required.
 #   groq       : smaller models but very fast and a generous daily allowance.
 #   cerebras   : same idea, another independent quota.
 # Each entry activates only when its key is present, so an unconfigured provider
@@ -92,7 +91,13 @@ LLM_PROVIDERS = [
         "name": "openrouter",
         "base": "https://openrouter.ai/api/v1",
         "key": env("OPENROUTER_API_KEY"),
-        "model": env("OPENROUTER_MODEL", "nvidia/nemotron-3-ultra-550b-a55b:free"),
+        # nemotron-3-super, NOT the bigger ultra-550b: tested on real leads
+        # 2026-08-10, ultra returned a malformed response and - being a
+        # reasoning model - leaks its chain-of-thought as the answer, which is
+        # the exact meta-commentary failure the pitch filter exists to catch.
+        # super-120b answered a Vietnamese post in Vietnamese, opening on the
+        # poster's actual technical obstacle.
+        "model": env("OPENROUTER_MODEL", "nvidia/nemotron-3-super-120b-a12b:free"),
     },
     {
         "name": "groq",
