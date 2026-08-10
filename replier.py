@@ -1,16 +1,27 @@
-"""Auto-reply engine - Reddit and Freelancer.com (the channels with legitimate
-posting APIs). Facebook is deliberately excluded (account-ban risk); other
-channels have no posting API.
+"""Auto-reply engine - Reddit only, the one channel left with a legitimate
+posting API. Facebook and LinkedIn are excluded on purpose (automating those
+accounts risks a ban); Freelancer.com was dropped 2026-08-06.
 
 Flow:
   scored lead (>= REPLY_MIN_SCORE, channel supported)
     -> LLM reads the post + your REPLY_DIRECTION and decides reply yes/no
-    -> drafts the message (post's language) + bid params for Freelancer
+    -> drafts the message in the post's language
     -> queued in the `replies` table
     -> REPLY_MODE=approve: waits for `--approve-reply` (default, recommended)
        REPLY_MODE=auto:    sent immediately
-Safety rails: one reply per lead ever, REPLY_DAILY_CAP sends/day, everything
-logged with status/error, senders no-op when credentials are missing.
+
+Reddit-specific rails, because a careless reply costs the account, not just the
+lead:
+  * COMMENT, not DM, by default. Unsolicited DMs are the fastest route to a spam
+    report, and r/forhire requires commenting on the post before DMing. A public
+    comment is also read by everyone else in the thread.
+  * REDDIT_NO_REPLY_SUBS - subs that remove unsolicited offers. Replying there
+    burns a daily slot on a comment nobody will ever see.
+  * Karma and account-age floors: Reddit silently filters comments from thin
+    accounts, so replying from one looks sent but reaches no one.
+  * One reply per lead ever, REPLY_DAILY_CAP/day, and a minimum gap between
+    replies (Reddit rate-limits new accounts to ~1 comment/10 min).
+Run `python main.py --reply-check` before enabling any of it.
 """
 from __future__ import annotations
 
@@ -18,6 +29,7 @@ import json
 import logging
 import re
 import sqlite3
+import time
 
 import config
 import db
@@ -100,12 +112,6 @@ def consider(conn: sqlite3.Connection, lead_id: int) -> str:
         return "reply_llm_skipped"
 
     meta = {"reason": decision.get("reason", "")}
-    if channel == "freelancer":
-        meta.update(_freelancer_meta(row))
-        if "project_id" not in meta:
-            log.info("lead %s: no project id stored (fetched before bidding "
-                     "support); cannot bid", lead_id)
-            return "reply_no_project_id"
     reply_id = db.queue_reply(conn, lead_id, channel, decision["message"], meta)
     if reply_id is None:
         return "reply_already_queued"
@@ -119,10 +125,62 @@ def consider(conn: sqlite3.Connection, lead_id: int) -> str:
 
 # --- sending ------------------------------------------------------------------
 
-def _send_reddit(url: str, author: str | None, message: str) -> tuple[bool, str]:
+def _sub_of(url: str) -> str:
+    m = re.search(r"reddit\.com/r/([A-Za-z0-9_]+)/", url or "")
+    return (m.group(1) if m else "").lower()
+
+
+def preflight(reddit=None) -> tuple[bool, str]:
+    """Is this account safe to reply from at all?
+
+    Reddit silently removes comments from thin accounts, so replying from one is
+    worse than doing nothing: it looks sent, never reaches the poster, and burns
+    a slot from the daily cap. Better to refuse and say why.
+    """
     if not (config.REDDIT_CLIENT_ID and config.REDDIT_CLIENT_SECRET
             and config.REDDIT_USERNAME and config.REDDIT_PASSWORD):
-        return False, "reddit posting credentials not configured"
+        return False, ("credentials missing - create a 'script' app at "
+                       "reddit.com/prefs/apps and set REDDIT_CLIENT_ID/SECRET/"
+                       "USERNAME/PASSWORD (2FA must be off for password grant)")
+    try:
+        import praw
+
+        if reddit is None:
+            reddit = praw.Reddit(
+                client_id=config.REDDIT_CLIENT_ID,
+                client_secret=config.REDDIT_CLIENT_SECRET,
+                username=config.REDDIT_USERNAME,
+                password=config.REDDIT_PASSWORD,
+                user_agent=config.REDDIT_USER_AGENT)
+        me = reddit.user.me()
+        if me is None:
+            return False, "login failed (check password / 2FA disabled)"
+        karma = (me.link_karma or 0) + (me.comment_karma or 0)
+        age_days = (time.time() - me.created_utc) / 86400
+        if karma < config.REDDIT_MIN_KARMA:
+            return False, (f"{karma} karma (< {config.REDDIT_MIN_KARMA}) - comments "
+                           "from thin accounts get auto-removed; build karma first")
+        if age_days < config.REDDIT_MIN_ACCOUNT_AGE_DAYS:
+            return False, (f"account is {age_days:.0f} days old "
+                           f"(< {config.REDDIT_MIN_ACCOUNT_AGE_DAYS}) - too new to post safely")
+        return True, f"u/{me.name}: {karma} karma, {age_days:.0f} days old - OK"
+    except Exception as e:
+        return False, f"preflight failed: {str(e)[:120]}"
+
+
+def _too_soon(conn: sqlite3.Connection) -> bool:
+    """Reddit rate-limits new accounts to about one comment per 10 minutes."""
+    last = float(db.kv_get(conn, "last_reddit_reply_ts", "0") or 0)
+    return (time.time() - last) < config.REDDIT_MIN_SECONDS_BETWEEN_REPLIES
+
+
+def _send_reddit(url: str, author: str | None, message: str) -> tuple[bool, str]:
+    ok, why = preflight()
+    if not ok:
+        return False, why
+    sub = _sub_of(url)
+    if sub in config.REDDIT_NO_REPLY_SUBS:
+        return False, f"r/{sub} removes unsolicited offers - not replying"
     import praw
 
     reddit = praw.Reddit(
@@ -135,8 +193,10 @@ def _send_reddit(url: str, author: str | None, message: str) -> tuple[bool, str]
     try:
         if config.REDDIT_REPLY_VIA == "comment":
             submission = reddit.submission(url=url)
+            if getattr(submission, "locked", False) or getattr(submission, "archived", False):
+                return False, "post is locked/archived - cannot comment"
             submission.reply(message)
-        else:  # dm the poster (default: quieter, matches "DM me" conventions)
+        else:  # DM: only where the post invites it; see REDDIT_REPLY_VIA
             if not author:
                 return False, "no author on lead; cannot DM"
             reddit.redditor(author.removeprefix("/u/").removeprefix("u/")).message(
@@ -158,9 +218,15 @@ def send_reply(conn: sqlite3.Connection, reply_id: int) -> tuple[bool, str]:
         return False, "already sent"
     if db.replies_sent_today(conn) >= config.REPLY_DAILY_CAP:
         return False, f"daily cap ({config.REPLY_DAILY_CAP}) reached - try tomorrow"
+    if row["channel"] == "reddit" and _too_soon(conn):
+        wait = int(config.REDDIT_MIN_SECONDS_BETWEEN_REPLIES
+                   - (time.time() - float(db.kv_get(conn, "last_reddit_reply_ts", "0") or 0)))
+        return False, f"reddit rate limit - wait {wait // 60} more minute(s)"
 
     if row["channel"] == "reddit":
         ok, err = _send_reddit(row["url"], row["author"], row["message"])
+        if ok:
+            db.kv_set(conn, "last_reddit_reply_ts", str(time.time()))
     else:
         ok, err = False, f"unknown channel {row['channel']}"
 

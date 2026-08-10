@@ -564,6 +564,8 @@ def main() -> None:
                     help="with --export-csv/--export-html: only leads scoring >= N")
     ap.add_argument("--score-backlog", nargs="?", const=300, type=int, metavar="N",
                     help="score up to N stored-unscored leads (run after adding a Gemini key)")
+    ap.add_argument("--reply-check", action="store_true",
+                    help="verify the Reddit reply setup is safe before enabling it")
     ap.add_argument("--replies", action="store_true",
                     help="list pending/failed/sent auto-replies")
     ap.add_argument("--approve-reply", metavar="IDS|all",
@@ -618,6 +620,16 @@ def main() -> None:
         return
     if args.score_backlog is not None:
         score_backlog(db.connect(), args.score_backlog)
+        return
+    if args.reply_check:
+        import replier
+        ok, why = replier.preflight()
+        print(("READY: " if ok else "NOT READY: ") + why)
+        print(f"mode        : {config.REPLY_MODE} (nothing sends without --approve-reply)")
+        print(f"via         : {config.REDDIT_REPLY_VIA}")
+        print(f"enabled     : {config.REPLY_ENABLED}")
+        print(f"min score   : {config.REPLY_MIN_SCORE} | daily cap: {config.REPLY_DAILY_CAP}")
+        print(f"blocked subs: {sorted(config.REDDIT_NO_REPLY_SUBS)[:6]} ...")
         return
     if args.replies:
         print_replies(db.connect())

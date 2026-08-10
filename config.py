@@ -76,7 +76,29 @@ REDDIT_USER_AGENT = env("REDDIT_USER_AGENT", "windows:lead-agent:v1.0 (personal 
 # off on the account (or use an app-specific arrangement).
 REDDIT_USERNAME = env("REDDIT_USERNAME")
 REDDIT_PASSWORD = env("REDDIT_PASSWORD")
-REDDIT_REPLY_VIA = env("REDDIT_REPLY_VIA", "dm")  # dm | comment
+# comment | dm. Default changed to COMMENT 2026-08-10.
+#
+# An unsolicited DM is the fastest way to get reported as spam and lose the
+# account, and r/forhire - the highest-volume sub here - explicitly requires
+# commenting on the post before DMing. A comment is also public: it is visible
+# to everyone else reading the thread, so one reply can bring in more than one
+# client. DM stays available for posts that ask for it.
+REDDIT_REPLY_VIA = env("REDDIT_REPLY_VIA", "comment")
+
+# Subs that remove or ban unsolicited service offers. Replying here burns the
+# account for nothing - the comment is removed before the poster reads it.
+REDDIT_NO_REPLY_SUBS = {s.strip().lower() for s in env(
+    "REDDIT_NO_REPLY_SUBS",
+    "freelance,forhire_meta,jobs,cscareerquestions,learnpython,"
+    "machinelearning,datascience,artificial,singularity").split(",") if s.strip()}
+
+# Reddit's own filters silently drop comments from thin accounts, so a reply
+# from one is worse than useless: it looks sent, gets removed, and the daily cap
+# is spent. Checked once at send time via PRAW.
+REDDIT_MIN_KARMA = int(env("REDDIT_MIN_KARMA", "10"))
+REDDIT_MIN_ACCOUNT_AGE_DAYS = int(env("REDDIT_MIN_ACCOUNT_AGE_DAYS", "30"))
+# Reddit rate-limits new accounts to roughly one comment per 10 minutes.
+REDDIT_MIN_SECONDS_BETWEEN_REPLIES = int(env("REDDIT_MIN_SECONDS_BETWEEN_REPLIES", "900"))
 SUBREDDITS = ["MachineLearningJobs", "computervision", "forhire",
               "freelance_forhire", "DataScienceJobs", "BigDataJobs",
               # job subs -> loose default gate (a domain OR engage term passes)
