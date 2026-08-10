@@ -21,13 +21,19 @@ SOURCE_ICONS = {
 }
 
 
-def _send_raw(text: str) -> bool:
+def _send_raw(text: str) -> int | None:
+    """Send to Telegram. Returns the MESSAGE ID, not just success.
+
+    The id matters: replying to that message is how Or gives one-word feedback
+    ("fulltime", "old", "good"), and feedback.py needs the id to map a reply
+    back to the lead it judges.
+    """
     if not (config.TELEGRAM_BOT_TOKEN and config.TELEGRAM_CHAT_ID):
         # dry-run mode: keep the message so nothing is lost
         with open(OUTBOX, "a", encoding="utf-8") as f:
             f.write(f"--- {datetime.now().isoformat()} ---\n{text}\n\n")
         log.info("Telegram not configured; message written to outbox.log")
-        return False
+        return None
     try:
         r = httpx.post(
             f"https://api.telegram.org/bot{config.TELEGRAM_BOT_TOKEN}/sendMessage",
@@ -41,15 +47,16 @@ def _send_raw(text: str) -> bool:
         )
         if r.status_code != 200:
             log.error("Telegram error %s: %s", r.status_code, r.text[:200])
-            return False
-        return True
+            return None
+        return r.json().get("result", {}).get("message_id")
     except Exception as e:
         log.error("Telegram send failed: %s", e)
-        return False
+        return None
 
 
-def notify_lead(row: sqlite3.Row, pitch: str | None = None) -> bool:
-    """Instant push for a scored lead row from the DB."""
+def notify_lead(row: sqlite3.Row, pitch: str | None = None) -> int | None:
+    """Instant push for a scored lead. Returns the Telegram message id so the
+    caller can map Or's one-word reply back to this lead."""
     icon = SOURCE_ICONS.get(row["source"].split("/")[0], "\U0001F4CC")
     red_flags = json.loads(row["red_flags"] or "[]")
     lines = [

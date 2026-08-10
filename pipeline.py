@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import logging
 import sqlite3
+from datetime import datetime, timezone
 
 import config
 import db
@@ -57,12 +58,21 @@ def ingest(conn: sqlite3.Connection, lead: Lead) -> str:
     # gig is usually filled and must not sit at the top of the table.
     score, _days = freshness.apply(score, lead.posted_at, lead.raw_text)
 
-    if score.score >= config.PUSH_THRESHOLD:
+    # Or can retune this from his phone with "less"/"more" - read it per lead so
+    # the change takes effect immediately, not at the next restart.
+    push_at = int(db.kv_get(conn, "push_threshold_override", "") or config.PUSH_THRESHOLD)
+    if score.score >= push_at:
         db.save_score(conn, lead_id, score, "scored")
         row = conn.execute("SELECT * FROM leads WHERE id=?", (lead_id,)).fetchone()
         pitch = scorer.draft_pitch(lead) if config.PITCH_DRAFTS else None
-        ok = notifier.notify_lead(row, pitch=pitch)
-        db.set_status(conn, lead_id, "notified" if ok else "scored")
+        msg_id = notifier.notify_lead(row, pitch=pitch)
+        if msg_id:
+            # stamp the push time (time-to-phone) and remember which Telegram
+            # message this lead is, so a one-word reply can be mapped back to it
+            conn.execute("UPDATE leads SET notified_at=? WHERE id=?",
+                         (datetime.now(timezone.utc).isoformat(), lead_id))
+            db.link_message(conn, msg_id, lead_id)
+        db.set_status(conn, lead_id, "notified" if msg_id else "scored")
         if score.score >= config.REPLY_MIN_SCORE:
             try:
                 import replier
@@ -71,7 +81,7 @@ def ingest(conn: sqlite3.Connection, lead: Lead) -> str:
                 log.error("replier failed for lead %s: %s", lead_id, e)
         return "notified"
 
-    if score.score >= config.DIGEST_THRESHOLD:
+    if score.score >= min(config.DIGEST_THRESHOLD, push_at):
         db.save_score(conn, lead_id, score, "digest_pending")
         return "digest_pending"
 

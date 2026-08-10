@@ -112,6 +112,15 @@ CREATE TABLE IF NOT EXISTS facebook_groups (
     scrapes INTEGER DEFAULT 0
 );
 CREATE INDEX IF NOT EXISTS idx_fb_status ON facebook_groups(status);
+
+-- Which Telegram message announced which lead, so a one-word REPLY on the phone
+-- ("fulltime", "old", "good") can be mapped back to the lead it judges. Without
+-- this, Or's verdicts - the best training signal the system has - are lost.
+CREATE TABLE IF NOT EXISTS lead_messages (
+    message_id INTEGER PRIMARY KEY,
+    lead_id INTEGER NOT NULL REFERENCES leads(id),
+    sent_at TEXT NOT NULL
+);
 """
 
 # Columns added after a table first shipped. ALTER TABLE ADD COLUMN is cheap and
@@ -128,6 +137,12 @@ _MIGRATIONS = [
     ("facebook_groups", "posts_seen", "INTEGER DEFAULT 0"),
     ("facebook_groups", "gate_passed", "INTEGER DEFAULT 0"),
     ("facebook_groups", "scrapes", "INTEGER DEFAULT 0"),
+    # When the push actually landed. With posted_at this gives time-to-phone,
+    # the number that decides whether Or beats the competition to a reply.
+    ("leads", "notified_at", "TEXT"),
+    # One-word verdicts replied from Telegram (see feedback.py).
+    ("leads", "verdict", "TEXT"),
+    ("leads", "verdict_at", "TEXT"),
 ]
 
 
@@ -188,6 +203,21 @@ def insert_lead(conn: sqlite3.Connection, lead: Lead) -> int | None:
     )
     conn.commit()
     return cur.lastrowid
+
+
+def link_message(conn: sqlite3.Connection, message_id: int, lead_id: int) -> None:
+    """Remember which Telegram message announced this lead."""
+    conn.execute(
+        "INSERT OR REPLACE INTO lead_messages (message_id, lead_id, sent_at)"
+        " VALUES (?,?,?)",
+        (message_id, lead_id, datetime.now(timezone.utc).isoformat()))
+    conn.commit()
+
+
+def lead_for_message(conn: sqlite3.Connection, message_id: int) -> int | None:
+    row = conn.execute("SELECT lead_id FROM lead_messages WHERE message_id=?",
+                       (message_id,)).fetchone()
+    return row["lead_id"] if row else None
 
 
 def set_status(conn: sqlite3.Connection, lead_id: int, status: str) -> None:

@@ -598,7 +598,13 @@ REPLY_DIRECTION = env("REPLY_DIRECTION", (
     "on-site presence outside Israel, budgets under $200."))
 
 # --- Notification routing ---------------------------------------------------
-PUSH_THRESHOLD = int(env("PUSH_THRESHOLD", "8"))      # >= this -> instant push
+# Lowered 8 -> 6 on 2026-08-10. At 8, a score-7 lead never reached the phone -
+# the $100-150/hr Tel Aviv CV contract sat waiting for a daily digest while the
+# competition replied. On a direct channel the first credible answer usually
+# wins, so anything worth acting on is pushed immediately. Volume stays sane
+# because the gate, freshness and budget rules already did the filtering, and Or
+# can retune this from his phone by replying "less" or "more".
+PUSH_THRESHOLD = int(env("PUSH_THRESHOLD", "6"))      # >= this -> instant push
 DIGEST_THRESHOLD = int(env("DIGEST_THRESHOLD", "6"))  # >= this -> daily digest
 DIGEST_HOUR = int(env("DIGEST_HOUR", "18"))           # local time
 # Draft a copy-paste first-contact reply for pushed leads (Gemini only; a few

@@ -62,6 +62,12 @@ jobs:
         env:
           LLM_BACKEND: gemini
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Without this the cloud could FIND leads but not score them (no
+          # Ollama on a runner, Gemini's free tier dead most of the day), so
+          # everything waited up to 2h for cloud_sync to carry it home. With it
+          # the cloud scores and pushes to Telegram the moment it finds
+          # something - the single biggest delay removed.
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           IMAP_USER: ${{ secrets.IMAP_USER }}

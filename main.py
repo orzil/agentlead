@@ -151,6 +151,13 @@ def job_telegram(conn) -> None:
     pipeline.ingest_many(conn, telegram_fetcher.fetch(), "telegram")
 
 
+def job_feedback(conn) -> None:
+    """Read Or's one-word Telegram replies and act on them. This is the only
+    channel through which his judgement reaches the code permanently."""
+    import feedback
+    feedback.poll(conn)
+
+
 def job_cloud_sync(conn) -> None:
     """Pull leads the CLOUD found into the local DB, then score them.
 
@@ -192,10 +199,10 @@ def job_digest(conn) -> None:
 
 JOBS = [
     # (name, interval seconds, function)
-    ("email", 10 * 60, job_email),           # Facebook / Upwork / Wellfound / LinkedIn alerts
-    ("reddit", 20 * 60, job_reddit),         # 13 subs x 8s spacing ~= 2 min/run
-    ("reddit_search", 60 * 60, job_reddit_search),  # sitewide search, t=week window
-    ("linkedin", 3 * 3600, job_linkedin),    # guest endpoint; self-cools 6h on a bot-wall
+    ("email", 5 * 60, job_email),           # Facebook / Upwork / Wellfound / LinkedIn alerts
+    ("reddit", 10 * 60, job_reddit),         # 13 subs x 8s spacing ~= 2 min/run
+    ("reddit_search", 20 * 60, job_reddit_search),  # sitewide search, t=week window
+    ("linkedin", 90 * 60, job_linkedin),    # guest endpoint; self-cools 6h on a bot-wall
     ("hn", 60 * 60, job_hn),
     ("xplace", 2 * 3600, job_xplace),
     ("secrettlv", 2 * 3600, job_secrettlv),
@@ -207,11 +214,12 @@ JOBS = [
     ("jobboards", 3 * 3600, job_jobboards),    # arbeitnow + workingnomads + jobspresso
     ("jobicy", 4 * 3600, job_jobicy),          # remote AI/ML/data, has freelance/part-time flag
     ("remotive", 8 * 3600, job_remotive),      # rate-limited ~4/day, 24h-delayed
-    ("fbsearch", 3 * 3600, job_fbsearch),    # post permalinks from the search index
+    ("fbsearch", 45 * 60, job_fbsearch),    # post permalinks from the search index
     ("facebook", 8 * 3600, job_facebook),      # public groups; self-caps at 3 runs/day
     ("whatsapp_read", 15 * 60, job_whatsapp_read),  # dedicated-number reader (local, dormant until paired)
     ("whatsapp", 24 * 3600, job_whatsapp),     # mine invite links out of stored posts
-    ("cloud_sync", 2 * 3600, job_cloud_sync),   # pull cloud-found leads home
+    ("feedback", 5 * 60, job_feedback),        # one-word verdicts from the phone
+    ("cloud_sync", 20 * 60, job_cloud_sync),   # pull cloud-found leads home
     ("linkcheck", 6 * 3600, job_linkcheck),   # drop leads whose posting died
     ("digest", 10 * 60, job_digest),
 ]
