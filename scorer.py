@@ -195,6 +195,31 @@ def _pick_gemini_model() -> str:
     return _chosen_gemini_model
 
 
+def _post_language(text: str) -> str:
+    """Which language should the reply be in - Hebrew or English, never another.
+
+    Asking a model to "match the post's language" is unreliable: it answered a
+    Vietnamese robotics post in English. Naming the language explicitly fixes
+    that, but only these two are ever named, for a reason that matters more than
+    politeness - Or speaks Hebrew and English. A pitch in a third language is
+    text he cannot proofread before sending, and the free model got it wrong in
+    exactly that way: its Vietnamese reply said "I'm currently having difficulty
+    with multi-camera pipelines", advertising the problem as HIS.
+
+    A confident English reply to a Vietnamese post is fine here: these are
+    technical clients hiring remotely, and that post already used English terms
+    throughout ("Computer Vision Engineer", "freelance remote").
+    """
+    return "Hebrew" if re.search(r"[֐-׿]", text or "") else "English"
+
+
+def _pitch_user_prompt(lead: Lead) -> str:
+    lang = _post_language(lead.raw_text)
+    return (f"{_lead_prompt(lead)}\n\n"
+            f"WRITE YOUR REPLY IN {lang.upper()}. The poster wrote in {lang}, "
+            f"so a reply in any other language will be ignored.")
+
+
 def _lead_prompt(lead: Lead) -> str:
     posted = lead.posted_at.strftime("%Y-%m-%d") if lead.posted_at else "unknown"
     return (
@@ -482,7 +507,7 @@ def _pitch_ollama(lead: Lead) -> str | None:
                 "options": {"temperature": 0.5},
                 "messages": [
                     {"role": "system", "content": PITCH_PROMPT},
-                    {"role": "user", "content": _lead_prompt(lead)},
+                    {"role": "user", "content": _pitch_user_prompt(lead)},
                 ],
             }, timeout=300)
         r.raise_for_status()
@@ -526,7 +551,7 @@ def draft_pitch(lead: Lead) -> str | None:
             model = _pick_gemini_model()
             body = {
                 "systemInstruction": {"parts": [{"text": PITCH_PROMPT}]},
-                "contents": [{"role": "user", "parts": [{"text": _lead_prompt(lead)}]}],
+                "contents": [{"role": "user", "parts": [{"text": _pitch_user_prompt(lead)}]}],
                 "generationConfig": {
                     "responseMimeType": "application/json",
                     "responseSchema": PITCH_SCHEMA,   # forces message-only output
@@ -535,8 +560,10 @@ def draft_pitch(lead: Lead) -> str | None:
             _throttle()
             r = httpx.post(f"{_GEMINI_BASE}/models/{model}:generateContent",
                            params={"key": config.GEMINI_API_KEY}, json=body, timeout=60)
-            if r.status_code == 429 and _is_daily_quota_error(r):
-                globals()["_daily_quota_exhausted"] = True
+            if r.status_code == 429:
+                if _is_daily_quota_error(r):
+                    globals()["_daily_quota_exhausted"] = True
+                log.info("gemini quota gone - pitch falls through to the chain")
             else:
                 r.raise_for_status()
                 raw = json.loads(
@@ -548,7 +575,7 @@ def draft_pitch(lead: Lead) -> str | None:
     # than qwen2.5:7b, which produced mixed-script garbage on the Hebrew leads.
     if raw is None:
         for p in config.active_providers():
-            out = _openai_chat(p, PITCH_PROMPT, _lead_prompt(lead),
+            out = _openai_chat(p, PITCH_PROMPT, _pitch_user_prompt(lead),
                                max_tokens=700, temperature=0.5)
             if not out:
                 continue
