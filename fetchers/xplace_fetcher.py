@@ -15,7 +15,14 @@ import config
 from models import Lead
 
 log = logging.getLogger("xplace")
-API = "https://www.xplace.com/rest/public/browse/projects"
+# The site moved the endpoint under /il/ (measured 2026-08-10: the bare
+# /rest/... path now 302s to the homepage, which surfaced as a daily error
+# alert). Both are tried, newest first, so another move degrades to a warning
+# instead of breaking the job.
+API_CANDIDATES = [
+    "https://www.xplace.com/il/rest/public/browse/projects",
+    "https://www.xplace.com/rest/public/browse/projects",
+]
 # Note: the endpoint ignores its page parameter and always returns the 25
 # newest projects - which is exactly what we want at a 2-hour poll cadence.
 
@@ -28,13 +35,32 @@ def fetch() -> list[Lead]:
         "Referer": "https://www.xplace.com/il/jobs",
     }
     with httpx.Client(timeout=30, headers=headers) as client:
-        r = client.get(API, params={"projectFsp_pageIndex": 0})
-        r.raise_for_status()
-        try:
-            payload = r.json().get("responsePayload", {})
-        except ValueError:  # transient non-JSON response (maintenance page etc.)
-            log.warning("X-Place returned non-JSON (%d bytes); skipping this run",
-                        len(r.content))
+        payload = None
+        for api in API_CANDIDATES:
+            try:
+                # follow_redirects stays OFF: a 302 to the homepage is how a
+                # dead endpoint announces itself, and following it would just
+                # hand us HTML to fail on later.
+                r = client.get(api, params={"projectFsp_pageIndex": 0},
+                               follow_redirects=False)
+            except Exception as e:
+                log.info("X-Place %s failed: %s", api, str(e)[:60])
+                continue
+            if r.status_code in (301, 302, 307, 308):
+                log.info("X-Place %s redirects to %s - trying the next path",
+                         api, r.headers.get("location", "?")[:40])
+                continue
+            if r.status_code != 200:
+                log.info("X-Place %s -> HTTP %s", api, r.status_code)
+                continue
+            try:
+                payload = r.json().get("responsePayload", {})
+                break
+            except ValueError:  # maintenance page etc.
+                log.warning("X-Place returned non-JSON (%d bytes)", len(r.content))
+                continue
+        if payload is None:
+            log.warning("X-Place: no endpoint responded with JSON; skipping this run")
             return []
         for p in payload.get("browseSearchFoundProjects", []):
             if p.get("foundProjectIsActive") is False:

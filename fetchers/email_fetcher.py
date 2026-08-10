@@ -23,7 +23,7 @@ import logging
 import re
 import sqlite3
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from urllib.parse import urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
