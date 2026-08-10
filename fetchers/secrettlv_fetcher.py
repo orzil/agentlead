@@ -21,6 +21,24 @@ log = logging.getLogger("secrettlv")
 BOARD = "https://jobs.secrettelaviv.com/"
 MAX_DETAIL_FETCHES = 10  # politeness cap per run
 
+# The board sits behind a WAF that intermittently 403s. Measured 2026-08-10: the
+# same request that alerted Or returned 200 minutes later, and a request with NO
+# User-Agent gets a permanent 403 - so it inspects headers. Sending a full
+# browser header set makes the block much rarer; treating a block as "skip this
+# run" rather than an exception is what stops it waking him up. There is no REST
+# API to fall back to (checked all 754 wp-json routes; jobs are not exposed).
+BROWSER_HEADERS = {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9,he;q=0.8",
+    "Referer": "https://www.secrettelaviv.com/",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-site",
+}
+# Upstream said no. That is not a bug in this agent, so it must not page anyone.
+_TRANSIENT = (403, 429, 500, 502, 503, 504)
+
 
 def _detail_text(client: httpx.Client, url: str) -> str:
     try:
@@ -37,9 +55,13 @@ def _detail_text(client: httpx.Client, url: str) -> str:
 
 def fetch() -> list[Lead]:
     leads: list[Lead] = []
-    headers = {"User-Agent": config.USER_AGENT}
+    headers = {"User-Agent": config.USER_AGENT, **BROWSER_HEADERS}
     with httpx.Client(timeout=30, headers=headers, follow_redirects=True) as client:
         r = client.get(BOARD)
+        if r.status_code in _TRANSIENT:
+            log.warning("secrettlv returned HTTP %s - WAF block, skipping this run",
+                        r.status_code)
+            return []
         r.raise_for_status()
         soup = BeautifulSoup(r.text, "html.parser")
 
