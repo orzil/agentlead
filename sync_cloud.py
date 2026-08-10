@@ -88,6 +88,31 @@ def merge(cloud_path: str) -> dict:
     return {"leads_added": added, "already_had": skipped, "groups_added": groups}
 
 
+def run_once() -> dict:
+    """Scheduler entry point: sync, then score whatever arrived.
+
+    Returns {} rather than raising when gh is missing or no artifact exists -
+    this runs every 2 hours and must never be the reason the loop dies.
+    """
+    tmp = tempfile.mkdtemp(prefix="agentlead_cloud_")
+    try:
+        path = _newest_artifact(tmp)
+        if not path:
+            return {}
+        stats = merge(path)
+    except Exception as e:
+        print("cloud sync failed:", str(e)[:120])
+        return {}
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+    if stats.get("leads_added"):
+        # score them here, where Ollama is free and unlimited - the whole point
+        # of bringing them home. Pushes for >=8 fire from score_backlog.
+        import main as m
+        m.score_backlog(db.connect(), min(stats["leads_added"], 300))
+    return stats
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Pull cloud-found leads into the local DB")
     ap.add_argument("--score", nargs="?", const=200, type=int, metavar="N",

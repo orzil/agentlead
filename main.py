@@ -151,6 +151,21 @@ def job_telegram(conn) -> None:
     pipeline.ingest_many(conn, telegram_fetcher.fetch(), "telegram")
 
 
+def job_cloud_sync(conn) -> None:
+    """Pull leads the CLOUD found into the local DB, then score them.
+
+    The cloud keeps leads.db in the Actions cache - a different database from
+    this one - and it cannot score (no Ollama on runners, Gemini's free tier
+    dies after ~20 calls). Without this job those leads pile up unseen: 1,560
+    were stranded before it existed. Runs locally only; no-ops without gh.
+    """
+    import sync_cloud
+
+    stats = sync_cloud.run_once()
+    if stats and stats.get("leads_added"):
+        log.info("cloud sync: %s", stats)
+
+
 def job_linkcheck(conn) -> None:
     """Verify the leads the user is about to act on are still live. Age alone is
     a poor proxy: boards pull postings early and community threads stay open
@@ -196,6 +211,7 @@ JOBS = [
     ("facebook", 8 * 3600, job_facebook),      # public groups; self-caps at 3 runs/day
     ("whatsapp_read", 15 * 60, job_whatsapp_read),  # dedicated-number reader (local, dormant until paired)
     ("whatsapp", 24 * 3600, job_whatsapp),     # mine invite links out of stored posts
+    ("cloud_sync", 2 * 3600, job_cloud_sync),   # pull cloud-found leads home
     ("linkcheck", 6 * 3600, job_linkcheck),   # drop leads whose posting died
     ("digest", 10 * 60, job_digest),
 ]
