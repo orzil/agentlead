@@ -273,6 +273,9 @@ def score_backlog(conn, limit: int) -> None:
         if score is None:
             print("no LLM backend configured - set GEMINI_API_KEY first")
             return
+        import freshness
+        score, _ = freshness.apply(score, row["posted_at"], row["raw_text"],
+                                   row["fetched_at"])
         fetched = None
         try:
             fetched = datetime.fromisoformat(row["fetched_at"])

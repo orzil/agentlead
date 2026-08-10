@@ -9,6 +9,7 @@ import sqlite3
 
 import config
 import db
+import freshness
 import notifier
 import prefilter
 import scorer
@@ -50,6 +51,11 @@ def ingest(conn: sqlite3.Connection, lead: Lead) -> str:
     if score is None:  # no LLM backend configured -> store for later
         db.set_status(conn, lead_id, "scored")
         return "stored_unscored"
+
+    # Age is applied here, not in the rubric: the model rarely knows the date
+    # because posts seldom state it, while the fetcher always does. A month-old
+    # gig is usually filled and must not sit at the top of the table.
+    score, _days = freshness.apply(score, lead.posted_at, lead.raw_text)
 
     if score.score >= config.PUSH_THRESHOLD:
         db.save_score(conn, lead_id, score, "scored")
