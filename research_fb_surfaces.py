@@ -115,6 +115,8 @@ def main() -> None:
     print(json.dumps({"results": out}, indent=1)[:400])
     winners = sorted({r["surface"] for r in out if r.get("content")})
     print("\nSURFACES THAT SERVED CONTENT:", winners or "NONE")
+    test_search_index()
+    check_reddit_account()
 
 
 if __name__ == "__main__":
