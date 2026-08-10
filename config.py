@@ -73,6 +73,45 @@ LLM_FALLBACK_OLLAMA = env("LLM_FALLBACK_OLLAMA", "1") in ("1", "true", "yes")
 # the one thing Or actually pastes to a client, so it gets the better model.
 GEMINI_RESERVE_FOR_PITCH = env("GEMINI_RESERVE_FOR_PITCH", "1") in ("1", "true", "yes")
 
+# --- Extra free LLM providers -------------------------------------------------
+# Gemini's free tier is ~20 calls/day, which is not enough on its own. Probed
+# 2026-08-10: Groq, Cerebras, OpenRouter, Mistral, Together and HuggingFace are
+# ALL OpenAI-compatible, so one adapter reaches every one of them and the chain
+# simply moves on when a provider's quota runs out.
+#
+# Order is deliberate - quality first, since these are used for the PITCH (the
+# text Or actually sends someone) and for scoring only when Ollama is down:
+#   openrouter : free tier includes nvidia/nemotron-3-ultra-550b (1M context) and
+#                gemma-4-31b. Strongest free models found, no card required.
+#   groq       : smaller models but very fast and a generous daily allowance.
+#   cerebras   : same idea, another independent quota.
+# Each entry activates only when its key is present, so an unconfigured provider
+# costs nothing and is skipped silently.
+LLM_PROVIDERS = [
+    {
+        "name": "openrouter",
+        "base": "https://openrouter.ai/api/v1",
+        "key": env("OPENROUTER_API_KEY"),
+        "model": env("OPENROUTER_MODEL", "nvidia/nemotron-3-ultra-550b-a55b:free"),
+    },
+    {
+        "name": "groq",
+        "base": "https://api.groq.com/openai/v1",
+        "key": env("GROQ_API_KEY"),
+        "model": env("GROQ_MODEL", "llama-3.3-70b-versatile"),
+    },
+    {
+        "name": "cerebras",
+        "base": "https://api.cerebras.ai/v1",
+        "key": env("CEREBRAS_API_KEY"),
+        "model": env("CEREBRAS_MODEL", "llama-3.3-70b"),
+    },
+]
+
+
+def active_providers() -> list[dict]:
+    return [p for p in LLM_PROVIDERS if p.get("key")]
+
 # --- Reddit -----------------------------------------------------------------
 REDDIT_CLIENT_ID = env("REDDIT_CLIENT_ID")
 REDDIT_CLIENT_SECRET = env("REDDIT_CLIENT_SECRET")

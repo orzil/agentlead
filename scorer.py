@@ -239,6 +239,59 @@ def _score_gemini(lead: Lead) -> LeadScore | None:
     raise RuntimeError("gemini scoring failed after retries")
 
 
+def _openai_chat(provider: dict, system: str, user: str,
+                 json_mode: bool = True, max_tokens: int = 1024,
+                 temperature: float = 0.2) -> str | None:
+    """One call to any OpenAI-compatible provider.
+
+    Groq, Cerebras, OpenRouter, Mistral, Together and HuggingFace all speak this
+    shape, so a single adapter reaches every free tier going - and when one
+    exhausts its quota the chain simply moves to the next. Returns the raw
+    content string, or None so the caller can try the next provider.
+    """
+    body = {
+        "model": provider["model"],
+        "messages": [{"role": "system", "content": system},
+                     {"role": "user", "content": user}],
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+    }
+    if json_mode:
+        body["response_format"] = {"type": "json_object"}
+    try:
+        r = httpx.post(f"{provider['base']}/chat/completions",
+                       headers={"Authorization": f"Bearer {provider['key']}",
+                                "Content-Type": "application/json"},
+                       json=body, timeout=90)
+        if r.status_code in (401, 403):
+            log.warning("%s rejected the key", provider["name"])
+            return None
+        if r.status_code == 429:
+            log.info("%s rate-limited/quota gone - trying the next provider",
+                     provider["name"])
+            return None
+        r.raise_for_status()
+        return r.json()["choices"][0]["message"]["content"]
+    except Exception as e:
+        log.info("%s failed: %s", provider["name"], str(e)[:90])
+        return None
+
+
+def _score_via_providers(lead: Lead) -> LeadScore | None:
+    """Walk the free-provider chain until one returns a usable score."""
+    schema_hint = (SYSTEM_PROMPT + "\n\nRespond with ONLY the JSON object, "
+                   "no prose before or after.")
+    for p in config.active_providers():
+        raw = _openai_chat(p, schema_hint, _lead_prompt(lead))
+        if not raw:
+            continue
+        try:
+            return LeadScore.from_dict(json.loads(raw))
+        except (json.JSONDecodeError, KeyError, TypeError) as e:
+            log.info("%s returned unparseable JSON: %s", p["name"], str(e)[:60])
+    return None
+
+
 def _score_ollama(lead: Lead) -> LeadScore:
     r = httpx.post(
         f"{config.OLLAMA_URL}/api/chat",
@@ -301,12 +354,15 @@ def score_lead(lead: Lead) -> LeadScore | None:
             if score is not None:
                 return score
             # fall through: the call above just flagged the daily quota as gone
+        via = _score_via_providers(lead)      # other free tiers, if configured
+        if via is not None:
+            return via
         if config.LLM_FALLBACK_OLLAMA:
             return _score_ollama_safe(lead)
         return None        # store unscored; --score-backlog picks it up tomorrow
     if backend == "ollama":
-        return _score_ollama_safe(lead)
-    return None
+        return _score_ollama_safe(lead) or _score_via_providers(lead)
+    return _score_via_providers(lead)
 
 
 def generate(system: str, user: str, *, schema: dict | None = None,
@@ -487,6 +543,22 @@ def draft_pitch(lead: Lead) -> str | None:
                     r.json()["candidates"][0]["content"]["parts"][0]["text"]).get("message")
         except Exception as e:
             log.warning("gemini pitch failed: %s", str(e)[:90])
+    # Free cloud providers before the local 7B: a pitch is the one piece of text
+    # Or actually sends a stranger, and a 550B model writes a visibly better one
+    # than qwen2.5:7b, which produced mixed-script garbage on the Hebrew leads.
+    if raw is None:
+        for p in config.active_providers():
+            out = _openai_chat(p, PITCH_PROMPT, _lead_prompt(lead),
+                               max_tokens=700, temperature=0.5)
+            if not out:
+                continue
+            try:
+                raw = json.loads(out).get("message")
+            except json.JSONDecodeError:
+                raw = out          # provider ignored json_mode; use it verbatim
+            if _clean_pitch(raw):
+                break
+            raw = None
     if raw is None and config.LLM_FALLBACK_OLLAMA:
         raw = _pitch_ollama(lead)
     return _clean_pitch(raw)
