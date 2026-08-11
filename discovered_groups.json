@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-11T20:06:59+00:00",
- "count": 305,
+ "generated": "2026-08-11T21:06:06+00:00",
+ "count": 307,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -90,6 +90,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "datin1",
+   "name": "GoHighLevel Experts & Agency Owners | Automation, Clients & Scaling",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-11T21:06:06+00:00",
    "last_checked": null
   },
   {
@@ -1260,6 +1275,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "highlevelagencyowner",
+   "name": "GoHighLevel Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-11T21:06:06+00:00",
    "last_checked": null
   },
   {
