@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-11T17:59:28+00:00",
- "count": 303,
+ "generated": "2026-08-11T19:15:10+00:00",
+ "count": 305,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -615,6 +615,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2044902829088090",
+   "name": "Scaling SaaS Founders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-11T19:15:10+00:00",
    "last_checked": null
   },
   {
@@ -1425,6 +1440,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:01:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasfoundershub",
+   "name": "SaaS Founders Hub",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-11T19:15:10+00:00",
    "last_checked": null
   },
   {
