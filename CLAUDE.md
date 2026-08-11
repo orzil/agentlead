@@ -174,6 +174,42 @@ dropped 2026-08-06 (bid floods, budgets below rate). Safety rails are load-beari
 (UNIQUE on `replies.lead_id`), `REPLY_DAILY_CAP`/day, senders no-op when credentials are missing. `notifier.py` falls back to `outbox.log` when Telegram is unconfigured
 so nothing is lost.
 
+## Speed is a feature
+
+Or competes for these leads: *"any time there is something relevant I want to know
+about it, there is big competition and we need to be fast."* So `PUSH_THRESHOLD=6`
+(a 7 used to wait for the daily digest while rivals replied), email polls every
+5 min, Reddit 10, `cloud_sync` 20. The cloud scores and pushes **directly** now
+that `OPENROUTER_API_KEY` is in its secrets — before that, cloud finds waited up
+to 2h to come home. Don't slow these back down without a measured reason.
+
+## Feedback: one word from the phone
+
+Or replies to a lead's Telegram message with `good` / `applied` / `fulltime` /
+`old` / `spam` / `seeker` / `lowpay`, or `less`/`more` to retune the push
+threshold live. `feedback.py` maps the reply back via the `lead_messages` table
+(which is why `notifier._send_raw` returns a **message_id**, not a bool),
+records the verdict, and appends to `eval_cases.json`. **`test_gate.py` runs
+those cases plus the built-in ones — run it after touching any gate rule.** It
+tests both directions on purpose: a gate that rejects everything would score
+100% on rejections alone.
+
+## What the gate audit found (2026-08-10)
+
+`audit_gate.py` re-scored 2,271 recent rejections blind to the gate's verdict —
+the first real accuracy number this project has had:
+
+| gate | checked | false negatives |
+|---|---:|---:|
+| `full_time` | 1,190 | **0.0%** |
+| `offtopic` | 701 | **2.0%** ← the only real over-killer |
+| everything else | ~380 | 0–4% |
+
+So the gate is honest, and `offtopic` is where recall is lost — its keyword lists
+are the thing to widen when leads seem thin (it missed YOLO/OpenCV until
+2026-08-09). 14 leads were resurrected. Re-run the audit after changing gate
+rules rather than guessing.
+
 ## config.py — the tuning surface
 
 Nearly all behavior is data in `config.py`, loaded from `.env` via a minimal built-in loader

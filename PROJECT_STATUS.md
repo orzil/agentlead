@@ -248,6 +248,40 @@ the push, sorted after Israel in the detail-fetch priority. 9 → 17 queries/run
   Verified: a Hebrew CV post scored 8/10 in 8.8s locally, budget + work_type parsed correctly.
   Also dropped `gemini-2.5-flash` (now closed to new users) from the preference list.
 
+## Session 2026-08-10/11 — speed, feedback, and the first accuracy number
+
+**Speed.** `PUSH_THRESHOLD` 8 → **6**: at 8 a score-7 never reached the phone, and
+the $100–150/hr Tel Aviv CV contract sat waiting for a digest. Polls tightened
+(email 5 min, reddit 10, fbsearch 45, cloud_sync 20). The cloud now **scores and
+pushes directly** — `OPENROUTER_API_KEY` reached its secrets, removing the ~2h
+wait for `cloud_sync`.
+
+**Feedback loop.** One-word Telegram replies (`good`/`fulltime`/`old`/`lowpay`/…,
+plus `less`/`more` to retune volume) are recorded against the lead and appended
+to `eval_cases.json`. `notifier._send_raw` returns a message_id now; the
+`lead_messages` table maps replies back. Every accuracy fix until now came from
+Or catching something and explaining it in chat, then being forgotten.
+
+**`test_gate.py` — 15/15.** Every lead he rejected, plus the YOLO POC he liked,
+which must still pass.
+
+**Gate audit — the headline result.** 2,271 recent rejections re-scored blind:
+`full_time` **0.0%** false negatives over 1,190 leads, `offtopic` **2.0%**,
+everything else 0–4%. The gate is accurate; **`offtopic` is the only real
+over-killer**, which matches it having missed YOLO/OpenCV until 2026-08-09.
+**14 leads resurrected**, visible ≥6 went 15 → 29. Best recovery: an 8/10
+EU/Ireland GenAI role killed as offtopic.
+
+**Also fixed:** LinkedIn-alert enrichment crashed the whole email job with a
+missing `timezone` import (the channel was dead for a day); X-Place moved its
+endpoint under `/il/`; secrettlv's WAF 403s now skip the run instead of paging;
+pitches rewritten (short, question-ending, Hebrew-or-English only, never an
+invented credential) after the model emitted its own checklist to Or.
+
+**Open for next session:** Reddit reply credentials (built, guarded, idle);
+WhatsApp second number (built, dormant); `offtopic` keyword widening per the
+audit; 🔔 All posts on the newly joined Facebook groups.
+
 ## Session 2026-08-08 (night) — worldwide client-side group discovery
 
 **Why US/UK produced nothing** — answered, and it was our fault, not the market's. The 16 Israeli
