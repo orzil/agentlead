@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-12T03:36:16+00:00",
- "count": 317,
+ "generated": "2026-08-12T17:59:01+00:00",
+ "count": 326,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -15,6 +15,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1461801731341539",
+   "name": "AI Automation Agency - Network & Hiring",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T17:59:00+00:00",
    "last_checked": null
   },
   {
@@ -168,6 +183,21 @@
    "last_checked": null
   },
   {
+   "slug": "148693034913710",
+   "name": "Ai Automation Agency",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T17:59:00+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1527705608867878",
    "name": "HighLevel Agency Owners & Automation Community",
    "status": "pending",
@@ -288,6 +318,36 @@
    "last_checked": null
   },
   {
+   "slug": "670629268019461",
+   "name": "AI Automation Agency - AAA",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T17:59:00+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "676763367129189",
+   "name": "AI Automation Agency",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T17:59:00+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "738857980085389",
    "name": "עבודה מהבית, פרילנסרים דרושים ומציעים",
    "status": "pending",
@@ -345,6 +405,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aiautomationagencyhub",
+   "name": "AI Automation Agency Hub",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T17:59:00+00:00",
    "last_checked": null
   },
   {
@@ -2703,6 +2778,21 @@
    "last_checked": null
   },
   {
+   "slug": "glidecommunity",
+   "name": "Glide Apps: No-Code AI-Driven Solutions and Custom Software with ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T12:28:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "israel.hitech.jobs",
    "name": "משרות מחברות היי-טק בישראל",
    "status": "pending",
@@ -3270,6 +3360,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T09:16:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1636991833121307",
+   "name": "No Code Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T12:28:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1661983438866806",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T07:14:42+00:00",
    "last_checked": null
   },
   {
@@ -3841,6 +3961,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:33:29+00:00",
    "last_checked": "2026-08-08T08:52:40+00:00"
+  },
+  {
+   "slug": "595424764221375",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T17:41:21+00:00",
+   "last_checked": null
   },
   {
    "slug": "640514310704403",

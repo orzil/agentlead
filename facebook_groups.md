@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-12T03:36:16+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-12T17:59:01+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,10 +55,11 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (281)
+## Not yet probed (290)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
+- `1461801731341539` (found via ddg)
 - `ai.ireland.community` (found via ddg)
 - `facebook.comgroupsaiforsmallbusinessowners` (found via ddg)
 - `aiforsmallbusinessgrowth` (found via ddg)
@@ -69,7 +70,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startups.investors.entrepreneurs.mentors.founders` (found via ddg)
 - `289504808119115` (found via ddg)
 - `2004638959986462` (found via ddg)
+- `676763367129189` (found via ddg)
+- `670629268019461` (found via ddg)
+- `aiautomationagencyhub` (found via ddg)
 - `1182155486119040` (found via ddg)
+- `148693034913710` (found via ddg)
 - `aibizgrowth` (found via ddg)
 - `203443828052088` (found via ddg)
 - `872702652095435` (found via ddg)
@@ -197,6 +202,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `FounderNation` (found via ddg)
 - `290592000669370` (found via ddg)
 - `findingsuvfounders` (found via ddg)
+- `glidecommunity` (found via ddg)
 - `1100802378915693` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `businessowneraustralia` (found via ddg)
@@ -323,12 +329,15 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `196799535583425` (found via leads_db)
 - `talkingautomation` (found via leads_db)
 - `aisaas` (found via leads_db)
+- `1661983438866806` (found via leads_db)
+- `595424764221375` (found via leads_db)
 - `businessnetworkingnewzealand` (found via ddg)
 - `Dubaiexpat` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
 - `640514310704403` (found via ddg)
 - `StartupIreland` (found via ddg)
 - `businessnz` (found via ddg)
+- `1636991833121307` (found via ddg)
 - `131710772378400` (found via ddg)
 - `southafricanbusiness` (found via ddg)
 - `827453710776253` (found via ddg)
