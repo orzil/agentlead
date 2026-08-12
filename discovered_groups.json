@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-12T19:16:06+00:00",
- "count": 327,
+ "generated": "2026-08-12T20:07:06+00:00",
+ "count": 329,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -645,6 +645,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:00:26+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1687564885295993",
+   "name": "AI Agents & Automation Community",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T20:07:05+00:00",
    "last_checked": null
   },
   {
@@ -2115,6 +2130,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T09:19:10+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "26811208895132205",
+   "name": "Automation legends (openclaw n8n make ghl and all adapting agents)",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T20:07:05+00:00",
    "last_checked": null
   },
   {
