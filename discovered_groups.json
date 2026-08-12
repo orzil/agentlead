@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-12T01:24:33+00:00",
- "count": 311,
+ "generated": "2026-08-12T03:36:16+00:00",
+ "count": 317,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -270,6 +270,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "626660935015474",
+   "name": "Small Business Owners and Entrepreneurs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T03:36:15+00:00",
    "last_checked": null
   },
   {
@@ -1218,6 +1233,21 @@
    "last_checked": null
   },
   {
+   "slug": "entrepreneursandbusinessownerscalifornia",
+   "name": "Entrepreneurs & Business Owners California",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T03:36:15+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "entrepreneursstartup",
    "name": "Entrepreneurs Startup",
    "status": "pending",
@@ -1530,6 +1560,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T03:54:49+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "sfenetworks",
+   "name": "San Francisco and Bay Area Entrepreneurs and Startup Network",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T03:36:15+00:00",
    "last_checked": null
   },
   {
@@ -1890,6 +1935,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1703575773378057",
+   "name": "Small Business Funding And Resources",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T03:36:15+00:00",
    "last_checked": null
   },
   {
@@ -2550,6 +2610,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "entrepreneursletsbuildtogether",
+   "name": "Entrepreneurs - Lets build together",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T03:36:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "entrepreneursnetworkingco",
+   "name": "Entrepreneurs Networking Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T03:36:15+00:00",
    "last_checked": null
   },
   {
