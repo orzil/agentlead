@@ -10,9 +10,19 @@ OCR, image processing, ML, algorithms, data viz, and AI-integrated web, filters 
 regex gate + free-tier LLM scoring (1–10), pushes strong leads to Telegram, and can auto-reply
 on Reddit — the only remaining channel with a legitimate posting API.
 
-It runs on **GitHub Actions** (repo `orzil/agentlead`, private): `leadagent.yml` 4×/day and
-`fbgroups.yml` weekly. `leads.db` lives in the Actions cache, never in git. Anything that
-touches Facebook or a search engine **must run in the cloud** — see the IP rules below.
+It runs on **GitHub Actions** (repo `orzil/agentlead`, **public** — flipped 2026-08-06 for free
+minutes, so *nothing* containing lead data may be committed or printed to a workflow log):
+`leadagent.yml` 7×/day incl. 4 overnight passes, `fbnight.yml` every 15 min 20:00–08:00 IL,
+`morning.yml` at 07:25 IL, `fbgroups.yml` weekly. `leads.db` lives in the Actions cache, never
+in git. Anything that touches Facebook or a search engine **must run in the cloud** — see the
+IP rules below.
+
+**The cloud pass is timing-constrained, and the order of `JOBS` decides what survives.** On a
+GitHub IP `reddit` costs 13–17 min (Reddit 429s nearly every sub; the 20s/40s backoff fires ~11
+of 13 times) and `linkedin` another 5–7, while the ~15 jobs after it cost ~7 min combined. At
+`timeout-minutes: 30` two of every three runs were cancelled mid-pass and lost that entire cheap
+tail (measured 2026-08-13); it is 50 now. If you add a slow fetcher, put it **after** the cheap
+ones or split the pass with `--only`/`--skip`.
 
 **Scoring is a hybrid** (`scorer.py`): Gemini free tier first, then **local Ollama**
 (`qwen2.5:7b`) once Gemini's daily quota dies. Measured 2026-08-06: that quota is ~20 requests/day
@@ -42,6 +52,8 @@ python -X utf8 main.py --score-backlog [N]   # score up to N (default 300) store
 python -X utf8 main.py --regate              # re-run the (stricter) keyword gate over candidates
 python -X utf8 main.py --export-html leads.html --min-score 8   # filterable dashboard
 python -X utf8 main.py --export-csv leads.csv --min-score 8     # UTF-8-BOM CSV (Excel Hebrew)
+python -X utf8 main.py --morning-report --hours 14 --notify     # night's leads as a md table
+python -X utf8 main.py --once --only aijobs,telegram            # partial pass (also --skip)
 python -X utf8 main.py --reply-test 541      # dry-run a drafted reply for lead 541
 python -X utf8 main.py --replies             # list pending/failed/sent auto-replies
 python -X utf8 main.py --approve-reply 3     # approve+send one reply (or 'all')

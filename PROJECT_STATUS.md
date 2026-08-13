@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-08-06 (end of session)*
+*Last updated: 2026-08-13 (end of session)*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -281,6 +281,63 @@ invented credential) after the model emitted its own checklist to Or.
 **Open for next session:** Reddit reply credentials (built, guarded, idle);
 WhatsApp second number (built, dormant); `offtopic` keyword widening per the
 audit; 🔔 All posts on the newly joined Facebook groups.
+
+## Session 2026-08-13 — the cloud pass was being killed mid-run
+
+**The finding: 2 of the last 3 scheduled cloud runs were cancelled at exactly
+30:00** — `timeout-minutes: 30`, not a queue problem. `run_once` walks `JOBS`
+in order, and on a GitHub IP the front of that list is far more expensive than
+it is locally:
+
+| job | cloud cost | why |
+|---|---|---|
+| `email` | ~2 min | |
+| `reddit` | **13–17 min** | Reddit 429s nearly every sub from a datacenter IP, so the 20s/40s backoff fires ~11 of 13 times |
+| `reddit_search` | 2–5 min | same |
+| `linkedin` | 5–7 min | |
+| everything else (~15 jobs) | **~7 min total** | cheap |
+
+So the pass finished only when Reddit behaved. When it didn't, **every source
+after `linkedin` was lost** — aijobs, companies, telegram, weworkremotely,
+jobboards, jobicy, remotive, fbsearch, whatsapp, feedback, linkcheck. Not a
+slow degradation; a clean cut at 30:00. The tail is the cheap part — the
+variance is all upstream, which is why raising the ceiling fixes it rather
+than trimming sources.
+
+- **`timeout-minutes` 30 → 50.**
+- **Night cadence**: full passes added at 23:17 / 01:17 / 03:17 UTC on top of
+  the existing 21:17 → 00:17–06:17 Israel. US/CA clients post through their
+  working day, which is Or's night; he's asleep for all of it, so this is the
+  cheapest throughput on the board. Each pass blocks at most ~2 `fbnight`
+  slots (shared concurrency group), which is a good trade: `fbnight` finds
+  *groups*, the full pass finds *leads*.
+- **`fbnight` extended to 04:45 UTC** (06:00–07:59 Israel). It is the only
+  workflow that uploads `leads.db` as an artifact, so without a morning slot
+  everything the 03:17 and 05:17 passes find sits in the Actions cache until
+  the *next* night — `sync_cloud` would pull a snapshot from 02:45 UTC.
+- **`morning.yml`** at 04:25 UTC (07:25 IL) → `--morning-report --notify`.
+
+**`--morning-report [PATH] --hours N` (new)** — markdown table of everything
+found in the window, score-ordered, unscored last (the cloud's LLM budget can
+die mid-night and a gate-passed unscored lead is still worth an eyeball).
+Also `--only`/`--skip` for `--once`, so a pass can be split across two
+workflows if the timeout ever bites again.
+
+**Delivery is Telegram only, and the report is gitignored.** The repo is
+public and the table is lead data — summaries, budgets, permalinks to real
+people's posts — the same reason `leads.html` and `*.csv` are already
+excluded. `morning.yml` prints the report's line count and never its content,
+because workflow logs on a public repo are public too.
+
+**⚠️ Pre-existing exposure, flagged not fixed:** `fbnight.yml` uploads the
+whole `leads.db` as a build artifact on a **public** repo, 3-day retention.
+`sync_cloud._newest_artifact` is built on that artifact, so removing it breaks
+the only path that brings cloud leads home — Or's call, not a silent change.
+
+**Also seen, not acted on:** `r/freelance_forhire` 404s after its backoff
+(dead or renamed — unverifiable from Or's IP, Reddit 403s it entirely); two
+leads/run die on `scoring failed: Unterminated string` (truncated LLM JSON,
+`status='error'`, 6 so far).
 
 ## Session 2026-08-08 (night) — worldwide client-side group discovery
 
