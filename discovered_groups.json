@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-13T22:04:24+00:00",
- "count": 341,
+ "generated": "2026-08-13T23:04:02+00:00",
+ "count": 343,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -5058,6 +5058,21 @@
    "last_checked": null
   },
   {
+   "slug": "southafricanbusinesses",
+   "name": "South African Businesses",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T23:04:01+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "talkingautomation",
    "name": null,
    "status": "pending",
@@ -5070,6 +5085,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-11T03:17:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "thesouthafricanbusinessnetwork",
+   "name": "The South African Business Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T23:04:01+00:00",
    "last_checked": null
   },
   {
