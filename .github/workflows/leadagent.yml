@@ -84,6 +84,12 @@ jobs:
           # the cloud scores and pushes to Telegram the moment it finds
           # something - the single biggest delay removed.
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # Not set yet - empty keys are filtered out by config.active_providers(),
+          # so these are inert until Or adds either secret. Both are genuinely
+          # free and far larger than OpenRouter's 50/day, which is the binding
+          # constraint on how much the cloud can score. See PROJECT_STATUS.md.
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           IMAP_USER: ${{ secrets.IMAP_USER }}
@@ -100,6 +106,32 @@ jobs:
           FB_GROUP_GAP_SECONDS: "90"
           FB_POSTS_PER_GROUP: "12"
         run: python -X utf8 main.py --once
+
+      # Mop up leads an EARLIER pass had to store unscored.
+      #
+      # The cloud's scoring budget is tiny and time-boxed, and nothing here ever
+      # re-visited a lead once it was stored unscored - so a lead found while the
+      # quota was dead stayed unscored in the Actions cache indefinitely, and an
+      # unscored lead is never pushed to Telegram no matter how good it is.
+      # Measured 2026-08-13: OpenRouter free tier is 50 requests/DAY (header
+      # x-ratelimit-limit: 50) resetting at 00:00 UTC, and Gemini's ~20/day
+      # resets around 07:00 UTC. So the 21:17 and 23:17 passes score nothing and
+      # the 01:17 / 03:17 passes have a fresh 50 to spend - this step is what
+      # lets them spend it on the night's earlier finds.
+      #
+      # Capped at 25 so one pass cannot eat the whole daily bucket: live scoring
+      # in the pass above has priority, and the next pass needs a share too.
+      - name: Score what earlier passes could not
+        if: always()
+        env:
+          LLM_BACKEND: gemini
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -X utf8 main.py --score-backlog 25 || true
 
       # Each run is a fresh IP, so it can afford its own 2 search queries on
       # top of the main pass - free extra throughput against the DDG wall.

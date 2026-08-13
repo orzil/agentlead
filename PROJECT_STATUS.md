@@ -334,6 +334,40 @@ whole `leads.db` as a build artifact on a **public** repo, 3-day retention.
 `sync_cloud._newest_artifact` is built on that artifact, so removing it breaks
 the only path that brings cloud leads home — Or's call, not a silent change.
 
+### The real ceiling is scoring, not finding (measured 2026-08-13)
+
+Fixing the timeout exposed the next constraint. In the cloud, **all three
+scoring backends were dead at once**: Ollama (no runner GPU, by design),
+Gemini (daily free tier, ~20 calls), and OpenRouter. The OpenRouter headers
+are unambiguous:
+
+```
+"Rate limit exceeded: free-models-per-day"
+x-ratelimit-limit: 50   x-ratelimit-remaining: 0
+x-ratelimit-reset: 1786665600000  -> 2026-08-14 00:00 UTC (03:00 IL)
+```
+
+**50 requests/day**, resetting at 00:00 UTC. Gemini's resets ~07:00 UTC. So the
+21:17 and 23:17 UTC passes cannot score at all, and only the 01:17 / 03:17 ones
+have budget. An unscored lead is **never pushed to Telegram**, so this — not
+source coverage — is what caps how many leads actually reach Or's phone.
+
+- **`_openai_chat` has no `_throttle()` call** (only the Gemini path does), so
+  the provider chain fired 10 calls in 5s and 429'd on all of them. Looked like
+  the bug; **it is not** — a probe with 8s of spacing still 429'd, and the
+  header says the daily bucket is empty. Throttling would not have helped.
+  Left alone deliberately: measured, not guessed.
+- **New workflow step `--score-backlog 25`** after each pass. Nothing ever
+  re-visited a lead once stored unscored, so a lead found while the quota was
+  dead stayed unscored forever. Now the post-reset passes spend their fresh 50
+  on the night's earlier finds. Capped at 25 so one pass can't eat the bucket.
+- **`GROQ_API_KEY` / `CEREBRAS_API_KEY` are already wired** into `config.
+  LLM_PROVIDERS` and into both workflow steps; `active_providers()` filters out
+  empty keys, so they are inert until the secrets exist. **This is the highest-
+  value 3-minute user action after the Gmail password** — Groq's free tier is
+  ~14k requests/day against OpenRouter's 50, which would end cloud unscoring
+  outright.
+
 **Also seen, not acted on:** `r/freelance_forhire` 404s after its backoff
 (dead or renamed — unverifiable from Or's IP, Reddit 403s it entirely); two
 leads/run die on `scoring failed: Unterminated string` (truncated LLM JSON,
