@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-13T17:59:29+00:00",
- "count": 332,
+ "generated": "2026-08-13T19:15:30+00:00",
+ "count": 335,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2568,6 +2568,21 @@
    "last_checked": null
   },
   {
+   "slug": "ScooterOwnersTechTalk",
+   "name": "Scooter owners tech talk | Facebook - Meta Business Suite",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T19:15:29+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "Singaporestartupclub",
    "name": "Singapore Start-Up Club - Web3 & AI Edition",
    "status": "pending",
@@ -3060,6 +3075,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbiz.au",
+   "name": "Australian Small Business Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T19:15:29+00:00",
    "last_checked": null
   },
   {
@@ -4500,6 +4530,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "arcsolutions",
+   "name": "ARC Business Solutions",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T19:15:29+00:00",
    "last_checked": null
   },
   {

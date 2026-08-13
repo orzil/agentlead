@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-13T17:59:29+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-13T19:15:30+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (296)
+## Not yet probed (299)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -190,6 +190,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `811045979419418` (found via ddg)
 - `464376085736538` (found via ddg)
 - `2259425897651792` (found via ddg)
+- `smallbiz.au` (found via ddg)
 - `aussbn` (found via ddg)
 - `26811208895132205` (found via ddg)
 - `bsbnetwork` (found via ddg)
@@ -220,6 +221,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `newzealandbusinessowners` (found via ddg)
 - `nzsmallbusinessnetwork` (found via ddg)
 - `789382672475266` (found via ddg)
+- `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
 - `singaporecofounders` (found via ddg)
 - `Singaporestartupclub` (found via ddg)
@@ -337,6 +339,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1661983438866806` (found via leads_db)
 - `595424764221375` (found via leads_db)
 - `2079238568790422` (found via leads_db)
+- `arcsolutions` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `Dubaiexpat` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
