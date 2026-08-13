@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-13T19:15:30+00:00",
- "count": 335,
+ "generated": "2026-08-13T20:05:12+00:00",
+ "count": 336,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -630,6 +630,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T23:34:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1639655452994166",
+   "name": "New Zealand Business Owners And Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T20:05:12+00:00",
    "last_checked": null
   },
   {
