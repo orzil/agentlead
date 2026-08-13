@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-13T21:05:03+00:00",
- "count": 336,
+ "generated": "2026-08-13T22:04:24+00:00",
+ "count": 341,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -450,6 +450,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T09:19:10+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupsinvestorsentrepreneursmentors",
+   "name": "Startups | Investors | Entrepreneurs | Mentors | Founders & CEOs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T22:04:22+00:00",
    "last_checked": null
   },
   {
@@ -2643,6 +2658,21 @@
    "last_checked": null
   },
   {
+   "slug": "StartupIrelandClub",
+   "name": "Startup Ireland Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T22:04:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "UKEntrepreneursandStartups",
    "name": "UK Entrepreneurs & Start-ups",
    "status": "pending",
@@ -3183,6 +3213,21 @@
    "last_checked": null
   },
   {
+   "slug": "techstartupukireland",
+   "name": "Tech StartUp Group UK and Ireland by Raise>",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T22:04:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "vancouverstartupcommunity",
    "name": "Vancouver Startups",
    "status": "pending",
@@ -3195,6 +3240,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:57:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "vwtouaregownersclub",
+   "name": "VW TOUAREG OWNERS CLUB",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T22:04:22+00:00",
    "last_checked": null
   },
   {
@@ -4801,6 +4861,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:45:17+00:00"
+  },
+  {
+   "slug": "irishbiz",
+   "name": "Business Networking Group - Ireland",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T22:04:22+00:00",
+   "last_checked": null
   },
   {
    "slug": "lakeatitlanguatemalatravel",

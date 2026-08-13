@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-13T21:05:03+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-13T22:04:24+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (300)
+## Not yet probed (305)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -86,6 +86,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `singaporeentrepreneurship` (found via ddg)
 - `626660935015474` (found via ddg)
 - `2815042615255352` (found via ddg)
+- `startupsinvestorsentrepreneursmentors` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `154062152055554` (found via ddg)
@@ -237,13 +238,16 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupdirectoryuk` (found via ddg)
 - `StartupGrindSingapore` (found via ddg)
 - `1094677854022218` (found via ddg)
+- `StartupIrelandClub` (found via ddg)
 - `startupincanada` (found via ddg)
 - `startupfrat` (found via ddg)
 - `pyterssupportsmallbusiness` (found via ddg)
 - `CanadaStartup` (found via ddg)
+- `techstartupukireland` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
 - `UKEntrepreneursandStartups` (found via ddg)
 - `1266602687180357` (found via ddg)
+- `vwtouaregownersclub` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
 - `177842636144129` (found via ddg)
 - `webdevelopersglobal` (found via ddg)
@@ -341,6 +345,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `595424764221375` (found via leads_db)
 - `2079238568790422` (found via leads_db)
 - `arcsolutions` (found via ddg)
+- `irishbiz` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `Dubaiexpat` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
