@@ -10,12 +10,20 @@ name: AgentLead cloud run
 
 on:
   schedule:
-    # Times are UTC. :17 avoids the top-of-hour scheduler congestion.
+    # Times are UTC (Israel = UTC+3). :17 avoids top-of-hour scheduler congestion.
     # Spread across IL / EU / US active posting hours.
-    - cron: "17 5 * * *"    # ~morning IL/EU
-    - cron: "17 11 * * *"   # ~midday EU / morning US-east
-    - cron: "17 16 * * *"   # ~midday US
-    - cron: "17 21 * * *"   # ~evening US / late IL
+    - cron: "17 5 * * *"    # 08:17 IL - ~morning IL/EU
+    - cron: "17 11 * * *"   # 14:17 IL - ~midday EU / morning US-east
+    - cron: "17 16 * * *"   # 19:17 IL - ~midday US
+    # Night block. US/CA clients post through their working day, which is Or's
+    # night, and he is asleep for all of it - so this is the cheapest throughput
+    # in the schedule. One pass every ~2h; each takes ~30-40 min, which still
+    # leaves the 15-min fbnight slots most of their air (they share a
+    # concurrency group, so an overlapping fbnight run is dropped, not queued).
+    - cron: "17 21 * * *"   # 00:17 IL - ~evening US / late IL
+    - cron: "17 23 * * *"   # 02:17 IL
+    - cron: "17 1 * * *"    # 04:17 IL
+    - cron: "17 3 * * *"    # 06:17 IL - last full pass before the morning report
   workflow_dispatch:        # manual "Run workflow" button
     inputs:
       fb_regions:
@@ -32,7 +40,15 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 30 was too tight and silently cost real coverage: `reddit` alone takes
+    # 13-17 min on a GitHub IP (Reddit 429s nearly every sub, so the 20s/40s
+    # backoff fires ~11 times), and `linkedin` another 5-7. Measured 2026-08-13:
+    # the pass finishes in ~29 min when Reddit behaves and gets killed mid-run
+    # when it does not - 2 of the last 3 scheduled runs were cancelled at 30:00,
+    # losing every source after `linkedin` (aijobs, companies, telegram,
+    # jobboards, jobicy, remotive, fbsearch, whatsapp, feedback, linkcheck).
+    # The tail itself only costs ~7 min; the variance is upstream.
+    timeout-minutes: 50
     permissions:
       contents: read
     steps:

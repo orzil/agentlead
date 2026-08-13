@@ -11,6 +11,10 @@ leads.html
 *.csv
 rc.txt
 *.tmp
+# the morning table IS lead data (summaries, budgets, posters' post URLs).
+# The repo is public, so it goes to Telegram and stays out of git - same rule
+# as leads.html and the CSVs above.
+MORNING_REPORT.md
 
 # python
 __pycache__/

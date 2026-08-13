@@ -253,13 +253,34 @@ def run_forever() -> None:
         time.sleep(30)
 
 
-def run_once() -> None:
+def run_once(only: str | None = None, skip: str | None = None) -> None:
+    """Single pass over the fetchers.
+
+    `only`/`skip` exist because a full pass does not fit in one cloud run:
+    `reddit` alone burns ~17 min on a GitHub IP (Reddit 429s nearly every sub,
+    so the 20s/40s backoff fires 13 times), which starved every source after
+    `linkedin` - they were never reached before the timeout. Splitting the pass
+    across two workflows is what gets the other ~13 sources fetched at all.
+    """
+    wanted = {s.strip() for s in only.split(",")} if only else None
+    unwanted = {s.strip() for s in skip.split(",")} if skip else set()
+    if wanted:
+        known = {name for name, _, _ in JOBS}
+        for bad in wanted - known:
+            log.warning("--only: no such job %r (known: %s)", bad, sorted(known))
     conn = db.connect()
+    ran = 0
     for name, _, fn in JOBS:
         if name == "digest":
             continue
+        if wanted is not None and name not in wanted:
+            continue
+        if name in unwanted:
+            continue
         log.info("--- running %s ---", name)
         run_job_safe(conn, name, fn)
+        ran += 1
+    log.info("--once complete: %d jobs run", ran)
     print_stats(conn)
 
 
@@ -550,6 +571,117 @@ render();
     return len(rows)
 
 
+def morning_report(conn, path: str, hours: int, min_score: int,
+                   notify: bool = False) -> int:
+    """Write a markdown table of everything found during the night.
+
+    Generated in the CLOUD, because the cloud's leads.db is the one that saw the
+    night (the local DB only catches up when cloud_sync runs). Committed to the
+    repo so the table survives the runner and is readable in the morning without
+    anything of Or's needing to be switched on.
+
+    Unscored leads are included deliberately: the cloud's LLM budget can die
+    mid-night, and a gate-passed unscored lead is still a lead worth eyeballing
+    - it just sorts last.
+    """
+    from datetime import datetime, timedelta, timezone
+
+    cutoff = (datetime.now(timezone.utc) - timedelta(hours=hours)).isoformat()
+    rows = conn.execute(
+        "SELECT * FROM leads WHERE fetched_at >= ? "
+        "  AND status NOT IN ('gated_out', 'handled', 'partnership') "
+        "  AND (score IS NULL OR score >= ?) "
+        "ORDER BY score IS NULL, score DESC, id DESC",
+        (cutoff, min_score),
+    ).fetchall()
+
+    def cell(text: str, limit: int) -> str:
+        """Markdown table cells cannot contain a newline or a bare pipe."""
+        t = " ".join((text or "").split())
+        if len(t) > limit:
+            # plain "..." not the ellipsis glyph: this string reaches the Windows
+            # console via print_stats-style paths, which cp1255 cannot encode.
+            t = t[: limit - 3].rstrip() + "..."
+        return t.replace("|", "/")
+
+    now = datetime.now(timezone.utc)
+    lines = [
+        f"# Morning report - {now.strftime('%Y-%m-%d')}",
+        "",
+        f"*Leads found in the last {hours}h (since "
+        f"{cutoff[:16].replace('T', ' ')} UTC), score >= {min_score}.*",
+        "",
+    ]
+
+    if not rows:
+        lines += ["**Nothing new cleared the gate overnight.**", ""]
+    else:
+        by_source: dict[str, int] = {}
+        for r in rows:
+            root = (r["source"] or "?").split("/")[0]
+            by_source[root] = by_source.get(root, 0) + 1
+        top = ", ".join(f"{k} {v}" for k, v in
+                        sorted(by_source.items(), key=lambda kv: -kv[1])[:8])
+        strong = sum(1 for r in rows if (r["score"] or 0) >= config.PUSH_THRESHOLD)
+        unscored = sum(1 for r in rows if r["score"] is None)
+        tail = f", {unscored} still unscored" if unscored else ""
+        lines += [
+            f"**{len(rows)} leads** - {strong} at push level "
+            f"(>= {config.PUSH_THRESHOLD}){tail}. Sources: {top}.",
+            "",
+            "| # | Score | Source | What it is | Budget | Type | Posted | Link |",
+            "|---|------:|--------|------------|--------|------|--------|------|",
+        ]
+        for i, r in enumerate(rows, 1):
+            score = r["score"] if r["score"] is not None else "-"
+            lines.append(
+                f"| {i} | {score} | {cell(r['source'], 22)} "
+                f"| {cell(r['summary'] or r['raw_text'], 110)} "
+                f"| {cell(r['budget'] or '', 20)} "
+                f"| {cell(r['work_type'] or '', 14)} "
+                f"| {(r['posted_at'] or '')[:10]} "
+                f"| [open]({r['url']}) |"
+            )
+        lines.append("")
+
+        flagged = [r for r in rows if r["red_flags"]]
+        if flagged:
+            lines += ["## Red flags", ""]
+            for r in flagged[:15]:
+                lines.append(f"- **#{r['id']}** {cell(r['red_flags'], 160)}")
+            lines.append("")
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+    if notify and rows:
+        import html as _h
+
+        head = rows[:15]
+        blocks = [f"\U0001F305 <b>Morning report</b> - {len(rows)} leads overnight"]
+        for r in head:
+            score = r["score"] if r["score"] is not None else "?"
+            blocks.append(
+                f"<b>[{score}]</b> {_h.escape(r['source'] or '')}\n"
+                f"{_h.escape(cell(r['summary'] or r['raw_text'], 140))}\n"
+                f"{_h.escape(r['url'] or '')}"
+            )
+        if len(rows) > len(head):
+            blocks.append(f"...and {len(rows) - len(head)} more (score-ordered).")
+        # _send_raw hard-truncates at 4000 chars, so pack into messages under
+        # that rather than losing the tail of the table silently.
+        chunk = ""
+        for b in blocks:
+            if len(chunk) + len(b) + 2 > 3500 and chunk:
+                notifier._send_raw(chunk)
+                chunk = ""
+            chunk += ("\n\n" if chunk else "") + b
+        if chunk:
+            notifier._send_raw(chunk)
+
+    return len(rows)
+
+
 def print_stats(conn) -> None:
     print("\n=== leads by status ===")
     for row in conn.execute(
@@ -602,6 +734,18 @@ def main() -> None:
                     help="re-run the (stricter) keyword classifier over stored candidates")
     ap.add_argument("--include-partnerships", action="store_true",
                     help="with exports: include the low-priority partnership bucket")
+    ap.add_argument("--morning-report", nargs="?", const="MORNING_REPORT.md",
+                    metavar="PATH",
+                    help="markdown table of leads found in the last --hours (default 14)")
+    ap.add_argument("--hours", type=int, default=14,
+                    help="with --morning-report: look-back window in hours")
+    ap.add_argument("--notify", action="store_true",
+                    help="with --morning-report: also push the top rows to Telegram")
+    ap.add_argument("--only", metavar="JOBS",
+                    help="with --once: run only these jobs, comma-separated "
+                         "(e.g. --only aijobs,companies,telegram)")
+    ap.add_argument("--skip", metavar="JOBS",
+                    help="with --once: skip these jobs, comma-separated")
     args = ap.parse_args()
 
     if args.test_telegram:
@@ -664,8 +808,13 @@ def main() -> None:
     if args.reply_test:
         reply_test(db.connect(), args.reply_test)
         return
+    if args.morning_report:
+        n = morning_report(db.connect(), args.morning_report, args.hours,
+                           args.min_score or config.DIGEST_THRESHOLD, args.notify)
+        print(f"morning report: {n} leads -> {args.morning_report}")
+        return
     if args.once:
-        run_once()
+        run_once(only=args.only, skip=args.skip)
         return
     run_forever()
 

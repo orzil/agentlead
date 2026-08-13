@@ -23,6 +23,12 @@ on:
     # the night's query budget. Runs are ~3 min now that no browser is involved.
     - cron: "0,15,30,45 17-23 * * *"   # 20:00-02:59 Israel
     - cron: "0,15,30,45 0-2 * * *"     # 03:00-05:59 Israel
+    # 06:00-07:59 Israel. Two jobs at once: eight more queries, and - because
+    # this is the only workflow that uploads leads.db as an artifact - a FRESH
+    # snapshot for sync_cloud to pull home in the morning. Without it the newest
+    # artifact is from 02:45 UTC and everything the 03:17/05:17 full passes found
+    # stays stranded in the Actions cache until the next night.
+    - cron: "0,15,30,45 3-4 * * *"     # 06:00-07:59 Israel
   workflow_dispatch:
     inputs:
       budget:
@@ -90,7 +96,7 @@ jobs:
           # github.event.schedule exposes the cron STRING, not the firing time,
           # so the final slot is identified by the clock.
           NOW=$(date -u +%H:%M)
-          if [[ "$NOW" > "02:15" && "$NOW" < "02:59" ]]; then
+          if [[ "$NOW" > "04:15" && "$NOW" < "04:59" ]]; then
             python -X utf8 discover_fb_groups.py --summary
           else
             echo "not the last slot ($NOW UTC) - no summary"

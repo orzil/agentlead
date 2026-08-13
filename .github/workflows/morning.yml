@@ -1,0 +1,72 @@
+name: Morning report
+
+# One table, every morning, of everything the night found.
+#
+# It runs in the CLOUD because the cloud's leads.db (the Actions cache) is the
+# database that actually saw the night - the local one only catches up when
+# cloud_sync runs on Or's PC, which is off while he sleeps.
+#
+# Delivery is TELEGRAM ONLY, deliberately. The repo is public, and the table is
+# lead data: summaries, budgets and permalinks to real people's posts. That is
+# exactly what .gitignore already keeps out of git for leads.html and the CSVs,
+# so this workflow neither commits MORNING_REPORT.md nor uploads it as an
+# artifact (artifacts on a public repo are downloadable too).
+
+on:
+  schedule:
+    # 07:25 Israel (UTC+3). Sits after the 03:17 UTC full pass has finished
+    # (~04:00) so the table includes the last thing the night found.
+    - cron: "25 4 * * *"
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "Look-back window in hours"
+        default: "14"
+      min_score:
+        description: "Minimum score to include"
+        default: "6"
+
+concurrency:
+  group: leadagent          # must not read leads.db while another run writes it
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Read-only: this workflow never writes the cache back, so it cannot
+      # clobber the DB a concurrent run is building.
+      - name: Restore lead DB
+        uses: actions/cache/restore@v4
+        with:
+          path: leads.db
+          key: leadsdb-morning-${{ github.run_id }}
+          restore-keys: leadsdb-
+
+      - name: Build and send the table
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python -X utf8 main.py --morning-report \
+            --hours "${{ inputs.hours || '14' }}" \
+            --min-score "${{ inputs.min_score || '6' }}" \
+            --notify
+          # Never cat the report here. Workflow logs on a public repo are
+          # public; the line below prints the size only, never the content.
+          wc -l < MORNING_REPORT.md | xargs -I{} echo "report written: {} lines"
