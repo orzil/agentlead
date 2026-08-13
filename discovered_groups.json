@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-13T03:40:03+00:00",
- "count": 331,
+ "generated": "2026-08-13T17:59:29+00:00",
+ "count": 332,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -3120,6 +3120,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupincanada",
+   "name": "Startup in Canada / Стартап в Канаде",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-13T17:41:15+00:00",
    "last_checked": null
   },
   {
