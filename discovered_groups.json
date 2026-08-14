@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-14T23:02:07+00:00",
- "count": 368,
+ "generated": "2026-08-14T23:37:52+00:00",
+ "count": 377,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1968,6 +1968,21 @@
    "last_checked": "2026-08-10T05:05:38+00:00"
   },
   {
+   "slug": "1019634092006335",
+   "name": "מתווכים יזמים קבלנים אנשי נדל\"ן מכל הארץ שת\"פ",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T23:37:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1094677854022218",
    "name": "Startup Ireland Club",
    "status": "pending",
@@ -3093,6 +3108,21 @@
    "last_checked": null
   },
   {
+   "slug": "giuson",
+   "name": "משקיעים - יזמים - טכנולוגיה - סטרטאפ - קרנות הון סיכון",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T23:37:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "glidecommunity",
    "name": "Glide Apps: No-Code AI-Driven Solutions and Custom Software with ...",
    "status": "pending",
@@ -3753,6 +3783,36 @@
    "last_checked": null
   },
   {
+   "slug": "1621300028173571",
+   "name": "נדל״ן-ישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T23:37:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1635747173357439",
+   "name": "נדל\"ן ישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T23:37:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1636991833121307",
    "name": "No Code Community",
    "status": "pending",
@@ -3886,6 +3946,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:42:59+00:00"
+  },
+  {
+   "slug": "1959721957381848",
+   "name": "נדל\"ן ישראל - כל העדכונים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T23:37:51+00:00",
+   "last_checked": null
   },
   {
    "slug": "196799535583425",
@@ -4053,6 +4128,21 @@
    "last_checked": null
   },
   {
+   "slug": "2233374453343068",
+   "name": "נדל\"ן ישראל - תיווך והשקעות ישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T23:37:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "227438747735888",
    "name": null,
    "status": "gone",
@@ -4188,6 +4278,21 @@
    "last_checked": null
   },
   {
+   "slug": "355231251209641",
+   "name": "נדל\"ן ישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T23:37:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "35730592219889536",
    "name": null,
    "status": "gone",
@@ -4291,6 +4396,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:49:27+00:00"
+  },
+  {
+   "slug": "449307004272598",
+   "name": "קרקעות ישראל הקהילה הרשמית",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T23:37:51+00:00",
+   "last_checked": null
   },
   {
    "slug": "462672717191788",
@@ -4530,6 +4650,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-14T17:55:11+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "733702462656150",
+   "name": "\"חיבורים גדולים - נדל״ן, טכנולוגיה והזדמנויות",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T23:37:51+00:00",
    "last_checked": null
   },
   {

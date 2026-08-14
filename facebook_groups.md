@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-14T23:02:07+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-14T23:37:52+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (332)
+## Not yet probed (341)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -274,9 +274,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `940674812655793` (found via ddg)
 - `3d.printing.israel` (found via ddg)
 - `396641690362272` (found via ddg)
+- `giuson` (found via ddg)
 - `735395363138298` (found via ddg)
 - `israel.hitech.jobs` (found via ddg)
 - `1301121656949348` (found via ddg)
+- `1019634092006335` (found via ddg)
 - `544976585999596` (found via ddg)
 - `540065381608725` (found via ddg)
 - `besmartphone.il` (found via ddg)
@@ -377,6 +379,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `toronto.entrepreneurs.startups` (found via ddg)
 - `dubaisocialsandbusinesses` (found via ddg)
 - `n8nofficial` (found via ddg)
+- `733702462656150` (found via ddg)
 - `395525770590756` (found via ddg)
 - `1117911261578629` (found via ddg)
 - `asakimktanim` (found via ddg)
@@ -385,9 +388,15 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `473051352513816` (found via ddg)
 - `748259480517030` (found via ddg)
 - `462672717191788` (found via ddg)
+- `1635747173357439` (found via ddg)
+- `355231251209641` (found via ddg)
+- `1959721957381848` (found via ddg)
+- `2233374453343068` (found via ddg)
+- `1621300028173571` (found via ddg)
 - `smallbusinessisrael` (found via ddg)
 - `374746629656498` (found via ddg)
 - `smallbusinessesaregrowing` (found via ddg)
 - `206079892739645` (found via ddg)
 - `1417623821789515` (found via ddg)
 - `760705059248661` (found via ddg)
+- `449307004272598` (found via ddg)
