@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-14T04:45:10+00:00",
- "count": 348,
+ "generated": "2026-08-14T06:06:03+00:00",
+ "count": 350,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -993,6 +993,21 @@
    "last_checked": null
   },
   {
+   "slug": "493890216609239",
+   "name": "דרושים מתכנתים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T06:06:03+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "5354513511301326",
    "name": "Software Developers Jobs",
    "status": "pending",
@@ -1290,6 +1305,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-12T22:03:47+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "drushimboneiatarim",
+   "name": "דרושים מתכנתים ובוני אתרים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T06:06:03+00:00",
    "last_checked": null
   },
   {
