@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-14T22:05:03+00:00",
- "count": 361,
+ "generated": "2026-08-14T22:42:18+00:00",
+ "count": 368,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2493,6 +2493,21 @@
    "last_checked": null
   },
   {
+   "slug": "807976829284427",
+   "name": "פיתוח אפליקציות (android web and ios)",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T22:42:17+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "810698363860855",
    "name": "Canada StartUp VISA",
    "status": "pending",
@@ -2598,6 +2613,21 @@
    "last_checked": null
   },
   {
+   "slug": "AppStart",
+   "name": "אפ-סטארט. מיזמים מבוססי אפליקציות",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T22:42:17+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "CanadaStartup",
    "name": "Tech Canada: Canadian Startups in Toronto / Waterloo , Montreal ...",
    "status": "pending",
@@ -2640,6 +2670,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T15:40:10+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "MobileAppFaq",
+   "name": "פיתוח אפליקציות - שאלות ותשובות",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T22:42:17+00:00",
    "last_checked": null
   },
   {
@@ -2793,6 +2838,21 @@
    "last_checked": null
   },
   {
+   "slug": "androidhebrew",
+   "name": "פיתוח אפליקציות לאנדרואיד",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T22:42:17+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "ausbizownersclub",
    "name": "Australia Business Owners Club",
    "status": "pending",
@@ -2835,6 +2895,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "besmartphone.il",
+   "name": "פיתוח אפליקציות",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T22:42:17+00:00",
    "last_checked": null
   },
   {
@@ -3451,6 +3526,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:30:02+00:00",
    "last_checked": "2026-08-08T08:40:41+00:00"
+  },
+  {
+   "slug": "1117911261578629",
+   "name": "אפליקציות ישראליות",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T22:42:17+00:00",
+   "last_checked": null
   },
   {
    "slug": "1175939549891269",
@@ -4140,6 +4230,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-14T17:55:11+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "395525770590756",
+   "name": "אפליקציות",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T22:42:17+00:00",
    "last_checked": null
   },
   {

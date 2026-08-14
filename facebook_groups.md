@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-14T22:05:03+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-14T22:42:18+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (325)
+## Not yet probed (332)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -261,6 +261,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `980725725352474` (found via ddg)
 - `1657329921376731` (found via ddg)
 - `7602972273135565` (found via ddg)
+- `AppStart` (found via ddg)
 - `1362579304090573` (found via ddg)
 - `1338202816787610` (found via ddg)
 - `289118210401946` (found via ddg)
@@ -278,6 +279,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1301121656949348` (found via ddg)
 - `544976585999596` (found via ddg)
 - `540065381608725` (found via ddg)
+- `besmartphone.il` (found via ddg)
+- `807976829284427` (found via ddg)
+- `MobileAppFaq` (found via ddg)
+- `androidhebrew` (found via ddg)
 - `freelanceIL` (found via ddg)
 - `IsraeliFreelancersUSA` (found via ddg)
 - `610199959120671` (found via ddg)
@@ -372,6 +377,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `toronto.entrepreneurs.startups` (found via ddg)
 - `dubaisocialsandbusinesses` (found via ddg)
 - `n8nofficial` (found via ddg)
+- `395525770590756` (found via ddg)
+- `1117911261578629` (found via ddg)
 - `asakimktanim` (found via ddg)
 - `7111013388975795` (found via ddg)
 - `2786770884931764` (found via ddg)
