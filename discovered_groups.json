@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-14T03:53:01+00:00",
- "count": 344,
+ "generated": "2026-08-14T04:45:10+00:00",
+ "count": 348,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -225,6 +225,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T08:34:49+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "157185408042870",
+   "name": "משרות/עבודה טלמרקטינג ועבודה מהבית מיידי! | אני מחפש פרילנסר שיכול לבצע ...",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T04:45:09+00:00",
    "last_checked": null
   },
   {
@@ -2268,6 +2283,21 @@
    "last_checked": null
   },
   {
+   "slug": "3d.printing.israel",
+   "name": "מחפש פרילנסר למידול תלת־ממד לתכשיטים ב־Rhino",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T04:45:09+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "464376085736538",
    "name": "Australian Business Owners",
    "status": "pending",
@@ -2385,6 +2415,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:25:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "768974062661759",
+   "name": "קמפיינרים פרילנסרים פרסום ושיווק דיגטלי",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T04:45:09+00:00",
    "last_checked": null
   },
   {
@@ -2550,6 +2595,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T15:40:10+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "NH.Freelancer",
+   "name": "NH - פרילנסר",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T04:45:09+00:00",
    "last_checked": null
   },
   {
