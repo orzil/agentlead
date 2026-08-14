@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-14T06:06:03+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-14T17:55:12+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (314)
+## Not yet probed (321)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -351,6 +351,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `595424764221375` (found via leads_db)
 - `2079238568790422` (found via leads_db)
 - `2204685680` (found via leads_db)
+- `503614587414188` (found via leads_db)
 - `arcsolutions` (found via ddg)
 - `irishbiz` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
@@ -368,8 +369,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `toronto.entrepreneurs.startups` (found via ddg)
 - `dubaisocialsandbusinesses` (found via ddg)
 - `n8nofficial` (found via ddg)
+- `asakimktanim` (found via ddg)
+- `7111013388975795` (found via ddg)
 - `2786770884931764` (found via ddg)
 - `473051352513816` (found via ddg)
 - `748259480517030` (found via ddg)
 - `462672717191788` (found via ddg)
+- `smallbusinessisrael` (found via ddg)
+- `374746629656498` (found via ddg)
+- `smallbusinessesaregrowing` (found via ddg)
+- `206079892739645` (found via ddg)
 - `1417623821789515` (found via ddg)

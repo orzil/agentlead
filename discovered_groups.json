@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-14T06:06:03+00:00",
- "count": 350,
+ "generated": "2026-08-14T17:55:12+00:00",
+ "count": 357,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -3828,6 +3828,21 @@
    "last_checked": null
   },
   {
+   "slug": "206079892739645",
+   "name": "עצמאים ובעלי עסקים קטנים בישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T17:55:11+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2079238568790422",
    "name": null,
    "status": "pending",
@@ -4083,6 +4098,21 @@
    "last_checked": "2026-08-08T08:39:46+00:00"
   },
   {
+   "slug": "374746629656498",
+   "name": "עסקים קטנים ובינוניים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T17:55:11+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "3diot.laptrinhnhungiot",
    "name": null,
    "status": "pending",
@@ -4218,6 +4248,21 @@
    "last_checked": "2026-08-08T08:41:09+00:00"
   },
   {
+   "slug": "503614587414188",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T07:12:41+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "520516866042193",
    "name": null,
    "status": "pending",
@@ -4336,6 +4381,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:44:50+00:00"
+  },
+  {
+   "slug": "7111013388975795",
+   "name": "בעלי עסקים קטנים מתייעצים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T17:55:11+00:00",
+   "last_checked": null
   },
   {
    "slug": "748259480517030",
@@ -4725,6 +4785,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-13T19:15:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "asakimktanim",
+   "name": "בעלי עסקים קטנים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T17:55:11+00:00",
    "last_checked": null
   },
   {
@@ -5146,6 +5221,36 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:29:54+00:00",
    "last_checked": "2026-08-08T08:37:27+00:00"
+  },
+  {
+   "slug": "smallbusinessesaregrowing",
+   "name": "עסקים קטנים צומחים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T17:55:11+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbusinessisrael",
+   "name": "עסקים קטנים בישראל | שיווק, שת״פ ולידים | עוזרים אחד לשני",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-14T17:55:11+00:00",
+   "last_checked": null
   },
   {
    "slug": "southafricanbusiness",
