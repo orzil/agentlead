@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-15T19:57:41+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-15T20:31:46+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (383)
+## Not yet probed (392)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -244,6 +244,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `newzealandbusinessowners` (found via ddg)
 - `nzsmallbusinessnetwork` (found via ddg)
 - `565066728282460` (found via ddg)
+- `186494045169202` (found via ddg)
+- `581853060030923` (found via ddg)
+- `192784851327609` (found via ddg)
+- `1112643972603670` (found via ddg)
+- `585616248804765` (found via ddg)
+- `3187174424898197` (found via ddg)
+- `748711238658025` (found via ddg)
+- `restaurantownersvendorsservices` (found via ddg)
 - `789382672475266` (found via ddg)
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
@@ -267,6 +275,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `CanadaStartup` (found via ddg)
 - `techstartupukireland` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
+- `usarestaurantowners` (found via ddg)
 - `UKEntrepreneursandStartups` (found via ddg)
 - `1266602687180357` (found via ddg)
 - `vwtouaregownersclub` (found via ddg)

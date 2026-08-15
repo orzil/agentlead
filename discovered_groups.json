@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-15T19:57:41+00:00",
- "count": 419,
+ "generated": "2026-08-15T20:31:46+00:00",
+ "count": 428,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2163,6 +2163,21 @@
    "last_checked": null
   },
   {
+   "slug": "1112643972603670",
+   "name": "Restaurant Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T20:31:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1266602687180357",
    "name": "UK Innovator Founder Visa",
    "status": "pending",
@@ -2343,6 +2358,36 @@
    "last_checked": null
   },
   {
+   "slug": "186494045169202",
+   "name": "Restaurant & Bar owners, operators & managers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T20:31:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "192784851327609",
+   "name": "Restaurant Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T20:31:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "206071852932684",
    "name": "קריירה ישראלית | טכנולוגי, הייטק, תוכנה",
    "status": "pending",
@@ -2445,6 +2490,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "3187174424898197",
+   "name": "Restaurant Owners Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T20:31:45+00:00",
    "last_checked": null
   },
   {
@@ -2598,6 +2658,36 @@
    "last_checked": null
   },
   {
+   "slug": "581853060030923",
+   "name": "Restaurant Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T20:31:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "585616248804765",
+   "name": "Restaurant Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T20:31:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "587640282883229",
    "name": "מקצועני מיקור חוץ \\ אאוטסורסינג \\ עובדים וירטואלים ויצירת עסקים ...",
    "status": "pending",
@@ -2715,6 +2805,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T19:12:01+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "748711238658025",
+   "name": "Restaurant Owners and Managers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T20:31:45+00:00",
    "last_checked": null
   },
   {
@@ -3633,6 +3738,21 @@
    "last_checked": null
   },
   {
+   "slug": "restaurantownersvendorsservices",
+   "name": "Restaurant Owners, Vendors, and Services",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T20:31:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "sasmallbusinessnetwork",
    "name": "Small Business Network South Africa",
    "status": "pending",
@@ -3810,6 +3930,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-13T22:04:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "usarestaurantowners",
+   "name": "The Restaurant Owners Corner",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T20:31:45+00:00",
    "last_checked": null
   },
   {
