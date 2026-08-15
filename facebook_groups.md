@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-15T17:48:21+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-15T18:33:54+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (369)
+## Not yet probed (376)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -226,6 +226,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `freelancersrequired` (found via ddg)
 - `businessowneraustralia` (found via ddg)
 - `Speedcamalerts` (found via ddg)
+- `lawfirmownersandtechnology` (found via ddg)
+- `lawfirmandcpaownerscommunity` (found via ddg)
+- `666726999839356` (found via ddg)
+- `699873467811426` (found via ddg)
+- `lawfirmboms` (found via ddg)
 - `londontechstartups` (found via ddg)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
@@ -234,6 +239,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `NewZealandSmallBusinessOwnersNetworking` (found via ddg)
 - `newzealandbusinessowners` (found via ddg)
 - `nzsmallbusinessnetwork` (found via ddg)
+- `565066728282460` (found via ddg)
 - `789382672475266` (found via ddg)
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
@@ -397,6 +403,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `fivemserverdevelopmenthelp2025` (found via ddg)
 - `640514310704403` (found via ddg)
 - `StartupIreland` (found via ddg)
+- `lawfirmowners` (found via ddg)
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
 - `131710772378400` (found via ddg)

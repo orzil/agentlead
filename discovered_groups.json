@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-15T17:48:21+00:00",
- "count": 405,
+ "generated": "2026-08-15T18:33:54+00:00",
+ "count": 412,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2553,6 +2553,21 @@
    "last_checked": null
   },
   {
+   "slug": "565066728282460",
+   "name": "Question for law firm owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T18:33:53+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "587640282883229",
    "name": "מקצועני מיקור חוץ \\ אאוטסורסינג \\ עובדים וירטואלים ויצירת עסקים ...",
    "status": "pending",
@@ -2595,6 +2610,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-14T19:51:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "666726999839356",
+   "name": "Law Firm Owners Managers & Paralegals (Attorneys",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T18:33:53+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "699873467811426",
+   "name": "Law Firm Owners and Managers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T18:33:53+00:00",
    "last_checked": null
   },
   {
@@ -3345,6 +3390,51 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "lawfirmandcpaownerscommunity",
+   "name": "Law Firm Owners & Technology",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T18:33:53+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "lawfirmboms",
+   "name": "Law Firm Owners and Managers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T18:33:53+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "lawfirmownersandtechnology",
+   "name": "Law Firm Owners & Technology",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T18:33:53+00:00",
    "last_checked": null
   },
   {
@@ -5790,6 +5880,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T08:34:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "lawfirmowners",
+   "name": "Law Firm Digital Strategies",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T18:33:53+00:00",
    "last_checked": null
   },
   {
