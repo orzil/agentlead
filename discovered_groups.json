@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-15T02:12:11+00:00",
- "count": 387,
+ "generated": "2026-08-15T03:05:30+00:00",
+ "count": 388,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1035,6 +1035,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-14T06:06:03+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "506523693145809",
+   "name": "קהילת היזמים של ישראל - Start A Startup",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T03:05:29+00:00",
    "last_checked": null
   },
   {
