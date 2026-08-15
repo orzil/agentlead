@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-14T23:37:52+00:00",
- "count": 377,
+ "generated": "2026-08-15T00:06:26+00:00",
+ "count": 382,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1170,6 +1170,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T03:54:49+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "IsraeliMappedInNY",
+   "name": "Israeli Startups Mapped in NY | ברוכים הבאים ל- Webos, סטארטאפ ישראלי ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T00:06:25+00:00",
    "last_checked": null
   },
   {
@@ -2838,6 +2853,21 @@
    "last_checked": null
   },
   {
+   "slug": "TelAviv.MivzakLive",
+   "name": "חדשות תל אביב והמרכז | סטארטאפ ישראלי חדש פיתח טכנולוגיית צילום חדשנית ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T00:06:25+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "UKEntrepreneursandStartups",
    "name": "UK Entrepreneurs & Start-ups",
    "status": "pending",
@@ -2970,6 +3000,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "coronajobs",
+   "name": "קריירה-לנד | היי! אנחנו חברת Spot.io , סטארטאפ ישראלי פורץ דרך התחום ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T00:06:25+00:00",
    "last_checked": null
   },
   {
@@ -3270,6 +3315,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ravitrehovot",
+   "name": "רחובות על המפה | סטארטאפ ישראלי: מה היו מוקדי העניין ברשת בשבוע האחרון ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T00:06:25+00:00",
    "last_checked": null
   },
   {
@@ -5295,6 +5355,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T19:56:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "freelance.remote.it",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T00:06:00+00:00",
    "last_checked": null
   },
   {

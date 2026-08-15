@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-14T23:37:52+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-15T00:06:26+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (341)
+## Not yet probed (346)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -162,6 +162,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `all.ai.israel` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
+- `IsraeliMappedInNY` (found via ddg)
 - `yazamutIsrael` (found via ddg)
 - `292556467949631` (found via ddg)
 - `n8nil` (found via ddg)
@@ -269,6 +270,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `917351158306121` (found via ddg)
 - `705061861437260` (found via ddg)
 - `freelanceisrael` (found via ddg)
+- `TelAviv.MivzakLive` (found via ddg)
 - `624543140573742` (found via ddg)
 - `entrepreneurs.israel` (found via ddg)
 - `940674812655793` (found via ddg)
@@ -292,6 +294,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `919359532765118` (found via ddg)
 - `768974062661759` (found via ddg)
 - `206071852932684` (found via ddg)
+- `coronajobs` (found via ddg)
+- `ravitrehovot` (found via ddg)
 - `traveltipsrome` (found via reddit_search)
 - `noisefloorav` (found via reddit_search)
 - `2467185587` (found via reddit_search)
@@ -362,6 +366,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2204685680` (found via leads_db)
 - `503614587414188` (found via leads_db)
 - `995281237262612` (found via leads_db)
+- `freelance.remote.it` (found via leads_db)
 - `arcsolutions` (found via ddg)
 - `irishbiz` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
