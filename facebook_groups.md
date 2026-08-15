@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-15T21:30:12+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-15T21:58:48+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (400)
+## Not yet probed (404)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -284,12 +284,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `usarestaurantowners` (found via ddg)
 - `UKEntrepreneursandStartups` (found via ddg)
 - `1266602687180357` (found via ddg)
+- `usatruckingindustry` (found via ddg)
 - `vwtouaregownersclub` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
 - `177842636144129` (found via ddg)
 - `webdevelopersglobal` (found via ddg)
 - `2126268814575239` (found via ddg)
 - `1065658123462053` (found via ddg)
+- `3201149406569173` (found via ddg)
 - `magia.israel` (found via ddg)
 - `NH.Freelancer` (found via ddg)
 - `webflowIL` (found via ddg)
@@ -436,6 +438,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `827453710776253` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
 - `toronto.entrepreneurs.startups` (found via ddg)
+- `736631881894510` (found via ddg)
+- `474293496993273` (found via ddg)
 - `dubaisocialsandbusinesses` (found via ddg)
 - `n8nofficial` (found via ddg)
 - `733702462656150` (found via ddg)

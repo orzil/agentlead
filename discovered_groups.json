@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-15T21:30:12+00:00",
- "count": 436,
+ "generated": "2026-08-15T21:58:48+00:00",
+ "count": 440,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2568,6 +2568,21 @@
    "last_checked": null
   },
   {
+   "slug": "3201149406569173",
+   "name": "logistics & trucking company owner group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:58:47+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "393041794851062",
    "name": "Бизнес - Израиль, реклама. עסקים - ישראל, פרסום | מה זה מיקור חוץ",
    "status": "pending",
@@ -4053,6 +4068,21 @@
    "last_checked": null
   },
   {
+   "slug": "usatruckingindustry",
+   "name": "USA CDL TRUCK DRIVERS / OWNER OPERATORS / TRUCKERS LOOKING ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:58:47+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "vancouverstartupcommunity",
    "name": "Vancouver Startups",
    "status": "pending",
@@ -5193,6 +5223,21 @@
    "last_checked": null
   },
   {
+   "slug": "474293496993273",
+   "name": "Trucks and Trucking Logistics | Facebook - Meta Business Suite",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:58:47+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "476185033769654",
    "name": null,
    "status": "pending",
@@ -5400,6 +5445,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-14T23:37:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "736631881894510",
+   "name": "Trucking Dispatchers, Freight Brokers, Truck Drivers, Logistics ...",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:58:47+00:00",
    "last_checked": null
   },
   {
