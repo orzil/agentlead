@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-15T04:48:21+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-15T17:23:38+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (362)
+## Not yet probed (369)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -96,6 +96,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `software.devopers.jobs` (found via ddg)
 - `1687564885295993` (found via ddg)
 - `1057648599597645` (found via ddg)
+- `1125499345000645` (found via ddg)
 - `australiansmallbusinesowners` (found via ddg)
 - `560810556893848` (found via ddg)
 - `1184176781736143` (found via ddg)
@@ -116,6 +117,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `highlevelagencyowner` (found via ddg)
 - `directvahiring` (found via ddg)
 - `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
+- `IAOAlliance` (found via ddg)
+- `2152373795524537` (found via ddg)
 - `1639655452994166` (found via ddg)
 - `1198024408768649` (found via ddg)
 - `341776853891812` (found via ddg)
@@ -155,6 +158,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `uksmallbusinessesadvertsfree` (found via ddg)
 - `2018989461513326` (found via ddg)
 - `uxdesignercommunity` (found via ddg)
+- `unfilteredagency` (found via ddg)
 - `202402986297944` (found via ddg)
 - `beehexaecommercegroup` (found via ddg)
 - `ecommercesuccessgroup` (found via ddg)
@@ -374,6 +378,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `995281237262612` (found via leads_db)
 - `freelance.remote.it` (found via leads_db)
 - `288970654518121` (found via leads_db)
+- `DeepNetGroup` (found via leads_db)
+- `claudeaicommunity` (found via leads_db)
+- `codanics` (found via leads_db)
 - `1164103449222930` (found via ddg)
 - `arcsolutions` (found via ddg)
 - `1622740769010505` (found via ddg)

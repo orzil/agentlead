@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-15T04:48:21+00:00",
- "count": 398,
+ "generated": "2026-08-15T17:23:38+00:00",
+ "count": 405,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -558,6 +558,21 @@
    "last_checked": null
   },
   {
+   "slug": "1125499345000645",
+   "name": "Agency Shop Talk- Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T17:23:37+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1184176781736143",
    "name": "BPO projects Outsourcing",
    "status": "pending",
@@ -840,6 +855,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:01:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2152373795524537",
+   "name": "Insurance Agency Owners Circle",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T17:23:37+00:00",
    "last_checked": null
   },
   {
@@ -1230,6 +1260,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T03:54:49+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "IAOAlliance",
+   "name": "Insurance Agency Owners Alliance",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T17:23:37+00:00",
    "last_checked": null
   },
   {
@@ -1995,6 +2040,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "unfilteredagency",
+   "name": "Unfiltered Insurance Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T17:23:37+00:00",
    "last_checked": null
   },
   {
@@ -5148,6 +5208,21 @@
    "last_checked": null
   },
   {
+   "slug": "DeepNetGroup",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T06:07:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "DigitalNomadEngagementExchange",
    "name": null,
    "status": "gone",
@@ -5478,6 +5553,21 @@
    "last_checked": "2026-08-08T08:51:17+00:00"
   },
   {
+   "slug": "claudeaicommunity",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T06:07:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "claudecommunity",
    "name": null,
    "status": "pending",
@@ -5490,6 +5580,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-10T03:24:33+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "codanics",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T06:07:50+00:00",
    "last_checked": null
   },
   {
