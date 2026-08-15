@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-15T19:04:15+00:00",
- "count": 412,
+ "generated": "2026-08-15T19:35:19+00:00",
+ "count": 419,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2118,6 +2118,21 @@
    "last_checked": null
   },
   {
+   "slug": "1082845185201887",
+   "name": "Business For Practice Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T19:35:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1094677854022218",
    "name": "Startup Ireland Club",
    "status": "pending",
@@ -2493,6 +2508,21 @@
    "last_checked": null
   },
   {
+   "slug": "450945856135333",
+   "name": "Medical Practice Owners Alliance",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T19:35:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "464376085736538",
    "name": "Australian Business Owners",
    "status": "pending",
@@ -2655,6 +2685,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T18:35:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "710945690436694",
+   "name": "Group Practice Owners Discussion Forum",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T19:35:18+00:00",
    "last_checked": null
   },
   {
@@ -3543,6 +3588,21 @@
    "last_checked": null
   },
   {
+   "slug": "practiceowners",
+   "name": "Dental and Medical Practice Owners - Tips and Ideas Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T19:35:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "pyterssupportsmallbusiness",
    "name": "Support Small Business",
    "status": "pending",
@@ -4035,6 +4095,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T08:34:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "144368425368218",
+   "name": "Medical Practice Management - Advice and Tips",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T19:35:18+00:00",
    "last_checked": null
   },
   {
@@ -5343,6 +5418,21 @@
    "last_checked": null
   },
   {
+   "slug": "MedPM",
+   "name": "Medical Practice Managers (Office Manager, Administrator, Physician ...",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T19:35:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "NelsonBC",
    "name": null,
    "status": "pending",
@@ -5371,6 +5461,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:31:11+00:00",
    "last_checked": "2026-08-08T08:48:31+00:00"
+  },
+  {
+   "slug": "PracticeManagersNetwork",
+   "name": "Practice Managers Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T19:35:18+00:00",
+   "last_checked": null
   },
   {
    "slug": "SouthernMaineFilmMakers",

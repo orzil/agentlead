@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-15T19:04:15+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-15T19:35:19+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (376)
+## Not yet probed (383)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -210,8 +210,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `bsbnetwork` (found via ddg)
 - `buildingblackentrepreneurs` (found via ddg)
 - `1766511223953040` (found via ddg)
+- `1082845185201887` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
 - `810698363860855` (found via ddg)
+- `practiceowners` (found via ddg)
 - `dublin.ireland.startups` (found via ddg)
 - `entrepreneurA1` (found via ddg)
 - `entrepreneursletsbuildtogether` (found via ddg)
@@ -222,6 +224,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `290592000669370` (found via ddg)
 - `findingsuvfounders` (found via ddg)
 - `glidecommunity` (found via ddg)
+- `710945690436694` (found via ddg)
 - `1100802378915693` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `businessowneraustralia` (found via ddg)
@@ -232,6 +235,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `699873467811426` (found via ddg)
 - `lawfirmboms` (found via ddg)
 - `londontechstartups` (found via ddg)
+- `450945856135333` (found via ddg)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
 - `1356416033271840` (found via ddg)
@@ -404,9 +408,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `640514310704403` (found via ddg)
 - `StartupIreland` (found via ddg)
 - `lawfirmowners` (found via ddg)
+- `144368425368218` (found via ddg)
+- `MedPM` (found via ddg)
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
 - `131710772378400` (found via ddg)
+- `PracticeManagersNetwork` (found via ddg)
 - `southafricanbusiness` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
 - `827453710776253` (found via ddg)
