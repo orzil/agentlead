@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-15T22:25:57+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-15T22:50:02+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (404)
+## Not yet probed (409)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -78,6 +78,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aibizgrowth` (found via ddg)
 - `203443828052088` (found via ddg)
 - `872702652095435` (found via ddg)
+- `2109860309355224` (found via ddg)
 - `1418563452142232` (found via ddg)
 - `agencybusinessowners` (found via ddg)
 - `1527705608867878` (found via ddg)
@@ -241,6 +242,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `699873467811426` (found via ddg)
 - `lawfirmboms` (found via ddg)
 - `londontechstartups` (found via ddg)
+- `372340252597184` (found via ddg)
+- `1238541634521395` (found via ddg)
 - `450945856135333` (found via ddg)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
@@ -284,6 +287,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `usarestaurantowners` (found via ddg)
 - `UKEntrepreneursandStartups` (found via ddg)
 - `1266602687180357` (found via ddg)
+- `557897198086356` (found via ddg)
 - `usatruckingindustry` (found via ddg)
 - `vwtouaregownersclub` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
@@ -421,6 +425,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `amazonfba` (found via ddg)
 - `irishbiz` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
+- `businessforsalebyowner` (found via ddg)
 - `3719451304764538` (found via ddg)
 - `Dubaiexpat` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)

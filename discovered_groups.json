@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-15T22:25:57+00:00",
- "count": 440,
+ "generated": "2026-08-15T22:50:02+00:00",
+ "count": 445,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -270,6 +270,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2109860309355224",
+   "name": "Entrepreneur and Business Owners Club: eCommerce, Manufacturing ...",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T22:50:02+00:00",
    "last_checked": null
   },
   {
@@ -2223,6 +2238,21 @@
    "last_checked": null
   },
   {
+   "slug": "1238541634521395",
+   "name": "Manufacturing Owners & Growth Leaders",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T22:50:02+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1266602687180357",
    "name": "UK Innovator Founder Visa",
    "status": "pending",
@@ -2583,6 +2613,21 @@
    "last_checked": null
   },
   {
+   "slug": "372340252597184",
+   "name": "Manufacturing & Professional Services Companies for Sale by Owner",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T22:50:02+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "393041794851062",
    "name": "Бизнес - Израиль, реклама. עסקים - ישראל, פרסום | מה זה מיקור חוץ",
    "status": "pending",
@@ -2715,6 +2760,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "557897198086356",
+   "name": "US Manufacturing Owners United",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T22:50:02+00:00",
    "last_checked": null
   },
   {
@@ -6000,6 +6060,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:12:01+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "businessforsalebyowner",
+   "name": "Businesses for Sale BizMrt",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T22:50:02+00:00",
    "last_checked": null
   },
   {
