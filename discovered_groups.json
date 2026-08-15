@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-15T00:56:02+00:00",
- "count": 382,
+ "generated": "2026-08-15T02:12:11+00:00",
+ "count": 387,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -390,6 +390,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "918228853329387",
+   "name": "מגייסים מחפשים מתכנתים, מיקור חוץ, צוות הייטק",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T02:12:11+00:00",
    "last_checked": null
   },
   {
@@ -963,6 +978,21 @@
    "last_checked": null
   },
   {
+   "slug": "398330944446986",
+   "name": "מיקור חוץ ופרילנסרים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T02:12:11+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "4808168705943904",
    "name": "SaaS Founders",
    "status": "pending",
@@ -1140,6 +1170,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "773870394547175",
+   "name": "דרושים בכירים/מנהלים/ניהול /הזדמנויות /פיתוח עסקי/מנכ\"ל | **דרוש/ה מנהל ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T02:12:11+00:00",
    "last_checked": null
   },
   {
@@ -2313,6 +2358,21 @@
    "last_checked": null
   },
   {
+   "slug": "393041794851062",
+   "name": "Бизнес - Израиль, реклама. עסקים - ישראל, פרסום | מה זה מיקור חוץ",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T02:12:11+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "395969970606328",
    "name": "Entrepreneurs of South Africa",
    "status": "pending",
@@ -2415,6 +2475,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "587640282883229",
+   "name": "מקצועני מיקור חוץ \\ אאוטסורסינג \\ עובדים וירטואלים ויצירת עסקים ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T02:12:11+00:00",
    "last_checked": null
   },
   {
