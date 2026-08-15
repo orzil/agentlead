@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-15T21:04:47+00:00",
- "count": 428,
+ "generated": "2026-08-15T21:30:12+00:00",
+ "count": 436,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2118,6 +2118,21 @@
    "last_checked": null
   },
   {
+   "slug": "1065658123462053",
+   "name": "hardware and construction suppliers and owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:30:11+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1082845185201887",
    "name": "Business For Practice Owners",
    "status": "pending",
@@ -2130,6 +2145,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-15T19:35:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1089592466188735",
+   "name": "Construction Business Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:30:11+00:00",
    "last_checked": null
   },
   {
@@ -2175,6 +2205,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-15T20:31:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1169730214931080",
+   "name": "Arizona ( construction ) business owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:30:11+00:00",
    "last_checked": null
   },
   {
@@ -2415,6 +2460,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "219444352540906",
+   "name": "Construction Business Owners Discussion Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:30:11+00:00",
    "last_checked": null
   },
   {
@@ -2730,6 +2790,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-14T19:51:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "6508644522524665",
+   "name": "Construction Owners Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:30:11+00:00",
    "last_checked": null
   },
   {
@@ -3228,6 +3303,21 @@
    "last_checked": null
   },
   {
+   "slug": "aiforconstructioncompanies",
+   "name": "AI for Construction Companies",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:30:11+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "androidhebrew",
    "name": "פיתוח אפליקציות לאנדרואיד",
    "status": "pending",
@@ -3345,6 +3435,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "constructionbusinessowners",
+   "name": "Construction Business Owners Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:30:11+00:00",
    "last_checked": null
   },
   {
@@ -4921,6 +5026,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-08T08:29:54+00:00",
    "last_checked": "2026-08-08T08:39:46+00:00"
+  },
+  {
+   "slug": "3719451304764538",
+   "name": "Construction Industries - USA",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-15T21:30:11+00:00",
+   "last_checked": null
   },
   {
    "slug": "374746629656498",

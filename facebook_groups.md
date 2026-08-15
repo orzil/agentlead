@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-15T21:04:47+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-15T21:30:12+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (392)
+## Not yet probed (400)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -198,7 +198,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `126182808134629` (found via ddg)
 - `1217610615947693` (found via ddg)
 - `506523693145809` (found via ddg)
+- `aiforconstructioncompanies` (found via ddg)
 - `australianbusinessowners` (found via ddg)
+- `1169730214931080` (found via ddg)
 - `ausbizownersclub` (found via ddg)
 - `487009714795019` (found via ddg)
 - `811045979419418` (found via ddg)
@@ -213,6 +215,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1082845185201887` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
 - `810698363860855` (found via ddg)
+- `1089592466188735` (found via ddg)
+- `219444352540906` (found via ddg)
+- `constructionbusinessowners` (found via ddg)
+- `6508644522524665` (found via ddg)
 - `practiceowners` (found via ddg)
 - `dublin.ireland.startups` (found via ddg)
 - `entrepreneurA1` (found via ddg)
@@ -283,6 +289,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `177842636144129` (found via ddg)
 - `webdevelopersglobal` (found via ddg)
 - `2126268814575239` (found via ddg)
+- `1065658123462053` (found via ddg)
 - `magia.israel` (found via ddg)
 - `NH.Freelancer` (found via ddg)
 - `webflowIL` (found via ddg)
@@ -412,6 +419,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `amazonfba` (found via ddg)
 - `irishbiz` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
+- `3719451304764538` (found via ddg)
 - `Dubaiexpat` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
 - `640514310704403` (found via ddg)
