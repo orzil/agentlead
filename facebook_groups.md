@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-16T20:30:52+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-16T20:59:32+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (451)
+## Not yet probed (454)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -104,6 +104,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1687564885295993` (found via ddg)
 - `1057648599597645` (found via ddg)
 - `ai.automation.official` (found via ddg)
+- `chatgpt4u` (found via ddg)
 - `694597369571714` (found via ddg)
 - `868876935222403` (found via ddg)
 - `1125499345000645` (found via ddg)
@@ -161,6 +162,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `295558589617828` (found via ddg)
 - `1017920189630354` (found via ddg)
 - `smallbusinessownercommunityuk` (found via ddg)
+- `893840601407320` (found via ddg)
 - `smallbusinessownersuk2020` (found via ddg)
 - `1479200462154545` (found via ddg)
 - `699367219356902` (found via ddg)
@@ -463,6 +465,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `irishbiz` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessforsalebyowner` (found via ddg)
+- `agencysaaslaunch` (found via ddg)
 - `3719451304764538` (found via ddg)
 - `evolutionunleashedai` (found via ddg)
 - `dropshippinghow` (found via ddg)

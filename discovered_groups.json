@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-16T20:30:52+00:00",
- "count": 487,
+ "generated": "2026-08-16T20:59:32+00:00",
+ "count": 490,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1458,6 +1458,21 @@
    "last_checked": null
   },
   {
+   "slug": "893840601407320",
+   "name": "Small Business Owners Network & Support | Thinking of ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T20:59:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "932457121284600",
    "name": "בינה מלאכותית ישראל - AI",
    "status": "pending",
@@ -1665,6 +1680,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-12T22:03:47+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "chatgpt4u",
+   "name": "AI for Business & Life | Looking for tip on making my gpt ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T20:59:31+00:00",
    "last_checked": null
   },
   {
@@ -6510,6 +6540,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "agencysaaslaunch",
+   "name": "Chat GPT Business Growth Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T20:59:31+00:00",
    "last_checked": null
   },
   {
