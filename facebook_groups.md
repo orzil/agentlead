@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-15T23:58:32+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-16T00:58:43+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (409)
+## Not yet probed (418)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -77,6 +77,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `148693034913710` (found via ddg)
 - `aibizgrowth` (found via ddg)
 - `203443828052088` (found via ddg)
+- `smmagg` (found via ddg)
 - `872702652095435` (found via ddg)
 - `2109860309355224` (found via ddg)
 - `1418563452142232` (found via ddg)
@@ -94,6 +95,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `157185408042870` (found via ddg)
 - `154062152055554` (found via ddg)
 - `738857980085389` (found via ddg)
+- `246704271135223` (found via ddg)
 - `software.devopers.jobs` (found via ddg)
 - `1687564885295993` (found via ddg)
 - `1057648599597645` (found via ddg)
@@ -102,6 +104,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `560810556893848` (found via ddg)
 - `1184176781736143` (found via ddg)
 - `callcentreprojects` (found via ddg)
+- `convertordie` (found via ddg)
 - `659198409489977` (found via ddg)
 - `storeownertips` (found via ddg)
 - `ecommercestoreowner` (found via ddg)
@@ -120,13 +123,19 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
 - `IAOAlliance` (found via ddg)
 - `2152373795524537` (found via ddg)
+- `marketingagencyowners` (found via ddg)
+- `maopublic` (found via ddg)
+- `2978347045629927` (found via ddg)
 - `1639655452994166` (found via ddg)
 - `1198024408768649` (found via ddg)
 - `341776853891812` (found via ddg)
+- `375928432886491` (found via ddg)
 - `2254265064668702` (found via ddg)
 - `outsourceitprojects` (found via ddg)
 - `1674526216166974` (found via ddg)
 - `103362243079109` (found via ddg)
+- `agencyownerlab` (found via ddg)
+- `1290241845505841` (found via ddg)
 - `4808168705943904` (found via ddg)
 - `saasfoundersclub` (found via ddg)
 - `25573135598945626` (found via ddg)
