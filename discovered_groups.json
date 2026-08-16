@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-16T19:34:49+00:00",
- "count": 480,
+ "generated": "2026-08-16T19:56:55+00:00",
+ "count": 487,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -165,6 +165,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1410091330576470",
+   "name": "The Automation OS — AI Agents for Business Owners",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T19:56:54+00:00",
    "last_checked": null
   },
   {
@@ -453,6 +468,36 @@
    "last_checked": null
   },
   {
+   "slug": "ai.agents.n8n.artificial.intelligence",
+   "name": "AI Agents & Artificial Intelligence Developers & Business Owners",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T19:56:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aiagentsforsmallbusiness",
+   "name": "AI Agents for Small Business Owners",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T19:56:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "aiautomationagencyhub",
    "name": "AI Automation Agency Hub",
    "status": "pending",
@@ -480,6 +525,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aiforbusinessownersandfounders",
+   "name": "AI for business owners and founders",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T19:56:54+00:00",
    "last_checked": null
   },
   {
@@ -1305,6 +1365,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "694597369571714",
+   "name": "AI for Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T19:56:54+00:00",
    "last_checked": null
   },
   {
@@ -3810,6 +3885,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aiagentsbusinessbuilders",
+   "name": "AI Agent Business Builders",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T19:56:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aiagentsforbusiness",
+   "name": "AI Agents for Business",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T19:56:54+00:00",
    "last_checked": null
   },
   {

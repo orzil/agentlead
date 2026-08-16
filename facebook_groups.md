@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-16T19:34:49+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-16T19:56:55+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (444)
+## Not yet probed (451)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -70,10 +70,13 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startups.investors.entrepreneurs.mentors.founders` (found via ddg)
 - `289504808119115` (found via ddg)
 - `2004638959986462` (found via ddg)
+- `ai.agents.n8n.artificial.intelligence` (found via ddg)
+- `aiagentsforsmallbusiness` (found via ddg)
 - `676763367129189` (found via ddg)
 - `670629268019461` (found via ddg)
 - `aiautomationagencyhub` (found via ddg)
 - `1182155486119040` (found via ddg)
+- `aiforbusinessownersandfounders` (found via ddg)
 - `148693034913710` (found via ddg)
 - `aibizgrowth` (found via ddg)
 - `203443828052088` (found via ddg)
@@ -89,6 +92,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `626660935015474` (found via ddg)
 - `2815042615255352` (found via ddg)
 - `startupsinvestorsentrepreneursmentors` (found via ddg)
+- `1410091330576470` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
 - `918228853329387` (found via ddg)
 - `JuniorJobs` (found via ddg)
@@ -100,6 +104,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1687564885295993` (found via ddg)
 - `1057648599597645` (found via ddg)
 - `ai.automation.official` (found via ddg)
+- `694597369571714` (found via ddg)
 - `868876935222403` (found via ddg)
 - `1125499345000645` (found via ddg)
 - `australiansmallbusinesowners` (found via ddg)
@@ -220,6 +225,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `126182808134629` (found via ddg)
 - `1217610615947693` (found via ddg)
 - `506523693145809` (found via ddg)
+- `aiagentsbusinessbuilders` (found via ddg)
+- `aiagentsforbusiness` (found via ddg)
 - `aiforconstructioncompanies` (found via ddg)
 - `australianbusinessowners` (found via ddg)
 - `1169730214931080` (found via ddg)
