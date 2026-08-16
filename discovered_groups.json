@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-16T03:27:05+00:00",
- "count": 454,
+ "generated": "2026-08-16T03:43:27+00:00",
+ "count": 460,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1203,6 +1203,21 @@
    "last_checked": null
   },
   {
+   "slug": "580888738978032",
+   "name": "eCommerce For Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T03:43:26+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "609641652802760",
    "name": "משרות בהייטק ובסטארט אפים- עם או בלי נסיון",
    "status": "pending",
@@ -1563,6 +1578,36 @@
    "last_checked": null
   },
   {
+   "slug": "ecomentrepreneurs",
+   "name": "E-Commerce Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T03:43:26+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommerce.entrepreneurs.us",
+   "name": "eCommerce Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T03:43:26+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "ecommercebusinessowners",
    "name": "Ecommerce Business Owners",
    "status": "pending",
@@ -1575,6 +1620,51 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-12T00:01:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommerceentrepreners",
+   "name": "Ecommerce Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T03:43:26+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommerceentrepreneurgroup",
+   "name": "Ecommerce Entrepreneurs - Conversion, Marketing, and Business Growth ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T03:43:26+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommerceentrepreneurs",
+   "name": "eCommerce Entrepreneurs Everywhere",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T03:43:26+00:00",
    "last_checked": null
   },
   {
