@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-16T03:43:27+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-16T04:21:33+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (424)
+## Not yet probed (433)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -150,6 +150,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `saasfoundergroup` (found via ddg)
 - `sfenetworks` (found via ddg)
 - `2044902829088090` (found via ddg)
+- `295558589617828` (found via ddg)
+- `1017920189630354` (found via ddg)
 - `smallbusinessownercommunityuk` (found via ddg)
 - `smallbusinessownersuk2020` (found via ddg)
 - `1479200462154545` (found via ddg)
@@ -279,6 +281,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `789382672475266` (found via ddg)
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
+- `shopifydropshippingstoreownerscommunity` (found via ddg)
+- `3973264012777670` (found via ddg)
+- `1170892738160019` (found via ddg)
 - `singaporecofounders` (found via ddg)
 - `Singaporestartupclub` (found via ddg)
 - `242604115854061` (found via ddg)
@@ -304,6 +309,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1266602687180357` (found via ddg)
 - `557897198086356` (found via ddg)
 - `usatruckingindustry` (found via ddg)
+- `690106716521268` (found via ddg)
 - `vwtouaregownersclub` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
 - `177842636144129` (found via ddg)
@@ -442,6 +448,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessforsalebyowner` (found via ddg)
 - `3719451304764538` (found via ddg)
+- `dropshippinghow` (found via ddg)
 - `Dubaiexpat` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
 - `640514310704403` (found via ddg)
@@ -453,6 +460,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1636991833121307` (found via ddg)
 - `131710772378400` (found via ddg)
 - `PracticeManagersNetwork` (found via ddg)
+- `26706883592324707` (found via ddg)
+- `1788315105435124` (found via ddg)
 - `southafricanbusiness` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
 - `827453710776253` (found via ddg)
