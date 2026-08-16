@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-16T22:48:55+00:00",
- "count": 499,
+ "generated": "2026-08-16T23:23:20+00:00",
+ "count": 500,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -5670,6 +5670,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-14T23:37:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2246504299",
+   "name": "Artificial Intelligence - Natural Language Processing | What is ...",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T23:23:19+00:00",
    "last_checked": null
   },
   {
