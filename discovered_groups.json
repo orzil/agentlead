@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-16T18:33:28+00:00",
- "count": 478,
+ "generated": "2026-08-16T19:03:43+00:00",
+ "count": 480,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1365,6 +1365,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-15T02:12:11+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "868876935222403",
+   "name": "AI | AI Prompts & Automation for Business | I just built an ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T19:03:42+00:00",
    "last_checked": null
   },
   {
@@ -3273,6 +3288,21 @@
    "last_checked": null
   },
   {
+   "slug": "698593531630485",
+   "name": "AI: Artificial Intelligence | Help!! I work for an organisation that ...",
+   "status": "gone",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T08:31:11+00:00",
+   "last_checked": "2026-08-08T08:49:54+00:00"
+  },
+  {
    "slug": "699873467811426",
    "name": "Law Firm Owners and Managers",
    "status": "pending",
@@ -3795,6 +3825,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-15T21:30:11+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aisaas",
+   "name": "Artificial Intelligence LLMs Generative AI (Images Video ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-12T01:24:32+00:00",
    "last_checked": null
   },
   {
@@ -5913,21 +5958,6 @@
    "last_checked": null
   },
   {
-   "slug": "698593531630485",
-   "name": null,
-   "status": "gone",
-   "relevance": 0,
-   "region": "GLOBAL",
-   "found_via": "reddit_search",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T08:31:11+00:00",
-   "last_checked": "2026-08-08T08:49:54+00:00"
-  },
-  {
    "slug": "701042556387211",
    "name": null,
    "status": "gone",
@@ -6408,21 +6438,6 @@
    "last_checked": null
   },
   {
-   "slug": "aisaas",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-12T01:24:32+00:00",
-   "last_checked": null
-  },
-  {
    "slug": "aiseomastermind",
    "name": null,
    "status": "gone",
@@ -6705,6 +6720,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T09:19:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "evolutionunleashedai",
+   "name": "Custom GPT Builders: One Folder Might Be Smarter",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-16T19:03:42+00:00",
    "last_checked": null
   },
   {

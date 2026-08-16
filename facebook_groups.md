@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-16T18:33:28+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-16T19:03:43+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (442)
+## Not yet probed (444)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -100,6 +100,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1687564885295993` (found via ddg)
 - `1057648599597645` (found via ddg)
 - `ai.automation.official` (found via ddg)
+- `868876935222403` (found via ddg)
 - `1125499345000645` (found via ddg)
 - `australiansmallbusinesowners` (found via ddg)
 - `saasautomationexpertszapierpabblymake` (found via ddg)
@@ -222,6 +223,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aiforconstructioncompanies` (found via ddg)
 - `australianbusinessowners` (found via ddg)
 - `1169730214931080` (found via ddg)
+- `aisaas` (found via leads_db)
 - `ausbizownersclub` (found via ddg)
 - `487009714795019` (found via ddg)
 - `811045979419418` (found via ddg)
@@ -430,7 +432,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `liatn2` (found via leads_db)
 - `196799535583425` (found via leads_db)
 - `talkingautomation` (found via leads_db)
-- `aisaas` (found via leads_db)
 - `1661983438866806` (found via leads_db)
 - `595424764221375` (found via leads_db)
 - `2079238568790422` (found via leads_db)
@@ -456,6 +457,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessforsalebyowner` (found via ddg)
 - `3719451304764538` (found via ddg)
+- `evolutionunleashedai` (found via ddg)
 - `dropshippinghow` (found via ddg)
 - `Dubaiexpat` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
