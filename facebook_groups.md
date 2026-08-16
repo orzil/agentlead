@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-16T21:59:23+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-16T22:24:52+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (454)
+## Not yet probed (463)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -227,12 +227,18 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `126182808134629` (found via ddg)
 - `1217610615947693` (found via ddg)
 - `506523693145809` (found via ddg)
+- `1119683669324970` (found via ddg)
 - `aiagentsbusinessbuilders` (found via ddg)
 - `aiagentsforbusiness` (found via ddg)
+- `chatgptpromptsandaitools` (found via ddg)
+- `aiprompthouse` (found via ddg)
 - `aiforconstructioncompanies` (found via ddg)
 - `australianbusinessowners` (found via ddg)
+- `716483187640234` (found via ddg)
 - `1169730214931080` (found via ddg)
 - `aisaas` (found via leads_db)
+- `1348711550214520` (found via ddg)
+- `officialartificialintelligence` (found via ddg)
 - `ausbizownersclub` (found via ddg)
 - `487009714795019` (found via ddg)
 - `811045979419418` (found via ddg)
@@ -248,6 +254,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1082845185201887` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
 - `810698363860855` (found via ddg)
+- `881330171044518` (found via ddg)
 - `1089592466188735` (found via ddg)
 - `219444352540906` (found via ddg)
 - `constructionbusinessowners` (found via ddg)
@@ -285,6 +292,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `NewZealandSmallBusinessOwnersNetworking` (found via ddg)
 - `newzealandbusinessowners` (found via ddg)
 - `nzsmallbusinessnetwork` (found via ddg)
+- `763385485101356` (found via ddg)
 - `565066728282460` (found via ddg)
 - `186494045169202` (found via ddg)
 - `581853060030923` (found via ddg)
@@ -466,6 +474,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessforsalebyowner` (found via ddg)
 - `agencysaaslaunch` (found via ddg)
+- `claudeprompts` (found via ddg)
 - `3719451304764538` (found via ddg)
 - `evolutionunleashedai` (found via ddg)
 - `dropshippinghow` (found via ddg)
