@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-17T03:44:31+00:00",
- "count": 507,
+ "generated": "2026-08-17T04:31:49+00:00",
+ "count": 510,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -345,6 +345,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T22:13:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "549774260167586",
+   "name": "דרושים משרות טק - הייטק, ביוטק, פינטק, פודטק",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T04:30:21+00:00",
    "last_checked": null
   },
   {
@@ -1158,6 +1173,21 @@
    "last_checked": null
   },
   {
+   "slug": "320942198348539",
+   "name": "עיבוד תמונה, ראיה ממוחשבת, למידת מכונה ולמידה עמוקה Group",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T04:30:10+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "341776853891812",
    "name": "New Zealand Small Business Owners",
    "status": "pending",
@@ -1500,6 +1530,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-16T20:59:31+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "926122620829127",
+   "name": "משרות הייטק שוות",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T04:30:21+00:00",
    "last_checked": null
   },
   {
@@ -2565,7 +2610,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:15:27+00:00",
-   "last_checked": "2026-08-10T05:05:38+00:00"
+   "last_checked": "2026-08-17T04:30:30+00:00"
   },
   {
    "slug": "1019634092006335",
