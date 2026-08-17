@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-17T22:42:52+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-17T23:02:51+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -420,6 +420,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `androidhebrew` (found via ddg)
 - `freelanceIL` (found via ddg)
 - `IsraeliFreelancersUSA` (found via ddg)
+- `107914806514702` (found via ddg)
 - `610199959120671` (found via ddg)
 - `832763754922199` (found via ddg)
 - `919359532765118` (found via ddg)
@@ -439,7 +440,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `491513598224058` (found via reddit_search)
 - `2475192752695227` (found via reddit_search)
 - `804417720029561` (found via reddit_search)
-- `107914806514702` (found via ddg)
 - `redlighttherapy101` (found via reddit_search)
 - `222047816070167` (found via reddit_search)
 - `80466465571` (found via reddit_search)

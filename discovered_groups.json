@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-17T22:42:52+00:00",
+ "generated": "2026-08-17T23:02:51+00:00",
  "count": 550,
  "groups": [
   {
@@ -2775,6 +2775,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-15T21:30:11+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "107914806514702",
+   "name": "פרילנסרים לענף הבנייה- אדריכלות, עיצוב פנים, הנדסה, קבלנים ועוד.",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-08T08:34:39+00:00",
    "last_checked": null
   },
   {
@@ -5565,21 +5580,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-10T05:02:31+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "107914806514702",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "ddg",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-08T08:34:39+00:00",
    "last_checked": null
   },
   {
