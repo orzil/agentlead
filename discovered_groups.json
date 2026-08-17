@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-17T19:30:49+00:00",
- "count": 532,
+ "generated": "2026-08-17T20:01:14+00:00",
+ "count": 539,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -420,6 +420,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-12T17:59:00+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "724584707557879",
+   "name": "Business Owners, Entrepreneurs and StartUps",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T20:01:13+00:00",
    "last_checked": null
   },
   {
@@ -3123,6 +3138,21 @@
    "last_checked": null
   },
   {
+   "slug": "1ib.marioschaefer.032",
+   "name": "Entrepreneurs of Europe",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T20:01:13+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2042129792706031",
    "name": "Business StartUps India",
    "status": "pending",
@@ -3180,6 +3210,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-15T21:30:11+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "222801067848068",
+   "name": "European B2B Startups, Startup Studio and Venture Builders",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T20:01:13+00:00",
    "last_checked": null
   },
   {
@@ -4173,6 +4218,21 @@
    "last_checked": null
   },
   {
+   "slug": "StartupEuropeClub",
+   "name": "Startup Europe Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T20:01:13+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "StartupGrindSingapore",
    "name": "Startup Grind Singapore",
    "status": "pending",
@@ -4953,6 +5013,21 @@
    "last_checked": null
   },
   {
+   "slug": "sandtracks",
+   "name": "Digital Nomad Founders",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T20:01:13+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "sanfrancisco.california.startups",
    "name": "San Francisco Bay Area Silicon Valley Startups",
    "status": "pending",
@@ -5130,6 +5205,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupeurope",
+   "name": "Startup Europe",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T20:01:13+00:00",
    "last_checked": null
   },
   {
@@ -7800,6 +7890,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T18:12:01+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "remoteeurope",
+   "name": "Remote Work in Europe",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T20:01:13+00:00",
    "last_checked": null
   },
   {

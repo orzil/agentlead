@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-17T19:30:49+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-17T20:01:14+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (496)
+## Not yet probed (503)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -81,6 +81,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `148693034913710` (found via ddg)
 - `aibizgrowth` (found via ddg)
 - `203443828052088` (found via ddg)
+- `724584707557879` (found via ddg)
 - `smmagg` (found via ddg)
 - `872702652095435` (found via ddg)
 - `2109860309355224` (found via ddg)
@@ -275,12 +276,15 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `constructionbusinessowners` (found via ddg)
 - `6508644522524665` (found via ddg)
 - `practiceowners` (found via ddg)
+- `sandtracks` (found via ddg)
 - `dublin.ireland.startups` (found via ddg)
 - `entrepreneurA1` (found via ddg)
 - `entrepreneursletsbuildtogether` (found via ddg)
 - `165114167522089` (found via ddg)
 - `entrepreneursnetworkingco` (found via ddg)
+- `1ib.marioschaefer.032` (found via ddg)
 - `395969970606328` (found via ddg)
+- `222801067848068` (found via ddg)
 - `FounderNation` (found via ddg)
 - `290592000669370` (found via ddg)
 - `findingsuvfounders` (found via ddg)
@@ -340,6 +344,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1374006380366953` (found via ddg)
 - `startupcaliforniaclub` (found via ddg)
 - `startupdirectoryuk` (found via ddg)
+- `startupeurope` (found via ddg)
+- `StartupEuropeClub` (found via ddg)
 - `StartupGrindSingapore` (found via ddg)
 - `ipsindia` (found via ddg)
 - `242109094001690` (found via ddg)
@@ -520,6 +526,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1636991833121307` (found via ddg)
 - `131710772378400` (found via ddg)
 - `PracticeManagersNetwork` (found via ddg)
+- `remoteeurope` (found via ddg)
 - `26706883592324707` (found via ddg)
 - `1788315105435124` (found via ddg)
 - `southafricanbusiness` (found via ddg)
