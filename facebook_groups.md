@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-17T05:08:05+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-17T17:29:46+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (479)
+## Not yet probed (486)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -164,6 +164,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `295558589617828` (found via ddg)
 - `1017920189630354` (found via ddg)
 - `smallbusinessownercommunityuk` (found via ddg)
+- `SmallBusinessOwnersAustralia` (found via ddg)
+- `smallbusinessownersmelbourne` (found via ddg)
 - `893840601407320` (found via ddg)
 - `smallbusinessownersuk2020` (found via ddg)
 - `312322538374187` (found via ddg)
@@ -181,6 +183,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2120217412101108` (found via ddg)
 - `345613409204417` (found via ddg)
 - `1248313253326186` (found via ddg)
+- `smallbusinesssydney` (found via ddg)
 - `system.automation.ai.agents.n8n.zapier.ifttt` (found via ddg)
 - `founderx` (found via ddg)
 - `TESNetwork` (found via ddg)
@@ -282,6 +285,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1050679009595609` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `businessowneraustralia` (found via ddg)
+- `businessvic` (found via ddg)
 - `Speedcamalerts` (found via ddg)
 - `lawfirmownersandtechnology` (found via ddg)
 - `lawfirmandcpaownerscommunity` (found via ddg)
@@ -484,6 +488,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1727446317476806` (found via ddg)
 - `amazonfba` (found via ddg)
 - `2246504299` (found via ddg)
+- `BusinesNetworkingAustralia` (found via ddg)
 - `irishbiz` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessforsalebyowner` (found via ddg)
@@ -509,6 +514,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1788315105435124` (found via ddg)
 - `southafricanbusiness` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
+- `2211430848` (found via ddg)
+- `SydneyEstateSydneyRdHungerfordAreaCreweCommunity` (found via ddg)
 - `827453710776253` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
 - `toronto.entrepreneurs.startups` (found via ddg)

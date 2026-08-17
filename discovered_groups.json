@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-17T05:08:05+00:00",
- "count": 515,
+ "generated": "2026-08-17T17:29:46+00:00",
+ "count": 522,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1623,6 +1623,21 @@
    "last_checked": null
   },
   {
+   "slug": "SmallBusinessOwnersAustralia",
+   "name": "Small Business Owners Australia",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T17:29:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "Software.Developers.Israel",
    "name": "דרושים - משרות הנדסת תוכנה - Java, C#, C++, C, RT, .Net Devlopers",
    "status": "pending",
@@ -2418,6 +2433,21 @@
    "last_checked": null
   },
   {
+   "slug": "smallbusinessownersmelbourne",
+   "name": "Small Business Owners Melbourne",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T17:29:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "smallbusinessownersuk2020",
    "name": "Small Business Owners UK",
    "status": "pending",
@@ -2430,6 +2460,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:57:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbusinesssydney",
+   "name": "Sydney Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T17:29:45+00:00",
    "last_checked": null
   },
   {
@@ -4293,6 +4338,21 @@
    "last_checked": null
   },
   {
+   "slug": "businessvic",
+   "name": "I am a business owner in Victoria, Australia",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T17:29:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "californiausabuysell",
    "name": "California Innovation, Startup & Business Network",
    "status": "pending",
@@ -5808,6 +5868,21 @@
    "last_checked": null
   },
   {
+   "slug": "2211430848",
+   "name": "Sydney",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T17:29:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2211686475827801",
    "name": null,
    "status": "gone",
@@ -6708,6 +6783,21 @@
    "last_checked": null
   },
   {
+   "slug": "BusinesNetworkingAustralia",
+   "name": "Business Networking Australia: Sydney,Melbourne,Perth ...",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T17:29:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "DeepNetGroup",
    "name": null,
    "status": "pending",
@@ -6870,6 +6960,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "SydneyEstateSydneyRdHungerfordAreaCreweCommunity",
+   "name": "Sydney Estate / Sydney Road / Hungerford Road areas - Meta Business Suite",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T17:29:45+00:00",
    "last_checked": null
   },
   {
