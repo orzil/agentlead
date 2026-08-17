@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-17T00:56:58+00:00",
- "count": 501,
+ "generated": "2026-08-17T02:19:12+00:00",
+ "count": 504,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -768,6 +768,21 @@
    "last_checked": null
   },
   {
+   "slug": "1380135855880231",
+   "name": "USA Small Business Owners Community",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T02:19:12+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1479200462154545",
    "name": "Small Business Owners of America",
    "status": "pending",
@@ -1125,6 +1140,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-16T00:58:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "312322538374187",
+   "name": "Small Business Owners USA",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T02:19:12+00:00",
    "last_checked": null
   },
   {
@@ -4845,6 +4875,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-15T20:31:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "usasmallbusinesscommunity",
+   "name": "USA Small Business community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T02:19:12+00:00",
    "last_checked": null
   },
   {

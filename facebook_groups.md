@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-17T00:56:58+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-17T02:19:12+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (465)
+## Not yet probed (468)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -164,6 +164,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbusinessownercommunityuk` (found via ddg)
 - `893840601407320` (found via ddg)
 - `smallbusinessownersuk2020` (found via ddg)
+- `312322538374187` (found via ddg)
 - `1479200462154545` (found via ddg)
 - `699367219356902` (found via ddg)
 - `socialmediaforsmallbusinessownersuk` (found via ddg)
@@ -183,6 +184,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `TESNetwork` (found via ddg)
 - `uksmallbusinessesadvertsfree` (found via ddg)
 - `2018989461513326` (found via ddg)
+- `1380135855880231` (found via ddg)
 - `uxdesignercommunity` (found via ddg)
 - `unfilteredagency` (found via ddg)
 - `202402986297944` (found via ddg)
@@ -333,6 +335,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1266602687180357` (found via ddg)
 - `557897198086356` (found via ddg)
 - `usatruckingindustry` (found via ddg)
+- `usasmallbusinesscommunity` (found via ddg)
 - `690106716521268` (found via ddg)
 - `vwtouaregownersclub` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
