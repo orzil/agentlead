@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-17T02:19:12+00:00",
- "count": 504,
+ "generated": "2026-08-17T03:27:01+00:00",
+ "count": 507,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -5343,6 +5343,21 @@
    "last_checked": null
   },
   {
+   "slug": "1627499834129884",
+   "name": "Central Texas Events and Happenings",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T03:27:00+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1635747173357439",
    "name": "נדל\"ן ישראל",
    "status": "pending",
@@ -5820,6 +5835,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-10T05:02:31+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "252055259506259",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T02:59:22+00:00",
    "last_checked": null
   },
   {
@@ -6600,6 +6630,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T09:19:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "HABLAAUSTIN",
+   "name": "HABLA (Hispanic Advocates Business Leaders of Austin)",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T03:27:00+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-17T02:19:12+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-17T03:27:01+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (468)
+## Not yet probed (471)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -464,6 +464,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `claudeaicommunity` (found via leads_db)
 - `codanics` (found via leads_db)
 - `congdongarduinovn` (found via leads_db)
+- `252055259506259` (found via leads_db)
 - `1164103449222930` (found via ddg)
 - `arcsolutions` (found via ddg)
 - `1622740769010505` (found via ddg)
@@ -478,6 +479,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `irishbiz` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessforsalebyowner` (found via ddg)
+- `1627499834129884` (found via ddg)
 - `agencysaaslaunch` (found via ddg)
 - `claudeprompts` (found via ddg)
 - `3719451304764538` (found via ddg)
@@ -486,6 +488,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `Dubaiexpat` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via ddg)
 - `640514310704403` (found via ddg)
+- `HABLAAUSTIN` (found via ddg)
 - `StartupIreland` (found via ddg)
 - `lawfirmowners` (found via ddg)
 - `144368425368218` (found via ddg)
