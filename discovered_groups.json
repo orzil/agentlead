@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-17T04:31:49+00:00",
- "count": 510,
+ "generated": "2026-08-17T05:08:05+00:00",
+ "count": 515,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -105,6 +105,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T21:29:16+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "californiaentrepreneursstartups",
+   "name": "California: Entrepreneurs | Startups | Small Business Owners",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T05:08:04+00:00",
    "last_checked": null
   },
   {
@@ -4038,6 +4053,21 @@
    "last_checked": null
   },
   {
+   "slug": "SucessfulFoundersClub",
+   "name": "Unicorn Founders Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T05:08:04+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "TelAviv.MivzakLive",
    "name": "חדשות תל אביב והמרכז | סטארטאפ ישראלי חדש פיתח טכנולוגיית צילום חדשנית ...",
    "status": "pending",
@@ -4260,6 +4290,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "californiausabuysell",
+   "name": "California Innovation, Startup & Business Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T05:08:04+00:00",
    "last_checked": null
   },
   {
@@ -4713,6 +4758,21 @@
    "last_checked": null
   },
   {
+   "slug": "sanfrancisco.california.startups",
+   "name": "San Francisco Bay Area Silicon Valley Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T05:08:04+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "sasmallbusinessnetwork",
    "name": "Small Business Network South Africa",
    "status": "pending",
@@ -4845,6 +4905,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:57:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupcaliforniaclub",
+   "name": "Startup California Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T05:08:04+00:00",
    "last_checked": null
   },
   {

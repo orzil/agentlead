@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-17T04:31:49+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-17T05:08:05+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (474)
+## Not yet probed (479)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -63,6 +63,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ai.ireland.community` (found via ddg)
 - `facebook.comgroupsaiforsmallbusinessowners` (found via ddg)
 - `aiforsmallbusinessgrowth` (found via ddg)
+- `californiaentrepreneursstartups` (found via ddg)
 - `1162970365658943` (found via ddg)
 - `375508557190184` (found via ddg)
 - `datin1` (found via ddg)
@@ -258,6 +259,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1766511223953040` (found via ddg)
 - `1082845185201887` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
+- `californiausabuysell` (found via ddg)
 - `810698363860855` (found via ddg)
 - `881330171044518` (found via ddg)
 - `1089592466188735` (found via ddg)
@@ -308,6 +310,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `748711238658025` (found via ddg)
 - `restaurantownersvendorsservices` (found via ddg)
 - `789382672475266` (found via ddg)
+- `sanfrancisco.california.startups` (found via ddg)
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
 - `shopifydropshippingstoreownerscommunity` (found via ddg)
@@ -323,6 +326,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `sasmallbusinessnetwork` (found via ddg)
 - `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
+- `startupcaliforniaclub` (found via ddg)
 - `startupdirectoryuk` (found via ddg)
 - `StartupGrindSingapore` (found via ddg)
 - `1094677854022218` (found via ddg)
@@ -339,6 +343,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `557897198086356` (found via ddg)
 - `usatruckingindustry` (found via ddg)
 - `usasmallbusinesscommunity` (found via ddg)
+- `SucessfulFoundersClub` (found via ddg)
 - `690106716521268` (found via ddg)
 - `vwtouaregownersclub` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
