@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-17T20:45:12+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-17T21:11:30+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (503)
+## Not yet probed (509)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -104,6 +104,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `738857980085389` (found via ddg)
 - `246704271135223` (found via ddg)
 - `software.devopers.jobs` (found via ddg)
+- `1332660857778965` (found via ddg)
 - `1687564885295993` (found via ddg)
 - `1057648599597645` (found via ddg)
 - `ai.automation.official` (found via ddg)
@@ -247,6 +248,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aiforconstructioncompanies` (found via ddg)
 - `australianbusinessowners` (found via ddg)
 - `716483187640234` (found via ddg)
+- `arabentrepreneurs` (found via ddg)
 - `1169730214931080` (found via ddg)
 - `aisaas` (found via leads_db)
 - `1348711550214520` (found via ddg)
@@ -308,6 +310,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `372340252597184` (found via ddg)
 - `1238541634521395` (found via ddg)
 - `450945856135333` (found via ddg)
+- `85350708778` (found via ddg)
+- `23101870240` (found via ddg)
+- `157568706504` (found via ddg)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
 - `1356416033271840` (found via ddg)
@@ -317,6 +322,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `nzsmallbusinessnetwork` (found via ddg)
 - `763385485101356` (found via ddg)
 - `565066728282460` (found via ddg)
+- `jobseekersdubai` (found via ddg)
 - `186494045169202` (found via ddg)
 - `581853060030923` (found via ddg)
 - `192784851327609` (found via ddg)
