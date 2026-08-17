@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-17T17:58:40+00:00",
- "count": 522,
+ "generated": "2026-08-17T18:52:21+00:00",
+ "count": 532,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -900,6 +900,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-12T20:07:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1715729438698600",
+   "name": "Startups & Entrepreneurs - India",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T18:52:20+00:00",
    "last_checked": null
   },
   {
@@ -2163,6 +2178,21 @@
    "last_checked": null
   },
   {
+   "slug": "indianstartupinvestor",
+   "name": "Indian Startup Entrepreneurs, Investors & Innovators",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T18:52:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "israel.hightech",
    "name": "משרות הייטק בין חברים, לפני שמתפרסמות בחברות כ\"א",
    "status": "pending",
@@ -3093,6 +3123,21 @@
    "last_checked": null
   },
   {
+   "slug": "2042129792706031",
+   "name": "Business StartUps India",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T18:52:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "206071852932684",
    "name": "קריירה ישראלית | טכנולוגי, הייטק, תוכנה",
    "status": "pending",
@@ -3150,6 +3195,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "239247780029186",
+   "name": "Business Startup India",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T18:52:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "242109094001690",
+   "name": "Startup India Business Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T18:52:20+00:00",
    "last_checked": null
   },
   {
@@ -3360,6 +3435,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-09T02:02:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "468842229978135",
+   "name": "India Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T18:52:20+00:00",
    "last_checked": null
   },
   {
@@ -3930,6 +4020,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-08T23:25:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "IndiaStartup",
+   "name": "India Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T18:52:20+00:00",
    "last_checked": null
   },
   {
@@ -4578,6 +4683,36 @@
    "last_checked": null
   },
   {
+   "slug": "india.startups",
+   "name": "India Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T18:52:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ipsindia",
+   "name": "Startup India",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T18:52:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "israel.hitech.jobs",
    "name": "משרות מחברות היי-טק בישראל",
    "status": "pending",
@@ -5025,6 +5160,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-13T17:41:15+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupindiaunited",
+   "name": "Business StartUps India",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-17T18:52:20+00:00",
    "last_checked": null
   },
   {

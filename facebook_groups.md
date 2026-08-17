@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-17T17:58:40+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-17T18:52:21+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (486)
+## Not yet probed (496)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -135,6 +135,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `highlevelagencyowner` (found via ddg)
 - `directvahiring` (found via ddg)
 - `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
+- `indianstartupinvestor` (found via ddg)
 - `IAOAlliance` (found via ddg)
 - `2152373795524537` (found via ddg)
 - `marketingagencyowners` (found via ddg)
@@ -183,6 +184,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2120217412101108` (found via ddg)
 - `345613409204417` (found via ddg)
 - `1248313253326186` (found via ddg)
+- `1715729438698600` (found via ddg)
 - `smallbusinesssydney` (found via ddg)
 - `system.automation.ai.agents.n8n.zapier.ifttt` (found via ddg)
 - `founderx` (found via ddg)
@@ -262,6 +264,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1766511223953040` (found via ddg)
 - `1082845185201887` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
+- `startupindiaunited` (found via ddg)
+- `2042129792706031` (found via ddg)
+- `239247780029186` (found via ddg)
 - `californiausabuysell` (found via ddg)
 - `810698363860855` (found via ddg)
 - `881330171044518` (found via ddg)
@@ -286,6 +291,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `freelancersrequired` (found via ddg)
 - `businessowneraustralia` (found via ddg)
 - `businessvic` (found via ddg)
+- `IndiaStartup` (found via ddg)
+- `india.startups` (found via ddg)
+- `468842229978135` (found via ddg)
 - `Speedcamalerts` (found via ddg)
 - `lawfirmownersandtechnology` (found via ddg)
 - `lawfirmandcpaownerscommunity` (found via ddg)
@@ -333,6 +341,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupcaliforniaclub` (found via ddg)
 - `startupdirectoryuk` (found via ddg)
 - `StartupGrindSingapore` (found via ddg)
+- `ipsindia` (found via ddg)
+- `242109094001690` (found via ddg)
 - `1094677854022218` (found via ddg)
 - `StartupIrelandClub` (found via ddg)
 - `startupincanada` (found via ddg)
