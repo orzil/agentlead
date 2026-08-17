@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-17T21:11:30+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-17T22:05:47+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (509)
+## Not yet probed (514)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -291,6 +291,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `290592000669370` (found via ddg)
 - `findingsuvfounders` (found via ddg)
 - `glidecommunity` (found via ddg)
+- `588730763335326` (found via ddg)
 - `710945690436694` (found via ddg)
 - `1100802378915693` (found via ddg)
 - `1050679009595609` (found via ddg)
@@ -323,6 +324,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `763385485101356` (found via ddg)
 - `565066728282460` (found via ddg)
 - `jobseekersdubai` (found via ddg)
+- `usremotenowhiring` (found via ddg)
 - `186494045169202` (found via ddg)
 - `581853060030923` (found via ddg)
 - `192784851327609` (found via ddg)
@@ -375,6 +377,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `vancouverstartupcommunity` (found via ddg)
 - `177842636144129` (found via ddg)
 - `webdevelopersglobal` (found via ddg)
+- `1149304996574074` (found via ddg)
+- `workfromhomeopportunities` (found via ddg)
 - `935208569212244` (found via ddg)
 - `zapier` (found via ddg)
 - `2126268814575239` (found via ddg)
@@ -545,6 +549,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `736631881894510` (found via ddg)
 - `474293496993273` (found via ddg)
 - `dubaisocialsandbusinesses` (found via ddg)
+- `775313484905684` (found via ddg)
 - `zapierusercommunity` (found via ddg)
 - `n8nofficial` (found via ddg)
 - `733702462656150` (found via ddg)
