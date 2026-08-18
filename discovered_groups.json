@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-18T19:30:43+00:00",
- "count": 4,
+ "generated": "2026-08-18T19:52:30+00:00",
+ "count": 6,
  "groups": [
   {
    "slug": "1964357920826126",
@@ -30,6 +30,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T18:50:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "Software.Developers.Israel",
+   "name": "דרוש מפתח Full Stack Developer להגשת מועמדות:",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-18T19:52:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2786770884931764",
+   "name": "דרוש מפתח/ת Full Stack",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-18T19:52:29+00:00",
    "last_checked": null
   },
   {
