@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-18T20:29:40+00:00",
- "count": 6,
+ "generated": "2026-08-18T20:52:50+00:00",
+ "count": 9,
  "groups": [
   {
    "slug": "1964357920826126",
@@ -15,6 +15,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T18:50:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "devjob",
+   "name": "משרות מתכנתים/ות",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-18T20:52:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "iec.org.il",
+   "name": "Iec - קהילת היזמות של ישראל | סטארטאפים | יזמים | משקיעים | קרנות הון ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-18T20:52:50+00:00",
    "last_checked": null
   },
   {
@@ -45,6 +75,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T19:52:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "webflowIL",
+   "name": "Webflow Israel | וובפלו ישראל | # מחפש מפתח וובפלואו לפרויקט לאתר של ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-18T20:52:50+00:00",
    "last_checked": null
   },
   {
