@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-18T22:53:51+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-18T23:25:24+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (32)
+## Not yet probed (41)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -66,8 +66,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `chatbotjobs` (found via config)
 - `361717460552082` (found via config)
 - `556739801135588` (found via config)
+- `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
+- `israelaiorg` (found via ddg)
+- `2055437551629206` (found via ddg)
+- `ai.israel.official` (found via ddg)
+- `2920195654986279` (found via ddg)
 - `1964357920826126` (found via ddg)
+- `aichatgptisrael` (found via ddg)
 - `devjob` (found via ddg)
 - `developersmeetstartups` (found via config)
 - `ComputerVisionGroup` (found via config)
@@ -78,7 +84,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `inventivehub` (found via config)
 - `remotestartupjobs` (found via config)
 - `nodemation` (found via config)
+- `magia.israel` (found via ddg)
 - `webflowIL` (found via ddg)
+- `1338202816787610` (found via ddg)
+- `289118210401946` (found via ddg)
 - `Software.Developers.Israel` (found via ddg)
 - `544976585999596` (found via ddg)
 - `692392677552880` (found via ddg)
