@@ -1,7 +1,37 @@
 {
- "generated": "2026-08-18T17:58:14+00:00",
- "count": 2,
+ "generated": "2026-08-18T18:50:28+00:00",
+ "count": 4,
  "groups": [
+  {
+   "slug": "1964357920826126",
+   "name": "דרושים מתכנתים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-18T18:50:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "692392677552880",
+   "name": "קהילת המתכנתים - מתכנתים עוזרים לתוכניתנים",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-18T18:50:27+00:00",
+   "last_checked": null
+  },
   {
    "slug": "2936517136591278",
    "name": null,
