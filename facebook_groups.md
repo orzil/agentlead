@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-18T03:09:36+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-18T03:39:24+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (515)
+## Not yet probed (516)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -399,6 +399,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `lost.geographers` (found via ddg)
 - `917351158306121` (found via ddg)
 - `705061861437260` (found via ddg)
+- `1043354929089973` (found via ddg)
 - `freelanceisrael` (found via ddg)
 - `TelAviv.MivzakLive` (found via ddg)
 - `624543140573742` (found via ddg)
