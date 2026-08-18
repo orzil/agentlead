@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-18T21:27:49+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-18T22:02:51+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (26)
+## Not yet probed (30)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -83,5 +83,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `692392677552880` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
 - `2936517136591278` (found via leads_db)
+- `uxdesignercommunity` (found via leads_db)
+- `1329241984892387` (found via leads_db)
+- `congdongarduinovn` (found via leads_db)
+- `thaidev` (found via leads_db)
 - `1271378943826323` (found via config)
 - `2786770884931764` (found via ddg)
