@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-19T17:54:24+00:00",
- "count": 55,
+ "generated": "2026-08-19T18:39:41+00:00",
+ "count": 64,
  "groups": [
   {
    "slug": "JuniorJobs",
@@ -15,6 +15,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "us.small.business.startup.founderss",
+   "name": "United States Small Business & Startup Founders",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1248313253326186",
+   "name": "Startup Founders USA",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T18:39:41+00:00",
    "last_checked": null
   },
   {
@@ -75,6 +105,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2120217412101108",
+   "name": "Startup Founders Network",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T18:39:41+00:00",
    "last_checked": null
   },
   {
@@ -228,6 +273,21 @@
    "last_checked": null
   },
   {
+   "slug": "founderx",
+   "name": "The Founders Exchange ~ Startup Founder | Co-founder | Angel Investors",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "iec.org.il",
    "name": "Iec - קהילת היזמות של ישראל | סטארטאפים | יזמים | משקיעים | קרנות הון ...",
    "status": "pending",
@@ -318,6 +378,51 @@
    "last_checked": null
   },
   {
+   "slug": "startupfounderclub",
+   "name": "Startup Founder Club | USA • UK • UAE • AU • DE • SG",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupfounderforum",
+   "name": "Startup Founder Forum",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupfounders",
+   "name": "Startup Founders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1338202816787610",
    "name": "בינה מלאכותית ישראל",
    "status": "pending",
@@ -345,6 +450,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2687952944937992",
+   "name": "Early-Stage Founders Network (Verified)",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T18:39:41+00:00",
    "last_checked": null
   },
   {
@@ -540,6 +660,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupfrat",
+   "name": "Startup-Frat Hangout",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T18:39:41+00:00",
    "last_checked": null
   },
   {

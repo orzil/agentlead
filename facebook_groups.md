@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-19T17:54:24+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-19T18:39:41+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,18 +55,25 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (72)
+## Not yet probed (81)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
 - `3501761776707095` (found via config)
 - `aiautomationagency.aaa` (found via config)
 - `2133987156657804` (found via config)
+- `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `aibusinesstools` (found via config)
 - `chatbotjobs` (found via config)
 - `361717460552082` (found via config)
 - `556739801135588` (found via config)
+- `startupfounderclub` (found via ddg)
+- `startupfounderforum` (found via ddg)
+- `startupfounders` (found via ddg)
+- `2120217412101108` (found via ddg)
+- `1248313253326186` (found via ddg)
+- `founderx` (found via ddg)
 - `1266824747259615` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
@@ -89,6 +96,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `developersmeetstartups` (found via config)
 - `320942198348539` (found via ddg)
 - `ComputerVisionGroup` (found via config)
+- `2687952944937992` (found via ddg)
 - `findyourcofounder` (found via config)
 - `Founder.CEOs` (found via config)
 - `foundersspace` (found via config)
@@ -96,6 +104,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `makeautomation` (found via config)
 - `inventivehub` (found via config)
 - `remotestartupjobs` (found via config)
+- `startupfrat` (found via ddg)
 - `nodemation` (found via config)
 - `magia.israel` (found via ddg)
 - `webflowIL` (found via ddg)
