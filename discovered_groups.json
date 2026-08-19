@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-19T19:11:55+00:00",
- "count": 64,
+ "generated": "2026-08-19T19:42:29+00:00",
+ "count": 73,
  "groups": [
   {
    "slug": "JuniorJobs",
@@ -78,6 +78,21 @@
    "last_checked": null
   },
   {
+   "slug": "1900357930607912",
+   "name": "SaaS Founders Hub",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T19:42:29+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1964357920826126",
    "name": "דרושים מתכנתים",
    "status": "pending",
@@ -120,6 +135,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "25573135598945626",
+   "name": "SaaS Founders Club",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T19:42:29+00:00",
    "last_checked": null
   },
   {
@@ -183,6 +213,21 @@
    "last_checked": null
   },
   {
+   "slug": "4808168705943904",
+   "name": "SaaS Founders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T19:42:29+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "482067651607538",
    "name": "אופק עסקי | אוטומציה ובינה מלאכותית",
    "status": "pending",
@@ -210,6 +255,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T02:16:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "993304299789457",
+   "name": "SaaS Founders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T19:42:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "SaaSFounders",
+   "name": "SaaS Revenue Growth by the Founders, for the Founders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T19:42:29+00:00",
    "last_checked": null
   },
   {
@@ -375,6 +450,66 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T03:24:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasfoundergroup",
+   "name": "Saas Founder Group - Free Speech",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T19:42:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasfoundersclub",
+   "name": "SaaS Founders Club",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T19:42:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasfounderscommunity",
+   "name": "SaaS Founders Community",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T19:42:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasfoundersgroup",
+   "name": "SaaS Founders and Leaders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T19:42:29+00:00",
    "last_checked": null
   },
   {

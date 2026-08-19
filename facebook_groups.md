@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-19T19:11:55+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-19T19:42:29+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (81)
+## Not yet probed (90)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -68,6 +68,15 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `chatbotjobs` (found via config)
 - `361717460552082` (found via config)
 - `556739801135588` (found via config)
+- `4808168705943904` (found via ddg)
+- `993304299789457` (found via ddg)
+- `saasfoundersclub` (found via ddg)
+- `25573135598945626` (found via ddg)
+- `saasfounderscommunity` (found via ddg)
+- `1900357930607912` (found via ddg)
+- `saasfoundersgroup` (found via ddg)
+- `SaaSFounders` (found via ddg)
+- `saasfoundergroup` (found via ddg)
 - `startupfounderclub` (found via ddg)
 - `startupfounderforum` (found via ddg)
 - `startupfounders` (found via ddg)
