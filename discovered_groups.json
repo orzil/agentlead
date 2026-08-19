@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-19T00:04:22+00:00",
- "count": 35,
+ "generated": "2026-08-19T00:57:04+00:00",
+ "count": 38,
  "groups": [
   {
    "slug": "1266824747259615",
@@ -453,6 +453,36 @@
    "last_checked": null
   },
   {
+   "slug": "DeepNetGroup",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:57:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "IndiansInAmericaGroup",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:57:04+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "congdongarduinovn",
    "name": null,
    "status": "pending",
@@ -480,6 +510,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T17:37:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "itphil",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:57:04+00:00",
    "last_checked": null
   },
   {
