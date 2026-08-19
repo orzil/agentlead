@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-18T23:25:24+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-19T00:04:22+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (41)
+## Not yet probed (52)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -66,13 +66,18 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `chatbotjobs` (found via config)
 - `361717460552082` (found via config)
 - `556739801135588` (found via config)
+- `1266824747259615` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
+- `292556467949631` (found via ddg)
+- `n8nil` (found via ddg)
+- `482067651607538` (found via ddg)
 - `israelaiorg` (found via ddg)
 - `2055437551629206` (found via ddg)
 - `ai.israel.official` (found via ddg)
 - `2920195654986279` (found via ddg)
 - `1964357920826126` (found via ddg)
+- `automationisrael` (found via ddg)
 - `aichatgptisrael` (found via ddg)
 - `devjob` (found via ddg)
 - `developersmeetstartups` (found via config)
@@ -86,9 +91,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `nodemation` (found via config)
 - `magia.israel` (found via ddg)
 - `webflowIL` (found via ddg)
+- `980725725352474` (found via ddg)
+- `1657329921376731` (found via ddg)
+- `7602972273135565` (found via ddg)
 - `1338202816787610` (found via ddg)
 - `289118210401946` (found via ddg)
 - `Software.Developers.Israel` (found via ddg)
+- `940674812655793` (found via ddg)
+- `automationil` (found via ddg)
 - `544976585999596` (found via ddg)
 - `692392677552880` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
@@ -98,5 +108,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `congdongarduinovn` (found via leads_db)
 - `thaidev` (found via leads_db)
 - `434998574369387` (found via leads_db)
+- `needwebsitedesignerordeveloper` (found via leads_db)
 - `1271378943826323` (found via config)
 - `2786770884931764` (found via ddg)

@@ -1,7 +1,22 @@
 {
- "generated": "2026-08-18T23:25:24+00:00",
- "count": 24,
+ "generated": "2026-08-19T00:04:22+00:00",
+ "count": 35,
  "groups": [
+  {
+   "slug": "1266824747259615",
+   "name": "AI Agents Israel | קלוד קוד וסוכני בינה מלאכותית",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
   {
    "slug": "1964357920826126",
    "name": "דרושים מתכנתים",
@@ -48,6 +63,21 @@
    "last_checked": null
   },
   {
+   "slug": "292556467949631",
+   "name": "Marketing Automation Israel - אוטומציה שיווקית ישראל",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "370277302613861",
    "name": "Ai Israel - בינה מלאכותית",
    "status": "pending",
@@ -60,6 +90,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "482067651607538",
+   "name": "אופק עסקי | אוטומציה ובינה מלאכותית",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:04:21+00:00",
    "last_checked": null
   },
   {
@@ -90,6 +135,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "automationisrael",
+   "name": "הכול על אוטומציות בינה מלאכותית AI - IL ישראל",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:04:21+00:00",
    "last_checked": null
   },
   {
@@ -138,6 +198,21 @@
    "last_checked": null
   },
   {
+   "slug": "n8nil",
+   "name": "N8n ישראל הקבוצה הרשמית | אוטומציה עם בינה מלאכותית |",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1338202816787610",
    "name": "בינה מלאכותית ישראל",
    "status": "pending",
@@ -150,6 +225,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1657329921376731",
+   "name": "אוטומציה - עסקים אוטונומיים - עסקים שמבינים ומיישמים אוטומציה",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:04:21+00:00",
    "last_checked": null
   },
   {
@@ -198,6 +288,51 @@
    "last_checked": null
   },
   {
+   "slug": "7602972273135565",
+   "name": "אוטומציות ובינה מלאכותית",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "940674812655793",
+   "name": "מדברים אוטומציה",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "980725725352474",
+   "name": "אוטומציה",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "Software.Developers.Israel",
    "name": "דרוש מפתח Full Stack Developer להגשת מועמדות:",
    "status": "pending",
@@ -210,6 +345,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T19:52:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "automationil",
+   "name": "מקצועני האוטומציה",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:04:21+00:00",
    "last_checked": null
   },
   {
@@ -330,6 +480,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T17:37:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "needwebsitedesignerordeveloper",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:03:56+00:00",
    "last_checked": null
   },
   {
