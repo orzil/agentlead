@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-19T02:16:52+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-19T03:24:45+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,13 +55,14 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (58)
+## Not yet probed (66)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
 - `3501761776707095` (found via config)
 - `aiautomationagency.aaa` (found via config)
 - `2133987156657804` (found via config)
+- `JuniorJobs` (found via ddg)
 - `aibusinesstools` (found via config)
 - `chatbotjobs` (found via config)
 - `361717460552082` (found via config)
@@ -80,6 +81,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1964357920826126` (found via ddg)
 - `automationisrael` (found via ddg)
 - `aichatgptisrael` (found via ddg)
+- `israel.hightech` (found via ddg)
+- `147963012536297` (found via ddg)
+- `no.experience` (found via ddg)
+- `noexpjobs` (found via ddg)
 - `devjob` (found via ddg)
 - `developersmeetstartups` (found via config)
 - `320942198348539` (found via ddg)
@@ -99,9 +104,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1338202816787610` (found via ddg)
 - `289118210401946` (found via ddg)
 - `Software.Developers.Israel` (found via ddg)
+- `freelanceisrael` (found via ddg)
 - `940674812655793` (found via ddg)
 - `automationil` (found via ddg)
+- `israel.hitech.jobs` (found via ddg)
 - `544976585999596` (found via ddg)
+- `832763754922199` (found via ddg)
 - `692392677552880` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
 - `2936517136591278` (found via leads_db)

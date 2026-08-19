@@ -1,7 +1,22 @@
 {
- "generated": "2026-08-19T02:16:52+00:00",
- "count": 41,
+ "generated": "2026-08-19T03:24:45+00:00",
+ "count": 49,
  "groups": [
+  {
+   "slug": "JuniorJobs",
+   "name": "משרות הייטק ושיווק ללא ניסיון | Junior Jobs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
   {
    "slug": "1266824747259615",
    "name": "AI Agents Israel | קלוד קוד וסוכני בינה מלאכותית",
@@ -15,6 +30,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "147963012536297",
+   "name": "משרות הייטק בצפון",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T03:24:45+00:00",
    "last_checked": null
   },
   {
@@ -213,6 +243,21 @@
    "last_checked": null
   },
   {
+   "slug": "israel.hightech",
+   "name": "משרות הייטק בין חברים, לפני שמתפרסמות בחברות כ\"א",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "israelaiorg",
    "name": "ארגון ה - AI הישראלי | בינה מלאכותית לארגונים | Gemini | ChatGpt ...",
    "status": "pending",
@@ -240,6 +285,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "no.experience",
+   "name": "משרות הייטק ושיווק ללא ניסיון",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "noexpjobs",
+   "name": "משרות הייטק ללא ניסיון",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T03:24:44+00:00",
    "last_checked": null
   },
   {
@@ -333,6 +408,21 @@
    "last_checked": null
   },
   {
+   "slug": "832763754922199",
+   "name": "קבוצת מחפשי עבודות פרילנסרים - הבית לפירילנסר",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "940674812655793",
    "name": "מדברים אוטומציה",
    "status": "pending",
@@ -390,6 +480,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "freelanceisrael",
+   "name": "הייטק פרילאנסר בישראל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "israel.hitech.jobs",
+   "name": "משרות מחברות היי-טק בישראל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T03:24:44+00:00",
    "last_checked": null
   },
   {
