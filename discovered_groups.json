@@ -1,7 +1,82 @@
 {
- "generated": "2026-08-19T20:02:01+00:00",
- "count": 73,
+ "generated": "2026-08-19T20:46:28+00:00",
+ "count": 83,
  "groups": [
+  {
+   "slug": "1162970365658943",
+   "name": "Free Automation and AI Secrets Society- For Agency Owners",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T20:46:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "810244532098547",
+   "name": "Home Care AI Automation for Agency Owners",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T20:46:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "datin1",
+   "name": "GoHighLevel Experts & Agency Owners | Automation, Clients & Scaling",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T20:46:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1418563452142232",
+   "name": "GoHighLevel Agency Owner Funnels and Jobs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T20:46:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1527705608867878",
+   "name": "HighLevel Agency Owners & Automation Community",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T20:46:27+00:00",
+   "last_checked": null
+  },
   {
    "slug": "JuniorJobs",
    "name": "משרות הייטק ושיווק ללא ניסיון | Junior Jobs",
@@ -15,6 +90,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "agencybusinessowners",
+   "name": "GoHighLevel Jobs And Agency Business Owners",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T20:46:28+00:00",
    "last_checked": null
   },
   {
@@ -153,6 +243,21 @@
    "last_checked": null
   },
   {
+   "slug": "2709340372800064",
+   "name": "GoHighLevel Agency Owners!",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T20:46:28+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2920195654986279",
    "name": "בינה מלאכותית ישראל | AI Community IL",
    "status": "pending",
@@ -243,6 +348,21 @@
    "last_checked": null
   },
   {
+   "slug": "659198409489977",
+   "name": "Digital Marketing Agency Owners Using GoHighLevel",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T20:46:28+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "671328720907753",
    "name": "דרושים הייטק",
    "status": "pending",
@@ -285,6 +405,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T19:42:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "agencyownerlab",
+   "name": "PR + Marketing Agency Owners: Network, Automate, Scale",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T20:46:28+00:00",
    "last_checked": null
   },
   {
@@ -360,6 +495,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "highlevelagencyowner",
+   "name": "GoHighLevel Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T20:46:28+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-19T20:02:01+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-19T20:46:28+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,19 +55,29 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (90)
+## Not yet probed (100)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
 - `3501761776707095` (found via config)
+- `1162970365658943` (found via ddg)
+- `datin1` (found via ddg)
+- `810244532098547` (found via ddg)
 - `aiautomationagency.aaa` (found via config)
 - `2133987156657804` (found via config)
+- `1418563452142232` (found via ddg)
+- `agencybusinessowners` (found via ddg)
+- `1527705608867878` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `aibusinesstools` (found via config)
 - `chatbotjobs` (found via config)
+- `659198409489977` (found via ddg)
 - `361717460552082` (found via config)
+- `highlevelagencyowner` (found via ddg)
+- `2709340372800064` (found via ddg)
 - `556739801135588` (found via config)
+- `agencyownerlab` (found via ddg)
 - `4808168705943904` (found via ddg)
 - `993304299789457` (found via ddg)
 - `saasfoundersclub` (found via ddg)
