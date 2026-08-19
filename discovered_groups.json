@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-19T22:11:53+00:00",
- "count": 84,
+ "generated": "2026-08-19T22:28:06+00:00",
+ "count": 94,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -75,6 +75,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T20:46:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "872702652095435",
+   "name": "E-commerce Shopify Business Owners (Ecommerce)",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T22:28:05+00:00",
    "last_checked": null
   },
   {
@@ -468,6 +483,21 @@
    "last_checked": null
   },
   {
+   "slug": "beehexaecommercegroup",
+   "name": "eCommerce Store Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "devjob",
    "name": "משרות מתכנתים/ות",
    "status": "pending",
@@ -480,6 +510,51 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T20:52:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommercesiteowners",
+   "name": "eCommerce Site Owners - Learn How to Build a 7-Figure ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommercestoreowner",
+   "name": "E-commerce Store Owner",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommercesuccessgroup",
+   "name": "eCommerce Store Owners Support Group and Marketing Tips",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T22:28:05+00:00",
    "last_checked": null
   },
   {
@@ -708,6 +783,21 @@
    "last_checked": null
   },
   {
+   "slug": "storeownertips",
+   "name": "E-Commerce Store Owner Tips",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1338202816787610",
    "name": "בינה מלאכותית ישראל",
    "status": "pending",
@@ -720,6 +810,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1456978909319021",
+   "name": "Shopify Beginners & Store Owners Help Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T22:28:05+00:00",
    "last_checked": null
   },
   {
@@ -810,6 +915,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "789382672475266",
+   "name": "SHOPIFY STORE OWNERS",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T22:28:05+00:00",
    "last_checked": null
   },
   {
@@ -945,6 +1065,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "optimizedstoreowner",
+   "name": "The Optimized Store Owner",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "shopifystoreowner",
+   "name": "Shopify Store Owners | Design, Development & Growth",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T22:28:05+00:00",
    "last_checked": null
   },
   {

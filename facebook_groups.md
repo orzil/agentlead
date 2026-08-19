@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-19T22:11:53+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-19T22:28:06+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (101)
+## Not yet probed (111)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -64,6 +64,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `datin1` (found via ddg)
 - `810244532098547` (found via ddg)
 - `aiautomationagency.aaa` (found via config)
+- `872702652095435` (found via ddg)
 - `2133987156657804` (found via config)
 - `1418563452142232` (found via ddg)
 - `agencybusinessowners` (found via ddg)
@@ -73,6 +74,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aibusinesstools` (found via config)
 - `chatbotjobs` (found via config)
 - `659198409489977` (found via ddg)
+- `storeownertips` (found via ddg)
+- `ecommercestoreowner` (found via ddg)
 - `361717460552082` (found via config)
 - `highlevelagencyowner` (found via ddg)
 - `2709340372800064` (found via ddg)
@@ -93,6 +96,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2120217412101108` (found via ddg)
 - `1248313253326186` (found via ddg)
 - `founderx` (found via ddg)
+- `ecommercesiteowners` (found via ddg)
+- `beehexaecommercegroup` (found via ddg)
+- `ecommercesuccessgroup` (found via ddg)
 - `1266824747259615` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
@@ -123,7 +129,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `makeautomation` (found via config)
 - `inventivehub` (found via config)
 - `remotestartupjobs` (found via config)
+- `789382672475266` (found via ddg)
+- `1456978909319021` (found via ddg)
+- `shopifystoreowner` (found via ddg)
 - `startupfrat` (found via ddg)
+- `optimizedstoreowner` (found via ddg)
 - `nodemation` (found via config)
 - `magia.israel` (found via ddg)
 - `webflowIL` (found via ddg)
