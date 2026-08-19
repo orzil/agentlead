@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-19T05:01:21+00:00",
- "count": 50,
+ "generated": "2026-08-19T17:29:42+00:00",
+ "count": 55,
  "groups": [
   {
    "slug": "JuniorJobs",
@@ -498,6 +498,21 @@
    "last_checked": null
   },
   {
+   "slug": "freelancersrequired",
+   "name": "Hire a Freelancer",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T17:29:42+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "israel.hitech.jobs",
    "name": "משרות מחברות היי-טק בישראל",
    "status": "pending",
@@ -588,6 +603,21 @@
    "last_checked": null
   },
   {
+   "slug": "288970654518121",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T17:08:15+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2936517136591278",
    "name": null,
    "status": "pending",
@@ -630,6 +660,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T02:16:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "690027711153911",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T12:18:46+00:00",
    "last_checked": null
   },
   {
@@ -693,6 +738,21 @@
    "last_checked": null
   },
   {
+   "slug": "freelance.remote.it",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T12:18:46+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "itphil",
    "name": null,
    "status": "pending",
@@ -750,6 +810,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T22:02:00+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "vn.ros",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T12:18:46+00:00",
    "last_checked": null
   }
  ]
