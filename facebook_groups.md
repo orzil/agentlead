@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-19T03:43:33+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-19T04:22:52+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (66)
+## Not yet probed (67)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -122,6 +122,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `DeepNetGroup` (found via leads_db)
 - `IndiansInAmericaGroup` (found via leads_db)
 - `itphil` (found via leads_db)
+- `1319151062237383` (found via leads_db)
 - `1271378943826323` (found via config)
 - `2786770884931764` (found via ddg)
 - `462672717191788` (found via ddg)

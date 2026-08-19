@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-19T03:43:33+00:00",
- "count": 49,
+ "generated": "2026-08-19T04:22:52+00:00",
+ "count": 50,
  "groups": [
   {
    "slug": "JuniorJobs",
@@ -540,6 +540,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T20:52:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1319151062237383",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T04:22:52+00:00",
    "last_checked": null
   },
   {
