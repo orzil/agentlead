@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-20T05:03:20+00:00",
- "count": 105,
+ "generated": "2026-08-20T17:32:50+00:00",
+ "count": 117,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -303,6 +303,21 @@
    "last_checked": null
   },
   {
+   "slug": "2018989461513326",
+   "name": "UK Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2055437551629206",
    "name": "בינה מלאכותית - AI ISRAEL",
    "status": "pending",
@@ -408,6 +423,21 @@
    "last_checked": null
   },
   {
+   "slug": "3418202234922142",
+   "name": "Small Business Owners UK",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "370277302613861",
    "name": "Ai Israel - בינה מלאכותית",
    "status": "pending",
@@ -495,6 +525,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T03:11:55+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "761000443963542",
+   "name": "Small business owners UK",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:32:50+00:00",
    "last_checked": null
   },
   {
@@ -843,6 +888,36 @@
    "last_checked": null
   },
   {
+   "slug": "smallbusinessownercommunityuk",
+   "name": "Small Business Owner Community",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "socialmediaforsmallbusinessownersuk",
+   "name": "Small business owners & start ups UK",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "startupfounderclub",
    "name": "Startup Founder Club | USA • UK • UAE • AU • DE • SG",
    "status": "pending",
@@ -903,6 +978,21 @@
    "last_checked": null
   },
   {
+   "slug": "uksmallbusinessesadvertsfree",
+   "name": "UK Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1165236046981865",
    "name": "The No Code App Entrepreneur",
    "status": "pending",
@@ -930,6 +1020,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1374006380366953",
+   "name": "Small businesses Uk community group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:32:50+00:00",
    "last_checked": null
   },
   {
@@ -1128,6 +1233,21 @@
    "last_checked": null
   },
   {
+   "slug": "bsbnetwork",
+   "name": "British Small Business Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "freelanceisrael",
    "name": "הייטק פרילאנסר בישראל",
    "status": "pending",
@@ -1230,6 +1350,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "uksmallbusinessowners",
+   "name": "UK Small Business Support",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:32:50+00:00",
    "last_checked": null
   },
   {
@@ -1458,6 +1593,21 @@
    "last_checked": null
   },
   {
+   "slug": "businessinuk",
+   "name": "Business Support UK",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "congdongarduinovn",
    "name": null,
    "status": "pending",
@@ -1503,6 +1653,21 @@
    "last_checked": null
   },
   {
+   "slug": "freelanceIL",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:16:38+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "itphil",
    "name": null,
    "status": "pending",
@@ -1530,6 +1695,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:03:56+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "talkingautomation",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:16:38+00:00",
    "last_checked": null
   },
   {

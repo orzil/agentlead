@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-20T05:03:20+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-20T17:32:50+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (122)
+## Not yet probed (134)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -96,12 +96,18 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `saasfoundersgroup` (found via ddg)
 - `SaaSFounders` (found via ddg)
 - `saasfoundergroup` (found via ddg)
+- `smallbusinessownercommunityuk` (found via ddg)
+- `3418202234922142` (found via ddg)
+- `socialmediaforsmallbusinessownersuk` (found via ddg)
+- `761000443963542` (found via ddg)
 - `startupfounderclub` (found via ddg)
 - `startupfounderforum` (found via ddg)
 - `startupfounders` (found via ddg)
 - `2120217412101108` (found via ddg)
 - `1248313253326186` (found via ddg)
 - `founderx` (found via ddg)
+- `uksmallbusinessesadvertsfree` (found via ddg)
+- `2018989461513326` (found via ddg)
 - `ecommercesiteowners` (found via ddg)
 - `beehexaecommercegroup` (found via ddg)
 - `ecommercesuccessgroup` (found via ddg)
@@ -127,6 +133,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `devjob` (found via ddg)
 - `developersmeetstartups` (found via config)
 - `320942198348539` (found via ddg)
+- `bsbnetwork` (found via ddg)
 - `ComputerVisionGroup` (found via config)
 - `2687952944937992` (found via ddg)
 - `findyourcofounder` (found via config)
@@ -139,9 +146,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `789382672475266` (found via ddg)
 - `1456978909319021` (found via ddg)
 - `shopifystoreowner` (found via ddg)
+- `1374006380366953` (found via ddg)
 - `startupfrat` (found via ddg)
 - `1165236046981865` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
+- `uksmallbusinessowners` (found via ddg)
 - `nodemation` (found via config)
 - `magia.israel` (found via ddg)
 - `webflowIL` (found via ddg)
@@ -177,7 +186,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1433838711374395` (found via leads_db)
 - `1437522973167696` (found via leads_db)
 - `2079238568790422` (found via leads_db)
+- `talkingautomation` (found via leads_db)
+- `freelanceIL` (found via leads_db)
 - `1271378943826323` (found via config)
+- `businessinuk` (found via ddg)
 - `1636991833121307` (found via ddg)
 - `2786770884931764` (found via ddg)
 - `462672717191788` (found via ddg)
