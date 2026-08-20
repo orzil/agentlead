@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-20T21:05:33+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-20T21:44:53+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (152)
+## Not yet probed (161)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -88,6 +88,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2709340372800064` (found via ddg)
 - `556739801135588` (found via config)
 - `744604981439783` (found via ddg)
+- `1198024408768649` (found via ddg)
+- `341776853891812` (found via ddg)
 - `agencyownerlab` (found via ddg)
 - `4808168705943904` (found via ddg)
 - `993304299789457` (found via ddg)
@@ -156,12 +158,17 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `makeautomation` (found via config)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
+- `1356416033271840` (found via ddg)
+- `NewZealandSmallBusinessOwnersNetworking` (found via ddg)
+- `newzealandbusinessowners` (found via ddg)
+- `nzsmallbusinessnetwork` (found via ddg)
 - `inventivehub` (found via config)
 - `remotestartupjobs` (found via config)
 - `789382672475266` (found via ddg)
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
 - `shopifystoreowner` (found via ddg)
+- `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
 - `startupfrat` (found via ddg)
 - `CanadaStartup` (found via ddg)
@@ -207,7 +214,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `talkingautomation` (found via leads_db)
 - `freelanceIL` (found via leads_db)
 - `1271378943826323` (found via config)
+- `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
+- `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
 - `2786770884931764` (found via ddg)
 - `462672717191788` (found via ddg)

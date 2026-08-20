@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-20T21:05:33+00:00",
- "count": 135,
+ "generated": "2026-08-20T21:44:53+00:00",
+ "count": 144,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -210,6 +210,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1198024408768649",
+   "name": "New Zealand Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T21:44:52+00:00",
    "last_checked": null
   },
   {
@@ -435,6 +450,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T02:16:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "341776853891812",
+   "name": "New Zealand Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T21:44:52+00:00",
    "last_checked": null
   },
   {
@@ -1083,6 +1113,21 @@
    "last_checked": null
   },
   {
+   "slug": "1356416033271840",
+   "name": "NZ Business Owners Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1374006380366953",
    "name": "Small businesses Uk community group",
    "status": "pending",
@@ -1338,6 +1383,21 @@
    "last_checked": null
   },
   {
+   "slug": "NewZealandSmallBusinessOwnersNetworking",
+   "name": "New Zealand Business Owner Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "SBClassifiedsAustralia",
    "name": "Business Owners Australia",
    "status": "pending",
@@ -1533,6 +1593,36 @@
    "last_checked": null
   },
   {
+   "slug": "newzealandbusinessowners",
+   "name": "New Zealand Business Owners Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "nzsmallbusinessnetwork",
+   "name": "New Zealand Small Business Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "optimizedstoreowner",
    "name": "The Optimized Store Owner",
    "status": "pending",
@@ -1575,6 +1665,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T20:32:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbusinessnz24",
+   "name": "Small Business New Zealand",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T21:44:52+00:00",
    "last_checked": null
   },
   {
@@ -1875,6 +1980,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "businessnetworkingnewzealand",
+   "name": "Business Networking NZ",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "businessnz",
+   "name": "New Zealand Business Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T21:44:52+00:00",
    "last_checked": null
   },
   {
