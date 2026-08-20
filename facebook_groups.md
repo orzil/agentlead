@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-20T18:04:13+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-20T19:00:35+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (134)
+## Not yet probed (143)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -77,6 +77,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `aibusinesstools` (found via config)
+- `279906104787742` (found via ddg)
 - `chatbotjobs` (found via config)
 - `659198409489977` (found via ddg)
 - `storeownertips` (found via ddg)
@@ -100,12 +101,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `3418202234922142` (found via ddg)
 - `socialmediaforsmallbusinessownersuk` (found via ddg)
 - `761000443963542` (found via ddg)
+- `startup.canada` (found via ddg)
 - `startupfounderclub` (found via ddg)
 - `startupfounderforum` (found via ddg)
 - `startupfounders` (found via ddg)
 - `2120217412101108` (found via ddg)
 - `1248313253326186` (found via ddg)
 - `founderx` (found via ddg)
+- `TESNetwork` (found via ddg)
 - `uksmallbusinessesadvertsfree` (found via ddg)
 - `2018989461513326` (found via ddg)
 - `ecommercesiteowners` (found via ddg)
@@ -134,13 +137,17 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `developersmeetstartups` (found via config)
 - `320942198348539` (found via ddg)
 - `bsbnetwork` (found via ddg)
+- `810698363860855` (found via ddg)
 - `ComputerVisionGroup` (found via config)
 - `2687952944937992` (found via ddg)
 - `findyourcofounder` (found via config)
 - `Founder.CEOs` (found via config)
 - `foundersspace` (found via config)
+- `findingsuvfounders` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `makeautomation` (found via config)
+- `montreal.startup.people` (found via ddg)
+- `startup.montreal.canada` (found via ddg)
 - `inventivehub` (found via config)
 - `remotestartupjobs` (found via config)
 - `789382672475266` (found via ddg)
@@ -148,9 +155,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `shopifystoreowner` (found via ddg)
 - `1374006380366953` (found via ddg)
 - `startupfrat` (found via ddg)
+- `CanadaStartup` (found via ddg)
 - `1165236046981865` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
 - `uksmallbusinessowners` (found via ddg)
+- `vancouverstartupcommunity` (found via ddg)
 - `nodemation` (found via config)
 - `magia.israel` (found via ddg)
 - `webflowIL` (found via ddg)

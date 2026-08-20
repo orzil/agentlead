@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-20T18:04:13+00:00",
- "count": 117,
+ "generated": "2026-08-20T19:00:35+00:00",
+ "count": 126,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -378,6 +378,21 @@
    "last_checked": null
   },
   {
+   "slug": "279906104787742",
+   "name": "Business Owners / Company Founders / Entreprenur in Canada & United ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2920195654986279",
    "name": "בינה מלאכותית ישראל | AI Community IL",
    "status": "pending",
@@ -570,6 +585,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T19:42:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "TESNetwork",
+   "name": "Toronto Entrepreneurs And Startup Network",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T19:00:35+00:00",
    "last_checked": null
   },
   {
@@ -918,6 +948,21 @@
    "last_checked": null
   },
   {
+   "slug": "startup.canada",
+   "name": "Startup Canada: for entrepreneurs, by entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "startupfounderclub",
    "name": "Startup Founder Club | USA • UK • UAE • AU • DE • SG",
    "status": "pending",
@@ -1158,6 +1203,21 @@
    "last_checked": null
   },
   {
+   "slug": "810698363860855",
+   "name": "Canada StartUp VISA",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "832763754922199",
    "name": "קבוצת מחפשי עבודות פרילנסרים - הבית לפירילנסר",
    "status": "pending",
@@ -1203,6 +1263,21 @@
    "last_checked": null
   },
   {
+   "slug": "CanadaStartup",
+   "name": "Tech Canada: Canadian Startups in Toronto / Waterloo , Montreal ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "Software.Developers.Israel",
    "name": "דרוש מפתח Full Stack Developer להגשת מועמדות:",
    "status": "pending",
@@ -1245,6 +1320,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "findingsuvfounders",
+   "name": "Founders finding founders - Canada Start-up Visa",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T19:00:35+00:00",
    "last_checked": null
   },
   {
@@ -1308,6 +1398,21 @@
    "last_checked": null
   },
   {
+   "slug": "montreal.startup.people",
+   "name": "Montréal + Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "optimizedstoreowner",
    "name": "The Optimized Store Owner",
    "status": "pending",
@@ -1338,6 +1443,21 @@
    "last_checked": null
   },
   {
+   "slug": "startup.montreal.canada",
+   "name": "Montréal: Tech Startup Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "startupfrat",
    "name": "Startup-Frat Hangout",
    "status": "pending",
@@ -1365,6 +1485,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "vancouverstartupcommunity",
+   "name": "Vancouver Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T19:00:35+00:00",
    "last_checked": null
   },
   {
