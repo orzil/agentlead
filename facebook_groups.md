@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-20T21:44:53+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-20T22:10:10+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (161)
+## Not yet probed (169)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -74,11 +74,13 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1418563452142232` (found via ddg)
 - `agencybusinessowners` (found via ddg)
 - `1527705608867878` (found via ddg)
+- `startupsinvestorsentrepreneursmentors` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `aibusinesstools` (found via config)
 - `australiansmallbusinesowners` (found via ddg)
 - `279906104787742` (found via ddg)
+- `580118425856327` (found via ddg)
 - `chatbotjobs` (found via config)
 - `659198409489977` (found via ddg)
 - `storeownertips` (found via ddg)
@@ -110,6 +112,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupfounders` (found via ddg)
 - `2120217412101108` (found via ddg)
 - `1248313253326186` (found via ddg)
+- `788415021554366` (found via ddg)
 - `founderx` (found via ddg)
 - `TESNetwork` (found via ddg)
 - `uksmallbusinessesadvertsfree` (found via ddg)
@@ -149,6 +152,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `SBClassifiedsAustralia` (found via ddg)
 - `810698363860855` (found via ddg)
 - `ComputerVisionGroup` (found via config)
+- `dublin.ireland.startups` (found via ddg)
 - `2687952944937992` (found via ddg)
 - `findyourcofounder` (found via config)
 - `Founder.CEOs` (found via config)
@@ -170,8 +174,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `shopifystoreowner` (found via ddg)
 - `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
+- `StartupIrelandClub` (found via ddg)
 - `startupfrat` (found via ddg)
 - `CanadaStartup` (found via ddg)
+- `techstartupukireland` (found via ddg)
 - `1165236046981865` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
 - `uksmallbusinessowners` (found via ddg)
@@ -218,5 +224,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `businessinuk` (found via ddg)
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
+- `131710772378400` (found via ddg)
+- `TechForTechs` (found via ddg)
 - `2786770884931764` (found via ddg)
 - `462672717191788` (found via ddg)
