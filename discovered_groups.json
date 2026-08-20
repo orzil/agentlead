@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-20T22:46:16+00:00",
- "count": 152,
+ "generated": "2026-08-20T23:28:24+00:00",
+ "count": 159,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -648,6 +648,21 @@
    "last_checked": null
   },
   {
+   "slug": "EABOSA",
+   "name": "Entrepreneurs and Business Owners South Africa",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T23:28:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "SaaSFounders",
    "name": "SaaS Revenue Growth by the Founders, for the Founders",
    "status": "pending",
@@ -1008,6 +1023,21 @@
    "last_checked": null
   },
   {
+   "slug": "sastartups",
+   "name": "South Africa Business Startups & Entrepreneurs Network",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T23:28:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "smallbusinessownercommunityuk",
    "name": "Small Business Owner Community",
    "status": "pending",
@@ -1125,6 +1155,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1058223315954721",
+   "name": "Business For Sale By Owner In South Africa",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T23:28:23+00:00",
    "last_checked": null
   },
   {
@@ -1713,6 +1758,21 @@
    "last_checked": null
   },
   {
+   "slug": "sasmallbusinessnetwork",
+   "name": "Small Business Network South Africa",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T23:28:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "shopifystoreowner",
    "name": "Shopify Store Owners | Design, Development & Growth",
    "status": "pending",
@@ -2223,6 +2283,36 @@
    "last_checked": null
   },
   {
+   "slug": "southafricanbusiness",
+   "name": "South African Business Directory",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T23:28:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "southafricanbusinesses",
+   "name": "South African Businesses",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T23:28:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "talkingautomation",
    "name": null,
    "status": "pending",
@@ -2250,6 +2340,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T22:02:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "thesouthafricanbusinessnetwork",
+   "name": "The South African Business Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T23:28:23+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-20T22:46:16+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-20T23:28:24+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (169)
+## Not yet probed (176)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -85,6 +85,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `659198409489977` (found via ddg)
 - `storeownertips` (found via ddg)
 - `ecommercestoreowner` (found via ddg)
+- `EABOSA` (found via ddg)
 - `361717460552082` (found via config)
 - `highlevelagencyowner` (found via ddg)
 - `2709340372800064` (found via ddg)
@@ -106,6 +107,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `3418202234922142` (found via ddg)
 - `socialmediaforsmallbusinessownersuk` (found via ddg)
 - `761000443963542` (found via ddg)
+- `sastartups` (found via ddg)
 - `startup.canada` (found via ddg)
 - `startupfounderclub` (found via ddg)
 - `startupfounderforum` (found via ddg)
@@ -149,6 +151,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbiz.au` (found via ddg)
 - `aussbn` (found via ddg)
 - `bsbnetwork` (found via ddg)
+- `1058223315954721` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
 - `810698363860855` (found via ddg)
 - `ComputerVisionGroup` (found via config)
@@ -172,6 +175,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
 - `shopifystoreowner` (found via ddg)
+- `sasmallbusinessnetwork` (found via ddg)
 - `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
 - `StartupIrelandClub` (found via ddg)
@@ -225,6 +229,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
 - `131710772378400` (found via ddg)
+- `southafricanbusiness` (found via ddg)
+- `southafricanbusinesses` (found via ddg)
 - `TechForTechs` (found via ddg)
+- `thesouthafricanbusinessnetwork` (found via ddg)
 - `2786770884931764` (found via ddg)
 - `462672717191788` (found via ddg)
