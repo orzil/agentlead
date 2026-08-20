@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-19T23:25:51+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-20T00:04:54+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (111)
+## Not yet probed (113)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -133,6 +133,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1456978909319021` (found via ddg)
 - `shopifystoreowner` (found via ddg)
 - `startupfrat` (found via ddg)
+- `1165236046981865` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
 - `nodemation` (found via config)
 - `magia.israel` (found via ddg)
@@ -168,5 +169,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `288970654518121` (found via leads_db)
 - `1433838711374395` (found via leads_db)
 - `1271378943826323` (found via config)
+- `1636991833121307` (found via ddg)
 - `2786770884931764` (found via ddg)
 - `462672717191788` (found via ddg)

@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-19T23:25:51+00:00",
- "count": 94,
+ "generated": "2026-08-20T00:04:54+00:00",
+ "count": 96,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -798,6 +798,21 @@
    "last_checked": null
   },
   {
+   "slug": "1165236046981865",
+   "name": "The No Code App Entrepreneur",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T00:04:53+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1338202816787610",
    "name": "בינה מלאכותית ישראל",
    "status": "pending",
@@ -1170,6 +1185,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:10:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1636991833121307",
+   "name": "No Code Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T00:04:53+00:00",
    "last_checked": null
   },
   {
