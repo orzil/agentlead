@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-20T19:00:35+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-20T19:47:06+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
