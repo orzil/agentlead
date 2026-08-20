@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-20T19:47:06+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-20T20:32:26+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (143)
+## Not yet probed (152)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -77,6 +77,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `aibusinesstools` (found via config)
+- `australiansmallbusinesowners` (found via ddg)
 - `279906104787742` (found via ddg)
 - `chatbotjobs` (found via config)
 - `659198409489977` (found via ddg)
@@ -136,7 +137,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `devjob` (found via ddg)
 - `developersmeetstartups` (found via config)
 - `320942198348539` (found via ddg)
+- `ausbizownersclub` (found via ddg)
+- `487009714795019` (found via ddg)
+- `811045979419418` (found via ddg)
+- `464376085736538` (found via ddg)
+- `smallbiz.au` (found via ddg)
+- `aussbn` (found via ddg)
 - `bsbnetwork` (found via ddg)
+- `SBClassifiedsAustralia` (found via ddg)
 - `810698363860855` (found via ddg)
 - `ComputerVisionGroup` (found via config)
 - `2687952944937992` (found via ddg)
@@ -151,6 +159,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `inventivehub` (found via config)
 - `remotestartupjobs` (found via config)
 - `789382672475266` (found via ddg)
+- `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
 - `shopifystoreowner` (found via ddg)
 - `1374006380366953` (found via ddg)

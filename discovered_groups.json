@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-20T19:47:06+00:00",
- "count": 126,
+ "generated": "2026-08-20T20:32:26+00:00",
+ "count": 135,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -648,6 +648,21 @@
    "last_checked": null
   },
   {
+   "slug": "australiansmallbusinesowners",
+   "name": "Australian Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T20:32:25+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "automationisrael",
    "name": "הכול על אוטומציות בינה מלאכותית AI - IL ישראל",
    "status": "pending",
@@ -1143,6 +1158,36 @@
    "last_checked": null
   },
   {
+   "slug": "464376085736538",
+   "name": "Australian Business Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T20:32:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "487009714795019",
+   "name": "Australian Business Owner Discussions",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T20:32:25+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "544976585999596",
    "name": "סטארטאפים בישראל",
    "status": "pending",
@@ -1218,6 +1263,21 @@
    "last_checked": null
   },
   {
+   "slug": "811045979419418",
+   "name": "Australian Business Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T20:32:25+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "832763754922199",
    "name": "קבוצת מחפשי עבודות פרילנסרים - הבית לפירילנסר",
    "status": "pending",
@@ -1278,6 +1338,36 @@
    "last_checked": null
   },
   {
+   "slug": "SBClassifiedsAustralia",
+   "name": "Business Owners Australia",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T20:32:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ScooterOwnersTechTalk",
+   "name": "Scooter owners tech talk | Facebook - Meta Business Suite",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T20:32:25+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "Software.Developers.Israel",
    "name": "דרוש מפתח Full Stack Developer להגשת מועמדות:",
    "status": "pending",
@@ -1290,6 +1380,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T19:52:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ausbizownersclub",
+   "name": "Australia Business Owners Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T20:32:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aussbn",
+   "name": "Australian small business network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T20:32:25+00:00",
    "last_checked": null
   },
   {
@@ -1440,6 +1560,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbiz.au",
+   "name": "Australian Small Business Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T20:32:25+00:00",
    "last_checked": null
   },
   {
