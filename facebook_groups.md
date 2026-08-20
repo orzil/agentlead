@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-20T02:15:03+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-20T03:11:56+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (119)
+## Not yet probed (122)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -85,6 +85,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `highlevelagencyowner` (found via ddg)
 - `2709340372800064` (found via ddg)
 - `556739801135588` (found via config)
+- `744604981439783` (found via ddg)
 - `agencyownerlab` (found via ddg)
 - `4808168705943904` (found via ddg)
 - `993304299789457` (found via ddg)
@@ -104,6 +105,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ecommercesiteowners` (found via ddg)
 - `beehexaecommercegroup` (found via ddg)
 - `ecommercesuccessgroup` (found via ddg)
+- `1773899256887046` (found via ddg)
 - `1266824747259615` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
@@ -174,6 +176,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `288970654518121` (found via leads_db)
 - `1433838711374395` (found via leads_db)
 - `1437522973167696` (found via leads_db)
+- `2079238568790422` (found via leads_db)
 - `1271378943826323` (found via config)
 - `1636991833121307` (found via ddg)
 - `2786770884931764` (found via ddg)

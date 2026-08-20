@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-20T02:15:03+00:00",
- "count": 102,
+ "generated": "2026-08-20T03:11:56+00:00",
+ "count": 105,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -258,6 +258,21 @@
    "last_checked": null
   },
   {
+   "slug": "1773899256887046",
+   "name": "n8n | AI Agents | AI Automations",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T03:11:55+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1900357930607912",
    "name": "SaaS Founders Hub",
    "status": "pending",
@@ -465,6 +480,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T02:16:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "744604981439783",
+   "name": "N8N USA | Ai Automation | Ai Agents",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T03:11:55+00:00",
    "last_checked": null
   },
   {
@@ -1290,6 +1320,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T00:04:53+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2079238568790422",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T02:56:48+00:00",
    "last_checked": null
   },
   {
