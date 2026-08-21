@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-21T00:59:29+00:00",
- "count": 169,
+ "generated": "2026-08-21T02:24:39+00:00",
+ "count": 171,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1398,6 +1398,21 @@
    "last_checked": null
   },
   {
+   "slug": "490880091107538",
+   "name": "Dubai Entrepreneurs Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T02:24:38+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "544976585999596",
    "name": "סטארטאפים בישראל",
    "status": "pending",
@@ -2205,6 +2220,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T17:37:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "402786871855453",
+   "name": "DUBAI | ͏TIPS AND ADVICE",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T02:24:38+00:00",
    "last_checked": null
   },
   {
