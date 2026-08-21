@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-21T05:15:36+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-21T17:32:24+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (207)
+## Not yet probed (217)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -130,6 +130,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1266824747259615` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
+- `yazamutIsrael` (found via ddg)
 - `292556467949631` (found via ddg)
 - `n8nil` (found via ddg)
 - `482067651607538` (found via ddg)
@@ -140,6 +141,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `671328720907753` (found via ddg)
 - `1964357920826126` (found via ddg)
 - `automationisrael` (found via ddg)
+- `223303087850326` (found via ddg)
 - `aichatgptisrael` (found via ddg)
 - `israel.hightech` (found via ddg)
 - `147963012536297` (found via ddg)
@@ -148,6 +150,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `devjob` (found via ddg)
 - `developersmeetstartups` (found via config)
 - `320942198348539` (found via ddg)
+- `506523693145809` (found via ddg)
 - `1620010391574229` (found via ddg)
 - `ausbizownersclub` (found via ddg)
 - `487009714795019` (found via ddg)
@@ -210,9 +213,13 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `289118210401946` (found via ddg)
 - `Software.Developers.Israel` (found via ddg)
 - `freelanceisrael` (found via ddg)
+- `1456367289297520` (found via ddg)
+- `624543140573742` (found via ddg)
+- `entrepreneurs.israel` (found via ddg)
 - `940674812655793` (found via ddg)
 - `3d.printing.israel` (found via ddg)
 - `automationil` (found via ddg)
+- `giuson` (found via ddg)
 - `israel.hitech.jobs` (found via ddg)
 - `544976585999596` (found via ddg)
 - `1213894351964666` (found via ddg)
@@ -242,6 +249,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `freelanceIL` (found via leads_db)
 - `codanics` (found via leads_db)
 - `developerkaki` (found via leads_db)
+- `fed.israel` (found via leads_db)
+- `1518002613342681` (found via leads_db)
 - `1271378943826323` (found via config)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
@@ -258,6 +267,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1774931386364154` (found via ddg)
 - `asakimktanim` (found via ddg)
 - `2786770884931764` (found via ddg)
+- `270931709946261` (found via ddg)
 - `462672717191788` (found via ddg)
 - `smallbusinessisrael` (found via ddg)
 - `smallbusinessesaregrowing` (found via ddg)

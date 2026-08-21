@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-21T05:15:36+00:00",
- "count": 190,
+ "generated": "2026-08-21T17:32:24+00:00",
+ "count": 200,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -423,6 +423,21 @@
    "last_checked": null
   },
   {
+   "slug": "223303087850326",
+   "name": "המשבשים : יזמים, משקיעים וסטארטאפים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T17:32:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "25573135598945626",
    "name": "SaaS Founders Club",
    "status": "pending",
@@ -585,6 +600,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "506523693145809",
+   "name": "קהילת היזמים של ישראל - Start A Startup",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T17:32:23+00:00",
    "last_checked": null
   },
   {
@@ -1218,6 +1248,21 @@
    "last_checked": null
   },
   {
+   "slug": "yazamutIsrael",
+   "name": "Israeli entrepreneurs - יזמים ישראלים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T17:32:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1058223315954721",
    "name": "Business For Sale By Owner In South Africa",
    "status": "pending",
@@ -1305,6 +1350,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1456367289297520",
+   "name": "יזמיט YAZAMEET | יזמים ובעלי עסקים ישראל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T17:32:23+00:00",
    "last_checked": null
   },
   {
@@ -1470,6 +1530,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T22:27:08+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "624543140573742",
+   "name": "יזמים ישראלים - שיתופי פעולה והזדמנויות עסקיות",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T17:32:23+00:00",
    "last_checked": null
   },
   {
@@ -1818,6 +1893,21 @@
    "last_checked": null
   },
   {
+   "slug": "entrepreneurs.israel",
+   "name": "יזמים למען יזמים",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T17:32:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "findingsuvfounders",
    "name": "Founders finding founders - Canada Start-up Visa",
    "status": "pending",
@@ -1860,6 +1950,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T17:29:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "giuson",
+   "name": "משקיעים - יזמים - טכנולוגיה - סטרטאפ - קרנות הון סיכון",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T17:32:23+00:00",
    "last_checked": null
   },
   {
@@ -2253,6 +2358,21 @@
    "last_checked": null
   },
   {
+   "slug": "1518002613342681",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T17:12:46+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1636991833121307",
    "name": "No Code Community",
    "status": "pending",
@@ -2310,6 +2430,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "270931709946261",
+   "name": "יזמי איקומרס ודיגיטל בישראל eCom Israel- הקבוצה הרשמית",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T17:32:23+00:00",
    "last_checked": null
   },
   {
@@ -2595,6 +2730,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T03:46:00+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "fed.israel",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T06:15:56+00:00",
    "last_checked": null
   },
   {
