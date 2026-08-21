@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-21T04:32:58+00:00",
- "count": 180,
+ "generated": "2026-08-21T05:15:36+00:00",
+ "count": 190,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2268,6 +2268,21 @@
    "last_checked": null
   },
   {
+   "slug": "1774931386364154",
+   "name": "בעלי עסקים פרסום חינם",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2079238568790422",
    "name": null,
    "status": "pending",
@@ -2280,6 +2295,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T02:56:48+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "209262042417914",
+   "name": "פורום בעלי עסקים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T05:15:35+00:00",
    "last_checked": null
   },
   {
@@ -2433,6 +2463,36 @@
    "last_checked": null
   },
   {
+   "slug": "asakimktanim",
+   "name": "בעלי עסקים קטנים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "business.owners.israel",
+   "name": "בעלי עסקים בישראל | פרסום, לידים ושיתופי פעולה",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "businessinuk",
    "name": "Business Support UK",
    "status": "pending",
@@ -2475,6 +2535,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "buslness",
+   "name": "קהילת בעלי עסקים | ייעוץ ואימון להתפתחות עסקית",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T05:15:35+00:00",
    "last_checked": null
   },
   {
@@ -2568,6 +2643,21 @@
    "last_checked": null
   },
   {
+   "slug": "independant.il",
+   "name": "בעלי עסקים בישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "itphil",
    "name": null,
    "status": "pending",
@@ -2595,6 +2685,66 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:03:56+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "persum.israel",
+   "name": "פרסום עסקים בישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "portalil",
+   "name": "פרסום בעלי עסקים בפייסבוק",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbusinessesaregrowing",
+   "name": "עסקים קטנים צומחים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbusinessisrael",
+   "name": "עסקים קטנים בישראל | שיווק, שת״פ ולידים | עוזרים אחד לשני",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T05:15:35+00:00",
    "last_checked": null
   },
   {
