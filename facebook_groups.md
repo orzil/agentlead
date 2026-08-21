@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-21T23:02:59+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-21T23:40:34+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (236)
+## Not yet probed (243)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -78,6 +78,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `singaporeentrepreneurship` (found via ddg)
 - `startupsinvestorsentrepreneursmentors` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
+- `284048350858807` (found via ddg)
+- `1448272189379640` (found via ddg)
+- `918228853329387` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `157185408042870` (found via ddg)
 - `aibusinesstools` (found via config)
@@ -138,6 +141,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2055437551629206` (found via ddg)
 - `ai.israel.official` (found via ddg)
 - `2920195654986279` (found via ddg)
+- `773870394547175` (found via ddg)
 - `671328720907753` (found via ddg)
 - `1964357920826126` (found via ddg)
 - `automationisrael` (found via ddg)
@@ -215,6 +219,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `289118210401946` (found via ddg)
 - `Software.Developers.Israel` (found via ddg)
 - `looking4developer` (found via ddg)
+- `1174154780210185` (found via ddg)
 - `freelanceisrael` (found via ddg)
 - `1456367289297520` (found via ddg)
 - `624543140573742` (found via ddg)
@@ -223,6 +228,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `3d.printing.israel` (found via ddg)
 - `105474902826094` (found via ddg)
 - `automationil` (found via ddg)
+- `587640282883229` (found via ddg)
+- `1406771276210792` (found via ddg)
 - `giuson` (found via ddg)
 - `israel.hitech.jobs` (found via ddg)
 - `544976585999596` (found via ddg)

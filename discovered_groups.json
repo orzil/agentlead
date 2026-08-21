@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-21T23:02:59+00:00",
- "count": 219,
+ "generated": "2026-08-21T23:40:34+00:00",
+ "count": 226,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -78,6 +78,21 @@
    "last_checked": null
   },
   {
+   "slug": "1448272189379640",
+   "name": "מגייסים מחפשים אנשי הייטק ומתכנתים, מיקור חוץ, סטאראפים",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T23:40:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "148693034913710",
    "name": "Ai Automation Agency",
    "status": "pending",
@@ -138,6 +153,21 @@
    "last_checked": null
   },
   {
+   "slug": "284048350858807",
+   "name": "דרושים מנהלי פרויקטים | **מנהל/ת לקוחות - משרת שטח, לחברת מיקור חוץ ...",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T23:40:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "670629268019461",
    "name": "AI Automation Agency - AAA",
    "status": "pending",
@@ -180,6 +210,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "918228853329387",
+   "name": "מגייסים מחפשים מתכנתים, מיקור חוץ, צוות הייטק",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T23:40:34+00:00",
    "last_checked": null
   },
   {
@@ -705,6 +750,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "773870394547175",
+   "name": "דרושים בכירים/מנהלים/ניהול /הזדמנויות /פיתוח עסקי/מנכ\"ל | **דרוש/ה מנהל ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T23:40:34+00:00",
    "last_checked": null
   },
   {
@@ -1308,6 +1368,21 @@
    "last_checked": null
   },
   {
+   "slug": "1174154780210185",
+   "name": "דרושים משאבי אנוש/רכז/ת גיוס והשמה/ניהול בכיר/Hr רווחה/הדרכה/גיוס ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T23:40:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1213894351964666",
    "name": "פרילאנסרים מחפשים פרויקטים",
    "status": "pending",
@@ -1365,6 +1440,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1406771276210792",
+   "name": "משאבי אנוש, הדרכה, רווחה, גיוס, השמה, שכר, דיני עבודה, ייעוץ",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T23:40:34+00:00",
    "last_checked": null
   },
   {
@@ -1545,6 +1635,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T22:27:08+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "587640282883229",
+   "name": "מקצועני מיקור חוץ \\ אאוטסורסינג \\ עובדים וירטואלים ויצירת עסקים ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T23:40:34+00:00",
    "last_checked": null
   },
   {
