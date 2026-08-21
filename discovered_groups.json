@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-21T20:35:52+00:00",
- "count": 210,
+ "generated": "2026-08-21T21:02:21+00:00",
+ "count": 218,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1263,6 +1263,21 @@
    "last_checked": null
   },
   {
+   "slug": "105474902826094",
+   "name": "מפרגנים לחברים שמפתחים אפליקציות - ומקדמים אפליקציות כחול-לבן",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T21:02:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1058223315954721",
    "name": "Business For Sale By Owner In South Africa",
    "status": "pending",
@@ -1608,6 +1623,21 @@
    "last_checked": null
   },
   {
+   "slug": "807976829284427",
+   "name": "פיתוח אפליקציות (android web and ios)",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T21:02:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "810698363860855",
    "name": "Canada StartUp VISA",
    "status": "pending",
@@ -1713,6 +1743,21 @@
    "last_checked": null
   },
   {
+   "slug": "AppStart",
+   "name": "אפ-סטארט. מיזמים מבוססי אפליקציות",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T21:02:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "CanadaStartup",
    "name": "Tech Canada: Canadian Startups in Toronto / Waterloo , Montreal ...",
    "status": "pending",
@@ -1740,6 +1785,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T00:06:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "MobileAppFaq",
+   "name": "פיתוח אפליקציות - שאלות ותשובות",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T21:02:20+00:00",
    "last_checked": null
   },
   {
@@ -1833,6 +1893,21 @@
    "last_checked": null
   },
   {
+   "slug": "androidhebrew",
+   "name": "פיתוח אפליקציות לאנדרואיד",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T21:02:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "ausbizownersclub",
    "name": "Australia Business Owners Club",
    "status": "pending",
@@ -1875,6 +1950,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "besmartphone.il",
+   "name": "פיתוח אפליקציות",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T21:02:20+00:00",
    "last_checked": null
   },
   {
@@ -2025,6 +2115,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T03:24:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "looking4developer",
+   "name": "דרושים מפתחי אפליקציות",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T21:02:20+00:00",
    "last_checked": null
   },
   {
@@ -2550,6 +2655,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T17:37:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "395525770590756",
+   "name": "אפליקציות",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T21:02:20+00:00",
    "last_checked": null
   },
   {

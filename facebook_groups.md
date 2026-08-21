@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-21T20:35:52+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-21T21:02:21+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (227)
+## Not yet probed (235)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -210,19 +210,26 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1657329921376731` (found via ddg)
 - `7602972273135565` (found via ddg)
 - `ishwanted` (found via ddg)
+- `AppStart` (found via ddg)
 - `1338202816787610` (found via ddg)
 - `289118210401946` (found via ddg)
 - `Software.Developers.Israel` (found via ddg)
+- `looking4developer` (found via ddg)
 - `freelanceisrael` (found via ddg)
 - `1456367289297520` (found via ddg)
 - `624543140573742` (found via ddg)
 - `entrepreneurs.israel` (found via ddg)
 - `940674812655793` (found via ddg)
 - `3d.printing.israel` (found via ddg)
+- `105474902826094` (found via ddg)
 - `automationil` (found via ddg)
 - `giuson` (found via ddg)
 - `israel.hitech.jobs` (found via ddg)
 - `544976585999596` (found via ddg)
+- `besmartphone.il` (found via ddg)
+- `807976829284427` (found via ddg)
+- `MobileAppFaq` (found via ddg)
+- `androidhebrew` (found via ddg)
 - `1213894351964666` (found via ddg)
 - `832763754922199` (found via ddg)
 - `692392677552880` (found via ddg)
@@ -266,6 +273,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `TechForTechs` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
 - `ig.israel` (found via ddg)
+- `395525770590756` (found via ddg)
 - `independant.il` (found via ddg)
 - `business.owners.israel` (found via ddg)
 - `business.marketing.ai.il` (found via ddg)
