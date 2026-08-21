@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-21T19:31:29+00:00",
- "count": 200,
+ "generated": "2026-08-21T19:58:19+00:00",
+ "count": 209,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1653,6 +1653,21 @@
    "last_checked": null
   },
   {
+   "slug": "849152465232462",
+   "name": "שיווק דיגיטלי Gen-ai קידום ממומן Ppc | בניית אתרים ו-seo | סושיאל ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "940674812655793",
    "name": "מדברים אוטומציה",
    "status": "pending",
@@ -1860,6 +1875,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "bizask",
+   "name": "AI - בעלי עסקים שואלים - שיווק , פרסום ו",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T19:58:18+00:00",
    "last_checked": null
   },
   {
@@ -2268,6 +2298,36 @@
    "last_checked": null
   },
   {
+   "slug": "1175523289159038",
+   "name": "תושבי שכונת הגפן רמת גן",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1298319104548368",
+   "name": "שיווק חכם לעסקים משווקים בירוק הקהילה הרשמית של ישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "131710772378400",
    "name": "Pak Irish Platform | Are there any consultants in Dublin who can ...",
    "status": "pending",
@@ -2583,6 +2643,21 @@
    "last_checked": null
   },
   {
+   "slug": "LoveMeSuperMekori",
+   "name": "עסקים בצפון - הפניות, נטוורקינג , שיתופי פעולה, פרסום וקידום בדיגיטל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "TechForTechs",
    "name": "Tech for Techs (UK & Ireland Members)",
    "status": "pending",
@@ -2610,6 +2685,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "business.marketing.ai.il",
+   "name": "בעלי עסקים בישראל | שיווק, AI, מכירות ונטוורקינג",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T19:58:18+00:00",
    "last_checked": null
   },
   {
@@ -2733,6 +2823,21 @@
    "last_checked": null
   },
   {
+   "slug": "digitalz.co.il",
+   "name": "פרסום ושיווק עסקים ברשת | דיגטלז - שיווק דיגיטלי לעסקים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "fed.israel",
    "name": null,
    "status": "pending",
@@ -2790,6 +2895,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:16:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ig.israel",
+   "name": "אינסטגרם ישראל | שיווק, תוכן וצמיחה לעסקים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T19:58:18+00:00",
    "last_checked": null
   },
   {
@@ -2865,6 +2985,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "slikot",
+   "name": "שיווק דיגיטלי בישראל - הקבוצה הרשמית",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T19:58:18+00:00",
    "last_checked": null
   },
   {

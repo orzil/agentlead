@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-21T19:31:29+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-21T19:58:19+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (217)
+## Not yet probed (226)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -202,6 +202,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `uksmallbusinessowners` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
 - `nodemation` (found via config)
+- `bizask` (found via ddg)
 - `magia.israel` (found via ddg)
 - `NH.Freelancer` (found via ddg)
 - `webflowIL` (found via ddg)
@@ -226,6 +227,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `832763754922199` (found via ddg)
 - `692392677552880` (found via ddg)
 - `768974062661759` (found via ddg)
+- `849152465232462` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
 - `2936517136591278` (found via leads_db)
 - `uxdesignercommunity` (found via leads_db)
@@ -262,17 +264,24 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `southafricanbusinesses` (found via ddg)
 - `TechForTechs` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
+- `ig.israel` (found via ddg)
 - `independant.il` (found via ddg)
 - `business.owners.israel` (found via ddg)
+- `business.marketing.ai.il` (found via ddg)
 - `1774931386364154` (found via ddg)
 - `asakimktanim` (found via ddg)
 - `2786770884931764` (found via ddg)
 - `270931709946261` (found via ddg)
 - `462672717191788` (found via ddg)
+- `LoveMeSuperMekori` (found via ddg)
 - `smallbusinessisrael` (found via ddg)
 - `smallbusinessesaregrowing` (found via ddg)
 - `209262042417914` (found via ddg)
 - `1417623821789515` (found via ddg)
 - `portalil` (found via ddg)
+- `digitalz.co.il` (found via ddg)
 - `persum.israel` (found via ddg)
 - `buslness` (found via ddg)
+- `slikot` (found via ddg)
+- `1298319104548368` (found via ddg)
+- `1175523289159038` (found via ddg)
