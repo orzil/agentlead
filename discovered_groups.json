@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-21T21:40:26+00:00",
- "count": 218,
+ "generated": "2026-08-21T22:05:14+00:00",
+ "count": 219,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -3060,6 +3060,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:57:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "mlban",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T22:04:47+00:00",
    "last_checked": null
   },
   {
