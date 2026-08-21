@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-21T02:24:39+00:00",
- "count": 171,
+ "generated": "2026-08-21T03:29:08+00:00",
+ "count": 178,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -105,6 +105,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T20:46:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "157185408042870",
+   "name": "משרות/עבודה טלמרקטינג ועבודה מהבית מיידי! | אני מחפש פרילנסר שיכול לבצע ...",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T03:29:07+00:00",
    "last_checked": null
   },
   {
@@ -1233,6 +1248,21 @@
    "last_checked": null
   },
   {
+   "slug": "1213894351964666",
+   "name": "פרילאנסרים מחפשים פרויקטים",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T03:29:07+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1338202816787610",
    "name": "בינה מלאכותית ישראל",
    "status": "pending",
@@ -1368,6 +1398,21 @@
    "last_checked": null
   },
   {
+   "slug": "3d.printing.israel",
+   "name": "מחפש פרילנסר למידול תלת־ממד לתכשיטים ב־Rhino",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T03:29:07+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "464376085736538",
    "name": "Australian Business Owners",
    "status": "pending",
@@ -1455,6 +1500,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "768974062661759",
+   "name": "קמפיינרים פרילנסרים פרסום ושיווק דיגטלי",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T03:29:07+00:00",
    "last_checked": null
   },
   {
@@ -1590,6 +1650,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T00:06:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "NH.Freelancer",
+   "name": "NH - פרילנסר",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T03:29:07+00:00",
    "last_checked": null
   },
   {
@@ -1785,6 +1860,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T17:29:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ishwanted",
+   "name": "אנשי הרוויט מחפשים עבודה",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T03:29:07+00:00",
    "last_checked": null
   },
   {
@@ -2115,6 +2205,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T22:02:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1417623821789515",
+   "name": "פרילאנסרים שעובדים מהבית",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T03:29:07+00:00",
    "last_checked": null
   },
   {

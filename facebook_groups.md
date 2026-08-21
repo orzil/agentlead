@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-21T02:24:39+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-21T03:29:08+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (188)
+## Not yet probed (195)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -79,6 +79,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupsinvestorsentrepreneursmentors` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
+- `157185408042870` (found via ddg)
 - `aibusinesstools` (found via config)
 - `australiansmallbusinesowners` (found via ddg)
 - `279906104787742` (found via ddg)
@@ -199,20 +200,25 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `vancouverstartupcommunity` (found via ddg)
 - `nodemation` (found via config)
 - `magia.israel` (found via ddg)
+- `NH.Freelancer` (found via ddg)
 - `webflowIL` (found via ddg)
 - `980725725352474` (found via ddg)
 - `1657329921376731` (found via ddg)
 - `7602972273135565` (found via ddg)
+- `ishwanted` (found via ddg)
 - `1338202816787610` (found via ddg)
 - `289118210401946` (found via ddg)
 - `Software.Developers.Israel` (found via ddg)
 - `freelanceisrael` (found via ddg)
 - `940674812655793` (found via ddg)
+- `3d.printing.israel` (found via ddg)
 - `automationil` (found via ddg)
 - `israel.hitech.jobs` (found via ddg)
 - `544976585999596` (found via ddg)
+- `1213894351964666` (found via ddg)
 - `832763754922199` (found via ddg)
 - `692392677552880` (found via ddg)
+- `768974062661759` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
 - `2936517136591278` (found via leads_db)
 - `uxdesignercommunity` (found via leads_db)
@@ -247,3 +253,4 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `thesouthafricanbusinessnetwork` (found via ddg)
 - `2786770884931764` (found via ddg)
 - `462672717191788` (found via ddg)
+- `1417623821789515` (found via ddg)
