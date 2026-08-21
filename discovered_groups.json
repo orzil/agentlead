@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-21T19:58:19+00:00",
- "count": 209,
+ "generated": "2026-08-21T20:35:52+00:00",
+ "count": 210,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -3135,6 +3135,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T12:18:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "webdeveloperinusa",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T20:35:52+00:00",
    "last_checked": null
   }
  ]

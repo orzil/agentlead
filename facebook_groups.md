@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-21T19:58:19+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-21T20:35:52+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (226)
+## Not yet probed (227)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -253,6 +253,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `developerkaki` (found via leads_db)
 - `fed.israel` (found via leads_db)
 - `1518002613342681` (found via leads_db)
+- `webdeveloperinusa` (found via leads_db)
 - `1271378943826323` (found via config)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
