@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-20T23:28:24+00:00",
- "count": 159,
+ "generated": "2026-08-21T00:06:43+00:00",
+ "count": 169,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -108,6 +108,21 @@
    "last_checked": null
   },
   {
+   "slug": "256977734759027",
+   "name": "Singapore CEO & Business Owners & Founders & Entrepreneurs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T00:06:42+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "670629268019461",
    "name": "AI Automation Agency - AAA",
    "status": "pending",
@@ -195,6 +210,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T02:15:02+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "singaporeentrepreneurship",
+   "name": "Singapore Entrepreneurship - Startups / SME Business, Investors, & Jobs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T00:06:42+00:00",
    "last_checked": null
   },
   {
@@ -555,6 +585,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T22:10:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "580487328806681",
+   "name": "Singapore Entrepreneur Startups",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T00:06:42+00:00",
    "last_checked": null
   },
   {
@@ -1248,6 +1293,21 @@
    "last_checked": null
   },
   {
+   "slug": "1620010391574229",
+   "name": "All Singapore Start-ups Entrepreneurs Small Medium Businesses ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T00:06:42+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1657329921376731",
    "name": "אוטומציה - עסקים אוטונומיים - עסקים שמבינים ומיישמים אוטומציה",
    "status": "pending",
@@ -1260,6 +1320,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "242604115854061",
+   "name": "Singapore Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T00:06:42+00:00",
    "last_checked": null
   },
   {
@@ -1458,6 +1533,21 @@
    "last_checked": null
   },
   {
+   "slug": "989233131137552",
+   "name": "Singapore Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T00:06:42+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "CanadaStartup",
    "name": "Tech Canada: Canadian Startups in Toronto / Waterloo , Montreal ...",
    "status": "pending",
@@ -1470,6 +1560,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "Entrepreneur.Singapore",
+   "name": "SG Entrepreneur",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T00:06:42+00:00",
    "last_checked": null
   },
   {
@@ -1785,6 +1890,51 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "singapore.entrepreneurs.network",
+   "name": "Singapore Entrepreneurs Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T00:06:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "singstartups",
+   "name": "Singapore Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T00:06:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "sleeksgcommunity",
+   "name": "New Entrepreneurs in Singapore",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T00:06:42+00:00",
    "last_checked": null
   },
   {

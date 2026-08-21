@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-20T23:28:24+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-21T00:06:43+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (176)
+## Not yet probed (186)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -74,6 +74,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1418563452142232` (found via ddg)
 - `agencybusinessowners` (found via ddg)
 - `1527705608867878` (found via ddg)
+- `256977734759027` (found via ddg)
+- `singaporeentrepreneurship` (found via ddg)
 - `startupsinvestorsentrepreneursmentors` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
 - `JuniorJobs` (found via ddg)
@@ -103,6 +105,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `saasfoundersgroup` (found via ddg)
 - `SaaSFounders` (found via ddg)
 - `saasfoundergroup` (found via ddg)
+- `580487328806681` (found via ddg)
 - `smallbusinessownercommunityuk` (found via ddg)
 - `3418202234922142` (found via ddg)
 - `socialmediaforsmallbusinessownersuk` (found via ddg)
@@ -144,6 +147,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `devjob` (found via ddg)
 - `developersmeetstartups` (found via config)
 - `320942198348539` (found via ddg)
+- `1620010391574229` (found via ddg)
 - `ausbizownersclub` (found via ddg)
 - `487009714795019` (found via ddg)
 - `811045979419418` (found via ddg)
@@ -166,15 +170,21 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
 - `1356416033271840` (found via ddg)
+- `sleeksgcommunity` (found via ddg)
 - `NewZealandSmallBusinessOwnersNetworking` (found via ddg)
 - `newzealandbusinessowners` (found via ddg)
 - `nzsmallbusinessnetwork` (found via ddg)
 - `inventivehub` (found via config)
 - `remotestartupjobs` (found via config)
+- `Entrepreneur.Singapore` (found via ddg)
 - `789382672475266` (found via ddg)
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
 - `shopifystoreowner` (found via ddg)
+- `singapore.entrepreneurs.network` (found via ddg)
+- `989233131137552` (found via ddg)
+- `singstartups` (found via ddg)
+- `242604115854061` (found via ddg)
 - `sasmallbusinessnetwork` (found via ddg)
 - `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
