@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T00:06:03+00:00",
- "count": 229,
+ "generated": "2026-08-22T00:55:35+00:00",
+ "count": 231,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2628,6 +2628,21 @@
    "last_checked": null
   },
   {
+   "slug": "1348711550214520",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T00:55:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1417623821789515",
    "name": "פרילאנסרים שעובדים מהבית",
    "status": "pending",
@@ -2880,6 +2895,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T12:18:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "729387837515551",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T00:55:35+00:00",
    "last_checked": null
   },
   {
