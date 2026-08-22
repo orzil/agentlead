@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T21:36:49+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-22T21:58:40+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (305)
+## Not yet probed (315)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -90,6 +90,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `279906104787742` (found via ddg)
 - `580118425856327` (found via ddg)
 - `chatbotjobs` (found via config)
+- `1681683688690553` (found via ddg)
 - `659198409489977` (found via ddg)
 - `storeownertips` (found via ddg)
 - `ecommercestoreowner` (found via ddg)
@@ -174,6 +175,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1058223315954721` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
 - `810698363860855` (found via ddg)
+- `coachesplaybook` (found via ddg)
 - `ComputerVisionGroup` (found via config)
 - `1089592466188735` (found via ddg)
 - `markupandprofit` (found via ddg)
@@ -323,6 +325,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1002630209124759` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
+- `1698653417237262` (found via ddg)
+- `coaches.consultants` (found via ddg)
+- `158869776985905` (found via ddg)
+- `1026867278991606` (found via ddg)
+- `860513401695427` (found via ddg)
+- `coachingandconsulting` (found via ddg)
 - `3719451304764538` (found via ddg)
 - `402786871855453` (found via ddg)
 - `764877593708803` (found via ddg)
@@ -340,6 +348,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `736631881894510` (found via ddg)
 - `truckingandlogistics` (found via ddg)
 - `474293496993273` (found via ddg)
+- `1460476385552503` (found via ddg)
+- `coaches.and.consultants.community` (found via ddg)
 - `669886889110965` (found via ddg)
 - `403307456733049` (found via ddg)
 - `ig.israel` (found via ddg)

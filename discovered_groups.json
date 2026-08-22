@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T21:36:49+00:00",
- "count": 288,
+ "generated": "2026-08-22T21:58:40+00:00",
+ "count": 298,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -405,6 +405,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1681683688690553",
+   "name": "Coaches, Consultants and Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:58:39+00:00",
    "last_checked": null
   },
   {
@@ -2508,6 +2523,21 @@
    "last_checked": null
   },
   {
+   "slug": "coachesplaybook",
+   "name": "Coaches and Consultants Get Clients",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "constructionbusinessowners",
    "name": "Construction Business Owners Group",
    "status": "pending",
@@ -3123,6 +3153,21 @@
    "last_checked": null
   },
   {
+   "slug": "1026867278991606",
+   "name": "Coaches, Consultants & Course Creators Help, Hiring and Support",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1164103449222930",
    "name": "AMAZON FBA SELLERS COMMUNITY",
    "status": "pending",
@@ -3273,6 +3318,21 @@
    "last_checked": null
   },
   {
+   "slug": "1460476385552503",
+   "name": "USA Coaches and Consultants Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1518002613342681",
    "name": null,
    "status": "pending",
@@ -3303,6 +3363,21 @@
    "last_checked": null
   },
   {
+   "slug": "158869776985905",
+   "name": "Coaches and Consultants",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1636991833121307",
    "name": "No Code Community",
    "status": "pending",
@@ -3315,6 +3390,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T00:04:53+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1698653417237262",
+   "name": "Coaches & Consultants",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:58:39+00:00",
    "last_checked": null
   },
   {
@@ -3693,6 +3783,21 @@
    "last_checked": null
   },
   {
+   "slug": "860513401695427",
+   "name": "Coaches, Consultants & Service Providers Group",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "DeepNetGroup",
    "name": null,
    "status": "pending",
@@ -3900,6 +4005,51 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "coaches.and.consultants.community",
+   "name": "USA Coaches and Consultants Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "coaches.consultants",
+   "name": "Coaches & Consultants Mastermind",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "coachingandconsulting",
+   "name": "Coaching and Consulting Connections",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:58:39+00:00",
    "last_checked": null
   },
   {
