@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T19:05:32+00:00",
- "count": 267,
+ "generated": "2026-08-22T19:36:41+00:00",
+ "count": 276,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -150,6 +150,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T00:06:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2815042615255352",
+   "name": "Small business owners/entrepreneurs | I am looking at ...",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T19:36:40+00:00",
    "last_checked": null
   },
   {
@@ -1443,6 +1458,21 @@
    "last_checked": null
   },
   {
+   "slug": "1089592466188735",
+   "name": "Construction Business Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1112643972603670",
    "name": "Restaurant Owners",
    "status": "pending",
@@ -1878,6 +1908,21 @@
    "last_checked": null
   },
   {
+   "slug": "6508644522524665",
+   "name": "Construction Owners Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "667291046350388",
    "name": "Shopify Store Owners Hub (5-10 day delivery)\"",
    "status": "pending",
@@ -2268,6 +2313,21 @@
    "last_checked": null
   },
   {
+   "slug": "aiforconstructioncompanies",
+   "name": "AI for Construction Companies",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "androidhebrew",
    "name": "פיתוח אפליקציות לאנדרואיד",
    "status": "pending",
@@ -2370,6 +2430,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "constructionbusinessowners",
+   "name": "Construction Business Owners Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "constructionmanagementnetwork",
+   "name": "MDS Group, Construction & Project Management",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T19:36:40+00:00",
    "last_checked": null
   },
   {
@@ -2520,6 +2610,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "markupandprofit",
+   "name": "Construction Business Owners Discussion Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T19:36:40+00:00",
    "last_checked": null
   },
   {
@@ -3243,6 +3348,21 @@
    "last_checked": null
   },
   {
+   "slug": "3719451304764538",
+   "name": "Construction Industries - USA",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "395525770590756",
    "name": "אפליקציות",
    "status": "pending",
@@ -3270,6 +3390,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T02:24:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "403307456733049",
+   "name": "construction companies & contractors",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T19:36:40+00:00",
    "last_checked": null
   },
   {

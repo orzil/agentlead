@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T19:05:32+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-22T19:36:41+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (284)
+## Not yet probed (293)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -76,6 +76,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1527705608867878` (found via ddg)
 - `256977734759027` (found via ddg)
 - `singaporeentrepreneurship` (found via ddg)
+- `2815042615255352` (found via ddg)
 - `startupsinvestorsentrepreneursmentors` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
 - `284048350858807` (found via ddg)
@@ -159,6 +160,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `828562470599993` (found via ddg)
 - `320942198348539` (found via ddg)
 - `506523693145809` (found via ddg)
+- `aiforconstructioncompanies` (found via ddg)
 - `1620010391574229` (found via ddg)
 - `ausbizownersclub` (found via ddg)
 - `487009714795019` (found via ddg)
@@ -172,6 +174,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `SBClassifiedsAustralia` (found via ddg)
 - `810698363860855` (found via ddg)
 - `ComputerVisionGroup` (found via config)
+- `1089592466188735` (found via ddg)
+- `markupandprofit` (found via ddg)
+- `constructionbusinessowners` (found via ddg)
+- `6508644522524665` (found via ddg)
 - `practiceowners` (found via ddg)
 - `490880091107538` (found via ddg)
 - `dublin.ireland.startups` (found via ddg)
@@ -181,6 +187,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `foundersspace` (found via config)
 - `findingsuvfounders` (found via ddg)
 - `freelancersrequired` (found via ddg)
+- `constructionmanagementnetwork` (found via ddg)
 - `makeautomation` (found via config)
 - `mpoalliance` (found via ddg)
 - `montreal.startup.people` (found via ddg)
@@ -308,6 +315,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1002630209124759` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
+- `3719451304764538` (found via ddg)
 - `402786871855453` (found via ddg)
 - `764877593708803` (found via ddg)
 - `MedPM` (found via ddg)
@@ -321,6 +329,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `190482421294295` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
 - `669886889110965` (found via ddg)
+- `403307456733049` (found via ddg)
 - `ig.israel` (found via ddg)
 - `395525770590756` (found via ddg)
 - `independant.il` (found via ddg)
