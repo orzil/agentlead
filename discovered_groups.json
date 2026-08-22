@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T19:59:02+00:00",
- "count": 276,
+ "generated": "2026-08-22T20:32:50+00:00",
+ "count": 282,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1578,6 +1578,21 @@
    "last_checked": null
   },
   {
+   "slug": "1404824917072635",
+   "name": "USA Trucking Network| Owner Operators|Carriers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T20:32:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1406771276210792",
    "name": "משאבי אנוש, הדרכה, רווחה, גיוס, השמה, שכר, דיני עבודה, ייעוץ",
    "status": "pending",
@@ -1755,6 +1770,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T18:34:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "3201149406569173",
+   "name": "logistics & trucking company owner group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T20:32:50+00:00",
    "last_checked": null
   },
   {
@@ -2973,6 +3003,21 @@
    "last_checked": null
   },
   {
+   "slug": "usatruckingindustry",
+   "name": "USA CDL TRUCK DRIVERS / OWNER OPERATORS / TRUCKERS LOOKING ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T20:32:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "vancouverstartupcommunity",
    "name": "Vancouver Startups",
    "status": "pending",
@@ -3453,6 +3498,21 @@
    "last_checked": null
   },
   {
+   "slug": "474293496993273",
+   "name": "Trucks and Trucking Logistics | Facebook - Meta Business Suite",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T20:32:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "669886889110965",
    "name": "Which EHR software do you use or recommend?",
    "status": "pending",
@@ -3495,6 +3555,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T00:55:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "736631881894510",
+   "name": "Trucking Dispatchers, Freight Brokers, Truck Drivers, Logistics ...",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T20:32:50+00:00",
    "last_checked": null
   },
   {
@@ -4095,6 +4170,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T23:28:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "truckingandlogistics",
+   "name": "Trucking and Logistics",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T20:32:50+00:00",
    "last_checked": null
   },
   {

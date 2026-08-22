@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T19:59:02+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-22T20:32:50+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (293)
+## Not yet probed (299)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -235,7 +235,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1165236046981865` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
 - `uksmallbusinessowners` (found via ddg)
+- `usatruckingindustry` (found via ddg)
+- `1404824917072635` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
+- `3201149406569173` (found via ddg)
 - `nodemation` (found via config)
 - `bizask` (found via ddg)
 - `magia.israel` (found via ddg)
@@ -328,6 +331,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `TechForTechs` (found via ddg)
 - `190482421294295` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
+- `736631881894510` (found via ddg)
+- `truckingandlogistics` (found via ddg)
+- `474293496993273` (found via ddg)
 - `669886889110965` (found via ddg)
 - `403307456733049` (found via ddg)
 - `ig.israel` (found via ddg)
