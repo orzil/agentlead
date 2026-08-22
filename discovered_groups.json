@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-21T23:40:34+00:00",
- "count": 226,
+ "generated": "2026-08-22T00:06:03+00:00",
+ "count": 229,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -780,6 +780,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T22:10:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "828562470599993",
+   "name": "סטארטאפ ישראלי - קהילת יזמים , סטארטאפים , משקיעים, השקעות, מיזמים ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T00:06:02+00:00",
    "last_checked": null
   },
   {
@@ -1680,6 +1695,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T18:50:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "698911985645824",
+   "name": "קהילת יזמים - משקיעים",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T00:06:02+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "707574362649616",
+   "name": "משרות שיווק מפה לאוזן",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T00:06:02+00:00",
    "last_checked": null
   },
   {
