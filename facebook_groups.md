@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T20:32:50+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-22T21:00:44+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (299)
+## Not yet probed (300)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -307,6 +307,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `mlban` (found via leads_db)
 - `1348711550214520` (found via leads_db)
 - `729387837515551` (found via leads_db)
+- `503614587414188` (found via leads_db)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
 - `fbacommunity` (found via ddg)

@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T20:32:50+00:00",
- "count": 282,
+ "generated": "2026-08-22T21:00:44+00:00",
+ "count": 283,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -3510,6 +3510,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T20:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "503614587414188",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:00:44+00:00",
    "last_checked": null
   },
   {
