@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T21:00:44+00:00",
- "count": 283,
+ "generated": "2026-08-22T21:36:49+00:00",
+ "count": 288,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -135,6 +135,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T03:29:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2109860309355224",
+   "name": "Entrepreneur and Business Owners Club: eCommerce, Manufacturing ...",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:36:49+00:00",
    "last_checked": null
   },
   {
@@ -1533,6 +1548,21 @@
    "last_checked": null
   },
   {
+   "slug": "1238541634521395",
+   "name": "Manufacturing Owners & Growth Leaders",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:36:49+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1338202816787610",
    "name": "בינה מלאכותית ישראל",
    "status": "pending",
@@ -1800,6 +1830,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T18:34:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "372340252597184",
+   "name": "Manufacturing & Professional Services Companies for Sale by Owner",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:36:49+00:00",
    "last_checked": null
   },
   {
@@ -2640,6 +2685,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "manufacturingroboticsautomationusa",
+   "name": "Manufacturing, Robotics & Automation Network USA",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:36:49+00:00",
    "last_checked": null
   },
   {
@@ -3705,6 +3765,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T17:23:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "SuppliersManufacturers",
+   "name": "Suppliers Manufacturers",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:36:49+00:00",
    "last_checked": null
   },
   {

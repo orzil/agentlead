@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T21:00:44+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-22T21:36:49+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (300)
+## Not yet probed (305)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -70,6 +70,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1129871225741454` (found via ddg)
 - `148693034913710` (found via ddg)
 - `872702652095435` (found via ddg)
+- `2109860309355224` (found via ddg)
 - `2133987156657804` (found via config)
 - `1418563452142232` (found via ddg)
 - `agencybusinessowners` (found via ddg)
@@ -189,6 +190,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `freelancersrequired` (found via ddg)
 - `constructionmanagementnetwork` (found via ddg)
 - `makeautomation` (found via config)
+- `372340252597184` (found via ddg)
+- `1238541634521395` (found via ddg)
+- `manufacturingroboticsautomationusa` (found via ddg)
 - `mpoalliance` (found via ddg)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
@@ -329,6 +333,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `PracticeManagersNetwork` (found via ddg)
 - `southafricanbusiness` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
+- `SuppliersManufacturers` (found via ddg)
 - `TechForTechs` (found via ddg)
 - `190482421294295` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
