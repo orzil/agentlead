@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T00:55:35+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-22T02:13:59+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (248)
+## Not yet probed (256)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -187,10 +187,18 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `inventivehub` (found via config)
 - `remotestartupjobs` (found via config)
 - `Entrepreneur.Singapore` (found via ddg)
+- `573743181403219` (found via ddg)
 - `789382672475266` (found via ddg)
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
+- `shopifyentrepreneurs` (found via ddg)
+- `shopifyownerscommunity` (found via ddg)
+- `280313030637469` (found via ddg)
+- `667291046350388` (found via ddg)
+- `1017052997642628` (found via ddg)
+- `shopifyowner` (found via ddg)
 - `shopifystoreowner` (found via ddg)
+- `shopifystoreowners` (found via ddg)
 - `singapore.entrepreneurs.network` (found via ddg)
 - `989233131137552` (found via ddg)
 - `singstartups` (found via ddg)

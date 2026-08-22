@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T00:55:35+00:00",
- "count": 231,
+ "generated": "2026-08-22T02:13:59+00:00",
+ "count": 239,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1338,6 +1338,21 @@
    "last_checked": null
   },
   {
+   "slug": "1017052997642628",
+   "name": "Shopify Store Owners USA",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T02:13:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "105474902826094",
    "name": "מפרגנים לחברים שמפתחים אפליקציות - ומקדמים אפליקציות כחול-לבן",
    "status": "pending",
@@ -1563,6 +1578,21 @@
    "last_checked": null
   },
   {
+   "slug": "280313030637469",
+   "name": "Shopify Store Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T02:13:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "289118210401946",
    "name": "בינה מלאכותית ישראל - הקהילה הרשמית למשתמשים יוצרים",
    "status": "pending",
@@ -1653,6 +1683,21 @@
    "last_checked": null
   },
   {
+   "slug": "573743181403219",
+   "name": "SHOPIFY STORE OWNER'S COMMUNITY",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T02:13:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "587640282883229",
    "name": "מקצועני מיקור חוץ \\ אאוטסורסינג \\ עובדים וירטואלים ויצירת עסקים ...",
    "status": "pending",
@@ -1680,6 +1725,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T17:32:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "667291046350388",
+   "name": "Shopify Store Owners Hub (5-10 day delivery)\"",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T02:13:58+00:00",
    "last_checked": null
   },
   {
@@ -2373,6 +2433,51 @@
    "last_checked": null
   },
   {
+   "slug": "shopifyentrepreneurs",
+   "name": "Shopify Entrepreneurs",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T02:13:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "shopifyowner",
+   "name": "Shopify Store Owners | Ads, Sales & Growth",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T02:13:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "shopifyownerscommunity",
+   "name": "Shopify Owners Community (No ads or spam)",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T02:13:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "shopifystoreowner",
    "name": "Shopify Store Owners | Design, Development & Growth",
    "status": "pending",
@@ -2385,6 +2490,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "shopifystoreowners",
+   "name": "Shopify Store Owners- EXCLUSIVE COMMUNITY",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T02:13:58+00:00",
    "last_checked": null
   },
   {
