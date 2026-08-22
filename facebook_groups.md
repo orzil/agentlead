@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T04:59:00+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-22T17:23:55+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (269)
+## Not yet probed (275)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -167,10 +167,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbiz.au` (found via ddg)
 - `aussbn` (found via ddg)
 - `bsbnetwork` (found via ddg)
+- `1082845185201887` (found via ddg)
 - `1058223315954721` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
 - `810698363860855` (found via ddg)
 - `ComputerVisionGroup` (found via config)
+- `practiceowners` (found via ddg)
 - `490880091107538` (found via ddg)
 - `dublin.ireland.startups` (found via ddg)
 - `2687952944937992` (found via ddg)
@@ -180,6 +182,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `findingsuvfounders` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `makeautomation` (found via config)
+- `mpoalliance` (found via ddg)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
 - `1356416033271840` (found via ddg)
@@ -298,14 +301,17 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `businessinuk` (found via ddg)
 - `402786871855453` (found via ddg)
 - `764877593708803` (found via ddg)
+- `MedPM` (found via ddg)
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
 - `131710772378400` (found via ddg)
+- `PracticeManagersNetwork` (found via ddg)
 - `southafricanbusiness` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
 - `TechForTechs` (found via ddg)
 - `190482421294295` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
+- `669886889110965` (found via ddg)
 - `ig.israel` (found via ddg)
 - `395525770590756` (found via ddg)
 - `independant.il` (found via ddg)

@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T04:59:00+00:00",
- "count": 252,
+ "generated": "2026-08-22T17:23:55+00:00",
+ "count": 258,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1428,6 +1428,21 @@
    "last_checked": null
   },
   {
+   "slug": "1082845185201887",
+   "name": "Business For Practice Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T17:23:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1165236046981865",
    "name": "The No Code App Entrepreneur",
    "status": "pending",
@@ -2418,6 +2433,21 @@
    "last_checked": null
   },
   {
+   "slug": "mpoalliance",
+   "name": "Medical Practice Owners Alliance",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T17:23:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "newzealandbusinessowners",
    "name": "New Zealand Business Owners Community",
    "status": "pending",
@@ -2460,6 +2490,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "practiceowners",
+   "name": "Dental and Medical Practice Owners - Tips and Ideas Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T17:23:54+00:00",
    "last_checked": null
   },
   {
@@ -3138,6 +3183,21 @@
    "last_checked": null
   },
   {
+   "slug": "669886889110965",
+   "name": "Which EHR software do you use or recommend?",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T17:23:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "690027711153911",
    "name": null,
    "status": "pending",
@@ -3255,6 +3315,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "MedPM",
+   "name": "Medical Practice Managers (Office Manager, Administrator, Physician ...",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T17:23:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "PracticeManagersNetwork",
+   "name": "Practice Managers Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T17:23:54+00:00",
    "last_checked": null
   },
   {
