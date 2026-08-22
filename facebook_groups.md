@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T02:13:59+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-22T03:08:45+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (256)
+## Not yet probed (265)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -283,6 +283,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1348711550214520` (found via leads_db)
 - `729387837515551` (found via leads_db)
 - `1271378943826323` (found via config)
+- `1164103449222930` (found via ddg)
+- `fbacommunity` (found via ddg)
+- `1582392532791911` (found via ddg)
+- `748375581363810` (found via ddg)
+- `4498586473758518` (found via ddg)
+- `851415561261142` (found via ddg)
+- `1727446317476806` (found via ddg)
+- `1002630209124759` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
 - `402786871855453` (found via ddg)
@@ -292,6 +300,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `southafricanbusiness` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
 - `TechForTechs` (found via ddg)
+- `190482421294295` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
 - `ig.israel` (found via ddg)
 - `395525770590756` (found via ddg)

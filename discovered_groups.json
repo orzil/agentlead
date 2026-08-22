@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T02:13:59+00:00",
- "count": 239,
+ "generated": "2026-08-22T03:08:45+00:00",
+ "count": 248,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2673,6 +2673,36 @@
    "last_checked": null
   },
   {
+   "slug": "1002630209124759",
+   "name": "Amazon Fba Seller community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T03:08:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1164103449222930",
+   "name": "AMAZON FBA SELLERS COMMUNITY",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T03:08:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1175523289159038",
    "name": "תושבי שכונת הגפן רמת גן",
    "status": "pending",
@@ -2823,6 +2853,21 @@
    "last_checked": null
   },
   {
+   "slug": "1582392532791911",
+   "name": "Amazon FBA Sellers Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T03:08:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1636991833121307",
    "name": "No Code Community",
    "status": "pending",
@@ -2838,6 +2883,21 @@
    "last_checked": null
   },
   {
+   "slug": "1727446317476806",
+   "name": "Amazon FBA Wholesale & Private Label Experts",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T03:08:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1774931386364154",
    "name": "בעלי עסקים פרסום חינם",
    "status": "pending",
@@ -2850,6 +2910,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "190482421294295",
+   "name": "The Amazon Sellers Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T03:08:45+00:00",
    "last_checked": null
   },
   {
@@ -2988,6 +3063,21 @@
    "last_checked": null
   },
   {
+   "slug": "4498586473758518",
+   "name": "Amazon FBA Sellers and Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T03:08:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "462672717191788",
    "name": "לימודים - כל מסלולי הלימוד",
    "status": "pending",
@@ -3030,6 +3120,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T00:55:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "748375581363810",
+   "name": "Amazon FBA Sellers Community - Global",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T03:08:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "851415561261142",
+   "name": "Amazon FBA Sellers and Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T03:08:45+00:00",
    "last_checked": null
   },
   {
@@ -3255,6 +3375,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "fbacommunity",
+   "name": "Amazon FBA Sellers Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T03:08:45+00:00",
    "last_checked": null
   },
   {
