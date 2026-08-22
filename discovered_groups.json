@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T17:48:39+00:00",
- "count": 258,
+ "generated": "2026-08-22T18:34:58+00:00",
+ "count": 267,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1443,6 +1443,21 @@
    "last_checked": null
   },
   {
+   "slug": "1112643972603670",
+   "name": "Restaurant Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T18:34:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1165236046981865",
    "name": "The No Code App Entrepreneur",
    "status": "pending",
@@ -1608,6 +1623,36 @@
    "last_checked": null
   },
   {
+   "slug": "1695866104037700",
+   "name": "Restaurant Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T18:34:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "192784851327609",
+   "name": "Restaurant Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T18:34:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "242604115854061",
    "name": "Singapore Startups",
    "status": "pending",
@@ -1665,6 +1710,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "3187174424898197",
+   "name": "Restaurant Owners Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T18:34:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "3627655380870109",
+   "name": "Restaurant Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T18:34:58+00:00",
    "last_checked": null
   },
   {
@@ -1758,6 +1833,21 @@
    "last_checked": null
   },
   {
+   "slug": "581853060030923",
+   "name": "Restaurant Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T18:34:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "587640282883229",
    "name": "מקצועני מיקור חוץ \\ אאוטסורסינג \\ עובדים וירטואלים ויצירת עסקים ...",
    "status": "pending",
@@ -1845,6 +1935,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T00:06:02+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "748711238658025",
+   "name": "Restaurant Owners and Managers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T18:34:58+00:00",
    "last_checked": null
   },
   {
@@ -2505,6 +2610,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T17:23:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "restaurantimage",
+   "name": "Restaurant Image: Restaurant Owners Technology & Marketing Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T18:34:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "restaurantownersvendorsservices",
+   "name": "Restaurant Owners, Vendors, and Services",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T18:34:58+00:00",
    "last_checked": null
   },
   {
