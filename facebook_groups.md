@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T04:20:17+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-22T04:59:00+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (265)
+## Not yet probed (269)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -95,6 +95,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `361717460552082` (found via config)
 - `highlevelagencyowner` (found via ddg)
 - `2709340372800064` (found via ddg)
+- `IAOAlliance` (found via ddg)
+- `2152373795524537` (found via ddg)
 - `556739801135588` (found via config)
 - `744604981439783` (found via ddg)
 - `1198024408768649` (found via ddg)
@@ -126,6 +128,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `TESNetwork` (found via ddg)
 - `uksmallbusinessesadvertsfree` (found via ddg)
 - `2018989461513326` (found via ddg)
+- `unfilteredagency` (found via ddg)
 - `ecommercesiteowners` (found via ddg)
 - `beehexaecommercegroup` (found via ddg)
 - `ecommercesuccessgroup` (found via ddg)
@@ -294,6 +297,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
 - `402786871855453` (found via ddg)
+- `764877593708803` (found via ddg)
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
 - `131710772378400` (found via ddg)

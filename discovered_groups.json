@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T04:20:17+00:00",
- "count": 248,
+ "generated": "2026-08-22T04:59:00+00:00",
+ "count": 252,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -468,6 +468,21 @@
    "last_checked": null
   },
   {
+   "slug": "2152373795524537",
+   "name": "Insurance Agency Owners Circle",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T04:58:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "223303087850326",
    "name": "המשבשים : יזמים, משקיעים וסטארטאפים",
    "status": "pending",
@@ -825,6 +840,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T23:28:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "IAOAlliance",
+   "name": "Insurance Agency Owners Alliance",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T04:58:58+00:00",
    "last_checked": null
   },
   {
@@ -1320,6 +1350,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "unfilteredagency",
+   "name": "Unfiltered Insurance Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T04:58:59+00:00",
    "last_checked": null
   },
   {
@@ -3135,6 +3180,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T03:08:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "764877593708803",
+   "name": "Help for Insurance Agents",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T04:58:58+00:00",
    "last_checked": null
   },
   {
