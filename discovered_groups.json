@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-22T22:31:25+00:00",
- "count": 298,
+ "generated": "2026-08-22T22:59:28+00:00",
+ "count": 305,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -393,6 +393,21 @@
    "last_checked": null
   },
   {
+   "slug": "1290241845505841",
+   "name": "SMMA Kings | Marketing Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T22:59:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "147963012536297",
    "name": "משרות הייטק בצפון",
    "status": "pending",
@@ -543,6 +558,36 @@
    "last_checked": null
   },
   {
+   "slug": "234981371266750",
+   "name": "Digital Marketing Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T22:59:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "246704271135223",
+   "name": "7 Figure Marketing Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T22:59:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "25573135598945626",
    "name": "SaaS Founders Club",
    "status": "pending",
@@ -615,6 +660,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2978347045629927",
+   "name": "Marketing Agency Owners and Appointment Setters",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T22:59:27+00:00",
    "last_checked": null
   },
   {
@@ -1023,6 +1083,21 @@
    "last_checked": null
   },
   {
+   "slug": "convertordie",
+   "name": "Digital Marketing Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T22:59:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "devjob",
    "name": "משרות מתכנתים/ות",
    "status": "pending",
@@ -1155,6 +1230,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "maopublic",
+   "name": "Marketing Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T22:59:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "marketingagencyowners",
+   "name": "Marketing Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T22:59:27+00:00",
    "last_checked": null
   },
   {

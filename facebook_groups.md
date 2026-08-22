@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T22:31:25+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-22T22:59:28+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (315)
+## Not yet probed (322)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -85,12 +85,15 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `918228853329387` (found via ddg)
 - `JuniorJobs` (found via ddg)
 - `157185408042870` (found via ddg)
+- `246704271135223` (found via ddg)
 - `aibusinesstools` (found via config)
 - `australiansmallbusinesowners` (found via ddg)
 - `279906104787742` (found via ddg)
 - `580118425856327` (found via ddg)
 - `chatbotjobs` (found via config)
 - `1681683688690553` (found via ddg)
+- `convertordie` (found via ddg)
+- `234981371266750` (found via ddg)
 - `659198409489977` (found via ddg)
 - `storeownertips` (found via ddg)
 - `ecommercestoreowner` (found via ddg)
@@ -101,10 +104,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `IAOAlliance` (found via ddg)
 - `2152373795524537` (found via ddg)
 - `556739801135588` (found via config)
+- `marketingagencyowners` (found via ddg)
+- `maopublic` (found via ddg)
+- `2978347045629927` (found via ddg)
 - `744604981439783` (found via ddg)
 - `1198024408768649` (found via ddg)
 - `341776853891812` (found via ddg)
 - `agencyownerlab` (found via ddg)
+- `1290241845505841` (found via ddg)
 - `4808168705943904` (found via ddg)
 - `993304299789457` (found via ddg)
 - `saasfoundersclub` (found via ddg)
