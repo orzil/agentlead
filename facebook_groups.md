@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-23T19:36:44+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-23T19:57:26+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (356)
+## Not yet probed (360)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -70,6 +70,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `670629268019461` (found via ddg)
 - `aiautomationagencyhub` (found via ddg)
 - `1129871225741454` (found via ddg)
+- `845546388110288` (found via ddg)
 - `aiforbusinessownersandfounders` (found via ddg)
 - `148693034913710` (found via ddg)
 - `872702652095435` (found via ddg)
@@ -78,6 +79,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1418563452142232` (found via ddg)
 - `agencybusinessowners` (found via ddg)
 - `1527705608867878` (found via ddg)
+- `saasaitools` (found via ddg)
 - `256977734759027` (found via ddg)
 - `singaporeentrepreneurship` (found via ddg)
 - `2815042615255352` (found via ddg)
@@ -93,6 +95,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `246704271135223` (found via ddg)
 - `aiagentdevelopers` (found via ddg)
 - `aibusinesstools` (found via config)
+- `aientrepreneurcommunity` (found via ddg)
+- `askarobot` (found via ddg)
 - `694597369571714` (found via ddg)
 - `australiansmallbusinesowners` (found via ddg)
 - `279906104787742` (found via ddg)

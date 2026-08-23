@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-23T19:36:44+00:00",
- "count": 339,
+ "generated": "2026-08-23T19:57:26+00:00",
+ "count": 343,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -243,6 +243,21 @@
    "last_checked": null
   },
   {
+   "slug": "845546388110288",
+   "name": "AI Tools & SaaS Growth Hub for Entrepreneurs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T19:57:25+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "872702652095435",
    "name": "E-commerce Shopify Business Owners (Ecommerce)",
    "status": "pending",
@@ -375,6 +390,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T03:45:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasaitools",
+   "name": "SaaS AI Tools - AI for Entrepreneurs, Creators, Marketers ...",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T19:57:25+00:00",
    "last_checked": null
   },
   {
@@ -1170,6 +1200,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aientrepreneurcommunity",
+   "name": "AI Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T19:57:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "askarobot",
+   "name": "AI Tools for Entrepreneurs & Creators",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T19:57:25+00:00",
    "last_checked": null
   },
   {
