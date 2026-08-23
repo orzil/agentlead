@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-23T23:29:59+00:00",
- "count": 355,
+ "generated": "2026-08-23T23:59:01+00:00",
+ "count": 358,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2268,6 +2268,21 @@
    "last_checked": null
   },
   {
+   "slug": "307912236406923",
+   "name": "Houston Jobs - All Positions & Skill Levels in Texas",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T23:59:00+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "3187174424898197",
    "name": "Restaurant Owners Community",
    "status": "pending",
@@ -2865,6 +2880,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "RosenbergMeansBusiness",
+   "name": "Fort Bend Co-Founders / Brand Marketers / Investors / B2B Networkers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T23:59:00+00:00",
    "last_checked": null
   },
   {
@@ -5085,6 +5115,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:03:56+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "peopleofcleburnetexas",
+   "name": "People Of Cleburne Texas | Facebook - Meta Business Suite",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T23:59:00+00:00",
    "last_checked": null
   },
   {

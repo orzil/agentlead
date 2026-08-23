@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-23T23:29:59+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-23T23:59:01+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (372)
+## Not yet probed (375)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -224,10 +224,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `dublin.ireland.startups` (found via ddg)
 - `2687952944937992` (found via ddg)
 - `findyourcofounder` (found via config)
+- `RosenbergMeansBusiness` (found via ddg)
 - `Founder.CEOs` (found via config)
 - `foundersspace` (found via config)
 - `findingsuvfounders` (found via ddg)
 - `freelancersrequired` (found via ddg)
+- `307912236406923` (found via ddg)
 - `constructionmanagementnetwork` (found via ddg)
 - `makeautomation` (found via config)
 - `372340252597184` (found via ddg)
@@ -389,6 +391,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
 - `131710772378400` (found via ddg)
+- `peopleofcleburnetexas` (found via ddg)
 - `PracticeManagersNetwork` (found via ddg)
 - `625858050017927` (found via ddg)
 - `southafricanbusiness` (found via ddg)
