@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-23T17:23:19+00:00",
- "count": 327,
+ "generated": "2026-08-23T17:47:34+00:00",
+ "count": 335,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -60,6 +60,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T02:15:02+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1410091330576470",
+   "name": "The Automation OS — AI Agents for Business Owners",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T17:47:33+00:00",
    "last_checked": null
   },
   {
@@ -288,6 +303,36 @@
    "last_checked": null
   },
   {
+   "slug": "ai.agents.n8n.artificial.intelligence",
+   "name": "AI Agents & Artificial Intelligence Developers & Business Owners",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T17:47:33+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aiagentsforsmallbusiness",
+   "name": "AI Agents for Small Business Owners",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T17:47:33+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "aiautomationagencyhub",
    "name": "AI Automation Agency Hub",
    "status": "pending",
@@ -300,6 +345,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T02:15:02+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aiforbusinessownersandfounders",
+   "name": "AI for business owners and founders",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T17:47:33+00:00",
    "last_checked": null
   },
   {
@@ -873,6 +933,21 @@
    "last_checked": null
   },
   {
+   "slug": "694597369571714",
+   "name": "AI for Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T17:47:33+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "744604981439783",
    "name": "N8N USA | Ai Automation | Ai Agents",
    "status": "pending",
@@ -1050,6 +1125,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aiagentdevelopers",
+   "name": "AI Agent Developers",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T17:47:33+00:00",
    "last_checked": null
   },
   {
@@ -2643,6 +2733,21 @@
    "last_checked": null
   },
   {
+   "slug": "aiagentsforbusiness",
+   "name": "AI Agents for Business",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T17:47:33+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "aiforconstructioncompanies",
    "name": "AI for Construction Companies",
    "status": "pending",
@@ -3300,6 +3405,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbusinessownerandentrepreneurs",
+   "name": "What is 1 thing you want AI agents to do for your business?",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T17:47:33+00:00",
    "last_checked": null
   },
   {
