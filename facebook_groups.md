@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-23T22:59:19+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-23T23:29:59+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (368)
+## Not yet probed (372)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -139,7 +139,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `580487328806681` (found via ddg)
 - `smallbusinessownercommunityuk` (found via ddg)
 - `893840601407320` (found via ddg)
+- `smallbusinessownersnetworkusa` (found via ddg)
 - `3418202234922142` (found via ddg)
+- `312322538374187` (found via ddg)
 - `socialmediaforsmallbusinessownersuk` (found via ddg)
 - `761000443963542` (found via ddg)
 - `sastartups` (found via ddg)
@@ -154,6 +156,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `TESNetwork` (found via ddg)
 - `uksmallbusinessesadvertsfree` (found via ddg)
 - `2018989461513326` (found via ddg)
+- `1380135855880231` (found via ddg)
 - `unfilteredagency` (found via ddg)
 - `ecommerce.entrepreneurs.us` (found via ddg)
 - `ecommerceentrepreneurs` (found via ddg)
@@ -278,6 +281,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `optimizedstoreowner` (found via ddg)
 - `uksmallbusinessowners` (found via ddg)
 - `usatruckingindustry` (found via ddg)
+- `usasmallbusinesscommunity` (found via ddg)
 - `1404824917072635` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
 - `smallbusinessownerandentrepreneurs` (found via ddg)

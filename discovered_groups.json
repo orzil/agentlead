@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-23T22:59:19+00:00",
- "count": 351,
+ "generated": "2026-08-23T23:29:59+00:00",
+ "count": 355,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -513,6 +513,21 @@
    "last_checked": null
   },
   {
+   "slug": "1380135855880231",
+   "name": "USA Small Business Owners Community",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T23:29:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "147963012536297",
    "name": "משרות הייטק בצפון",
    "status": "pending",
@@ -780,6 +795,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T22:59:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "312322538374187",
+   "name": "Small Business Owners USA",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T23:29:58+00:00",
    "last_checked": null
   },
   {
@@ -1680,6 +1710,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbusinessownersnetworkusa",
+   "name": "Small Business Owners Network USA",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T23:29:58+00:00",
    "last_checked": null
   },
   {
@@ -3675,6 +3720,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "usasmallbusinesscommunity",
+   "name": "USA Small Business community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T23:29:58+00:00",
    "last_checked": null
   },
   {
