@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-23T03:28:59+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-23T03:45:45+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (328)
+## Not yet probed (337)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -80,6 +80,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2815042615255352` (found via ddg)
 - `startupsinvestorsentrepreneursmentors` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
+- `n8ngroup` (found via ddg)
 - `284048350858807` (found via ddg)
 - `1448272189379640` (found via ddg)
 - `918228853329387` (found via ddg)
@@ -211,6 +212,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `mpoalliance` (found via ddg)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
+- `n8ndevelopers` (found via ddg)
 - `1356416033271840` (found via ddg)
 - `sleeksgcommunity` (found via ddg)
 - `NewZealandSmallBusinessOwnersNetworking` (found via ddg)
@@ -259,6 +261,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `vancouverstartupcommunity` (found via ddg)
 - `3201149406569173` (found via ddg)
 - `nodemation` (found via config)
+- `3196296700548675` (found via ddg)
+- `n8nagents` (found via ddg)
 - `bizask` (found via ddg)
 - `magia.israel` (found via ddg)
 - `NH.Freelancer` (found via ddg)
@@ -348,6 +352,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `402786871855453` (found via ddg)
 - `764877593708803` (found via ddg)
 - `MedPM` (found via ddg)
+- `n8ncommunity` (found via ddg)
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
 - `131710772378400` (found via ddg)
@@ -365,6 +370,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `coaches.and.consultants.community` (found via ddg)
 - `669886889110965` (found via ddg)
 - `403307456733049` (found via ddg)
+- `511333728510695` (found via ddg)
+- `n8nofficial` (found via ddg)
+- `n8nuser` (found via ddg)
+- `713796017872177` (found via ddg)
 - `ig.israel` (found via ddg)
 - `395525770590756` (found via ddg)
 - `independant.il` (found via ddg)

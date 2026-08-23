@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-23T03:28:59+00:00",
- "count": 311,
+ "generated": "2026-08-23T03:45:45+00:00",
+ "count": 320,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -300,6 +300,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T02:15:02+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "n8ngroup",
+   "name": "n8n Group - AI Agents, Help & Tutorials, Hiring & Jobs | by n8nLearn",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T03:45:44+00:00",
    "last_checked": null
   },
   {
@@ -2013,6 +2028,21 @@
    "last_checked": null
   },
   {
+   "slug": "3196296700548675",
+   "name": "n8n Automation Experts Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T03:45:44+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "3201149406569173",
    "name": "logistics & trucking company owner group",
    "status": "pending",
@@ -2973,6 +3003,36 @@
    "last_checked": null
   },
   {
+   "slug": "n8nagents",
+   "name": "⚙️ n8n Automations and Agents (NO SELF-PROMOTION)",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T03:45:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "n8ndevelopers",
+   "name": "N8N Developers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T03:45:44+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "newzealandbusinessowners",
    "name": "New Zealand Business Owners Community",
    "status": "pending",
@@ -3873,6 +3933,21 @@
    "last_checked": null
   },
   {
+   "slug": "511333728510695",
+   "name": "n8n (Community) - Free Zapier Alternative",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T03:45:44+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "669886889110965",
    "name": "Which EHR software do you use or recommend?",
    "status": "pending",
@@ -3900,6 +3975,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T12:18:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "713796017872177",
+   "name": "n8n support community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T03:45:44+00:00",
    "last_checked": null
   },
   {
@@ -4440,6 +4530,51 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T22:04:47+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "n8ncommunity",
+   "name": "N8N Global Community - ( FREE Zapier Alternative )",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T03:45:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "n8nofficial",
+   "name": "n8n (Official Community)",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T03:45:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "n8nuser",
+   "name": "n8n User Group",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T03:45:44+00:00",
    "last_checked": null
   },
   {
