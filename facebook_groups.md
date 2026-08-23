@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-22T23:59:47+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-23T00:59:46+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (322)
+## Not yet probed (328)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -95,8 +95,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `convertordie` (found via ddg)
 - `234981371266750` (found via ddg)
 - `659198409489977` (found via ddg)
+- `ecomentrepreneurs` (found via ddg)
 - `storeownertips` (found via ddg)
 - `ecommercestoreowner` (found via ddg)
+- `ecommerceentrepreners` (found via ddg)
+- `ecommerceentrepreneurgroup` (found via ddg)
 - `EABOSA` (found via ddg)
 - `361717460552082` (found via config)
 - `highlevelagencyowner` (found via ddg)
@@ -139,6 +142,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `uksmallbusinessesadvertsfree` (found via ddg)
 - `2018989461513326` (found via ddg)
 - `unfilteredagency` (found via ddg)
+- `ecommerce.entrepreneurs.us` (found via ddg)
+- `ecommerceentrepreneurs` (found via ddg)
+- `580888738978032` (found via ddg)
 - `ecommercesiteowners` (found via ddg)
 - `beehexaecommercegroup` (found via ddg)
 - `ecommercesuccessgroup` (found via ddg)
