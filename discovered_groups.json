@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-23T18:33:57+00:00",
- "count": 335,
+ "generated": "2026-08-23T19:04:37+00:00",
+ "count": 339,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1020,6 +1020,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T00:06:02+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "893840601407320",
+   "name": "Small Business Owners Network & Support | Thinking of ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T19:04:36+00:00",
    "last_checked": null
   },
   {
@@ -2748,6 +2763,21 @@
    "last_checked": null
   },
   {
+   "slug": "aifire.co",
+   "name": "AI Hub for YOU | Here are 10 new ChatGPT prompts that will ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T19:04:36+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "aiforconstructioncompanies",
    "name": "AI for Construction Companies",
    "status": "pending",
@@ -4143,6 +4173,21 @@
    "last_checked": null
   },
   {
+   "slug": "661035522370697",
+   "name": "BizAI Hub",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T19:04:36+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "669886889110965",
    "name": "Which EHR software do you use or recommend?",
    "status": "pending",
@@ -4380,6 +4425,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T22:10:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "agencysaaslaunch",
+   "name": "Chat GPT Business Growth Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T19:04:36+00:00",
    "last_checked": null
   },
   {
