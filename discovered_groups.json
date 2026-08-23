@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-23T03:45:45+00:00",
- "count": 320,
+ "generated": "2026-08-23T04:31:21+00:00",
+ "count": 326,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -1335,6 +1335,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "makenthusiasts",
+   "name": "Make (formerly Integromat) Automation Enthusiasts - Help, Hiring ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T04:31:20+00:00",
    "last_checked": null
   },
   {
@@ -3423,6 +3438,21 @@
    "last_checked": null
   },
   {
+   "slug": "1050679009595609",
+   "name": "Integromat (Make), n8n & Zapier Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T04:31:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1164103449222930",
    "name": "AMAZON FBA SELLERS COMMUNITY",
    "status": "pending",
@@ -3630,6 +3660,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1598268047627604",
+   "name": "Make.com ( Formerly integromat ) community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T04:31:20+00:00",
    "last_checked": null
   },
   {
@@ -3930,6 +3975,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T21:00:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "505933192026047",
+   "name": "Make.com (Integromat) | Zapier | Pably Connect",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T04:31:20+00:00",
    "last_checked": null
   },
   {
@@ -4755,6 +4815,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T20:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "umake",
+   "name": "Unofficial Make (dot)com/Integromat Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T04:31:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "unofficalmake",
+   "name": "Make.com (formerly Integromat) User Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-23T04:31:20+00:00",
    "last_checked": null
   },
   {

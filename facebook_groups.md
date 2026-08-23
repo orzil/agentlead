@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-23T03:45:45+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-23T04:31:21+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (337)
+## Not yet probed (343)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -108,6 +108,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `IAOAlliance` (found via ddg)
 - `2152373795524537` (found via ddg)
 - `556739801135588` (found via config)
+- `makenthusiasts` (found via ddg)
 - `marketingagencyowners` (found via ddg)
 - `maopublic` (found via ddg)
 - `2978347045629927` (found via ddg)
@@ -351,6 +352,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `3719451304764538` (found via ddg)
 - `402786871855453` (found via ddg)
 - `764877593708803` (found via ddg)
+- `1050679009595609` (found via ddg)
+- `1598268047627604` (found via ddg)
+- `505933192026047` (found via ddg)
+- `unofficalmake` (found via ddg)
 - `MedPM` (found via ddg)
 - `n8ncommunity` (found via ddg)
 - `businessnz` (found via ddg)
@@ -368,6 +373,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `474293496993273` (found via ddg)
 - `1460476385552503` (found via ddg)
 - `coaches.and.consultants.community` (found via ddg)
+- `umake` (found via ddg)
 - `669886889110965` (found via ddg)
 - `403307456733049` (found via ddg)
 - `511333728510695` (found via ddg)
