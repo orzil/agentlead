@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-24T18:05:15+00:00",
- "count": 480,
+ "generated": "2026-08-24T19:00:35+00:00",
+ "count": 485,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -555,6 +555,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T22:59:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1332660857778965",
+   "name": "AI & Innovation Hub: Middle East & Africa Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T19:00:35+00:00",
    "last_checked": null
   },
   {
@@ -2313,6 +2328,21 @@
    "last_checked": null
   },
   {
+   "slug": "157568706504",
+   "name": "Middle East Entrepreneurs Network (MEEN)",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1620010391574229",
    "name": "All Singapore Start-ups Entrepreneurs Small Medium Businesses ...",
    "status": "pending",
@@ -2400,6 +2430,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T17:33:47+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "23101870240",
+   "name": "Middle East Entrepreneurs",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T19:00:35+00:00",
    "last_checked": null
   },
   {
@@ -2928,6 +2973,21 @@
    "last_checked": null
   },
   {
+   "slug": "85350708778",
+   "name": "Middle East Business & Social Entrepreneurs Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "881330171044518",
    "name": "Claude AI for Making Money Online (Prompts + Systems)",
    "status": "pending",
@@ -3240,6 +3300,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T21:02:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "arabentrepreneurs",
+   "name": "Arab Entrepreneurs",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T19:00:35+00:00",
    "last_checked": null
   },
   {

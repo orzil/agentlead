@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-24T18:05:15+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-24T19:00:35+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (495)
+## Not yet probed (500)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -94,6 +94,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `154062152055554` (found via ddg)
 - `738857980085389` (found via ddg)
 - `246704271135223` (found via ddg)
+- `1332660857778965` (found via ddg)
 - `aiagentdevelopers` (found via ddg)
 - `aibusinesstools` (found via config)
 - `aientrepreneurcommunity` (found via ddg)
@@ -208,6 +209,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `6374504275931127` (found via ddg)
 - `716483187640234` (found via ddg)
 - `1620010391574229` (found via ddg)
+- `arabentrepreneurs` (found via ddg)
 - `1348711550214520` (found via leads_db)
 - `ausbizownersclub` (found via ddg)
 - `487009714795019` (found via ddg)
@@ -248,6 +250,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1238541634521395` (found via ddg)
 - `manufacturingroboticsautomationusa` (found via ddg)
 - `mpoalliance` (found via ddg)
+- `85350708778` (found via ddg)
+- `23101870240` (found via ddg)
+- `157568706504` (found via ddg)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
 - `n8ndevelopers` (found via ddg)
