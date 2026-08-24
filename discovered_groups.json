@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-24T02:22:49+00:00",
- "count": 364,
+ "generated": "2026-08-24T03:30:44+00:00",
+ "count": 370,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -45,6 +45,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T20:46:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startups.investors.entrepreneurs.mentors.founders",
+   "name": "Startups | Investors | Entrepreneurs | eCommerce | Founders & CEO's",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T03:30:43+00:00",
    "last_checked": null
   },
   {
@@ -1503,6 +1518,21 @@
    "last_checked": null
   },
   {
+   "slug": "entrepreneursandbusinessownerscalifornia",
+   "name": "Entrepreneurs & Business Owners California",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T03:30:43+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "founderx",
    "name": "The Founders Exchange ~ Startup Founder | Co-founder | Angel Investors",
    "status": "pending",
@@ -1740,6 +1770,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T23:28:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "sfenetworks",
+   "name": "San Francisco and Bay Area Entrepreneurs and Startup Network",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T03:30:43+00:00",
    "last_checked": null
   },
   {
@@ -3168,6 +3213,21 @@
    "last_checked": null
   },
   {
+   "slug": "californiausabuysell",
+   "name": "California Innovation, Startup & Business Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T03:30:43+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "chatgptpromptsandaitools",
    "name": "AI Community: ChatGPT & Claude Learning",
    "status": "pending",
@@ -3588,6 +3648,21 @@
    "last_checked": null
   },
   {
+   "slug": "sanfrancisco.california.startups",
+   "name": "San Francisco Bay Area Silicon Valley Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T03:30:43+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "sasmallbusinessnetwork",
    "name": "Small Business Network South Africa",
    "status": "pending",
@@ -3780,6 +3855,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupcaliforniaclub",
+   "name": "Startup California Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T03:30:43+00:00",
    "last_checked": null
   },
   {

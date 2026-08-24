@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-24T02:22:49+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-24T03:30:44+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (381)
+## Not yet probed (387)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -63,6 +63,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1162970365658943` (found via ddg)
 - `datin1` (found via ddg)
 - `810244532098547` (found via ddg)
+- `startups.investors.entrepreneurs.mentors.founders` (found via ddg)
 - `ai.agents.n8n.artificial.intelligence` (found via ddg)
 - `aiagentsforsmallbusiness` (found via ddg)
 - `aiautomationagency.aaa` (found via config)
@@ -111,6 +112,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ecommercestoreowner` (found via ddg)
 - `ecommerceentrepreners` (found via ddg)
 - `ecommerceentrepreneurgroup` (found via ddg)
+- `entrepreneursandbusinessownerscalifornia` (found via ddg)
 - `EABOSA` (found via ddg)
 - `NYCESN` (found via ddg)
 - `361717460552082` (found via config)
@@ -138,6 +140,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `saasfoundersgroup` (found via ddg)
 - `SaaSFounders` (found via ddg)
 - `saasfoundergroup` (found via ddg)
+- `sfenetworks` (found via ddg)
 - `580487328806681` (found via ddg)
 - `smallbusinessownercommunityuk` (found via ddg)
 - `893840601407320` (found via ddg)
@@ -214,6 +217,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1082845185201887` (found via ddg)
 - `1058223315954721` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
+- `californiausabuysell` (found via ddg)
 - `810698363860855` (found via ddg)
 - `881330171044518` (found via ddg)
 - `coachesplaybook` (found via ddg)
@@ -263,6 +267,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `Entrepreneur.Singapore` (found via ddg)
 - `573743181403219` (found via ddg)
 - `789382672475266` (found via ddg)
+- `sanfrancisco.california.startups` (found via ddg)
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
 - `shopifyentrepreneurs` (found via ddg)
@@ -280,6 +285,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `sasmallbusinessnetwork` (found via ddg)
 - `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
+- `startupcaliforniaclub` (found via ddg)
 - `StartupIrelandClub` (found via ddg)
 - `startupfrat` (found via ddg)
 - `CanadaStartup` (found via ddg)
