@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-24T19:45:51+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-24T20:34:10+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (500)
+## Not yet probed (508)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -232,6 +232,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `6508644522524665` (found via ddg)
 - `practiceowners` (found via ddg)
 - `sandtracks` (found via ddg)
+- `remoteworkforce` (found via ddg)
 - `490880091107538` (found via ddg)
 - `dublin.ireland.startups` (found via ddg)
 - `2687952944937992` (found via ddg)
@@ -242,6 +243,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `Founder.CEOs` (found via config)
 - `foundersspace` (found via config)
 - `findingsuvfounders` (found via ddg)
+- `588730763335326` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `307912236406923` (found via ddg)
 - `constructionmanagementnetwork` (found via ddg)
@@ -265,6 +267,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `nzsmallbusinessnetwork` (found via ddg)
 - `inventivehub` (found via config)
 - `remotestartupjobs` (found via config)
+- `usremotenowhiring` (found via ddg)
 - `restaurantimage` (found via ddg)
 - `581853060030923` (found via ddg)
 - `192784851327609` (found via ddg)
@@ -310,6 +313,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1404824917072635` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
 - `smallbusinessownerandentrepreneurs` (found via ddg)
+- `1149304996574074` (found via ddg)
+- `workfromhomeopportunities` (found via ddg)
+- `youngentrepreneurstt` (found via ddg)
 - `3201149406569173` (found via ddg)
 - `nodemation` (found via config)
 - `3196296700548675` (found via ddg)
@@ -502,6 +508,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `402786871855453` (found via ddg)
 - `345613409204417` (found via ddg)
 - `764877593708803` (found via ddg)
+- `FindRemoteJobs` (found via ddg)
 - `1050679009595609` (found via ddg)
 - `1598268047627604` (found via ddg)
 - `505933192026047` (found via ddg)
@@ -514,6 +521,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `peopleofcleburnetexas` (found via ddg)
 - `PracticeManagersNetwork` (found via ddg)
 - `625858050017927` (found via ddg)
+- `313682202336332` (found via ddg)
 - `remoteworkturkey` (found via ddg)
 - `southafricanbusiness` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
