@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-24T21:10:18+00:00",
- "count": 493,
+ "generated": "2026-08-24T21:45:03+00:00",
+ "count": 496,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -498,6 +498,21 @@
    "last_checked": null
   },
   {
+   "slug": "115698605766601",
+   "name": "פרילנסרים ממליצים -The wandering freelancer's group",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T21:45:02+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1198024408768649",
    "name": "New Zealand Small Business Owners",
    "status": "pending",
@@ -510,6 +525,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1217610615947693",
+   "name": "פרילנסרים עבודה מהבית",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T21:45:02+00:00",
    "last_checked": null
   },
   {
@@ -5370,6 +5400,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "386010697745869",
+   "name": "אנשי מכירות - פרילנסרים | נוודות | פרנסה מרחוק | עבודה מהבית",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T21:45:02+00:00",
    "last_checked": null
   },
   {
