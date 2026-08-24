@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-24T22:45:40+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-24T23:25:18+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -380,7 +380,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `288970654518121` (found via leads_db)
 - `1433838711374395` (found via leads_db)
 - `1437522973167696` (found via leads_db)
-- `2079238568790422` (found via leads_db)
 - `talkingautomation` (found via leads_db)
 - `codanics` (found via leads_db)
 - `developerkaki` (found via leads_db)
@@ -554,6 +553,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `business.marketing.ai.il` (found via ddg)
 - `1774931386364154` (found via ddg)
 - `asakimktanim` (found via ddg)
+- `2079238568790422` (found via leads_db)
 - `2786770884931764` (found via ddg)
 - `473051352513816` (found via ddg)
 - `270931709946261` (found via ddg)
