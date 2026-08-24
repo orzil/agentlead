@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-24T04:39:31+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-24T05:24:23+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (484)
+## Not yet probed (487)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -467,6 +467,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `onyxlivesproject` (found via reddit_search)
 - `795191755256360` (found via reddit_search)
 - `1238614982979857` (found via reddit_search)
+- `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
 - `fbacommunity` (found via ddg)
@@ -505,9 +506,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `southafricanbusiness` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
 - `SuppliersManufacturers` (found via ddg)
+- `sydneybuyingandsellin` (found via ddg)
 - `TechForTechs` (found via ddg)
 - `190482421294295` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
+- `TradieWives` (found via ddg)
 - `736631881894510` (found via ddg)
 - `truckingandlogistics` (found via ddg)
 - `474293496993273` (found via ddg)
