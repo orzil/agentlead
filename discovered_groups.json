@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-24T00:58:55+00:00",
- "count": 359,
+ "generated": "2026-08-24T02:22:49+00:00",
+ "count": 364,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -633,6 +633,21 @@
    "last_checked": null
   },
   {
+   "slug": "211270969394435",
+   "name": "U.S. Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T02:22:48+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2120217412101108",
    "name": "Startup Founders Network",
    "status": "pending",
@@ -705,6 +720,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T22:59:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "249737589133282",
+   "name": "New York Entrepreneurs, Startups, & Innovators",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T02:22:48+00:00",
    "last_checked": null
   },
   {
@@ -1140,6 +1170,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T04:58:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "NYCESN",
+   "name": "Entrepreneurs, Startup & Business Association of New York",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T02:22:48+00:00",
    "last_checked": null
   },
   {
@@ -3423,6 +3468,21 @@
    "last_checked": null
   },
   {
+   "slug": "newyorkcity.newyork.startups",
+   "name": "New York Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T02:22:48+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "newzealandbusinessowners",
    "name": "New Zealand Business Owners Community",
    "status": "pending",
@@ -3435,6 +3495,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "nycstartup",
+   "name": "New York Startup Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T02:22:48+00:00",
    "last_checked": null
   },
   {
