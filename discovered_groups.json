@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-24T05:24:23+00:00",
- "count": 472,
+ "generated": "2026-08-24T17:33:48+00:00",
+ "count": 480,
  "groups": [
   {
    "slug": "1162970365658943",
@@ -2373,6 +2373,36 @@
    "last_checked": null
   },
   {
+   "slug": "1ib.marioschaefer.032",
+   "name": "Entrepreneurs of Europe",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T17:33:47+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "222801067848068",
+   "name": "European B2B Startups, Startup Studio and Venture Builders",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T17:33:47+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "242604115854061",
    "name": "Singapore Startups",
    "status": "pending",
@@ -3108,6 +3138,21 @@
    "last_checked": null
   },
   {
+   "slug": "StartupEuropeClub",
+   "name": "Startup Europe Club",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T17:33:47+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "StartupIrelandClub",
    "name": "Startup Ireland Club",
    "status": "pending",
@@ -3738,6 +3783,21 @@
    "last_checked": null
   },
   {
+   "slug": "sandtracks",
+   "name": "Digital Nomad Founders",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T17:33:47+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "sanfrancisco.california.startups",
    "name": "San Francisco Bay Area Silicon Valley Startups",
    "status": "pending",
@@ -3960,6 +4020,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T03:30:43+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupeurope",
+   "name": "Startup Europe",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T17:33:47+00:00",
    "last_checked": null
   },
   {
@@ -5073,6 +5148,21 @@
    "last_checked": null
   },
   {
+   "slug": "345613409204417",
+   "name": "Facebook",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T17:33:47+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "364035387778253",
    "name": null,
    "status": "pending",
@@ -5790,6 +5880,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "900308687031185",
+   "name": "Vigo connect",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T17:33:47+00:00",
    "last_checked": null
   },
   {
@@ -6750,6 +6855,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "remoteworkturkey",
+   "name": "Remote Work Turkey",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-24T17:33:47+00:00",
    "last_checked": null
   },
   {

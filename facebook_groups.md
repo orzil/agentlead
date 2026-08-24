@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-24T05:24:23+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-24T17:33:48+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (487)
+## Not yet probed (495)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -229,9 +229,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `constructionbusinessowners` (found via ddg)
 - `6508644522524665` (found via ddg)
 - `practiceowners` (found via ddg)
+- `sandtracks` (found via ddg)
 - `490880091107538` (found via ddg)
 - `dublin.ireland.startups` (found via ddg)
 - `2687952944937992` (found via ddg)
+- `1ib.marioschaefer.032` (found via ddg)
+- `222801067848068` (found via ddg)
 - `findyourcofounder` (found via config)
 - `RosenbergMeansBusiness` (found via ddg)
 - `Founder.CEOs` (found via config)
@@ -288,6 +291,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
 - `startupcaliforniaclub` (found via ddg)
+- `startupeurope` (found via ddg)
+- `StartupEuropeClub` (found via ddg)
 - `StartupIrelandClub` (found via ddg)
 - `startupfrat` (found via ddg)
 - `CanadaStartup` (found via ddg)
@@ -490,6 +495,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `coachingandconsulting` (found via ddg)
 - `3719451304764538` (found via ddg)
 - `402786871855453` (found via ddg)
+- `345613409204417` (found via ddg)
 - `764877593708803` (found via ddg)
 - `1050679009595609` (found via ddg)
 - `1598268047627604` (found via ddg)
@@ -503,6 +509,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `peopleofcleburnetexas` (found via ddg)
 - `PracticeManagersNetwork` (found via ddg)
 - `625858050017927` (found via ddg)
+- `remoteworkturkey` (found via ddg)
 - `southafricanbusiness` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
 - `SuppliersManufacturers` (found via ddg)
@@ -517,6 +524,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1460476385552503` (found via ddg)
 - `coaches.and.consultants.community` (found via ddg)
 - `umake` (found via ddg)
+- `900308687031185` (found via ddg)
 - `669886889110965` (found via ddg)
 - `403307456733049` (found via ddg)
 - `511333728510695` (found via ddg)
