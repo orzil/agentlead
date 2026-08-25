@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-25T04:24:26+00:00",
+ "generated": "2026-08-25T05:03:44+00:00",
  "count": 503,
  "groups": [
   {
@@ -4293,6 +4293,21 @@
    "last_checked": null
   },
   {
+   "slug": "talkingautomation",
+   "name": "מדברים אוטומציה",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-20T17:16:38+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "techstartupukireland",
    "name": "Tech StartUp Group UK and Ireland by Raise",
    "status": "pending",
@@ -7365,21 +7380,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T05:24:22+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "talkingautomation",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-20T17:16:38+00:00",
    "last_checked": null
   },
   {

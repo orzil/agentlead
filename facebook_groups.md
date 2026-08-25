@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-25T04:24:26+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-25T05:03:44+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -346,6 +346,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `624543140573742` (found via ddg)
 - `entrepreneurs.israel` (found via ddg)
 - `940674812655793` (found via ddg)
+- `talkingautomation` (found via leads_db)
 - `3d.printing.israel` (found via ddg)
 - `105474902826094` (found via ddg)
 - `automationil` (found via ddg)
@@ -386,7 +387,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `288970654518121` (found via leads_db)
 - `1433838711374395` (found via leads_db)
 - `1437522973167696` (found via leads_db)
-- `talkingautomation` (found via leads_db)
 - `codanics` (found via leads_db)
 - `developerkaki` (found via leads_db)
 - `1518002613342681` (found via leads_db)
