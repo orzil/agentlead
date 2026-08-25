@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-25T18:04:58+00:00",
- "count": 507,
+ "generated": "2026-08-25T18:58:25+00:00",
+ "count": 509,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -963,6 +963,21 @@
    "last_checked": null
   },
   {
+   "slug": "2936517136591278",
+   "name": "Fivem Server Recruiting 2025 | Looking for a fivem developer",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-18T17:37:35+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2978347045629927",
    "name": "Marketing Agency Owners and Appointment Setters",
    "status": "pending",
@@ -1095,6 +1110,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T17:32:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "5354513511301326",
+   "name": "Software Developers Jobs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T18:58:24+00:00",
    "last_checked": null
   },
   {
@@ -2130,6 +2160,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T04:58:59+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "uxdesignercommunity",
+   "name": "UX & UI DESIGNER COMMUNITY | i am looking for a developer ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-18T22:02:00+00:00",
    "last_checked": null
   },
   {
@@ -3495,6 +3540,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T21:02:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "appdeveloperjobs",
+   "name": "Mobile App Developers for iOS, Android, Windows, Blackberry",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T18:58:24+00:00",
    "last_checked": null
   },
   {
@@ -5403,21 +5463,6 @@
    "last_checked": null
   },
   {
-   "slug": "2936517136591278",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-18T17:37:35+00:00",
-   "last_checked": null
-  },
-  {
    "slug": "295342272839174",
    "name": null,
    "status": "pending",
@@ -6904,10 +6949,10 @@
   },
   {
    "slug": "fivemserverdevelopmenthelp2025",
-   "name": null,
+   "name": "FiveM Server Development Help 2026 | Hi there,I am looking ...",
    "status": "pending",
    "relevance": 0,
-   "region": null,
+   "region": "GLOBAL",
    "found_via": "leads_db",
    "activity": null,
    "in_rotation": 0,
@@ -7560,21 +7605,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T04:31:20+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "uxdesignercommunity",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-18T22:02:00+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-25T18:04:58+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-25T18:58:25+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (522)
+## Not yet probed (524)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -119,6 +119,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `entrepreneursandbusinessownerscalifornia` (found via ddg)
 - `EABOSA` (found via ddg)
 - `NYCESN` (found via ddg)
+- `2936517136591278` (found via leads_db)
 - `361717460552082` (found via config)
 - `highlevelagencyowner` (found via ddg)
 - `2709340372800064` (found via ddg)
@@ -153,6 +154,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `312322538374187` (found via ddg)
 - `socialmediaforsmallbusinessownersuk` (found via ddg)
 - `761000443963542` (found via ddg)
+- `5354513511301326` (found via ddg)
 - `sastartups` (found via ddg)
 - `startup.canada` (found via ddg)
 - `startupfounderclub` (found via ddg)
@@ -167,6 +169,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `uksmallbusinessesadvertsfree` (found via ddg)
 - `2018989461513326` (found via ddg)
 - `1380135855880231` (found via ddg)
+- `uxdesignercommunity` (found via leads_db)
 - `unfilteredagency` (found via ddg)
 - `ecommerce.entrepreneurs.us` (found via ddg)
 - `ecommerceentrepreneurs` (found via ddg)
@@ -263,6 +266,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `85350708778` (found via ddg)
 - `23101870240` (found via ddg)
 - `157568706504` (found via ddg)
+- `appdeveloperjobs` (found via ddg)
 - `montreal.startup.people` (found via ddg)
 - `startup.montreal.canada` (found via ddg)
 - `n8ndevelopers` (found via ddg)
@@ -372,9 +376,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `698911985645824` (found via ddg)
 - `768974062661759` (found via ddg)
 - `849152465232462` (found via ddg)
-- `fivemserverdevelopmenthelp2025` (found via leads_db)
-- `2936517136591278` (found via leads_db)
-- `uxdesignercommunity` (found via leads_db)
 - `1329241984892387` (found via leads_db)
 - `congdongarduinovn` (found via leads_db)
 - `thaidev` (found via leads_db)
@@ -519,6 +520,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `3719451304764538` (found via ddg)
 - `402786871855453` (found via ddg)
 - `345613409204417` (found via ddg)
+- `fivemserverdevelopmenthelp2025` (found via leads_db)
 - `764877593708803` (found via ddg)
 - `FindRemoteJobs` (found via ddg)
 - `1050679009595609` (found via ddg)
