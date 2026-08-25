@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-24T23:25:18+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-25T00:06:23+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -196,6 +196,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `no.experience` (found via ddg)
 - `noexpjobs` (found via ddg)
 - `devjob` (found via ddg)
+- `fed.israel` (found via leads_db)
 - `developersmeetstartups` (found via config)
 - `828562470599993` (found via ddg)
 - `320942198348539` (found via ddg)
@@ -383,7 +384,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `talkingautomation` (found via leads_db)
 - `codanics` (found via leads_db)
 - `developerkaki` (found via leads_db)
-- `fed.israel` (found via leads_db)
 - `1518002613342681` (found via leads_db)
 - `webdeveloperinusa` (found via leads_db)
 - `mlban` (found via leads_db)

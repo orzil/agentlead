@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-24T23:25:18+00:00",
+ "generated": "2026-08-25T00:06:23+00:00",
  "count": 496,
  "groups": [
   {
@@ -1605,6 +1605,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T03:30:43+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "fed.israel",
+   "name": "מתכנתים CSS, HTML, JavaScript | לפרויקט קטן מחפש מפתח ג'אווה",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-21T06:15:56+00:00",
    "last_checked": null
   },
   {
@@ -6720,21 +6735,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T03:08:45+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "fed.israel",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-21T06:15:56+00:00",
    "last_checked": null
   },
   {
