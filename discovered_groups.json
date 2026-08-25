@@ -1,7 +1,37 @@
 {
- "generated": "2026-08-25T00:57:41+00:00",
- "count": 496,
+ "generated": "2026-08-25T02:18:07+00:00",
+ "count": 501,
  "groups": [
+  {
+   "slug": "1894771051403942",
+   "name": "לוח דרושים -משרות בתחום Ai, בינה מלאכותית, תכנות,עריכת וידיאו ועבודות ...",
+   "status": "pending",
+   "relevance": 5,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T02:18:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "720332212292765",
+   "name": "דרושים בהייטק בישראל - High Tech Jobs | משרות הייטק | גיוס טכנולוגי",
+   "status": "pending",
+   "relevance": 5,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T02:18:07+00:00",
+   "last_checked": null
+  },
   {
    "slug": "1162970365658943",
    "name": "Free Automation and AI Secrets Society- For Agency Owners",
@@ -660,6 +690,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T03:11:55+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1786020114969358",
+   "name": "דרושים עבודות הייטק, חומרה, תוכנה, סייבר, סיסטם, אבטחת מידע, IT, Help ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T02:18:07+00:00",
    "last_checked": null
   },
   {
@@ -2268,6 +2313,21 @@
    "last_checked": null
   },
   {
+   "slug": "1301121656949348",
+   "name": "משרות סטודנט/ג'וניור וטיפים - מדמ\"ח, הנדסת תוכנה ומערכות מידע",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T02:18:07+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1338202816787610",
    "name": "בינה מלאכותית ישראל",
    "status": "pending",
@@ -2715,6 +2775,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T02:24:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "5440649196012252",
+   "name": "דרושים דימונה ערד ירוחם",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T02:18:07+00:00",
    "last_checked": null
   },
   {
