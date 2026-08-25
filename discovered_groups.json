@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-25T22:46:29+00:00",
- "count": 511,
+ "generated": "2026-08-25T23:27:26+00:00",
+ "count": 513,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -270,6 +270,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T23:40:34+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "331399459887663",
+   "name": "SaaS Startups and Founders Network",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T23:27:25+00:00",
    "last_checked": null
   },
   {
@@ -735,6 +750,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1851637745054222",
+   "name": "Seattle Startup Founders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T23:27:25+00:00",
    "last_checked": null
   },
   {
