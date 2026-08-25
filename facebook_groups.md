@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-25T03:25:28+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-25T03:43:25+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (516)
+## Not yet probed (517)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -489,6 +489,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `onyxlivesproject` (found via reddit_search)
 - `795191755256360` (found via reddit_search)
 - `1238614982979857` (found via reddit_search)
+- `thenophonejobplug` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
