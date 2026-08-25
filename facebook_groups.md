@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-25T05:03:44+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-25T17:34:45+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (518)
+## Not yet probed (522)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -89,6 +89,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `us.small.business.startup.founderss` (found via ddg)
 - `n8ngroup` (found via ddg)
 - `284048350858807` (found via ddg)
+- `549774260167586` (found via ddg)
 - `1448272189379640` (found via ddg)
 - `918228853329387` (found via ddg)
 - `JuniorJobs` (found via ddg)
@@ -198,6 +199,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `147963012536297` (found via ddg)
 - `no.experience` (found via ddg)
 - `noexpjobs` (found via ddg)
+- `926122620829127` (found via ddg)
 - `devjob` (found via ddg)
 - `fed.israel` (found via leads_db)
 - `developersmeetstartups` (found via config)
@@ -342,6 +344,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `looking4developer` (found via ddg)
 - `1174154780210185` (found via ddg)
 - `freelanceisrael` (found via ddg)
+- `Freelance.Israel` (found via ddg)
 - `1456367289297520` (found via ddg)
 - `624543140573742` (found via ddg)
 - `entrepreneurs.israel` (found via ddg)
@@ -491,6 +494,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1238614982979857` (found via reddit_search)
 - `thenophonejobplug` (found via leads_db)
 - `504570968180680` (found via leads_db)
+- `1073126727485389` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
