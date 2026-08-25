@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-25T19:39:21+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-25T20:02:38+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (524)
+## Not yet probed (526)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -87,6 +87,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupsinvestorsentrepreneursmentors` (found via ddg)
 - `1410091330576470` (found via ddg)
 - `us.small.business.startup.founderss` (found via ddg)
+- `3950438358565515` (found via ddg)
 - `n8ngroup` (found via ddg)
 - `284048350858807` (found via ddg)
 - `549774260167586` (found via ddg)
@@ -123,6 +124,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `361717460552082` (found via config)
 - `highlevelagencyowner` (found via ddg)
 - `2709340372800064` (found via ddg)
+- `needwebsitedesignerordeveloper` (found via leads_db)
 - `IAOAlliance` (found via ddg)
 - `2152373795524537` (found via ddg)
 - `556739801135588` (found via config)
@@ -254,6 +256,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `Founder.CEOs` (found via config)
 - `foundersspace` (found via config)
 - `findingsuvfounders` (found via ddg)
+- `gamedev` (found via ddg)
 - `588730763335326` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `307912236406923` (found via ddg)
@@ -380,7 +383,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `congdongarduinovn` (found via leads_db)
 - `thaidev` (found via leads_db)
 - `434998574369387` (found via leads_db)
-- `needwebsitedesignerordeveloper` (found via leads_db)
 - `DeepNetGroup` (found via leads_db)
 - `IndiansInAmericaGroup` (found via leads_db)
 - `itphil` (found via leads_db)

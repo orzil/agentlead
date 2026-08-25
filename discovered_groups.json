@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-25T19:39:21+00:00",
- "count": 509,
+ "generated": "2026-08-25T20:02:38+00:00",
+ "count": 511,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -270,6 +270,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T23:40:34+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "3950438358565515",
+   "name": "We need a developer for our project, please inbox us",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T20:02:37+00:00",
    "last_checked": null
   },
   {
@@ -1890,6 +1905,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "needwebsitedesignerordeveloper",
+   "name": "I Need A Website Designer / Web Developer | *I need a developer who ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-19T00:03:56+00:00",
    "last_checked": null
   },
   {
@@ -3825,6 +3855,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T17:29:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "gamedev",
+   "name": "Game Developers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-25T20:02:37+00:00",
    "last_checked": null
   },
   {
@@ -7170,21 +7215,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T03:45:44+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "needwebsitedesignerordeveloper",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-19T00:03:56+00:00",
    "last_checked": null
   },
   {
