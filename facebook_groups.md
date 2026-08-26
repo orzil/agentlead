@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-26T04:34:24+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-26T05:15:55+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (537)
+## Not yet probed (544)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -89,6 +89,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `331399459887663` (found via ddg)
 - `256977734759027` (found via ddg)
 - `singaporeentrepreneurship` (found via ddg)
+- `626660935015474` (found via ddg)
 - `2815042615255352` (found via ddg)
 - `startupsinvestorsentrepreneursmentors` (found via ddg)
 - `1410091330576470` (found via ddg)
@@ -259,6 +260,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `490880091107538` (found via ddg)
 - `dublin.ireland.startups` (found via ddg)
 - `2687952944937992` (found via ddg)
+- `386218954793964` (found via ddg)
+- `165114167522089` (found via ddg)
 - `1ib.marioschaefer.032` (found via ddg)
 - `222801067848068` (found via ddg)
 - `findyourcofounder` (found via config)
@@ -337,6 +340,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `usasmallbusinesscommunity` (found via ddg)
 - `1404824917072635` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
+- `epicentrepreneur` (found via ddg)
 - `smallbusinessownerandentrepreneurs` (found via ddg)
 - `1149304996574074` (found via ddg)
 - `workfromhomeopportunities` (found via ddg)
@@ -556,6 +560,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `sydneybuyingandsellin` (found via ddg)
 - `TechForTechs` (found via ddg)
 - `190482421294295` (found via ddg)
+- `688006048306297` (found via ddg)
+- `232125487923966` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
 - `TradieWives` (found via ddg)
 - `736631881894510` (found via ddg)
@@ -564,6 +570,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1460476385552503` (found via ddg)
 - `coaches.and.consultants.community` (found via ddg)
 - `umake` (found via ddg)
+- `793335882635042` (found via ddg)
 - `900308687031185` (found via ddg)
 - `669886889110965` (found via ddg)
 - `403307456733049` (found via ddg)

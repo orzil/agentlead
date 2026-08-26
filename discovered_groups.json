@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-26T04:34:24+00:00",
- "count": 522,
+ "generated": "2026-08-26T05:15:55+00:00",
+ "count": 529,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -375,6 +375,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T17:34:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "626660935015474",
+   "name": "Small Business Owners and Entrepreneurs",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-26T05:15:54+00:00",
    "last_checked": null
   },
   {
@@ -2733,6 +2748,21 @@
    "last_checked": null
   },
   {
+   "slug": "165114167522089",
+   "name": "Entrepreneurs Business Help",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-26T05:15:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1657329921376731",
    "name": "אוטומציה - עסקים אוטונומיים - עסקים שמבינים ומיישמים אוטומציה",
    "status": "pending",
@@ -2970,6 +3000,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T21:36:49+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "386218954793964",
+   "name": "Entrepreneurs - Lets build together",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-26T05:15:54+00:00",
    "last_checked": null
   },
   {
@@ -3945,6 +3990,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T17:32:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "epicentrepreneur",
+   "name": "We Build EPIC Entrepreneurs - Helping Entrepreneurs Build ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-26T05:15:54+00:00",
    "last_checked": null
   },
   {
@@ -5553,6 +5613,21 @@
    "last_checked": null
   },
   {
+   "slug": "232125487923966",
+   "name": "The Helpful Blog & Business Group: Growth/Support",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-26T05:15:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2357899711070893",
    "name": null,
    "status": "pending",
@@ -6258,6 +6333,21 @@
    "last_checked": null
   },
   {
+   "slug": "688006048306297",
+   "name": "The Freedom Lifestyle Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-26T05:15:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "690027711153911",
    "name": null,
    "status": "pending",
@@ -6465,6 +6555,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "793335882635042",
+   "name": "VV Members",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-26T05:15:54+00:00",
    "last_checked": null
   },
   {
