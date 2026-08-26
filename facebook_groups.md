@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-26T02:26:11+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-26T03:32:44+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,15 +55,18 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (531)
+## Not yet probed (537)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
 - `720332212292765` (found via ddg)
 - `1894771051403942` (found via ddg)
+- `facebook.comgroupsaiforsmallbusinessowners` (found via ddg)
+- `aiforsmallbusinessgrowth` (found via ddg)
 - `datin1` (found via ddg)
 - `810244532098547` (found via ddg)
 - `startups.investors.entrepreneurs.mentors.founders` (found via ddg)
+- `2004638959986462` (found via ddg)
 - `ai.agents.n8n.artificial.intelligence` (found via ddg)
 - `aiagentsforsmallbusiness` (found via ddg)
 - `aiautomationagency.aaa` (found via config)
@@ -71,7 +74,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `670629268019461` (found via ddg)
 - `aiautomationagencyhub` (found via ddg)
 - `1129871225741454` (found via ddg)
+- `1182155486119040` (found via ddg)
 - `845546388110288` (found via ddg)
+- `airealtorsandbusinessowners` (found via ddg)
 - `aiforbusinessownersandfounders` (found via ddg)
 - `148693034913710` (found via ddg)
 - `872702652095435` (found via ddg)
@@ -158,6 +163,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbusinessownersnetworkusa` (found via ddg)
 - `3418202234922142` (found via ddg)
 - `312322538374187` (found via ddg)
+- `1479200462154545` (found via ddg)
 - `socialmediaforsmallbusinessownersuk` (found via ddg)
 - `761000443963542` (found via ddg)
 - `5354513511301326` (found via ddg)
