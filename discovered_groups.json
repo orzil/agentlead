@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-25T23:27:26+00:00",
- "count": 513,
+ "generated": "2026-08-26T00:06:32+00:00",
+ "count": 514,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -2040,6 +2040,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T19:42:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "saasfoundershub",
+   "name": "SaaS Founders Hub",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-26T00:06:31+00:00",
    "last_checked": null
   },
   {
