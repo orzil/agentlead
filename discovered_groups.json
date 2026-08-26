@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-26T05:15:55+00:00",
- "count": 529,
+ "generated": "2026-08-26T19:06:52+00:00",
+ "count": 530,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -46,6 +46,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-19T20:46:28+00:00",
    "last_checked": "2026-08-24T04:35:03+00:00"
+  },
+  {
+   "slug": "1461801731341539",
+   "name": "AI Automation Agency - Network & Hiring",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-26T19:06:51+00:00",
+   "last_checked": null
   },
   {
    "slug": "810244532098547",
