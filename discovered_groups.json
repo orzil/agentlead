@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-27T13:37:53+00:00",
- "count": 530,
+ "generated": "2026-08-28T01:22:03+00:00",
+ "count": 532,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -6948,6 +6948,21 @@
    "last_checked": null
   },
   {
+   "slug": "aisaas",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-27T16:54:59+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "aiseomastermind",
    "name": null,
    "status": "pending",
@@ -7125,6 +7140,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "claudeaicommunity",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-28T01:21:36+00:00",
    "last_checked": null
   },
   {

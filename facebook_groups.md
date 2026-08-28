@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-27T13:37:53+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-28T01:22:03+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (545)
+## Not yet probed (547)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -513,6 +513,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `thenophonejobplug` (found via leads_db)
 - `504570968180680` (found via leads_db)
 - `1073126727485389` (found via leads_db)
+- `aisaas` (found via leads_db)
+- `claudeaicommunity` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
