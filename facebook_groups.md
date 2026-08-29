@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-28T14:49:02+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-29T00:59:54+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (547)
+## Not yet probed (550)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -89,6 +89,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `saasaitools` (found via ddg)
 - `331399459887663` (found via ddg)
 - `256977734759027` (found via ddg)
+- `1690275167877499` (found via ddg)
 - `singaporeentrepreneurship` (found via ddg)
 - `626660935015474` (found via ddg)
 - `2815042615255352` (found via ddg)
@@ -324,6 +325,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `989233131137552` (found via ddg)
 - `singstartups` (found via ddg)
 - `242604115854061` (found via ddg)
+- `singapore.startups.tech` (found via ddg)
 - `sasmallbusinessnetwork` (found via ddg)
 - `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
@@ -518,6 +520,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
+- `ase12.ro` (found via ddg)
 - `fbacommunity` (found via ddg)
 - `1582392532791911` (found via ddg)
 - `748375581363810` (found via ddg)

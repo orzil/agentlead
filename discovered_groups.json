@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-28T14:49:02+00:00",
- "count": 532,
+ "generated": "2026-08-29T00:59:54+00:00",
+ "count": 535,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -270,6 +270,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T03:29:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1690275167877499",
+   "name": "Singapore Entrepreneur Club | Startup Founders and Entrepreneurs ...",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T00:59:53+00:00",
    "last_checked": null
   },
   {
@@ -4533,6 +4548,21 @@
    "last_checked": null
   },
   {
+   "slug": "singapore.startups.tech",
+   "name": "Singapore Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T00:59:53+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "singstartups",
    "name": "Singapore Startups",
    "status": "pending",
@@ -7020,6 +7050,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ase12.ro",
+   "name": "ASE",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T00:59:53+00:00",
    "last_checked": null
   },
   {
