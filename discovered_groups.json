@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-29T09:40:41+00:00",
- "count": 538,
+ "generated": "2026-08-29T19:47:35+00:00",
+ "count": 545,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -4968,6 +4968,21 @@
    "last_checked": null
   },
   {
+   "slug": "1260790449099870",
+   "name": "עסקים קטנים וגדולים - פרסום חופשי והמלצות\"!*",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T19:47:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1272029417395485",
    "name": null,
    "status": "pending",
@@ -4995,6 +5010,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1308879656987184",
+   "name": "ישראל עסקים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T15:59:40+00:00",
    "last_checked": null
   },
   {
@@ -5463,6 +5493,21 @@
    "last_checked": null
   },
   {
+   "slug": "188366559022",
+   "name": "בעלי עסקים קטנים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T15:59:40+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "190482421294295",
    "name": "The Amazon Sellers Network",
    "status": "pending",
@@ -5505,6 +5550,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:34:13+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2039298306296076",
+   "name": "בעלי עסקים קטנים באזור השרון והמרכז",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T19:47:34+00:00",
    "last_checked": null
   },
   {
@@ -6213,6 +6273,21 @@
    "last_checked": null
   },
   {
+   "slug": "531405067552688",
+   "name": "עסקים קטנים - אנשים גדולים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T19:47:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "547621527071988",
    "name": null,
    "status": "pending",
@@ -6450,6 +6525,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "7111013388975795",
+   "name": "בעלי עסקים קטנים מתייעצים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T19:47:34+00:00",
    "last_checked": null
   },
   {
@@ -6765,6 +6855,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:33:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "BusinessinIsrael1",
+   "name": "עסקים בישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T15:59:40+00:00",
    "last_checked": null
   },
   {

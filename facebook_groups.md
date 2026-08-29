@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-29T09:40:41+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-29T19:47:35+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (553)
+## Not yet probed (560)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -595,13 +595,20 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `business.marketing.ai.il` (found via ddg)
 - `1774931386364154` (found via ddg)
 - `asakimktanim` (found via ddg)
+- `188366559022` (found via ddg)
+- `2039298306296076` (found via ddg)
+- `7111013388975795` (found via ddg)
 - `2079238568790422` (found via leads_db)
 - `2786770884931764` (found via ddg)
 - `473051352513816` (found via ddg)
 - `270931709946261` (found via ddg)
+- `1308879656987184` (found via ddg)
 - `462672717191788` (found via ddg)
+- `BusinessinIsrael1` (found via ddg)
 - `LoveMeSuperMekori` (found via ddg)
+- `531405067552688` (found via ddg)
 - `smallbusinessisrael` (found via ddg)
+- `1260790449099870` (found via ddg)
 - `smallbusinessesaregrowing` (found via ddg)
 - `209262042417914` (found via ddg)
 - `1417623821789515` (found via ddg)
