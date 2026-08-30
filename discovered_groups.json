@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-30T08:52:40+00:00",
- "count": 545,
+ "generated": "2026-08-30T19:40:29+00:00",
+ "count": 549,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3198,6 +3198,21 @@
    "last_checked": null
   },
   {
+   "slug": "590403208506875",
+   "name": "קודולר ישראל - פיתוח אפליקציות ללא קוד - Kodular For Israel",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-30T09:34:55+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "624543140573742",
    "name": "יזמים ישראלים - שיתופי פעולה והזדמנויות עסקיות",
    "status": "pending",
@@ -3540,6 +3555,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T21:02:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "Appstage.co.il",
+   "name": "Appstage.co.il - הבמה ליזמים | PocketCause-אפליקציה לתרומות למטרות ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-30T19:40:28+00:00",
    "last_checked": null
   },
   {
@@ -3990,6 +4020,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "coronajobs",
+   "name": "קריירה-לנד | היי! אנחנו חברת Spot.io , סטארטאפ ישראלי פורץ דרך התחום ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-30T19:40:28+00:00",
    "last_checked": null
   },
   {
@@ -7170,6 +7215,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "apps.il",
+   "name": "אפליקציות ישראליות",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-30T09:34:55+00:00",
    "last_checked": null
   },
   {

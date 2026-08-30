@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-30T08:52:40+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-30T19:40:29+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (560)
+## Not yet probed (564)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -353,6 +353,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `3196296700548675` (found via ddg)
 - `n8nagents` (found via ddg)
 - `bizask` (found via ddg)
+- `Appstage.co.il` (found via ddg)
 - `magia.israel` (found via ddg)
 - `NH.Freelancer` (found via ddg)
 - `webflowIL` (found via ddg)
@@ -394,7 +395,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `832763754922199` (found via ddg)
 - `692392677552880` (found via ddg)
 - `698911985645824` (found via ddg)
+- `590403208506875` (found via ddg)
 - `768974062661759` (found via ddg)
+- `coronajobs` (found via ddg)
 - `849152465232462` (found via ddg)
 - `1329241984892387` (found via leads_db)
 - `congdongarduinovn` (found via leads_db)
@@ -590,6 +593,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ig.israel` (found via ddg)
 - `386010697745869` (found via ddg)
 - `395525770590756` (found via ddg)
+- `apps.il` (found via ddg)
 - `independant.il` (found via ddg)
 - `business.owners.israel` (found via ddg)
 - `business.marketing.ai.il` (found via ddg)
