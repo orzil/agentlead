@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-31T03:04:05+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-31T09:14:04+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (567)
+## Not yet probed (569)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -314,8 +314,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
 - `shopifyentrepreneurs` (found via ddg)
+- `shopifystoreownerforum` (found via ddg)
 - `shopifyownerscommunity` (found via ddg)
 - `280313030637469` (found via ddg)
+- `shopifystoreownersclub` (found via ddg)
 - `667291046350388` (found via ddg)
 - `1017052997642628` (found via ddg)
 - `shopifyowner` (found via ddg)

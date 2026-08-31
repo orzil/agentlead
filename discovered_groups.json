@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-31T03:04:05+00:00",
- "count": 552,
+ "generated": "2026-08-31T09:14:04+00:00",
+ "count": 554,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -4563,6 +4563,21 @@
    "last_checked": null
   },
   {
+   "slug": "shopifystoreownerforum",
+   "name": "Shopify Entrepreneurs Hub",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-31T07:37:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "shopifystoreowners",
    "name": "Shopify Store Owners- EXCLUSIVE COMMUNITY",
    "status": "pending",
@@ -4575,6 +4590,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T02:13:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "shopifystoreownersclub",
+   "name": "Shopify Store Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-31T07:37:31+00:00",
    "last_checked": null
   },
   {
