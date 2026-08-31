@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-31T09:14:04+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-08-31T21:55:37+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,12 +55,10 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (569)
+## Not yet probed (592)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
-- `720332212292765` (found via ddg)
-- `1894771051403942` (found via ddg)
 - `1461801731341539` (found via ddg)
 - `facebook.comgroupsaiforsmallbusinessowners` (found via ddg)
 - `aiforsmallbusinessgrowth` (found via ddg)
@@ -180,6 +178,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `788415021554366` (found via ddg)
 - `founderx` (found via ddg)
 - `TESNetwork` (found via ddg)
+- `transformyouragency` (found via ddg)
 - `211270969394435` (found via ddg)
 - `uksmallbusinessesadvertsfree` (found via ddg)
 - `2018989461513326` (found via ddg)
@@ -528,6 +527,30 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `clickworker` (found via leads_db)
 - `themicromountclub` (found via leads_db)
 - `727874762768935` (found via leads_db)
+- `olphust` (found via leads_db)
+- `2818224304963950` (found via reddit_search)
+- `edmnationSC` (found via reddit_search)
+- `1205920090081834` (found via reddit_search)
+- `23436957073` (found via reddit_search)
+- `6561591767232693` (found via reddit_search)
+- `2730309233922875` (found via reddit_search)
+- `investovaniodadoz` (found via reddit_search)
+- `367349541370347` (found via reddit_search)
+- `XboxIN` (found via reddit_search)
+- `1087839047006352` (found via reddit_search)
+- `1724940252062800` (found via reddit_search)
+- `1375553636680086` (found via reddit_search)
+- `xgcentral` (found via reddit_search)
+- `1901642009946931` (found via reddit_search)
+- `961481447272242` (found via reddit_search)
+- `cs50` (found via reddit_search)
+- `552846471765330` (found via reddit_search)
+- `columbusgafoodandfriends` (found via reddit_search)
+- `2027283744084631` (found via reddit_search)
+- `paxosgrapevine` (found via reddit_search)
+- `2413125118892143` (found via reddit_search)
+- `lortv` (found via reddit_search)
+- `730846147250486` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
