@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-31T21:55:37+00:00",
- "count": 579,
+ "generated": "2026-09-01T01:06:04+00:00",
+ "count": 587,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3273,6 +3273,21 @@
    "last_checked": null
   },
   {
+   "slug": "666726999839356",
+   "name": "Law Firm Owners Managers & Paralegals (Attorneys",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T01:06:03+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "667291046350388",
    "name": "Shopify Store Owners Hub (5-10 day delivery)\"",
    "status": "pending",
@@ -3978,6 +3993,21 @@
    "last_checked": null
   },
   {
+   "slug": "chatgptandaiforlawfirms",
+   "name": "ChatGPT and AI for Law Firms",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T01:06:03+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "chatgptpromptsandaitools",
    "name": "AI Community: ChatGPT & Claude Learning",
    "status": "pending",
@@ -4218,6 +4248,66 @@
    "last_checked": null
   },
   {
+   "slug": "lawfirmandcpaownerscommunity",
+   "name": "Law Firm Owners & Technology",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T01:06:03+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "lawfirmboms",
+   "name": "Law Firm Owners and Managers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T01:06:03+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "lawfirmlaunch2",
+   "name": "Building Your Law Firm - Owners Only",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T01:06:03+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "lawfirmownersandtechnology",
+   "name": "Law Firm Owners & Technology",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T01:06:03+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "looking4developer",
    "name": "דרושים מפתחי אפליקציות",
    "status": "pending",
@@ -4425,6 +4515,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T17:23:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "profitablelawfirmowners",
+   "name": "Profitable Law Firm Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T01:06:03+00:00",
    "last_checked": null
   },
   {
@@ -8040,6 +8145,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:57:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "lawfirmowners",
+   "name": "Law Firm Digital Strategies",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T01:06:03+00:00",
    "last_checked": null
   },
   {

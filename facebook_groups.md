@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-08-31T21:55:37+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-01T01:06:04+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (592)
+## Not yet probed (600)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -243,11 +243,13 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbiz.au` (found via ddg)
 - `aussbn` (found via ddg)
 - `bsbnetwork` (found via ddg)
+- `lawfirmlaunch2` (found via ddg)
 - `1082845185201887` (found via ddg)
 - `1058223315954721` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
 - `californiausabuysell` (found via ddg)
 - `810698363860855` (found via ddg)
+- `chatgptandaiforlawfirms` (found via ddg)
 - `881330171044518` (found via ddg)
 - `coachesplaybook` (found via ddg)
 - `ComputerVisionGroup` (found via config)
@@ -274,6 +276,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `588730763335326` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `307912236406923` (found via ddg)
+- `lawfirmownersandtechnology` (found via ddg)
+- `lawfirmandcpaownerscommunity` (found via ddg)
+- `666726999839356` (found via ddg)
+- `lawfirmboms` (found via ddg)
 - `constructionmanagementnetwork` (found via ddg)
 - `makeautomation` (found via config)
 - `372340252597184` (found via ddg)
@@ -294,6 +300,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `NewZealandSmallBusinessOwnersNetworking` (found via ddg)
 - `newzealandbusinessowners` (found via ddg)
 - `nzsmallbusinessnetwork` (found via ddg)
+- `profitablelawfirmowners` (found via ddg)
 - `inventivehub` (found via config)
 - `remotestartupjobs` (found via config)
 - `usremotenowhiring` (found via ddg)
@@ -581,6 +588,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `764877593708803` (found via ddg)
 - `FindRemoteJobs` (found via ddg)
 - `1050679009595609` (found via ddg)
+- `lawfirmowners` (found via ddg)
 - `1598268047627604` (found via ddg)
 - `505933192026047` (found via ddg)
 - `unofficalmake` (found via ddg)
