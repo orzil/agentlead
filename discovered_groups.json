@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-01T19:47:02+00:00",
- "count": 593,
+ "generated": "2026-09-01T22:28:25+00:00",
+ "count": 594,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3180,6 +3180,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T22:27:08+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "557897198086356",
+   "name": "US Manufacturing Owners United",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T22:28:24+00:00",
    "last_checked": null
   },
   {

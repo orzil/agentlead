@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-01T19:47:02+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-01T22:28:25+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (606)
+## Not yet probed (607)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -351,6 +351,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1165236046981865` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
 - `uksmallbusinessowners` (found via ddg)
+- `557897198086356` (found via ddg)
 - `usatruckingindustry` (found via ddg)
 - `usasmallbusinesscommunity` (found via ddg)
 - `1404824917072635` (found via ddg)
