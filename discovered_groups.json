@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-01T01:06:04+00:00",
- "count": 587,
+ "generated": "2026-09-01T03:10:27+00:00",
+ "count": 588,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -8790,6 +8790,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T20:35:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "workfromhomenospam",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T02:15:09+00:00",
    "last_checked": null
   },
   {
