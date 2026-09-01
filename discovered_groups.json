@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-01T03:10:27+00:00",
- "count": 588,
+ "generated": "2026-09-01T08:13:04+00:00",
+ "count": 592,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -2868,6 +2868,21 @@
    "last_checked": null
   },
   {
+   "slug": "2099906750854206",
+   "name": "Restaurant Owners & Managers - Networking and Growth",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T08:13:04+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "222801067848068",
    "name": "European B2B Startups, Startup Studio and Venture Builders",
    "status": "pending",
@@ -2910,6 +2925,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T00:06:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "245646194310228",
+   "name": "Restaurant, Food and Beverage Business owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T08:13:04+00:00",
    "last_checked": null
   },
   {
@@ -3180,6 +3210,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T18:34:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "585616248804765",
+   "name": "Restaurant Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T08:13:04+00:00",
    "last_checked": null
   },
   {
@@ -3690,6 +3735,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T21:44:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "RestaurantOwnersAndManagers",
+   "name": "Restaurant Owners & Managers Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-01T08:13:04+00:00",
    "last_checked": null
   },
   {
