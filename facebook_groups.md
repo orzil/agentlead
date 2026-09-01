@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-01T08:13:04+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-01T19:47:02+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (605)
+## Not yet probed (606)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -563,6 +563,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `lortv` (found via reddit_search)
 - `730846147250486` (found via leads_db)
 - `workfromhomenospam` (found via leads_db)
+- `882355066697919` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
