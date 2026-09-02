@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-02T07:33:12+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-02T19:49:42+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (615)
+## Not yet probed (618)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -367,6 +367,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `youngentrepreneurstt` (found via ddg)
 - `3201149406569173` (found via ddg)
 - `nodemation` (found via config)
+- `1353352829055394` (found via ddg)
 - `3196296700548675` (found via ddg)
 - `n8nagents` (found via ddg)
 - `bizask` (found via ddg)
@@ -570,6 +571,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `workfromhomenospam` (found via leads_db)
 - `882355066697919` (found via leads_db)
 - `miaigroup` (found via leads_db)
+- `gamedevelopmentph` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -637,6 +639,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `900308687031185` (found via ddg)
 - `669886889110965` (found via ddg)
 - `403307456733049` (found via ddg)
+- `4046763412236611` (found via ddg)
 - `511333728510695` (found via ddg)
 - `n8nofficial` (found via ddg)
 - `n8nuser` (found via ddg)

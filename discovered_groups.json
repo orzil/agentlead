@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-02T07:33:12+00:00",
- "count": 602,
+ "generated": "2026-09-02T19:49:42+00:00",
+ "count": 605,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -2730,6 +2730,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T00:55:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1353352829055394",
+   "name": "n8n Automation Community (Free Zapier Alternative)",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-02T19:49:42+00:00",
    "last_checked": null
   },
   {
@@ -6573,6 +6588,21 @@
    "last_checked": null
   },
   {
+   "slug": "4046763412236611",
+   "name": "n8n",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-02T19:49:42+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "407564584380695",
    "name": null,
    "status": "pending",
@@ -8220,6 +8250,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T12:18:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "gamedevelopmentph",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-02T10:02:54+00:00",
    "last_checked": null
   },
   {
