@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-01T22:28:25+00:00",
- "count": 594,
+ "generated": "2026-09-02T00:28:22+00:00",
+ "count": 596,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5298,6 +5298,21 @@
    "last_checked": null
   },
   {
+   "slug": "1286588892065058",
+   "name": "Coaches - Life, Health, Financial USA ONLY",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-02T00:28:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1298319104548368",
    "name": "שיווק חכם לעסקים משווקים בירוק הקהילה הרשמית של ישראל",
    "status": "pending",
@@ -7950,6 +7965,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "coachescommunitygroup",
+   "name": "Coaches, Consultants & Experts: Profitably Scale Online",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-02T00:28:20+00:00",
    "last_checked": null
   },
   {
