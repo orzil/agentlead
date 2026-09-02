@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-02T02:29:06+00:00",
- "count": 596,
+ "generated": "2026-09-02T07:16:46+00:00",
+ "count": 601,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -798,6 +798,21 @@
    "last_checked": null
   },
   {
+   "slug": "1362385213926016",
+   "name": "Digital Agency Owners Community | Helping agencies grow and scale",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-02T07:16:46+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1380135855880231",
    "name": "USA Small Business Owners Community",
    "status": "pending",
@@ -1038,6 +1053,21 @@
    "last_checked": null
   },
   {
+   "slug": "242558750269724",
+   "name": "Digital Agency Owners Village",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-02T07:16:46+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "246704271135223",
    "name": "7 Figure Marketing Agency Owners",
    "status": "pending",
@@ -1200,6 +1230,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T02:16:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "337801441734030",
+   "name": "The Agency Reboot For Digital Agency Owners (with Craig Darling)",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-02T07:16:46+00:00",
    "last_checked": null
   },
   {
@@ -1755,6 +1800,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T20:52:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "digitalagencyownerinsiders",
+   "name": "Digital Agency Owner Insiders",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-02T07:16:46+00:00",
    "last_checked": null
   },
   {
@@ -8550,6 +8610,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "profitabledigitalagencies",
+   "name": "Profitable Digital Agencies",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-02T07:16:46+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-02T02:29:06+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-02T07:16:46+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (609)
+## Not yet probed (614)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -116,6 +116,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `580118425856327` (found via ddg)
 - `chatbotjobs` (found via config)
 - `1681683688690553` (found via ddg)
+- `digitalagencyownerinsiders` (found via ddg)
+- `1362385213926016` (found via ddg)
+- `242558750269724` (found via ddg)
 - `convertordie` (found via ddg)
 - `234981371266750` (found via ddg)
 - `659198409489977` (found via ddg)
@@ -176,6 +179,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2120217412101108` (found via ddg)
 - `1248313253326186` (found via ddg)
 - `788415021554366` (found via ddg)
+- `337801441734030` (found via ddg)
 - `founderx` (found via ddg)
 - `TESNetwork` (found via ddg)
 - `transformyouragency` (found via ddg)
@@ -608,6 +612,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `131710772378400` (found via ddg)
 - `peopleofcleburnetexas` (found via ddg)
 - `PracticeManagersNetwork` (found via ddg)
+- `profitabledigitalagencies` (found via ddg)
 - `625858050017927` (found via ddg)
 - `313682202336332` (found via ddg)
 - `remoteworkturkey` (found via ddg)
