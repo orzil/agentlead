@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-03T21:53:54+00:00",
- "count": 609,
+ "generated": "2026-09-03T23:51:37+00:00",
+ "count": 612,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -975,6 +975,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2059467967664033",
+   "name": "Artificial intelligence, Machine learning, Deep learning | History of ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-03T23:51:36+00:00",
    "last_checked": null
   },
   {
@@ -3075,6 +3090,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2933790363468211",
+   "name": "CHRIS KE AI SOLUTIONS -- Trending Ai Tools and Prompts | I ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-03T23:51:36+00:00",
    "last_checked": null
   },
   {
@@ -5580,6 +5610,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T03:29:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1429763737480567",
+   "name": "Call For Papers Journal and Conference",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-03T23:51:36+00:00",
    "last_checked": null
   },
   {
