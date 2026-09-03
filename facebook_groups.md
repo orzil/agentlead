@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-03T07:23:03+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-03T07:39:48+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -235,6 +235,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aifire.co` (found via ddg)
 - `aiprompthouse` (found via ddg)
 - `aiforconstructioncompanies` (found via ddg)
+- `698593531630485` (found via leads_db)
 - `6374504275931127` (found via ddg)
 - `716483187640234` (found via ddg)
 - `1620010391574229` (found via ddg)
@@ -538,7 +539,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1073126727485389` (found via leads_db)
 - `aisaas` (found via leads_db)
 - `claudeaicommunity` (found via leads_db)
-- `698593531630485` (found via leads_db)
 - `programmingpilipinas` (found via leads_db)
 - `1587843511470956` (found via leads_db)
 - `clickworker` (found via leads_db)

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-03T07:23:03+00:00",
+ "generated": "2026-09-03T07:39:48+00:00",
  "count": 607,
  "groups": [
   {
@@ -3450,6 +3450,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T18:50:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "698593531630485",
+   "name": "AI: Artificial Intelligence | Facebook - Meta Business Suite",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-29T03:36:05+00:00",
    "last_checked": null
   },
   {
@@ -7095,21 +7110,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T12:18:46+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "698593531630485",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-29T03:36:05+00:00",
    "last_checked": null
   },
   {
