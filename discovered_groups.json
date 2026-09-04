@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-04T02:32:35+00:00",
- "count": 612,
+ "generated": "2026-09-04T07:25:07+00:00",
+ "count": 613,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5160,6 +5160,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T17:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "usabusinessownersusabusinessgroupusa",
+   "name": "USA Business Owners | USA Business Group | USA Business ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-04T07:25:06+00:00",
    "last_checked": null
   },
   {
