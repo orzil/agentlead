@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-04T07:39:57+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-04T19:21:05+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (627)
+## Not yet probed (631)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -141,6 +141,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `IAOAlliance` (found via ddg)
 - `2152373795524537` (found via ddg)
 - `556739801135588` (found via config)
+- `LABusinessOwners` (found via ddg)
 - `makenthusiasts` (found via ddg)
 - `marketingagencyowners` (found via ddg)
 - `maopublic` (found via ddg)
@@ -288,6 +289,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `lawfirmandcpaownerscommunity` (found via ddg)
 - `666726999839356` (found via ddg)
 - `lawfirmboms` (found via ddg)
+- `losangeles.california.startups` (found via ddg)
 - `constructionmanagementnetwork` (found via ddg)
 - `makeautomation` (found via config)
 - `372340252597184` (found via ddg)
@@ -580,6 +582,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `573518645176483` (found via leads_db)
 - `284839226619755` (found via leads_db)
 - `lokerit` (found via leads_db)
+- `872617537221502` (found via leads_db)
+- `452192296043938` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)

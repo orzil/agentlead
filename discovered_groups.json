@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-04T07:39:57+00:00",
- "count": 614,
+ "generated": "2026-09-04T19:21:05+00:00",
+ "count": 618,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1620,6 +1620,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T04:58:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "LABusinessOwners",
+   "name": "Los Angeles Area Business Owners & Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-04T19:21:04+00:00",
    "last_checked": null
   },
   {
@@ -4533,6 +4548,21 @@
    "last_checked": null
   },
   {
+   "slug": "losangeles.california.startups",
+   "name": "Los Angeles LA Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-04T19:21:03+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "magia.israel",
    "name": "MagIA - בינה מלאכותית ישראל",
    "status": "pending",
@@ -6798,6 +6828,21 @@
    "last_checked": null
   },
   {
+   "slug": "452192296043938",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-04T19:20:05+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "462672717191788",
    "name": "לימודים - כל מסלולי הלימוד",
    "status": "pending",
@@ -7515,6 +7560,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "872617537221502",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-04T10:07:24+00:00",
    "last_checked": null
   },
   {
