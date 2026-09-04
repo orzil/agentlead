@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-04T07:25:07+00:00",
- "count": 613,
+ "generated": "2026-09-04T07:39:57+00:00",
+ "count": 614,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -8520,6 +8520,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:32:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "lokerit",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-04T07:39:57+00:00",
    "last_checked": null
   },
   {
