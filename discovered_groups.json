@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-05T01:22:45+00:00",
- "count": 618,
+ "generated": "2026-09-05T02:33:56+00:00",
+ "count": 628,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -873,6 +873,21 @@
    "last_checked": null
   },
   {
+   "slug": "1715729438698600",
+   "name": "Startups & Entrepreneurs - India",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T02:33:55+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1773899256887046",
    "name": "n8n | AI Agents | AI Automations",
    "status": "pending",
@@ -1668,6 +1683,21 @@
    "last_checked": null
   },
   {
+   "slug": "StartupIndiaRework",
+   "name": "Startup India Lions - Entrepreneur, Investors, Business ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T02:33:55+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "TESNetwork",
    "name": "Toronto Entrepreneurs And Startup Network",
    "status": "pending",
@@ -2100,6 +2130,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T20:52:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "indianstartupinvestor",
+   "name": "Indian Startup Entrepreneurs, Investors & Innovators",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T02:33:55+00:00",
    "last_checked": null
   },
   {
@@ -2883,6 +2928,21 @@
    "last_checked": null
   },
   {
+   "slug": "1516479358394352",
+   "name": "India Startups and Businesses",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T02:33:55+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "157568706504",
    "name": "Middle East Entrepreneurs Network (MEEN)",
    "status": "pending",
@@ -2988,6 +3048,21 @@
    "last_checked": null
   },
   {
+   "slug": "2042129792706031",
+   "name": "Business StartUps India",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T02:33:55+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2099906750854206",
    "name": "Restaurant Owners & Managers - Networking and Growth",
    "status": "pending",
@@ -3030,6 +3105,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "239247780029186",
+   "name": "Business Startup India",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T02:33:55+00:00",
    "last_checked": null
   },
   {
@@ -3858,6 +3948,21 @@
    "last_checked": null
   },
   {
+   "slug": "IndiaStartup",
+   "name": "India Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T02:33:55+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "MobileAppFaq",
    "name": "פיתוח אפליקציות - שאלות ותשובות",
    "status": "pending",
@@ -4440,6 +4545,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T17:32:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "indiastartups",
+   "name": "India Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T02:33:55+00:00",
    "last_checked": null
   },
   {
@@ -5148,6 +5268,21 @@
    "last_checked": null
   },
   {
+   "slug": "startupindiaunited",
+   "name": "Business StartUps India",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T02:33:55+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "talkingautomation",
    "name": "מדברים אוטומציה",
    "status": "pending",
@@ -5685,6 +5820,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:10:52+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1435491713362512",
+   "name": "Startups and Internships in India",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T02:33:55+00:00",
    "last_checked": null
   },
   {
