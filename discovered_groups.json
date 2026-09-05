@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-05T07:19:54+00:00",
- "count": 630,
+ "generated": "2026-09-05T18:53:04+00:00",
+ "count": 631,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -4575,6 +4575,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T17:32:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "hubvalley",
+   "name": "פרילנסרים בעמק - שיתופי פעולה | נטוורקינג | התפתחות עסקית",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T18:53:03+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-05T07:19:54+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-05T18:53:04+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (643)
+## Not yet probed (644)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -428,6 +428,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `androidhebrew` (found via ddg)
 - `freelanceIL` (found via leads_db)
 - `1213894351964666` (found via ddg)
+- `hubvalley` (found via ddg)
 - `107914806514702` (found via ddg)
 - `832763754922199` (found via ddg)
 - `692392677552880` (found via ddg)
