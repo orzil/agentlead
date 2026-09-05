@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-05T02:33:56+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-05T07:06:49+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (641)
+## Not yet probed (643)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -153,6 +153,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `341776853891812` (found via ddg)
 - `agencyownerlab` (found via ddg)
 - `1290241845505841` (found via ddg)
+- `562631543884434` (found via ddg)
 - `4808168705943904` (found via ddg)
 - `993304299789457` (found via ddg)
 - `saasfoundersclub` (found via ddg)
@@ -282,6 +283,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `165114167522089` (found via ddg)
 - `1ib.marioschaefer.032` (found via ddg)
 - `222801067848068` (found via ddg)
+- `ESC.STARTUS` (found via ddg)
 - `findyourcofounder` (found via config)
 - `RosenbergMeansBusiness` (found via ddg)
 - `Founder.CEOs` (found via config)

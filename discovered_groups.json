@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-05T02:33:56+00:00",
- "count": 628,
+ "generated": "2026-09-05T07:06:49+00:00",
+ "count": 630,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1380,6 +1380,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T18:58:24+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "562631543884434",
+   "name": "STARTUP ZKT CO-FOUNDER",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T07:06:48+00:00",
    "last_checked": null
   },
   {
@@ -3915,6 +3930,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ESC.STARTUS",
+   "name": "European Startup Community | STARTUS",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-05T07:06:48+00:00",
    "last_checked": null
   },
   {
