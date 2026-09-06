@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-06T02:30:40+00:00",
- "count": 632,
+ "generated": "2026-09-06T07:18:39+00:00",
+ "count": 636,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -16,6 +16,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
    "last_checked": "2026-08-31T10:14:34+00:00"
+  },
+  {
+   "slug": "352958686292104",
+   "name": "דרושים - עבודות הייטק / פיתוח / Qa Ai/ סייבר/ אוטומציה /תוכנה- חומרה",
+   "status": "pending",
+   "relevance": 5,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-06T07:18:37+00:00",
+   "last_checked": null
   },
   {
    "slug": "720332212292765",
@@ -60,6 +75,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-26T19:06:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "289504808119115",
+   "name": "דרושים -עבודות מתכנתים, מהנדסים ,R&D, Ai, הייטק, תוכנה/חומרה, Qa ...",
+   "status": "pending",
+   "relevance": 4,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-06T07:18:37+00:00",
    "last_checked": null
   },
   {
@@ -3645,6 +3675,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T00:06:02+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "705061861437260",
+   "name": "דרושים מדעי המחשב/מערכות מידע/Pcמחשבים/Qa/Help Desk/It/Sap/מפתח/סיסטם ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-06T07:18:38+00:00",
    "last_checked": null
   },
   {
@@ -7575,6 +7620,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T20:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "748259480517030",
+   "name": "הנדסת תוכנה ישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-06T07:18:38+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-06T02:30:40+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-06T07:18:39+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,16 +55,18 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (645)
+## Not yet probed (649)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
+- `352958686292104` (found via ddg)
 - `1461801731341539` (found via ddg)
 - `facebook.comgroupsaiforsmallbusinessowners` (found via ddg)
 - `aiforsmallbusinessgrowth` (found via ddg)
 - `datin1` (found via ddg)
 - `810244532098547` (found via ddg)
 - `startups.investors.entrepreneurs.mentors.founders` (found via ddg)
+- `289504808119115` (found via ddg)
 - `2004638959986462` (found via ddg)
 - `ai.agents.n8n.artificial.intelligence` (found via ddg)
 - `aiagentsforsmallbusiness` (found via ddg)
@@ -403,6 +405,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `289118210401946` (found via ddg)
 - `Software.Developers.Israel` (found via ddg)
 - `5440649196012252` (found via ddg)
+- `705061861437260` (found via ddg)
 - `looking4developer` (found via ddg)
 - `1174154780210185` (found via ddg)
 - `freelanceisrael` (found via ddg)
@@ -686,6 +689,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2079238568790422` (found via leads_db)
 - `2786770884931764` (found via ddg)
 - `473051352513816` (found via ddg)
+- `748259480517030` (found via ddg)
 - `270931709946261` (found via ddg)
 - `1308879656987184` (found via ddg)
 - `462672717191788` (found via ddg)
