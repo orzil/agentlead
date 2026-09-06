@@ -53,12 +53,51 @@ FB_BOILERPLATE = re.compile(
 )
 
 
+# Mail charsets are not always Python codec names. Hebrew senders label their
+# mail "iso-8859-8-i" (RFC 1556: the -i/-e suffix is *bidi directionality*, not
+# a different byte encoding), which codecs.lookup() rejects with
+# "LookupError: unknown encoding: iso-8859-8-i". Note that errors="replace"
+# does NOT catch this - the lookup fails before any byte is decoded - so an
+# unmapped charset used to abort the whole email pass.
+_CHARSET_ALIASES = {
+    "iso-8859-8-i": "iso-8859-8",   # Hebrew, logical order
+    "iso-8859-8-e": "iso-8859-8",   # Hebrew, explicit directionality
+    "iso8859-8-i": "iso-8859-8",
+    "iso8859-8-e": "iso-8859-8",
+    "unknown-8bit": "utf-8",        # RFC 2047 "I don't know" placeholder
+    "x-unknown": "utf-8",
+    "x-user-defined": "utf-8",
+    "default": "utf-8",
+    "none": "utf-8",
+    "ks_c_5601-1987": "cp949",      # Korean mislabel, seen in the wild
+}
+# Tried in order when the declared charset is unusable. latin-1 is last because
+# it maps every byte and therefore never raises - the guaranteed floor.
+_FALLBACK_CHARSETS = ("utf-8", "cp1255", "latin-1")
+
+
+def _decode_bytes(data: bytes, charset: str | None) -> str:
+    """Decode mail bytes, tolerating charsets Python has no codec for."""
+    enc = (charset or "").strip().strip("\"'").lower()
+    enc = _CHARSET_ALIASES.get(enc, enc)
+    for candidate in (enc, *_FALLBACK_CHARSETS):
+        if not candidate:
+            continue
+        try:
+            return data.decode(candidate, errors="replace")
+        except LookupError:
+            log.debug("unknown mail charset %r; falling back", candidate)
+        except Exception:
+            pass
+    return data.decode("latin-1", errors="replace")
+
+
 def _decode_header(value: str) -> str:
     parts = email.header.decode_header(value or "")
     out = []
     for text, enc in parts:
         if isinstance(text, bytes):
-            out.append(text.decode(enc or "utf-8", errors="replace"))
+            out.append(_decode_bytes(text, enc))
         else:
             out.append(text)
     return "".join(out)
@@ -74,7 +113,7 @@ def _get_html_and_text(msg: email.message.Message) -> tuple[str, str]:
             payload = part.get_payload(decode=True)
             if payload is None:
                 continue
-            decoded = payload.decode(part.get_content_charset() or "utf-8", errors="replace")
+            decoded = _decode_bytes(payload, part.get_content_charset())
         except Exception:
             continue
         if ctype == "text/html" and not html_body:

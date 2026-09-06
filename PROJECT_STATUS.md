@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-08-13 (end of session)*
+*Last updated: 2026-09-06 (end of session)*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -442,6 +442,38 @@ variable was never the country — it is who posts.
   apartment/neighborhood groups (נווה אביבים, דירות בתל אביב), and no group has "All posts" on. So
   the FB email channel currently yields exactly zero. Only real find: the Hebrew group
   *"בינה מלאכותית בגובה העיניים | AI פרקטי"* (slug not yet resolved).
+
+## Session 2026-09-06 — the email job was dying on a Hebrew charset
+
+- **BUG (fixed): `unknown encoding: iso-8859-8-i` killed every email pass.**
+  `_decode_header` decoded each MIME header with the charset the *sender* declared:
+  `text.decode(enc, errors="replace")`. `iso-8859-8-i` is a mail charset, not a Python codec
+  name — the `-i`/`-e` suffix is RFC 1556 bidi *directionality*, the same Hebrew bytes as
+  `iso-8859-8`. `codecs.lookup()` therefore raises **`LookupError` before any byte is decoded**,
+  which `errors="replace"` cannot catch. Nothing wrapped it, so it escaped `fetch()` and became
+  the Telegram error alert.
+- **It cost far more than the two alerts suggested.** The `From` header is decoded at
+  `email_fetcher.py:261`, one line *before* `_source_for()` decides whether the mail is even a
+  lead source — so a Hebrew college-helpdesk mail took the whole job down. And the loop runs
+  newest-first (`reversed(ids[-300:])`), so every alert **older** than the offending mail was
+  skipped and never marked seen, in every 5-minute run, until it aged out of
+  `IMAP_LOOKBACK_DAYS`. The error alert is throttled to one per job per 6h, so "2 messages"
+  meant ~12h of continuous failure.
+- **Measured on the live inbox** (67 messages, 3-day window): header charsets were
+  `utf-8` ×46, `windows-1255` ×2, **`iso-8859-8-i` ×8** — all 8 from one Hebrew
+  university-helpdesk sender, i.e. a sender with nothing to do with leads.
+- **Fix:** one `_decode_bytes(data, charset)` helper, used by both `_decode_header` and
+  `_get_html_and_text`. It normalises known mail-charset aliases (`iso-8859-8-i/-e` →
+  `iso-8859-8`, `unknown-8bit`/`x-unknown`/`default` → utf-8, `ks_c_5601-1987` → cp949) and on
+  `LookupError` falls through utf-8 → cp1255 → **latin-1**, which maps every byte and so can
+  never raise. Signatures and call sites unchanged.
+- **Same root cause was also failing silently in the body path.** `_get_html_and_text` wrapped
+  its decode in `except Exception: continue`, so a Hebrew-charset *body* was not a crash — it
+  was an empty string, i.e. a lead quietly stripped of its text. Those bodies decode now. Worth
+  remembering given that Hebrew "דרושים" groups produced all 10 good leads.
+- **Verified end to end:** `--once --only email` → exit 0, **23 leads extracted, 23 enriched,
+  1 Telegram push**, gate split `{full_time: 13, seeker: 2, stale: 2, duplicate: 4, low: 1}` —
+  the full-time-heavy split is the expected LinkedIn shape. `test_gate.py` still 15/15.
 
 ## Open items
 - **⭐ User action, highest value (3 min): Gmail app password** → `IMAP_USER`/`IMAP_PASSWORD` +
