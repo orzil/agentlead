@@ -127,6 +127,13 @@ one job tuple.
   with no `applyUrl` and no "Easy Apply" string — that's sign-in chrome, not a job signal. So the
   flag comes from *which query found the job* (source label `linkedin/easyapply`), never from
   parsing the page. Expect most of this pass to gate out as full-time; that is correct.
+- **Email charsets** (`email_fetcher._decode_bytes`) — Hebrew senders label mail `iso-8859-8-i`,
+  which is *not* a Python codec (the `-i`/`-e` suffix is RFC 1556 bidi direction over plain
+  `iso-8859-8`). `codecs.lookup` raises `LookupError` before decoding, so `errors="replace"` does
+  **not** catch it. Decode mail bytes only through `_decode_bytes`, never `.decode(charset)` —
+  an unguarded call took the whole email pass down for ~12h (fixed 2026-09-06), and because
+  `From` is decoded *before* `_source_for()`, any junk mail in the inbox could do it.
+
 - **Reddit sitewide search** (`reddit_fetcher.fetch_search`) — plain keyword queries rank
   semantically and return career-advice threads and seeker self-promos (measured: 14/20 passed
   the gate, 0 real). Queries anchor on `title:(hiring OR task)` instead. `search.rss` also mixes
