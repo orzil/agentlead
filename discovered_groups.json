@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-06T07:31:26+00:00",
- "count": 636,
+ "generated": "2026-09-06T18:56:35+00:00",
+ "count": 638,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5553,6 +5553,21 @@
    "last_checked": null
   },
   {
+   "slug": "1019246362418093",
+   "name": "Реховот Объявления Реклама",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-06T18:56:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1026867278991606",
    "name": "Coaches, Consultants & Course Creators Help, Hiring and Support",
    "status": "pending",
@@ -7485,6 +7500,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T12:18:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "692745344227985",
+   "name": "באר שבע ביחד",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-06T18:56:34+00:00",
    "last_checked": null
   },
   {
