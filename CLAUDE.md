@@ -119,7 +119,7 @@ one job tuple.
   email path. On a 999/403 bot-wall it sets a 6h cooldown in `kv` and stops; retrying extends
   the block. **The email-alert path is the robust half** — if the scraper dies, it keeps working.
   Verified 2026-08-06: those saved-search alerts are **already arriving daily** in Or's Gmail with
-  on-target $100–150/hr CV leads. Only the Gmail app password is missing.
+  on-target $100–150/hr CV leads. Live since then — one pass on 2026-09-06 pulled 23 leads.
 - **LinkedIn Easy Apply** — `f_AL=true` **is** honoured (measured: only 3/10 job ids overlapped the
   unfiltered baseline), unlike `f_JT`, which is ignored outright (10/10 identical, and every detail
   page said "Employment type: Full-time"). Easy Apply is **not detectable per-job** logged-out:
@@ -133,7 +133,6 @@ one job tuple.
   **not** catch it. Decode mail bytes only through `_decode_bytes`, never `.decode(charset)` —
   an unguarded call took the whole email pass down for ~12h (fixed 2026-09-06), and because
   `From` is decoded *before* `_source_for()`, any junk mail in the inbox could do it.
-
 - **Reddit sitewide search** (`reddit_fetcher.fetch_search`) — plain keyword queries rank
   semantically and return career-advice threads and seeker self-promos (measured: 14/20 passed
   the gate, 0 real). Queries anchor on `title:(hiring OR task)` instead. `search.rss` also mixes
