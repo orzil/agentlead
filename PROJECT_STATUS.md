@@ -476,15 +476,24 @@ variable was never the country — it is who posts.
   the full-time-heavy split is the expected LinkedIn shape. `test_gate.py` still 15/15.
 
 ## Open items
+- **Nothing is blocked on the user.** Checked 2026-09-06: the two standing "user action" items
+  (join FB / WhatsApp groups) were measured and demoted below — see the yield table reasoning.
+  The pipeline runs unattended.
+
 - **⭐ User action, highest value (3 min): Gmail app password** → `IMAP_USER`/`IMAP_PASSWORD` +
   the two GitHub secrets. LinkedIn job alerts are *already* arriving daily with on-target
   $100–150/hr CV leads; the agent simply can't read them. This also unlocks every private FB group
   and Upwork/Wellfound. Nothing else on this list comes close in value per minute.
-- **User action:** review `facebook_groups.md` (14 private groups, ranked) → join the relevant
-  ones, then 🔔 **All posts**. Mark them with `discover_fb_groups.py --joined <slug>`.
-  Pointless until the app password above exists — the notifications land in Gmail unread.
-- **User action:** review `whatsapp_groups.md` and join the 2–3 ranked groups (top hit is the
-  Israeli dev-jobs group). Then re-run `--write` to refresh, or `--joined <code>` to mark them.
+- ~~**User action:** join the 14 private FB groups~~ → **demoted 2026-09-06, measured.** Over the
+  last 30 days *all* Facebook surfaces combined produced **38 leads, 1 at ≥7**, while Reddit gave
+  613/16 and LinkedIn 175/5 — and LinkedIn's number was suppressed the whole time by the
+  `iso-8859-8-i` crash. 14 more private groups cannot plausibly beat that, and joining is the one
+  action the agent must never take on Or's behalf. The list stays in `facebook_groups.md` as
+  optional upside; nobody should feel behind for ignoring it. The no-join surface
+  (`facebook/search`, via the search index) already covers the same ground at the same yield.
+- ~~**User action:** join the 2–3 ranked WhatsApp groups~~ → **demoted 2026-09-06**, same reason.
+  Discovery-only is a design rule, not a gap: driving WhatsApp Web would put Or's personal number
+  at risk. `whatsapp_groups.md` keeps the 3 live ranked invites if he ever wants them.
 - The LinkedIn **saved-search alerts are already set up** — this was previously listed as a pending
   user action and was wrong. Verified 2026-08-06 in Gmail.
 - 15 WhatsApp invites still `pending` (behind the per-run cap) — the daily job drains 10/day, or
