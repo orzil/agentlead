@@ -657,19 +657,18 @@ def morning_report(conn, path: str, hours: int, min_score: int,
     if notify and rows:
         import html as _h
 
-        head = rows[:15]
         blocks = [f"\U0001F305 <b>Morning report</b> - {len(rows)} leads overnight"]
-        for r in head:
+        for r in rows:
             score = r["score"] if r["score"] is not None else "?"
             blocks.append(
                 f"<b>[{score}]</b> {_h.escape(r['source'] or '')}\n"
                 f"{_h.escape(cell(r['summary'] or r['raw_text'], 140))}\n"
                 f"{_h.escape(r['url'] or '')}"
             )
-        if len(rows) > len(head):
-            blocks.append(f"...and {len(rows) - len(head)} more (score-ordered).")
-        # _send_raw hard-truncates at 4000 chars, so pack into messages under
-        # that rather than losing the tail of the table silently.
+        # _send_raw hard-truncates at 4000 chars, so pack blocks into several
+        # messages under that limit rather than dropping the tail silently -
+        # every lead goes out, score-ordered, split across as many Telegram
+        # messages as it takes.
         chunk = ""
         for b in blocks:
             if len(chunk) + len(b) + 2 > 3500 and chunk:
