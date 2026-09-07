@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-07T07:48:26+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-07T20:23:46+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (652)
+## Not yet probed (679)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -188,6 +188,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `StartupIndiaRework` (found via ddg)
 - `1715729438698600` (found via ddg)
 - `788415021554366` (found via ddg)
+- `431791437242731` (found via ddg)
 - `337801441734030` (found via ddg)
 - `founderx` (found via ddg)
 - `TESNetwork` (found via ddg)
@@ -217,6 +218,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ai.israel.official` (found via ddg)
 - `2920195654986279` (found via ddg)
 - `773870394547175` (found via ddg)
+- `hightechisrael` (found via ddg)
 - `671328720907753` (found via ddg)
 - `1964357920826126` (found via ddg)
 - `1786020114969358` (found via ddg)
@@ -372,6 +374,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupfrat` (found via ddg)
 - `CanadaStartup` (found via ddg)
 - `techstartupukireland` (found via ddg)
+- `thefoundersnetwork` (found via ddg)
 - `1165236046981865` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
 - `uksmallbusinessowners` (found via ddg)
@@ -601,6 +604,30 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `452192296043938` (found via leads_db)
 - `bfttoolsupport` (found via leads_db)
 - `583747136680302` (found via leads_db)
+- `beatstar` (found via reddit_search)
+- `1525583677737750` (found via reddit_search)
+- `SAVETHEANIMALSATSANBERNARDINOSHELTER` (found via reddit_search)
+- `OzComicConPhotoFind` (found via reddit_search)
+- `313857163038767` (found via reddit_search)
+- `877236530224394` (found via reddit_search)
+- `seestar` (found via reddit_search)
+- `910812596057062` (found via reddit_search)
+- `262947785476285` (found via reddit_search)
+- `169801717271408` (found via reddit_search)
+- `383941336527122` (found via reddit_search)
+- `1378149729337459` (found via reddit_search)
+- `1037161243564962` (found via reddit_search)
+- `522833472643059` (found via reddit_search)
+- `710197290292011` (found via reddit_search)
+- `560918652057656` (found via reddit_search)
+- `741864132620740` (found via reddit_search)
+- `955986932937796` (found via reddit_search)
+- `1097628144155616` (found via reddit_search)
+- `2798558256939270` (found via reddit_search)
+- `1061146536745985` (found via reddit_search)
+- `313740000070684` (found via reddit_search)
+- `2324611641714010` (found via reddit_search)
+- `1018906960238126` (found via reddit_search)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)

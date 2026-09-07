@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-07T07:48:26+00:00",
- "count": 639,
+ "generated": "2026-09-07T20:23:46+00:00",
+ "count": 666,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -15,7 +15,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-08-31T10:14:34+00:00"
+   "last_checked": "2026-09-07T08:54:34+00:00"
   },
   {
    "slug": "352958686292104",
@@ -45,7 +45,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-08-31T10:15:02+00:00"
+   "last_checked": "2026-09-07T08:55:02+00:00"
   },
   {
    "slug": "1162970365658943",
@@ -1353,6 +1353,21 @@
    "last_checked": null
   },
   {
+   "slug": "431791437242731",
+   "name": "Thailand Startup Founders Network",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T20:23:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "4808168705943904",
    "name": "SaaS Founders",
    "status": "pending",
@@ -2160,6 +2175,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T20:46:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "hightechisrael",
+   "name": "דרושים היי טק - מתכנתים | בודקי תוכנה | אבטחת מידע",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:54:14+00:00",
    "last_checked": null
   },
   {
@@ -5403,6 +5433,21 @@
    "last_checked": null
   },
   {
+   "slug": "thefoundersnetwork",
+   "name": "The Founders Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T20:23:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "uksmallbusinessowners",
    "name": "UK Small Business Support",
    "status": "pending",
@@ -5553,6 +5598,21 @@
    "last_checked": null
   },
   {
+   "slug": "1018906960238126",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:54:13+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1019246362418093",
    "name": "Реховот Объявления Реклама",
    "status": "pending",
@@ -5583,6 +5643,21 @@
    "last_checked": null
   },
   {
+   "slug": "1037161243564962",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1050679009595609",
    "name": "Integromat (Make), n8n & Zapier Community",
    "status": "pending",
@@ -5595,6 +5670,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T04:31:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1061146536745985",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -5625,6 +5715,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:11:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1097628144155616",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -5868,6 +5973,21 @@
    "last_checked": null
   },
   {
+   "slug": "1378149729337459",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1404116417142065",
    "name": null,
    "status": "pending",
@@ -6093,6 +6213,21 @@
    "last_checked": null
   },
   {
+   "slug": "1525583677737750",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1551697496696152",
    "name": null,
    "status": "pending",
@@ -6210,6 +6345,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "169801717271408",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -6588,6 +6738,21 @@
    "last_checked": null
   },
   {
+   "slug": "2324611641714010",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:52:36+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "23436957073",
    "name": null,
    "status": "pending",
@@ -6630,6 +6795,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:14:14+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "262947785476285",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -6705,6 +6885,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T19:52:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2798558256939270",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -6795,6 +6990,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T20:34:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "313740000070684",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:52:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "313857163038767",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -6930,6 +7155,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "383941336527122",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -7218,6 +7458,21 @@
    "last_checked": null
   },
   {
+   "slug": "522833472643059",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "523563171052784",
    "name": null,
    "status": "pending",
@@ -7290,6 +7545,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:11:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "560918652057656",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -7548,6 +7818,21 @@
    "last_checked": null
   },
   {
+   "slug": "710197290292011",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "7111013388975795",
    "name": "בעלי עסקים קטנים מתייעצים",
    "status": "pending",
@@ -7665,6 +7950,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T20:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "741864132620740",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -7878,6 +8178,21 @@
    "last_checked": null
   },
   {
+   "slug": "877236530224394",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "882355066697919",
    "name": null,
    "status": "pending",
@@ -7908,6 +8223,21 @@
    "last_checked": null
   },
   {
+   "slug": "910812596057062",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "915477416281474",
    "name": null,
    "status": "pending",
@@ -7935,6 +8265,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-26T02:26:11+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "955986932937796",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -8118,6 +8463,21 @@
    "last_checked": null
   },
   {
+   "slug": "OzComicConPhotoFind",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "PalmerstonNorthRoomForRent",
    "name": null,
    "status": "pending",
@@ -8145,6 +8505,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T17:23:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "SAVETHEANIMALSATSANBERNARDINOSHELTER",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
@@ -8340,6 +8715,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-29T00:59:53+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "beatstar",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:50:18+00:00",
    "last_checked": null
   },
   {
@@ -9270,6 +9660,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "seestar",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T08:51:27+00:00",
    "last_checked": null
   },
   {
