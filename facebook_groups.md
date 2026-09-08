@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-08T07:26:01+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-08T07:43:41+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (680)
+## Not yet probed (684)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -120,6 +120,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `580118425856327` (found via ddg)
 - `chatbotjobs` (found via config)
 - `1681683688690553` (found via ddg)
+- `274863123773115` (found via ddg)
 - `digitalagencyownerinsiders` (found via ddg)
 - `1362385213926016` (found via ddg)
 - `242558750269724` (found via ddg)
@@ -131,6 +132,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ecommercestoreowner` (found via ddg)
 - `ecommerceentrepreners` (found via ddg)
 - `ecommerceentrepreneurgroup` (found via ddg)
+- `ecommerceowner` (found via ddg)
 - `entrepreneursandbusinessownerscalifornia` (found via ddg)
 - `EABOSA` (found via ddg)
 - `NYCESN` (found via ddg)
@@ -205,6 +207,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ecommercesiteowners` (found via ddg)
 - `beehexaecommercegroup` (found via ddg)
 - `ecommercesuccessgroup` (found via ddg)
+- `ecommercestoresownerscommunity` (found via ddg)
 - `1773899256887046` (found via ddg)
 - `1266824747259615` (found via ddg)
 - `370277302613861` (found via ddg)
@@ -295,6 +298,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `findingsuvfounders` (found via ddg)
 - `gamedev` (found via ddg)
 - `588730763335326` (found via ddg)
+- `1100802378915693` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `307912236406923` (found via ddg)
 - `indiastartups` (found via ddg)

@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-08T07:26:01+00:00",
- "count": 667,
+ "generated": "2026-09-08T07:43:41+00:00",
+ "count": 671,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1188,6 +1188,21 @@
    "last_checked": null
   },
   {
+   "slug": "274863123773115",
+   "name": "DTC Ecommerce Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-08T07:43:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "279906104787742",
    "name": "Business Owners / Company Founders / Entreprenur in Canada & United ...",
    "status": "pending",
@@ -2028,6 +2043,21 @@
    "last_checked": null
   },
   {
+   "slug": "ecommerceowner",
+   "name": "Ecommerce Owners - Dropshipping Shopify Store SEO Facebook Ads",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-08T07:43:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "ecommercesiteowners",
    "name": "eCommerce Site Owners - Learn How to Build a 7-Figure ...",
    "status": "pending",
@@ -2055,6 +2085,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommercestoresownerscommunity",
+   "name": "eCommerce Stores Owners Community",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-08T07:43:39+00:00",
    "last_checked": null
   },
   {
@@ -2745,6 +2790,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1100802378915693",
+   "name": "Help with ecommerce store",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-08T07:43:39+00:00",
    "last_checked": null
   },
   {
