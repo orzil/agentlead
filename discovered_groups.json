@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-07T22:57:17+00:00",
- "count": 666,
+ "generated": "2026-09-08T01:07:13+00:00",
+ "count": 667,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -7200,6 +7200,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T21:02:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "3diot.laptrinhnhungiot",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-07T23:51:37+00:00",
    "last_checked": null
   },
   {
