@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-09T07:46:39+00:00",
- "count": 683,
+ "generated": "2026-09-09T19:38:29+00:00",
+ "count": 686,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3450,6 +3450,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "279455896169061",
+   "name": "Vancouver Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-09T19:38:28+00:00",
    "last_checked": null
   },
   {
@@ -9363,6 +9378,21 @@
    "last_checked": null
   },
   {
+   "slug": "founderscanada",
+   "name": "Facebook",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-09T19:38:28+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "freelance.remote.it",
    "name": null,
    "status": "pending",
@@ -10110,6 +10140,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T23:28:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "toronto.entrepreneurs.startups",
+   "name": "Toronto Entrepreneurs & Startups ⭐Events ⭐ ...",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-09T19:38:28+00:00",
    "last_checked": null
   },
   {

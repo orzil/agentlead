@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-09T07:46:39+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-09T19:38:29+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (696)
+## Not yet probed (699)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -398,6 +398,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `usasmallbusinesscommunity` (found via ddg)
 - `1404824917072635` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
+- `279455896169061` (found via ddg)
 - `epicentrepreneur` (found via ddg)
 - `smallbusinessownerandentrepreneurs` (found via ddg)
 - `1149304996574074` (found via ddg)
@@ -672,6 +673,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `3719451304764538` (found via ddg)
 - `402786871855453` (found via ddg)
 - `345613409204417` (found via ddg)
+- `founderscanada` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
 - `918031175736092` (found via ddg)
 - `764877593708803` (found via ddg)
@@ -702,6 +704,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `688006048306297` (found via ddg)
 - `232125487923966` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
+- `toronto.entrepreneurs.startups` (found via ddg)
 - `TradieWives` (found via ddg)
 - `736631881894510` (found via ddg)
 - `truckingandlogistics` (found via ddg)
