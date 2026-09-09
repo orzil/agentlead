@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-09T00:29:38+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-09T02:41:05+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (686)
+## Not yet probed (696)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -82,10 +82,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `148693034913710` (found via ddg)
 - `872702652095435` (found via ddg)
 - `2109860309355224` (found via ddg)
+- `freelanceoutsourcingprojects` (found via ddg)
 - `2133987156657804` (found via config)
 - `1418563452142232` (found via ddg)
 - `agencybusinessowners` (found via ddg)
 - `1527705608867878` (found via ddg)
+- `216499291720732` (found via ddg)
 - `saasaitools` (found via ddg)
 - `331399459887663` (found via ddg)
 - `256977734759027` (found via ddg)
@@ -116,6 +118,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `868876935222403` (found via ddg)
 - `2059467967664033` (found via ddg)
 - `australiansmallbusinesowners` (found via ddg)
+- `1184176781736143` (found via ddg)
 - `279906104787742` (found via ddg)
 - `580118425856327` (found via ddg)
 - `chatbotjobs` (found via config)
@@ -142,6 +145,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `gohighlevelagencyowners` (found via ddg)
 - `2709340372800064` (found via ddg)
 - `needwebsitedesignerordeveloper` (found via leads_db)
+- `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
+- `ITprojectOutsourcing` (found via ddg)
 - `indianstartupinvestor` (found via ddg)
 - `IAOAlliance` (found via ddg)
 - `2152373795524537` (found via ddg)
@@ -155,7 +160,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `249737589133282` (found via ddg)
 - `1198024408768649` (found via ddg)
 - `341776853891812` (found via ddg)
+- `2254265064668702` (found via ddg)
+- `outsourceitprojects` (found via ddg)
+- `103362243079109` (found via ddg)
 - `agencyownerlab` (found via ddg)
+- `1738599183094782` (found via ddg)
 - `1290241845505841` (found via ddg)
 - `562631543884434` (found via ddg)
 - `4808168705943904` (found via ddg)
@@ -180,6 +189,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `socialmediaforsmallbusinessownersuk` (found via ddg)
 - `761000443963542` (found via ddg)
 - `5354513511301326` (found via ddg)
+- `637831372970457` (found via ddg)
 - `sastartups` (found via ddg)
 - `startup.canada` (found via ddg)
 - `startupfounderclub` (found via ddg)
