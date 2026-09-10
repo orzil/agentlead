@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-10T21:48:40+00:00",
- "count": 693,
+ "generated": "2026-09-10T23:50:52+00:00",
+ "count": 695,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -783,6 +783,21 @@
    "last_checked": null
   },
   {
+   "slug": "1158393644223761",
+   "name": "דרושים מתכנתים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-10T23:50:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1184176781736143",
    "name": "BPO projects Outsourcing",
    "status": "pending",
@@ -1500,6 +1515,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "493890216609239",
+   "name": "דרושים מתכנתים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-10T23:50:51+00:00",
    "last_checked": null
   },
   {
