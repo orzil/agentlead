@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-10T07:35:04+00:00",
- "count": 687,
+ "generated": "2026-09-10T07:47:55+00:00",
+ "count": 689,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3615,6 +3615,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-26T05:15:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "395388637899902",
+   "name": "Business Owners South Africa",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-10T07:47:54+00:00",
    "last_checked": null
   },
   {
@@ -8370,6 +8385,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "827453710776253",
+   "name": "The SA Business Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-10T07:47:54+00:00",
    "last_checked": null
   },
   {
