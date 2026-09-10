@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-10T07:47:55+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-10T19:29:14+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (702)
+## Not yet probed (706)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -647,6 +647,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `3diot.laptrinhnhungiot` (found via leads_db)
 - `dataannotation` (found via leads_db)
 - `cardiffstart` (found via leads_db)
+- `IsraeliGameDev` (found via leads_db)
+- `freelancerim` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -659,6 +661,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1727446317476806` (found via ddg)
 - `1002630209124759` (found via ddg)
 - `661035522370697` (found via ddg)
+- `britsindubai` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
 - `1429763737480567` (found via ddg)
@@ -674,6 +677,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `coachingandconsulting` (found via ddg)
 - `3719451304764538` (found via ddg)
 - `402786871855453` (found via ddg)
+- `Dubaiexpat` (found via ddg)
 - `345613409204417` (found via ddg)
 - `founderscanada` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)

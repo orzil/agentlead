@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-10T07:47:55+00:00",
- "count": 689,
+ "generated": "2026-09-10T19:29:14+00:00",
+ "count": 693,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -8643,6 +8643,21 @@
    "last_checked": null
   },
   {
+   "slug": "Dubaiexpat",
+   "name": "Dubai Expat Community (by Katie Jones)",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-10T19:28:47+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "Episcopalians",
    "name": null,
    "status": "pending",
@@ -8685,6 +8700,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:57:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "IsraeliGameDev",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-10T10:09:30+00:00",
    "last_checked": null
   },
   {
@@ -9045,6 +9075,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:32:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "britsindubai",
+   "name": "Brits in Dubai",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-10T19:28:47+00:00",
    "last_checked": null
   },
   {
@@ -9450,6 +9495,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T12:18:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "freelancerim",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-10T15:22:54+00:00",
    "last_checked": null
   },
   {
