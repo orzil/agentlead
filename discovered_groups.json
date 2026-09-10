@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-10T02:43:24+00:00",
- "count": 686,
+ "generated": "2026-09-10T07:35:04+00:00",
+ "count": 687,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -9105,6 +9105,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "cardiffstart",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-10T07:35:04+00:00",
    "last_checked": null
   },
   {
