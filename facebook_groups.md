@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-11T07:43:12+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-11T19:31:38+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (712)
+## Not yet probed (715)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -424,6 +424,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `AppStart` (found via ddg)
 - `1338202816787610` (found via ddg)
 - `289118210401946` (found via ddg)
+- `1467120475073886` (found via ddg)
 - `Software.Developers.Israel` (found via ddg)
 - `5440649196012252` (found via ddg)
 - `705061861437260` (found via ddg)
@@ -611,7 +612,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2413125118892143` (found via reddit_search)
 - `lortv` (found via reddit_search)
 - `730846147250486` (found via leads_db)
-- `workfromhomenospam` (found via leads_db)
 - `882355066697919` (found via leads_db)
 - `miaigroup` (found via leads_db)
 - `gamedevelopmentph` (found via leads_db)
@@ -740,6 +740,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `independant.il` (found via ddg)
 - `business.owners.israel` (found via ddg)
 - `business.marketing.ai.il` (found via ddg)
+- `318547103365148` (found via ddg)
 - `1774931386364154` (found via ddg)
 - `asakimktanim` (found via ddg)
 - `188366559022` (found via ddg)
@@ -769,5 +770,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `buslness` (found via ddg)
 - `KsharimBiz` (found via ddg)
 - `slikot` (found via ddg)
+- `workfromhomenospam` (found via leads_db)
 - `1298319104548368` (found via ddg)
+- `superface.marketing.digital` (found via ddg)
 - `1175523289159038` (found via ddg)

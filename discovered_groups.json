@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-11T07:43:12+00:00",
- "count": 699,
+ "generated": "2026-09-11T19:31:38+00:00",
+ "count": 702,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3240,6 +3240,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1467120475073886",
+   "name": "בעלי עסקים מדברים שיווק דיגיטלי: אורגני | ממומן | Ai - עם שלום דיגיטל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-11T19:31:36+00:00",
    "last_checked": null
   },
   {
@@ -7323,6 +7338,21 @@
    "last_checked": null
   },
   {
+   "slug": "318547103365148",
+   "name": "בעלי עסקים לומדים שיווק דיגיטלי",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-11T19:31:37+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "3191993041075491",
    "name": null,
    "status": "pending",
@@ -10248,6 +10278,21 @@
    "last_checked": null
   },
   {
+   "slug": "superface.marketing.digital",
+   "name": "שיווק, דיגיטל, ומדיה חברתית",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-11T19:31:36+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "sweatsocial",
    "name": null,
    "status": "pending",
@@ -10459,10 +10504,10 @@
   },
   {
    "slug": "workfromhomenospam",
-   "name": null,
+   "name": "שיווק דיגיטלי לעסקים במה חופשית",
    "status": "pending",
    "relevance": 0,
-   "region": null,
+   "region": "IL",
    "found_via": "leads_db",
    "activity": null,
    "in_rotation": 0,
