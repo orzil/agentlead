@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-10T23:50:52+00:00",
- "count": 695,
+ "generated": "2026-09-11T02:36:38+00:00",
+ "count": 697,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -8733,6 +8733,21 @@
    "last_checked": null
   },
   {
+   "slug": "Interested.and.Businesses",
+   "name": "עסקים מומלצים בכל הארץ",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-11T02:36:37+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "IsraeliGameDev",
    "name": null,
    "status": "pending",
@@ -8745,6 +8760,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-10T10:09:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "KsharimBiz",
+   "name": "קשרים - עסקים קטנים ובעלי מקצוע בכל התחומים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-11T02:36:37+00:00",
    "last_checked": null
   },
   {
