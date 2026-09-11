@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-11T21:52:50+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-11T23:58:39+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (715)
+## Not yet probed (717)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -651,6 +651,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `cardiffstart` (found via leads_db)
 - `IsraeliGameDev` (found via leads_db)
 - `freelancerim` (found via leads_db)
+- `292695599913319` (found via leads_db)
+- `2045714238815121` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
