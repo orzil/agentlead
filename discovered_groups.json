@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-11T02:36:38+00:00",
- "count": 697,
+ "generated": "2026-09-11T07:29:00+00:00",
+ "count": 699,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -10128,6 +10128,21 @@
    "last_checked": null
   },
   {
+   "slug": "shavit",
+   "name": "עצמאים ובעלי עסקים קטנים בישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-11T07:28:59+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "sideshow",
    "name": null,
    "status": "pending",
@@ -10155,6 +10170,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallBIS",
+   "name": "עסקים קטנים +",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-11T07:28:59+00:00",
    "last_checked": null
   },
   {
