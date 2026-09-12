@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-12T07:36:35+00:00",
- "count": 707,
+ "generated": "2026-09-12T19:02:47+00:00",
+ "count": 710,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3063,6 +3063,21 @@
    "last_checked": null
   },
   {
+   "slug": "1194703972077043",
+   "name": "Shopify Store Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-12T19:02:46+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1213894351964666",
    "name": "פרילאנסרים מחפשים פרויקטים",
    "status": "pending",
@@ -3495,6 +3510,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "27603957949300413",
+   "name": "Shopify Store Owners Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-12T19:02:46+00:00",
    "last_checked": null
   },
   {
@@ -5760,6 +5790,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-04T07:25:06+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "usashopifystoreownersexperts",
+   "name": "USA Shopify Store Owners & Experts",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-12T19:02:46+00:00",
    "last_checked": null
   },
   {

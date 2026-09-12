@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-12T07:36:35+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-12T19:02:47+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (720)
+## Not yet probed (723)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -371,6 +371,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `shopifyownerscommunity` (found via ddg)
 - `280313030637469` (found via ddg)
 - `shopifystoreownersclub` (found via ddg)
+- `1194703972077043` (found via ddg)
+- `27603957949300413` (found via ddg)
 - `667291046350388` (found via ddg)
 - `1017052997642628` (found via ddg)
 - `shopifyowner` (found via ddg)
@@ -398,6 +400,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `557897198086356` (found via ddg)
 - `usabusinessownersusabusinessgroupusa` (found via ddg)
 - `usatruckingindustry` (found via ddg)
+- `usashopifystoreownersexperts` (found via ddg)
 - `usasmallbusinesscommunity` (found via ddg)
 - `1404824917072635` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
