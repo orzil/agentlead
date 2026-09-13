@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-13T01:25:09+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-13T02:44:07+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (725)
+## Not yet probed (728)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -116,6 +116,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `askarobot` (found via ddg)
 - `694597369571714` (found via ddg)
 - `868876935222403` (found via ddg)
+- `agencyshoptalk` (found via ddg)
 - `2059467967664033` (found via ddg)
 - `australiansmallbusinesowners` (found via ddg)
 - `1184176781736143` (found via ddg)
@@ -211,6 +212,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1380135855880231` (found via ddg)
 - `uxdesignercommunity` (found via leads_db)
 - `unfilteredagency` (found via ddg)
+- `342228509513052` (found via ddg)
 - `ecommerce.entrepreneurs.us` (found via ddg)
 - `ecommerceentrepreneurs` (found via ddg)
 - `580888738978032` (found via ddg)
@@ -721,6 +723,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `190482421294295` (found via ddg)
 - `688006048306297` (found via ddg)
 - `232125487923966` (found via ddg)
+- `180837768789806` (found via ddg)
 - `827453710776253` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
 - `toronto.entrepreneurs.startups` (found via ddg)

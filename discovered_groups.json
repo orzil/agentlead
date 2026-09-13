@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-13T01:25:09+00:00",
- "count": 712,
+ "generated": "2026-09-13T02:44:07+00:00",
+ "count": 715,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1458,6 +1458,21 @@
    "last_checked": null
   },
   {
+   "slug": "342228509513052",
+   "name": "VIAA Agency Owners Only",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-13T02:44:06+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "370277302613861",
    "name": "Ai Israel - בינה מלאכותית",
    "status": "pending",
@@ -1950,6 +1965,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T20:46:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "agencyshoptalk",
+   "name": "Agency Shop Talk- Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-13T02:44:06+00:00",
    "last_checked": null
   },
   {
@@ -6795,6 +6825,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "180837768789806",
+   "name": "The Mompreneurs | If you've ever done network marketing ...",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-13T02:44:06+00:00",
    "last_checked": null
   },
   {
