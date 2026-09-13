@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-13T07:55:24+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-13T19:14:03+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (728)
+## Not yet probed (731)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -268,6 +268,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `716483187640234` (found via ddg)
 - `1620010391574229` (found via ddg)
 - `arabentrepreneurs` (found via ddg)
+- `1169730214931080` (found via ddg)
 - `1348711550214520` (found via leads_db)
 - `ausbizownersclub` (found via ddg)
 - `487009714795019` (found via ddg)
@@ -663,6 +664,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1857122828309413` (found via leads_db)
 - `micro1` (found via leads_db)
 - `7064460843613310` (found via leads_db)
+- `xomdata` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -737,6 +739,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `793335882635042` (found via ddg)
 - `900308687031185` (found via ddg)
 - `669886889110965` (found via ddg)
+- `wunderbuilders` (found via ddg)
 - `403307456733049` (found via ddg)
 - `4046763412236611` (found via ddg)
 - `511333728510695` (found via ddg)
