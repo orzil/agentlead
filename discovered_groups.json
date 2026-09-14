@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-14T02:58:54+00:00",
- "count": 720,
+ "generated": "2026-09-14T08:28:19+00:00",
+ "count": 722,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1503,6 +1503,21 @@
    "last_checked": null
   },
   {
+   "slug": "375928432886491",
+   "name": "Niche-Focused Digital Marketing Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T08:28:17+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "431791437242731",
    "name": "Thailand Startup Founders Network",
    "status": "pending",
@@ -2160,6 +2175,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-02T07:16:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "digitalmarketingagencyowners",
+   "name": "Digital Marketing Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T08:28:17+00:00",
    "last_checked": null
   },
   {
