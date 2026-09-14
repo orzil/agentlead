@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-14T20:47:19+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-14T23:44:15+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (763)
+## Not yet probed (773)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -183,6 +183,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `saasfoundergroup` (found via ddg)
 - `sfenetworks` (found via ddg)
 - `1851637745054222` (found via ddg)
+- `1017920189630354` (found via ddg)
 - `580487328806681` (found via ddg)
 - `smallbusinessownercommunityuk` (found via ddg)
 - `893840601407320` (found via ddg)
@@ -374,6 +375,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `sanfrancisco.california.startups` (found via ddg)
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
+- `shopifydropshippingshopifystoreowners` (found via ddg)
+- `3973264012777670` (found via ddg)
 - `shopifyentrepreneurs` (found via ddg)
 - `shopifystoreownerforum` (found via ddg)
 - `shopifyownerscommunity` (found via ddg)
@@ -386,6 +389,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `shopifyowner` (found via ddg)
 - `shopifystoreowner` (found via ddg)
 - `shopifystoreowners` (found via ddg)
+- `1170892738160019` (found via ddg)
 - `singapore.entrepreneurs.network` (found via ddg)
 - `989233131137552` (found via ddg)
 - `singstartups` (found via ddg)
@@ -399,6 +403,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `StartupEuropeClub` (found via ddg)
 - `StartupIrelandClub` (found via ddg)
 - `startupfrat` (found via ddg)
+- `1830732491194053` (found via ddg)
 - `CanadaStartup` (found via ddg)
 - `techstartupukireland` (found via ddg)
 - `thefoundersnetwork` (found via ddg)
@@ -411,6 +416,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `usashopifystoreownersexperts` (found via ddg)
 - `usasmallbusinesscommunity` (found via ddg)
 - `1404824917072635` (found via ddg)
+- `690106716521268` (found via ddg)
 - `vancouverstartupcommunity` (found via ddg)
 - `279455896169061` (found via ddg)
 - `epicentrepreneur` (found via ddg)
@@ -721,6 +727,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `coachingandconsulting` (found via ddg)
 - `3719451304764538` (found via ddg)
 - `402786871855453` (found via ddg)
+- `dropshippinghow` (found via ddg)
 - `Dubaiexpat` (found via ddg)
 - `345613409204417` (found via ddg)
 - `founderscanada` (found via ddg)
@@ -745,6 +752,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `625858050017927` (found via ddg)
 - `313682202336332` (found via ddg)
 - `remoteworkturkey` (found via ddg)
+- `1234027487916127` (found via ddg)
+- `shopifydropshippinghelps` (found via ddg)
+- `439779113936650` (found via ddg)
 - `southafricanbusiness` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
 - `1435491713362512` (found via ddg)
