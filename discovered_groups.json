@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-14T08:28:19+00:00",
- "count": 722,
+ "generated": "2026-09-14T20:47:19+00:00",
+ "count": 750,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -15,7 +15,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-09-07T08:54:34+00:00"
+   "last_checked": "2026-09-14T09:33:29+00:00"
   },
   {
    "slug": "352958686292104",
@@ -45,7 +45,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-09-07T08:55:02+00:00"
+   "last_checked": "2026-09-14T09:33:56+00:00"
   },
   {
    "slug": "1162970365658943",
@@ -1848,6 +1848,21 @@
    "last_checked": null
   },
   {
+   "slug": "932457121284600",
+   "name": "בינה מלאכותית ישראל - AI",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:09+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "993304299789457",
    "name": "SaaS Founders",
    "status": "pending",
@@ -2070,6 +2085,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T19:57:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "all.ai.israel",
+   "name": "AI Israel - בינה מלאכותית ישראל",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:09+00:00",
    "last_checked": null
   },
   {
@@ -3360,6 +3390,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-11T19:31:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1496943943857797",
+   "name": "פרסום בעלי עסקים בישראל ללא הגבלה חינם | \"הלקוחות שלכם כבר שואלים Ai ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:19+00:00",
    "last_checked": null
   },
   {
@@ -6498,6 +6543,21 @@
    "last_checked": null
   },
   {
+   "slug": "1451006476466780",
+   "name": "קלוד קוד - Vibe coding בישראל | שנה טובה תשפ״ז",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:19+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1460476385552503",
    "name": "USA Coaches and Consultants Community",
    "status": "pending",
@@ -6888,6 +6948,21 @@
    "last_checked": null
   },
   {
+   "slug": "17wBZ9RP4w",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:08+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "180837768789806",
    "name": "The Mompreneurs | If you've ever done network marketing ...",
    "status": "pending",
@@ -6948,6 +7023,21 @@
    "last_checked": null
   },
   {
+   "slug": "190238154859029",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "190482421294295",
    "name": "The Amazon Sellers Network",
    "status": "pending",
@@ -7005,6 +7095,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:11:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2029467634156502",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:08+00:00",
    "last_checked": null
   },
   {
@@ -7443,6 +7548,21 @@
    "last_checked": null
   },
   {
+   "slug": "29157404807214602",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "292374366340227",
    "name": null,
    "status": "pending",
@@ -7728,6 +7848,21 @@
    "last_checked": null
   },
   {
+   "slug": "3979700518729073",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "3diot.laptrinhnhungiot",
    "name": null,
    "status": "pending",
@@ -7830,6 +7965,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T22:53:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "439261969891154",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:08+00:00",
    "last_checked": null
   },
   {
@@ -7998,6 +8148,21 @@
    "last_checked": null
   },
   {
+   "slug": "512934217597376",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "522833472643059",
    "name": null,
    "status": "pending",
@@ -8028,6 +8193,36 @@
    "last_checked": null
   },
   {
+   "slug": "526618504376073",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "531130018682389",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "531405067552688",
    "name": "עסקים קטנים - אנשים גדולים",
    "status": "pending",
@@ -8040,6 +8235,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-29T19:47:34+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "537499287236358",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
    "last_checked": null
   },
   {
@@ -8085,6 +8295,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:11:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "560571324116728",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:08+00:00",
    "last_checked": null
   },
   {
@@ -8568,6 +8793,21 @@
    "last_checked": null
   },
   {
+   "slug": "749998724166493",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:08+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "750463231680566",
    "name": null,
    "status": "pending",
@@ -8703,6 +8943,21 @@
    "last_checked": null
   },
   {
+   "slug": "835405241383726",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "851415561261142",
    "name": "Amazon FBA Sellers and Community",
    "status": "pending",
@@ -8730,6 +8985,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "863785725675859",
+   "name": "בניית אתרים, בוני אתרים בישראל | שנה טובה תשפ״ז",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:19+00:00",
    "last_checked": null
   },
   {
@@ -9153,6 +9423,21 @@
    "last_checked": null
   },
   {
+   "slug": "Slovio.Community",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "SuppliersManufacturers",
    "name": "Suppliers Manufacturers",
    "status": "pending",
@@ -9210,6 +9495,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T05:24:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "TrailheadRides",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
    "last_checked": null
   },
   {
@@ -9285,6 +9585,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:32:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ani.shulman",
+   "name": "אני שולמן | שתפו אותי איך אתם עוד משווקים חוץ ממומן ואורגני",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:19+00:00",
    "last_checked": null
   },
   {
@@ -9843,6 +10158,21 @@
    "last_checked": null
   },
   {
+   "slug": "friendsofbarnardpark",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:08+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "gamedevelopmentph",
    "name": null,
    "status": "pending",
@@ -9915,6 +10245,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "inannasanctuaryintegrativehealing",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
    "last_checked": null
   },
   {
@@ -10203,6 +10548,21 @@
    "last_checked": null
   },
   {
+   "slug": "offroadroos",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "olphust",
    "name": null,
    "status": "pending",
@@ -10308,6 +10668,21 @@
    "last_checked": null
   },
   {
+   "slug": "producthuntisrael",
+   "name": "Product Hunt Israel",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:19+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "profitabledigitalagencies",
    "name": "Profitable Digital Agencies",
    "status": "pending",
@@ -10383,6 +10758,21 @@
    "last_checked": null
   },
   {
+   "slug": "reterminalsticky",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:08+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "revelot.society",
    "name": null,
    "status": "pending",
@@ -10395,6 +10785,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:34:13+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "rv.wordle.share",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:33:08+00:00",
    "last_checked": null
   },
   {
@@ -10680,6 +11085,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:33:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "tricitiesnightlife",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-14T09:30:22+00:00",
    "last_checked": null
   },
   {

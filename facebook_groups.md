@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-14T08:28:19+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-14T20:47:19+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (735)
+## Not yet probed (763)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -225,6 +225,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ecommercestoresownerscommunity` (found via ddg)
 - `1773899256887046` (found via ddg)
 - `1266824747259615` (found via ddg)
+- `all.ai.israel` (found via ddg)
 - `370277302613861` (found via ddg)
 - `iec.org.il` (found via ddg)
 - `yazamutIsrael` (found via ddg)
@@ -233,6 +234,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `482067651607538` (found via ddg)
 - `israelaiorg` (found via ddg)
 - `2055437551629206` (found via ddg)
+- `932457121284600` (found via ddg)
 - `ai.israel.official` (found via ddg)
 - `2920195654986279` (found via ddg)
 - `773870394547175` (found via ddg)
@@ -464,6 +466,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1213894351964666` (found via ddg)
 - `hubvalley` (found via ddg)
 - `107914806514702` (found via ddg)
+- `1496943943857797` (found via ddg)
 - `832763754922199` (found via ddg)
 - `692392677552880` (found via ddg)
 - `698911985645824` (found via ddg)
@@ -669,6 +672,27 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `7064460843613310` (found via leads_db)
 - `xomdata` (found via leads_db)
 - `2128494490777624` (found via leads_db)
+- `TrailheadRides` (found via reddit_search)
+- `512934217597376` (found via reddit_search)
+- `29157404807214602` (found via reddit_search)
+- `tricitiesnightlife` (found via reddit_search)
+- `526618504376073` (found via reddit_search)
+- `190238154859029` (found via reddit_search)
+- `Slovio.Community` (found via reddit_search)
+- `3979700518729073` (found via reddit_search)
+- `offroadroos` (found via reddit_search)
+- `537499287236358` (found via reddit_search)
+- `531130018682389` (found via reddit_search)
+- `835405241383726` (found via reddit_search)
+- `inannasanctuaryintegrativehealing` (found via reddit_search)
+- `560571324116728` (found via reddit_search)
+- `439261969891154` (found via reddit_search)
+- `friendsofbarnardpark` (found via reddit_search)
+- `rv.wordle.share` (found via reddit_search)
+- `17wBZ9RP4w` (found via reddit_search)
+- `2029467634156502` (found via reddit_search)
+- `749998724166493` (found via reddit_search)
+- `reterminalsticky` (found via reddit_search)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -716,6 +740,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `131710772378400` (found via ddg)
 - `peopleofcleburnetexas` (found via ddg)
 - `PracticeManagersNetwork` (found via ddg)
+- `producthuntisrael` (found via ddg)
 - `profitabledigitalagencies` (found via ddg)
 - `625858050017927` (found via ddg)
 - `313682202336332` (found via ddg)
@@ -753,10 +778,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `713796017872177` (found via ddg)
 - `1019246362418093` (found via ddg)
 - `ig.israel` (found via ddg)
+- `ani.shulman` (found via ddg)
 - `386010697745869` (found via ddg)
 - `395525770590756` (found via ddg)
 - `apps.il` (found via ddg)
 - `692745344227985` (found via ddg)
+- `863785725675859` (found via ddg)
 - `independant.il` (found via ddg)
 - `business.owners.israel` (found via ddg)
 - `business.marketing.ai.il` (found via ddg)
@@ -788,6 +815,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `digitalz.co.il` (found via ddg)
 - `persum.israel` (found via ddg)
 - `buslness` (found via ddg)
+- `1451006476466780` (found via ddg)
 - `KsharimBiz` (found via ddg)
 - `slikot` (found via ddg)
 - `workfromhomenospam` (found via leads_db)
