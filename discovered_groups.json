@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-15T08:19:08+00:00",
- "count": 773,
+ "generated": "2026-09-15T20:04:26+00:00",
+ "count": 775,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -9228,6 +9228,21 @@
    "last_checked": null
   },
   {
+   "slug": "815933868573559",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T20:03:01+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "827453710776253",
    "name": "The SA Business Network",
    "status": "pending",
@@ -10620,6 +10635,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:57:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "jobthaiwfh",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T15:56:24+00:00",
    "last_checked": null
   },
   {
