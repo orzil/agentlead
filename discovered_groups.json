@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-14T23:44:15+00:00",
- "count": 760,
+ "generated": "2026-09-15T01:56:07+00:00",
+ "count": 763,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -6948,6 +6948,21 @@
    "last_checked": null
   },
   {
+   "slug": "1696686004106014",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T01:56:07+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "169801717271408",
    "name": null,
    "status": "pending",
@@ -7923,6 +7938,21 @@
    "last_checked": null
   },
   {
+   "slug": "384925649486411",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T00:18:09+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "386010697745869",
    "name": "אנשי מכירות - פרילנסרים | נוודות | פרנסה מרחוק | עבודה מהבית",
    "status": "pending",
@@ -8190,6 +8220,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T20:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "488878962649334",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T01:56:07+00:00",
    "last_checked": null
   },
   {
