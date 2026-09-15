@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-15T01:56:07+00:00",
- "count": 763,
+ "generated": "2026-09-15T03:01:00+00:00",
+ "count": 764,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -8175,6 +8175,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-04T19:20:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "458535143198626",
+   "name": "Make.com Experts",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T03:00:59+00:00",
    "last_checked": null
   },
   {
