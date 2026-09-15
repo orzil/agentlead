@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-15T20:04:26+00:00",
- "count": 775,
+ "generated": "2026-09-15T22:54:44+00:00",
+ "count": 776,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -7680,6 +7680,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T06:09:24+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "272952645069089",
+   "name": "ChatGPT Build a Million+ Business",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T22:54:43+00:00",
    "last_checked": null
   },
   {
