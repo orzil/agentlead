@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-15T03:01:00+00:00",
- "count": 764,
+ "generated": "2026-09-15T08:19:08+00:00",
+ "count": 773,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -795,6 +795,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-09T02:41:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1057648599597645",
+   "name": "AI Automation Community USA (n8n, OpenClaw, GHL, Zapier, Lovable)",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T08:19:07+00:00",
    "last_checked": null
   },
   {
@@ -2703,6 +2718,21 @@
    "last_checked": null
   },
   {
+   "slug": "saasautomationexpertszapierpabblymake",
+   "name": "Automation SAAS Experts - Zapier, Integrately, Pabbly, Make ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T08:19:07+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "saasfoundergroup",
    "name": "Saas Founder Group - Free Speech",
    "status": "pending",
@@ -2925,6 +2955,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "system.automation.ai.agents.n8n.zapier.ifttt",
+   "name": "System Automation / AI Agents / N8N / Zapier / IFTTT / Power Automate",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T08:19:07+00:00",
    "last_checked": null
   },
   {
@@ -3255,6 +3300,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T21:36:49+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1296525687812999",
+   "name": "Automation Experts Community PH (Make/Integromat, Zapier, etc)",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T08:19:07+00:00",
    "last_checked": null
   },
   {
@@ -4173,6 +4233,21 @@
    "last_checked": null
   },
   {
+   "slug": "674814754266297",
+   "name": "Make (Integromat), n8n & Zapier Automation Experts Community (Français ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T08:19:07+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "690106716521268",
    "name": "United States Shopify dropshipping groups | Shopify Store Owners ...",
    "status": "pending",
@@ -4440,6 +4515,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T21:00:06+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "935208569212244",
+   "name": "Zapier Automation Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T08:19:07+00:00",
    "last_checked": null
   },
   {
@@ -6135,6 +6225,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T20:34:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "zapier",
+   "name": "Zapier Automation Experts",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T08:19:07+00:00",
    "last_checked": null
   },
   {
@@ -9108,6 +9213,21 @@
    "last_checked": null
   },
   {
+   "slug": "803297649286641",
+   "name": "Facebook",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T08:19:07+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "827453710776253",
    "name": "The SA Business Network",
    "status": "pending",
@@ -11460,6 +11580,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-13T19:07:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "zapierusercommunity",
+   "name": "Zapier User Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-15T08:19:07+00:00",
    "last_checked": null
   }
  ]

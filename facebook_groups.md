@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-15T03:01:00+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-15T08:19:08+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (777)
+## Not yet probed (786)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -113,6 +113,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1332660857778965` (found via ddg)
 - `aiagentdevelopers` (found via ddg)
 - `aibusinesstools` (found via config)
+- `1057648599597645` (found via ddg)
 - `aientrepreneurcommunity` (found via ddg)
 - `askarobot` (found via ddg)
 - `694597369571714` (found via ddg)
@@ -120,6 +121,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `agencyshoptalk` (found via ddg)
 - `2059467967664033` (found via ddg)
 - `australiansmallbusinesowners` (found via ddg)
+- `saasautomationexpertszapierpabblymake` (found via ddg)
 - `1184176781736143` (found via ddg)
 - `279906104787742` (found via ddg)
 - `580118425856327` (found via ddg)
@@ -205,6 +207,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `StartupIndiaRework` (found via ddg)
 - `1715729438698600` (found via ddg)
 - `788415021554366` (found via ddg)
+- `system.automation.ai.agents.n8n.zapier.ifttt` (found via ddg)
 - `431791437242731` (found via ddg)
 - `337801441734030` (found via ddg)
 - `founderx` (found via ddg)
@@ -282,6 +285,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `464376085736538` (found via ddg)
 - `smallbiz.au` (found via ddg)
 - `aussbn` (found via ddg)
+- `1296525687812999` (found via ddg)
 - `bsbnetwork` (found via ddg)
 - `lawfirmlaunch2` (found via ddg)
 - `1082845185201887` (found via ddg)
@@ -333,6 +337,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `losangeles.california.startups` (found via ddg)
 - `constructionmanagementnetwork` (found via ddg)
 - `makeautomation` (found via config)
+- `674814754266297` (found via ddg)
 - `372340252597184` (found via ddg)
 - `1238541634521395` (found via ddg)
 - `manufacturingroboticsautomationusa` (found via ddg)
@@ -424,6 +429,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1149304996574074` (found via ddg)
 - `workfromhomeopportunities` (found via ddg)
 - `youngentrepreneurstt` (found via ddg)
+- `935208569212244` (found via ddg)
+- `zapier` (found via ddg)
 - `3201149406569173` (found via ddg)
 - `nodemation` (found via config)
 - `1353352829055394` (found via ddg)
@@ -734,6 +741,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `Dubaiexpat` (found via ddg)
 - `345613409204417` (found via ddg)
 - `founderscanada` (found via ddg)
+- `803297649286641` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
 - `918031175736092` (found via ddg)
 - `764877593708803` (found via ddg)
@@ -783,6 +791,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `900308687031185` (found via ddg)
 - `669886889110965` (found via ddg)
 - `wunderbuilders` (found via ddg)
+- `zapierusercommunity` (found via ddg)
 - `403307456733049` (found via ddg)
 - `4046763412236611` (found via ddg)
 - `511333728510695` (found via ddg)
