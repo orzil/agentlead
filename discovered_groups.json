@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-15T22:54:44+00:00",
- "count": 776,
+ "generated": "2026-09-16T01:10:38+00:00",
+ "count": 779,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1005,6 +1005,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1515615885689047",
+   "name": "AI For Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-16T01:10:37+00:00",
    "last_checked": null
   },
   {
@@ -2118,6 +2133,21 @@
    "last_checked": null
   },
   {
+   "slug": "aiprotools",
+   "name": "AI Tools for Entrepreneurs & Creators",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-16T01:10:37+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "all.ai.israel",
    "name": "AI Israel - בינה מלאכותית ישראל",
    "status": "pending",
@@ -2970,6 +3000,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-15T08:19:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "techutilitybelt",
+   "name": "AI Tools & Vibe Coding for Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-16T01:10:37+00:00",
    "last_checked": null
   },
   {
