@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-16T19:54:31+00:00",
- "count": 781,
+ "generated": "2026-09-16T22:45:00+00:00",
+ "count": 783,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5175,6 +5175,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-30T19:40:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "daycaredirectorsandowners",
+   "name": "Texas Child Care Directors and Owners",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-16T22:44:59+00:00",
    "last_checked": null
   },
   {
@@ -11445,6 +11460,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T05:24:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "texassemitrucksandtrailers",
+   "name": "Texas Semi Trucks and Trailers For Sale",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-16T22:44:59+00:00",
    "last_checked": null
   },
   {
