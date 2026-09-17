@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-17T08:18:58+00:00",
- "count": 792,
+ "generated": "2026-09-17T20:06:19+00:00",
+ "count": 793,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -9645,6 +9645,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:11:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "BusinessBusinessBusiness",
+   "name": "Business Business Business",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-17T10:23:20+00:00",
    "last_checked": null
   },
   {
