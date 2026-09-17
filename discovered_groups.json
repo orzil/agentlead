@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-17T03:00:26+00:00",
- "count": 790,
+ "generated": "2026-09-17T08:18:58+00:00",
+ "count": 792,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -10728,6 +10728,21 @@
    "last_checked": null
   },
   {
+   "slug": "gtapreneurs",
+   "name": "GTApreneurs Toronto Area Business Networking Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-17T08:18:57+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "gymownersbusinessdevelopment",
    "name": null,
    "status": "pending",
@@ -11655,6 +11670,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-09T19:38:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "torontocommunitygroup",
+   "name": "Toronto Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-17T08:18:57+00:00",
    "last_checked": null
   },
   {

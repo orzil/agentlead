@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-17T03:00:26+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-17T08:18:58+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (803)
+## Not yet probed (805)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -759,6 +759,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `founderscanada` (found via ddg)
 - `803297649286641` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
+- `gtapreneurs` (found via ddg)
 - `918031175736092` (found via ddg)
 - `764877593708803` (found via ddg)
 - `FindRemoteJobs` (found via ddg)
@@ -796,6 +797,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `180837768789806` (found via ddg)
 - `827453710776253` (found via ddg)
 - `thesouthafricanbusinessnetwork` (found via ddg)
+- `torontocommunitygroup` (found via ddg)
 - `toronto.entrepreneurs.startups` (found via ddg)
 - `TradieWives` (found via ddg)
 - `736631881894510` (found via ddg)
