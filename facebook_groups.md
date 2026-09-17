@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-16T22:45:00+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-17T00:54:54+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (796)
+## Not yet probed (800)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -165,6 +165,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `maopublic` (found via ddg)
 - `2978347045629927` (found via ddg)
 - `744604981439783` (found via ddg)
+- `nycbiz` (found via ddg)
 - `249737589133282` (found via ddg)
 - `1198024408768649` (found via ddg)
 - `341776853891812` (found via ddg)
@@ -356,9 +357,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `sleeksgcommunity` (found via ddg)
 - `nycstartup` (found via ddg)
 - `newyorkcity.newyork.startups` (found via ddg)
+- `nystartups` (found via ddg)
+- `2372937112835336` (found via ddg)
 - `NewZealandSmallBusinessOwnersNetworking` (found via ddg)
 - `newzealandbusinessowners` (found via ddg)
 - `nzsmallbusinessnetwork` (found via ddg)
+- `newyorkstartups` (found via ddg)
 - `profitablelawfirmowners` (found via ddg)
 - `promptengineeringmastermind` (found via ddg)
 - `inventivehub` (found via config)

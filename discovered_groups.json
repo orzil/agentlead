@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-16T22:45:00+00:00",
- "count": 783,
+ "generated": "2026-09-17T00:54:54+00:00",
+ "count": 787,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -2733,6 +2733,21 @@
    "last_checked": null
   },
   {
+   "slug": "nycbiz",
+   "name": "New York City Entrepreneurs, Startups and Business Minded!",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-17T00:54:53+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "outsourceitprojects",
    "name": "Outsource IT Projects",
    "status": "pending",
@@ -3735,6 +3750,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T19:00:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2372937112835336",
+   "name": "New York Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-17T00:54:53+00:00",
    "last_checked": null
   },
   {
@@ -5598,6 +5628,21 @@
    "last_checked": null
   },
   {
+   "slug": "newyorkstartups",
+   "name": "NewYorkStartups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-17T00:54:53+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "newzealandbusinessowners",
    "name": "New Zealand Business Owners Community",
    "status": "pending",
@@ -5625,6 +5670,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T02:22:48+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "nystartups",
+   "name": "New York Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-17T00:54:53+00:00",
    "last_checked": null
   },
   {
