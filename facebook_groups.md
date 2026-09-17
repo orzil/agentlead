@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-17T00:54:54+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-17T03:00:26+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (800)
+## Not yet probed (803)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -65,6 +65,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aiforsmallbusinessgrowth` (found via ddg)
 - `datin1` (found via ddg)
 - `810244532098547` (found via ddg)
+- `losangelesentrepreneursstartups` (found via ddg)
 - `startups.investors.entrepreneurs.mentors.founders` (found via ddg)
 - `289504808119115` (found via ddg)
 - `2004638959986462` (found via ddg)
@@ -80,6 +81,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `airealtorsandbusinessowners` (found via ddg)
 - `aiforbusinessownersandfounders` (found via ddg)
 - `148693034913710` (found via ddg)
+- `694872252765229` (found via ddg)
 - `542314903206706` (found via ddg)
 - `872702652095435` (found via ddg)
 - `2109860309355224` (found via ddg)
@@ -290,6 +292,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbiz.au` (found via ddg)
 - `aussbn` (found via ddg)
 - `1296525687812999` (found via ddg)
+- `startupnetwork` (found via ddg)
 - `bsbnetwork` (found via ddg)
 - `lawfirmlaunch2` (found via ddg)
 - `1082845185201887` (found via ddg)
