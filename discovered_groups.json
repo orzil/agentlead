@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-18T21:48:30+00:00",
- "count": 799,
+ "generated": "2026-09-18T23:59:33+00:00",
+ "count": 802,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1053,6 +1053,21 @@
    "last_checked": null
   },
   {
+   "slug": "1541377239216681",
+   "name": "דרושים - עבודות הייטק",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-18T23:59:30+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1681683688690553",
    "name": "Coaches, Consultants and Agency Owners",
    "status": "pending",
@@ -1893,6 +1908,21 @@
    "last_checked": null
   },
   {
+   "slug": "871195401675453",
+   "name": "דרושים מהנדסים | דרוש/ה מהנדס/ת אמבדד למח' תוכנה בפיתוח",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-18T23:59:30+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "893840601407320",
    "name": "Small Business Owners Network & Support | Thinking of ...",
    "status": "pending",
@@ -2655,6 +2685,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "israel.job.business",
+   "name": "לוח דרושים - הצעות עבודה ישראל",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-18T23:59:30+00:00",
    "last_checked": null
   },
   {

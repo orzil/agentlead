@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-18T21:48:30+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-18T23:59:33+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (812)
+## Not yet probed (815)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -249,9 +249,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `932457121284600` (found via ddg)
 - `ai.israel.official` (found via ddg)
 - `2920195654986279` (found via ddg)
+- `1541377239216681` (found via ddg)
 - `773870394547175` (found via ddg)
 - `hightechisrael` (found via ddg)
 - `671328720907753` (found via ddg)
+- `871195401675453` (found via ddg)
 - `1964357920826126` (found via ddg)
 - `1158393644223761` (found via ddg)
 - `493890216609239` (found via ddg)
@@ -261,6 +263,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `223303087850326` (found via ddg)
 - `freelancersautocadandmore` (found via ddg)
 - `aichatgptisrael` (found via ddg)
+- `israel.job.business` (found via ddg)
 - `cladue` (found via leads_db)
 - `israel.hightech` (found via ddg)
 - `147963012536297` (found via ddg)
