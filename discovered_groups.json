@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-17T22:51:35+00:00",
- "count": 795,
+ "generated": "2026-09-18T01:07:28+00:00",
+ "count": 796,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -2655,6 +2655,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "leanimpakt",
+   "name": "AI & Innovation Hub: Middle East & Africa Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-18T01:07:27+00:00",
    "last_checked": null
   },
   {
