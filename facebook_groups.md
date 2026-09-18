@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-18T19:28:48+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-18T21:48:30+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (811)
+## Not yet probed (812)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -261,6 +261,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `223303087850326` (found via ddg)
 - `freelancersautocadandmore` (found via ddg)
 - `aichatgptisrael` (found via ddg)
+- `cladue` (found via leads_db)
 - `israel.hightech` (found via ddg)
 - `147963012536297` (found via ddg)
 - `no.experience` (found via ddg)
@@ -485,6 +486,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1301121656949348` (found via ddg)
 - `707574362649616` (found via ddg)
 - `544976585999596` (found via ddg)
+- `303194433208716` (found via ddg)
 - `besmartphone.il` (found via ddg)
 - `807976829284427` (found via ddg)
 - `MobileAppFaq` (found via ddg)
@@ -726,7 +728,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `jobthaiwfh` (found via leads_db)
 - `815933868573559` (found via leads_db)
 - `holaeians` (found via leads_db)
-- `cladue` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)

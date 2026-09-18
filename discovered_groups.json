@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-18T19:28:48+00:00",
- "count": 798,
+ "generated": "2026-09-18T21:48:30+00:00",
+ "count": 799,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -2253,6 +2253,21 @@
    "last_checked": null
   },
   {
+   "slug": "cladue",
+   "name": "מחפש מפתח Full Stack / צוות פיתוח רציני לבניית מערכת SaaS מתקדמת בשם ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-16T09:07:47+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "convertordie",
    "name": "Digital Marketing Agency Owners",
    "status": "pending",
@@ -3960,6 +3975,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-03T23:51:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "303194433208716",
+   "name": "פיתוח",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-18T21:48:28+00:00",
    "last_checked": null
   },
   {
@@ -10410,21 +10440,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-10T07:35:04+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "cladue",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-09-16T09:07:47+00:00",
    "last_checked": null
   },
   {
