@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-19T19:14:14+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-19T21:29:10+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (815)
+## Not yet probed (820)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -263,8 +263,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `223303087850326` (found via ddg)
 - `freelancersautocadandmore` (found via ddg)
 - `aichatgptisrael` (found via ddg)
+- `joblist.co.il` (found via ddg)
 - `israel.job.business` (found via ddg)
 - `cladue` (found via leads_db)
+- `609641652802760` (found via ddg)
+- `500323936646268` (found via ddg)
 - `israel.hightech` (found via ddg)
 - `147963012536297` (found via ddg)
 - `no.experience` (found via ddg)
@@ -275,6 +278,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `developersmeetstartups` (found via config)
 - `828562470599993` (found via ddg)
 - `320942198348539` (found via ddg)
+- `776851981391261` (found via ddg)
 - `115698605766601` (found via ddg)
 - `1217610615947693` (found via ddg)
 - `506523693145809` (found via ddg)
@@ -485,6 +489,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `587640282883229` (found via ddg)
 - `1406771276210792` (found via ddg)
 - `giuson` (found via ddg)
+- `735395363138298` (found via ddg)
 - `israel.hitech.jobs` (found via ddg)
 - `1301121656949348` (found via ddg)
 - `707574362649616` (found via ddg)

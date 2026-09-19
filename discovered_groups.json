@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-19T19:14:14+00:00",
- "count": 802,
+ "generated": "2026-09-19T21:29:10+00:00",
+ "count": 807,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1668,6 +1668,21 @@
    "last_checked": null
   },
   {
+   "slug": "500323936646268",
+   "name": "משרות הייטק",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-19T21:29:08+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "506523693145809",
    "name": "קהילת היזמים של ישראל - Start A Startup",
    "status": "pending",
@@ -1755,6 +1770,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T00:59:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "609641652802760",
+   "name": "משרות בהייטק ובסטארט אפים- עם או בלי נסיון",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-19T21:29:08+00:00",
    "last_checked": null
   },
   {
@@ -1860,6 +1890,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T23:40:34+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "776851981391261",
+   "name": "פרילנסרים ומשרות פרילנס Jobonline",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-19T21:29:08+00:00",
    "last_checked": null
   },
   {
@@ -2715,6 +2760,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "joblist.co.il",
+   "name": "כל המשרות בהייטק, בלי מתווכים ובלי חברות השמה",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-19T21:29:08+00:00",
    "last_checked": null
   },
   {
@@ -4560,6 +4620,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T21:00:06+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "735395363138298",
+   "name": "משרות היי-טק בישראל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-19T21:29:08+00:00",
    "last_checked": null
   },
   {
