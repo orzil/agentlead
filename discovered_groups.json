@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-19T21:29:10+00:00",
- "count": 807,
+ "generated": "2026-09-19T23:30:41+00:00",
+ "count": 809,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -8538,6 +8538,21 @@
    "last_checked": null
   },
   {
+   "slug": "404280159946930",
+   "name": "App Developers Community group",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-19T23:30:40+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "4046763412236611",
    "name": "n8n",
    "status": "pending",
@@ -10740,6 +10755,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-08T19:48:37+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "dataengineeringpilipinas",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-19T23:30:13+00:00",
    "last_checked": null
   },
   {
