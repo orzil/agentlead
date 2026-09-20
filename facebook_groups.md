@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-19T23:30:41+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-20T01:36:45+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (822)
+## Not yet probed (823)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -156,6 +156,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `gohighlevelagencyowners` (found via ddg)
 - `2709340372800064` (found via ddg)
 - `needwebsitedesignerordeveloper` (found via leads_db)
+- `616668068847832` (found via ddg)
 - `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
 - `ITprojectOutsourcing` (found via ddg)
 - `indianstartupinvestor` (found via ddg)
