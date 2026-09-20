@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-20T08:14:06+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-20T19:18:24+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (823)
+## Not yet probed (825)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -192,6 +192,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `SaaSFounders` (found via ddg)
 - `saasfoundergroup` (found via ddg)
 - `sfenetworks` (found via ddg)
+- `2044902829088090` (found via ddg)
 - `1851637745054222` (found via ddg)
 - `1017920189630354` (found via ddg)
 - `580487328806681` (found via ddg)
@@ -399,6 +400,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `Entrepreneur.Singapore` (found via ddg)
 - `573743181403219` (found via ddg)
 - `789382672475266` (found via ddg)
+- `saasgroup` (found via ddg)
 - `sanfrancisco.california.startups` (found via ddg)
 - `ScooterOwnersTechTalk` (found via ddg)
 - `1456978909319021` (found via ddg)
