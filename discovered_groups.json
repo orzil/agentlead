@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-21T02:56:17+00:00",
- "count": 812,
+ "generated": "2026-09-21T08:30:11+00:00",
+ "count": 817,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5298,6 +5298,21 @@
    "last_checked": null
   },
   {
+   "slug": "beaconfidententrepreneur",
+   "name": "BE A CONFIDENT ENTREPRENEUR: Get Visible",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T08:30:09+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "besmartphone.il",
    "name": "פיתוח אפליקציות",
    "status": "pending",
@@ -5478,6 +5493,21 @@
    "last_checked": null
   },
   {
+   "slug": "entrepreneurA1",
+   "name": "Entrepreneur",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T08:30:09+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "entrepreneurs.israel",
    "name": "יזמים למען יזמים",
    "status": "pending",
@@ -5490,6 +5520,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T17:32:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "entrepreneursletsbuildtogether",
+   "name": "Entrepreneurs - Lets build together",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T08:30:09+00:00",
    "last_checked": null
   },
   {
@@ -5655,6 +5700,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T03:24:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "jobberentrepreneurshipgroup",
+   "name": "Jobber Entrepreneurship Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T08:30:09+00:00",
    "last_checked": null
   },
   {
@@ -6465,6 +6525,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T22:10:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "thedrivenentrepreneurs",
+   "name": "Driven Entrepreneurs",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T08:30:09+00:00",
    "last_checked": null
   },
   {

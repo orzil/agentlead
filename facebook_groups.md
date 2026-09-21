@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-21T02:56:17+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-21T08:30:11+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (825)
+## Not yet probed (830)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -304,6 +304,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbiz.au` (found via ddg)
 - `aussbn` (found via ddg)
 - `1296525687812999` (found via ddg)
+- `beaconfidententrepreneur` (found via ddg)
 - `startupnetwork` (found via ddg)
 - `bsbnetwork` (found via ddg)
 - `lawfirmlaunch2` (found via ddg)
@@ -328,10 +329,13 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `practiceowners` (found via ddg)
 - `sandtracks` (found via ddg)
 - `remoteworkforce` (found via ddg)
+- `thedrivenentrepreneurs` (found via ddg)
 - `490880091107538` (found via ddg)
 - `dublin.ireland.startups` (found via ddg)
 - `2687952944937992` (found via ddg)
+- `entrepreneurA1` (found via ddg)
 - `386218954793964` (found via ddg)
+- `entrepreneursletsbuildtogether` (found via ddg)
 - `165114167522089` (found via ddg)
 - `1ib.marioschaefer.032` (found via ddg)
 - `222801067848068` (found via ddg)
@@ -349,6 +353,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `indiastartups` (found via ddg)
 - `IndiaStartup` (found via ddg)
 - `1516479358394352` (found via ddg)
+- `jobberentrepreneurshipgroup` (found via ddg)
 - `lawfirmownersandtechnology` (found via ddg)
 - `lawfirmandcpaownerscommunity` (found via ddg)
 - `666726999839356` (found via ddg)
