@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-21T08:30:11+00:00",
- "count": 817,
+ "generated": "2026-09-21T20:52:50+00:00",
+ "count": 839,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -15,7 +15,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-09-14T09:33:29+00:00"
+   "last_checked": "2026-09-21T09:33:35+00:00"
   },
   {
    "slug": "352958686292104",
@@ -45,7 +45,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-09-14T09:33:56+00:00"
+   "last_checked": "2026-09-21T09:34:03+00:00"
   },
   {
    "slug": "1162970365658943",
@@ -6888,6 +6888,21 @@
    "last_checked": null
   },
   {
+   "slug": "1117064764178434",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1164103449222930",
    "name": "AMAZON FBA SELLERS COMMUNITY",
    "status": "pending",
@@ -6900,6 +6915,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T03:08:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1175215996281155",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:28+00:00",
    "last_checked": null
   },
   {
@@ -7248,6 +7278,36 @@
    "last_checked": null
   },
   {
+   "slug": "145292372178634",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1459253484639361",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:28+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1460476385552503",
    "name": "USA Coaches and Consultants Community",
    "status": "pending",
@@ -7425,6 +7485,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1555927857956283",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:27+00:00",
    "last_checked": null
   },
   {
@@ -7938,6 +8013,21 @@
    "last_checked": null
   },
   {
+   "slug": "2139069156824041",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2164775837065884",
    "name": null,
    "status": "pending",
@@ -8118,6 +8208,21 @@
    "last_checked": null
   },
   {
+   "slug": "25552908900",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "262947785476285",
    "name": null,
    "status": "pending",
@@ -8145,6 +8250,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "268701551910212",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:27+00:00",
    "last_checked": null
   },
   {
@@ -8418,6 +8538,21 @@
    "last_checked": null
   },
   {
+   "slug": "315938570542151",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:28+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "318547103365148",
    "name": "בעלי עסקים לומדים שיווק דיגיטלי",
    "status": "pending",
@@ -8475,6 +8610,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "332560022093298",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T11:08:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "332918451469185",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T20:46:04+00:00",
    "last_checked": null
   },
   {
@@ -9183,6 +9348,21 @@
    "last_checked": null
   },
   {
+   "slug": "579588069570295",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:28+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "583747136680302",
    "name": null,
    "status": "pending",
@@ -9648,6 +9828,21 @@
    "last_checked": null
   },
   {
+   "slug": "764913790306932",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:28+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "769532467624616",
    "name": null,
    "status": "pending",
@@ -9993,6 +10188,21 @@
    "last_checked": null
   },
   {
+   "slug": "983307256151947",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:28+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "BusinessBusinessBusiness",
    "name": "Business Business Business",
    "status": "pending",
@@ -10113,6 +10323,21 @@
    "last_checked": null
   },
   {
+   "slug": "I9150",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:28+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "IndiansInAmericaGroup",
    "name": null,
    "status": "pending",
@@ -10125,6 +10350,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:57:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "Insta360OneCommunity",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:33:14+00:00",
    "last_checked": null
   },
   {
@@ -10530,6 +10770,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-07T08:50:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "bet88.ph",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:27+00:00",
    "last_checked": null
   },
   {
@@ -10998,6 +11253,21 @@
    "last_checked": null
   },
   {
+   "slug": "fohbp",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "founderscanada",
    "name": "Facebook",
    "status": "pending",
@@ -11055,6 +11325,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-14T09:33:08+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "frumkvodlar",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:33:14+00:00",
    "last_checked": null
   },
   {
@@ -11298,6 +11583,21 @@
    "last_checked": null
   },
   {
+   "slug": "magicarenamtg",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:30:28+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "manitobaghostmesh",
    "name": null,
    "status": "pending",
@@ -11460,6 +11760,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:32:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "noisefloorav",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:33:14+00:00",
    "last_checked": null
   },
   {
@@ -12240,6 +12555,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-13T19:07:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "youngprofessionalsofstlouis",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-21T09:33:14+00:00",
    "last_checked": null
   },
   {

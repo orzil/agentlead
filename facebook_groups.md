@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-21T08:30:11+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-21T20:52:50+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (830)
+## Not yet probed (852)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -745,6 +745,28 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `815933868573559` (found via leads_db)
 - `holaeians` (found via leads_db)
 - `dataengineeringpilipinas` (found via leads_db)
+- `25552908900` (found via reddit_search)
+- `1117064764178434` (found via reddit_search)
+- `bet88.ph` (found via reddit_search)
+- `1555927857956283` (found via reddit_search)
+- `fohbp` (found via reddit_search)
+- `2139069156824041` (found via reddit_search)
+- `268701551910212` (found via reddit_search)
+- `764913790306932` (found via reddit_search)
+- `I9150` (found via reddit_search)
+- `magicarenamtg` (found via reddit_search)
+- `1175215996281155` (found via reddit_search)
+- `1459253484639361` (found via reddit_search)
+- `315938570542151` (found via reddit_search)
+- `983307256151947` (found via reddit_search)
+- `145292372178634` (found via reddit_search)
+- `579588069570295` (found via reddit_search)
+- `noisefloorav` (found via reddit_search)
+- `youngprofessionalsofstlouis` (found via reddit_search)
+- `frumkvodlar` (found via reddit_search)
+- `Insta360OneCommunity` (found via reddit_search)
+- `332560022093298` (found via leads_db)
+- `332918451469185` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
