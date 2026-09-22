@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-22T08:10:46+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-22T20:07:41+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (856)
+## Not yet probed (859)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -439,6 +439,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupeurope` (found via ddg)
 - `StartupEuropeClub` (found via ddg)
 - `StartupIrelandClub` (found via ddg)
+- `startupincanada` (found via ddg)
 - `startupfrat` (found via ddg)
 - `1830732491194053` (found via ddg)
 - `CanadaStartup` (found via ddg)
@@ -770,6 +771,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `Insta360OneCommunity` (found via reddit_search)
 - `332560022093298` (found via leads_db)
 - `332918451469185` (found via leads_db)
+- `752790164383176` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -809,6 +811,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
 - `gtapreneurs` (found via ddg)
 - `918031175736092` (found via ddg)
+- `575563373744118` (found via ddg)
 - `764877593708803` (found via ddg)
 - `FindRemoteJobs` (found via ddg)
 - `7761445099` (found via ddg)
