@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-21T23:55:47+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-22T02:56:41+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (852)
+## Not yet probed (856)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -85,6 +85,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `542314903206706` (found via ddg)
 - `872702652095435` (found via ddg)
 - `2109860309355224` (found via ddg)
+- `e4nepal` (found via ddg)
 - `freelanceoutsourcingprojects` (found via ddg)
 - `2133987156657804` (found via config)
 - `1418563452142232` (found via ddg)
@@ -128,6 +129,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2059467967664033` (found via ddg)
 - `australiansmallbusinesowners` (found via ddg)
 - `saasautomationexpertszapierpabblymake` (found via ddg)
+- `560810556893848` (found via ddg)
 - `1184176781736143` (found via ddg)
 - `279906104787742` (found via ddg)
 - `580118425856327` (found via ddg)
@@ -176,6 +178,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `375928432886491` (found via ddg)
 - `2254265064668702` (found via ddg)
 - `outsourceitprojects` (found via ddg)
+- `1674526216166974` (found via ddg)
 - `103362243079109` (found via ddg)
 - `agencyownerlab` (found via ddg)
 - `1738599183094782` (found via ddg)
@@ -808,6 +811,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `918031175736092` (found via ddg)
 - `764877593708803` (found via ddg)
 - `FindRemoteJobs` (found via ddg)
+- `7761445099` (found via ddg)
 - `1050679009595609` (found via ddg)
 - `lawfirmowners` (found via ddg)
 - `1598268047627604` (found via ddg)

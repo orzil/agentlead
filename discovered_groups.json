@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-21T23:55:47+00:00",
- "count": 839,
+ "generated": "2026-09-22T02:56:41+00:00",
+ "count": 843,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -708,6 +708,21 @@
    "last_checked": null
   },
   {
+   "slug": "e4nepal",
+   "name": "Entrepreneurs for Nepal | How to get clients for software outsourcing ...",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-22T02:00:03+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "freelanceoutsourcingprojects",
    "name": "Freelance & Outsourcing Projects | Upwork | Fiverr",
    "status": "pending",
@@ -1065,6 +1080,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-18T23:59:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1674526216166974",
+   "name": "Outsourcing Non-Voice Projects",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-22T02:00:03+00:00",
    "last_checked": null
   },
   {
@@ -1725,6 +1755,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T18:58:24+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "560810556893848",
+   "name": "BPO Project Outsourcing",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-22T02:00:03+00:00",
    "last_checked": null
   },
   {
@@ -9855,6 +9900,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "7761445099",
+   "name": "Icreon Communications Pvt. Ltd.",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-22T02:00:03+00:00",
    "last_checked": null
   },
   {
