@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-23T08:13:04+00:00",
- "count": 846,
+ "generated": "2026-09-23T20:02:44+00:00",
+ "count": 850,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -855,6 +855,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-15T08:19:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1143155100957548",
+   "name": "Small Business Owners South- Africa",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-23T09:09:05+00:00",
    "last_checked": null
   },
   {
@@ -8673,6 +8688,21 @@
    "last_checked": null
   },
   {
+   "slug": "332087790866175",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-23T09:09:06+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "332560022093298",
    "name": null,
    "status": "pending",
@@ -10563,6 +10593,21 @@
    "last_checked": null
   },
   {
+   "slug": "MyBayutArabic",
+   "name": "ماي بيوت",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-23T20:02:42+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "OzComicConPhotoFind",
    "name": null,
    "status": "pending",
@@ -10605,6 +10650,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T17:23:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "SABusinessHub",
+   "name": "South African Business Hub",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-23T09:09:05+00:00",
    "last_checked": null
   },
   {

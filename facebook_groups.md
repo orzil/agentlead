@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-23T08:13:04+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-23T20:02:44+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (859)
+## Not yet probed (863)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -202,6 +202,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbusinessownercommunityuk` (found via ddg)
 - `893840601407320` (found via ddg)
 - `smallbusinessownersnetworkusa` (found via ddg)
+- `1143155100957548` (found via ddg)
 - `3418202234922142` (found via ddg)
 - `312322538374187` (found via ddg)
 - `1479200462154545` (found via ddg)
@@ -772,6 +773,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `332560022093298` (found via leads_db)
 - `332918451469185` (found via leads_db)
 - `752790164383176` (found via leads_db)
+- `332087790866175` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -838,6 +840,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `shopifydropshippinghelps` (found via ddg)
 - `439779113936650` (found via ddg)
 - `southafricanbusiness` (found via ddg)
+- `SABusinessHub` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
 - `1435491713362512` (found via ddg)
 - `SuppliersManufacturers` (found via ddg)
@@ -873,6 +876,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `n8nuser` (found via ddg)
 - `713796017872177` (found via ddg)
 - `1019246362418093` (found via ddg)
+- `MyBayutArabic` (found via ddg)
 - `ig.israel` (found via ddg)
 - `ani.shulman` (found via ddg)
 - `386010697745869` (found via ddg)
