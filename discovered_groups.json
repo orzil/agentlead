@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-24T23:19:05+00:00",
- "count": 850,
+ "generated": "2026-09-25T01:58:12+00:00",
+ "count": 852,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -7923,6 +7923,21 @@
    "last_checked": null
   },
   {
+   "slug": "1911133942442554",
+   "name": "שיווק דיגיטלי בישראל - הקבוצה הרשמית",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-25T00:17:09+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1939823652922686",
    "name": null,
    "status": "pending",
@@ -10845,6 +10860,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:32:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "androidil",
+   "name": "אנדרואיד ישראל - Android Israel",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-25T01:58:10+00:00",
    "last_checked": null
   },
   {
