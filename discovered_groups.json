@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-25T08:27:58+00:00",
- "count": 852,
+ "generated": "2026-09-25T20:29:41+00:00",
+ "count": 856,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -6993,6 +6993,21 @@
    "last_checked": null
   },
   {
+   "slug": "1170770881280670",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-25T09:19:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1175215996281155",
    "name": null,
    "status": "pending",
@@ -7245,6 +7260,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1390724241690012",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-25T10:35:24+00:00",
    "last_checked": null
   },
   {
@@ -8478,6 +8508,21 @@
    "last_checked": null
   },
   {
+   "slug": "285261571285922",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-25T09:19:58+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "288970654518121",
    "name": null,
    "status": "pending",
@@ -9540,6 +9585,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "621793922408283",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-25T16:10:49+00:00",
    "last_checked": null
   },
   {
