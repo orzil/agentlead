@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-26T02:02:19+00:00",
- "count": 860,
+ "generated": "2026-09-26T03:07:49+00:00",
+ "count": 861,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -12720,6 +12720,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T20:32:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "uehinternshipandcareer",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-26T03:07:49+00:00",
    "last_checked": null
   },
   {
