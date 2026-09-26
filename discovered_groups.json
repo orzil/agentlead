@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-26T08:14:55+00:00",
- "count": 861,
+ "generated": "2026-09-26T19:36:40+00:00",
+ "count": 863,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -7053,6 +7053,21 @@
    "last_checked": null
   },
   {
+   "slug": "1224465495385964",
+   "name": "Medical Practice Management Forum",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-26T19:36:38+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1234027487916127",
    "name": "Shopify Dropshipping",
    "status": "pending",
@@ -9360,6 +9375,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-29T19:47:34+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "537018231596738",
+   "name": "Practice Manager Support & Networking Group (Medical / Dental)",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-26T19:36:38+00:00",
    "last_checked": null
   },
   {
