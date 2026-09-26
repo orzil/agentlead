@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-25T23:26:20+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-26T02:02:19+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (869)
+## Not yet probed (873)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -782,13 +782,16 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
 - `ase12.ro` (found via ddg)
+- `amznsellers` (found via ddg)
 - `fbacommunity` (found via ddg)
 - `1582392532791911` (found via ddg)
 - `748375581363810` (found via ddg)
 - `4498586473758518` (found via ddg)
 - `851415561261142` (found via ddg)
+- `amazonfbatoday` (found via ddg)
 - `1727446317476806` (found via ddg)
 - `1002630209124759` (found via ddg)
+- `amazonfba` (found via ddg)
 - `404280159946930` (found via ddg)
 - `661035522370697` (found via ddg)
 - `britsindubai` (found via ddg)
@@ -831,6 +834,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `n8ncommunity` (found via ddg)
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
+- `sellershustle` (found via ddg)
 - `131710772378400` (found via ddg)
 - `peopleofcleburnetexas` (found via ddg)
 - `PracticeManagersNetwork` (found via ddg)

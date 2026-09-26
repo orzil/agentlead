@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-25T23:26:20+00:00",
- "count": 856,
+ "generated": "2026-09-26T02:02:19+00:00",
+ "count": 860,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -10923,6 +10923,51 @@
    "last_checked": null
   },
   {
+   "slug": "amazonfba",
+   "name": "Amazon Fulfillment FBA Sellers",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-26T02:02:17+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "amazonfbatoday",
+   "name": "Amazon FBA Today",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-26T02:02:17+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "amznsellers",
+   "name": "Amazon FBA Sellers",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-26T02:02:17+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "androidil",
    "name": "אנדרואיד ישראל - Android Israel",
    "status": "pending",
@@ -12330,6 +12375,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "sellershustle",
+   "name": "Online Selling - Arbitrage Leads, Discussion, Advice",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-26T02:02:17+00:00",
    "last_checked": null
   },
   {
