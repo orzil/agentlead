@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-27T03:14:02+00:00",
- "count": 863,
+ "generated": "2026-09-27T08:52:01+00:00",
+ "count": 864,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -12285,6 +12285,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-29T09:40:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "proyectosfreelance",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-27T07:07:25+00:00",
    "last_checked": null
   },
   {
