@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-27T08:52:01+00:00",
- "count": 864,
+ "generated": "2026-09-27T20:07:39+00:00",
+ "count": 866,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -195,6 +195,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T02:15:02+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1149887430103695",
+   "name": "Digital Marketing Agency Owners - Help, Hiring & Support",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-27T20:07:37+00:00",
    "last_checked": null
   },
   {
@@ -5205,6 +5220,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T22:10:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "agencysuccess",
+   "name": "Digital Marketing Agency Success",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-27T20:07:37+00:00",
    "last_checked": null
   },
   {
