@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-28T09:16:21+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-28T22:27:09+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (882)
+## Not yet probed (901)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -159,6 +159,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `gohighlevelagencyowners` (found via ddg)
 - `2709340372800064` (found via ddg)
 - `needwebsitedesignerordeveloper` (found via leads_db)
+- `903983456080142` (found via ddg)
 - `616668068847832` (found via ddg)
 - `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
 - `ITprojectOutsourcing` (found via ddg)
@@ -172,6 +173,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `maopublic` (found via ddg)
 - `2978347045629927` (found via ddg)
 - `744604981439783` (found via ddg)
+- `503614587414188` (found via leads_db)
 - `nycbiz` (found via ddg)
 - `249737589133282` (found via ddg)
 - `1198024408768649` (found via ddg)
@@ -223,6 +225,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1715729438698600` (found via ddg)
 - `788415021554366` (found via ddg)
 - `system.automation.ai.agents.n8n.zapier.ifttt` (found via ddg)
+- `906542717775708` (found via ddg)
 - `431791437242731` (found via ddg)
 - `337801441734030` (found via ddg)
 - `founderx` (found via ddg)
@@ -546,7 +549,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `webdeveloperinusa` (found via leads_db)
 - `mlban` (found via leads_db)
 - `729387837515551` (found via leads_db)
-- `503614587414188` (found via leads_db)
 - `272406020993069` (found via leads_db)
 - `hellojewishgen` (found via leads_db)
 - `sideshow` (found via reddit_search)
@@ -785,6 +787,23 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `313109370899772` (found via leads_db)
 - `457738168714821` (found via leads_db)
 - `geneabloggers` (found via leads_db)
+- `2143642315947844` (found via reddit_search)
+- `504916057784510` (found via reddit_search)
+- `821237393064990` (found via reddit_search)
+- `177674839311967` (found via reddit_search)
+- `1895304380717970` (found via reddit_search)
+- `3144211759103167` (found via reddit_search)
+- `maximalistdesigndecor` (found via reddit_search)
+- `318184841060423` (found via reddit_search)
+- `lakeatitlanguatemalatravel` (found via reddit_search)
+- `vectrex` (found via reddit_search)
+- `688512479783851` (found via reddit_search)
+- `1105046720116682` (found via reddit_search)
+- `2039173323070017` (found via reddit_search)
+- `28474758345515903` (found via reddit_search)
+- `aliexpresspromocodecanada` (found via reddit_search)
+- `198151805717094` (found via reddit_search)
+- `672457250069762` (found via reddit_search)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)

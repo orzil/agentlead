@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-28T09:16:21+00:00",
- "count": 869,
+ "generated": "2026-09-28T22:27:09+00:00",
+ "count": 888,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -15,7 +15,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-09-21T09:33:35+00:00"
+   "last_checked": "2026-09-28T10:14:28+00:00"
   },
   {
    "slug": "352958686292104",
@@ -45,7 +45,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-09-21T09:34:03+00:00"
+   "last_checked": "2026-09-28T10:14:55+00:00"
   },
   {
    "slug": "1162970365658943",
@@ -1758,6 +1758,21 @@
    "last_checked": null
   },
   {
+   "slug": "503614587414188",
+   "name": "Need a web developer with minimum budget",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-08-22T21:00:44+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "506523693145809",
    "name": "קהילת היזמים של ישראל - Start A Startup",
    "status": "pending",
@@ -2085,6 +2100,36 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T19:04:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "903983456080142",
+   "name": "I Need a Website Designer Web Developer",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:14:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "906542717775708",
+   "name": "THINKAIWORKS AI AUTOMATION (N8N,Zapier,Make,Mindstudio)",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T22:27:08+00:00",
    "last_checked": null
   },
   {
@@ -6978,6 +7023,21 @@
    "last_checked": null
   },
   {
+   "slug": "1105046720116682",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1113888262911892",
    "name": null,
    "status": "pending",
@@ -7893,6 +7953,21 @@
    "last_checked": null
   },
   {
+   "slug": "177674839311967",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "17wBZ9RP4w",
    "name": null,
    "status": "pending",
@@ -7950,6 +8025,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-29T15:59:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1895304380717970",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
    "last_checked": null
   },
   {
@@ -8043,6 +8133,21 @@
    "last_checked": null
   },
   {
+   "slug": "198151805717094",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:14:07+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2027283744084631",
    "name": null,
    "status": "pending",
@@ -8070,6 +8175,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-14T09:33:08+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2039173323070017",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:12:29+00:00",
    "last_checked": null
   },
   {
@@ -8190,6 +8310,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-21T09:30:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2143642315947844",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
    "last_checked": null
   },
   {
@@ -8538,6 +8673,21 @@
    "last_checked": null
   },
   {
+   "slug": "28474758345515903",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:12:29+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "284839226619755",
    "name": null,
    "status": "pending",
@@ -8718,6 +8868,21 @@
    "last_checked": null
   },
   {
+   "slug": "3144211759103167",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "3152230525105772",
    "name": null,
    "status": "pending",
@@ -8745,6 +8910,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-21T09:30:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "318184841060423",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
    "last_checked": null
   },
   {
@@ -9288,21 +9468,6 @@
    "last_checked": null
   },
   {
-   "slug": "503614587414188",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-08-22T21:00:44+00:00",
-   "last_checked": null
-  },
-  {
    "slug": "504570968180680",
    "name": null,
    "status": "pending",
@@ -9315,6 +9480,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T04:23:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "504916057784510",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
    "last_checked": null
   },
   {
@@ -9783,6 +9963,21 @@
    "last_checked": null
   },
   {
+   "slug": "672457250069762",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:14:07+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "688006048306297",
    "name": "The Freedom Lifestyle Network",
    "status": "pending",
@@ -9795,6 +9990,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-26T05:15:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "688512479783851",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
    "last_checked": null
   },
   {
@@ -10260,6 +10470,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-15T20:03:01+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "821237393064990",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
    "last_checked": null
   },
   {
@@ -11010,6 +11235,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:32:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aliexpresspromocodecanada",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:14:07+00:00",
    "last_checked": null
   },
   {
@@ -11928,6 +12168,21 @@
    "last_checked": null
   },
   {
+   "slug": "lakeatitlanguatemalatravel",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "lawfirmowners",
    "name": "Law Firm Digital Strategies",
    "status": "pending",
@@ -12030,6 +12285,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:32:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "maximalistdesigndecor",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
    "last_checked": null
   },
   {
@@ -12900,6 +13170,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T04:31:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "vectrex",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T10:11:20+00:00",
    "last_checked": null
   },
   {
