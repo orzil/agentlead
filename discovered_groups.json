@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-28T01:32:19+00:00",
- "count": 866,
+ "generated": "2026-09-28T03:10:54+00:00",
+ "count": 869,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -8643,6 +8643,21 @@
    "last_checked": null
   },
   {
+   "slug": "313109370899772",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T03:10:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "313682202336332",
    "name": "Remote Work Opportunities",
    "status": "pending",
@@ -9165,6 +9180,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-04T19:20:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "457738168714821",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T03:10:54+00:00",
    "last_checked": null
   },
   {
@@ -11715,6 +11745,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-02T10:02:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "geneabloggers",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-28T03:10:54+00:00",
    "last_checked": null
   },
   {
