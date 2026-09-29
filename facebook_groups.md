@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-29T09:23:54+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-29T21:18:27+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (908)
+## Not yet probed (909)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -808,6 +808,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aliexpresspromocodecanada` (found via reddit_search)
 - `198151805717094` (found via reddit_search)
 - `672457250069762` (found via reddit_search)
+- `3713257505354941` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
