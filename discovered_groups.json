@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-29T03:48:53+00:00",
- "count": 894,
+ "generated": "2026-09-29T09:23:54+00:00",
+ "count": 895,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -90,6 +90,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-06T07:18:37+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "359828897763788",
+   "name": "AI & Automations for Business Owners & Entrepreneurs (ChatGPT and more)",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-29T09:23:53+00:00",
    "last_checked": null
   },
   {
