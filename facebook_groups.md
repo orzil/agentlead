@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-09-28T22:27:09+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-09-29T02:14:09+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (901)
+## Not yet probed (907)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -295,6 +295,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1119683669324970` (found via ddg)
 - `aiagentsforbusiness` (found via ddg)
 - `chatgptpromptsandaitools` (found via ddg)
+- `aieducatortools` (found via ddg)
 - `aifire.co` (found via ddg)
 - `aiprompthouse` (found via ddg)
 - `aiforconstructioncompanies` (found via ddg)
@@ -328,6 +329,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `810698363860855` (found via ddg)
 - `chatgptandaiforlawfirms` (found via ddg)
 - `881330171044518` (found via ddg)
+- `1576900073381388` (found via ddg)
 - `coachesplaybook` (found via ddg)
 - `ComputerVisionGroup` (found via config)
 - `1089592466188735` (found via ddg)
@@ -356,6 +358,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `findingsuvfounders` (found via ddg)
 - `gamedev` (found via ddg)
 - `588730763335326` (found via ddg)
+- `525026358915707` (found via ddg)
 - `1100802378915693` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `307912236406923` (found via ddg)
@@ -826,7 +829,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `businessinuk` (found via ddg)
 - `1429763737480567` (found via ddg)
 - `agencysaaslaunch` (found via ddg)
+- `869864385574175` (found via ddg)
 - `272952645069089` (found via ddg)
+- `chatgpt` (found via ddg)
 - `claudeprompts` (found via ddg)
 - `1698653417237262` (found via ddg)
 - `coaches.consultants` (found via ddg)
@@ -884,6 +889,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `TechForTechs` (found via ddg)
 - `texassemitrucksandtrailers` (found via ddg)
 - `190482421294295` (found via ddg)
+- `buildxact` (found via ddg)
 - `688006048306297` (found via ddg)
 - `232125487923966` (found via ddg)
 - `180837768789806` (found via ddg)
