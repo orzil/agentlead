@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-30T09:15:22+00:00",
- "count": 896,
+ "generated": "2026-09-30T21:19:01+00:00",
+ "count": 897,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3180,6 +3180,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-26T00:06:31+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "sandiegoleanstartups",
+   "name": "San Diego Tech Founders - Lean Startup Group",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-30T21:19:00+00:00",
    "last_checked": null
   },
   {
