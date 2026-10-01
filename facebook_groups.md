@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-01T03:42:48+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-01T09:41:49+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (911)
+## Not yet probed (919)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -356,6 +356,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `findyourcofounder` (found via config)
 - `RosenbergMeansBusiness` (found via ddg)
 - `Founder.CEOs` (found via config)
+- `foundersnetwork` (found via ddg)
 - `foundersspace` (found via config)
 - `findingsuvfounders` (found via ddg)
 - `gamedev` (found via ddg)
@@ -449,9 +450,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupcaliforniaclub` (found via ddg)
 - `startupeurope` (found via ddg)
 - `StartupEuropeClub` (found via ddg)
+- `242109094001690` (found via ddg)
 - `StartupIrelandClub` (found via ddg)
 - `startupincanada` (found via ddg)
 - `startupfrat` (found via ddg)
+- `startupsbusinessind` (found via ddg)
 - `1830732491194053` (found via ddg)
 - `CanadaStartup` (found via ddg)
 - `techstartupukireland` (found via ddg)
@@ -810,6 +813,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `198151805717094` (found via reddit_search)
 - `672457250069762` (found via reddit_search)
 - `3713257505354941` (found via leads_db)
+- `dockerkubernetes` (found via leads_db)
+- `lowvoltagenation` (found via leads_db)
+- `Portfolio9` (found via leads_db)
+- `news2morrow` (found via leads_db)
+- `interninbd` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
