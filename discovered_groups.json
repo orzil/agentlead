@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-01T09:41:49+00:00",
- "count": 906,
+ "generated": "2026-10-01T21:39:58+00:00",
+ "count": 908,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -7368,6 +7368,21 @@
    "last_checked": null
   },
   {
+   "slug": "1308592003753789",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-01T11:59:42+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1308879656987184",
    "name": "ישראל עסקים",
    "status": "pending",
@@ -7830,6 +7845,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-21T09:30:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1565114961444047",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-01T11:59:42+00:00",
    "last_checked": null
   },
   {
