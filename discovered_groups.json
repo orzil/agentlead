@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-02T09:16:13+00:00",
- "count": 908,
+ "generated": "2026-10-02T21:13:32+00:00",
+ "count": 913,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1038,6 +1038,21 @@
    "last_checked": null
   },
   {
+   "slug": "135076620458861",
+   "name": "דרושים הייטק, תקשורת System | Help Desk | IT - אבטחת מידע, סייבר",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-02T21:13:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1362385213926016",
    "name": "Digital Agency Owners Community | Helping agencies grow and scale",
    "status": "pending",
@@ -1395,6 +1410,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-09T02:41:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2323579111384503",
+   "name": "דרושים בכל הארץ | מרכז המשרות של ישראל",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-02T21:13:31+00:00",
    "last_checked": null
   },
   {
@@ -5718,6 +5748,21 @@
    "last_checked": null
   },
   {
+   "slug": "ellersmisrot",
+   "name": "דרושים מהנדס/הנדסאי/בניה/תוכנה/חשמל/מכונות/איכות/תעשיה וניהול ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-02T21:13:31+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "entrepreneurA1",
    "name": "Entrepreneur",
    "status": "pending",
@@ -7035,6 +7080,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-06T18:56:34+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1025345130878473",
+   "name": "Bubbles IQ",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-02T21:13:31+00:00",
    "last_checked": null
   },
   {
@@ -9750,6 +9810,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "527371684110657",
+   "name": "קהילת בודקי תוכנה (QA) בישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-02T21:13:31+00:00",
    "last_checked": null
   },
   {

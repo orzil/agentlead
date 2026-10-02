@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-02T09:16:13+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-02T21:13:32+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (921)
+## Not yet probed (926)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -263,8 +263,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2920195654986279` (found via ddg)
 - `1541377239216681` (found via ddg)
 - `773870394547175` (found via ddg)
+- `2323579111384503` (found via ddg)
 - `hightechisrael` (found via ddg)
 - `671328720907753` (found via ddg)
+- `135076620458861` (found via ddg)
 - `871195401675453` (found via ddg)
 - `1964357920826126` (found via ddg)
 - `1158393644223761` (found via ddg)
@@ -500,6 +502,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `Software.Developers.Israel` (found via ddg)
 - `5440649196012252` (found via ddg)
 - `705061861437260` (found via ddg)
+- `ellersmisrot` (found via ddg)
 - `looking4developer` (found via ddg)
 - `1174154780210185` (found via ddg)
 - `freelanceisrael` (found via ddg)
@@ -837,6 +840,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `404280159946930` (found via ddg)
 - `661035522370697` (found via ddg)
 - `britsindubai` (found via ddg)
+- `1025345130878473` (found via ddg)
 - `BusinessBusinessBusiness` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
@@ -971,6 +975,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `portalil` (found via ddg)
 - `digitalz.co.il` (found via ddg)
 - `persum.israel` (found via ddg)
+- `527371684110657` (found via ddg)
 - `buslness` (found via ddg)
 - `1451006476466780` (found via ddg)
 - `KsharimBiz` (found via ddg)
