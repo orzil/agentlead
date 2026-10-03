@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-03T01:02:49+00:00",
- "count": 913,
+ "generated": "2026-10-03T03:26:38+00:00",
+ "count": 914,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5055,6 +5055,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T21:00:06+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "919359532765118",
+   "name": "קהילת GPT ובינה מלאכותית ישראל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-03T03:26:36+00:00",
    "last_checked": null
   },
   {
