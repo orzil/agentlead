@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-04T19:57:25+00:00",
- "count": 915,
+ "generated": "2026-10-04T22:59:19+00:00",
+ "count": 918,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -105,6 +105,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-29T09:23:53+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "732307635974765",
+   "name": "AI Automation Solutions (n8n) For Digital Marketing & Agency Owners",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-04T22:59:18+00:00",
    "last_checked": null
   },
   {
@@ -645,6 +660,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T03:24:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "agencyacquisitionautomationcommunity",
+   "name": "7-Figure Acquisition & Automation for Agency Owners",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-04T22:59:18+00:00",
    "last_checked": null
   },
   {
@@ -3015,6 +3045,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T22:59:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "marketing.agency.automation.secrets",
+   "name": "Marketing Agency Automation Secrets (MaaS)",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-04T22:59:18+00:00",
    "last_checked": null
   },
   {
