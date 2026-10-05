@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-05T01:50:32+00:00",
- "count": 922,
+ "generated": "2026-10-05T03:39:01+00:00",
+ "count": 926,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1788,6 +1788,21 @@
    "last_checked": null
   },
   {
+   "slug": "398294859512130",
+   "name": "eCommerce Business Owners Community - Shopify, WooCommerce ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T03:38:59+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "431791437242731",
    "name": "Thailand Startup Founders Network",
    "status": "pending",
@@ -2715,6 +2730,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T00:59:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ecommercedropshipforstartup",
+   "name": "Ecommerce dropship for startup & helps (Sphopify/amazon/ebay/wix ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T03:38:59+00:00",
    "last_checked": null
   },
   {
@@ -4230,6 +4260,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-01T08:13:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2126268814575239",
+   "name": "eCommerce Operations Support",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T03:38:59+00:00",
    "last_checked": null
   },
   {
@@ -11580,6 +11625,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T19:04:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "agenticly",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T02:25:44+00:00",
    "last_checked": null
   },
   {
