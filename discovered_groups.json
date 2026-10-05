@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-04T22:59:19+00:00",
- "count": 918,
+ "generated": "2026-10-05T01:50:32+00:00",
+ "count": 922,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -61,6 +61,21 @@
    "scrapes": 0,
    "first_seen": "2026-08-19T20:46:28+00:00",
    "last_checked": "2026-08-24T04:35:03+00:00"
+  },
+  {
+   "slug": "1368272169970017",
+   "name": "AI, Entrepreneurs & Small Business Owners Network",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T01:50:30+00:00",
+   "last_checked": null
   },
   {
    "slug": "1461801731341539",
@@ -1368,6 +1383,21 @@
    "last_checked": null
   },
   {
+   "slug": "2076923229310696",
+   "name": "AI for Business Owners: The Inner Circle",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T01:50:30+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "211270969394435",
    "name": "U.S. Small Business Owners",
    "status": "pending",
@@ -2433,6 +2463,21 @@
    "last_checked": null
   },
   {
+   "slug": "aibusinessowners",
+   "name": "AI For Business Owners: How To Deploy AI In Your Business ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T01:50:30+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "aichatgptisrael",
    "name": "חושבים AI - בינה מלאכותית בישראל",
    "status": "pending",
@@ -2565,6 +2610,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-16T09:07:47+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "coachesandsmallbusiness",
+   "name": "Automate for Freedom: AI Systems for Small Business Growth",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T01:50:30+00:00",
    "last_checked": null
   },
   {
