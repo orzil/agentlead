@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-05T09:55:34+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-05T23:04:58+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (943)
+## Not yet probed (979)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -838,6 +838,42 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1308592003753789` (found via leads_db)
 - `remoteworkfornurses` (found via leads_db)
 - `agenticly` (found via leads_db)
+- `1203250850698031` (found via leads_db)
+- `GreeneConnections` (found via reddit_search)
+- `dasaltewienneuentdeckt` (found via reddit_search)
+- `ILoveCaymanKind` (found via reddit_search)
+- `cosplayph` (found via reddit_search)
+- `471545419589744` (found via reddit_search)
+- `awdtsgwontbesilenced` (found via reddit_search)
+- `694793288259574` (found via reddit_search)
+- `5831318470288241` (found via reddit_search)
+- `1042189616652224` (found via reddit_search)
+- `3298842183679521` (found via reddit_search)
+- `3174339562847795` (found via reddit_search)
+- `320673776806090` (found via reddit_search)
+- `479657263920050` (found via reddit_search)
+- `310218192405322` (found via reddit_search)
+- `775271811703862` (found via reddit_search)
+- `1969494026939200` (found via reddit_search)
+- `3995123560699410` (found via reddit_search)
+- `527916218921278` (found via reddit_search)
+- `2294116604279672` (found via reddit_search)
+- `5060410500706598` (found via reddit_search)
+- `1184731602357959` (found via reddit_search)
+- `778059756706894` (found via reddit_search)
+- `340985311306448` (found via reddit_search)
+- `946639620967928` (found via reddit_search)
+- `GOBR1` (found via reddit_search)
+- `940348934107126` (found via reddit_search)
+- `763044283717023` (found via reddit_search)
+- `spreceng` (found via reddit_search)
+- `vadothr` (found via reddit_search)
+- `149984563348738` (found via reddit_search)
+- `coolstories` (found via reddit_search)
+- `1230748938462579` (found via reddit_search)
+- `patrickobrianappreciationsociety` (found via reddit_search)
+- `saveowlshead` (found via reddit_search)
+- `1744966859135739` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
