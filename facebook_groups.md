@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-05T03:39:01+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-05T09:55:34+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (939)
+## Not yet probed (943)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -329,6 +329,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `beaconfidententrepreneur` (found via ddg)
 - `startupnetwork` (found via ddg)
 - `bsbnetwork` (found via ddg)
+- `buildingblackentrepreneurs` (found via ddg)
 - `lawfirmlaunch2` (found via ddg)
 - `1082845185201887` (found via ddg)
 - `1058223315954721` (found via ddg)
@@ -376,6 +377,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1100802378915693` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `307912236406923` (found via ddg)
+- `theipg` (found via ddg)
 - `indiastartups` (found via ddg)
 - `IndiaStartup` (found via ddg)
 - `1516479358394352` (found via ddg)
@@ -839,6 +841,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
+- `ascendcourse` (found via ddg)
 - `ase12.ro` (found via ddg)
 - `amznsellers` (found via ddg)
 - `fbacommunity` (found via ddg)
@@ -875,6 +878,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `402786871855453` (found via ddg)
 - `dropshippinghow` (found via ddg)
 - `Dubaiexpat` (found via ddg)
+- `entreprenellehub` (found via ddg)
 - `345613409204417` (found via ddg)
 - `founderscanada` (found via ddg)
 - `803297649286641` (found via ddg)

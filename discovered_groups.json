@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-05T03:39:01+00:00",
- "count": 926,
+ "generated": "2026-10-05T09:55:34+00:00",
+ "count": 930,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5778,6 +5778,21 @@
    "last_checked": null
   },
   {
+   "slug": "buildingblackentrepreneurs",
+   "name": "Building Black Entrepreneurs",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T09:55:32+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "californiausabuysell",
    "name": "California Innovation, Startup & Business Network",
    "status": "pending",
@@ -7035,6 +7050,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-07T20:23:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "theipg",
+   "name": "Independent Pharmacy Group - Owners & Managers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T09:55:32+00:00",
    "last_checked": null
   },
   {
@@ -11823,6 +11853,21 @@
    "last_checked": null
   },
   {
+   "slug": "ascendcourse",
+   "name": "ASCEND",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T09:55:32+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "ase12.ro",
    "name": "ASE",
    "status": "pending",
@@ -12345,6 +12390,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:11:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "entreprenellehub",
+   "name": "Entreprenelle Hub",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-05T09:55:32+00:00",
    "last_checked": null
   },
   {
