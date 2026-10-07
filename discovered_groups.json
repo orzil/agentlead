@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-07T03:53:02+00:00",
- "count": 974,
+ "generated": "2026-10-07T09:40:38+00:00",
+ "count": 977,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1125,6 +1125,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T23:29:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "144015363604936",
+   "name": "Indian Entrepreneurs, Business Owners & Start-ups in Ireland",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-07T09:40:37+00:00",
    "last_checked": null
   },
   {
@@ -4500,6 +4515,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-12T19:02:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "277004645753381",
+   "name": "Irish Small Business Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-07T09:40:37+00:00",
    "last_checked": null
   },
   {
@@ -10200,6 +10230,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-05T10:53:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "487179101297434",
+   "name": "Nachrichten und Interessantes aus dem Kreis Wesel",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-07T09:40:37+00:00",
    "last_checked": null
   },
   {
