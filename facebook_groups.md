@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-06T21:28:52+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-07T01:13:22+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (980)
+## Not yet probed (984)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -135,6 +135,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `agencyshoptalk` (found via ddg)
 - `2059467967664033` (found via ddg)
 - `australiansmallbusinesowners` (found via ddg)
+- `1772639460688223` (found via ddg)
 - `coachesandsmallbusiness` (found via ddg)
 - `saasautomationexpertszapierpabblymake` (found via ddg)
 - `560810556893848` (found via ddg)
@@ -144,6 +145,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `canada.startup.jobs` (found via ddg)
 - `chatbotjobs` (found via config)
 - `1681683688690553` (found via ddg)
+- `654660771983295` (found via ddg)
 - `274863123773115` (found via ddg)
 - `digitalagencyownerinsiders` (found via ddg)
 - `1362385213926016` (found via ddg)
@@ -324,6 +326,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `487009714795019` (found via ddg)
 - `811045979419418` (found via ddg)
 - `464376085736538` (found via ddg)
+- `2259425897651792` (found via ddg)
 - `smallbiz.au` (found via ddg)
 - `aussbn` (found via ddg)
 - `1296525687812999` (found via ddg)
@@ -378,6 +381,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1100802378915693` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `307912236406923` (found via ddg)
+- `businessowneraustralia` (found via ddg)
 - `theipg` (found via ddg)
 - `indiastartups` (found via ddg)
 - `IndiaStartup` (found via ddg)

@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-06T21:28:52+00:00",
- "count": 967,
+ "generated": "2026-10-07T01:13:22+00:00",
+ "count": 971,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1248,6 +1248,21 @@
    "last_checked": null
   },
   {
+   "slug": "1772639460688223",
+   "name": "Australian Startups & Business Owners Community",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-07T01:13:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1773899256887046",
    "name": "n8n | AI Agents | AI Automations",
    "status": "pending",
@@ -2040,6 +2055,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-09T02:41:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "654660771983295",
+   "name": "Community of Australian Tradies and Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-07T01:13:20+00:00",
    "last_checked": null
   },
   {
@@ -4308,6 +4338,21 @@
    "last_checked": null
   },
   {
+   "slug": "2259425897651792",
+   "name": "Australian Business Owners Community",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-07T01:13:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "23101870240",
    "name": "Middle East Entrepreneurs",
    "status": "pending",
@@ -5805,6 +5850,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-05T09:55:32+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "businessowneraustralia",
+   "name": "I am a business owner in Australia",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-07T01:13:20+00:00",
    "last_checked": null
   },
   {
