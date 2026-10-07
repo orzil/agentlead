@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-07T01:13:22+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-07T03:53:02+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (984)
+## Not yet probed (987)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -188,6 +188,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `503614587414188` (found via leads_db)
 - `nycbiz` (found via ddg)
 - `249737589133282` (found via ddg)
+- `1639655452994166` (found via ddg)
 - `1198024408768649` (found via ddg)
 - `341776853891812` (found via ddg)
 - `375928432886491` (found via ddg)
@@ -218,6 +219,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbusinessownercommunityuk` (found via ddg)
 - `893840601407320` (found via ddg)
 - `smallbusinessownersnetworkusa` (found via ddg)
+- `sbo.nz` (found via ddg)
 - `1143155100957548` (found via ddg)
 - `3418202234922142` (found via ddg)
 - `312322538374187` (found via ddg)
@@ -939,6 +941,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1224465495385964` (found via ddg)
 - `MedPM` (found via ddg)
 - `n8ncommunity` (found via ddg)
+- `kiwihomebusiness` (found via ddg)
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
 - `sellershustle` (found via ddg)

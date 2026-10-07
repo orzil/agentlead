@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-07T01:13:22+00:00",
- "count": 971,
+ "generated": "2026-10-07T03:53:02+00:00",
+ "count": 974,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1185,6 +1185,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-18T23:59:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1639655452994166",
+   "name": "New Zealand Business Owners And Entrepreneurs",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-07T03:53:00+00:00",
    "last_checked": null
   },
   {
@@ -3420,6 +3435,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T23:28:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "sbo.nz",
+   "name": "Small Business Owners New Zealand (SBONZ)",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-07T03:53:00+00:00",
    "last_checked": null
   },
   {
@@ -13290,6 +13320,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-15T15:56:24+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "kiwihomebusiness",
+   "name": "New Zealand Business",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-07T03:53:00+00:00",
    "last_checked": null
   },
   {
