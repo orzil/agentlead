@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-08T09:52:01+00:00",
- "count": 980,
+ "generated": "2026-10-08T21:52:13+00:00",
+ "count": 985,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -4518,6 +4518,21 @@
    "last_checked": null
   },
   {
+   "slug": "2764496013595357",
+   "name": "שיפוצניק עבודה ישראלית",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-08T21:52:11+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "277004645753381",
    "name": "Irish Small Business Community",
    "status": "pending",
@@ -6045,6 +6060,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-16T22:44:59+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "dmisrael",
+   "name": "נוודים דיגיטליים ישראל | עבודה מרחוק · עבודה מהבית · הכנסה אונליין · ח",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-08T21:52:11+00:00",
    "last_checked": null
   },
   {
@@ -9150,6 +9180,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:11:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2357057317963058",
+   "name": "רילוקיישן, נוודות דיגיטלית, ישראלים בחו״ל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-08T21:52:11+00:00",
    "last_checked": null
   },
   {
@@ -12978,6 +13023,21 @@
    "last_checked": null
   },
   {
+   "slug": "digitalnomadsisraelopengroup",
+   "name": "נוודים דיגיטליים ישראלים - הקבוצה הפתוחה",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-08T21:52:11+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "digitalz.co.il",
    "name": "פרסום ושיווק עסקים ברשת | דיגטלז - שיווק דיגיטלי לעסקים",
    "status": "pending",
@@ -12990,6 +13050,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T19:58:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "dnisrael",
+   "name": "נוודים דיגיטליים ישראל - Digital Nomads Israel",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-08T21:52:11+00:00",
    "last_checked": null
   },
   {

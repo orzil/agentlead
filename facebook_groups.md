@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-08T09:52:01+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-08T21:52:13+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (993)
+## Not yet probed (998)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -543,6 +543,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `israel.hitech.jobs` (found via ddg)
 - `1301121656949348` (found via ddg)
 - `707574362649616` (found via ddg)
+- `dmisrael` (found via ddg)
 - `544976585999596` (found via ddg)
 - `303194433208716` (found via ddg)
 - `besmartphone.il` (found via ddg)
@@ -562,6 +563,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `768974062661759` (found via ddg)
 - `coronajobs` (found via ddg)
 - `849152465232462` (found via ddg)
+- `2764496013595357` (found via ddg)
 - `1329241984892387` (found via leads_db)
 - `congdongarduinovn` (found via leads_db)
 - `thaidev` (found via leads_db)
@@ -1028,6 +1030,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `270931709946261` (found via ddg)
 - `1308879656987184` (found via ddg)
 - `462672717191788` (found via ddg)
+- `dnisrael` (found via ddg)
+- `digitalnomadsisraelopengroup` (found via ddg)
 - `BusinessinIsrael1` (found via ddg)
 - `LoveMeSuperMekori` (found via ddg)
 - `Interested.and.Businesses` (found via ddg)
@@ -1046,6 +1050,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `buslness` (found via ddg)
 - `1451006476466780` (found via ddg)
 - `KsharimBiz` (found via ddg)
+- `2357057317963058` (found via ddg)
 - `slikot` (found via ddg)
 - `1911133942442554` (found via ddg)
 - `workfromhomenospam` (found via leads_db)
