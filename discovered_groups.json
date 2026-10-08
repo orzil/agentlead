@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-08T01:37:21+00:00",
- "count": 977,
+ "generated": "2026-10-08T04:07:44+00:00",
+ "count": 980,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -8628,6 +8628,21 @@
    "last_checked": null
   },
   {
+   "slug": "18159005758",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-08T04:07:44+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1857122828309413",
    "name": null,
    "status": "pending",
@@ -12513,6 +12528,21 @@
    "last_checked": null
   },
   {
+   "slug": "bluecollarmillionaire",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-08T04:07:44+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "bluewavedemocrats",
    "name": null,
    "status": "pending",
@@ -13635,6 +13665,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T03:45:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "ndisservicestoindustry",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-08T04:07:44+00:00",
    "last_checked": null
   },
   {
