@@ -475,6 +475,30 @@ variable was never the country — it is who posts.
   1 Telegram push**, gate split `{full_time: 13, seeker: 2, stale: 2, duplicate: 4, low: 1}` —
   the full-time-heavy split is the expected LinkedIn shape. `test_gate.py` still 15/15.
 
+## Session 2026-10-06 — pivot from "watch postings" to "reach out"
+
+**Why:** ~9.5k posts stored, ~5 pushed, 20 handled; Or reported no replies and too low-paying or
+full-time leads. Public postings are the most competitive channel. Plan is in
+`~/.claude/plans/i-tired-to-get-cosmic-meadow.md` (A WhatsApp, B outbound, C conversion, D domains).
+
+**Done**
+- `config.py`: `_DOMAIN_EN`/`_DOMAIN_HE` widened (machine vision, inspection, medical imaging, LiDAR/SLAM,
+  VLM, document AI/IDP, RPA/AI automation, dashboards, data annotation + Hebrew equivalents).
+  `test_gate.py` 15/15. Re-run `audit_gate.py` once new traffic accumulates.
+- **`outbound.py` (new, drafts only):** `pipeline.ingest` now calls `outbound.capture()` when the gate
+  rejects a fresh full-time post that has a strong domain term and a feasible location -> `prospects`
+  table (new in `db.SCHEMA`). `job_outbound` sends ONE Telegram batch/day (5 prospects) with a
+  contract-capacity pitch. `--outbound-dry-run` previews. Or contacts them by hand.
+  Stored full-time rows were all >14d old (backfill = 0), so the table fills from new traffic.
+- **Security fix:** `scorer.generate` and model discovery logged httpx errors that embed
+  `?key=<GEMINI_API_KEY>`; now redacted. `agent.log` already holds 6 earlier copies — **rotate the
+  Gemini key if that file ever leaves this machine.**
+
+**Still to do:** WhatsApp (waiting on Or's extra phone number; reader is read-only, local, allowlisted, polled
+every 15 min); `feedback.py` verdicts for prospects (sent/replied/won) + day-3/7 follow-up reminders;
+proof-assets page; funnel report; add `GROQ_API_KEY` GitHub secret; talent-network applications (A.Team,
+Braintrust, Toptal, Gun.io, Contra, Alignerr/Mindrift).
+
 ## Open items
 - **Nothing is blocked on the user.** Checked 2026-09-06: the two standing "user action" items
   (join FB / WhatsApp groups) were measured and demoted below — see the yield table reasoning.

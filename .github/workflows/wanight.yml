@@ -1,0 +1,115 @@
+name: WhatsApp night hunt
+
+# Overnight hunt for WhatsApp groups Or can join by hand (second phone).
+#
+# ~30 small slices between 20:00 and 05:59 Israel (UTC+3 until the clock change
+# on 25 Oct 2026; shift the crons by an hour after that), then ONE final run at
+# 05:50 Israel that validates, rates and Telegrams the top 50.
+#
+# Why small slices: DuckDuckGo challenges an IP after ~1-2 queries and Reddit
+# 429s datacenter IPs, but every run gets a fresh IP. See wa_night.py.
+#
+# Own concurrency group + own database cache (wa.db): fbnight fires every 15 min
+# on `leadagent` and GitHub keeps only ONE pending run per group, so sharing it
+# would silently drop slices. leads.db is only restored (never saved) so the
+# slice can mine invite links out of stored posts.
+#
+# Logs print COUNTS only. The group list goes to Telegram and whatsapp_top50.md;
+# invite links are already public, and no lead data is involved.
+
+on:
+  schedule:
+    - cron: "*/20 17-23 * * *"   # 20:00-02:59 Israel
+    - cron: "*/20 0-2 * * *"     # 03:00-05:59 Israel
+    - cron: "50 2 * * *"         # 05:50 Israel: final selection + Telegram
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "slice = one search slice, select = rate + send top 50"
+        type: choice
+        options: [slice, select]
+        default: slice
+
+concurrency:
+  group: wanight
+  cancel-in-progress: false
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      MODE: ${{ (github.event.schedule == '50 2 * * *' || inputs.mode == 'select') && 'select' || 'slice' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Restore WhatsApp DB
+        uses: actions/cache/restore@v4
+        with:
+          path: wa.db
+          key: wadb-${{ github.run_id }}
+          restore-keys: wadb-
+
+      # Read-only: mined for invite links, never written back.
+      - name: Restore lead DB (read-only)
+        uses: actions/cache/restore@v4
+        with:
+          path: leads.db
+          key: leadsdb-${{ github.run_id }}
+          restore-keys: leadsdb-
+
+      - name: Slice
+        if: env.MODE == 'slice'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          LLM_BACKEND: gemini
+        run: python -X utf8 wa_night.py --db wa.db --mine-from leads.db 2>&1 | grep -v "HTTP Request"
+
+      - name: Select top 50 and notify
+        if: env.MODE == 'select'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          LLM_BACKEND: gemini
+        run: python -X utf8 wa_night.py --db wa.db --select --notify --validate-cap 60 2>&1 | grep -v "HTTP Request"
+
+      - name: Save WhatsApp DB
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: wa.db
+          key: wadb-${{ github.run_id }}
+
+      - name: Commit the list
+        if: env.MODE == 'select'
+        run: |
+          git config user.name "agentlead-bot"
+          git config user.email "noreply@github.com"
+          git add whatsapp_top50.md 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no list to commit"
+          else
+            git commit -m "WhatsApp night hunt: top-50 list"
+            git pull --rebase --autostash origin main || true
+            git push origin HEAD:main
+          fi

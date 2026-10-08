@@ -181,6 +181,12 @@ def job_linkcheck(conn) -> None:
     linkcheck.verify(conn, limit=40, min_score=config.DIGEST_THRESHOLD)
 
 
+def job_outbound(conn) -> None:
+    """Daily batch of companies hiring full-time in Or's niche, with a contract pitch."""
+    import outbound
+    outbound.run(conn)
+
+
 def job_digest(conn) -> None:
     """Send the daily digest of borderline (6-7) leads once per day after DIGEST_HOUR."""
     today = datetime.now().strftime("%Y-%m-%d")
@@ -221,6 +227,7 @@ JOBS = [
     ("feedback", 5 * 60, job_feedback),        # one-word verdicts from the phone
     ("cloud_sync", 20 * 60, job_cloud_sync),   # pull cloud-found leads home
     ("linkcheck", 6 * 3600, job_linkcheck),   # drop leads whose posting died
+    ("outbound", 3 * 3600, job_outbound),    # one prospect batch/day (self-limits to 20h)
     ("digest", 10 * 60, job_digest),
 ]
 
@@ -729,6 +736,8 @@ def main() -> None:
                     help="dry-run: draft a reply for one lead, print it, send nothing")
     ap.add_argument("--verify-links", nargs="?", const=60, type=int, metavar="N",
                     help="check the top N leads' URLs and gate the dead ones")
+    ap.add_argument("--outbound-dry-run", action="store_true",
+                    help="print today's outbound prospect batch + drafts without sending/saving")
     ap.add_argument("--regate", action="store_true",
                     help="re-run the (stricter) keyword classifier over stored candidates")
     ap.add_argument("--include-partnerships", action="store_true",
@@ -781,6 +790,12 @@ def main() -> None:
     if args.verify_links is not None:
         import linkcheck
         print(linkcheck.verify(db.connect(), limit=args.verify_links))
+        return
+    if args.outbound_dry_run:
+        import outbound
+        c = db.connect()
+        print(f"backfilled {outbound.backfill(c)} prospect(s)")
+        outbound.run(c, dry_run=True)
         return
     if args.regate:
         regate(db.connect())

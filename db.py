@@ -121,6 +121,17 @@ CREATE TABLE IF NOT EXISTS lead_messages (
     lead_id INTEGER NOT NULL REFERENCES leads(id),
     sent_at TEXT NOT NULL
 );
+
+-- Outbound prospects: companies whose FULL-TIME CV/ML post the gate rejected.
+-- They have the need and budget but are hiring an employee; Or pitches contract
+-- capacity instead. One row per source lead; Or's follow-up state lives here.
+CREATE TABLE IF NOT EXISTS prospects (
+    lead_id INTEGER PRIMARY KEY REFERENCES leads(id),
+    status TEXT NOT NULL DEFAULT 'pending',   -- pending|sent_to_user|contacted|replied|won|skip
+    draft TEXT,
+    created_at TEXT NOT NULL,
+    surfaced_at TEXT
+);
 """
 
 # Columns added after a table first shipped. ALTER TABLE ADD COLUMN is cheap and
@@ -132,6 +143,8 @@ _MIGRATIONS = [
     # come through here. Skipping this broke a cloud probe run with
     # "no such column: activity" while the local DB was fine.
     ("facebook_groups", "activity", "TEXT"),
+    # Night hunt (wa_night.py): batched LLM verdict on the group NAME, 0-3.
+    ("whatsapp_groups", "llm_relevant", "INTEGER"),
     # Promotion + measured yield, so discovery can feed the scraper on its own.
     ("facebook_groups", "in_rotation", "INTEGER DEFAULT 0"),
     ("facebook_groups", "posts_seen", "INTEGER DEFAULT 0"),

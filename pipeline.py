@@ -40,6 +40,12 @@ def ingest(conn: sqlite3.Connection, lead: Lead) -> str:
         conn.execute("UPDATE leads SET status='gated_out', reasoning=? WHERE id=?",
                      (f"gate: {verdict.removeprefix('gate_')}", lead_id))
         conn.commit()
+        if verdict == "gate_full_time":
+            try:   # a company hiring full-time for Or's niche is an outbound prospect
+                import outbound
+                outbound.capture(conn, lead_id, lead.raw_text)
+            except Exception as e:
+                log.error("outbound capture failed for lead %s: %s", lead_id, e)
         return verdict  # per-reason stats, e.g. gate_full_time
 
     try:

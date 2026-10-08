@@ -636,11 +636,23 @@ _DOMAIN_EN = [
     r"tesseract", r"paddle\s*ocr", r"\bLayoutLM\b", r"handwrit",
     r"fine[\s-]?tun", r"\binference\b", r"embedding", r"vector\s+(db|database|search)",
     r"text\s+extraction", r"invoice\s+(parsing|extraction|processing)",
+    # Widened 2026-10-06 (gate audit: `offtopic` was the only real over-killer at
+    # 2% false negatives). Adjacent niches Or can deliver: inspection, medical and
+    # remote-sensing imagery, perception, document AI, SMB automation, dashboards.
+    r"machine\s+vision", r"(visual|quality|optical)\s+inspection", r"medical\s+imag",
+    r"\bDICOM\b", r"radiolog", r"satellite|aerial\s+imag|drone\s+imag|remote\s+sensing",
+    r"\bLiDAR\b", r"\bSLAM\b", r"robot\w*\s+perception", r"\bVLM\b", r"multi-?modal",
+    r"stable\s+diffusion|image\s+generation", r"(intelligent|smart)\s+document",
+    r"\bIDP\b", r"(pdf|receipt|form)\s+(parsing|extraction|data)", r"\bRPA\b",
+    r"(ai|workflow|process)\s+automation", r"ai\s+agents?", r"\bdashboards?\b",
+    r"data\s+(pipeline|annotation|labell?ing)", r"synthetic\s+data", r"edge\s+(ai|inference)",
 ]
 _DOMAIN_HE = [
     "ראייה ממוחשבת", "ראיה ממוחשבת", "עיבוד תמונה", "למידת מכונה",
     "בינה מלאכותית", "אלגוריתם", "זיהוי אובייקטים", "מודל שפה",
     "דאטה", "ויזואליזציה", "עיבוד וידאו", "זיהוי טקסט", "לגורתם",
+    "זיהוי תמונה", "בקרת איכות", "הדמיה רפואית", "אוטומציה", "סוכני AI",
+    "דשבורד", "חשבוניות", "סריקת מסמכים", "בינה מלאכותית יוצרת",
 ]
 _ENGAGE_EN = [
     r"freelanc", r"contract", r"\bPOC\b", r"proof\s+of\s+concept", r"part[\s-]?time",

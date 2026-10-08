@@ -190,7 +190,8 @@ def _pick_gemini_model() -> str:
             log.warning("Preferred Gemini models unavailable; using %s", flash[-1])
             return flash[-1]
     except Exception as e:
-        log.warning("Gemini model discovery failed (%s); using first preference", e)
+        log.warning("Gemini model discovery failed (%s); using first preference",
+                    re.sub(r"key=[^&\s']+", "key=***", str(e)))
     _chosen_gemini_model = config.GEMINI_MODEL_PREFERENCE[0]
     return _chosen_gemini_model
 
@@ -419,7 +420,8 @@ def generate(system: str, user: str, *, schema: dict | None = None,
             r.raise_for_status()
             return r.json()["candidates"][0]["content"]["parts"][0]["text"]
     except Exception as e:
-        log.warning("generate failed: %s", e)
+        # httpx errors embed the request URL, and the Gemini key rides in it as ?key=
+        log.warning("generate failed: %s", re.sub(r"key=[^&\s']+", "key=***", str(e)))
     return None
 
 

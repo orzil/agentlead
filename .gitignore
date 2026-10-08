@@ -27,3 +27,4 @@ venv/
 
 # WhatsApp linked-device session - these ARE credentials
 wa_session/
+wa.db
