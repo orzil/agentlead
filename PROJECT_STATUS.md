@@ -499,6 +499,17 @@ every 15 min); `feedback.py` verdicts for prospects (sent/replied/won) + day-3/7
 proof-assets page; funnel report; add `GROQ_API_KEY` GitHub secret; talent-network applications (A.Team,
 Braintrust, Toptal, Gun.io, Contra, Alignerr/Mindrift).
 
+## 2026-10-09 — WhatsApp night hunt (`wa_night.py`, `wanight.yml`)
+Goal: 50 relevant WhatsApp invite links (HE+EN) by morning for Or to join by hand on the second phone.
+- Cloud slices every 20 min 20:00-05:59 IL (UTC+3 until 25 Oct; shift crons an hour after), own `wa.db` cache +
+  own concurrency group (`fbnight` every 15 min on `leadagent` would drop pending runs). Final run 05:50 IL
+  (`--select --notify`) validates, LLM-rates names in batches, Telegrams the top 50, commits `whatsapp_top50.md`.
+- Surfaces: Reddit search.rss, GitHub code search (runner token), public Telegram channels, DDG (+ directory pages it
+  surfaces), stored leads.db. Verified: first cloud slice found 40+40+51 invites, validation works from GitHub IPs.
+- Logs print counts only. Group list goes to Telegram. The agent never joins anything.
+- Next: Or joins the links, gives me the second number, then `whatsapp_reader.py --pair/--groups`, set
+  `WHATSAPP_GROUP_ALLOWLIST`, run `--listen`.
+
 ## Open items
 - **Nothing is blocked on the user.** Checked 2026-09-06: the two standing "user action" items
   (join FB / WhatsApp groups) were measured and demoted below — see the yield table reasoning.
