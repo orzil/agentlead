@@ -510,6 +510,23 @@ Goal: 50 relevant WhatsApp invite links (HE+EN) by morning for Or to join by han
 - Next: Or joins the links, gives me the second number, then `whatsapp_reader.py --pair/--groups`, set
   `WHATSAPP_GROUP_ALLOWLIST`, run `--listen`.
 
+## 2026-10-09 night — fixing the hunt, WhatsApp ingestion, outbound v2
+- **First hunt under-delivered**: only 4 of ~30 cron slices fired (GitHub throttles frequent crons), list = 15
+  groups, 0 Hebrew, all student/regional. Fixes: `wanight.yml` is now **self-chaining** (each slice waits 7 min and
+  dispatches the next; crons are an hourly backstop; ends with a select run after 02:45 UTC); `FOREIGN_RE` drops
+  other-country/language names before the LLM; rating prompt now says Or is in Israel and wants HE/EN only;
+  seeded directory crawl (asmarketing.co.il, wp-index.co.il, whatsgrouplink, Hive Index topic -> community pages);
+  `wa_research_links.txt` holds links found by 3 research agents (20 links -> 12 live, 8 dead/wrong).
+  `wa_night.py --add-links FILE --via manual|research` ingests extra links (manual = Or's own groups, tier A).
+- **WhatsApp ingestion pre-built**: `INTENT_REQUIRED_ROOTS={"whatsapp"}` (domain AND hiring intent), Hebrew
+  freelancer-for-hire patterns added to `SEEKER_RE`, stable message ids in `whatsapp_reader._to_lead`
+  (`hash()` is salted per process), 4 new `test_gate.py` cases (19/19). Fake messages through reader -> gate ->
+  scorer verified. Observation: the local model hallucinated "over a month old" on a same-day post.
+- **Outbound v2**: `outbound_news.py` (TechCrunch AI + Geektime IL funding/launch news -> prospects), one Telegram
+  message per prospect, `sent/replied/won/skip` verdicts via `feedback.py`, day-3/7 follow-ups, morning-only send
+  window (04-09 UTC).
+- Drafts (gitignored): `portfolio_draft.md`, `talent_networks.md`, `MORNING_PLAN.md`.
+
 ## Open items
 - **Nothing is blocked on the user.** Checked 2026-09-06: the two standing "user action" items
   (join FB / WhatsApp groups) were measured and demoted below — see the yield table reasoning.
