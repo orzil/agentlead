@@ -109,7 +109,7 @@ DDG_QUERIES = config.WHATSAPP_DDG_QUERIES + [
 
 # Per-run budgets. Small on purpose - see module docstring.
 REDDIT_PER_RUN, GITHUB_PER_RUN, TG_PER_RUN = 2, 2, 5
-DDG_PER_RUN, DIR_PAGES_PER_RUN, VALIDATE_CAP = 1, 6, 25
+DDG_PER_RUN, DIR_PAGES_PER_RUN, VALIDATE_CAP = 1, 14, 30
 
 # Names that say "this group is about hiring/paying/clients" - boosts ranking.
 CLIENT_SIDE_RE = re.compile(
@@ -279,13 +279,35 @@ def surf_ddg(conn, client_factory) -> int:
     return new
 
 
+# Known directory pages that publish invites in their raw HTML (verified 2026-10-09:
+# asmarketing 20 invites, wp-index 3, whatsgrouplink 10). A seed can also name a link
+# pattern to FOLLOW one level - the Hive Index topic pages list community pages, and
+# each community page carries the invite.
+_HIVE = "https://thehiveindex.com"
+_HIVE_FOLLOW = r'href="(/communities/[a-z0-9-]+/)"'
+_HIVE_TOPICS = ["freelancing", "machine-learning", "data-science", "software-development",
+                "python", "artificial-intelligence", "entrepreneurship", "startups", "business",
+                "jobs", "remote-work", "marketing", "e-commerce", "no-code", "web-development",
+                "programming", "technology", "saas", "automation", "computer-vision",
+                "data-analysis", "freelance-jobs", "side-hustle", "digital-marketing"]
+DIR_SEEDS: list[tuple[str, str | None]] = [
+    ("https://asmarketing.co.il/whatsapp-groups/", None),
+    ("https://wp-index.co.il/all_groups/", None),
+    ("https://whatsgrouplink.com/israel-whatsapp-group-links/", None),
+    ("https://www.itconsulting.co.il/he/publication/86", None),
+] + [(f"{_HIVE}/topics/{t}/platform/whatsapp/", _HIVE_FOLLOW) for t in _HIVE_TOPICS]
+
+
 def surf_dirs(conn, client_factory) -> int:
-    """Crawl directory/blog pages that DDG surfaced. Cheap: plain GETs, no search."""
+    """Crawl directory/blog pages: the seeds above first, then pages DDG surfaced.
+    Cheap - plain GETs, no search engine, so it is not subject to captcha walls."""
     import db
     import httpx
     pages = json.loads(db.kv_get(conn, "wa_night_dir_pages", "[]") or "[]")
     done = set(json.loads(db.kv_get(conn, "wa_night_dir_done", "[]") or "[]"))
-    todo = [p for p in pages if p not in done][:DIR_PAGES_PER_RUN]
+    follow = {u: pat for u, pat in DIR_SEEDS if pat}
+    queue = [u for u, _ in DIR_SEEDS if u not in done] + [p for p in pages if p not in done]
+    todo = queue[:DIR_PAGES_PER_RUN]
     new = 0
     with httpx.Client(headers={"User-Agent": config.USER_AGENT}, timeout=20,
                       follow_redirects=True) as client:
@@ -293,12 +315,19 @@ def surf_dirs(conn, client_factory) -> int:
             done.add(url)
             try:
                 r = client.get(url)
-                if r.status_code == 200:
-                    new += _add_codes(conn, html.unescape(r.text), "directory")
+                if r.status_code != 200:
+                    continue
+                text = html.unescape(r.text)
+                new += _add_codes(conn, text, "directory")
+                if url in follow:      # queue the community pages this topic page lists
+                    base = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
+                    found = {base + m for m in re.findall(follow[url], text)}
+                    pages = sorted(set(pages) | found)[:600]
             except Exception:
                 continue
             time.sleep(1)
-    db.kv_set(conn, "wa_night_dir_done", json.dumps(sorted(done)[-1500:]))
+    db.kv_set(conn, "wa_night_dir_pages", json.dumps(pages))
+    db.kv_set(conn, "wa_night_dir_done", json.dumps(sorted(done)[-2500:]))
     return new
 
 

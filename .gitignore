@@ -28,3 +28,8 @@ venv/
 # WhatsApp linked-device session - these ARE credentials
 wa_session/
 wa.db
+
+# personal drafts (rates, positioning) - keep out of the public repo
+portfolio_draft.md
+talent_networks.md
+MORNING_PLAN.md
