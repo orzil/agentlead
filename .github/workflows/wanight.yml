@@ -19,8 +19,11 @@ name: WhatsApp night hunt
 
 on:
   schedule:
-    - cron: "*/20 17-23 * * *"   # 20:00-02:59 Israel
-    - cron: "*/20 0-2 * * *"     # 03:00-05:59 Israel
+    # Hourly BACKSTOP only. GitHub throttled the old */20 schedule to 4 runs in a
+    # night; the real cadence now comes from each slice re-dispatching the next
+    # (see the "Chain" step), which also gives every slice a fresh IP.
+    - cron: "10 17-23 * * *"     # 20:10-02:10 Israel
+    - cron: "10 0-2 * * *"       # 03:10-05:10 Israel
     - cron: "50 2 * * *"         # 05:50 Israel: final selection + Telegram
   workflow_dispatch:
     inputs:
@@ -40,6 +43,7 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: write
+      actions: write          # lets a slice dispatch the next one
     env:
       MODE: ${{ (github.event.schedule == '50 2 * * *' || inputs.mode == 'select') && 'select' || 'slice' }}
     steps:
@@ -112,4 +116,23 @@ jobs:
             git commit -m "WhatsApp night hunt: top-50 list"
             git pull --rebase --autostash origin main || true
             git push origin HEAD:main
+          fi
+
+      # Self-chaining: wait, then start the next slice. After 02:45 UTC (05:45 IL)
+      # the next dispatch is the final selection instead, and the chain ends there.
+      # Daytime manual dispatches do not chain (the hour window below).
+      - name: Chain next slice
+        if: always() && env.MODE == 'slice'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          H=$(date -u +%H); M=$(date -u +%M)
+          T=$((10#$H * 60 + 10#$M))
+          if [ "$T" -ge 1020 ] || [ "$T" -lt 165 ]; then       # 17:00 .. 02:44 UTC
+            sleep 420
+            gh workflow run wanight.yml --ref main -f mode=slice
+          elif [ "$T" -ge 165 ] && [ "$T" -lt 240 ]; then      # 02:45 .. 03:59 UTC
+            gh workflow run wanight.yml --ref main -f mode=select
+          else
+            echo "outside the night window - chain ends"
           fi
