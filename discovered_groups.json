@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-09T01:50:28+00:00",
- "count": 986,
+ "generated": "2026-10-09T04:11:45+00:00",
+ "count": 987,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -10620,6 +10620,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:11:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "557768901584634",
+   "name": "שיווק דיגיטלי",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-09T04:11:43+00:00",
    "last_checked": null
   },
   {
