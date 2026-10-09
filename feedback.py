@@ -39,6 +39,9 @@ VERDICTS = {
     "crowded":  ("bad", "gate_crowded"),
     "offtopic": ("bad", "gate_offtopic"),
 }
+# Outbound prospects (outbound.py): Or logs what happened after he messaged a company.
+PROSPECT_WORDS = {"sent": "contacted", "contacted": "contacted", "replied": "replied",
+                  "won": "won", "skip": "skip"}
 # volume controls - Or tunes the push threshold himself rather than asking
 TUNING = {"less": +1, "more": -1}
 
@@ -121,6 +124,15 @@ def poll(conn) -> dict:
             db.kv_set(conn, "push_threshold_override", str(new))
             counts[f"threshold->{new}"] = counts.get(f"threshold->{new}", 0) + 1
             log.info("push threshold retuned to %d by '%s'", new, word)
+            continue
+        if word in PROSPECT_WORDS:
+            target = (msg.get("reply_to_message") or {}).get("message_id")
+            lead_id = db.lead_for_message(conn, target) if target else None
+            if lead_id:
+                import outbound
+                if outbound.mark(conn, lead_id, PROSPECT_WORDS[word]):
+                    log.info("prospect %s marked %s", lead_id, PROSPECT_WORDS[word])
+                    counts[word] = counts.get(word, 0) + 1
             continue
         if word not in VERDICTS:
             continue

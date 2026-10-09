@@ -184,6 +184,8 @@ def job_linkcheck(conn) -> None:
 def job_outbound(conn) -> None:
     """Daily batch of companies hiring full-time in Or's niche, with a contract pitch."""
     import outbound
+    import outbound_news
+    outbound_news.run(conn)      # funding/launch news -> prospects (free RSS)
     outbound.run(conn)
 
 
@@ -794,7 +796,9 @@ def main() -> None:
     if args.outbound_dry_run:
         import outbound
         c = db.connect()
-        print(f"backfilled {outbound.backfill(c)} prospect(s)")
+        import outbound_news
+        print(f"backfilled {outbound.backfill(c)} prospect(s), "
+              f"{outbound_news.run(c)} from funding news")
         outbound.run(c, dry_run=True)
         return
     if args.regate:

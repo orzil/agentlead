@@ -145,6 +145,9 @@ _MIGRATIONS = [
     ("facebook_groups", "activity", "TEXT"),
     # Night hunt (wa_night.py): batched LLM verdict on the group NAME, 0-3.
     ("whatsapp_groups", "llm_relevant", "INTEGER"),
+    # Outbound follow-up tracking: when Or said "sent", and how many nudges went out.
+    ("prospects", "contacted_at", "TEXT"),
+    ("prospects", "reminded", "INTEGER DEFAULT 0"),
     # Promotion + measured yield, so discovery can feed the scraper on its own.
     ("facebook_groups", "in_rotation", "INTEGER DEFAULT 0"),
     ("facebook_groups", "posts_seen", "INTEGER DEFAULT 0"),
