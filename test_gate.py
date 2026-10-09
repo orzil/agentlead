@@ -54,6 +54,20 @@ CASES = [
      "Employment type: Contract\n\nComputer vision work.", NOW, "gate_closed"),
 
     # --- seekers: people advertising themselves, in both languages ---
+    # --- WhatsApp group chat (2026-10-09): chat is noisy, so a post needs a domain
+    # term AND hiring intent; a freelancer advertising himself must not pass ---
+    ("wa hebrew client", "whatsapp/Test Group",
+     "דרוש פרילנסר לפרויקט ראייה ממוחשבת - זיהוי פגמים בקו ייצור, תקציב 8000 ש\"ח, מי פנוי?",
+     NOW, "pass"),
+    ("wa english client", "whatsapp/Test Group",
+     "Looking for a freelancer for an OCR project extracting data from scanned invoices. "
+     "Budget $1500, DM me.", NOW, "pass"),
+    ("wa course chat", "whatsapp/Test Group",
+     "Good morning everyone, can anyone recommend a good machine learning course for beginners?",
+     NOW, "gate_offtopic"),
+    ("wa hebrew seeker", "whatsapp/Test Group",
+     "מפתח פרילנסר זמין לפרויקטים בתחום בינה מלאכותית ואוטומציה, פנו אליי בפרטי",
+     NOW, "gate_seeker"),
     ("python dev available", "r/PythonJobs",
      "Python Developer Available - Bots, Automation & Custom Scripts. Hi everyone, I'm a "
      "Python developer currently looking to take on freelance work. I can help with: "

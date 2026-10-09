@@ -32,6 +32,7 @@ Setup (one time, with the second phone):
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
 import sqlite3
@@ -85,7 +86,7 @@ def _to_lead(msg: dict) -> Lead | None:
             pass
     return Lead(
         source=f"whatsapp/{group}",
-        url=f"whatsapp://{jid}/{msg.get('id') or hash(body)}",
+        url=f"whatsapp://{jid}/{msg.get('id') or hashlib.sha1(body.encode('utf-8')).hexdigest()[:16]}",
         raw_text=body[:4000],
         author=msg.get("sender_name") or None,
         posted_at=posted,

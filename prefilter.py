@@ -122,7 +122,7 @@ def classify(lead: Lead) -> str:
         return "pass" if config.DOMAIN_RE.search(text) else "gate_offtopic"
     # Discussion-heavy communities: every post matches DOMAIN, so require
     # hiring intent (ENGAGE) as well.
-    if lead.source in config.INTENT_REQUIRED_SOURCES:
+    if lead.source in config.INTENT_REQUIRED_SOURCES or src_root in config.INTENT_REQUIRED_ROOTS:
         ok = config.DOMAIN_RE.search(text) and config.ENGAGE_RE.search(text)
         return "pass" if ok else "gate_offtopic"
     ok = config.DOMAIN_RE.search(text) or config.ENGAGE_RE.search(text)

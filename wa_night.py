@@ -522,6 +522,11 @@ def main() -> None:
         config.DB_PATH = ":memory:"
         conn = db.connect()
 
+    # Research-found invites ship in the repo; _add is idempotent so every slice can re-read it.
+    research = config.BASE_DIR / "wa_research_links.txt"
+    if research.exists():
+        add_links(conn, str(research), "research")
+
     if conn.execute("SELECT COUNT(*) FROM whatsapp_groups").fetchone()[0] == 0:
         log.info("empty table: seeded %d invite(s) from whatsapp_groups.md", seed_from_md(conn))
 

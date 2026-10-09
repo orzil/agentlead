@@ -744,6 +744,9 @@ SEEKER_RE = re.compile(
     r"|open\s+to\s+work\b|\bfor\s+hire\b"
     # Hebrew equivalents
     r"|אני\s+מפתח|אני\s+מתכנת|זמין\s+לעבודה|מציע\s+שירותי"
+    # added 2026-10-09 with WhatsApp ingestion: "מפתח פרילנסר זמין לפרויקטים ...
+    # פנו אליי בפרטי" (a freelancer advertising himself) passed the gate as a lead
+    r"|(זמין|זמינה|פנוי|פנויה)\s+ל(פרויקטים|עבודה|פרילנס)|פנו\s+אליי|דברו\s+איתי"
     # "שמי טל כהן, מהנדס תוכנה ויועץ פיתוח" - the Hebrew self-introduction, which
     # is how Israeli freelancers open a self-promo. Slipped through as a 7/10
     # lead on the first facebook/search run.
@@ -827,6 +830,11 @@ INTENT_REQUIRED_SOURCES = {"r/computervision", "r/MachineLearningJobs",
                            "r/deeplearning", "r/LocalLLaMA", "r/search",
                            "facebook/Machine & Deep Learning Israel",
                            "facebook/ML & Data Science Jobs Israel"}
+
+# Same rule as above, but keyed on the source ROOT, for sources whose label carries
+# a dynamic suffix. whatsapp/<group> messages are chat: nearly every one mentions a
+# tech word, so a post needs a domain term AND a hiring-intent term to pass.
+INTENT_REQUIRED_ROOTS = {"whatsapp"}
 
 # Fuzzy-dedup: posts >= this similar (0-100) within 7 days are duplicates.
 DEDUP_SIMILARITY = 90
