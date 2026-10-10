@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-10T03:56:58+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-10T09:19:08+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1002)
+## Not yet probed (1006)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -455,10 +455,13 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `shopifystoreownersclub` (found via ddg)
 - `1194703972077043` (found via ddg)
 - `27603957949300413` (found via ddg)
+- `2888575081518902` (found via ddg)
+- `1371381124945627` (found via ddg)
 - `667291046350388` (found via ddg)
 - `1017052997642628` (found via ddg)
 - `shopifyowner` (found via ddg)
 - `shopifystoreowner` (found via ddg)
+- `2090005924981482` (found via ddg)
 - `shopifystoreowners` (found via ddg)
 - `1170892738160019` (found via ddg)
 - `singapore.entrepreneurs.network` (found via ddg)
@@ -484,6 +487,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `thefoundersnetwork` (found via ddg)
 - `1165236046981865` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
+- `182811227011330` (found via ddg)
 - `uksmallbusinessowners` (found via ddg)
 - `557897198086356` (found via ddg)
 - `usabusinessownersusabusinessgroupusa` (found via ddg)
