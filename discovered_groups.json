@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-10T09:19:08+00:00",
- "count": 993,
+ "generated": "2026-10-10T20:31:37+00:00",
+ "count": 1006,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -7533,6 +7533,21 @@
    "last_checked": null
   },
   {
+   "slug": "1031122788368778",
+   "name": "USA Real Estate Investors",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T16:31:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1037161243564962",
    "name": null,
    "status": "pending",
@@ -8493,6 +8508,36 @@
    "last_checked": null
   },
   {
+   "slug": "1622740769010505",
+   "name": "Amazon FBA Sellers Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T10:11:56+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1627195364165111",
+   "name": "Real Estate Investors USA",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T16:31:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1636991833121307",
    "name": "No Code Community",
    "status": "pending",
@@ -9060,6 +9105,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-14T01:32:29+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "213641747302800",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T20:20:44+00:00",
    "last_checked": null
   },
   {
@@ -10200,6 +10260,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "419902899262510",
+   "name": "Amazon FBA Wholesale & Private Label Sellers Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T10:11:56+00:00",
    "last_checked": null
   },
   {
@@ -11793,6 +11868,21 @@
    "last_checked": null
   },
   {
+   "slug": "929987341305436",
+   "name": "Real Estate Investors Forum",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T16:31:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "940348934107126",
    "name": null,
    "status": "pending",
@@ -13263,6 +13353,21 @@
    "last_checked": null
   },
   {
+   "slug": "fbabeginners",
+   "name": "Amazon FBA for Beginners",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T10:11:56+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "fbacommunity",
    "name": "Amazon FBA Sellers Community",
    "status": "pending",
@@ -13530,6 +13635,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "insuranceagen",
+   "name": "Insurance Agents",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T20:31:36+00:00",
    "last_checked": null
   },
   {
@@ -14148,6 +14268,66 @@
    "last_checked": null
   },
   {
+   "slug": "realestateinvestinginusa",
+   "name": "REAL ESTATE INVESTING IN USA",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T16:31:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "realestateinvestorsnetwork",
+   "name": "Real Estate Investors",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T16:31:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "realestatepros",
+   "name": "Real Estate Professionals Only",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T16:31:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "reigroup",
+   "name": "Real Estate Investing Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T16:31:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "remoteworkfornurses",
    "name": null,
    "status": "pending",
@@ -14415,6 +14595,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "socialrealestateinvestors",
+   "name": "Real Estate Investors United States of America",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-10T16:31:54+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-10T09:19:08+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-10T20:31:37+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1006)
+## Not yet probed (1019)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -895,6 +895,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `338330086179568` (found via leads_db)
 - `1697893427122178` (found via leads_db)
 - `2733133120173271` (found via leads_db)
+- `213641747302800` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -903,11 +904,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `amznsellers` (found via ddg)
 - `fbacommunity` (found via ddg)
 - `1582392532791911` (found via ddg)
+- `1622740769010505` (found via ddg)
 - `748375581363810` (found via ddg)
 - `4498586473758518` (found via ddg)
 - `851415561261142` (found via ddg)
 - `amazonfbatoday` (found via ddg)
 - `1727446317476806` (found via ddg)
+- `419902899262510` (found via ddg)
+- `fbabeginners` (found via ddg)
 - `1002630209124759` (found via ddg)
 - `amazonfba` (found via ddg)
 - `404280159946930` (found via ddg)
@@ -946,6 +950,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `764877593708803` (found via ddg)
 - `FindRemoteJobs` (found via ddg)
 - `7761445099` (found via ddg)
+- `insuranceagen` (found via ddg)
 - `1050679009595609` (found via ddg)
 - `lawfirmowners` (found via ddg)
 - `1598268047627604` (found via ddg)
@@ -967,6 +972,13 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `producthuntisrael` (found via ddg)
 - `profitabledigitalagencies` (found via ddg)
 - `625858050017927` (found via ddg)
+- `realestateinvestinginusa` (found via ddg)
+- `reigroup` (found via ddg)
+- `realestateinvestorsnetwork` (found via ddg)
+- `929987341305436` (found via ddg)
+- `1627195364165111` (found via ddg)
+- `socialrealestateinvestors` (found via ddg)
+- `realestatepros` (found via ddg)
 - `1517889866537019` (found via ddg)
 - `313682202336332` (found via ddg)
 - `remoteworkturkey` (found via ddg)
@@ -997,6 +1009,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `474293496993273` (found via ddg)
 - `1460476385552503` (found via ddg)
 - `coaches.and.consultants.community` (found via ddg)
+- `1031122788368778` (found via ddg)
 - `umake` (found via ddg)
 - `793335882635042` (found via ddg)
 - `900308687031185` (found via ddg)
