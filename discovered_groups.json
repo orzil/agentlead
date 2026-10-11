@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-11T03:31:25+00:00",
- "count": 1007,
+ "generated": "2026-10-11T09:35:57+00:00",
+ "count": 1008,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -4785,6 +4785,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-26T05:15:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "388455554855609",
+   "name": "Restaurant Owners, Pizza Chefs networking group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-11T09:35:55+00:00",
    "last_checked": null
   },
   {
