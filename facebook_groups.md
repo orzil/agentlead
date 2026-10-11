@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-11T09:35:57+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-11T20:50:40+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1021)
+## Not yet probed (1022)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -395,6 +395,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `lawfirmandcpaownerscommunity` (found via ddg)
 - `666726999839356` (found via ddg)
 - `lawfirmboms` (found via ddg)
+- `lbdfboo` (found via ddg)
 - `losangeles.california.startups` (found via ddg)
 - `constructionmanagementnetwork` (found via ddg)
 - `makeautomation` (found via config)
