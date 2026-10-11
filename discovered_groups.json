@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-10T23:52:23+00:00",
- "count": 1006,
+ "generated": "2026-10-11T03:31:25+00:00",
+ "count": 1007,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -9360,6 +9360,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:14:14+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "254113251820121",
+   "name": "Business For Practice Managers",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-11T03:31:24+00:00",
    "last_checked": null
   },
   {
