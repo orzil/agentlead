@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-12T10:07:10+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-12T23:32:44+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1022)
+## Not yet probed (1053)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -208,6 +208,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `saasfounderscommunity` (found via ddg)
 - `1900357930607912` (found via ddg)
 - `saasfoundershub` (found via ddg)
+- `1082974512753118` (found via ddg)
 - `saasfoundersgroup` (found via ddg)
 - `SaaSFounders` (found via ddg)
 - `saasfoundergroup` (found via ddg)
@@ -215,6 +216,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `sfenetworks` (found via ddg)
 - `2044902829088090` (found via ddg)
 - `1851637745054222` (found via ddg)
+- `295558589617828` (found via ddg)
 - `1017920189630354` (found via ddg)
 - `580487328806681` (found via ddg)
 - `smallbusinessownercommunityuk` (found via ddg)
@@ -421,6 +423,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `newzealandbusinessowners` (found via ddg)
 - `nzsmallbusinessnetwork` (found via ddg)
 - `newyorkstartups` (found via ddg)
+- `itowner` (found via ddg)
 - `profitablelawfirmowners` (found via ddg)
 - `promptengineeringmastermind` (found via ddg)
 - `inventivehub` (found via config)
@@ -450,6 +453,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1456978909319021` (found via ddg)
 - `shopifydropshippingshopifystoreowners` (found via ddg)
 - `3973264012777670` (found via ddg)
+- `839380519175999` (found via ddg)
 - `shopifyentrepreneurs` (found via ddg)
 - `shopifystoreownerforum` (found via ddg)
 - `shopifyownerscommunity` (found via ddg)
@@ -898,6 +902,29 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1697893427122178` (found via leads_db)
 - `2733133120173271` (found via leads_db)
 - `213641747302800` (found via leads_db)
+- `naturalspanish` (found via reddit_search)
+- `2052600685378464` (found via reddit_search)
+- `TLSevents` (found via reddit_search)
+- `365718316575377` (found via reddit_search)
+- `443878886416742` (found via reddit_search)
+- `230000921217147` (found via reddit_search)
+- `492548942452002` (found via reddit_search)
+- `2328505084590676` (found via reddit_search)
+- `1462102722401676` (found via reddit_search)
+- `bullseyecanada` (found via reddit_search)
+- `409668065779560` (found via reddit_search)
+- `391590981589525` (found via reddit_search)
+- `1367530863635364` (found via reddit_search)
+- `828159673618545` (found via reddit_search)
+- `452799272396015` (found via reddit_search)
+- `du302016movement` (found via reddit_search)
+- `1203728010022034` (found via reddit_search)
+- `kakampinoy` (found via reddit_search)
+- `21497469166` (found via reddit_search)
+- `784475333039562` (found via reddit_search)
+- `238724269036673` (found via reddit_search)
+- `296585457540183` (found via reddit_search)
+- `philpolitics` (found via reddit_search)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -941,11 +968,13 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `3719451304764538` (found via ddg)
 - `402786871855453` (found via ddg)
 - `dropshippinghow` (found via ddg)
+- `105769783096268` (found via ddg)
 - `Dubaiexpat` (found via ddg)
 - `entreprenellehub` (found via ddg)
 - `345613409204417` (found via ddg)
 - `founderscanada` (found via ddg)
 - `803297649286641` (found via ddg)
+- `1024387628004281` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
 - `gtapreneurs` (found via ddg)
 - `918031175736092` (found via ddg)
@@ -987,7 +1016,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `remoteworkturkey` (found via ddg)
 - `1234027487916127` (found via ddg)
 - `shopifydropshippinghelps` (found via ddg)
+- `shopifydropshipping4u` (found via ddg)
 - `439779113936650` (found via ddg)
+- `shopifydropshippingusagroup` (found via ddg)
 - `southafricanbusiness` (found via ddg)
 - `SABusinessHub` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
