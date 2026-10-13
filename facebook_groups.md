@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-13T05:05:27+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-13T10:00:29+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1055)
+## Not yet probed (1056)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -140,6 +140,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `saasautomationexpertszapierpabblymake` (found via ddg)
 - `560810556893848` (found via ddg)
 - `1184176781736143` (found via ddg)
+- `automationcommunity.bd` (found via ddg)
 - `279906104787742` (found via ddg)
 - `580118425856327` (found via ddg)
 - `canada.startup.jobs` (found via ddg)
