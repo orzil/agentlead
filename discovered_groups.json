@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-13T03:54:26+00:00",
- "count": 1040,
+ "generated": "2026-10-13T05:05:27+00:00",
+ "count": 1042,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -4920,6 +4920,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T02:24:38+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "507324381835947",
+   "name": "Make (Integromat) Automation Scenarios",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-13T05:05:25+00:00",
    "last_checked": null
   },
   {
@@ -14280,6 +14295,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-21T09:30:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "makecomcommunity",
+   "name": "Make.com Support & Solutions Community",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-13T05:05:25+00:00",
    "last_checked": null
   },
   {
