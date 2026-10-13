@@ -4,6 +4,8 @@
 
 | tier | lang | group | invite |
 |:---:|:---:|:---|:---|
+| A | EN | Remote Freelancers Network | https://chat.whatsapp.com/KjtRzc6BqdzDZWqJnNvEEl |
+| B | EN | Founders | https://chat.whatsapp.com/Gicwbzpra3EI4prz70hO6i |
 | A | HE | הייטק מרכז 2 - משרות ומחפשי עבודה | https://chat.whatsapp.com/Fah0dz2kx3KIv5mfgHMllf |
 | A | HE | משרות הייטק בישראל Hot Jobs | https://chat.whatsapp.com/K9iZLJunP8J7pzs35nrBqe |
 | A | HE | משרות ומחפשי עבודה - הייטק בשפלה | https://chat.whatsapp.com/KH0jTMLUev0LTWJNWcOqwu |
@@ -16,8 +18,8 @@
 | A | HE | משרות תכנות בהייטק | https://chat.whatsapp.com/HReSexN6JnELfk8iG7qHuT |
 | A | HE | - DH לוח משרות חמות בהייטק 3 - מלחמת חרבות הברזל 🇮🇱 🤺🧑🏻‍💻 | https://chat.whatsapp.com/KVtHCZUiNovFt0y5S0rLQP |
 | A | HE | 3,4 לעבודה! מאגר משרות שוות לגיוס | https://chat.whatsapp.com/FzjJ3MR8W5L2EqIKQHXu0B |
+| B | EN | ACM-opportunities | https://chat.whatsapp.com/JBl7ya6Cm958DRx348WnVU |
 | A | EN | AI Freelancers | https://chat.whatsapp.com/IRNzPUYVZWR5XVvqfMRSYd |
-| A | EN | AI Jobs 26' | https://chat.whatsapp.com/HDhzhsrlIXq3goC86OtE6y |
 | A | EN | Secret Data Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/DYqeGp10Irz4nt0vfre1Di |
 | A | EN | Secret Freelance Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/ERM2woMbUzk4agZxYpOAG8 |
 | A | EN | Secret Junior Data Jobs | https://chat.whatsapp.com/Dt1tVpE2yZj2MF4MQUv5Yl |
@@ -36,7 +38,6 @@
 | A | HE | משרות חמות למפתחי/ות פולסטאק מנוסים/ות - FullStack Developers 👨🏻‍💻👩🏿‍💻👩🏼‍💻 DH | https://chat.whatsapp.com/FOYAnxFI5429AifhvnehVy |
 | A | HE | משרות טק: data ג'וניורים 3 | https://chat.whatsapp.com/CFn1KuYXTUy8HZGLGgpw7x |
 | A | EN | AI & ML Innovators | https://chat.whatsapp.com/K1W2HaGTLa4B0KcEJjByq8 |
-| A | EN | AI ML Entrance exam TU Darmstadt | https://chat.whatsapp.com/IXxHehjqyfn6LgDLtICmlc |
 | A | EN | AI/ML at FODUU | https://chat.whatsapp.com/BEa1AojoPjvABoxVKKTphj |
 | B | EN | BA Digital Nomads Jobs 👩🏻‍💻⭐👨🏼‍💻 | https://chat.whatsapp.com/LLhOpx9HIMF5tHyssyWly6 |
 | A | EN | Data Science & AI Community 🇲🇿 | https://chat.whatsapp.com/IcqlFviLiHIBD3DBNBXfgc |
@@ -44,7 +45,6 @@
 | B | EN | Dehradun - Startups & Founders (Requires Approval) ✨🚀 | https://chat.whatsapp.com/CKz27j5iiYY2WPVzApbBsF |
 | B | EN | Digital Jobs🔥Ppc \| SEO \| SEM \| CSM \| Ecom - DH | https://chat.whatsapp.com/FJWTo0ixmkqHdiUgqYFcUG |
 | B | EN | Extreme Jobs 🇮🇱 | https://chat.whatsapp.com/D5DY7B5s8BK93YLoUGuYaQ |
-| B | EN | Freelance IU Society | https://chat.whatsapp.com/Ly36sMDsE5934DLkQkUhDT |
 | B | EN | Freelance Opportunities | https://chat.whatsapp.com/BqqRuagPoIl9upoOiNrVbr |
 | B | EN | Freelancers Pakistan_21 | https://chat.whatsapp.com/JzdHm90yMh56WouaYb1YUm |
 | B | EN | Freelancers Pakistan_22 | https://chat.whatsapp.com/EsekkU8QQl6CibZXhGXYkw |
