@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-14T08:19:05+00:00",
- "count": 1048,
+ "generated": "2026-10-14T20:31:04+00:00",
+ "count": 1052,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1158,6 +1158,21 @@
    "last_checked": null
   },
   {
+   "slug": "1420908489519969",
+   "name": "U.S. Small Business Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-14T20:31:02+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "144015363604936",
    "name": "Indian Entrepreneurs, Business Owners & Start-ups in Ireland",
    "status": "pending",
@@ -2265,6 +2280,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T22:10:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "809608623843223",
+   "name": "Small Business Or Startups In USA",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-14T20:31:02+00:00",
    "last_checked": null
   },
   {
@@ -8928,6 +8958,21 @@
    "last_checked": null
   },
   {
+   "slug": "174889539972621",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-14T16:12:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1752117815059760",
    "name": null,
    "status": "pending",
@@ -10365,6 +10410,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T17:33:47+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "348468202946051",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-14T16:12:50+00:00",
    "last_checked": null
   },
   {

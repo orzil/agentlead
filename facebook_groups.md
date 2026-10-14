@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-14T08:19:05+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-14T20:31:04+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1061)
+## Not yet probed (1065)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -221,6 +221,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `295558589617828` (found via ddg)
 - `1017920189630354` (found via ddg)
 - `580487328806681` (found via ddg)
+- `809608623843223` (found via ddg)
 - `smallbusinessownercommunityuk` (found via ddg)
 - `893840601407320` (found via ddg)
 - `smallbusinessownersnetworkusa` (found via ddg)
@@ -252,6 +253,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `TESNetwork` (found via ddg)
 - `transformyouragency` (found via ddg)
 - `211270969394435` (found via ddg)
+- `1420908489519969` (found via ddg)
 - `uksmallbusinessesadvertsfree` (found via ddg)
 - `2018989461513326` (found via ddg)
 - `1380135855880231` (found via ddg)
@@ -930,6 +932,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `238724269036673` (found via reddit_search)
 - `296585457540183` (found via reddit_search)
 - `philpolitics` (found via reddit_search)
+- `174889539972621` (found via leads_db)
+- `348468202946051` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
