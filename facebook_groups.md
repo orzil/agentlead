@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-14T03:12:09+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-14T08:19:05+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1057)
+## Not yet probed (1061)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -82,6 +82,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1129871225741454` (found via ddg)
 - `1182155486119040` (found via ddg)
 - `845546388110288` (found via ddg)
+- `aipromptlabforentrepreneurs` (found via ddg)
 - `airealtorsandbusinessowners` (found via ddg)
 - `aiforbusinessownersandfounders` (found via ddg)
 - `148693034913710` (found via ddg)
@@ -320,6 +321,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aieducatortools` (found via ddg)
 - `aifire.co` (found via ddg)
 - `aiprompthouse` (found via ddg)
+- `aiforbeginners` (found via ddg)
 - `aiforconstructioncompanies` (found via ddg)
 - `698593531630485` (found via leads_db)
 - `6374504275931127` (found via ddg)
@@ -328,6 +330,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `arabentrepreneurs` (found via ddg)
 - `1169730214931080` (found via ddg)
 - `1348711550214520` (found via leads_db)
+- `officialartificialintelligence` (found via ddg)
 - `ausbizownersclub` (found via ddg)
 - `487009714795019` (found via ddg)
 - `811045979419418` (found via ddg)
@@ -973,6 +976,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `dropshippinghow` (found via ddg)
 - `105769783096268` (found via ddg)
 - `Dubaiexpat` (found via ddg)
+- `Engineers` (found via ddg)
 - `entreprenellehub` (found via ddg)
 - `345613409204417` (found via ddg)
 - `founderscanada` (found via ddg)
