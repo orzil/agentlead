@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-14T00:58:19+00:00",
- "count": 1043,
+ "generated": "2026-10-14T03:12:09+00:00",
+ "count": 1044,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -9780,6 +9780,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-10T03:56:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2750181251878414",
+   "name": "De Online Ondernemers",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-14T02:19:04+00:00",
    "last_checked": null
   },
   {

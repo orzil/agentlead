@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-14T00:58:19+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-14T03:12:09+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1056)
+## Not yet probed (1057)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -969,6 +969,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `coachingandconsulting` (found via ddg)
 - `3719451304764538` (found via ddg)
 - `402786871855453` (found via ddg)
+- `2750181251878414` (found via ddg)
 - `dropshippinghow` (found via ddg)
 - `105769783096268` (found via ddg)
 - `Dubaiexpat` (found via ddg)
