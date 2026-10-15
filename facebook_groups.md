@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-15T07:55:53+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-15T20:18:13+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1068)
+## Not yet probed (1073)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -352,6 +352,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1058223315954721` (found via ddg)
 - `SBClassifiedsAustralia` (found via ddg)
 - `395388637899902` (found via ddg)
+- `businessstartupshyderabad` (found via ddg)
 - `startupindiaunited` (found via ddg)
 - `2042129792706031` (found via ddg)
 - `239247780029186` (found via ddg)
@@ -379,6 +380,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `386218954793964` (found via ddg)
 - `entrepreneursletsbuildtogether` (found via ddg)
 - `165114167522089` (found via ddg)
+- `entrepreneursindia` (found via ddg)
 - `1ib.marioschaefer.032` (found via ddg)
 - `222801067848068` (found via ddg)
 - `ESC.STARTUS` (found via ddg)
@@ -490,6 +492,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupcaliforniaclub` (found via ddg)
 - `startupeurope` (found via ddg)
 - `StartupEuropeClub` (found via ddg)
+- `ipsindia` (found via ddg)
+- `startupsofindiacommunity` (found via ddg)
 - `242109094001690` (found via ddg)
 - `StartupIrelandClub` (found via ddg)
 - `startupincanada` (found via ddg)
@@ -1063,6 +1067,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `793335882635042` (found via ddg)
 - `900308687031185` (found via ddg)
 - `workfromwifi` (found via ddg)
+- `websitedesigningdevelopmentcompanyindia` (found via ddg)
 - `669886889110965` (found via ddg)
 - `wunderbuilders` (found via ddg)
 - `zapierusercommunity` (found via ddg)
