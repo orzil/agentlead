@@ -20,6 +20,7 @@
 | A | HE | 3,4 לעבודה! מאגר משרות שוות לגיוס | https://chat.whatsapp.com/FzjJ3MR8W5L2EqIKQHXu0B |
 | B | EN | ACM-opportunities | https://chat.whatsapp.com/JBl7ya6Cm958DRx348WnVU |
 | A | EN | AI Freelancers | https://chat.whatsapp.com/IRNzPUYVZWR5XVvqfMRSYd |
+| A | EN | Data Science ( AI / ML / GEN AI / Data Engineering) Community | https://chat.whatsapp.com/I3xePjLXeRiGN1iWZCPs5f |
 | A | EN | Secret Data Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/DYqeGp10Irz4nt0vfre1Di |
 | A | EN | Secret Freelance Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/ERM2woMbUzk4agZxYpOAG8 |
 | A | EN | Secret Junior Data Jobs | https://chat.whatsapp.com/Dt1tVpE2yZj2MF4MQUv5Yl |
@@ -45,12 +46,11 @@
 | B | EN | Dehradun - Startups & Founders (Requires Approval) ✨🚀 | https://chat.whatsapp.com/CKz27j5iiYY2WPVzApbBsF |
 | B | EN | Digital Jobs🔥Ppc \| SEO \| SEM \| CSM \| Ecom - DH | https://chat.whatsapp.com/FJWTo0ixmkqHdiUgqYFcUG |
 | B | EN | Extreme Jobs 🇮🇱 | https://chat.whatsapp.com/D5DY7B5s8BK93YLoUGuYaQ |
+| B | EN | Freelance Community - 1 | https://chat.whatsapp.com/H12loUTd5LU8pGznlosCy4 |
+| B | EN | Freelance Community - 2 | https://chat.whatsapp.com/HuRXXNp4CeRLp0ClSnVCmn |
+| B | EN | Freelance Community - 3 | https://chat.whatsapp.com/FtTRBLlsHaVAY6FVV6KuH4 |
+| B | EN | Freelance Community - 4 | https://chat.whatsapp.com/E7FX9VzGxX7A398Jk8DroW |
 | B | EN | Freelance Opportunities | https://chat.whatsapp.com/BqqRuagPoIl9upoOiNrVbr |
+| B | EN | Freelancer | https://chat.whatsapp.com/HFxuW4xFd9B9kl2OdMXraC |
 | B | EN | Freelancers Pakistan_21 | https://chat.whatsapp.com/JzdHm90yMh56WouaYb1YUm |
 | B | EN | Freelancers Pakistan_22 | https://chat.whatsapp.com/EsekkU8QQl6CibZXhGXYkw |
-| B | EN | Freelancers Pakistan_23 | https://chat.whatsapp.com/DnaNyI9k6DU1aiTEPWigIK |
-| B | EN | Freelancers Pakistan_24 | https://chat.whatsapp.com/FNP4oVEVjMa8EYjlxqVJqv |
-| B | EN | Freelancers Pakistan_25 | https://chat.whatsapp.com/DprutYxcciW1EtdCqvPknI |
-| B | EN | Freelancers Pakistan_26 | https://chat.whatsapp.com/EbFcwZIunPvJkHDAsELyXC |
-| B | EN | Freelancers Pakistan_27 | https://chat.whatsapp.com/BEz8F3WqdpeFgfSevrA1q6 |
-| B | EN | Freelancers Pakistan_28 | https://chat.whatsapp.com/BguARncP3cgCxPDX4LuitL |
