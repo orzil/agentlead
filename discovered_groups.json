@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-15T02:51:04+00:00",
- "count": 1054,
+ "generated": "2026-10-15T07:55:54+00:00",
+ "count": 1055,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -15330,6 +15330,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-10T16:31:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "software.dev.ph",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-15T07:55:53+00:00",
    "last_checked": null
   },
   {

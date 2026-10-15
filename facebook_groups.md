@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-15T02:51:04+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-15T07:55:53+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1067)
+## Not yet probed (1068)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -936,6 +936,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `philpolitics` (found via reddit_search)
 - `174889539972621` (found via leads_db)
 - `348468202946051` (found via leads_db)
+- `software.dev.ph` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
