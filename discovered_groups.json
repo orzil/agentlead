@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-16T07:49:20+00:00",
- "count": 1061,
+ "generated": "2026-10-16T19:50:47+00:00",
+ "count": 1063,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -7698,6 +7698,21 @@
    "last_checked": null
   },
   {
+   "slug": "whispering.developers",
+   "name": "מפתחים מתלחשים",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-16T19:50:46+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "workfromhomeopportunities",
    "name": "Work from Home Opportunities by Everything Female Entrepreneurs",
    "status": "pending",
@@ -15030,6 +15045,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-27T07:07:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "pythonconnect",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-16T15:45:00+00:00",
    "last_checked": null
   },
   {

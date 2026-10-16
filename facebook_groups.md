@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-16T07:49:20+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-16T19:50:47+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1074)
+## Not yet probed (1076)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -558,6 +558,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `talkingautomation` (found via leads_db)
 - `3d.printing.israel` (found via ddg)
 - `105474902826094` (found via ddg)
+- `whispering.developers` (found via ddg)
 - `automationil` (found via ddg)
 - `587640282883229` (found via ddg)
 - `1406771276210792` (found via ddg)
@@ -942,6 +943,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `348468202946051` (found via leads_db)
 - `software.dev.ph` (found via leads_db)
 - `807226382339543` (found via leads_db)
+- `pythonconnect` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
