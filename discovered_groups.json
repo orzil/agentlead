@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-16T22:41:30+00:00",
- "count": 1063,
+ "generated": "2026-10-17T00:47:35+00:00",
+ "count": 1064,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -13170,6 +13170,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:11:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "agapechurchnakurukenya",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-17T00:47:35+00:00",
    "last_checked": null
   },
   {
