@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-17T19:06:19+00:00",
- "count": 1064,
+ "generated": "2026-10-17T21:29:03+00:00",
+ "count": 1069,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -255,6 +255,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-27T20:07:37+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1167283816632326",
+   "name": "דרושים - משרות הייטק",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-17T21:29:01+00:00",
    "last_checked": null
   },
   {
@@ -828,6 +843,21 @@
    "last_checked": null
   },
   {
+   "slug": "jobsFor.High.tech",
+   "name": "דרושים להייטק & פרילנסרים",
+   "status": "pending",
+   "relevance": 3,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-17T21:29:01+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "n8ngroup",
    "name": "n8n Group - AI Agents, Help & Tutorials, Hiring & Jobs | by n8nLearn",
    "status": "pending",
@@ -1185,6 +1215,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-14T20:31:02+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1434209956684661",
+   "name": "משרות הייטק שוות בין חברים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-17T21:29:01+00:00",
    "last_checked": null
   },
   {
@@ -3168,6 +3213,21 @@
    "last_checked": null
   },
   {
+   "slug": "high.tech.part.time.jobs.israel",
+   "name": "משרות הייטק חלקיות בין חברים !",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-17T21:29:01+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "highlevelagencyowner",
    "name": "GoHighLevel Agency Owners",
    "status": "pending",
@@ -3285,6 +3345,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-19T21:29:08+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "jobshi",
+   "name": "משרות הייטק",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-17T21:29:01+00:00",
    "last_checked": null
   },
   {

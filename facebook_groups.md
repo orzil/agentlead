@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-17T19:06:19+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-17T21:29:03+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1077)
+## Not yet probed (1082)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -110,6 +110,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `us.small.business.startup.founderss` (found via ddg)
 - `3950438358565515` (found via ddg)
 - `n8ngroup` (found via ddg)
+- `1167283816632326` (found via ddg)
+- `jobsFor.High.tech` (found via ddg)
 - `284048350858807` (found via ddg)
 - `549774260167586` (found via ddg)
 - `1448272189379640` (found via ddg)
@@ -305,11 +307,14 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `cladue` (found via leads_db)
 - `609641652802760` (found via ddg)
 - `500323936646268` (found via ddg)
+- `jobshi` (found via ddg)
 - `israel.hightech` (found via ddg)
 - `147963012536297` (found via ddg)
 - `no.experience` (found via ddg)
+- `high.tech.part.time.jobs.israel` (found via ddg)
 - `noexpjobs` (found via ddg)
 - `926122620829127` (found via ddg)
+- `1434209956684661` (found via ddg)
 - `devjob` (found via ddg)
 - `fed.israel` (found via leads_db)
 - `developersmeetstartups` (found via config)
