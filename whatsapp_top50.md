@@ -31,7 +31,6 @@
 | A | HE | משרות פיתוח תוכנה ו-Mid-Senior AI | https://chat.whatsapp.com/BIRZ3bs9VMuB5CdJfGhsko |
 | A | HE | משרות תכנות בהייטק | https://chat.whatsapp.com/HReSexN6JnELfk8iG7qHuT |
 | A | HE | - DH לוח משרות חמות בהייטק 3 - מלחמת חרבות הברזל 🇮🇱 🤺🧑🏻‍💻 | https://chat.whatsapp.com/KVtHCZUiNovFt0y5S0rLQP |
-| A | HE | 3,4 לעבודה! מאגר משרות שוות לגיוס | https://chat.whatsapp.com/FzjJ3MR8W5L2EqIKQHXu0B |
 | B | EN | ACM-opportunities | https://chat.whatsapp.com/JBl7ya6Cm958DRx348WnVU |
 | A | EN | AI Freelancers | https://chat.whatsapp.com/IRNzPUYVZWR5XVvqfMRSYd |
 | B | EN | CEO & GM - Hi-Tech | https://chat.whatsapp.com/D0OljmsCURg7eIWHItxvFR |
@@ -46,10 +45,11 @@
 | B | EN | business automation | https://chat.whatsapp.com/L5Bp1LZmyCs6WSbNws3nc8 |
 | B | HE | אוטומציות מערכות ומה שבינהם | https://chat.whatsapp.com/FNiR3bUEQQV6jQYLjqKG6f |
 | A | HE | מחפשי עבודה \| דאטה, מערכות מידע, מוצר ופרויקטים | https://chat.whatsapp.com/BC50g1YwPDfIVF86IAKOee |
+| B | HE | מקצועני קידום אתרים SEO | https://chat.whatsapp.com/Dl9EQ8UXbGXF1EjEgkGapS |
 | B | EN | AI & ML Innovators | https://chat.whatsapp.com/K1W2HaGTLa4B0KcEJjByq8 |
 | A | EN | AI/ML at FODUU | https://chat.whatsapp.com/BEa1AojoPjvABoxVKKTphj |
 | B | EN | BA Digital Nomads Jobs 👩🏻‍💻⭐👨🏼‍💻 | https://chat.whatsapp.com/LLhOpx9HIMF5tHyssyWly6 |
-| A | EN | Data science & ML | https://chat.whatsapp.com/Cu8VyFsiC4SBI0e9YVdN7c |
+| B | EN | Data science & ML | https://chat.whatsapp.com/Cu8VyFsiC4SBI0e9YVdN7c |
 | B | EN | Digital Jobs🔥Ppc \| SEO \| SEM \| CSM \| Ecom - DH | https://chat.whatsapp.com/FJWTo0ixmkqHdiUgqYFcUG |
 | B | EN | Extreme Jobs 🇮🇱 | https://chat.whatsapp.com/D5DY7B5s8BK93YLoUGuYaQ |
 | B | EN | Freelance Community - 1 | https://chat.whatsapp.com/H12loUTd5LU8pGznlosCy4 |
