@@ -15,6 +15,7 @@
 | A | HE | משרות פיתוח תוכנה ו-Mid-Senior AI | https://chat.whatsapp.com/BIRZ3bs9VMuB5CdJfGhsko |
 | A | HE | משרות תכנות בהייטק | https://chat.whatsapp.com/HReSexN6JnELfk8iG7qHuT |
 | A | HE | - DH לוח משרות חמות בהייטק 3 - מלחמת חרבות הברזל 🇮🇱 🤺🧑🏻‍💻 | https://chat.whatsapp.com/KVtHCZUiNovFt0y5S0rLQP |
+| A | EN | AI Freelancers | https://chat.whatsapp.com/IRNzPUYVZWR5XVvqfMRSYd |
 | A | EN | Secret Data Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/DYqeGp10Irz4nt0vfre1Di |
 | A | EN | Secret Freelance Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/ERM2woMbUzk4agZxYpOAG8 |
 | A | EN | Secret Machine Learning Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/Dn2x3HJugrS9PeWry7EGjh |
@@ -47,10 +48,9 @@
 | B | EN | Secret Product Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/KNkp5Gqn74Z6vjCqjMJTlL |
 | B | EN | Secret Project Managers Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/Im5xDBgTJfNI7WCfXQWaz3 |
 | B | EN | Secret QA Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/CQ9X6yyIY622r42nh0QGU4 |
+| B | EN | AI for Digital Marketing | https://chat.whatsapp.com/L7tsApehK6BLW4dZJ19YPE |
+| B | EN | CineAI Founders Hub - SF Bay Area | https://chat.whatsapp.com/F6XRN1o6rkcEmhuLsMNoLH |
 | B | EN | FAITH DRIVEN INVESTORS & FOUNDERS | https://chat.whatsapp.com/ElhzksTZWYU6y6MF1LsGxQ |
 | B | EN | Founder's Forum | https://chat.whatsapp.com/JxZfk1pSxXA5vXMbuCB9Vw |
 | B | EN | Founders | https://chat.whatsapp.com/Gicwbzpra3EI4prz70hO6i |
 | B | EN | GoodGigs #general-chat 1 | https://chat.whatsapp.com/I4zWarBMXXE5LZr3aDswR9 |
-| B | EN | Innovation to startup 1st | https://chat.whatsapp.com/Cp2S3wtpE7UHp5dR7BK7Am |
-| B | EN | ACM-opportunities | https://chat.whatsapp.com/JBl7ya6Cm958DRx348WnVU |
-| A | EN | AI Freelancers | https://chat.whatsapp.com/IRNzPUYVZWR5XVvqfMRSYd |
