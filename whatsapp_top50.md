@@ -33,24 +33,24 @@
 | A | HE | קהילת קריירה \| הייטק \| משרות וצמיחה מקצועית בהובלת דנה פרנקל (קבוצה 2) | https://chat.whatsapp.com/Ktbs8loC7Tm0Nwedid9MoO |
 | A | HE | קהילת קריירה \| נשים בהייטק \| משרות וצמיחה מקצועית בהובלת דנה פרנקל (קבוצה 1) | https://chat.whatsapp.com/E8vGnjrLBqu3Fuh01mqf9R |
 | A | HE | קהילת קריירה \| נשים בהייטק \| משרות וצמיחה מקצועית בהובלת דנה פרנקל (קבוצה 3) | https://chat.whatsapp.com/CemAphwvYG6Hdrj8aRXIEq |
+| A | EN | Freelance Community - 1 | https://chat.whatsapp.com/H12loUTd5LU8pGznlosCy4 |
+| A | EN | Freelance Community - 2 | https://chat.whatsapp.com/HuRXXNp4CeRLp0ClSnVCmn |
+| A | EN | Freelance Community - 3 | https://chat.whatsapp.com/FtTRBLlsHaVAY6FVV6KuH4 |
+| A | EN | Freelance Community - 4 | https://chat.whatsapp.com/E7FX9VzGxX7A398Jk8DroW |
 | A | EN | Freelance Opportunities | https://chat.whatsapp.com/BqqRuagPoIl9upoOiNrVbr |
 | A | EN | Remote Freelancers Network | https://chat.whatsapp.com/KjtRzc6BqdzDZWqJnNvEEl |
+| A | EN | Remote Jobs Community | https://chat.whatsapp.com/H7QZIJcZHqV52zWQa1yObm |
 | A | EN | Secret Frontend & Full stack Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/ChHMWsbhqpC8cNLiD9CC1C |
 | A | EN | Secret Remote Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/COCX2hjsIe6JLc88IKHciS |
 | A | EN | Remote Link - Remote Job Opportunities | https://chat.whatsapp.com/LKATnG8Uxqd8P8btChw8Dq |
 | A | EN | Secret Backend Job 🕵🏻‍♂️ | https://chat.whatsapp.com/ChqI0DRFTiyFwBHqrBkmV6 |
+| B | EN | Data Science ( AI / ML / GEN AI / Data Engineering) Community | https://chat.whatsapp.com/I3xePjLXeRiGN1iWZCPs5f |
 | B | EN | Extreme Jobs 🇮🇱 | https://chat.whatsapp.com/D5DY7B5s8BK93YLoUGuYaQ |
+| B | EN | Freelancer | https://chat.whatsapp.com/HFxuW4xFd9B9kl2OdMXraC |
+| B | EN | Python & AI Community | https://chat.whatsapp.com/Fay4UDQo9ZcA2XpMK6biSF |
 | B | EN | Secret Cyber Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/BYAzTirrKH2Jqx2O0Q4OGo |
 | B | EN | Secret DevOps Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/HJ0vbHW8UCM43glw8jYhlg |
 | B | EN | Secret Executives & VP Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/IjZx9XKChG96d2OkKvs9Wo |
 | B | EN | Secret Marketing Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/I9IGYvrkhM50b8HM0imwLw |
 | B | EN | Secret Olim Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/C9bNFzcuJgaHnoQHXEiXLI |
 | B | EN | Secret Product Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/KNkp5Gqn74Z6vjCqjMJTlL |
-| B | EN | Secret Project Managers Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/Im5xDBgTJfNI7WCfXQWaz3 |
-| B | EN | Secret QA Jobs 🕵🏻‍♂️ | https://chat.whatsapp.com/CQ9X6yyIY622r42nh0QGU4 |
-| B | EN | AI for Digital Marketing | https://chat.whatsapp.com/L7tsApehK6BLW4dZJ19YPE |
-| B | EN | CineAI Founders Hub - SF Bay Area | https://chat.whatsapp.com/F6XRN1o6rkcEmhuLsMNoLH |
-| B | EN | FAITH DRIVEN INVESTORS & FOUNDERS | https://chat.whatsapp.com/ElhzksTZWYU6y6MF1LsGxQ |
-| B | EN | Founder's Forum | https://chat.whatsapp.com/JxZfk1pSxXA5vXMbuCB9Vw |
-| B | EN | Founders | https://chat.whatsapp.com/Gicwbzpra3EI4prz70hO6i |
-| B | EN | GoodGigs #general-chat 1 | https://chat.whatsapp.com/I4zWarBMXXE5LZr3aDswR9 |
