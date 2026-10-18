@@ -527,6 +527,28 @@ Goal: 50 relevant WhatsApp invite links (HE+EN) by morning for Or to join by han
   window (04-09 UTC).
 - Drafts (gitignored): `portfolio_draft.md`, `talent_networks.md`, `MORNING_PLAN.md`.
 
+## 2026-10-18 — WhatsApp groups joined + read on the second phone (`wa_phone.py`)
+- **Hardware:** second SIM in a Galaxy S9 (Android 9, Hebrew UI, old active account), USB to this PC,
+  ADB authorized, screen lock set to None by Or. adb at `%USERPROFILE%\tools\platform-tools`.
+- **No linked device.** Or ruled out WhatsApp Web; neonize/Baileys removed from `whatsapp_reader.py`
+  (only `_to_lead` remains). `wa_phone.py` drives the official app via `am start` + `uiautomator dump` + taps.
+- **Join:** targets = `whatsapp_top50.md` (pulled each pass), Or's order (freelance/AI first, general boards
+  last), ≤1 join/pass, 09–21 IL, 6/day, 90-min gap. Get-rich sheets skipped (`SCAM_RE`; "AI Freelancers"
+  was one). Admin-approval groups → `requested`, rechecked daily. Day 1: joined *Secret Machine Learning Jobs*.
+- **Read:** chat list scrolled to top (WhatsApp keeps scroll position), allowlisted groups with an unread
+  badge opened, screens dumped to the bottom. Verified ids: `message_text`, `caption`, `date`,
+  `conversation_row_date_divider`, join sheet ids. **Unverified:** group sender ids (`name_in_group*`) -
+  only admin-only groups to test on; kv `wa_bubble_ids` collects the real ids seen. Long "read more"
+  messages are read truncated.
+- **Questions as leads:** prefilter verdict `question` (WhatsApp: strong domain + question marker, not a
+  learner ask) → `scorer.score_question` (Ollama first) → ❓ push with angle + `wa.me` link. `test_gate.py`
+  24/24 incl. 5 new cases. End-to-end test pushed one ❓ and one 🎯 (both 8/10) to Telegram.
+- **Schedule:** Task Scheduler is *access denied* for this account (even unsandboxed), so `wa_loop.py`
+  (pythonw, Startup-folder shortcut "AgentLead WhatsApp", localhost-socket single instance) runs
+  `main.py --wa-pass` every 2h. PC sleep set to never on AC. Daily "WhatsApp phone OK" Telegram heartbeat.
+- **Known gap:** Telegram feedback words on WhatsApp pushes are lost when the cloud's `feedback` job polls
+  first (separate offsets; the cloud DB has no WhatsApp leads). Pre-existing for cloud_sync too.
+
 ## Open items
 - **Nothing is blocked on the user.** Checked 2026-09-06: the two standing "user action" items
   (join FB / WhatsApp groups) were measured and demoted below — see the yield table reasoning.

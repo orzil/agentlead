@@ -33,3 +33,7 @@ wa.db
 portfolio_draft.md
 talent_networks.md
 MORNING_PLAN.md
+
+# local scratch output (may hold lead text)
+scratch_*
+*.err

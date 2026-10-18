@@ -4,6 +4,7 @@ from __future__ import annotations
 import html
 import json
 import logging
+import re
 import sqlite3
 from datetime import datetime
 
@@ -18,7 +19,29 @@ SOURCE_ICONS = {
     "facebook": "\U0001F4D8", "upwork": "\U0001F7E2", "wellfound": "\U0001F680",
     "xplace": "\U0001F1EE\U0001F1F1", "secrettelaviv": "\U0001F1EE\U0001F1F1",
     "hn": "\U0001F7E0", "r": "\U0001F916", "linkedin": "\U0001F537",
+    "whatsapp": "\U0001F4AC",
 }
+
+
+def _open_line(row: sqlite3.Row) -> str:
+    """The link at the bottom of a push. WhatsApp messages have no web URL (the
+    synthetic whatsapp:// id is for dedup only, and Telegram rejects the scheme),
+    so they get the group + time as text instead."""
+    if row["url"].startswith("whatsapp://"):
+        when = (row["posted_at"] or "")[:16].replace("T", " ")
+        group = row["source"].split("/", 1)[-1]
+        return f"\n\U0001F4AC in <b>{html.escape(group)}</b> {when} UTC"
+    return f'\n<a href="{html.escape(row["url"], quote=True)}">Open post →</a>'
+
+
+def _wa_contact(row: sqlite3.Row) -> str | None:
+    """Sender line for a WhatsApp lead: name plus a tappable wa.me link, so Or
+    can DM the poster from his main phone."""
+    if not row["url"].startswith("whatsapp://"):
+        return None
+    m = re.search(r"https://wa\.me/\d+", row["raw_text"] or "")
+    who = html.escape(row["author"] or "?")
+    return f"\U0001F464 {who}" + (f" - {m.group(0)}" if m else "")
 
 
 def _send_raw(text: str) -> int | None:
@@ -73,10 +96,35 @@ def notify_lead(row: sqlite3.Row, pitch: str | None = None) -> int | None:
         lines.append("⚡ <b>Easy Apply</b> - one tap, no cover letter")
     if red_flags:
         lines.append("⚠️ " + html.escape(", ".join(red_flags)))
+    contact = _wa_contact(row)
+    if contact:
+        lines.append(contact)
     if pitch:
         lines.append(f"\n✍️ <b>Suggested reply</b> (copy-paste):\n"
                      f"<code>{html.escape(pitch[:1200])}</code>")
-    lines.append(f'\n<a href="{html.escape(row["url"], quote=True)}">Open post →</a>')
+    lines.append(_open_line(row))
+    return _send_raw("\n".join(lines))
+
+
+def notify_question(row: sqlite3.Row) -> int | None:
+    """Push for a domain QUESTION (see scorer.score_question): the question in
+    full, who asked, and the angle Or could answer from. Returns the message id
+    so the usual one-word replies (good/spam/less/more) work on it too."""
+    icon = SOURCE_ICONS.get(row["source"].split("/")[0], "\U0001F4CC")
+    lines = [
+        f"❓ <b>Question {row['score']}/10</b> - answer it, win the work",
+        f"{icon} {html.escape(row['source'])}",
+        "",
+        html.escape((row["raw_text"] or "")[:900]),
+    ]
+    if row["summary"]:
+        lines.append(f"\n\U0001F4A1 {html.escape(row['summary'])}")
+    if row["reasoning"]:
+        lines.append(f"\U0001F3AF Angle: {html.escape(row['reasoning'])}")
+    contact = _wa_contact(row)
+    if contact:
+        lines.append(contact)
+    lines.append(_open_line(row))
     return _send_raw("\n".join(lines))
 
 
@@ -98,7 +146,8 @@ def send_digest(rows: list[sqlite3.Row]) -> bool:
         lines.append(
             f"<b>{r['score']}/10</b> [{html.escape(r['source'])}] "
             f"{html.escape((r['summary'] or r['raw_text'])[:150])}\n"
-            f'<a href="{html.escape(r["url"], quote=True)}">link</a>'
+            + (f'<a href="{html.escape(r["url"], quote=True)}">link</a>'
+               if r["url"].startswith("http") else _open_line(r).strip())
         )
         lines.append("")
     return _send_raw("\n".join(lines))

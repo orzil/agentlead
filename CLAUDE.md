@@ -180,10 +180,21 @@ list the user acts on by hand — the agent never sends a join request. Two surf
 2026-08-06: DB-mining is free but yields **0** for Facebook (all 17 slugs in 6,794 stored posts
 were already known — the opposite of WhatsApp, where invite links get shared constantly), and
 DuckDuckGo is the **only** engine still returning organic results (Bing/Startpage/Mojeek
-captcha-walled, Brave 429). WhatsApp is discovery-only **by design** — there is no logged-out read surface, and
-driving WhatsApp Web would risk the user's personal number, so the agent finds the doors and the
-user walks through them. If a joined group proves valuable, cover it via notification emails
-(the private-Facebook-group trick), never by automation.
+captcha-walled, Brave 429). WhatsApp has no logged-out read surface, so discovery only finds the doors.
+
+**WhatsApp joining + reading (`wa_phone.py`, 2026-10-18)** drives the **official app** on a
+dedicated phone (second SIM, Galaxy S9, Hebrew UI) over USB with `adb` — `am start` an invite
+link, `uiautomator dump`, tap. **Never a linked device** (neonize/Baileys/WhatsApp Web were
+removed: that is the surface Meta bans for automation — Or's rule). Load-bearing rails: it never
+types; it only opens groups it joined itself (`title_on_phone` allowlist — the phone also holds
+Or's other chats); ≤1 join per pass, 09–21 IL, `WA_JOIN_DAILY_CAP` (6)/day, best groups first
+(`_priority`: freelance/AI before general job boards), get-rich sheets skipped (`SCAM_RE`); a ban
+or re-verify screen sets kv `wa_phone_killed` and every later pass stops until
+`wa_phone.py --unkill`. It is **local only** and runs from `wa_loop.py` (Startup-folder shortcut,
+every 2h) because Task Scheduler is access-denied on this account. Group messages flow through
+the normal pipeline; a domain **question** (`prefilter` verdict `question`, `QUESTION_RE` minus
+`LEARNER_RE`, WhatsApp only) is scored by `scorer.score_question` and pushed as ❓. Keep the
+phone's screen lock at None and the S9's screen asleep between passes (AMOLED burn-in).
 
 **Outreach (`replier.py` + `notifier.py`).** Auto-reply is **Reddit only** — Facebook and LinkedIn
 are deliberately excluded because automating the user's account risks a ban, and Freelancer.com was

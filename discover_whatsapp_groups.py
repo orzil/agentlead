@@ -1,14 +1,12 @@
 """Find WhatsApp groups worth JOINING - a discovery tool, not a fetcher.
 
 WhatsApp has no logged-out read surface: you cannot see a group's messages
-without joining, and joining/reading via WhatsApp Web automation risks a ban on
-the user's personal number. So this script deliberately stops at discovery -
-same rule as Facebook, where the account is never automated. It produces a
-ranked list of invite links; the user joins the good ones by hand.
+without joining, and joining/reading via WhatsApp Web automation risks a ban.
+So this script stops at discovery: it produces a ranked list of invite links.
 
-NON-GOAL (do not add): reading messages out of joined groups. If those groups
-turn out to carry leads, the safe path is the one already used for private
-Facebook groups - forward/notify by email and let email_fetcher ingest them.
+Joining and reading happen elsewhere: wa_phone.py drives the official app on
+a DEDICATED phone over ADB (never WhatsApp Web / a linked device), joining the
+night hunt's whatsapp_top50.md slowly and reading the groups it joined.
 
 Three free discovery surfaces, cheapest first:
   1. mine_db      - invite links already sitting in fetched posts (Telegram and

@@ -68,6 +68,22 @@ CASES = [
     ("wa hebrew seeker", "whatsapp/Test Group",
      "מפתח פרילנסר זמין לפרויקטים בתחום בינה מלאכותית ואוטומציה, פנו אליי בפרטי",
      NOW, "gate_seeker"),
+    # --- WhatsApp domain QUESTIONS (2026-10-18): a second kind of lead - Or
+    # answers, the asker becomes a client. Learner asks stay offtopic. ---
+    ("wa hebrew domain question", "whatsapp/Test Group",
+     "מישהו מכיר דרך טובה לעשות OCR על חשבוניות סרוקות בעברית? הטסרקט נותן לנו זבל",
+     NOW, "question"),
+    ("wa english domain question", "whatsapp/Test Group",
+     "Has anyone used YOLO for defect detection on a production line? Our false "
+     "positives are killing us", NOW, "question"),
+    ("wa offtopic question", "whatsapp/Test Group",
+     "Does anyone know a good accountant in Tel Aviv for a small company?",
+     NOW, "gate_offtopic"),
+    ("wa learner question", "whatsapp/Test Group",
+     "איך מתחילים ללמוד למידת מכונה? יש המלצה על קורס טוב?", NOW, "gate_noise"),
+    ("wa full-time post", "whatsapp/Test Group",
+     "דרוש/ה מפתח/ת Computer Vision למשרה מלאה בחברת סטארטאפ בהרצליה, היברידי",
+     NOW, "gate_full_time"),
     ("python dev available", "r/PythonJobs",
      "Python Developer Available - Bots, Automation & Custom Scripts. Hi everyone, I'm a "
      "Python developer currently looking to take on freelance work. I can help with: "

@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 import sys
 import time
 from datetime import datetime
@@ -69,13 +70,15 @@ def job_linkedin(conn) -> None:
 
 
 def job_whatsapp_read(conn) -> None:
-    """Ingest messages the WhatsApp reader collected on the DEDICATED number.
-    No-ops when unpaired, which is the normal state until Or sets up a second
-    number - it must never break the scheduler."""
-    import whatsapp_reader
-    leads = whatsapp_reader.fetch(conn)
+    """Join + read WhatsApp groups on the DEDICATED phone (official app over
+    ADB, see wa_phone.py), then ingest. Local only: a no-op wherever adb isn't
+    installed - notably every GitHub runner - so it never breaks a cloud pass."""
+    import wa_phone
+    if not os.path.exists(wa_phone.ADB):
+        return
+    leads = wa_phone.run_pass(conn)
     if leads:
-        pipeline.ingest_many(conn, leads, "whatsapp_read")
+        pipeline.ingest_many(conn, leads, "whatsapp_phone")
 
 
 def job_whatsapp(conn) -> None:
@@ -224,7 +227,7 @@ JOBS = [
     ("remotive", 8 * 3600, job_remotive),      # rate-limited ~4/day, 24h-delayed
     ("fbsearch", 45 * 60, job_fbsearch),    # post permalinks from the search index
     ("facebook", 8 * 3600, job_facebook),      # public groups; self-caps at 3 runs/day
-    ("whatsapp_read", 15 * 60, job_whatsapp_read),  # dedicated-number reader (local, dormant until paired)
+    ("whatsapp_read", 2 * 3600, job_whatsapp_read),  # dedicated phone over ADB (local; no-op without adb)
     ("whatsapp", 24 * 3600, job_whatsapp),     # mine invite links out of stored posts
     ("feedback", 5 * 60, job_feedback),        # one-word verdicts from the phone
     ("cloud_sync", 20 * 60, job_cloud_sync),   # pull cloud-found leads home
@@ -391,6 +394,9 @@ def regate(conn) -> None:
         elif verdict == "partnership":
             conn.execute("UPDATE leads SET status='partnership', "
                          "reasoning='gate: partnership' WHERE id=?", (r["id"],))
+        elif verdict == "question":
+            conn.execute("UPDATE leads SET status='question', "
+                         "reasoning='gate: question' WHERE id=?", (r["id"],))
         else:
             conn.execute("UPDATE leads SET status='gated_out', reasoning=? WHERE id=?",
                          (f"gate: {verdict.removeprefix('gate_')}", r["id"]))
@@ -756,8 +762,20 @@ def main() -> None:
                          "(e.g. --only aijobs,companies,telegram)")
     ap.add_argument("--skip", metavar="JOBS",
                     help="with --once: skip these jobs, comma-separated")
+    ap.add_argument("--wa-pass", action="store_true",
+                    help="one WhatsApp phone pass: join <=1 group, read unread groups, "
+                         "ingest (local; run by wa_pass.bat every 2h)")
     args = ap.parse_args()
 
+    if args.wa_pass:
+        # Pull first: the night hunt commits a fresh whatsapp_top50.md every
+        # morning, and that file is the join list.
+        import subprocess
+        subprocess.run(["git", "pull", "--ff-only", "-q"], cwd=config.BASE_DIR,
+                       capture_output=True, timeout=120)
+        conn = db.connect()
+        run_job_safe(conn, "whatsapp_phone", job_whatsapp_read)
+        return
     if args.test_telegram:
         ok = notifier.send_test()
         print("Telegram:", "OK" if ok else "not configured / failed (see agent.log)")

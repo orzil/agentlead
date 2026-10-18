@@ -4,6 +4,8 @@ LLM (or the user's tables while no LLM is configured).
 classify() returns a reason string:
   pass             -> becomes a candidate (scored when an LLM is configured)
   partnership      -> equity/co-founder ask: kept in a low-priority bucket
+  question         -> (QUESTION_ROOTS only) a domain question Or could answer
+                      and convert; scored separately by scorer.score_question
   gate_seeker      -> a job-SEEKER post (someone offering themselves)
   gate_community   -> unpaid volunteer / data-collection / survey ask
   gate_noise       -> admin/welcome post, course/workshop/event ad
@@ -124,7 +126,13 @@ def classify(lead: Lead) -> str:
     # hiring intent (ENGAGE) as well.
     if lead.source in config.INTENT_REQUIRED_SOURCES or src_root in config.INTENT_REQUIRED_ROOTS:
         ok = config.DOMAIN_RE.search(text) and config.ENGAGE_RE.search(text)
-        return "pass" if ok else "gate_offtopic"
+        if ok:
+            return "pass"
+        # Not a job, but maybe a domain question Or can answer and convert.
+        if (src_root in config.QUESTION_ROOTS and config.STRONG_DOMAIN_RE.search(text)
+                and config.QUESTION_RE.search(text) and not config.LEARNER_RE.search(text)):
+            return "question"
+        return "gate_offtopic"
     ok = config.DOMAIN_RE.search(text) or config.ENGAGE_RE.search(text)
     return "pass" if ok else "gate_offtopic"
 

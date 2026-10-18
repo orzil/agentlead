@@ -159,6 +159,14 @@ _MIGRATIONS = [
     # One-word verdicts replied from Telegram (see feedback.py).
     ("leads", "verdict", "TEXT"),
     ("leads", "verdict_at", "TEXT"),
+    # Phone joiner (wa_phone.py): joined | requested | skipped_spam | failed,
+    # when, the exact chat title on the phone (the read allowlist), and the
+    # join-sheet title/description it saw (its spam check reads these).
+    ("whatsapp_groups", "join_status", "TEXT"),
+    ("whatsapp_groups", "joined_at", "TEXT"),
+    ("whatsapp_groups", "title_on_phone", "TEXT"),
+    ("whatsapp_groups", "priority", "INTEGER"),
+    ("whatsapp_groups", "last_read", "TEXT"),
 ]
 
 

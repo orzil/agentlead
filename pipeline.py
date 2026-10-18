@@ -35,6 +35,8 @@ def ingest(conn: sqlite3.Connection, lead: Lead) -> str:
                      "WHERE id=?", (lead_id,))
         conn.commit()
         return "partnership"
+    if verdict == "question":
+        return _route_question(conn, lead_id, lead)
     if verdict != "pass":
         # keep the gate reason in `reasoning` for tuning (e.g. 'gate: full_time')
         conn.execute("UPDATE leads SET status='gated_out', reasoning=? WHERE id=?",
@@ -93,6 +95,35 @@ def ingest(conn: sqlite3.Connection, lead: Lead) -> str:
 
     db.save_score(conn, lead_id, score, "scored")
     return "scored_low"
+
+
+def _route_question(conn: sqlite3.Connection, lead_id: int, lead: Lead) -> str:
+    """A domain question from group chat: its own small prompt, its own push.
+    Uses the same push threshold (and so the same less/more tuning) as jobs."""
+    try:
+        q = scorer.score_question(lead)
+    except Exception as e:
+        log.error("question scoring failed for lead %s: %s", lead_id, e)
+        q = None
+    if q is None:
+        db.set_status(conn, lead_id, "question")     # unscored; kept for review
+        return "question_unscored"
+    push_at = int(db.kv_get(conn, "push_threshold_override", "") or config.PUSH_THRESHOLD)
+    status = "question_low"
+    conn.execute("UPDATE leads SET score=?, category='question', work_type='unclear', "
+                 "summary=?, reasoning=? WHERE id=?",
+                 (q["score"], q["why"], q["angle"], lead_id))
+    if q["score"] >= push_at:
+        row = conn.execute("SELECT * FROM leads WHERE id=?", (lead_id,)).fetchone()
+        msg_id = notifier.notify_question(row)
+        if msg_id:
+            conn.execute("UPDATE leads SET notified_at=? WHERE id=?",
+                         (datetime.now(timezone.utc).isoformat(), lead_id))
+            db.link_message(conn, msg_id, lead_id)
+            status = "question_notified"
+    conn.execute("UPDATE leads SET status=? WHERE id=?", (status, lead_id))
+    conn.commit()
+    return status
 
 
 def ingest_many(conn: sqlite3.Connection, leads: list[Lead], job: str) -> dict[str, int]:

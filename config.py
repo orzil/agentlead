@@ -836,6 +836,26 @@ INTENT_REQUIRED_SOURCES = {"r/computervision", "r/MachineLearningJobs",
 # tech word, so a post needs a domain term AND a hiring-intent term to pass.
 INTENT_REQUIRED_ROOTS = {"whatsapp"}
 
+# Domain QUESTIONS in group chat ("anyone know how to OCR Hebrew invoices?") are a
+# second kind of lead: Or answers in the group or by DM, and the asker becomes a
+# client. For these roots a STRONG domain term + a question marker -> verdict
+# 'question' (scored by scorer.score_question, pushed as ❓). Learner asks
+# (courses, homework, "how do I start") stay offtopic - those people don't pay.
+QUESTION_ROOTS = {"whatsapp"}
+QUESTION_RE = re.compile(
+    r"(\?|anyone\s+(know|tried|used|familiar|recommend)|does\s+anyone|has\s+anyone"
+    r"|how\s+(do|can|would|should)\s+(i|we|you)|any\s+(recommendation|suggestion|idea|tips?)s?"
+    r"|recommend|what'?s\s+the\s+best|best\s+(way|tool|model|library)|struggling\s+with"
+    r"|stuck\s+(on|with)|need\s+(help|advice)|help\s+with"
+    r"|מישהו\s+(יודע|מכיר|ניסה|עבד|עשה)|יש\s+למישהו|מכירים|ממליצים|המלצה|המלצות"
+    r"|(?<![א-ת])איך(?![א-ת])|מה\s+הדרך|מה\s+הכי\s+טוב|צריך\s+עזרה|עזרה\s+ב|נתקעתי|שאלה)",
+    re.IGNORECASE)
+LEARNER_RE = re.compile(
+    r"(course|tutorial|beginner|learn(ing)?\s+(path|resources)|how\s+to\s+(start|learn|get\s+into)"
+    r"|homework|assignment|thesis|exam|syllabus|internship|interview"
+    r"|(?<![א-ת])קורס|ללמוד|למתחילים|תואר|מבחן|עבודת\s+סמינר|התמחות|ראיון)",
+    re.IGNORECASE)
+
 # Fuzzy-dedup: posts >= this similar (0-100) within 7 days are duplicates.
 DEDUP_SIMILARITY = 90
 
