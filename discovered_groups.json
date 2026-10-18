@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-17T23:30:53+00:00",
- "count": 1070,
+ "generated": "2026-10-18T01:37:09+00:00",
+ "count": 1072,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -420,6 +420,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-26T03:32:43+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2045714238815121",
+   "name": "please I still need a developer for my project",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-09-11T23:38:56+00:00",
    "last_checked": null
   },
   {
@@ -1278,6 +1293,21 @@
    "last_checked": null
   },
   {
+   "slug": "1496314008061319",
+   "name": "Web Developer Freelancer",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-18T01:37:07+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1515615885689047",
    "name": "AI For Entrepreneurs",
    "status": "pending",
@@ -1305,6 +1335,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-18T23:59:30+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1581116555860881",
+   "name": "I Need A Website Designer / Web Developer",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-18T01:37:07+00:00",
    "last_checked": null
   },
   {
@@ -9495,21 +9540,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-29T19:47:34+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "2045714238815121",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-09-11T23:38:56+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-17T23:30:53+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-18T01:37:09+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1083)
+## Not yet probed (1085)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -110,6 +110,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `us.small.business.startup.founderss` (found via ddg)
 - `3950438358565515` (found via ddg)
 - `n8ngroup` (found via ddg)
+- `2045714238815121` (found via leads_db)
 - `1167283816632326` (found via ddg)
 - `jobsFor.High.tech` (found via ddg)
 - `284048350858807` (found via ddg)
@@ -174,6 +175,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `highlevelagencyowner` (found via ddg)
 - `gohighlevelagencyowners` (found via ddg)
 - `2709340372800064` (found via ddg)
+- `1581116555860881` (found via ddg)
 - `needwebsitedesignerordeveloper` (found via leads_db)
 - `903983456080142` (found via ddg)
 - `616668068847832` (found via ddg)
@@ -265,6 +267,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `uxdesignercommunity` (found via leads_db)
 - `unfilteredagency` (found via ddg)
 - `342228509513052` (found via ddg)
+- `1496314008061319` (found via ddg)
 - `398294859512130` (found via ddg)
 - `ecommerce.entrepreneurs.us` (found via ddg)
 - `ecommerceentrepreneurs` (found via ddg)
@@ -783,7 +786,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `IsraeliGameDev` (found via leads_db)
 - `freelancerim` (found via leads_db)
 - `292695599913319` (found via leads_db)
-- `2045714238815121` (found via leads_db)
 - `1661983438866806` (found via leads_db)
 - `researchstatistician` (found via leads_db)
 - `1857122828309413` (found via leads_db)
