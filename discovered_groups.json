@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-18T21:42:54+00:00",
- "count": 1073,
+ "generated": "2026-10-18T23:42:42+00:00",
+ "count": 1074,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -210,6 +210,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-17T03:00:24+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "realaiforsmallbusiness",
+   "name": "AI for Small Business Owners & Startups",
+   "status": "pending",
+   "relevance": 4,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-18T23:42:41+00:00",
    "last_checked": null
   },
   {
