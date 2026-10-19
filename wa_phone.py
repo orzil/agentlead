@@ -392,8 +392,9 @@ def join_next(conn) -> str:
         return f"no join ({why})"
     for _ in range(5):                       # skip at most a few spam sheets per pass
         row = conn.execute(
-            "SELECT code, name FROM whatsapp_groups WHERE priority IS NOT NULL AND joined=0 "
-            "AND status='live' AND join_status IS NULL ORDER BY priority LIMIT 1").fetchone()
+            "SELECT code, name, found_via FROM whatsapp_groups WHERE priority IS NOT NULL "
+            "AND joined=0 AND status='live' AND join_status IS NULL "
+            "ORDER BY priority LIMIT 1").fetchone()
         if not row:
             return "no join (all targets tried)"
         code = row["code"]
@@ -421,6 +422,12 @@ def join_next(conn) -> str:
             _close_sheet(root)
             log.info("wa join: skipped a get-rich group (priority %s)", code[:4])
             continue
+        if row["found_via"] == IN_GROUP and not _on_topic(title, desc):
+            # a link someone pasted in a group: unvetted, so the sheet decides
+            _set_group(conn, code, join_status="skipped_offtopic", name=title)
+            _close_sheet(root)
+            log.info("wa join: skipped an off-topic in-group link (%s)", code[:4])
+            continue
 
         approval = bool(first(root, "join_group_bottom_sheet_disclaimer") is not None)
         tap(*center(btn))
@@ -440,6 +447,83 @@ def join_next(conn) -> str:
         log.info("wa join: %s (%s)", status, code[:4])
         return f"join: {status}"
     return "no join (skipped several)"
+
+
+IN_GROUP = "in_group"
+IN_GROUP_PRIORITY = 3000          # after every night-hunt target (tiers 0-2)
+
+
+def _on_topic(title: str, desc: str) -> bool:
+    """Join sheet of an in-group link: jobs/dev/AI or client-side (founders,
+    business owners - the people who pay) vocabulary, not a student cohort or
+    course, not a foreign-language group."""
+    import discover_whatsapp_groups as dwg
+    import wa_night
+    s = f"{title} {desc}"
+    return (bool(dwg.WA_RELEVANT_RE.search(s) or config.STRONG_DOMAIN_RE.search(s)
+                 or wa_night.CLIENT_SIDE_RE.search(s))
+            and not dwg.WA_NOISE_RE.search(title) and not wa_night.FOREIGN_RE.search(title))
+
+
+def harvest_invites(conn, msgs: list[dict]) -> int:
+    """Members paste other groups' invite links all the time - the cheapest
+    discovery surface there is. Queue them behind the night-hunt targets;
+    join_next vets each one on its join sheet (_on_topic)."""
+    import discover_whatsapp_groups as dwg
+    now = datetime.now(timezone.utc).isoformat()
+    new = 0
+    for m in msgs:
+        for code in set(dwg.WA_INVITE_RE.findall(m["text"])):
+            cur = conn.execute(
+                "INSERT OR IGNORE INTO whatsapp_groups (code, url, status, found_via, first_seen,"
+                " priority) VALUES (?, ?, 'live', ?, ?, ?)",
+                (code, f"https://chat.whatsapp.com/{code}", IN_GROUP, now, IN_GROUP_PRIORITY + new))
+            if cur.rowcount:
+                new += 1
+            else:   # known from the hunt but never a target: make it one
+                conn.execute("UPDATE whatsapp_groups SET priority=?, status='live' WHERE code=? "
+                             "AND priority IS NULL AND status IN ('pending','live')",
+                             (IN_GROUP_PRIORITY, code))
+    conn.commit()
+    return new
+
+
+TRIED_FILE = config.BASE_DIR / "whatsapp_tried.txt"
+
+
+def export_tried(conn) -> bool:
+    """Write every invite code the phone has tried to whatsapp_tried.txt and
+    push it (at most once a day), so the cloud night hunt (wa_night.select_top)
+    stops re-listing them. Codes only: invite links are public and already sit
+    in the committed whatsapp_top50.md - no names, no lead data."""
+    codes = sorted(r[0] for r in conn.execute(
+        "SELECT code FROM whatsapp_groups WHERE join_status IS NOT NULL"))
+    body = "# invite codes the WhatsApp phone already tried (wa_phone.export_tried)\n" + \
+           "".join(f"{c}\n" for c in codes)
+    old = TRIED_FILE.read_text(encoding="utf-8") if TRIED_FILE.exists() else ""
+    if body != old:
+        TRIED_FILE.write_text(body, encoding="utf-8")
+    today = datetime.now(IL).date().isoformat()
+    if db.kv_get(conn, "wa_tried_pushed", "") == today:
+        return False
+    git = ["git", "-C", str(config.BASE_DIR)]
+    if not subprocess.run([*git, "status", "--porcelain", "--", TRIED_FILE.name],
+                          capture_output=True, text=True).stdout.strip():
+        return False
+    subprocess.run([*git, "add", "--", TRIED_FILE.name], capture_output=True)
+    r = subprocess.run([*git, "commit", "-q", "-m", "whatsapp: tried codes", "--",
+                        TRIED_FILE.name], capture_output=True, text=True)
+    if r.returncode == 0:
+        # the cloud commits every night run; rebase so `--wa-pass`'s ff-only
+        # pull never meets a diverged branch
+        subprocess.run([*git, "pull", "-q", "--rebase", "--autostash"],
+                       capture_output=True, timeout=120)
+        r = subprocess.run([*git, "push", "-q"], capture_output=True, text=True, timeout=120)
+    if r.returncode != 0:
+        log.warning("wa tried-codes push failed (will retry next pass)")
+        return False
+    db.kv_set(conn, "wa_tried_pushed", today)
+    return True
 
 
 def _targets_left(conn) -> int:
@@ -672,6 +756,20 @@ def read_chat(title: str) -> list[dict]:
     return msgs
 
 
+_TRUNCATED_RE = re.compile(r"(קרא עוד|Read more)\s*$")
+
+
+def _count_truncated(conn, msgs: list[dict]) -> None:
+    """Long posts end in WhatsApp's 'קרא עוד' span and are read cut off. The tap
+    that expands them isn't built yet: no truncated message had arrived to test
+    where the span sits, and a blind tap can hit a link and leave WhatsApp.
+    Count them (kv wa_truncated_seen) so we know when it's worth building."""
+    n = sum(1 for m in msgs if _TRUNCATED_RE.search(clean(m["text"])))
+    if n:
+        db.kv_set(conn, "wa_truncated_seen",
+                  str(int(db.kv_get(conn, "wa_truncated_seen", "0") or 0) + n))
+
+
 def _unread(row: ET.Element) -> bool:
     # the badge's count is in content-desc ("3 הודעות שלא נקראו"); its text is
     # empty on this phone - checking text only read nothing on 2026-10-19
@@ -733,6 +831,10 @@ def read_pass(conn) -> list[Lead]:
             back()
             time.sleep(1.5)
         code = titles[title]
+        found = harvest_invites(conn, msgs)
+        if found:
+            log.info("wa read: %d new invite link(s) queued from a group", found)
+        _count_truncated(conn, msgs)
         for m in msgs:
             lead = _to_lead(code, title, m, today)
             if lead:
@@ -798,6 +900,10 @@ def run_pass(conn) -> list[Lead]:
         accepted = _stage("recheck", recheck_requested, conn, 0)
         _stage("home", lambda c: open_home(), conn, None)    # a failed stage may leave a sheet open
         leads = _stage("read", read_pass, conn, [])
+        try:
+            export_tried(conn)
+        except (OSError, subprocess.SubprocessError) as e:
+            log.warning("wa tried-codes export failed: %s", e)
         if BUBBLE_IDS_SEEN:
             known = set(filter(None, db.kv_get(conn, "wa_bubble_ids", "").split(",")))
             db.kv_set(conn, "wa_bubble_ids", ",".join(sorted(known | BUBBLE_IDS_SEEN)))
@@ -816,6 +922,27 @@ def run_pass(conn) -> list[Lead]:
         sleep_screen()
 
 
+def group_yield(conn) -> tuple[list[tuple[str, int]], list[str]]:
+    """Per joined group over the last 7 days: the top 3 by pushed leads, and the
+    groups that produced no message at all (joined 7+ days ago). Report only -
+    leaving a group is Or's call."""
+    week = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+    groups = conn.execute("SELECT title_on_phone, joined_at FROM whatsapp_groups "
+                          "WHERE join_status='joined' AND title_on_phone IS NOT NULL").fetchall()
+    best, silent = [], []
+    for g in groups:
+        src = f"whatsapp/{g['title_on_phone']}"
+        n_msgs, n_push = conn.execute(
+            "SELECT COUNT(*), SUM(status IN ('notified','question_notified')) FROM leads "
+            "WHERE source=? AND fetched_at >= ?", (src, week)).fetchone()
+        if n_push:
+            best.append((g["title_on_phone"], n_push))
+        if not n_msgs and (g["joined_at"] or "") < week:
+            silent.append(g["title_on_phone"])
+    best.sort(key=lambda x: -x[1])
+    return best[:3], silent
+
+
 def _daily_heartbeat(conn) -> None:
     """One Telegram line per morning: the phone is alive, how far the joining
     got, what the last 24h of messages produced. The cloud morning report
@@ -832,12 +959,20 @@ def _daily_heartbeat(conn) -> None:
         "GROUP BY status", (since,)).fetchall())
     read = sum(st.values())
     pushed = st.get("notified", 0) + st.get("question_notified", 0)
+    import html
     import notifier
-    notifier._send_raw(
-        f"\U0001F4F1 <b>WhatsApp phone OK</b>\n"
-        f"groups: {groups.get('joined', 0)} joined, {groups.get('requested', 0)} pending approval, "
-        f"{groups.get('todo', 0)} to go, {groups.get('skipped_spam', 0)} skipped as spam\n"
-        f"last 24h: {read} message(s) read, {pushed} pushed to you")
+    best, silent = group_yield(conn)
+    lines = [f"\U0001F4F1 <b>WhatsApp phone OK</b>",
+             f"groups: {groups.get('joined', 0)} joined, {groups.get('requested', 0)} pending "
+             f"approval, {groups.get('todo', 0)} to go, {groups.get('skipped_spam', 0)} spam / "
+             f"{groups.get('skipped_offtopic', 0)} off-topic skipped",
+             f"last 24h: {read} message(s) read, {pushed} pushed to you"]
+    if best:
+        lines.append("best 7d: " + ", ".join(f"{html.escape(t[:30])} ({n})" for t, n in best))
+    if silent:
+        lines.append(f"silent 7d+: {len(silent)} group(s) - " +
+                     ", ".join(html.escape(t[:25]) for t in silent[:5]))
+    notifier._send_raw("\n".join(lines))
     db.kv_set(conn, "wa_heartbeat_day", now.date().isoformat())
 
 
@@ -858,6 +993,10 @@ def status(conn) -> None:
           f"{BURST_DAILY_CAP if burst else JOIN_DAILY_CAP} ({db.kv_get(conn, 'wa_join_day', '-')})")
     n = conn.execute("SELECT COUNT(*) FROM leads WHERE source LIKE 'whatsapp/%'").fetchone()[0]
     print(f"leads     : {n} WhatsApp message(s) stored")
+    q = conn.execute("SELECT COUNT(*), SUM(join_status IS NULL) FROM whatsapp_groups "
+                     "WHERE found_via=?", (IN_GROUP,)).fetchone()
+    print(f"in-group  : {q[0]} invite link(s) found inside groups, {q[1] or 0} not tried yet")
+    print(f"truncated : {db.kv_get(conn, 'wa_truncated_seen', '0')} 'read more' message(s) seen")
 
 
 def main() -> None:

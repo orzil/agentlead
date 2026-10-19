@@ -458,6 +458,17 @@ def _rank(r: sqlite3.Row) -> tuple:
     return (-base, name)
 
 
+def _tried_codes() -> set[str]:
+    """Codes the phone already joined/requested/skipped (whatsapp_tried.txt,
+    pushed by wa_phone.export_tried). This cloud DB never learns about joins on
+    the phone, so without it every morning's list re-sent the same groups."""
+    path = config.BASE_DIR / "whatsapp_tried.txt"
+    if not path.exists():
+        return set()
+    return {ln.strip() for ln in path.read_text(encoding="utf-8").splitlines()
+            if ln.strip() and not ln.startswith("#")}
+
+
 def select_top(conn, n: int = 50) -> list[sqlite3.Row]:
     """Pick n groups, ~half Hebrew/Israeli, dropping anything the LLM said is a 0.
 
@@ -467,8 +478,11 @@ def select_top(conn, n: int = 50) -> list[sqlite3.Row]:
     rows = conn.execute(
         "SELECT * FROM whatsapp_groups WHERE status='live' AND COALESCE(joined,0)=0"
     ).fetchall()
+    tried = _tried_codes()
     keep = []
     for r in rows:
+        if r["code"] in tried:
+            continue
         llm = r["llm_relevant"]
         if FOREIGN_RE.search(r["name"] or ""):
             continue
