@@ -133,7 +133,16 @@ def swipe(y_from: int, y_to: int, ms: int = 450) -> None:
 def dump() -> ET.Element:
     """The current screen as a uiautomator XML tree. WhatsApp's list animations
     occasionally make the dump fail with 'could not get idle state'; retry."""
-    for attempt in range(3):
+    for attempt in range(4):
+        if attempt == 3:
+            # still failing (2026-10-19: four passes in a row): a stuck
+            # uiautomator from an earlier pass, or an animated screen. Kill it
+            # and relaunch WhatsApp before the last try.
+            shell("pkill", "-f", "uiautomator")
+            shell("input", "keyevent", "KEYCODE_HOME")
+            time.sleep(1)
+            shell("am", "start", "-n", f"{PKG}/.Main")
+            time.sleep(3)
         out = shell("uiautomator", "dump", "/sdcard/wa.xml", timeout=40)
         if "dumped" in out:
             raw = adb("exec-out", "cat", "/sdcard/wa.xml", binary=True)
@@ -142,7 +151,7 @@ def dump() -> ET.Element:
             except ET.ParseError:
                 pass
         time.sleep(1.5 + attempt)
-    raise PhoneError("uiautomator dump failed 3 times")
+    raise PhoneError("uiautomator dump failed 4 times")
 
 
 def rid(node: ET.Element) -> str:
@@ -369,8 +378,8 @@ def _count_join(conn) -> None:
 
 
 def _set_group(conn, code: str, **cols) -> None:
-    sets = ", ".join(f"{k}=?" for k in cols)
-    conn.execute(f"UPDATE whatsapp_groups SET {sets}, last_checked=? WHERE code=?",
+    sets = "".join(f"{k}=?, " for k in cols)          # no cols = just stamp last_checked
+    conn.execute(f"UPDATE whatsapp_groups SET {sets}last_checked=? WHERE code=?",
                  (*cols.values(), datetime.now(timezone.utc).isoformat(), code))
     conn.commit()
 
@@ -664,9 +673,12 @@ def read_chat(title: str) -> list[dict]:
 
 
 def _unread(row: ET.Element) -> bool:
+    # the badge's count is in content-desc ("3 הודעות שלא נקראו"); its text is
+    # empty on this phone - checking text only read nothing on 2026-10-19
     for x in row.iter("node"):
         r = rid(x)
-        if ("message_count" in r or "unread" in r) and re.search(r"\d", x.get("text") or ""):
+        if ("message_count" in r or "unread" in r) and re.search(
+                r"\d", f"{x.get('text') or ''} {x.get('content-desc') or ''}"):
             return True
     return False
 
@@ -711,6 +723,12 @@ def read_pass(conn) -> list[Lead]:
         time.sleep(2.5)
         try:
             msgs = read_chat(title)
+        except PhoneError as e:
+            if isinstance(e, Banned):
+                raise
+            log.error("wa read: one group failed: %s", e)     # keep the other groups' leads
+            LAST_ERRORS.append(f"read: {e}")
+            msgs = []
         finally:
             back()
             time.sleep(1.5)
@@ -745,19 +763,41 @@ def _to_lead(code: str, title: str, m: dict, today: date) -> Lead | None:
 
 # --- the pass ------------------------------------------------------------------------
 
+def _stage(name: str, fn, conn, default):
+    """Run one pass stage. A PhoneError is recorded in LAST_ERRORS and the next
+    stage still runs - a crash in the requests re-check blocked every read on
+    2026-10-19. Banned is never swallowed."""
+    try:
+        return fn(conn)
+    except Banned:
+        raise
+    except (PhoneError, sqlite3.Error) as e:
+        log.error("wa %s failed: %s", name, e)
+        LAST_ERRORS.append(f"{name}: {e}")
+        return default
+
+
+# Errors from the last run_pass's stages; main.job_whatsapp_read raises them
+# AFTER ingesting whatever was read, so run_job_safe still alerts.
+LAST_ERRORS: list[str] = []
+
+
 def run_pass(conn) -> list[Lead]:
-    """Join at most one group, then read every unread allowlisted group.
-    Raises PhoneError for the caller's throttled Telegram alert; a Banned error
-    also sets the kill switch so later passes stop touching the phone."""
+    """Join (one group, or a burst), re-check pending requests, then read every
+    unread allowlisted group. Stage errors land in LAST_ERRORS; a Banned error
+    sets the kill switch, alerts and raises."""
+    LAST_ERRORS.clear()
     if killed(conn):
         log.warning("wa pass skipped: kill switch set (%s)", killed(conn))
         return []
     load_targets(conn)
     try:
         ensure_ready()
-        result = join_burst(conn) if db.kv_get(conn, BURST_KEY, "") else join_next(conn)
-        accepted = recheck_requested(conn)
-        leads = read_pass(conn)
+        result = _stage("join", lambda c: join_burst(c) if db.kv_get(c, BURST_KEY, "")
+                        else join_next(c), conn, "join failed")
+        accepted = _stage("recheck", recheck_requested, conn, 0)
+        _stage("home", lambda c: open_home(), conn, None)    # a failed stage may leave a sheet open
+        leads = _stage("read", read_pass, conn, [])
         if BUBBLE_IDS_SEEN:
             known = set(filter(None, db.kv_get(conn, "wa_bubble_ids", "").split(",")))
             db.kv_set(conn, "wa_bubble_ids", ",".join(sorted(known | BUBBLE_IDS_SEEN)))

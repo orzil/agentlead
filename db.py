@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sqlite3
 from datetime import datetime, timedelta, timezone
 
@@ -191,6 +192,24 @@ def url_hash(url: str) -> str:
     return hashlib.sha256(url.encode("utf-8")).hexdigest()
 
 
+_URL_RE = re.compile(r"https?://[^\s?#]+")
+
+
+def _id_links(text: str) -> set[str]:
+    """Links that name ONE posting: a path segment carrying a digit
+    (secrethunter.io/jobz/edc067eb26), not a footer like /whatsapp or /upgrade.
+    Templated job-board posts score ~100 on token_set_ratio against each other;
+    two posts with disjoint id-links are different jobs, whatever the text."""
+    out = set()
+    for u in _URL_RE.findall(text):
+        host, _, path = u.split("://", 1)[1].partition("/")
+        if "wa.me" in host:
+            continue
+        if any(re.search(r"\d", seg) for seg in path.split("/") if seg):
+            out.add(u.rstrip("/.,)").lower())
+    return out
+
+
 def insert_lead(conn: sqlite3.Connection, lead: Lead) -> int | None:
     """Insert a lead. Returns row id, or None if duplicate (by URL or fuzzy text)."""
     h = url_hash(lead.url)
@@ -205,9 +224,13 @@ def insert_lead(conn: sqlite3.Connection, lead: Lead) -> int | None:
         (week_ago,),
     ).fetchall()
     text = lead.raw_text[:1500]
+    own_ids = _id_links(text)
     if len(text) > 60:  # too-short texts fuzz-match everything
         for row in recent:
             if _similarity(text, row["raw_text"][:1500]) >= config.DEDUP_SIMILARITY:
+                other_ids = _id_links(row["raw_text"][:1500])
+                if own_ids and other_ids and not (own_ids & other_ids):
+                    continue    # same template, different job (WhatsApp job-board bots)
                 conn.execute(
                     "UPDATE leads SET extra_urls = extra_urls || ' ' || ? WHERE id=?",
                     (lead.url, row["id"]),

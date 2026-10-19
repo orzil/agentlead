@@ -81,6 +81,11 @@ CASES = [
      NOW, "gate_offtopic"),
     ("wa learner question", "whatsapp/Test Group",
      "איך מתחילים ללמוד למידת מכונה? יש המלצה על קורס טוב?", NOW, "gate_noise"),
+    # 2026-10-20: a job-board bot's post. Its '?utm_source=' made it a "question".
+    ("wa job-board bot link", "whatsapp/Test Group",
+     "Machine learning engineer | computer vision\nAcme\nRamat Gan\n19/10/26\n"
+     "Python, Image Processing, Deep Learning\nJunior\n"
+     "https://jobs.example.io/jobz/edc067eb26?utm_source=wa_x", NOW, "gate_offtopic"),
     ("wa full-time post", "whatsapp/Test Group",
      "דרוש/ה מפתח/ת Computer Vision למשרה מלאה בחברת סטארטאפ בהרצליה, היברידי",
      NOW, "gate_full_time"),

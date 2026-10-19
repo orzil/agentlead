@@ -129,8 +129,10 @@ def classify(lead: Lead) -> str:
         if ok:
             return "pass"
         # Not a job, but maybe a domain question Or can answer and convert.
-        if (src_root in config.QUESTION_ROOTS and config.STRONG_DOMAIN_RE.search(text)
-                and config.QUESTION_RE.search(text) and not config.LEARNER_RE.search(text)):
+        # (URLs stripped first: '?utm_source=' in a job-board link is not a question)
+        prose = re.sub(r"\S+://\S+", " ", text)
+        if (src_root in config.QUESTION_ROOTS and config.STRONG_DOMAIN_RE.search(prose)
+                and config.QUESTION_RE.search(prose) and not config.LEARNER_RE.search(prose)):
             return "question"
         return "gate_offtopic"
     ok = config.DOMAIN_RE.search(text) or config.ENGAGE_RE.search(text)

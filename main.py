@@ -79,6 +79,8 @@ def job_whatsapp_read(conn) -> None:
     leads = wa_phone.run_pass(conn)
     if leads:
         pipeline.ingest_many(conn, leads, "whatsapp_phone")
+    if wa_phone.LAST_ERRORS:     # ingest first, then let run_job_safe alert
+        raise wa_phone.PhoneError("; ".join(wa_phone.LAST_ERRORS))
 
 
 def job_whatsapp(conn) -> None:
