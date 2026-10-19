@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-19T08:24:21+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-19T21:22:44+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1090)
+## Not yet probed (1116)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -138,6 +138,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `694597369571714` (found via ddg)
 - `2076923229310696` (found via ddg)
 - `868876935222403` (found via ddg)
+- `2062342214646663` (found via ddg)
 - `agencyshoptalk` (found via ddg)
 - `2059467967664033` (found via ddg)
 - `australiansmallbusinesowners` (found via ddg)
@@ -957,6 +958,30 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `agapechurchnakurukenya` (found via leads_db)
 - `claudecommunity` (found via leads_db)
 - `photofixer` (found via leads_db)
+- `817934467782926` (found via reddit_search)
+- `1355554123347915` (found via reddit_search)
+- `semichiganbusinessnews` (found via reddit_search)
+- `1042753234785520` (found via reddit_search)
+- `244406622945470` (found via reddit_search)
+- `39049219928058449` (found via reddit_search)
+- `DATDestroyerStudyGroup` (found via reddit_search)
+- `951806321325432` (found via reddit_search)
+- `203761273381878` (found via reddit_search)
+- `203761273` (found via reddit_search)
+- `3791219181012123` (found via reddit_search)
+- `403741254073124` (found via reddit_search)
+- `2111728543068438` (found via reddit_search)
+- `DragonConRoomsGroup` (found via reddit_search)
+- `ai.jobs.vietnam` (found via reddit_search)
+- `vibecodingvn.community` (found via reddit_search)
+- `943539167373984` (found via reddit_search)
+- `2078258759728743` (found via reddit_search)
+- `3905003342987497` (found via reddit_search)
+- `2336339003505041` (found via reddit_search)
+- `www.migmaqtrail.ca` (found via reddit_search)
+- `centergrovechatter` (found via reddit_search)
+- `2494279667287246` (found via reddit_search)
+- `aitoolsandpromptsthatactuallywork` (found via ddg)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -1031,6 +1056,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `kiwihomebusiness` (found via ddg)
 - `businessnz` (found via ddg)
 - `1636991833121307` (found via ddg)
+- `nocodepioneers` (found via ddg)
 - `sellershustle` (found via ddg)
 - `131710772378400` (found via ddg)
 - `peopleofcleburnetexas` (found via ddg)
