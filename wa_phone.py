@@ -17,7 +17,7 @@ Rules, all load-bearing:
     are never read.
   * SLOW JOINS. One join per pass, daytime only, at most JOIN_DAILY_CAP a day,
     best groups first. A fresh number joining 50 groups in an hour is exactly
-    what gets banned.
+    what gets banned. `--join-all on` overrides this on Or's say-so (BURST_*).
   * KILL SWITCH. A ban / re-verify / logged-out screen stops every pass
     (kv `wa_phone_killed`) and alerts Telegram once. Clear it by hand:
     python -X utf8 wa_phone.py --unkill
@@ -30,6 +30,7 @@ wa_pass.bat). Local only: the phone is on this PC's USB port.
     python -X utf8 wa_phone.py --status     # device, joined groups, quota
     python -X utf8 wa_phone.py --pass       # one pass (join + read), no ingest
     python -X utf8 wa_phone.py --unkill     # clear the kill switch after a check
+    python -X utf8 wa_phone.py --join-all on  # burst-join the rest (see BURST_*)
 """
 from __future__ import annotations
 
@@ -58,6 +59,17 @@ IL = ZoneInfo("Asia/Jerusalem")
 JOIN_DAILY_CAP = int(config.env("WA_JOIN_DAILY_CAP", "6"))
 JOIN_HOURS = (9, 21)               # local Israel time, [start, end)
 JOIN_MIN_GAP_MIN = 90              # never two joins closer than this
+# JOIN-ALL burst (Or's call, 2026-10-19: "join all the groups"). Switched on by
+# `--join-all` (kv wa_join_all); each pass then joins for up to an hour with
+# random human-ish gaps, and wa_loop re-runs passes every few minutes until the
+# list is done. Still daytime only, still stops on any ban screen, and stops
+# itself after a few failed joins in a row (that pattern = WhatsApp rate limit).
+BURST_KEY = "wa_join_all"
+BURST_HOURS = (8, 23)
+BURST_DAILY_CAP = int(config.env("WA_BURST_DAILY_CAP", "50"))
+BURST_GAP_MIN = (3.0, 8.0)         # random minutes between joins
+BURST_MINUTES_PER_PASS = 60        # wa_loop's pass timeout is 90
+BURST_MAX_FAILS = 3
 MAX_SCREENS_PER_CHAT = 25
 MAX_LIST_PAGES = 12
 KILL_KEY = "wa_phone_killed"
@@ -333,17 +345,20 @@ def _close_sheet(root: ET.Element) -> None:
 
 
 def _join_quota_open(conn) -> tuple[bool, str]:
+    burst = bool(db.kv_get(conn, BURST_KEY, ""))
+    hours, cap, gap = ((BURST_HOURS, BURST_DAILY_CAP, BURST_GAP_MIN[0]) if burst
+                       else (JOIN_HOURS, JOIN_DAILY_CAP, JOIN_MIN_GAP_MIN))
     now = datetime.now(IL)
-    if not (JOIN_HOURS[0] <= now.hour < JOIN_HOURS[1]):
+    if not (hours[0] <= now.hour < hours[1]):
         return False, "night"
     today = now.date().isoformat()
     if db.kv_get(conn, "wa_join_day", "") != today:
         db.kv_set(conn, "wa_join_day", today)
         db.kv_set(conn, "wa_join_count", "0")
-    if int(db.kv_get(conn, "wa_join_count", "0") or 0) >= JOIN_DAILY_CAP:
+    if int(db.kv_get(conn, "wa_join_count", "0") or 0) >= cap:
         return False, "daily cap"
     last = float(db.kv_get(conn, "wa_join_last", "0") or 0)
-    if time.time() - last < JOIN_MIN_GAP_MIN * 60:
+    if time.time() - last < gap * 60:
         return False, "gap"
     return True, ""
 
@@ -416,6 +431,55 @@ def join_next(conn) -> str:
         log.info("wa join: %s (%s)", status, code[:4])
         return f"join: {status}"
     return "no join (skipped several)"
+
+
+def _targets_left(conn) -> int:
+    return conn.execute(
+        "SELECT COUNT(*) FROM whatsapp_groups WHERE priority IS NOT NULL AND joined=0 "
+        "AND status='live' AND join_status IS NULL").fetchone()[0]
+
+
+def join_burst(conn) -> str:
+    """JOIN-ALL mode: join one group after another for up to an hour, with a
+    random 3-8 min gap. Ends the burst (clears the kv flag + tells Telegram)
+    when the list is done or joins keep failing."""
+    import random
+    import notifier
+    deadline = time.time() + BURST_MINUTES_PER_PASS * 60
+    done: dict[str, int] = {}
+    fails_in_row = 0
+    why = ""
+    while time.time() < deadline:
+        r = join_next(conn)
+        if r == "no join (skipped several)":
+            continue
+        if r.startswith("no join"):
+            why = r
+            break
+        done[r] = done.get(r, 0) + 1
+        fails_in_row = fails_in_row + 1 if r == "join: failed" else 0
+        if fails_in_row >= BURST_MAX_FAILS:
+            db.kv_set(conn, BURST_KEY, "")
+            notifier._send_raw(f"⚠️ <b>WhatsApp join-all paused</b>: {fails_in_row} joins "
+                               "failed in a row - maybe a WhatsApp limit. Back to slow joins "
+                               "(6/day). Check the phone.")
+            why = "paused after failures"
+            break
+        wait = random.uniform(*BURST_GAP_MIN) * 60
+        if time.time() + wait > deadline:
+            break
+        time.sleep(wait)
+    if _targets_left(conn) == 0 and db.kv_get(conn, BURST_KEY, ""):
+        db.kv_set(conn, BURST_KEY, "")
+        groups = dict(conn.execute(
+            "SELECT COALESCE(join_status,'todo'), COUNT(*) FROM whatsapp_groups "
+            "WHERE priority IS NOT NULL GROUP BY 1").fetchall())
+        notifier._send_raw(f"✅ <b>WhatsApp join-all done</b>: {groups.get('joined', 0)} joined, "
+                           f"{groups.get('requested', 0)} waiting for admin approval, "
+                           f"{groups.get('failed', 0)} dead links, "
+                           f"{groups.get('skipped_spam', 0)} skipped as spam")
+    summary = ", ".join(f"{k} x{v}" for k, v in done.items()) or "nothing joined"
+    return f"burst: {summary}" + (f" ({why})" if why else "")
 
 
 def recheck_requested(conn, limit: int = 2) -> int:
@@ -691,7 +755,7 @@ def run_pass(conn) -> list[Lead]:
     load_targets(conn)
     try:
         ensure_ready()
-        result = join_next(conn)
+        result = join_burst(conn) if db.kv_get(conn, BURST_KEY, "") else join_next(conn)
         accepted = recheck_requested(conn)
         leads = read_pass(conn)
         if BUBBLE_IDS_SEEN:
@@ -748,8 +812,10 @@ def status(conn) -> None:
     for st, n in conn.execute("SELECT COALESCE(join_status,'todo'), COUNT(*) FROM whatsapp_groups "
                               "WHERE priority IS NOT NULL GROUP BY 1"):
         print(f"groups    : {st:13} {n}")
-    print(f"joins today: {db.kv_get(conn, 'wa_join_count', '0')} / {JOIN_DAILY_CAP} "
-          f"({db.kv_get(conn, 'wa_join_day', '-')})")
+    burst = bool(db.kv_get(conn, BURST_KEY, ""))
+    print(f"join-all  : {'ON' if burst else 'off'}")
+    print(f"joins today: {db.kv_get(conn, 'wa_join_count', '0')} / "
+          f"{BURST_DAILY_CAP if burst else JOIN_DAILY_CAP} ({db.kv_get(conn, 'wa_join_day', '-')})")
     n = conn.execute("SELECT COUNT(*) FROM leads WHERE source LIKE 'whatsapp/%'").fetchone()[0]
     print(f"leads     : {n} WhatsApp message(s) stored")
 
@@ -761,6 +827,8 @@ def main() -> None:
     ap.add_argument("--pass", dest="do_pass", action="store_true",
                     help="one join+read pass; prints counts, does not ingest")
     ap.add_argument("--unkill", action="store_true", help="clear the kill switch")
+    ap.add_argument("--join-all", choices=["on", "off"],
+                    help="burst-join every remaining group (3-8 min apart, 08-23 IL)")
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s [%(name)s] %(message)s")
     logging.getLogger("httpx").setLevel(logging.WARNING)   # its INFO line carries bot tokens
@@ -768,6 +836,9 @@ def main() -> None:
     if args.unkill:
         db.kv_set(conn, KILL_KEY, "")
         print("kill switch cleared")
+    elif args.join_all:
+        db.kv_set(conn, BURST_KEY, "1" if args.join_all == "on" else "")
+        print(f"join-all {args.join_all}")
     elif args.do_pass:
         leads = run_pass(conn)
         print(f"{len(leads)} message lead(s) read (not ingested; use main.py --wa-pass)")

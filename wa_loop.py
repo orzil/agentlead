@@ -20,6 +20,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 INTERVAL = 2 * 3600
+BURST_RETRY = 5 * 60
 LOCK_PORT = 47361
 LOG = HERE / "wa_pass.log"
 
@@ -50,7 +51,24 @@ def main() -> None:
             _log("pass timed out after 90 min")
         except Exception as e:      # never let the scheduler itself die
             _log(f"pass failed to start: {e}")
-        time.sleep(max(60, INTERVAL - (time.time() - started)))
+        time.sleep(_next_sleep(started))
+
+
+def _next_sleep(started: float) -> float:
+    """Every 2h normally. While join-all is on (kill switch off, 08-23 IL),
+    come back in 5 min - that also catches the phone being plugged back in.
+    At night it falls back to 2h, so the first daytime pass may start up to
+    2h after 08:00."""
+    try:
+        import db
+        from wa_phone import BURST_HOURS, IL
+        conn = db.connect()
+        if (db.kv_get(conn, "wa_join_all", "") and not db.kv_get(conn, "wa_phone_killed", "")
+                and BURST_HOURS[0] <= datetime.now(IL).hour < BURST_HOURS[1]):
+            return BURST_RETRY
+    except Exception as e:
+        _log(f"kv read failed: {e}")
+    return max(60, INTERVAL - (time.time() - started))
 
 
 if __name__ == "__main__":
