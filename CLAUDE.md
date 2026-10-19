@@ -195,6 +195,10 @@ every 2h) because Task Scheduler is access-denied on this account. Group message
 the normal pipeline; a domain **question** (`prefilter` verdict `question`, `QUESTION_RE` minus
 `LEARNER_RE`, WhatsApp only) is scored by `scorer.score_question` and pushed as ❓. Keep the
 phone's screen lock at None and the S9's screen asleep between passes (AMOLED burn-in).
+UI facts that cost a day to find: the unread badge's count is in **`content-desc`**, not `text`;
+the group sender id is `name_in_group_tv`. Invite links pasted inside groups are queued
+(`found_via='in_group'`) and vetted on the join sheet; `whatsapp_tried.txt` (codes only) tells the
+cloud hunt which groups the phone already tried. `--join-all on` bursts joins (Or's call).
 
 **Outreach (`replier.py` + `notifier.py`).** Auto-reply is **Reddit only** — Facebook and LinkedIn
 are deliberately excluded because automating the user's account risks a ban, and Freelancer.com was

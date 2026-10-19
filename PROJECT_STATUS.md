@@ -549,7 +549,32 @@ Goal: 50 relevant WhatsApp invite links (HE+EN) by morning for Or to join by han
 - **Known gap:** Telegram feedback words on WhatsApp pushes are lost when the cloud's `feedback` job polls
   first (separate offsets; the cloud DB has no WhatsApp leads). Pre-existing for cloud_sync too.
 
+## 2026-10-19/20 — join-all burst, and why the first day read nothing
+- **Join-all** (`wa_phone.py --join-all on`, Or's call): 3–8 min random gaps, 08–23 IL, 50/day, ≤60 min
+  per pass; `wa_loop` re-runs every 5 min while it's on. Stops itself after 3 failed joins in a row.
+  First evening: 14 joined, 21 requested (admin approval), 1 dead, 13 left for the morning.
+- **0 leads on day 1 were three bugs, not quiet groups:** (1) the unread badge's count is in
+  `content-desc` ("3 הודעות שלא נקראו"), its `text` is empty → `_unread` never fired; (2)
+  `recheck_requested` → `_set_group(code)` with no columns built `SET , last_checked` → sqlite error
+  *before* `read_pass` on every pass once a request was 24h old; (3) four passes died on
+  "uiautomator dump failed" (now: pkill uiautomator + relaunch before the last retry). Stages now run
+  independently (`_stage`); errors are raised only after ingest. Sender id confirmed: `name_in_group_tv`.
+- **First real messages:** the "Secret … Jobs" groups are a secrethunter.io bot feed of full-time roles
+  (gated out, correctly). Their shared template fuzz-matched as duplicates → `db._id_links`: two posts
+  whose per-posting links differ are never dups. A `?utm_source=` made one a "question" → URLs are
+  stripped before `QUESTION_RE`. `test_gate.py` 25/25.
+- **More groups:** invite links pasted inside our groups are queued (`found_via='in_group'`, priority
+  3000+) and vetted on the join sheet (`_on_topic`: jobs/dev/AI/client-side words, no cohorts/foreign).
+  `whatsapp_tried.txt` (codes only) is pushed daily and `wa_night.select_top` skips those codes, so the
+  morning list is new groups instead of the same 50.
+- **Not built:** tapping "קרא עוד" — no truncated message existed yet to verify where the span sits (a
+  wrong tap opens a link). kv `wa_truncated_seen` counts them; build it when that's > 0.
+- **Heartbeat** now adds top 3 groups by pushed leads (7d) and the groups silent 7d+ (report only).
+
 ## Open items
+- **25 Oct 2026 clock change:** shift `wanight.yml` by one hour — the cron lines, the `MODE` expression
+  (`'50 2 * * *'`) and the chain thresholds in the "Chain" step are all UTC. Not done early on purpose.
+- **WhatsApp "read more" tap** once `wa_phone.py --status` shows truncated > 0.
 - **Nothing is blocked on the user.** Checked 2026-09-06: the two standing "user action" items
   (join FB / WhatsApp groups) were measured and demoted below — see the yield table reasoning.
   The pipeline runs unattended.
