@@ -198,7 +198,11 @@ phone's screen lock at None and the S9's screen asleep between passes (AMOLED bu
 UI facts that cost a day to find: the unread badge's count is in **`content-desc`**, not `text`;
 the group sender id is `name_in_group_tv`. Invite links pasted inside groups are queued
 (`found_via='in_group'`) and vetted on the join sheet; `whatsapp_tried.txt` (codes only) tells the
-cloud hunt which groups the phone already tried. `--join-all on` bursts joins (Or's call).
+cloud hunt which groups the phone already tried. `--join-all on` bursts joins (Or's call). Joined groups
+matching `WA_SKIP_GROUP_RE` are not read (full-time feeds); job cards there gate as full-time and
+in-domain ones become outbound prospects. The phone pass also runs the local outbound batch
+(WhatsApp prospects + the gitignored `agencies_il.jsonl` drip). `wa_night --focus client` hunts
+client/work-passing groups and hub pages, and promotes Telegram channels into `telegram_found.txt`.
 
 **Outreach (`replier.py` + `notifier.py`).** Auto-reply is **Reddit only** — Facebook and LinkedIn
 are deliberately excluded because automating the user's account risks a ban, and Freelancer.com was

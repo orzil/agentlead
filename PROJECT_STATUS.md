@@ -584,6 +584,47 @@ Goal: 50 relevant WhatsApp invite links (HE+EN) by morning for Or to join by han
   Gemini's quota gone cloud leads were stored unscored and never pushed. Primary is now
   `minimax/minimax-m3.1-flash:free` (backup: super). First pass after: backlog scored 25, pushed 1.
 
+## 2026-10-20 evening: hunt where work is asked for, plus an outreach lane
+**Why:** after day 1 the phone had read 27 messages from 30 groups, and all 27 were full-time
+job-board posts (the secrethunter feeds, the LogOn board), correctly gated. Freelance work is asked
+for in client communities, passed on between freelancers and dev shops, or latent in companies that
+need it, which takes outreach. Or agreed to spend ~10 min a day sending drafted messages.
+
+- **Never silent again:** `main.py --funnel [DAYS]` (counts only, also a `leadagent.yml` step) and a
+  `scoring_watch` job that alerts when more than 30 leads from the last 24h are unscored. Unscored
+  leads sit at `status='scored' AND score IS NULL`, not `new`.
+- **Phone:**
+  - It no longer opens joined groups matching `WA_SKIP_GROUP_RE` (Or: stay, stop reading). The
+    secret… Freelance/Remote/Machine-learning feeds are still read.
+  - The dump flake (12 failed passes, 17:48–18:06) is fixed by turning the phone's animations off.
+  - "Waiting for this message" placeholders are skipped.
+- **Gate:**
+  - `WA_JOB_CARD_RE` makes a job card or salaried ad in WhatsApp `gate_full_time`, so an in-domain
+    one becomes a prospect instead of a ❓.
+  - Recommendation asks ("מישהו מכיר מפתח…", "can anyone recommend a … developer") count as ENGAGE.
+  - `test_gate.py` 28/28.
+- **Hunt:**
+  - `wa_night --focus client` adds client/work-passing DDG/Reddit queries and community hubs
+    (linktr.ee, meetup, lu.ma pages are crawled by `surf_dirs`). The night chain now keeps its focus.
+  - `WA_BUYER_GROUP_RE` gains business-owner, automation and no-code words.
+  - t.me handles seen anywhere become candidates. `validate_tg` (in `--select`) promotes live,
+    gate-passing channels to `telegram_found.txt`. `telegram_fetcher` adds them to its pool and
+    demotes after 3 zero-pass days.
+- **Search:** 7 recommendation/subcontract FB search-index intents and 1 Reddit query
+  (YOLO/video/extraction).
+- **Outreach:**
+  - `agencies_il.jsonl` (39 Israeli dev shops/AI consultancies, researched, gitignored) is dripped
+    2 a day by `outbound.drip_agencies` with a subcontractor pitch (`AGENCY_PROMPT`).
+  - The local phone pass now runs its own outbound batch (WhatsApp prospects + agencies). The cloud
+    keeps news.
+  - Globes tech and Globes English feeds were added. The CTech/NoCamels/Geektime-EN feeds 404.
+  - Full-time prospects must name a core skill (`_CORE_RE`); a recruiting ad got in on "חשבוניות".
+  - ❓ pushes carry a ready-to-paste answer (`leads.reply_draft`).
+- **Scorecard:** every Sunday from 09:00 IL, per source and per outreach, from both the cloud and
+  the phone PC.
+- **Marketing kit** (`marketing_kit.md`, gitignored): LinkedIn post (HE/EN), weekly post ideas,
+  profile blurbs, the group-answer playbook.
+
 ## Open items
 - **25 Oct 2026 clock change:** shift `wanight.yml` by one hour — the cron lines, the `MODE` expression
   (`'50 2 * * *'`) and the chain thresholds in the "Chain" step are all UTC. Not done early on purpose.
