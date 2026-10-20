@@ -625,7 +625,55 @@ need it, which takes outreach. Or agreed to spend ~10 min a day sending drafted 
 - **Marketing kit** (`marketing_kit.md`, gitignored): LinkedIn post (HE/EN), weekly post ideas,
   profile blurbs, the group-answer playbook.
 
+## 2026-10-21 night: leads that arrive by themselves (Or: no outreach for now)
+- **Leak fixed:** `fbnight.yml` had been uploading `leads.db` in plain text as an artifact. On a
+  public repo, any signed-in GitHub user can download those.
+  - The upload is now `leads.db.enc`: AES-256 with `openssl -pbkdf2`, key `DB_EXPORT_KEY` (repo
+    secret plus Or's `.env`). There is no plaintext fallback.
+  - The 16 plaintext artifacts were deleted.
+  - `sync_cloud.py` decrypts the artifact. The cloud→home sync works again, and 61,744 cloud
+    leads were merged locally, so local analysis and the Ollama audit now run on real data.
+- **60-day winners review** (54 leads ≥6, cloud DB, read locally):
+  - The most frequent paid kind is AI-training/expert contracts: micro1, Mindrift, Alignerr,
+    Mercor, $60–200/hr.
+  - The best on-target finds are document-intelligence roles and Israeli FB "looking for an
+    AI / invoice-automation developer" posts.
+  - The scorer also passes some off-domain 6s (marketing ops, Japanese language lead).
+- **Mercor fetcher** (`fetchers/mercor_fetcher.py`): public `listings-explore-page` JSON with
+  rate, hours/week and eligible countries.
+  - It keeps Israel-eligible listings only. The 35+ h/wk ones gate as full-time.
+  - First dry run: 202 eligible → 1 pass (ML Expert, $150–200/hr, 20 h/wk).
+- **arbeitnow** is in `STRONG_DOMAIN_SOURCES`: the strong term must be in the header
+  (title/types/tags). Replayed over 30 days, passes drop from 2,565 to 95, and the
+  Document-Intelligence winner is kept.
+- **F5Bot** (`f5bot.com`, free): its Reddit/HN keyword-alert mails are parsed by
+  `email_fetcher._parse_f5bot`.
+  - Hits are labelled `r/<sub>` / `hn`, and only hits matching ENGAGE are kept.
+  - **Waiting on Or to sign up**; account creation can't be automated. Keyword list below.
+- **Queries:** 4 Hebrew/English FB intents copied from the winners, 6 FB groups that produced ≥5
+  leads but were not in config, and 2 Reddit searches (document AI, AI-training contracts).
+- **Phone:**
+  - The USB link dropped around 22:05, and every pass since then has failed.
+  - `wa_phone.py --wifi-setup` (cable plugged in) enables Wi-Fi adb as the fallback link
+    (`.adb_wifi`, gitignored).
+  - An empty dump now checks the link and reports "phone disconnected".
+- **Probed and rejected:**
+  - freelancermap: the RSS is a 404 and the listings render in JS.
+  - PeoplePerHour: listings are login-walled.
+  - Ashby boards of Mercor/Surge/Handshake: staff roles, not gigs.
+
+### F5Bot keywords (add after sign-up)
+`hiring computer vision`, `need OCR`, `computer vision freelancer`, `YOLO developer`,
+`opencv developer`, `document extraction`, `invoice OCR`, `hiring machine learning engineer
+contract`, `looking for ML engineer`, `image processing freelance`, `defect detection`,
+`video analytics developer`, `data extraction freelancer`, `AI automation developer`,
+`document AI`.
+
 ## Open items
+- **Phone:** replug the USB cable, then run `python -X utf8 wa_phone.py --wifi-setup`. Then build
+  the night crawl (Community sister-groups + group-description invite links). It needs live screens
+  for resource ids.
+- **F5Bot sign-up (Or, 2 min):** f5bot.com with orzilber0@gmail.com, then add the keywords above.
 - **25 Oct 2026 clock change:** shift `wanight.yml` by one hour — the cron lines, the `MODE` expression
   (`'50 2 * * *'`) and the chain thresholds in the "Chain" step are all UTC. Not done early on purpose.
 - **WhatsApp "read more" tap** once `wa_phone.py --status` shows truncated > 0.

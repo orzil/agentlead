@@ -14,7 +14,9 @@ It runs on **GitHub Actions** (repo `orzil/agentlead`, **public** — flipped 20
 minutes, so *nothing* containing lead data may be committed or printed to a workflow log):
 `leadagent.yml` 7×/day incl. 4 overnight passes, `fbnight.yml` every 15 min 20:00–08:00 IL,
 `morning.yml` at 07:25 IL, `fbgroups.yml` weekly. `leads.db` lives in the Actions cache, never
-in git. Anything that touches Facebook or a search engine **must run in the cloud** — see the
+in git — and never in a plain artifact: a public repo's artifacts are downloadable by anyone
+signed in. `fbnight.yml` uploads only `leads.db.enc` (AES, key `DB_EXPORT_KEY` in the repo
+secrets and Or's `.env`), which `sync_cloud.py` decrypts to bring cloud leads home. Anything that touches Facebook or a search engine **must run in the cloud** — see the
 IP rules below.
 
 **The cloud pass is timing-constrained, and the order of `JOBS` decides what survives.** On a
