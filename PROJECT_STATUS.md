@@ -576,6 +576,13 @@ Goal: 50 relevant WhatsApp invite links (HE+EN) by morning for Or to join by han
   communities, DevOps/QA/cyber/marketing/SEO, senior/junior salary boards) is never joined or listed;
   10 gig/contract DDG queries added. A daytime burst of 8 cloud slices grew the pool only 1815 → 1818:
   **the public discovery surfaces are saturated** — new groups now come mostly from in-group links.
+- **CV focus (`wanight.yml` input `focus=cv`, `wa_night.py --focus cv`):** 18 slices of CV-only queries
+  (IL/US/EU, OpenCV/YOLO/image processing/machine vision/medical imaging) found ~22 invites, pool
+  1818 → 1829 live, and only **one** CV-named group reached the list ("Computer Vision LLM"). Public
+  WhatsApp CV groups barely exist; CV groups (`config.WA_CV_GROUP_RE`) now join first when found.
+- **Cloud scoring was dead:** OpenRouter's nemotron-super provider 404s ("Function not found"), so with
+  Gemini's quota gone cloud leads were stored unscored and never pushed. Primary is now
+  `minimax/minimax-m3.1-flash:free` (backup: super). First pass after: backlog scored 25, pushed 1.
 
 ## Open items
 - **25 Oct 2026 clock change:** shift `wanight.yml` by one hour — the cron lines, the `MODE` expression
