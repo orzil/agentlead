@@ -389,10 +389,11 @@ web apps) who works remotely for clients. He reads Hebrew and English only. He w
 where people POST PAID freelance/contract tech work, or where the people who BUY such work
 (startup founders, agency/SaaS/e-commerce owners, product managers) talk.
 For each numbered name give s:
- 3 = very likely: Hebrew or English jobs/freelance board for tech/AI/dev ('דרושים' dev/AI groups,
-     freelance hubs, remote-jobs boards, founders-hiring groups, Israeli startup/hi-tech jobs)
+ 3 = very likely: Hebrew or English FREELANCE / contract / part-time / gigs / projects board for
+     tech/AI/dev, founders or business owners looking for developers, 'דרושים' AI/dev groups
  2 = plausible: AI/ML/automation/data/startup community with a jobs or clients angle
- 1 = weak: general tech/AI chat with no hiring angle
+ 1 = weak: general tech/AI chat with no hiring angle, and FULL-TIME-only job boards (salaried
+     roles, career coaching, job-seeker communities) - he does not take full-time jobs
  0 = no: students, colleges, cohorts, batches, courses, bootcamps, internships, exam prep,
      hackathons, events, hobbies, local-neighbourhood groups, and ANY group tied to another
      country, city, language or college (e.g. India, Brazil, Indonesia, Africa, Pakistan,
@@ -454,6 +455,10 @@ def _rank(r: sqlite3.Row) -> tuple:
     llm = r["llm_relevant"]
     name = r["name"] or ""
     boost = 1 if CLIENT_SIDE_RE.search(name) else 0
+    # Or wants part-time/contract/freelance only: those groups and the groups
+    # where buyers talk outrank the (LLM-favoured) general job boards
+    if config.WA_FREELANCE_GROUP_RE.search(name) or config.WA_BUYER_GROUP_RE.search(name):
+        boost += 4
     base = (llm if llm is not None else 1) * 3 + (r["relevance"] or 0) + boost
     return (-base, name)
 
@@ -481,7 +486,7 @@ def select_top(conn, n: int = 50) -> list[sqlite3.Row]:
     tried = _tried_codes()
     keep = []
     for r in rows:
-        if r["code"] in tried:
+        if r["code"] in tried or config.WA_SKIP_GROUP_RE.search(r["name"] or ""):
             continue
         llm = r["llm_relevant"]
         if FOREIGN_RE.search(r["name"] or ""):

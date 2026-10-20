@@ -567,7 +567,42 @@ WHATSAPP_DDG_QUERIES = [
     "site:chat.whatsapp.com דרושים מפתחים",
     "site:chat.whatsapp.com משרות הייטק ישראל",
     "site:chat.whatsapp.com אוטומציה עסקים",
+    # 2026-10-20, Or: "part time, contract, freelance - only relevant ones". The
+    # first lists were full-time job boards; these aim at gig/contract groups
+    # and at the people who buy the work.
+    'site:chat.whatsapp.com "part time" developers',
+    'site:chat.whatsapp.com "contract" developers remote',
+    'site:chat.whatsapp.com freelance gigs projects',
+    'site:chat.whatsapp.com "freelance developers"',
+    'site:chat.whatsapp.com founders "looking for" developer',
+    'site:chat.whatsapp.com agency owners outsourcing',
+    "site:chat.whatsapp.com משרה חלקית פיתוח",
+    "site:chat.whatsapp.com פרויקטים לפרילנסרים",
+    "site:chat.whatsapp.com יזמים בעלי עסקים",
+    "site:chat.whatsapp.com פרילנס הייטק",
 ]
+
+# Group NAMES, shared by the night hunt's ranking (wa_night._rank) and the
+# phone's join order (wa_phone._priority). Or wants part-time / contract /
+# freelance work only, so:
+#   FREELANCE - the work itself is gig/contract/part-time
+#   BUYER     - the people who pay for it talk there (founders, CTOs, owners)
+#   SKIP      - measured or obviously full-time-only / wrong side: the
+#               "Secret <X> Jobs" bot feeds (100% full-time on 2026-10-20),
+#               career-coaching and job-SEEKER communities, and boards for
+#               roles Or doesn't do (DevOps, QA, cyber, marketing, embedded...)
+WA_FREELANCE_GROUP_RE = re.compile(
+    r"(freelanc|פרילנס|part[\s-]?time|משרה\s+חלקית|חלקיות|contract(or|s)?\b|gigs?\b"
+    r"|projects?\b|פרויקטים|outsourc|\bremote\b|מהבית)", re.IGNORECASE)
+WA_BUYER_GROUP_RE = re.compile(
+    r"(founders?|\bCEO\b|\bCTO\b|\bCPO\b|\bVP\b|יזמים|יזמות|בעלי\s+עסקים|agency|agencies"
+    r"|saas|e-?commerce|startups?\b|סטארטאפ|product\s+managers?\s+(club|forum|community))",
+    re.IGNORECASE)
+WA_SKIP_GROUP_RE = re.compile(
+    r"(secret\s+[\w&\s]+jobs|career|קריירה|מחפשי\s+עבודה|job\s*seekers?|referal+y?|מנוסים"
+    r"|seniors\s+of\s+the\s+future|talents?\b|olim|עולים|devops|\bQA\b|בודק|cyber|סייבר"
+    r"|marketing|שיווק|embedded|הנדסאים|טכנאים|מערכות\s+מידע|project\s+managers?\s+jobs"
+    r"|executives?\b|נשים\s+בהייטק)", re.IGNORECASE)
 
 # --- Night search rotation ----------------------------------------------------
 # DuckDuckGo challenges an IP after ~1-2 queries, so the three query families

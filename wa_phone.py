@@ -285,7 +285,13 @@ _P1 = re.compile(r"(פיתוח|תוכנה|מתכנת|developer|backend|frontend|
 
 
 def _priority(name: str, index: int) -> int:
-    tier = 0 if _P0.search(name) else 1 if _P1.search(name) else 2
+    """Freelance/contract groups and the groups where buyers talk first
+    (Or, 2026-10-20: "part time, contract, freelance"), then AI/data, then
+    general dev boards. Tier 0 wins ties by the hunt's own md order."""
+    if config.WA_FREELANCE_GROUP_RE.search(name) or config.WA_BUYER_GROUP_RE.search(name):
+        tier = 0
+    else:
+        tier = 1 if _P0.search(name) else 2 if _P1.search(name) else 2
     return tier * 1000 + index
 
 
@@ -309,8 +315,16 @@ def load_targets(conn) -> int:
             " VALUES (?, ?, ?, 'live', ?, 'top50', ?)",
             (code, f"https://chat.whatsapp.com/{code}", name, "IL" if lang == "HE" else "GLOBAL", now))
         new += cur.rowcount
-        conn.execute("UPDATE whatsapp_groups SET priority=? WHERE code=? AND priority IS NULL",
+        # re-rank every untried target, so a ranking change reorders the queue
+        conn.execute("UPDATE whatsapp_groups SET priority=? WHERE code=? AND join_status IS NULL",
                      (_priority(name, i), code))
+    # full-time-only boards and job-seeker communities are never joined; the
+    # name decides, no join slot spent (reversible: clear join_status)
+    for code, name in conn.execute("SELECT code, name FROM whatsapp_groups WHERE "
+                                   "priority IS NOT NULL AND join_status IS NULL").fetchall():
+        if name and config.WA_SKIP_GROUP_RE.search(name):
+            conn.execute("UPDATE whatsapp_groups SET join_status='skipped_offtopic' WHERE code=?",
+                         (code,))
     conn.commit()
     return new
 
@@ -462,7 +476,8 @@ def _on_topic(title: str, desc: str) -> bool:
     s = f"{title} {desc}"
     return (bool(dwg.WA_RELEVANT_RE.search(s) or config.STRONG_DOMAIN_RE.search(s)
                  or wa_night.CLIENT_SIDE_RE.search(s))
-            and not dwg.WA_NOISE_RE.search(title) and not wa_night.FOREIGN_RE.search(title))
+            and not dwg.WA_NOISE_RE.search(title) and not wa_night.FOREIGN_RE.search(title)
+            and not config.WA_SKIP_GROUP_RE.search(title))
 
 
 def harvest_invites(conn, msgs: list[dict]) -> int:
