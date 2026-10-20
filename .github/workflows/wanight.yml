@@ -33,9 +33,9 @@ on:
         options: [slice, select]
         default: slice
       focus:
-        description: "all = every query list, cv = computer-vision groups only"
+        description: "all = every query list, cv = computer-vision groups, client = client/work-passing groups + community hubs"
         type: choice
-        options: [all, cv]
+        options: [all, cv, client]
         default: all
 
 concurrency:
@@ -114,7 +114,7 @@ jobs:
         run: |
           git config user.name "agentlead-bot"
           git config user.email "noreply@github.com"
-          git add whatsapp_top50.md 2>/dev/null || true
+          git add whatsapp_top50.md telegram_found.txt 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "no list to commit"
           else

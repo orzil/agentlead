@@ -147,17 +147,57 @@ CV_TG_CHANNELS = ["computervision", "opencv", "cv_jobs", "computer_vision_jobs",
                   "machinevision", "imageprocessing", "ml_jobs_israel", "roboticsjobs"]
 CV_HIVE_TOPICS = ["computer-vision", "image-processing", "deep-learning", "robotics",
                   "machine-learning", "artificial-intelligence"]
-_CUR_SUFFIX = ""        # "_cv" under --focus cv: separate rotation cursors
+# --focus client (2026-10-20, after day 1 on the phone: the job-board groups post
+# only salaried roles). Freelance work is ASKED FOR where clients talk (founders,
+# business owners, automation/no-code) and PASSED ON where freelancers and dev
+# shops talk. Plus community hubs - linktr.ee / meetup / lu.ma pages of Israeli
+# AI/dev communities carry their WhatsApp and Telegram links in plain HTML, and
+# those links don't rank in search on their own. DDG result pages are queued for
+# surf_dirs, which is what actually reads the hub pages.
+CLIENT_DDG_QUERIES = [
+    "קבוצת וואטסאפ העברת עבודות פרילנסרים",
+    "קבוצת וואטסאפ פרויקטים לפרילנסרים מתכנתים",
+    "קבוצת וואטסאפ בעלי עסקים בינה מלאכותית",
+    "קבוצת וואטסאפ אוטומציות לעסקים n8n",
+    "קבוצת וואטסאפ יזמים סטארטאפים קישור",
+    "קבוצת וואטסאפ מנהלי מוצר ישראל",
+    'site:chat.whatsapp.com "AI" "בעלי עסקים"',
+    'site:chat.whatsapp.com יזמים',
+    'site:chat.whatsapp.com "SaaS founders"',
+    'site:chat.whatsapp.com "AI automation" agency',
+    'site:chat.whatsapp.com "no-code" builders',
+    'site:linktr.ee "chat.whatsapp.com" AI israel',
+    'site:linktr.ee קהילת AI וואטסאפ',
+    'site:meetup.com tel aviv "computer vision" OR "machine learning" whatsapp',
+    'site:lu.ma tel aviv AI community whatsapp',
+    '"chat.whatsapp.com" "GenAI Israel" OR "AI Israel" community',
+    '"chat.whatsapp.com" PyData OR MDLI OR "Women in AI" israel',
+    '"chat.whatsapp.com" startup founders community link',
+]
+CLIENT_REDDIT_QUERIES = [
+    '"chat.whatsapp.com" founders', '"chat.whatsapp.com" saas',
+    '"chat.whatsapp.com" "small business" AI', '"chat.whatsapp.com" n8n OR zapier OR make.com',
+    '"chat.whatsapp.com" agency owners', '"chat.whatsapp.com" israel startup',
+]
+CLIENT_HIVE_TOPICS = ["entrepreneurship", "startups", "saas", "e-commerce", "no-code",
+                      "automation", "small-business", "business", "product-management",
+                      "freelancing", "agency"]
+_CUR_SUFFIX = ""        # "_cv"/"_client" under --focus: separate rotation cursors
 
 
 def _apply_focus(focus: str) -> None:
     global REDDIT_QUERIES, GITHUB_QUERIES, DDG_QUERIES, TG_CHANNELS, DIR_SEEDS, _CUR_SUFFIX
-    if focus != "cv":
-        return
-    REDDIT_QUERIES, GITHUB_QUERIES = CV_REDDIT_QUERIES, CV_GITHUB_QUERIES
-    DDG_QUERIES, TG_CHANNELS = CV_DDG_QUERIES, CV_TG_CHANNELS
-    DIR_SEEDS = [(f"{_HIVE}/topics/{t}/platform/whatsapp/", _HIVE_FOLLOW) for t in CV_HIVE_TOPICS]
-    _CUR_SUFFIX = "_cv"
+    if focus == "cv":
+        REDDIT_QUERIES, GITHUB_QUERIES = CV_REDDIT_QUERIES, CV_GITHUB_QUERIES
+        DDG_QUERIES, TG_CHANNELS = CV_DDG_QUERIES, CV_TG_CHANNELS
+        DIR_SEEDS = [(f"{_HIVE}/topics/{t}/platform/whatsapp/", _HIVE_FOLLOW)
+                     for t in CV_HIVE_TOPICS]
+        _CUR_SUFFIX = "_cv"
+    elif focus == "client":
+        REDDIT_QUERIES, DDG_QUERIES = CLIENT_REDDIT_QUERIES, CLIENT_DDG_QUERIES
+        DIR_SEEDS = [(f"{_HIVE}/topics/{t}/platform/whatsapp/", _HIVE_FOLLOW)
+                     for t in CLIENT_HIVE_TOPICS]
+        _CUR_SUFFIX = "_client"
 
 
 # Per-run budgets. Small on purpose - see module docstring.
@@ -209,8 +249,19 @@ def _take(conn, key: str, items: list, n: int) -> list:
     return picked
 
 
+# Public Telegram channels seen in the same pages: the night hunt is the one
+# place that already reads hubs, directories and stored posts, so it collects
+# candidates for the Telegram fetcher too. Validated in --select (validate_tg).
+TME_RE = re.compile(r"(?:https?://)?(?:www\.)?t(?:elegram)?\.me/(?!s/|joinchat|share|addstickers"
+                    r"|c/|\+)([A-Za-z][A-Za-z0-9_]{4,31})\b")
+_TG_SEEN: set[str] = set()
+TG_FOUND_FILE = config.BASE_DIR / "telegram_found.txt"
+
+
 def _add_codes(conn, text: str, via: str) -> int:
     import discover_whatsapp_groups as wa
+    _TG_SEEN.update(h.lower() for h in TME_RE.findall(text or "")
+                    if not h.lower().endswith("bot"))
     new = 0
     for code in set(wa.WA_INVITE_RE.findall(text or "")):
         if wa._add(conn, code, via):
@@ -387,6 +438,72 @@ def surf_dirs(conn, client_factory) -> int:
 
 SURFACES = {"reddit": surf_reddit, "github": surf_github, "telegram": surf_telegram,
             "ddg": surf_ddg, "dirs": surf_dirs}
+
+
+def _save_tg_seen(conn) -> int:
+    import db
+    known = set(json.loads(db.kv_get(conn, "tg_candidates", "[]") or "[]"))
+    fresh = _TG_SEEN - known - {c.lower() for c in config.TELEGRAM_CHANNELS}
+    if fresh:
+        db.kv_set(conn, "tg_candidates", json.dumps(sorted(known | fresh)[-3000:]))
+    return len(fresh)
+
+
+TG_VALIDATE_CAP, TG_MAX_AGE_DAYS = 25, 14
+
+
+def validate_tg(conn, cap: int = TG_VALIDATE_CAP) -> int:
+    """Promote candidate channels whose public preview is alive (a post in the
+    last 14 days) and carries at least one post our own gate passes. Names go to
+    telegram_found.txt, which telegram_fetcher adds to its pool. Channel handles
+    are public; no post text is written anywhere."""
+    import db
+    import httpx
+    import prefilter
+    from datetime import datetime, timedelta, timezone
+    from fetchers import telegram_fetcher
+    from models import Lead
+    cands = json.loads(db.kv_get(conn, "tg_candidates", "[]") or "[]")
+    checked = set(json.loads(db.kv_get(conn, "tg_checked", "[]") or "[]"))
+    found = set(TG_FOUND_FILE.read_text(encoding="utf-8").split()) if TG_FOUND_FILE.exists() else set()
+    todo = [c for c in cands if c not in checked][:cap]
+    if not todo:
+        return 0
+    telegram_fetcher._ensure_tme_resolvable()
+    cutoff = datetime.now(timezone.utc) - timedelta(days=TG_MAX_AGE_DAYS)
+    promoted = 0
+    with httpx.Client(headers={"User-Agent": config.USER_AGENT}, timeout=25,
+                      follow_redirects=True) as client:
+        for name in todo:
+            checked.add(name)
+            try:
+                r = client.get(f"https://t.me/s/{name}")
+            except Exception:
+                continue
+            if r.status_code != 200:
+                continue
+            posts, newest, passed = 0, None, 0
+            for m in telegram_fetcher._MSG_RE.finditer(r.text):
+                try:
+                    dt = datetime.fromisoformat(m.group("dt"))
+                    newest = max(newest, dt) if newest else dt
+                except ValueError:
+                    pass
+                if not m.group("text"):
+                    continue
+                posts += 1
+                lead = Lead(source=f"telegram/{name}", url=f"https://t.me/{m.group('post')}",
+                            raw_text=telegram_fetcher._clean(m.group("text"))[:4000])
+                if prefilter.classify(lead) == "pass":
+                    passed += 1
+            if posts >= 5 and newest and newest >= cutoff and passed >= 1:
+                found.add(name)
+                promoted += 1
+            time.sleep(1.5)
+    db.kv_set(conn, "tg_checked", json.dumps(sorted(checked)[-5000:]))
+    if promoted:
+        TG_FOUND_FILE.write_text("\n".join(sorted(found)) + "\n", encoding="utf-8")
+    return promoted
 
 
 def mine_other_db(conn, path: str) -> int:
@@ -612,8 +729,9 @@ def main() -> None:
     ap.add_argument("--via", choices=["manual", "research"], default="research",
                     help="with --add-links: manual = Or's own groups (tier A)")
     ap.add_argument("--validate-cap", type=int, default=VALIDATE_CAP)
-    ap.add_argument("--focus", choices=["all", "cv"], default="all",
-                    help="cv = computer-vision query lists only (own cursors)")
+    ap.add_argument("--focus", choices=["all", "cv", "client"], default="all",
+                    help="cv = computer-vision lists, client = client/work-passing groups "
+                         "and community hubs (each with own cursors)")
     args = ap.parse_args()
     _apply_focus(args.focus)
 
@@ -652,7 +770,12 @@ def main() -> None:
         rows = select_top(conn, 50)
         pool = dict(conn.execute(
             "SELECT status, COUNT(*) FROM whatsapp_groups GROUP BY status").fetchall())
-        print(f"pool {pool}; llm-rated {rated}; selected {len(rows)}")
+        try:
+            tg = validate_tg(conn)
+        except Exception as e:
+            log.error("telegram validation failed: %s", str(e)[:120])
+            tg = -1
+        print(f"pool {pool}; llm-rated {rated}; selected {len(rows)}; telegram promoted {tg}")
         print(f"wrote {write_top_md(rows)}")
         if args.notify and db.kv_get(conn, "wa_top50_sent", "") != time.strftime("%Y-%m-%d"):
             notify_top(rows, pool)
@@ -669,6 +792,7 @@ def main() -> None:
             counts[name] = -1
     if args.mine_from:
         counts["leads_db"] = mine_other_db(conn, args.mine_from)
+    counts["tg_candidates"] = _save_tg_seen(conn)
     wa.validate_pending(conn, cap=args.validate_cap)
     wa.rescore(conn)
     pool = dict(conn.execute(

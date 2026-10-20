@@ -75,14 +75,50 @@ def _clean(fragment: str) -> str:
     return re.sub(r"[ \t]+", " ", text).strip()
 
 
-def fetch() -> list[Lead]:
+# Channels the night hunt found and validated (wa_night.validate_tg), committed
+# as plain handles. A found channel whose posts never pass the gate on DEMOTE_DAYS
+# separate days drops out of the pool; config channels are never demoted.
+FOUND_FILE = config.BASE_DIR / "telegram_found.txt"
+DEMOTE_DAYS = 3
+
+
+def _pool(conn) -> tuple[list[str], set[str]]:
+    import db
+    found = []
+    if FOUND_FILE.exists():
+        base = {c.lower() for c in config.TELEGRAM_CHANNELS}
+        found = [h for h in FOUND_FILE.read_text(encoding="utf-8").split() if h.lower() not in base]
+    if conn is not None:
+        found = [h for h in found
+                 if int((db.kv_get(conn, f"tg_zero_{h}", "0|") or "0|").split("|")[0]) < DEMOTE_DAYS]
+    return list(config.TELEGRAM_CHANNELS) + found, set(found)
+
+
+def _record_yield(conn, handle: str, leads: list[Lead]) -> None:
+    """One zero-yield strike per day for a found channel; any pass resets it."""
+    import db
+    import prefilter
+    if conn is None or not leads:
+        return
+    key = f"tg_zero_{handle}"
+    strikes, day = (db.kv_get(conn, key, "0|") or "0|").split("|")
+    today = datetime.now().strftime("%Y-%m-%d")
+    if any(prefilter.classify(l) == "pass" for l in leads):
+        db.kv_set(conn, key, f"0|{today}")
+    elif day != today:
+        db.kv_set(conn, key, f"{int(strikes) + 1}|{today}")
+
+
+def fetch(conn=None) -> list[Lead]:
     import httpx
 
     _ensure_tme_resolvable()
     headers = {"User-Agent": config.USER_AGENT}
     leads: list[Lead] = []
+    pool, found = _pool(conn)
     with httpx.Client(headers=headers, timeout=25, follow_redirects=True) as client:
-        for handle in config.TELEGRAM_CHANNELS:
+        for handle in pool:
+            before = len(leads)
             try:
                 r = client.get(f"https://t.me/s/{handle}")
                 r.raise_for_status()
@@ -107,6 +143,8 @@ def fetch() -> list[Lead]:
                     ))
                     n += 1
                 log.info("telegram: %s -> %d posts", handle, n)
+                if handle in found:
+                    _record_yield(conn, handle, leads[before:])
             except Exception as e:
                 log.error("telegram %s failed: %s", handle, e)
     return leads

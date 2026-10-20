@@ -86,6 +86,18 @@ CASES = [
      "Machine learning engineer | computer vision\nAcme\nRamat Gan\n19/10/26\n"
      "Python, Image Processing, Deep Learning\nJunior\n"
      "https://jobs.example.io/jobz/edc067eb26?utm_source=wa_x", NOW, "gate_offtopic"),
+    # 2026-10-20: the real card format (ㅤ separators + seniority) is a salaried
+    # role: full-time, so an in-domain one becomes an outbound prospect.
+    ("wa job card", "whatsapp/Test Group",
+     "Machine learning engineer | computer vision Acme Ramat Gan 19/10/26 ㅤ Python, "
+     "Image Processing, Deep Learning ㅤ Junior ㅤ https://jobs.example.io/jobz/edc067eb26 "
+     "-- Set up a saved search?", NOW, "gate_full_time"),
+    ("wa hebrew recommendation ask", "whatsapp/Test Group",
+     "מישהו מכיר מפתח שמבין בעיבוד תמונה? יש לנו מצלמה בקו ייצור וצריך לזהות פגמים",
+     NOW, "pass"),
+    ("wa english recommendation ask", "whatsapp/Test Group",
+     "Can anyone recommend a freelance computer vision developer? We need to count "
+     "people in store camera footage.", NOW, "pass"),
     ("wa full-time post", "whatsapp/Test Group",
      "דרוש/ה מפתח/ת Computer Vision למשרה מלאה בחברת סטארטאפ בהרצליה, היברידי",
      NOW, "gate_full_time"),

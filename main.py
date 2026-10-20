@@ -153,7 +153,7 @@ def job_companies(conn) -> None:
 
 
 def job_telegram(conn) -> None:
-    pipeline.ingest_many(conn, telegram_fetcher.fetch(), "telegram")
+    pipeline.ingest_many(conn, telegram_fetcher.fetch(conn), "telegram")
 
 
 def job_feedback(conn) -> None:
@@ -217,7 +217,7 @@ STUCK_SCORING_MIN = int(os.environ.get("STUCK_SCORING_MIN", "30"))
 
 def job_scoring_watch(conn) -> None:
     day = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
-    n = conn.execute("SELECT COUNT(*) FROM leads WHERE status='new' AND fetched_at >= ?",
+    n = conn.execute("SELECT COUNT(*) FROM leads WHERE status='scored' AND score IS NULL AND fetched_at >= ?",
                      (day,)).fetchone()[0]
     if n > STUCK_SCORING_MIN:
         raise RuntimeError(f"{n} leads from the last 24h are unscored - the LLM "
@@ -753,9 +753,9 @@ def print_funnel(conn, days: int = 30) -> None:
               f"{r['good'] or 0:5} {r['pushed'] or 0:5}")
     day = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
     print("unscored backlog:", conn.execute(
-        "SELECT COUNT(*) FROM leads WHERE status='new'").fetchone()[0],
+        "SELECT COUNT(*) FROM leads WHERE status='scored' AND score IS NULL").fetchone()[0],
         "| fresh (24h):", conn.execute(
-        "SELECT COUNT(*) FROM leads WHERE status='new' AND fetched_at >= ?", (day,)).fetchone()[0])
+        "SELECT COUNT(*) FROM leads WHERE status='scored' AND score IS NULL AND fetched_at >= ?", (day,)).fetchone()[0])
     pros = conn.execute("SELECT status, COUNT(*) FROM prospects GROUP BY status").fetchall()
     print("prospects:", dict((p[0], p[1]) for p in pros) or "none",
           "| last outbound batch:", db.kv_get(conn, "outbound_last_batch", "") or "never")

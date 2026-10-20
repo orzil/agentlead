@@ -103,6 +103,8 @@ def classify(lead: Lead) -> str:
         # explicit FT marker, or a career-board source that is FT by default
         if config.FT_RE.search(text) or src_root in config.FT_DEFAULT_SOURCES:
             return "gate_full_time"
+        if src_root == "whatsapp" and config.WA_JOB_CARD_RE.search(text):
+            return "gate_full_time"
 
     if config.PARTNER_RE.search(text) and not config.BUDGET_SIGNAL_RE.search(text):
         return "partnership"

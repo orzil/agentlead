@@ -181,6 +181,7 @@ REDDIT_SEARCHES = [
     'title:(hiring OR task) ("computer vision" OR OCR OR "image processing" OR "object detection")',
     'title:(hiring OR task) ("machine learning" OR "deep learning" OR "data science" OR "data visualization")',
     'title:(hiring OR task) (LLM OR RAG OR chatbot OR "AI agent" OR automation)',
+    'title:(hiring OR task) (YOLO OR "video analytics" OR "data extraction" OR PDF OR invoice OR scanning)',
 ]
 
 # --- LinkedIn ---------------------------------------------------------------
@@ -473,6 +474,14 @@ FB_POST_INTENT_QUERIES = [
     'site:facebook.com/groups "מחפשת מפתח" OR "מחפשים מפתח"',
     'site:facebook.com/groups "ראייה ממוחשבת" OR "עיבוד תמונה" פרויקט',
     'site:facebook.com/groups אוטומציה "מחפש מישהו"',
+    # recommendation asks - how Israelis hire in a group (2026-10-20)
+    'site:facebook.com/groups "ממליצים על מפתח" OR "ממליצים על מתכנת"',
+    'site:facebook.com/groups "מישהו מכיר מפתח" OR "מישהו מכיר מתכנת"',
+    'site:facebook.com/groups "מחפש מישהו שיבנה" OR "מחפשת מישהו שיבנה"',
+    'site:facebook.com/groups "המלצה על" "בינה מלאכותית" OR AI מפתח',
+    'site:facebook.com/groups "can anyone recommend" developer AI OR "computer vision"',
+    'site:facebook.com/groups subcontract "computer vision" OR "machine learning" OR OCR',
+    'site:facebook.com/groups "white label" AI developer',
 ]
 
 # Groups worth querying individually - the curated public ones the scraper can
@@ -611,10 +620,13 @@ WA_CV_GROUP_RE = re.compile(
     r"|remote\s+sensing|vision\s+AI|robotics?|רובוטיקה)", re.IGNORECASE)
 WA_BUYER_GROUP_RE = re.compile(
     r"(founders?|\bCEO\b|\bCTO\b|\bCPO\b|\bVP\b|יזמים|יזמות|בעלי\s+עסקים|agency|agencies"
-    r"|saas|e-?commerce|startups?\b|סטארטאפ|product\s+managers?\s+(club|forum|community))",
+    r"|saas|e-?commerce|startups?\b|סטארטאפ|product\s+managers?\s+(club|forum|community)"
+    # client/work-passing communities (2026-10-20): where work is asked for or handed on
+    r"|מנהלי\s+מוצר|העברת\s+(עבודות|פרויקטים)|לעסקים|אוטומציות?|n8n|no[\s-]?code|make\.com"
+    r"|zapier|small\s+business|business\s+owners)",
     re.IGNORECASE)
 WA_SKIP_GROUP_RE = re.compile(
-    r"(secret\s+[\w&\s]+jobs|career|קריירה|מחפשי\s+עבודה|job\s*seekers?|referal+y?|מנוסים"
+    r"(secret\s+(?!freelance|remote|machine)[\w&\s]+jobs?\b|career|קריירה|מחפשי\s+עבודה|job\s*seekers?|referal+y?|מנוסים"
     r"|seniors\s+of\s+the\s+future|talents?\b|olim|עולים|devops|\bQA\b|בודק|cyber|סייבר"
     r"|marketing|שיווק|embedded|הנדסאים|טכנאים|מערכות\s+מידע|project\s+managers?\s+jobs"
     r"|executives?\b|נשים\s+בהייטק|מחפשים\s+עבודה|בכיר|ג'וניור|junior|ניהול|\bSEO\b|\bPPC\b"
@@ -709,10 +721,16 @@ _ENGAGE_EN = [
     r"freelanc", r"contract", r"\bPOC\b", r"proof\s+of\s+concept", r"part[\s-]?time",
     r"hourly", r"\bgig\b", r"project", r"consultant", r"looking\s+for", r"hiring",
     r"\[hiring\]", r"budget", r"outsourc",
+    # a request for a PERSON is hiring intent: "can anyone recommend a CV developer?"
+    r"(recommend|know)\s+(a|an|any|some(one|body)?)\s+[\w\s/-]{0,40}?(developer|engineer|freelancer"
+    r"|expert|consultant|programmer|agency|studio|company)",
 ]
 _ENGAGE_HE = [
     "פרילנסר", "פרילנס", "מיקור חוץ", "פרויקט", "פרוייקט", "משרה חלקית",
     "מחפשים", "מחפש", "דרוש", "דרושה", "תקציב", "יועץ", "עבודה מהבית",
+    # "מישהו מכיר / ממליצים על מפתח..." - the Israeli way of hiring in a group
+    r"(מכיר|מכירה|מכירים|ממליץ|ממליצה|ממליצים|המלצה|המלצות)\s+(על\s+|ל)?(מפתח|מתכנת|פרילנסר|מומחה|יועץ"
+    r"|חברה|חברת|סטודיו|מישהו\s+ש|מישהי\s+ש)",
 ]
 
 DOMAIN_RE = re.compile("|".join(_DOMAIN_EN + _DOMAIN_HE), re.IGNORECASE)
@@ -892,6 +910,14 @@ INTENT_REQUIRED_ROOTS = {"whatsapp"}
 # client. For these roots a STRONG domain term + a question marker -> verdict
 # 'question' (scored by scorer.score_question, pushed as ❓). Learner asks
 # (courses, homework, "how do I start") stay offtopic - those people don't pay.
+# A job-board card or a salaried-role ad in a WhatsApp group (secrethunter bot
+# cards: "Role | Company City date ㅤ skills ㅤ Junior/Mid/Senior ㅤ link"; LogOn
+# ads: "דרוש/ה ... לתפקיד"). Without a FLEX term these are full-time - and an
+# in-domain one is an outbound prospect, not a question (2026-10-20).
+WA_JOB_CARD_RE = re.compile(
+    r"(secrethunter\.io/jobz/|ㅤ\s*(Junior|Mid|Senior|Techlead|Teamleader|Student)\b"
+    r"|דרוש/ה|לתפקיד|למשרה|למשרת)", re.IGNORECASE)
+
 QUESTION_ROOTS = {"whatsapp"}
 QUESTION_RE = re.compile(
     r"(\?|anyone\s+(know|tried|used|familiar|recommend)|does\s+anyone|has\s+anyone"

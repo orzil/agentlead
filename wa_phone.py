@@ -803,8 +803,13 @@ def _unread(row: ET.Element) -> bool:
 
 def read_pass(conn) -> list[Lead]:
     """Open every allowlisted group that shows an unread badge, read it, and
-    return its messages as Leads. Walks the chat list page by page."""
-    titles = _joined_titles(conn)
+    return its messages as Leads. Walks the chat list page by page.
+    Joined groups that turned out to be full-time feeds (WA_SKIP_GROUP_RE) are
+    not opened (Or, 2026-10-20: stay in them, stop reading them)."""
+    joined = _joined_titles(conn)
+    titles = {t: c for t, c in joined.items() if not config.WA_SKIP_GROUP_RE.search(t)}
+    if len(titles) < len(joined):
+        log.info("wa read: %d full-time feed group(s) not read", len(joined) - len(titles))
     if not titles:
         return []
     leads: list[Lead] = []
