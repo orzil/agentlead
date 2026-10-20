@@ -182,6 +182,10 @@ REDDIT_SEARCHES = [
     'title:(hiring OR task) ("machine learning" OR "deep learning" OR "data science" OR "data visualization")',
     'title:(hiring OR task) (LLM OR RAG OR chatbot OR "AI agent" OR automation)',
     'title:(hiring OR task) (YOLO OR "video analytics" OR "data extraction" OR PDF OR invoice OR scanning)',
+    # 60-day winners (2026-10-21): document-AI roles scored 10, and paid
+    # AI-training/evaluation contracts were the most frequent >=6 kind
+    'title:hiring ("document intelligence" OR "document AI" OR "document processing" OR "AI trainer")',
+    'title:hiring ("AI training" OR "model evaluation" OR "expert contributors") (remote OR contract)',
 ]
 
 # --- LinkedIn ---------------------------------------------------------------
@@ -483,6 +487,19 @@ FB_POST_INTENT_QUERIES = [
     'site:facebook.com/groups "can anyone recommend" developer AI OR "computer vision"',
     'site:facebook.com/groups subcontract "computer vision" OR "machine learning" OR OCR',
     'site:facebook.com/groups "white label" AI developer',
+    # phrasings of the 60-day winners (2026-10-21 review): Israeli owners ask
+    # for someone "who knows how to" automate a concrete chore
+    'site:facebook.com/groups "מחפש מפתח AI" OR "מחפש מפתח אוטומציה"',
+    'site:facebook.com/groups "מחפש מישהו שיודע" אוטומציה OR AI OR חשבוניות',
+    'site:facebook.com/groups חשבוניות אוטומציה OR "חילוץ נתונים" OR "סריקת מסמכים"',
+    'site:facebook.com/groups "AI developer" "needed urgently" OR "looking for"',
+    # groups that produced >=5 leads via the index but are not in FACEBOOK_GROUPS
+    'site:facebook.com/groups/talkingautomation',
+    'site:facebook.com/groups/752790164383176',
+    'site:facebook.com/groups/system.automation.ai.agents.n8n.zapier.ifttt',
+    'site:facebook.com/groups/2045714238815121',
+    'site:facebook.com/groups/332087790866175',
+    'site:facebook.com/groups/1697893427122178',
 ]
 
 # Groups worth querying individually - the curated public ones the scraper can
@@ -887,8 +904,9 @@ GATE_BYPASS_SOURCES = {"upwork", "wellfound"}
 # plan, so a lead there costs money to act on - same reasoning as Freelancer.com.
 # arbeitnow (2026-10-21 funnel): 17k fetched, ~880 scored, 2 pushed - a broad
 # German board where the loose DOMAIN_RE ("AI", "data") matches everything. It
-# must hit a STRONG term (CV/OCR/ML/...) to cost a scoring call.
-STRONG_DOMAIN_SOURCES = {"arbeitnow"}
+# must hit a STRONG term (CV/OCR/ML/...) in its HEADER to cost a scoring call:
+# 30d replay = 95 of 2,565 survive, incl. the Document Intelligence winner.
+STRONG_DOMAIN_SOURCES = {"arbeitnow", "mercor"}   # mercor: every listing says "AI"
 
 DOMAIN_REQUIRED_SOURCES = {"weworkremotely", "remotive",
                            "arbeitnow", "workingnomads", "aijobs",

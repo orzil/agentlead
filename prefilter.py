@@ -123,7 +123,10 @@ def classify(lead: Lead) -> str:
     # On broad job boards every listing is an "engagement" match by definition,
     # so require actual domain relevance - same for HN threads.
     if src_root in config.STRONG_DOMAIN_SOURCES:
-        return "pass" if config.STRONG_DOMAIN_RE.search(text) else "gate_offtopic"
+        # header only (title / types / tags): the description's company blurb
+        # ("we use machine learning") matched 785 of 880 such listings
+        header = text.split("\n\n", 1)[0]
+        return "pass" if config.STRONG_DOMAIN_RE.search(header) else "gate_offtopic"
     if lead.source.startswith("hn/") or src_root in config.DOMAIN_REQUIRED_SOURCES:
         return "pass" if config.DOMAIN_RE.search(text) else "gate_offtopic"
     # Discussion-heavy communities: every post matches DOMAIN, so require

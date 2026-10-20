@@ -32,6 +32,7 @@ from fetchers import (
     jobboards_fetcher,
     jobicy_fetcher,
     linkedin_fetcher,
+    mercor_fetcher,
     reddit_fetcher,
     remotive_fetcher,
     secrettlv_fetcher,
@@ -147,6 +148,10 @@ def job_jobboards(conn) -> None:
 
 def job_jobicy(conn) -> None:
     pipeline.ingest_many(conn, jobicy_fetcher.fetch(), "jobicy")
+
+
+def job_mercor(conn) -> None:
+    pipeline.ingest_many(conn, mercor_fetcher.fetch(), "mercor")
 
 
 def job_braintrust(conn) -> None:
@@ -278,6 +283,7 @@ JOBS = [
     ("weworkremotely", 2 * 3600, job_weworkremotely),
     ("jobboards", 3 * 3600, job_jobboards),    # arbeitnow + workingnomads + jobspresso
     ("jobicy", 4 * 3600, job_jobicy),          # remote AI/ML/data, has freelance/part-time flag
+    ("mercor", 2 * 3600, job_mercor),          # AI-training expert gigs, hourly; one JSON call
     ("remotive", 8 * 3600, job_remotive),      # rate-limited ~4/day, 24h-delayed
     ("fbsearch", 45 * 60, job_fbsearch),    # post permalinks from the search index
     ("facebook", 8 * 3600, job_facebook),      # public groups; self-caps at 3 runs/day
@@ -289,7 +295,7 @@ JOBS = [
     ("outbound", 3 * 3600, job_outbound),    # one prospect batch/day (self-limits to 20h)
     ("digest", 10 * 60, job_digest),
     ("scoring_watch", 3 * 3600, job_scoring_watch),
-    ("scorecard", 3 * 3600, job_scorecard),     # Sunday: per-source + outreach numbers  # alert when fresh leads stay unscored
+    ("scorecard", 3 * 3600, job_scorecard),     # Sunday: per-source + outreach numbers
 ]
 
 
