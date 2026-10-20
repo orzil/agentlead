@@ -602,7 +602,8 @@ WA_SKIP_GROUP_RE = re.compile(
     r"(secret\s+[\w&\s]+jobs|career|קריירה|מחפשי\s+עבודה|job\s*seekers?|referal+y?|מנוסים"
     r"|seniors\s+of\s+the\s+future|talents?\b|olim|עולים|devops|\bQA\b|בודק|cyber|סייבר"
     r"|marketing|שיווק|embedded|הנדסאים|טכנאים|מערכות\s+מידע|project\s+managers?\s+jobs"
-    r"|executives?\b|נשים\s+בהייטק)", re.IGNORECASE)
+    r"|executives?\b|נשים\s+בהייטק|מחפשים\s+עבודה|בכיר|ג'וניור|junior|ניהול|\bSEO\b|\bPPC\b"
+    r"|קידום\s+אתרים|נדל\"?ן|real\s+estate|adtech)", re.IGNORECASE)
 
 # --- Night search rotation ----------------------------------------------------
 # DuckDuckGo challenges an IP after ~1-2 queries, so the three query families
