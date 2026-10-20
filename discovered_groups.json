@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-19T21:22:44+00:00",
- "count": 1103,
+ "generated": "2026-10-20T00:43:09+00:00",
+ "count": 1108,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -2058,6 +2058,21 @@
    "last_checked": null
   },
   {
+   "slug": "447327169021943",
+   "name": "Outsourcing Call Center & BPO Projects",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T00:43:06+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "4808168705943904",
    "name": "SaaS Founders",
    "status": "pending",
@@ -2658,6 +2673,21 @@
    "last_checked": null
   },
   {
+   "slug": "OutsourceWebProject",
+   "name": "Outsource Web Project",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T00:43:06+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "SaaSFounders",
    "name": "SaaS Revenue Growth by the Founders, for the Founders",
    "status": "pending",
@@ -2910,6 +2940,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "callcentreprojects",
+   "name": "Call Centre Projects Outsourcing | I have 4 years of ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T00:43:06+00:00",
    "last_checked": null
   },
   {
@@ -14388,6 +14433,21 @@
    "last_checked": null
   },
   {
+   "slug": "cxforumsgroup",
+   "name": "CX Forums Customer Experience Group",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T00:43:06+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "dasaltewienneuentdeckt",
    "name": null,
    "status": "pending",
@@ -15645,6 +15705,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-10T16:31:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "recruiterss",
+   "name": "Recruiters!!",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T00:43:06+00:00",
    "last_checked": null
   },
   {
