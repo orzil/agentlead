@@ -107,6 +107,59 @@ DDG_QUERIES = config.WHATSAPP_DDG_QUERIES + [
     "whatsapp group links remote developers freelancers",
 ]
 
+# --focus cv (Or, 2026-10-20: "more computer vision groups in Israel, USA and
+# Europe"). Swaps every rotation for these lists, with their own cursors, so a
+# burst of CV slices walks only CV queries. English names cover the US/Europe;
+# FOREIGN_RE still drops groups in languages Or doesn't read.
+CV_REDDIT_QUERIES = [
+    '"chat.whatsapp.com" "computer vision"', '"chat.whatsapp.com" opencv',
+    '"chat.whatsapp.com" "image processing"', '"chat.whatsapp.com" yolo',
+    '"chat.whatsapp.com" subreddit:computervision', '"chat.whatsapp.com" "machine vision"',
+    '"chat.whatsapp.com" "medical imaging"', '"chat.whatsapp.com" "ראייה ממוחשבת"',
+]
+CV_GITHUB_QUERIES = [
+    '"chat.whatsapp.com" opencv', '"chat.whatsapp.com" "computer vision"',
+    '"chat.whatsapp.com" yolo', '"chat.whatsapp.com" "image processing"',
+    '"chat.whatsapp.com" "deep learning"', '"chat.whatsapp.com" robotics',
+]
+CV_DDG_QUERIES = [
+    'site:chat.whatsapp.com "computer vision"',
+    "site:chat.whatsapp.com ראייה ממוחשבת",
+    'site:chat.whatsapp.com "computer vision" USA',
+    'site:chat.whatsapp.com "computer vision" Europe',
+    "site:chat.whatsapp.com opencv",
+    'site:chat.whatsapp.com "image processing"',
+    "site:chat.whatsapp.com עיבוד תמונה",
+    'site:chat.whatsapp.com "computer vision" jobs freelance',
+    'site:chat.whatsapp.com "machine vision"',
+    'site:chat.whatsapp.com YOLO "object detection"',
+    'site:chat.whatsapp.com "medical imaging" AI',
+    'site:chat.whatsapp.com "computer vision" UK OR Germany OR Netherlands',
+    '"computer vision" whatsapp group link join',
+    '"קבוצת וואטסאפ" "ראייה ממוחשבת"',
+    'site:chat.whatsapp.com robotics vision AI',
+    'site:chat.whatsapp.com OCR "document AI"',
+    'site:chat.whatsapp.com drones OR lidar OR "remote sensing" AI',
+    '"image processing" OR opencv whatsapp group invite',
+]
+CV_TG_CHANNELS = ["computervision", "opencv", "cv_jobs", "computer_vision_jobs",
+                  "computervisionjobs", "deeplearning_ai", "ai_israel", "visionjobs",
+                  "machinevision", "imageprocessing", "ml_jobs_israel", "roboticsjobs"]
+CV_HIVE_TOPICS = ["computer-vision", "image-processing", "deep-learning", "robotics",
+                  "machine-learning", "artificial-intelligence"]
+_CUR_SUFFIX = ""        # "_cv" under --focus cv: separate rotation cursors
+
+
+def _apply_focus(focus: str) -> None:
+    global REDDIT_QUERIES, GITHUB_QUERIES, DDG_QUERIES, TG_CHANNELS, DIR_SEEDS, _CUR_SUFFIX
+    if focus != "cv":
+        return
+    REDDIT_QUERIES, GITHUB_QUERIES = CV_REDDIT_QUERIES, CV_GITHUB_QUERIES
+    DDG_QUERIES, TG_CHANNELS = CV_DDG_QUERIES, CV_TG_CHANNELS
+    DIR_SEEDS = [(f"{_HIVE}/topics/{t}/platform/whatsapp/", _HIVE_FOLLOW) for t in CV_HIVE_TOPICS]
+    _CUR_SUFFIX = "_cv"
+
+
 # Per-run budgets. Small on purpose - see module docstring.
 REDDIT_PER_RUN, GITHUB_PER_RUN, TG_PER_RUN = 2, 2, 5
 DDG_PER_RUN, DIR_PAGES_PER_RUN, VALIDATE_CAP = 1, 14, 30
@@ -149,6 +202,7 @@ def _take(conn, key: str, items: list, n: int) -> list:
     import db
     if not items:
         return []
+    key += _CUR_SUFFIX
     start = _kv_int(conn, key) % len(items)
     picked = [items[(start + i) % len(items)] for i in range(min(n, len(items)))]
     db.kv_set(conn, key, str(start + n))
@@ -459,6 +513,8 @@ def _rank(r: sqlite3.Row) -> tuple:
     # where buyers talk outrank the (LLM-favoured) general job boards
     if config.WA_FREELANCE_GROUP_RE.search(name) or config.WA_BUYER_GROUP_RE.search(name):
         boost += 4
+    if config.WA_CV_GROUP_RE.search(name):      # Or's core niche
+        boost += 5
     base = (llm if llm is not None else 1) * 3 + (r["relevance"] or 0) + boost
     return (-base, name)
 
@@ -556,7 +612,10 @@ def main() -> None:
     ap.add_argument("--via", choices=["manual", "research"], default="research",
                     help="with --add-links: manual = Or's own groups (tier A)")
     ap.add_argument("--validate-cap", type=int, default=VALIDATE_CAP)
+    ap.add_argument("--focus", choices=["all", "cv"], default="all",
+                    help="cv = computer-vision query lists only (own cursors)")
     args = ap.parse_args()
+    _apply_focus(args.focus)
 
     logging.basicConfig(level=logging.INFO,
                         format="%(asctime)s %(levelname)-7s [%(name)s] %(message)s")

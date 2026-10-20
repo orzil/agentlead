@@ -32,6 +32,11 @@ on:
         type: choice
         options: [slice, select]
         default: slice
+      focus:
+        description: "all = every query list, cv = computer-vision groups only"
+        type: choice
+        options: [all, cv]
+        default: all
 
 concurrency:
   group: wanight
@@ -83,7 +88,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
           LLM_BACKEND: gemini
-        run: python -X utf8 wa_night.py --db wa.db --mine-from leads.db 2>&1 | grep -v "HTTP Request"
+        run: python -X utf8 wa_night.py --db wa.db --mine-from leads.db --focus ${{ inputs.focus || 'all' }} 2>&1 | grep -v "HTTP Request"
 
       - name: Select top 50 and notify
         if: env.MODE == 'select'

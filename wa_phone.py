@@ -288,6 +288,8 @@ def _priority(name: str, index: int) -> int:
     """Freelance/contract groups and the groups where buyers talk first
     (Or, 2026-10-20: "part time, contract, freelance"), then AI/data, then
     general dev boards. Tier 0 wins ties by the hunt's own md order."""
+    if config.WA_CV_GROUP_RE.search(name):
+        return index - 1000                      # computer vision: Or's core niche, first
     if config.WA_FREELANCE_GROUP_RE.search(name) or config.WA_BUYER_GROUP_RE.search(name):
         tier = 0
     else:

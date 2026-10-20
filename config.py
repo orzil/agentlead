@@ -594,6 +594,10 @@ WHATSAPP_DDG_QUERIES = [
 WA_FREELANCE_GROUP_RE = re.compile(
     r"(freelanc|פרילנס|part[\s-]?time|משרה\s+חלקית|חלקיות|contract(or|s)?\b|gigs?\b"
     r"|projects?\b|פרויקטים|outsourc|\bremote\b|מהבית)", re.IGNORECASE)
+WA_CV_GROUP_RE = re.compile(
+    r"(computer\s*vision|\bCV\b|ראייה\s+ממוחשבת|ראיה\s+ממוחשבת|image\s+processing|עיבוד\s+תמונה"
+    r"|opencv|yolo|machine\s+vision|medical\s+imaging|\bOCR\b|object\s+detection|lidar"
+    r"|remote\s+sensing|vision\s+AI|robotics?|רובוטיקה)", re.IGNORECASE)
 WA_BUYER_GROUP_RE = re.compile(
     r"(founders?|\bCEO\b|\bCTO\b|\bCPO\b|\bVP\b|יזמים|יזמות|בעלי\s+עסקים|agency|agencies"
     r"|saas|e-?commerce|startups?\b|סטארטאפ|product\s+managers?\s+(club|forum|community))",
