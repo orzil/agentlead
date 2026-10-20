@@ -570,6 +570,12 @@ Goal: 50 relevant WhatsApp invite links (HE+EN) by morning for Or to join by han
 - **Not built:** tapping "קרא עוד" — no truncated message existed yet to verify where the span sits (a
   wrong tap opens a link). kv `wa_truncated_seen` counts them; build it when that's > 0.
 - **Heartbeat** now adds top 3 groups by pushed leads (7d) and the groups silent 7d+ (report only).
+- **Or, 2026-10-20: "part time, contract, freelance - only relevant ones".** The lists were mostly
+  full-time boards. `config.WA_FREELANCE_GROUP_RE`/`WA_BUYER_GROUP_RE` now rank first (phone join order
+  + `wa_night._rank` +4), `WA_SKIP_GROUP_RE` (secrethunter "Secret X Jobs" feeds, career/job-seeker
+  communities, DevOps/QA/cyber/marketing/SEO, senior/junior salary boards) is never joined or listed;
+  10 gig/contract DDG queries added. A daytime burst of 8 cloud slices grew the pool only 1815 → 1818:
+  **the public discovery surfaces are saturated** — new groups now come mostly from in-group links.
 
 ## Open items
 - **25 Oct 2026 clock change:** shift `wanight.yml` by one hour — the cron lines, the `MODE` expression
