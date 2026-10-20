@@ -151,7 +151,8 @@ def dump() -> ET.Element:
             except ET.ParseError:
                 pass
         time.sleep(1.5 + attempt)
-    raise PhoneError("uiautomator dump failed 4 times")
+    # uiautomator's own error line (e.g. "could not get idle state"), no screen text
+    raise PhoneError(f"uiautomator dump failed 4 times: {out.strip()[:80]}")
 
 
 def rid(node: ET.Element) -> str:
@@ -664,6 +665,8 @@ _TEXT_IDS = ("message_text", "caption")
 # this list is how to confirm or fix them without dumping anyone's messages.
 BUBBLE_IDS_SEEN: set[str] = set()
 _SENDER_IDS = ("name_in_group_tv", "name_in_group", "pushname_in_group_tv", "pushname_in_group")
+# Not-yet-decrypted bubble ("Waiting for this message"): WhatsApp's text, not the sender's.
+_PLACEHOLDER_RE = re.compile(r"בהמתנה להודעה זו|Waiting for this message")
 
 
 def _messages_on_screen(root: ET.Element, carry_date: date | None, today: date
@@ -682,7 +685,7 @@ def _messages_on_screen(root: ET.Element, carry_date: date | None, today: date
         if r not in _TEXT_IDS:
             continue
         text = (n.get("text") or "").strip()
-        if not text:
+        if not text or _PLACEHOLDER_RE.search(text):
             continue
         bubble, p = None, parent.get(n)
         while p is not None:
