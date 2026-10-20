@@ -133,6 +133,11 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -X utf8 main.py --score-backlog 25 || true
 
+      # Counts only (public log): per-source funnel, unscored backlog, outbound state.
+      - name: Funnel
+        if: always()
+        run: python -X utf8 main.py --funnel 30 || true
+
       # Each run is a fresh IP, so it can afford its own 2 search queries on
       # top of the main pass - free extra throughput against the DDG wall.
       - name: Extra search slice

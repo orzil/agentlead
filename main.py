@@ -15,7 +15,7 @@ import logging
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 import config
 import db
@@ -210,6 +210,20 @@ def job_digest(conn) -> None:
     log.info("digest: sent %d leads", len(rows))
 
 
+# Cloud scoring died silently for days (2026-10: provider 404 + Gemini quota) and
+# an unscored lead is never pushed. Fresh unscored leads piling up is the symptom.
+STUCK_SCORING_MIN = int(os.environ.get("STUCK_SCORING_MIN", "30"))
+
+
+def job_scoring_watch(conn) -> None:
+    day = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
+    n = conn.execute("SELECT COUNT(*) FROM leads WHERE status='new' AND fetched_at >= ?",
+                     (day,)).fetchone()[0]
+    if n > STUCK_SCORING_MIN:
+        raise RuntimeError(f"{n} leads from the last 24h are unscored - the LLM "
+                           "providers are failing, nothing is being pushed")
+
+
 JOBS = [
     # (name, interval seconds, function)
     ("email", 5 * 60, job_email),           # Facebook / Upwork / Wellfound / LinkedIn alerts
@@ -236,6 +250,7 @@ JOBS = [
     ("linkcheck", 6 * 3600, job_linkcheck),   # drop leads whose posting died
     ("outbound", 3 * 3600, job_outbound),    # one prospect batch/day (self-limits to 20h)
     ("digest", 10 * 60, job_digest),
+    ("scoring_watch", 3 * 3600, job_scoring_watch),  # alert when fresh leads stay unscored
 ]
 
 
@@ -720,6 +735,32 @@ def print_stats(conn) -> None:
             print(f"  [{row['score']}] {row['source']}: <non-ascii summary>\n      {row['url']}")
 
 
+def print_funnel(conn, days: int = 30) -> None:
+    """Counts only (safe for the public workflow log): where each source's posts
+    die - gate, scoring, threshold - and whether outbound is producing."""
+    since = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
+    print(f"=== funnel, last {days}d: fetched / passed gate / scored / >=6 / pushed ===")
+    rows = conn.execute(
+        "SELECT CASE WHEN instr(source,'/') THEN substr(source,1,instr(source,'/')-1) "
+        "ELSE source END root, COUNT(*) n, "
+        "SUM(status NOT IN ('gated_out','duplicate','partnership')) passed, "
+        "SUM(score IS NOT NULL) scored, SUM(score >= 6) good, "
+        "SUM(notified_at IS NOT NULL) pushed "
+        "FROM leads WHERE fetched_at >= ? GROUP BY root ORDER BY good DESC, n DESC",
+        (since,)).fetchall()
+    for r in rows:
+        print(f"  {r['root']:16} {r['n']:6} {r['passed'] or 0:6} {r['scored'] or 0:6} "
+              f"{r['good'] or 0:5} {r['pushed'] or 0:5}")
+    day = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
+    print("unscored backlog:", conn.execute(
+        "SELECT COUNT(*) FROM leads WHERE status='new'").fetchone()[0],
+        "| fresh (24h):", conn.execute(
+        "SELECT COUNT(*) FROM leads WHERE status='new' AND fetched_at >= ?", (day,)).fetchone()[0])
+    pros = conn.execute("SELECT status, COUNT(*) FROM prospects GROUP BY status").fetchall()
+    print("prospects:", dict((p[0], p[1]) for p in pros) or "none",
+          "| last outbound batch:", db.kv_get(conn, "outbound_last_batch", "") or "never")
+
+
 def main() -> None:
     setup_logging()
     ap = argparse.ArgumentParser()
@@ -728,6 +769,8 @@ def main() -> None:
     ap.add_argument("--score-test", metavar="TEXT")
     ap.add_argument("--digest-now", action="store_true")
     ap.add_argument("--stats", action="store_true")
+    ap.add_argument("--funnel", nargs="?", const=30, type=int, metavar="DAYS",
+                    help="per-source funnel counts (fetched/gate/scored/good/pushed)")
     ap.add_argument("--export-csv", nargs="?", const="leads.csv", metavar="PATH",
                     help="export leads to CSV (default leads.csv)")
     ap.add_argument("--export-html", nargs="?", const="leads.html", metavar="PATH",
@@ -798,6 +841,9 @@ def main() -> None:
         return
     if args.stats:
         print_stats(db.connect())
+        return
+    if args.funnel is not None:
+        print_funnel(db.connect(), args.funnel)
         return
     if args.export_csv:
         n = export_csv(db.connect(), args.export_csv, args.min_score,
