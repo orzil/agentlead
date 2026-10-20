@@ -97,7 +97,18 @@ LLM_PROVIDERS = [
         # the exact meta-commentary failure the pitch filter exists to catch.
         # super-120b answered a Vietnamese post in Vietnamese, opening on the
         # poster's actual technical obstacle.
-        "model": env("OPENROUTER_MODEL", "nvidia/nemotron-3-super-120b-a12b:free"),
+        # 2026-10-20: super's only provider (Nvidia) now 404s "Function not
+        # found" on every call, so cloud leads that passed the gate were stored
+        # UNSCORED and never pushed. minimax-m3.1-flash scored a 3-lead test set
+        # right (CV POC 9, full-time 3, Hebrew OCR project 9) with clean JSON;
+        # ultra-550b leaked its reasoning again. super stays as the backup.
+        "model": env("OPENROUTER_MODEL", "minimax/minimax-m3.1-flash:free"),
+    },
+    {
+        "name": "openrouter-backup",
+        "base": "https://openrouter.ai/api/v1",
+        "key": env("OPENROUTER_API_KEY"),
+        "model": env("OPENROUTER_BACKUP_MODEL", "nvidia/nemotron-3-super-120b-a12b:free"),
     },
     {
         "name": "groq",
