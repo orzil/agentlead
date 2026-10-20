@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-20T20:23:26+00:00",
- "count": 1118,
+ "generated": "2026-10-20T21:37:21+00:00",
+ "count": 1121,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5628,6 +5628,21 @@
    "last_checked": null
   },
   {
+   "slug": "727549412373482",
+   "name": "New Zealand business owners collective",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T21:37:19+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "735395363138298",
    "name": "משרות היי-טק בישראל",
    "status": "pending",
@@ -7125,6 +7140,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T17:23:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "mvagustaownersofnewnewzealand",
+   "name": "MV Agusta Owners of New Zealand | Facebook - Meta Business Suite",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T21:37:19+00:00",
    "last_checked": null
   },
   {
@@ -16380,6 +16410,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T22:02:51+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "thecommunityhub",
+   "name": "The Community Hub NEW ZEALAND | Facebook - Meta Business Suite",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T21:37:19+00:00",
    "last_checked": null
   },
   {

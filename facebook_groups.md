@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-20T20:23:26+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-20T21:37:21+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1131)
+## Not yet probed (1134)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -429,6 +429,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `londonstartup` (found via ddg)
 - `losangeles.california.startups` (found via ddg)
 - `constructionmanagementnetwork` (found via ddg)
+- `mvagustaownersofnewnewzealand` (found via ddg)
 - `makeautomation` (found via config)
 - `507324381835947` (found via ddg)
 - `674814754266297` (found via ddg)
@@ -453,6 +454,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `NewZealandSmallBusinessOwnersNetworking` (found via ddg)
 - `newzealandbusinessowners` (found via ddg)
 - `nzsmallbusinessnetwork` (found via ddg)
+- `727549412373482` (found via ddg)
 - `newyorkstartups` (found via ddg)
 - `itowner` (found via ddg)
 - `profitablelawfirmowners` (found via ddg)
@@ -1107,6 +1109,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `texassemitrucksandtrailers` (found via ddg)
 - `190482421294295` (found via ddg)
 - `buildxact` (found via ddg)
+- `thecommunityhub` (found via ddg)
 - `688006048306297` (found via ddg)
 - `232125487923966` (found via ddg)
 - `180837768789806` (found via ddg)
