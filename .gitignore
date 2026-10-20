@@ -41,3 +41,4 @@ scratch_*
 
 # researched outbound targets (company list) - local only
 agencies_il.jsonl
+.adb_wifi

@@ -98,6 +98,12 @@ CASES = [
     ("wa english recommendation ask", "whatsapp/Test Group",
      "Can anyone recommend a freelance computer vision developer? We need to count "
      "people in store camera footage.", NOW, "pass"),
+    ("arbeitnow generic AI role", "arbeitnow",
+     "Freelance Data Analyst (m/w/d) - remote. Work with AI tools and dashboards "
+     "for our marketing team, contract 6 months.", NOW, "gate_offtopic"),
+    ("arbeitnow CV contract", "arbeitnow",
+     "Freelance Computer Vision Engineer (m/w/d) - remote contract, 6 months. "
+     "Object detection with YOLO and OpenCV.", NOW, "pass"),
     ("wa full-time post", "whatsapp/Test Group",
      "דרוש/ה מפתח/ת Computer Vision למשרה מלאה בחברת סטארטאפ בהרצליה, היברידי",
      NOW, "gate_full_time"),

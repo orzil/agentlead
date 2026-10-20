@@ -123,11 +123,26 @@ jobs:
             git push origin HEAD:main
           fi
 
+      # ENCRYPTED: the repo is public, and a public repo's artifacts can be
+      # downloaded by anyone signed in to GitHub. Until 2026-10-21 this uploaded
+      # leads.db in plain text. No key = no upload, never a plaintext fallback.
+      # sync_cloud.py decrypts with the same DB_EXPORT_KEY from Or's .env.
+      - name: Encrypt DB snapshot
+        if: always()
+        env:
+          DB_EXPORT_KEY: ${{ secrets.DB_EXPORT_KEY }}
+        run: |
+          if [ -n "$DB_EXPORT_KEY" ] && [ -f leads.db ]; then
+            openssl enc -aes-256-cbc -pbkdf2 -iter 200000 -salt -in leads.db -out leads.db.enc -pass env:DB_EXPORT_KEY
+          else
+            echo "no DB_EXPORT_KEY or no leads.db - snapshot skipped"
+          fi
+
       - name: Upload DB snapshot
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: leadsdb-${{ github.run_id }}
-          path: leads.db
+          path: leads.db.enc
           if-no-files-found: ignore
           retention-days: 3

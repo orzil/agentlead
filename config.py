@@ -329,6 +329,7 @@ EMAIL_SOURCES = {
     "hi.wellfound.com": "wellfound",
     "angel.co": "wellfound",
     "linkedin.com": "linkedin/alert",
+    "f5bot.com": "f5bot",      # Reddit/HN keyword alerts; leads get r/<sub> / hn labels
 }
 
 # --- Facebook group DISCOVERY (discover_fb_groups.py) -------------------------
@@ -884,6 +885,11 @@ GATE_BYPASS_SOURCES = {"upwork", "wellfound"}
 # (not just an engagement word) so generic remote roles don't flood the pipeline.
 # remoteok + himalayas dropped 2026-08-08: both gate applying behind a paid
 # plan, so a lead there costs money to act on - same reasoning as Freelancer.com.
+# arbeitnow (2026-10-21 funnel): 17k fetched, ~880 scored, 2 pushed - a broad
+# German board where the loose DOMAIN_RE ("AI", "data") matches everything. It
+# must hit a STRONG term (CV/OCR/ML/...) to cost a scoring call.
+STRONG_DOMAIN_SOURCES = {"arbeitnow"}
+
 DOMAIN_REQUIRED_SOURCES = {"weworkremotely", "remotive",
                            "arbeitnow", "workingnomads", "aijobs",
                            "telegram", "braintrust", "jobspresso", "companies",

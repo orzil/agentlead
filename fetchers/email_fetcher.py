@@ -24,7 +24,7 @@ import re
 import sqlite3
 import time
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import parse_qs, urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
 
@@ -269,6 +269,72 @@ WELLFOUND_JOB_RE = re.compile(r"(wellfound\.com|angel\.co)/(?:jobs|l/|company/[^
 LINKEDIN_JOB_RE = re.compile(r"linkedin\.com/(?:comm/)?jobs/view/", re.I)
 
 
+# F5Bot (f5bot.com, free) mails every new Reddit/HN post or comment matching a
+# keyword, sitewide, within minutes - Reddit coverage that does not depend on the
+# cloud's 429-throttled GitHub IPs (added 2026-10-21; Reddit = 12 of 22 pushes).
+F5_REDDIT_RE = re.compile(r"reddit\.com/r/(\w+)/comments/(\w+)(?:/([^/?#\s]*))?(?:/(\w+))?", re.I)
+F5_HN_RE = re.compile(r"news\.ycombinator\.com/item\?id=(\d+)", re.I)
+
+
+def _unwrap(href: str) -> str:
+    """Redirect/tracking wrappers carry the real URL in a query param."""
+    q = parse_qs(urlsplit(href).query)
+    for key in ("u", "url", "q", "link"):
+        if key in q and q[key][0].startswith("http"):
+            return q[key][0]
+    return href
+
+
+def _parse_f5bot(html_body: str, text_body: str) -> list[Lead]:
+    """One lead per Reddit/HN hit that asks for someone (ENGAGE_RE). The hits
+    come from any subreddit, most outside INTENT_REQUIRED_SOURCES, and every one
+    matches a domain keyword by construction - without this, each mention of
+    "computer vision" in a discussion would cost a scoring call."""
+    from fetchers import reddit_fetcher
+
+    if html_body:
+        soup = BeautifulSoup(html_body, "html.parser")
+        full_text = soup.get_text("\n", strip=True)
+        links = [(_unwrap(a["href"]), a.get_text(" ", strip=True)) for a in soup.find_all("a", href=True)]
+    else:
+        full_text = text_body
+        links = [(u, "") for u in re.findall(r"https?://\S+", text_body)]
+    # each hit's text runs from its link to the next link, never into a neighbour
+    starts, pos = [], 0
+    for href, anchor in links:
+        idx = full_text.find(anchor or href, pos)
+        starts.append(idx)
+        pos = idx + 1 if idx >= 0 else pos
+    leads: list[Lead] = []
+    seen: set[str] = set()
+    for i, (href, anchor) in enumerate(links):
+        idx = starts[i]
+        end = next((s for s in starts[i + 1:] if s > idx), len(full_text))
+        context = full_text[idx: min(end, idx + 700)].strip() if idx >= 0 else anchor
+        m = F5_REDDIT_RE.search(href)
+        if m:
+            sub, post_id, slug, comment_id = m.groups()
+            # the same shape reddit_fetcher stores, so url_hash dedups the two paths
+            url = f"https://www.reddit.com/r/{sub}/comments/{post_id}/" + (f"{slug}/" if slug else "")
+            if comment_id:
+                url += f"{comment_id}/"
+            source = f"r/{sub}"
+        else:
+            m = F5_HN_RE.search(href)
+            if not m:
+                continue
+            url, source, comment_id = f"https://news.ycombinator.com/item?id={m.group(1)}", "hn", None
+        if url in seen:
+            continue
+        seen.add(url)
+        if reddit_fetcher._is_offering(source, anchor or context[:200]):
+            continue
+        if not config.ENGAGE_RE.search(context):
+            continue
+        leads.append(Lead(source=source, url=url, raw_text=context or anchor))
+    return leads
+
+
 def _source_for(sender: str) -> str | None:
     sender = sender.lower()
     for domain, source in config.EMAIL_SOURCES.items():
@@ -322,6 +388,8 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
                         "linkedin/alert", html_body, LINKEDIN_JOB_RE,
                         prefix=subject,
                         canonicalise=linkedin_fetcher.canonical_job_url))
+                elif source == "f5bot":
+                    leads.extend(_parse_f5bot(html_body, text_body))
             except Exception as e:
                 log.error("parse failed for email %s (%s): %s", message_id, source, e)
 

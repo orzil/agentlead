@@ -102,11 +102,21 @@ class Banned(PhoneError):
 
 # --- adb primitives -------------------------------------------------------------
 
+# Wi-Fi fallback (2026-10-21: the USB link dropped mid-evening and every pass
+# failed until morning). `--wifi-setup` (cable plugged) switches the phone's adbd
+# to TCP and saves its address here; device_state() then uses USB when present
+# and this address otherwise. Lost on a phone reboot - re-run the setup.
+WIFI_FILE = config.BASE_DIR / ".adb_wifi"
+SERIAL = ""                        # picked by device_state() each pass
+_NO_SERIAL = {"devices", "connect", "disconnect", "kill-server", "start-server"}
+
+
 def adb(*args: str, timeout: int = 60, binary: bool = False):
     """One adb call. Subprocess with an argument list, so no shell ever rewrites
     /sdcard paths (Git Bash does)."""
+    pick = ["-s", SERIAL] if SERIAL and args[0] not in _NO_SERIAL else []
     try:
-        r = subprocess.run([ADB, *args], capture_output=True, timeout=timeout)
+        r = subprocess.run([ADB, *pick, *args], capture_output=True, timeout=timeout)
     except FileNotFoundError:
         raise PhoneError(f"adb not found at {ADB} (set ADB_PATH in .env)")
     except subprocess.TimeoutExpired:
@@ -151,6 +161,9 @@ def dump() -> ET.Element:
             except ET.ParseError:
                 pass
         time.sleep(1.5 + attempt)
+    if not out.strip() and device_state() != "device":
+        # empty output = adb lost the phone (2026-10-20 22:10: cable/port dropped)
+        raise PhoneError("phone disconnected (no USB or Wi-Fi adb) - replug the cable")
     # uiautomator's own error line (e.g. "could not get idle state"), no screen text
     raise PhoneError(f"uiautomator dump failed 4 times: {out.strip()[:80]}")
 
@@ -186,14 +199,56 @@ def focus() -> str:
 
 # --- readiness / safety -----------------------------------------------------------
 
-def device_state() -> str:
-    """'device' when attached and authorized; 'unauthorized', 'offline' or ''."""
+def _devices() -> dict[str, str]:
     out = adb("devices", timeout=20)
-    for line in out.splitlines()[1:]:
-        parts = line.split()
-        if len(parts) >= 2:
-            return parts[1]
-    return ""
+    return dict(line.split()[:2] for line in out.splitlines()[1:] if len(line.split()) >= 2)
+
+
+def _wifi_addr() -> str:
+    try:
+        return WIFI_FILE.read_text(encoding="utf-8").strip()
+    except OSError:
+        return ""
+
+
+def device_state() -> str:
+    """'device' when attached and authorized; 'unauthorized', 'offline' or ''.
+    Picks SERIAL: the USB phone first, the saved Wi-Fi address second."""
+    global SERIAL
+    devs = _devices()
+    usb = {s: st for s, st in devs.items() if ":" not in s}
+    for s, st in usb.items():
+        if st == "device":
+            SERIAL = s
+            return st
+    wifi = _wifi_addr()
+    if wifi:
+        if devs.get(wifi) != "device":
+            adb("connect", wifi, timeout=20)
+            devs = _devices()
+        if devs.get(wifi) == "device":
+            log.info("wa: using Wi-Fi adb (USB not attached)")
+            SERIAL = wifi
+            return "device"
+    SERIAL = ""
+    return next(iter(usb.values()), "")
+
+
+def wifi_setup() -> str:
+    """Cable plugged in: put adbd on TCP 5555, connect, save the address."""
+    if device_state() != "device" or ":" in SERIAL:
+        raise PhoneError("plug the phone in by USB first")
+    m = re.search(r"inet (\d+\.\d+\.\d+\.\d+)", shell("ip", "-f", "inet", "addr", "show", "wlan0"))
+    if not m:
+        raise PhoneError("phone has no Wi-Fi address - is Wi-Fi on?")
+    addr = f"{m.group(1)}:5555"
+    adb("tcpip", "5555", timeout=20)
+    time.sleep(3)
+    out = adb("connect", addr, timeout=20)
+    if "connected" not in out:
+        raise PhoneError(f"adb connect {addr} failed: {out.strip()[:80]}")
+    WIFI_FILE.write_text(addr, encoding="utf-8")
+    return addr
 
 
 def check_not_banned(root: ET.Element | None = None) -> None:
@@ -226,7 +281,7 @@ def sleep_screen() -> None:
 def ensure_ready() -> None:
     state = device_state()
     if state != "device":
-        raise PhoneError(f"phone not available over USB (adb state: {state or 'none'})")
+        raise PhoneError(f"phone not available over USB or Wi-Fi (adb state: {state or 'none'})")
     wake()
     if "deviceLocked=1" in shell("dumpsys", "trust"):
         raise PhoneError("phone is locked - set Screen lock to None/Swipe")
@@ -1033,6 +1088,8 @@ def main() -> None:
     ap.add_argument("--unkill", action="store_true", help="clear the kill switch")
     ap.add_argument("--join-all", choices=["on", "off"],
                     help="burst-join every remaining group (3-8 min apart, 08-23 IL)")
+    ap.add_argument("--wifi-setup", action="store_true",
+                    help="(USB plugged) enable adb over Wi-Fi as the fallback link")
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s [%(name)s] %(message)s")
     logging.getLogger("httpx").setLevel(logging.WARNING)   # its INFO line carries bot tokens
@@ -1043,6 +1100,8 @@ def main() -> None:
     elif args.join_all:
         db.kv_set(conn, BURST_KEY, "1" if args.join_all == "on" else "")
         print(f"join-all {args.join_all}")
+    elif args.wifi_setup:
+        print(f"Wi-Fi adb ready: {wifi_setup()} (saved to {WIFI_FILE.name})")
     elif args.do_pass:
         leads = run_pass(conn)
         print(f"{len(leads)} message lead(s) read (not ingested; use main.py --wa-pass)")

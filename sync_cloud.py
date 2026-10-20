@@ -43,14 +43,39 @@ def _newest_artifact(tmp: str) -> str | None:
         return None
     for r in runs:
         p = subprocess.run(["gh", "run", "download", str(r["databaseId"]),
-                            "--repo", REPO, "-D", tmp],
+                            "--repo", REPO, "-n", f"leadsdb-{r['databaseId']}", "-D", tmp],
                            capture_output=True, text=True, timeout=180)
         if p.returncode == 0:
-            hits = glob.glob(os.path.join(tmp, "**", "leads.db"), recursive=True)
+            hits = glob.glob(os.path.join(tmp, "**", "leads.db.enc"), recursive=True)
             if hits:
                 print(f"using artifact from run {r['databaseId']} ({r['name']})")
-                return hits[0]
+                return _decrypt(hits[0])
     return None
+
+
+def _openssl() -> str:
+    """Git for Windows ships openssl; it is usually not on the PowerShell PATH."""
+    return (shutil.which("openssl")
+            or next((p for p in (r"C:\Program Files\Git\mingw64\bin\openssl.exe",
+                                 r"C:\Program Files\Git\usr\bin\openssl.exe") if os.path.exists(p)),
+                    "openssl"))
+
+
+def _decrypt(enc_path: str) -> str | None:
+    """The artifact is AES-encrypted (public repo - see fbnight.yml)."""
+    key = config.env("DB_EXPORT_KEY", "")
+    if not key:
+        print("DB_EXPORT_KEY missing from .env - cannot open the cloud snapshot")
+        return None
+    out = enc_path[:-4]
+    p = subprocess.run([_openssl(), "enc", "-d", "-aes-256-cbc", "-pbkdf2", "-iter", "200000",
+                        "-in", enc_path, "-out", out, "-pass", "env:DB_EXPORT_KEY"],
+                       capture_output=True, text=True, timeout=120,
+                       env={**os.environ, "DB_EXPORT_KEY": key})
+    if p.returncode != 0:
+        print("decrypt failed:", p.stderr.strip()[:120])
+        return None
+    return out
 
 
 def merge(cloud_path: str) -> dict:
