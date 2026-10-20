@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-20T21:37:21+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-20T23:18:15+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1134)
+## Not yet probed (1138)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -513,6 +513,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
 - `startupcaliforniaclub` (found via ddg)
+- `StartupDublinClub` (found via ddg)
 - `startupeurope` (found via ddg)
 - `StartupEuropeClub` (found via ddg)
 - `ipsindia` (found via ddg)
@@ -1043,6 +1044,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `dropshippinghow` (found via ddg)
 - `105769783096268` (found via ddg)
 - `Dubaiexpat` (found via ddg)
+- `iebusinessclub` (found via ddg)
 - `Engineers` (found via ddg)
 - `entreprenellehub` (found via ddg)
 - `345613409204417` (found via ddg)
@@ -1055,6 +1057,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `575563373744118` (found via ddg)
 - `764877593708803` (found via ddg)
 - `FindRemoteJobs` (found via ddg)
+- `ilovelimerick` (found via ddg)
 - `7761445099` (found via ddg)
 - `insuranceagen` (found via ddg)
 - `1050679009595609` (found via ddg)
@@ -1076,6 +1079,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `131710772378400` (found via ddg)
 - `peopleofcleburnetexas` (found via ddg)
 - `537018231596738` (found via ddg)
+- `451297192395419` (found via ddg)
 - `PracticeManagersNetwork` (found via ddg)
 - `producthuntisrael` (found via ddg)
 - `profitabledigitalagencies` (found via ddg)
