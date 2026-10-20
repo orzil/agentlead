@@ -135,7 +135,8 @@ jobs:
           T=$((10#$H * 60 + 10#$M))
           if [ "$T" -ge 1020 ] || [ "$T" -lt 165 ]; then       # 17:00 .. 02:44 UTC
             sleep 420
-            gh workflow run wanight.yml --ref main -f mode=slice
+            # keep the night on the focus it was started with (cron starts = all)
+            gh workflow run wanight.yml --ref main -f mode=slice -f focus=${{ inputs.focus || 'all' }}
           elif [ "$T" -ge 165 ] && [ "$T" -lt 240 ]; then      # 02:45 .. 03:59 UTC
             gh workflow run wanight.yml --ref main -f mode=select
           else

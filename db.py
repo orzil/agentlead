@@ -149,6 +149,8 @@ _MIGRATIONS = [
     # Outbound follow-up tracking: when Or said "sent", and how many nudges went out.
     ("prospects", "contacted_at", "TEXT"),
     ("prospects", "reminded", "INTEGER DEFAULT 0"),
+    # ❓ question leads: a ready-to-paste answer Or can post (scorer.score_question)
+    ("leads", "reply_draft", "TEXT"),
     # Promotion + measured yield, so discovery can feed the scraper on its own.
     ("facebook_groups", "in_rotation", "INTEGER DEFAULT 0"),
     ("facebook_groups", "posts_seen", "INTEGER DEFAULT 0"),

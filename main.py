@@ -83,6 +83,15 @@ def job_whatsapp_read(conn) -> None:
         raise wa_phone.PhoneError("; ".join(wa_phone.LAST_ERRORS))
 
 
+def job_outbound_local(conn) -> None:
+    """The local DB's own prospects: full-time CV cards read off the WhatsApp
+    phone, plus the agency list (gitignored, so the cloud never sees it).
+    Funding news stays a cloud job so the same company isn't pitched twice."""
+    import outbound
+    outbound.drip_agencies(conn)
+    outbound.run(conn)
+
+
 def job_whatsapp(conn) -> None:
     """Daily: harvest WhatsApp invite links out of already-stored posts and
     validate them. Discovery only - these are groups for the user to JOIN by
@@ -210,6 +219,35 @@ def job_digest(conn) -> None:
     log.info("digest: sent %d leads", len(rows))
 
 
+def job_scorecard(conn) -> None:
+    """Sunday (Israel) Telegram: what each source produced this week and what
+    Or's outreach got back - so dead sources get cut on numbers, not hunches.
+    Runs in the cloud (its sources) and on the phone PC (WhatsApp + agencies)."""
+    from zoneinfo import ZoneInfo
+    now = datetime.now(ZoneInfo("Asia/Jerusalem"))
+    week_id = now.strftime("%G-W%V")
+    if now.weekday() != 6 or now.hour < 9 or db.kv_get(conn, "scorecard_week", "") == week_id:
+        return
+    since = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+    rows = conn.execute(
+        "SELECT CASE WHEN instr(source,'/') THEN substr(source,1,instr(source,'/')-1) "
+        "ELSE source END root, COUNT(*) n, SUM(score >= 6) good, "
+        "SUM(notified_at IS NOT NULL) pushed FROM leads WHERE fetched_at >= ? "
+        "GROUP BY root ORDER BY pushed DESC, good DESC, n DESC", (since,)).fetchall()
+    where = "cloud" if os.environ.get("GITHUB_ACTIONS") else "phone PC"
+    lines = [f"\U0001F4CA <b>Weekly scorecard ({where})</b> - source: posts / ≥6 / pushed"]
+    lines += [f"{r['root']}: {r['n']} / {r['good'] or 0} / {r['pushed'] or 0}" for r in rows[:14]]
+    verdicts = conn.execute("SELECT verdict, COUNT(*) FROM leads WHERE verdict_at >= ? "
+                            "GROUP BY verdict", (since,)).fetchall()
+    if verdicts:
+        lines.append("your verdicts: " + ", ".join(f"{v[0]} {v[1]}" for v in verdicts))
+    pros = conn.execute("SELECT status, COUNT(*) FROM prospects GROUP BY status").fetchall()
+    if pros:
+        lines.append("outreach: " + ", ".join(f"{p[0]} {p[1]}" for p in pros))
+    notifier._send_raw("\n".join(lines))
+    db.kv_set(conn, "scorecard_week", week_id)
+
+
 # Cloud scoring died silently for days (2026-10: provider 404 + Gemini quota) and
 # an unscored lead is never pushed. Fresh unscored leads piling up is the symptom.
 STUCK_SCORING_MIN = int(os.environ.get("STUCK_SCORING_MIN", "30"))
@@ -250,7 +288,8 @@ JOBS = [
     ("linkcheck", 6 * 3600, job_linkcheck),   # drop leads whose posting died
     ("outbound", 3 * 3600, job_outbound),    # one prospect batch/day (self-limits to 20h)
     ("digest", 10 * 60, job_digest),
-    ("scoring_watch", 3 * 3600, job_scoring_watch),  # alert when fresh leads stay unscored
+    ("scoring_watch", 3 * 3600, job_scoring_watch),
+    ("scorecard", 3 * 3600, job_scorecard),     # Sunday: per-source + outreach numbers  # alert when fresh leads stay unscored
 ]
 
 
@@ -820,6 +859,8 @@ def main() -> None:
                        capture_output=True, timeout=120)
         conn = db.connect()
         run_job_safe(conn, "whatsapp_phone", job_whatsapp_read)
+        run_job_safe(conn, "outbound_local", job_outbound_local)
+        run_job_safe(conn, "scorecard", job_scorecard)
         return
     if args.test_telegram:
         ok = notifier.send_test()

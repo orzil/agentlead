@@ -121,6 +121,9 @@ def notify_question(row: sqlite3.Row) -> int | None:
         lines.append(f"\n\U0001F4A1 {html.escape(row['summary'])}")
     if row["reasoning"]:
         lines.append(f"\U0001F3AF Angle: {html.escape(row['reasoning'])}")
+    draft = row["reply_draft"] if "reply_draft" in row.keys() else None
+    if draft:
+        lines.append(f"✍️ Ready answer:\n<code>{html.escape(draft)}</code>")
     contact = _wa_contact(row)
     if contact:
         lines.append(contact)

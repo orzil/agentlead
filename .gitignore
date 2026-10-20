@@ -33,7 +33,11 @@ wa.db
 portfolio_draft.md
 talent_networks.md
 MORNING_PLAN.md
+marketing_kit.md
 
 # local scratch output (may hold lead text)
 scratch_*
 *.err
+
+# researched outbound targets (company list) - local only
+agencies_il.jsonl

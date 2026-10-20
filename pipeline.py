@@ -111,8 +111,8 @@ def _route_question(conn: sqlite3.Connection, lead_id: int, lead: Lead) -> str:
     push_at = int(db.kv_get(conn, "push_threshold_override", "") or config.PUSH_THRESHOLD)
     status = "question_low"
     conn.execute("UPDATE leads SET score=?, category='question', work_type='unclear', "
-                 "summary=?, reasoning=? WHERE id=?",
-                 (q["score"], q["why"], q["angle"], lead_id))
+                 "summary=?, reasoning=?, reply_draft=? WHERE id=?",
+                 (q["score"], q["why"], q["angle"], q.get("reply") or None, lead_id))
     if q["score"] >= push_at:
         row = conn.execute("SELECT * FROM leads WHERE id=?", (lead_id,)).fetchone()
         msg_id = notifier.notify_question(row)

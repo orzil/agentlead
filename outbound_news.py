@@ -30,6 +30,9 @@ log = logging.getLogger("outbound_news")
 FEEDS = {
     "techcrunch-ai": "https://techcrunch.com/category/artificial-intelligence/feed/",
     "geektime-il": "https://www.geektime.co.il/feed/",
+    # Israeli funding/launch news (2026-10-20; CTech/NoCamels/Geektime EN feeds 404)
+    "globes-tech": "https://www.globes.co.il/webservice/rss/rssfeeder.asmx/FeederNode?iID=594",
+    "globes-en": "https://en.globes.co.il/WebService/Rss/RssFeeder.asmx/FeederNode?iID=1725",
 }
 
 FUNDING_RE = re.compile(
