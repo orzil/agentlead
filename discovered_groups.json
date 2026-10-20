@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-20T03:04:18+00:00",
- "count": 1108,
+ "generated": "2026-10-20T08:07:20+00:00",
+ "count": 1116,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1530,6 +1530,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T18:50:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "201748110567171",
+   "name": "Entrepreneurs, Business & Startup UK",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T08:07:17+00:00",
    "last_checked": null
   },
   {
@@ -4533,6 +4548,21 @@
    "last_checked": null
   },
   {
+   "slug": "1540879694455843",
+   "name": "Founders Connect UK",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T08:07:16+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "157568706504",
    "name": "Middle East Entrepreneurs Network (MEEN)",
    "status": "pending",
@@ -4980,6 +5010,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-18T23:25:23+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "290592000669370",
+   "name": "Founders & CEOs UK",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T08:07:18+00:00",
    "last_checked": null
   },
   {
@@ -5928,6 +5973,21 @@
    "last_checked": null
   },
   {
+   "slug": "FounderNation",
+   "name": "Founder Nation UK",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T08:07:17+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "Freelance.Israel",
    "name": "הייטק פרילאנסר בישראל",
    "status": "pending",
@@ -6105,6 +6165,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T22:10:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "UKEntrepreneursandStartups",
+   "name": "UK Entrepreneurs & Start-ups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T08:07:16+00:00",
    "last_checked": null
   },
   {
@@ -6933,6 +7008,21 @@
    "last_checked": null
   },
   {
+   "slug": "londonstartup",
+   "name": "London Startups",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T08:07:17+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "looking4developer",
    "name": "דרושים מפתחי אפליקציות",
    "status": "pending",
@@ -7545,6 +7635,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T00:06:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "sleekuk",
+   "name": "New Business Owners in the UK",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T08:07:18+00:00",
    "last_checked": null
   },
   {
@@ -16140,6 +16245,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-05T10:53:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "startupUK",
+   "name": "Start-up UK",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T08:07:17+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-20T03:04:18+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-20T08:07:20+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1121)
+## Not yet probed (1129)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -172,6 +172,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ecommercedropshipforstartup` (found via ddg)
 - `entrepreneursandbusinessownerscalifornia` (found via ddg)
 - `EABOSA` (found via ddg)
+- `201748110567171` (found via ddg)
 - `NYCESN` (found via ddg)
 - `2936517136591278` (found via leads_db)
 - `361717460552082` (found via config)
@@ -401,6 +402,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `findyourcofounder` (found via config)
 - `RosenbergMeansBusiness` (found via ddg)
 - `Founder.CEOs` (found via config)
+- `FounderNation` (found via ddg)
+- `290592000669370` (found via ddg)
+- `1540879694455843` (found via ddg)
 - `foundersnetwork` (found via ddg)
 - `foundersspace` (found via config)
 - `findingsuvfounders` (found via ddg)
@@ -422,6 +426,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `666726999839356` (found via ddg)
 - `lawfirmboms` (found via ddg)
 - `lbdfboo` (found via ddg)
+- `londonstartup` (found via ddg)
 - `losangeles.california.startups` (found via ddg)
 - `constructionmanagementnetwork` (found via ddg)
 - `makeautomation` (found via config)
@@ -439,6 +444,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startup.montreal.canada` (found via ddg)
 - `n8ndevelopers` (found via ddg)
 - `1356416033271840` (found via ddg)
+- `sleekuk` (found via ddg)
 - `sleeksgcommunity` (found via ddg)
 - `nycstartup` (found via ddg)
 - `newyorkcity.newyork.startups` (found via ddg)
@@ -522,6 +528,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1165236046981865` (found via ddg)
 - `optimizedstoreowner` (found via ddg)
 - `182811227011330` (found via ddg)
+- `UKEntrepreneursandStartups` (found via ddg)
 - `uksmallbusinessowners` (found via ddg)
 - `557897198086356` (found via ddg)
 - `usabusinessownersusabusinessgroupusa` (found via ddg)
@@ -1089,6 +1096,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `southafricanbusiness` (found via ddg)
 - `SABusinessHub` (found via ddg)
 - `southafricanbusinesses` (found via ddg)
+- `startupUK` (found via ddg)
 - `1435491713362512` (found via ddg)
 - `SuppliersManufacturers` (found via ddg)
 - `sydneybuyingandsellin` (found via ddg)
