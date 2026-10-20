@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-20T08:07:20+00:00",
- "count": 1116,
+ "generated": "2026-10-20T20:23:26+00:00",
+ "count": 1118,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -10338,6 +10338,21 @@
    "last_checked": null
   },
   {
+   "slug": "2684404094914030",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T10:22:57+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "268701551910212",
    "name": null,
    "status": "pending",
@@ -10620,6 +10635,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-12T11:22:14+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "296690297895894",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T10:22:57+00:00",
    "last_checked": null
   },
   {
