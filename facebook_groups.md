@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-21T02:04:18+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-21T02:59:01+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1138)
+## Not yet probed (1142)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -505,6 +505,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `shopifystoreowners` (found via ddg)
 - `1170892738160019` (found via ddg)
 - `singapore.entrepreneurs.network` (found via ddg)
+- `Singaporestartupclub` (found via ddg)
+- `sg.startup` (found via ddg)
 - `989233131137552` (found via ddg)
 - `singstartups` (found via ddg)
 - `242604115854061` (found via ddg)
@@ -516,6 +518,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `StartupDublinClub` (found via ddg)
 - `startupeurope` (found via ddg)
 - `StartupEuropeClub` (found via ddg)
+- `StartupGrindSingapore` (found via ddg)
 - `ipsindia` (found via ddg)
 - `startupsofindiacommunity` (found via ddg)
 - `242109094001690` (found via ddg)
@@ -1002,6 +1005,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1164103449222930` (found via ddg)
 - `ascendcourse` (found via ddg)
 - `ase12.ro` (found via ddg)
+- `aseanbn` (found via ddg)
 - `amznsellers` (found via ddg)
 - `fbacommunity` (found via ddg)
 - `1582392532791911` (found via ddg)
