@@ -62,6 +62,9 @@ python -X utf8 main.py --approve-reply 3     # approve+send one reply (or 'all')
 python -X utf8 probe_fb_groups.py --write    # probe unresolved FB group slugs public/private
 python -X utf8 discover_whatsapp_groups.py --search --write   # find joinable WhatsApp groups
 python -X utf8 discover_fb_groups.py --write # FB group join list (add --search/--probe in CLOUD)
+python -X utf8 sync_cloud.py                 # pull + decrypt the newest cloud leads.db.enc, merge
+python -X utf8 main.py --wa-pass             # one WhatsApp phone pass (what wa_loop runs)
+python -X utf8 wa_phone.py --wifi-setup      # cable plugged in: enable the Wi-Fi adb fallback
 ```
 
 **Never run `--search` or `--probe` (Facebook or DuckDuckGo) from Or's machine.** A Facebook
@@ -135,6 +138,16 @@ one job tuple.
   **not** catch it. Decode mail bytes only through `_decode_bytes`, never `.decode(charset)` —
   an unguarded call took the whole email pass down for ~12h (fixed 2026-09-06), and because
   `From` is decoded *before* `_source_for()`, any junk mail in the inbox could do it.
+- **`STRONG_DOMAIN_SOURCES`** (`arbeitnow`, `mercor`) — broad boards whose descriptions all say
+  "AI"/"machine learning" in the company blurb. The gate matches `STRONG_DOMAIN_RE` against the
+  **header only** (text before the first blank line: title / type / rate). Full-text matching passed
+  785 of 880 arbeitnow listings and burned the cloud's ~50/day scoring budget (2026-10-21).
+- **Mercor** (`mercor_fetcher.py`) — public `listings-explore-page` JSON; drops listings whose
+  `eligibleLocation` excludes Israel. `Hours/wk: N` in `raw_text` lets the ≥35 rule gate full-time.
+- **F5Bot** (`email_fetcher._parse_f5bot`) — keyword-alert mails split into one lead per hit,
+  canonical Reddit permalinks (shared dedup key with `reddit_fetcher`) labelled `r/<sub>`, HN as
+  `hn`. Only hits whose own snippet matches `ENGAGE_RE` are kept. Built against a synthetic mail.
+  Verify it against the first real one; the sign-up is Or's, and the keywords are in `PROJECT_STATUS.md`.
 - **Reddit sitewide search** (`reddit_fetcher.fetch_search`) — plain keyword queries rank
   semantically and return career-advice threads and seeker self-promos (measured: 14/20 passed
   the gate, 0 real). Queries anchor on `title:(hiring OR task)` instead. `search.rss` also mixes
@@ -198,7 +211,12 @@ the normal pipeline; a domain **question** (`prefilter` verdict `question`, `QUE
 `LEARNER_RE`, WhatsApp only) is scored by `scorer.score_question` and pushed as ❓. Keep the
 phone's screen lock at None and the S9's screen asleep between passes (AMOLED burn-in).
 UI facts that cost a day to find: the unread badge's count is in **`content-desc`**, not `text`;
-the group sender id is `name_in_group_tv`. Invite links pasted inside groups are queued
+the group sender id is `name_in_group_tv`.
+**Never run `--wa-pass` by hand while `wa_loop` is running one.** `dump()` pkills uiautomator on
+retry, so two passes kill each other's dumps (exit 137). Check for a running `--wa-pass` process
+first. The link is USB first, then the Wi-Fi address in the gitignored `.adb_wifi`. A phone
+reboot loses it, so re-run `--wifi-setup`. `could not get idle state` that survives a relaunch
+is cleared only by `am force-stop` (2026-10-21), so `dump()`'s last retry does that. Invite links pasted inside groups are queued
 (`found_via='in_group'`) and vetted on the join sheet; `whatsapp_tried.txt` (codes only) tells the
 cloud hunt which groups the phone already tried. `--join-all on` bursts joins (Or's call). Joined groups
 matching `WA_SKIP_GROUP_RE` are not read (full-time feeds); job cards there gate as full-time and
