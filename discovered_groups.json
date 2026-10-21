@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-21T08:12:46+00:00",
- "count": 1131,
+ "generated": "2026-10-21T20:35:21+00:00",
+ "count": 1137,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -12333,6 +12333,21 @@
    "last_checked": null
   },
   {
+   "slug": "658160323622487",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-21T16:25:53+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "661035522370697",
    "name": "BizAI Hub",
    "status": "pending",
@@ -13488,6 +13503,21 @@
    "last_checked": null
   },
   {
+   "slug": "Excel2PowerBI",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-21T16:25:53+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "FindRemoteJobs",
    "name": "How to find a remote job and work Remotely",
    "status": "pending",
@@ -14205,6 +14235,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-21T02:58:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "aveisrael",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-21T16:25:53+00:00",
    "last_checked": null
   },
   {
@@ -15165,6 +15210,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-16T01:50:42+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "httpsmaosim1991.wixsite.compremierisrael",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-21T16:25:53+00:00",
    "last_checked": null
   },
   {
@@ -16788,6 +16848,21 @@
    "last_checked": null
   },
   {
+   "slug": "vibecodinglife",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-21T10:40:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "vibecodingvn.community",
    "name": null,
    "status": "pending",
@@ -16815,6 +16890,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T12:18:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "votel",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-21T10:40:27+00:00",
    "last_checked": null
   },
   {

@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-21T08:12:46+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-21T20:35:21+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1144)
+## Not yet probed (1150)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -1000,6 +1000,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aitoolsandpromptsthatactuallywork` (found via ddg)
 - `296690297895894` (found via leads_db)
 - `2684404094914030` (found via leads_db)
+- `votel` (found via leads_db)
+- `vibecodinglife` (found via leads_db)
+- `httpsmaosim1991.wixsite.compremierisrael` (found via leads_db)
+- `658160323622487` (found via leads_db)
+- `aveisrael` (found via leads_db)
+- `Excel2PowerBI` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
