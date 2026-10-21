@@ -657,6 +657,13 @@ need it, which takes outreach. Or agreed to spend ~10 min a day sending drafted 
   - `wa_phone.py --wifi-setup` (cable plugged in) enables Wi-Fi adb as the fallback link
     (`.adb_wifi`, gitignored).
   - An empty dump now checks the link and reports "phone disconnected".
+  - 22:20, after the replug: Wi-Fi adb set up (`192.168.x:5555`). Every dump then failed with
+    `could not get idle state` (an error printed on stderr, which the code didn't read, so the
+    message was empty). HOME + relaunch didn't clear it; `am force-stop` did. `dump()`'s last
+    retry now force-stops WhatsApp, and the message includes stderr. A pass then read 9 messages
+    (5 full-time, 3 dup, 1 offtopic) and joined 1 group.
+  - The local DB had 17 cloud `error` leads (scoring quota). They were requeued and scored by
+    Ollama: 5 pushed. Only the micro1 AI-training gig was real; 3 discussion posts got a 6.
 - **Probed and rejected:**
   - freelancermap: the RSS is a 404 and the listings render in JS.
   - PeoplePerHour: listings are login-walled.
@@ -670,7 +677,7 @@ contract`, `looking for ML engineer`, `image processing freelance`, `defect dete
 `document AI`.
 
 ## Open items
-- **Phone:** replug the USB cable, then run `python -X utf8 wa_phone.py --wifi-setup`. Then build
+- **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:
   the night crawl (Community sister-groups + group-description invite links). It needs live screens
   for resource ids.
 - **F5Bot sign-up (Or, 2 min):** f5bot.com with orzilber0@gmail.com, then add the keywords above.

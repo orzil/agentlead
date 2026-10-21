@@ -111,7 +111,7 @@ SERIAL = ""                        # picked by device_state() each pass
 _NO_SERIAL = {"devices", "connect", "disconnect", "kill-server", "start-server"}
 
 
-def adb(*args: str, timeout: int = 60, binary: bool = False):
+def adb(*args: str, timeout: int = 60, binary: bool = False, stderr: bool = False):
     """One adb call. Subprocess with an argument list, so no shell ever rewrites
     /sdcard paths (Git Bash does)."""
     pick = ["-s", SERIAL] if SERIAL and args[0] not in _NO_SERIAL else []
@@ -121,7 +121,9 @@ def adb(*args: str, timeout: int = 60, binary: bool = False):
         raise PhoneError(f"adb not found at {ADB} (set ADB_PATH in .env)")
     except subprocess.TimeoutExpired:
         raise PhoneError(f"adb {' '.join(args[:2])} timed out")
-    return r.stdout if binary else r.stdout.decode("utf-8", "replace")
+    if binary:
+        return r.stdout
+    return (r.stdout + r.stderr if stderr else r.stdout).decode("utf-8", "replace")
 
 
 def shell(*args: str, timeout: int = 60) -> str:
@@ -147,13 +149,16 @@ def dump() -> ET.Element:
         if attempt == 3:
             # still failing (2026-10-19: four passes in a row): a stuck
             # uiautomator from an earlier pass, or an animated screen. Kill it
-            # and relaunch WhatsApp before the last try.
+            # and relaunch WhatsApp before the last try. Force-stop, not HOME:
+            # 2026-10-21 the home screen stayed "could not get idle state"
+            # across relaunches until the app process was killed.
             shell("pkill", "-f", "uiautomator")
-            shell("input", "keyevent", "KEYCODE_HOME")
+            shell("am", "force-stop", PKG)
             time.sleep(1)
             shell("am", "start", "-n", f"{PKG}/.Main")
-            time.sleep(3)
-        out = shell("uiautomator", "dump", "/sdcard/wa.xml", timeout=40)
+            time.sleep(4)
+        # uiautomator prints its errors on stderr - keep them for the message
+        out = adb("shell", "uiautomator", "dump", "/sdcard/wa.xml", timeout=40, stderr=True)
         if "dumped" in out:
             raw = adb("exec-out", "cat", "/sdcard/wa.xml", binary=True)
             try:
