@@ -25,7 +25,6 @@
 | B | HE | משרות שוות בשרון !! | https://chat.whatsapp.com/D8vcxB8Rkaj0arycgi1MKr |
 | B | HE | "די לפקקים בהייטק"- שפלה | https://chat.whatsapp.com/Ir95eKycRL5H0mBJpIU92J |
 | B | EN | ..The Developers.. | https://chat.whatsapp.com/Gi31wyFazMC49khB4chagC |
-| B | EN | AI FOR KAKINADA | https://chat.whatsapp.com/FfbpR7bilqPJLAYoWaIoxm |
 | B | EN | AI Tools Corner | https://chat.whatsapp.com/FaTEtZ7AJ2D6HMpjvJntSN |
 | B | EN | Ai Insights Discussion Group | https://chat.whatsapp.com/Lmo1LLRg4ky7qk1ybq3tVl |
 | B | HE | Aipedia - Ai אינציקלופדיית | https://chat.whatsapp.com/FeZVjhB4rhV7UQ6FRdlbU4 |
@@ -49,6 +48,7 @@
 | B | EN | WORDPRESS DEV | https://chat.whatsapp.com/KLkoRSpBnyC1t23yWOOULB |
 | B | EN | Web Developers Community 💻 | https://chat.whatsapp.com/FP0YmvmfuXq1aM6jGX2ILK |
 | B | EN | Web developers Forum! | https://chat.whatsapp.com/GmuvkqvFhzTHrs8ANayBdZ |
+| B | EN | Web3 Developers | https://chat.whatsapp.com/HKpBSjHuWovBthjIPTxTUF |
 | B | HE | בינה מלאכותית אמנות חזותית קבוצה ארצית | https://chat.whatsapp.com/EJooK6cwn6ZGXJokupVIhY |
 | C | HE | דרושים חשמל ואלקטרוניקה! | https://chat.whatsapp.com/K3HXcUTR0Z59YUe8ZcGKFU |
 | C | HE | דרושים תחום הפריורטי | https://chat.whatsapp.com/KHGjpnz92zq6nrXBzpXcPW |
