@@ -1,6 +1,6 @@
 # WhatsApp groups to join (night hunt)
 
-*50 groups; tier A = strongest. Join by hand with the second phone.*
+*80 groups; tier A = strongest. Join by hand with the second phone.*
 
 | tier | lang | group | invite |
 |:---:|:---:|:---|:---|
@@ -54,3 +54,33 @@
 | C | HE | דרופשיפינג לאלופים / SITIFY | https://chat.whatsapp.com/GWYBHKIJHGGFP79Itef4no |
 | C | HE | דרופשיפינג למתחילים - תמיכה שאלות ושת״פ | https://chat.whatsapp.com/Fx5Ma06ixYEEFLb5zWxzOI |
 | C | HE | וורדפרס אלמנטור ווקומרס ועוד | https://chat.whatsapp.com/JQF05uWNUAkKdNQm7YXmpL |
+| C | EN | Customer Success | https://chat.whatsapp.com/KQSkCXY6uNf1nfNP5wnYcE |
+| C | EN | DataSquare | https://chat.whatsapp.com/BoTY6Ynn7h5JeichU8Ybcb |
+| C | EN | Deep Engineering Community | https://chat.whatsapp.com/KmszUQCmjDR5FnnJ09ZeoD |
+| C | EN | Design Community | https://chat.whatsapp.com/DHkkXaywCwgKMKtToh45ia |
+| C | EN | Designers | https://chat.whatsapp.com/IrfyrCjkgz3Ekl72mxcMpM |
+| C | EN | DevAnalytica | https://chat.whatsapp.com/L3khg36K9quArXj79pSARr |
+| C | EN | DevPath | https://chat.whatsapp.com/D2PRfQy4HYgC4XURhY2X8C |
+| C | EN | Digital technology | https://chat.whatsapp.com/Ku6pSKfn9sZG2YIOtuRcao |
+| C | EN | Django Community | https://chat.whatsapp.com/H33ru8veuXNKSHo6TTtbYz |
+| C | EN | DockerIL | https://chat.whatsapp.com/E3046OAkEXNBw0QQq4mL1E |
+| C | EN | ENLIGHT TECHZ | https://chat.whatsapp.com/EqDbdUVUEyA3f2Hz5JGP8b |
+| C | EN | Entrepreneurs - Business Group (No Promotions) | https://chat.whatsapp.com/EzbZigIm7T51vKisHv8ipH |
+| C | EN | Everything Tech | https://chat.whatsapp.com/6wVfmoe7q6QFRu3UXtBM6X |
+| C | EN | Exodus Space - Discussions and Sharing Resources | https://chat.whatsapp.com/Bt1Pxb13v3oJPEOYH0NeIb |
+| C | EN | Flutter Community | https://chat.whatsapp.com/JljM00GRnhVKocT9Ki6oT5 |
+| C | HE | מהנדסי חומרה | https://chat.whatsapp.com/K90MaZVxi3Y8zFg6AqkFBs |
+| C | HE | מהנדסי חשמל ואלקטרוניקה | https://chat.whatsapp.com/LZxGmA8hD4cD1QA5vUkLxX |
+| C | HE | מקצועני ווקומרס דרופשיפינג ושופיפיי | https://chat.whatsapp.com/EqT1sICIXWg0iZMSk4EJld |
+| C | HE | מקצועני פרסום בגוגל | https://chat.whatsapp.com/KfbSbGDJFR13ZUPFE7jneZ |
+| C | HE | נוודים דיגיטליים עם בר ושני 🧑‍💻 | https://chat.whatsapp.com/KecT0Wv959y09j8izTFX8O |
+| C | HE | סמנכ״לי כספים מתייעצים 1 | https://chat.whatsapp.com/JPCbc7EA58oITzXcoCgQ7N |
+| C | HE | עבודות מזדמנות וקבועות | https://chat.whatsapp.com/LdQ5sVSfyGX7RVSOIJByvg |
+| C | HE | עבודל'ה - עבודות בגרפיקה 2 | https://chat.whatsapp.com/DHCiVNwYOPJAB62uIuKKuF |
+| C | HE | פוסטים בלינקדאין | https://chat.whatsapp.com/EccxzPBXxN81oP9xLyF6y4 |
+| C | HE | פורום מנהלות תל אביב 7 | https://chat.whatsapp.com/H4ojYMbO8SwLmZTD1R5vRu |
+| C | HE | פרסום בטיקטוק - קליבר | https://chat.whatsapp.com/BC6zBNGo33n8b1r8jPIfzg |
+| C | HE | פרסום בפייסבוק - קליבר | https://chat.whatsapp.com/LJUkm6PN2TN4Bv0cfTv1qV |
+| C | HE | תוכנה ראסט 🦀 בעברית | https://chat.whatsapp.com/GSDu36xgHTTKFlwsoO2CI5 |
+| C | HE | ‏UX & Beyond – תובנות מקצועיות מבית TZUR | https://chat.whatsapp.com/DPFnZgpd2Bn6ga6LKMvPxK |
+| C | HE | 👩‍💻 עבודות בין שוות 2 💌 | https://chat.whatsapp.com/E0CqAIzkUUi3XHCug75Rpu |
