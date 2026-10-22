@@ -201,7 +201,7 @@ def job_linkcheck(conn) -> None:
 
 
 def job_outbound(conn) -> None:
-    """Daily batch of companies hiring full-time in Or's niche, with a contract pitch."""
+    """Daily batch of agency / funding-news prospects in Or's niche, with a contract pitch."""
     import outbound
     import outbound_news
     outbound_news.run(conn)      # funding/launch news -> prospects (free RSS)

@@ -42,7 +42,7 @@ def ingest(conn: sqlite3.Connection, lead: Lead) -> str:
         conn.execute("UPDATE leads SET status='gated_out', reasoning=? WHERE id=?",
                      (f"gate: {verdict.removeprefix('gate_')}", lead_id))
         conn.commit()
-        if verdict == "gate_full_time":
+        if verdict == "gate_full_time" and config.OUTBOUND_FULLTIME:
             try:   # a company hiring full-time for Or's niche is an outbound prospect
                 import outbound
                 outbound.capture(conn, lead_id, lead.raw_text)

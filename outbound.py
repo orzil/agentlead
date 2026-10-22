@@ -174,6 +174,8 @@ def drip_agencies(conn: sqlite3.Connection, n: int = AGENCIES_PER_DAY) -> int:
 
 def backfill(conn: sqlite3.Connection) -> int:
     """Capture prospects from full-time rejections already stored (fresh ones only)."""
+    if not config.OUTBOUND_FULLTIME:
+        return 0
     cutoff = (datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)).isoformat()
     n = 0
     for r in conn.execute(
@@ -230,11 +232,15 @@ def _draft(text: str, news: bool = False, agency: bool = False) -> str | None:
 
 def pending(conn: sqlite3.Connection, limit: int) -> list[sqlite3.Row]:
     cutoff = (datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)).isoformat()
+    # Full-time-derived prospects already queued stay in the table but are never
+    # surfaced while OUTBOUND_FULLTIME is off.
     return conn.execute(
         "SELECT l.id, l.source, l.url, l.raw_text, l.author FROM prospects p "
         "JOIN leads l ON l.id = p.lead_id "
         "WHERE p.status='pending' AND l.fetched_at >= ? "
-        "ORDER BY l.fetched_at DESC LIMIT ?", (cutoff, limit)).fetchall()
+        "AND (? OR COALESCE(l.reasoning, '') NOT LIKE '%full_time%') "
+        "ORDER BY l.fetched_at DESC LIMIT ?",
+        (cutoff, int(config.OUTBOUND_FULLTIME), limit)).fetchall()
 
 
 def _prospect_message(r: sqlite3.Row, draft: str | None, header: str = "") -> str:
@@ -307,8 +313,8 @@ def run(conn: sqlite3.Connection, dry_run: bool = False) -> int:
     rows = pending(conn, BATCH_SIZE)
     if not rows:
         return 0
-    head = (f"\U0001F91D <b>Outbound: {len(rows)} compan(ies)</b> - hiring an employee, or just "
-            f"funded, in your niche. Pitch contract capacity. You send; nothing goes out "
+    head = (f"\U0001F91D <b>Outbound: {len(rows)} compan(ies)</b> in your niche (dev shops, "
+            f"just-funded startups). Pitch contract capacity. You send; nothing goes out "
             f"automatically.")
     if dry_run:
         print(head)

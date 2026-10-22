@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-09-06 (end of session)*
+*Last updated: 2026-10-22*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -675,6 +675,16 @@ need it, which takes outreach. Or agreed to spend ~10 min a day sending drafted 
 contract`, `looking for ML engineer`, `image processing freelance`, `defect detection`,
 `video analytics developer`, `data extraction freelancer`, `AI automation developer`,
 `document AI`.
+
+## 2026-10-22: no full-time posts on Telegram, even as prospects
+
+Or: "you still sending me full time". The gate was right (every WhatsApp job card was
+`gate_full_time`), but `outbound.capture()` turned the in-domain ones into morning
+"pitch contract capacity" prospects, so Railvision / Inspira / SmartShooter job posts
+still reached Telegram. New flag `OUTBOUND_FULLTIME` (default **0**): `pipeline.ingest`
+no longer captures them, `backfill()` is a no-op, and `outbound.pending()` hides the
+full-time prospects already queued (2 left in the table, untouched). Agency and
+funding-news prospects still go out.
 
 ## Open items
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:

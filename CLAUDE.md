@@ -220,8 +220,8 @@ is cleared only by `am force-stop` (2026-10-21), so `dump()`'s last retry does t
 (`found_via='in_group'`) and vetted on the join sheet; `whatsapp_tried.txt` (codes only) tells the
 cloud hunt which groups the phone already tried. `--join-all on` bursts joins (Or's call). Joined groups
 matching `WA_SKIP_GROUP_RE` are not read (full-time feeds); job cards there gate as full-time and
-in-domain ones become outbound prospects. The phone pass also runs the local outbound batch
-(WhatsApp prospects + the gitignored `agencies_il.jsonl` drip). `wa_night --focus client` hunts
+are dropped (full-time posts no longer become outbound prospects: `OUTBOUND_FULLTIME=0`, 2026-10-22). The phone pass also runs the local outbound batch
+(the gitignored `agencies_il.jsonl` drip). `wa_night --focus client` hunts
 client/work-passing groups and hub pages, and promotes Telegram channels into `telegram_found.txt`.
 
 **Outreach (`replier.py` + `notifier.py`).** Auto-reply is **Reddit only** — Facebook and LinkedIn

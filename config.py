@@ -691,6 +691,10 @@ DIGEST_HOUR = int(env("DIGEST_HOUR", "18"))           # local time
 # Draft a copy-paste first-contact reply for pushed leads (Gemini only; a few
 # extra calls per day at most). Set PITCH_DRAFTS=0 to disable.
 PITCH_DRAFTS = env("PITCH_DRAFTS", "1") in ("1", "true", "yes")
+# Turn gate-rejected FULL-TIME job posts into outbound "pitch contract capacity"
+# prospects. Off since 2026-10-22: Or saw them on Telegram as full-time jobs and
+# asked for none. Agency and funding-news prospects are unaffected.
+OUTBOUND_FULLTIME = env("OUTBOUND_FULLTIME", "0") in ("1", "true", "yes")
 
 # --- HTTP -------------------------------------------------------------------
 USER_AGENT = (
