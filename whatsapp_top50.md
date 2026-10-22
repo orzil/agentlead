@@ -4,9 +4,10 @@
 
 | tier | lang | group | invite |
 |:---:|:---:|:---|:---|
+| C | EN | Hr. Job Requirements | https://chat.whatsapp.com/K8rAhWaswaxESKmtRuwlK6 |
+| C | EN | Job's available | https://chat.whatsapp.com/Ed08EKIGhmU0yUovJgt1In |
 | B | EN | iOS Developers | https://chat.whatsapp.com/GUeU4cW6wrrJpO5KntBujd |
 | B | HE | קהילת מציאת עבודה 2 | https://chat.whatsapp.com/I8cS1t7hJ2nGLKTZGZBNRT |
-| B | EN | ✨DATA SCIENCE✨ | https://chat.whatsapp.com/IIx5gO4ygYqCnLkvH6jcfr |
 | C | EN | .NET Community | https://chat.whatsapp.com/Fw4dF5UD3zN4LOZHhTivp8 |
 | C | HE | 20-80 תמיכה מרחוק 🟣 | https://chat.whatsapp.com/JmkJMCTiDnYFNftRxhSKP9 |
 | C | HE | 4 קבוצת עובדים/מעסיקים מס 4 | https://chat.whatsapp.com/BlwZhCFMEYyLc8Ke9uwxxR |
@@ -37,7 +38,6 @@
 | C | EN | Coding in JavaScript | https://chat.whatsapp.com/H5sFRuP2w3W815eQZoeewL |
 | C | EN | Coding world | https://chat.whatsapp.com/GxF6dhji8t3BkPBjUdIEPu |
 | C | EN | Connect & Network✨ | https://chat.whatsapp.com/KY8XvaNYOTIIUPuq4xlU6T |
-| C | EN | Customer Success | https://chat.whatsapp.com/KQSkCXY6uNf1nfNP5wnYcE |
 | C | HE | GCP IL | https://chat.whatsapp.com/J9pRKNdUuovD5iHF9DsRrr |
 | C | HE | Git IL | https://chat.whatsapp.com/BiaXJBlPCCC39mNBSdEYAz |
 | C | HE | GitHub Actions IL | https://chat.whatsapp.com/Bj2ntRKefqU3XztaRFuk1z |

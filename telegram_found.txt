@@ -5,3 +5,13 @@ datasciencefun
 ds_interview_lib
 ds_problems_lib
 dsproglib
+forallmarketing
+forallmedia
+forallqa
+foranalysts
+forchiefs
+fordesigner
+forhr
+forproducts
+forpython
+getjobss
