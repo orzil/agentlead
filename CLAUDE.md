@@ -65,6 +65,7 @@ python -X utf8 discover_fb_groups.py --write # FB group join list (add --search/
 python -X utf8 sync_cloud.py                 # pull + decrypt the newest cloud leads.db.enc, merge
 python -X utf8 main.py --wa-pass             # one WhatsApp phone pass (what wa_loop runs)
 python -X utf8 wa_phone.py --wifi-setup      # cable plugged in: enable the Wi-Fi adb fallback
+python -X utf8 wa_phone.py --add-targets f.txt  # queue vetted invite links (name | url) ahead of the hunt list
 ```
 
 **Never run `--search` or `--probe` (Facebook or DuckDuckGo) from Or's machine.** A Facebook

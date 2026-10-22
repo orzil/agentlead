@@ -392,6 +392,35 @@ def load_targets(conn) -> int:
     return new
 
 
+RESEARCH_PRIORITY = -3000         # ahead of everything, CV-named groups included
+
+
+def add_targets(conn, path: str) -> int:
+    """Queue hand-vetted invites (web research, or links Or sends) ahead of the
+    night hunt's list. The join sheet still drops dead and get-rich groups, and
+    already-tried codes are left alone. Returns how many were queued."""
+    now = datetime.now(timezone.utc).isoformat()
+    n = 0
+    with open(path, encoding="utf-8") as f:
+        lines = f.read().splitlines()
+    for i, line in enumerate(lines):
+        m = re.search(r"chat\.whatsapp\.com/(?:invite/)?([A-Za-z0-9]{16,32})", line)
+        if not m:
+            continue
+        code = m.group(1)
+        name = line.split("|")[0].strip() if "|" in line else ""
+        conn.execute(
+            "INSERT OR IGNORE INTO whatsapp_groups (code, url, name, status, found_via, first_seen)"
+            " VALUES (?, ?, ?, 'live', 'research', ?)",
+            (code, f"https://chat.whatsapp.com/{code}", name, now))
+        cur = conn.execute(
+            "UPDATE whatsapp_groups SET priority=?, status='live' WHERE code=? "
+            "AND join_status IS NULL AND COALESCE(joined,0)=0", (RESEARCH_PRIORITY + i, code))
+        n += cur.rowcount
+    conn.commit()
+    return n
+
+
 def _joined_titles(conn) -> dict[str, str]:
     rows = conn.execute("SELECT code, title_on_phone FROM whatsapp_groups "
                         "WHERE join_status='joined' AND title_on_phone IS NOT NULL").fetchall()
@@ -1095,6 +1124,9 @@ def main() -> None:
                     help="burst-join every remaining group (3-8 min apart, 08-23 IL)")
     ap.add_argument("--wifi-setup", action="store_true",
                     help="(USB plugged) enable adb over Wi-Fi as the fallback link")
+    ap.add_argument("--add-targets", metavar="FILE",
+                    help="queue hand-vetted invite links (lines 'name | url ...') AHEAD of the "
+                         "night hunt's list, in file order")
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s [%(name)s] %(message)s")
     logging.getLogger("httpx").setLevel(logging.WARNING)   # its INFO line carries bot tokens
@@ -1107,6 +1139,8 @@ def main() -> None:
         print(f"join-all {args.join_all}")
     elif args.wifi_setup:
         print(f"Wi-Fi adb ready: {wifi_setup()} (saved to {WIFI_FILE.name})")
+    elif args.add_targets:
+        print(f"{add_targets(conn, args.add_targets)} target(s) queued first")
     elif args.do_pass:
         leads = run_pass(conn)
         print(f"{len(leads)} message lead(s) read (not ingested; use main.py --wa-pass)")

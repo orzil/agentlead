@@ -686,6 +686,23 @@ no longer captures them, `backfill()` is a no-op, and `outbound.pending()` hides
 full-time prospects already queued (2 left in the table, untouched). Agency and
 funding-news prospects still go out.
 
+## 2026-10-22: WhatsApp - more RELEVANT groups, not more groups
+
+Measured first: the 38 joined groups had produced **0** passing leads (job boards are
+all full-time; most communities never posted). So the fix was relevance, not volume.
+Web research (3 agents; WebSearch + directory crawls) found ~60 new live invites where
+work is handed out: GenAI Israel's **Jobs/Freelancers** groups (linktr.ee/llm.org.il),
+Vibe Coders IL / Base44 IL (non-devs who need an engineer), automation-freelance groups,
+Israeli founder/business-owner networks, and global founder / AI-builder groups.
+- `wa_phone.py --add-targets FILE` queues them at priority -3000 (ahead of the hunt's
+  tier-C list); Israeli first, global +100 after. All recorded in `wa_research_links.txt`.
+- `wa_night.py`: `IL_DIR_SEEDS` (linktr.ee/llm.org.il, klicky index ~950 invites,
+  igroupsil hi-tech/work categories, grouphub searches) for `all` and `client` focus.
+- `--select --more N` (workflow input `more`) sends N extra groups not already on the list.
+- Join-all is ON (cap 50/day); ~100 targets queued -> ~2-3 days to work through.
+- Note: two agents checked invite pages from this machine's IP until chat.whatsapp.com
+  rate-limited it (web previews only; not the phone app).
+
 ## Open items
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:
   the night crawl (Community sister-groups + group-description invite links). It needs live screens

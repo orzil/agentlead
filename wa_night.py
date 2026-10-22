@@ -195,8 +195,8 @@ def _apply_focus(focus: str) -> None:
         _CUR_SUFFIX = "_cv"
     elif focus == "client":
         REDDIT_QUERIES, DDG_QUERIES = CLIENT_REDDIT_QUERIES, CLIENT_DDG_QUERIES
-        DIR_SEEDS = [(f"{_HIVE}/topics/{t}/platform/whatsapp/", _HIVE_FOLLOW)
-                     for t in CLIENT_HIVE_TOPICS]
+        DIR_SEEDS = IL_DIR_SEEDS + [(f"{_HIVE}/topics/{t}/platform/whatsapp/", _HIVE_FOLLOW)
+                                    for t in CLIENT_HIVE_TOPICS]
         _CUR_SUFFIX = "_client"
 
 
@@ -400,7 +400,21 @@ DIR_SEEDS: list[tuple[str, str | None]] = [
     ("https://wp-index.co.il/all_groups/", None),
     ("https://whatsgrouplink.com/israel-whatsapp-group-links/", None),
     ("https://www.itconsulting.co.il/he/publication/86", None),
-] + [(f"{_HIVE}/topics/{t}/platform/whatsapp/", _HIVE_FOLLOW) for t in _HIVE_TOPICS]
+]
+# Israeli directories + community hubs where the 2026-10-22 web research found the
+# groups that actually hand out work (GenAI Israel's Jobs/Freelancers, automation
+# freelancers, founder networks). klicky's index alone lists ~950 invites.
+_GH = "https://grouphub.co.il/search?q="
+_IGIL = r'href="(?:https://(?:www\.)?igroupsil\.com)?(/group/[^"#?]+)"'
+IL_DIR_SEEDS: list[tuple[str, str | None]] = [
+    ("https://linktr.ee/llm.org.il", None),
+    ("https://klicky.co.il/whatsapp-groups/", None),
+    ("https://www.igroupsil.com/whatsapp/category/%D7%94%D7%99%D7%99%D7%98%D7%A7", _IGIL),
+    ("https://www.igroupsil.com/whatsapp/category/%D7%A2%D7%91%D7%95%D7%93%D7%94", _IGIL),
+] + [(_GH + q, None) for q in ("פרילנסרים", "יזמים", "עצמאים", "אוטומציה", "AI", "IL",
+                               "Python", "דאטה", "פיתוח")]
+DIR_SEEDS = IL_DIR_SEEDS + DIR_SEEDS + [(f"{_HIVE}/topics/{t}/platform/whatsapp/", _HIVE_FOLLOW)
+                                        for t in _HIVE_TOPICS]
 
 
 def surf_dirs(conn, client_factory) -> int:
