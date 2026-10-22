@@ -647,7 +647,7 @@ def _tried_codes() -> set[str]:
             if ln.strip() and not ln.startswith("#")}
 
 
-def select_top(conn, n: int = 50) -> list[sqlite3.Row]:
+def select_top(conn, n: int = 50, exclude: set[str] | None = None) -> list[sqlite3.Row]:
     """Pick n groups, ~half Hebrew/Israeli, dropping anything the LLM said is a 0.
 
     When the LLM was unavailable (llm_relevant NULL) the regex relevance alone
@@ -656,7 +656,7 @@ def select_top(conn, n: int = 50) -> list[sqlite3.Row]:
     rows = conn.execute(
         "SELECT * FROM whatsapp_groups WHERE status='live' AND COALESCE(joined,0)=0"
     ).fetchall()
-    tried = _tried_codes()
+    tried = _tried_codes() | (exclude or set())
     keep = []
     for r in rows:
         if r["code"] in tried or config.WA_SKIP_GROUP_RE.search(r["name"] or ""):
@@ -685,6 +685,14 @@ def _tier(r: sqlite3.Row) -> str:
     return "B" if (llm or 0) >= 2 or (r["relevance"] or 0) >= 1 else "C"
 
 
+def _md_codes(path: str = "whatsapp_top50.md") -> list[str]:
+    """Invite codes already on the list, in order (what Or was already sent)."""
+    p = Path(path)
+    if not p.exists():
+        return []
+    return re.findall(r"chat\.whatsapp\.com/([A-Za-z0-9]+)", p.read_text(encoding="utf-8"))
+
+
 def write_top_md(rows: list[sqlite3.Row], path: str = "whatsapp_top50.md") -> str:
     lines = ["# WhatsApp groups to join (night hunt)", "",
              f"*{len(rows)} groups; tier A = strongest. Join by hand with the second phone.*", "",
@@ -697,12 +705,13 @@ def write_top_md(rows: list[sqlite3.Row], path: str = "whatsapp_top50.md") -> st
     return path
 
 
-def notify_top(rows: list[sqlite3.Row], pool: dict) -> None:
+def notify_top(rows: list[sqlite3.Row], pool: dict, wanted: int = 50,
+               title: str = "WhatsApp night hunt") -> None:
     import notifier
     a = sum(1 for r in rows if _tier(r) == "A")
-    head = (f"\U0001F4AC <b>WhatsApp night hunt: {len(rows)} groups to join</b> "
+    head = (f"\U0001F4AC <b>{title}: {len(rows)} groups to join</b> "
             f"({a} tier-A)\n<i>pool: {pool}</i>\nJoin by hand with the second phone.\n")
-    if len(rows) < 50:
+    if len(rows) < wanted:
         head += (f"<i>Only {len(rows)} passed the relevance filter - sending all rather "
                  f"than padding with junk.</i>\n")
     chunks = [rows[i:i + 20] for i in range(0, len(rows), 20)] or [[]]
@@ -723,6 +732,9 @@ def main() -> None:
     ap.add_argument("--surface", choices=sorted(SURFACES), help="run only this surface")
     ap.add_argument("--select", action="store_true", help="final: rate, pick top 50, write md")
     ap.add_argument("--notify", action="store_true", help="with --select: Telegram the list")
+    ap.add_argument("--more", type=int, default=0, metavar="N",
+                    help="with --select: N groups NOT already on whatsapp_top50.md, appended to "
+                         "it and Telegrammed on their own (no once-a-day limit)")
     ap.add_argument("--dry-run", action="store_true",
                     help="run the surface on a throwaway in-memory copy of the table")
     ap.add_argument("--add-links", metavar="FILE", help="ingest invite links from a text file")
@@ -767,7 +779,8 @@ def main() -> None:
         wa.validate_pending(conn, cap=args.validate_cap, recheck=False)
         wa.rescore(conn)
         rated = llm_pass(conn)
-        rows = select_top(conn, 50)
+        prev = _md_codes() if args.more else []
+        rows = select_top(conn, args.more or 50, exclude=set(prev))
         pool = dict(conn.execute(
             "SELECT status, COUNT(*) FROM whatsapp_groups GROUP BY status").fetchall())
         try:
@@ -776,6 +789,15 @@ def main() -> None:
             log.error("telegram validation failed: %s", str(e)[:120])
             tg = -1
         print(f"pool {pool}; llm-rated {rated}; selected {len(rows)}; telegram promoted {tg}")
+        if args.more:
+            # keep the earlier picks on the list so the phone's queue order holds
+            by_code = {r["code"]: r for r in conn.execute(
+                "SELECT * FROM whatsapp_groups WHERE code IN (%s)" % ",".join("?" * len(prev)),
+                prev).fetchall()} if prev else {}
+            print(f"wrote {write_top_md([by_code[c] for c in prev if c in by_code] + rows)}")
+            if args.notify:
+                notify_top(rows, pool, wanted=args.more, title="WhatsApp: more groups")
+            return
         print(f"wrote {write_top_md(rows)}")
         if args.notify and db.kv_get(conn, "wa_top50_sent", "") != time.strftime("%Y-%m-%d"):
             notify_top(rows, pool)
