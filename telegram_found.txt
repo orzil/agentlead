@@ -1,2 +1,7 @@
+a1tradingfxanalysis
 aiindiajobs
 artificial_intelligence_in
+datasciencefun
+ds_interview_lib
+ds_problems_lib
+dsproglib
