@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-22T01:59:29+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-22T02:57:54+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1151)
+## Not yet probed (1156)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -580,8 +580,11 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `freelanceisrael` (found via ddg)
 - `Freelance.Israel` (found via ddg)
 - `1456367289297520` (found via ddg)
+- `661988153318039` (found via ddg)
+- `yazamdigitali` (found via ddg)
 - `624543140573742` (found via ddg)
 - `entrepreneurs.israel` (found via ddg)
+- `175964760558` (found via ddg)
 - `940674812655793` (found via ddg)
 - `talkingautomation` (found via leads_db)
 - `3d.printing.israel` (found via ddg)
@@ -1182,6 +1185,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `270931709946261` (found via ddg)
 - `1308879656987184` (found via ddg)
 - `462672717191788` (found via ddg)
+- `386869638147419` (found via ddg)
+- `677520975925772` (found via ddg)
 - `dnisrael` (found via ddg)
 - `digitalnomadsisraelopengroup` (found via ddg)
 - `BusinessinIsrael1` (found via ddg)

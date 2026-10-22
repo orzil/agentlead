@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-22T01:59:29+00:00",
- "count": 1138,
+ "generated": "2026-10-22T02:57:54+00:00",
+ "count": 1143,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -4653,6 +4653,21 @@
    "last_checked": null
   },
   {
+   "slug": "175964760558",
+   "name": "יזמים צעירים ישראל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T02:57:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "182811227011330",
    "name": "The Shopify Store Owner's Network ️",
    "status": "pending",
@@ -5475,6 +5490,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "661988153318039",
+   "name": "יזמים בישראל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T02:57:51+00:00",
    "last_checked": null
   },
   {
@@ -8145,6 +8175,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T20:34:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "yazamdigitali",
+   "name": "יזמים דיגיטלים - הקבוצה הסודית",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T02:57:51+00:00",
    "last_checked": null
   },
   {
@@ -11253,6 +11298,21 @@
    "last_checked": null
   },
   {
+   "slug": "386869638147419",
+   "name": "מְחַשבים למידה מחדש: התכנית לתואר שני טכנולוגיה בחינוך בסמינר הקיבוצים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T02:57:51+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "39049219928058449",
    "name": null,
    "status": "pending",
@@ -12390,6 +12450,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-28T10:14:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "677520975925772",
+   "name": "מוניות למכירה בישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T02:57:51+00:00",
    "last_checked": null
   },
   {
