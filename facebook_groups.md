@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-22T20:30:35+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-22T23:31:22+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1156)
+## Not yet probed (1165)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -594,12 +594,16 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `587640282883229` (found via ddg)
 - `1406771276210792` (found via ddg)
 - `giuson` (found via ddg)
+- `420870564629246` (found via ddg)
 - `735395363138298` (found via ddg)
 - `israel.hitech.jobs` (found via ddg)
 - `1301121656949348` (found via ddg)
 - `707574362649616` (found via ddg)
+- `1019634092006335` (found via ddg)
+- `1636122837485129` (found via ddg)
 - `dmisrael` (found via ddg)
 - `544976585999596` (found via ddg)
+- `378170670477233` (found via ddg)
 - `303194433208716` (found via ddg)
 - `besmartphone.il` (found via ddg)
 - `807976829284427` (found via ddg)
@@ -619,6 +623,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `coronajobs` (found via ddg)
 - `849152465232462` (found via ddg)
 - `2764496013595357` (found via ddg)
+- `2098241677079216` (found via ddg)
 - `1329241984892387` (found via leads_db)
 - `congdongarduinovn` (found via leads_db)
 - `thaidev` (found via leads_db)
@@ -1187,6 +1192,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `462672717191788` (found via ddg)
 - `386869638147419` (found via ddg)
 - `677520975925772` (found via ddg)
+- `1635747173357439` (found via ddg)
+- `1959721957381848` (found via ddg)
+- `2233374453343068` (found via ddg)
 - `dnisrael` (found via ddg)
 - `digitalnomadsisraelopengroup` (found via ddg)
 - `BusinessinIsrael1` (found via ddg)
@@ -1199,6 +1207,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbusinessesaregrowing` (found via ddg)
 - `shavit` (found via ddg)
 - `209262042417914` (found via ddg)
+- `186860244674907` (found via ddg)
 - `1417623821789515` (found via ddg)
 - `portalil` (found via ddg)
 - `digitalz.co.il` (found via ddg)

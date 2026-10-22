@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-22T20:30:35+00:00",
- "count": 1143,
+ "generated": "2026-10-22T23:31:22+00:00",
+ "count": 1152,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -4083,6 +4083,21 @@
    "last_checked": null
   },
   {
+   "slug": "1019634092006335",
+   "name": "מתווכים יזמים קבלנים אנשי נדל\"ן מכל הארץ שת\"פ",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T23:31:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "105474902826094",
    "name": "מפרגנים לחברים שמפתחים אפליקציות - ומקדמים אפליקציות כחול-לבן",
    "status": "pending",
@@ -4608,6 +4623,21 @@
    "last_checked": null
   },
   {
+   "slug": "1636122837485129",
+   "name": "נדל״ן ישראל AI",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T23:31:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "165114167522089",
    "name": "Entrepreneurs Business Help",
    "status": "pending",
@@ -4755,6 +4785,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-10T07:41:00+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2098241677079216",
+   "name": "שת\"פ בנדל\"ן... מתווכים... יזמים... משקיעים",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T23:31:20+00:00",
    "last_checked": null
   },
   {
@@ -5163,6 +5208,21 @@
    "last_checked": null
   },
   {
+   "slug": "378170670477233",
+   "name": "עסקים נדלן שיווק יזמים פרסום מסחרי , השקעות נכסים דירות חנויות מכירה ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T23:31:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "386218954793964",
    "name": "Entrepreneurs - Lets build together",
    "status": "pending",
@@ -5235,6 +5295,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T03:29:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "420870564629246",
+   "name": "משרות בין חברים בשוק ההון",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T23:31:20+00:00",
    "last_checked": null
   },
   {
@@ -9408,6 +9483,21 @@
    "last_checked": null
   },
   {
+   "slug": "1635747173357439",
+   "name": "נדל\"ן ישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T23:31:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1636991833121307",
    "name": "No Code Community",
    "status": "pending",
@@ -9693,6 +9783,21 @@
    "last_checked": null
   },
   {
+   "slug": "186860244674907",
+   "name": "פורום תעשיה וניהול",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T23:31:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "188366559022",
    "name": "בעלי עסקים קטנים",
    "status": "pending",
@@ -9795,6 +9900,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1959721957381848",
+   "name": "נדל\"ן ישראל - כל העדכונים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T23:31:20+00:00",
    "last_checked": null
   },
   {
@@ -10170,6 +10290,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:33:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2233374453343068",
+   "name": "נדל\"ן ישראל - תיווך והשקעות ישראל",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-22T23:31:20+00:00",
    "last_checked": null
   },
   {
