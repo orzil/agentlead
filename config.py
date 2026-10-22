@@ -640,7 +640,7 @@ WA_BUYER_GROUP_RE = re.compile(
     r"(founders?|\bCEO\b|\bCTO\b|\bCPO\b|\bVP\b|יזמים|יזמות|בעלי\s+עסקים|agency|agencies"
     r"|saas|e-?commerce|startups?\b|סטארטאפ|product\s+managers?\s+(club|forum|community)"
     # client/work-passing communities (2026-10-20): where work is asked for or handed on
-    r"|מנהלי\s+מוצר|העברת\s+(עבודות|פרויקטים)|לעסקים|אוטומציות?|n8n|no[\s-]?code|make\.com"
+    r"|מנהלי\s+מוצר|העברת\s+(עבודות|פרויקטים)|לעסקים|אוטומצי(?:ה|ות)|n8n|no[\s-]?code|make\.com"
     r"|zapier|small\s+business|business\s+owners)",
     re.IGNORECASE)
 WA_SKIP_GROUP_RE = re.compile(
@@ -649,6 +649,20 @@ WA_SKIP_GROUP_RE = re.compile(
     r"|marketing|שיווק|embedded|הנדסאים|טכנאים|מערכות\s+מידע|project\s+managers?\s+jobs"
     r"|executives?\b|נשים\s+בהייטק|מחפשים\s+עבודה|בכיר|ג'וניור|junior|ניהול|\bSEO\b|\bPPC\b"
     r"|קידום\s+אתרים|נדל\"?ן|real\s+estate|adtech)", re.IGNORECASE)
+# A join sheet whose DESCRIPTION says full-time only is skipped unless it also
+# names freelance/contract work (wa_phone._sheet_ok).
+WA_FT_ONLY_SHEET_RE = re.compile(
+    r"(משרות?\s+מלאות?|משרה\s+מלאה|full[\s-]?time\s+(only|positions?|roles?|jobs?)"
+    r"|קורות\s+חיים|send\s+(your\s+)?resume|recruit(er|ers|ing)|גיוס|מגייס)",
+    re.IGNORECASE)
+# A job-board TITLE ("משרות ...", "דרושים ...", "... Jobs") is skipped on the join
+# sheet unless it also names freelance/contract work, buyers or Or's CV niche:
+# 43 joined groups, mostly boards like these, produced 0 leads (2026-10-23).
+WA_JOB_BOARD_TITLE_RE = re.compile(r"(משרות|משרה|דרושים|דרושות|\bjobs?\b|\bhiring\b|לוח)",
+                                   re.IGNORECASE)
+# A new night list re-arms --join-all by itself (Or chose join-all, 2026-10-22),
+# unless a burst was paused by repeated failures (then it waits for --join-all on).
+WA_JOIN_ALL_AUTO = env("WA_JOIN_ALL_AUTO", "1") in ("1", "true", "yes")
 
 # --- Night search rotation ----------------------------------------------------
 # DuckDuckGo challenges an IP after ~1-2 queries, so the three query families

@@ -33,10 +33,10 @@ on:
         options: [slice, select]
         default: slice
       focus:
-        description: "all = every query list, cv = computer-vision groups, client = client/work-passing groups + community hubs"
+        description: "auto = rotate client/all/client/cv per slice, all = every query list, cv = computer-vision groups, client = client/work-passing groups + community hubs"
         type: choice
-        options: [all, cv, client]
-        default: all
+        options: [auto, all, cv, client]
+        default: auto
       more:
         description: "select only: send N MORE groups not already on whatsapp_top50.md (blank = normal top 50)"
         type: string
@@ -92,7 +92,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
           LLM_BACKEND: gemini
-        run: python -X utf8 wa_night.py --db wa.db --mine-from leads.db --focus ${{ inputs.focus || 'all' }} 2>&1 | grep -v "HTTP Request"
+        run: python -X utf8 wa_night.py --db wa.db --mine-from leads.db --focus ${{ inputs.focus || 'auto' }} 2>&1 | grep -v "HTTP Request"
 
       - name: Select top 50 and notify
         if: env.MODE == 'select'
@@ -139,8 +139,8 @@ jobs:
           T=$((10#$H * 60 + 10#$M))
           if [ "$T" -ge 1020 ] || [ "$T" -lt 165 ]; then       # 17:00 .. 02:44 UTC
             sleep 420
-            # keep the night on the focus it was started with (cron starts = all)
-            gh workflow run wanight.yml --ref main -f mode=slice -f focus=${{ inputs.focus || 'all' }}
+            # keep the night on the focus it was started with (cron starts = auto)
+            gh workflow run wanight.yml --ref main -f mode=slice -f focus=${{ inputs.focus || 'auto' }}
           elif [ "$T" -ge 165 ] && [ "$T" -lt 240 ]; then      # 02:45 .. 03:59 UTC
             gh workflow run wanight.yml --ref main -f mode=select
           else

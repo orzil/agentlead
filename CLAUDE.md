@@ -224,6 +224,14 @@ matching `WA_SKIP_GROUP_RE` are not read (full-time feeds); job cards there gate
 are dropped (full-time posts no longer become outbound prospects: `OUTBOUND_FULLTIME=0`, 2026-10-22). The phone pass also runs the local outbound batch
 (the gitignored `agencies_il.jsonl` drip). `wa_night --focus client` hunts
 client/work-passing groups and hub pages, and promotes Telegram channels into `telegram_found.txt`.
+**Relevance over volume (2026-10-23):** 43 joined job-board groups gave 0 leads. So the night
+runs `--focus auto` (slices rotate client/all/client/cv), linktr.ee/lu.ma/meetup hub pages seen
+anywhere are queued for `surf_dirs`, the LLM rubric scores full-time job boards **0**, and
+`select_top` keeps only LLM 2-3 (bump `LLM_RUBRIC_VER` after editing `_LLM_SYSTEM` so the pool
+is re-rated). On the phone, `_sheet_ok` checks **every** target's join sheet (job-board titles
+without a freelance/buyer/CV word are skipped, no slot spent), a new night list re-arms
+join-all (`WA_JOIN_ALL_AUTO`; a failure pause or `--join-all off` blocks that until `on`), and
+invites pasted in work-passing groups jump to the tier-0 band.
 
 **Outreach (`replier.py` + `notifier.py`).** Auto-reply is **Reddit only** — Facebook and LinkedIn
 are deliberately excluded because automating the user's account risks a ban, and Freelancer.com was

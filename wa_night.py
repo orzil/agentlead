@@ -173,11 +173,26 @@ CLIENT_DDG_QUERIES = [
     '"chat.whatsapp.com" "GenAI Israel" OR "AI Israel" community',
     '"chat.whatsapp.com" PyData OR MDLI OR "Women in AI" israel',
     '"chat.whatsapp.com" startup founders community link',
+    # 2026-10-23: the phrasings behind the groups the hand research found (GenAI
+    # Jobs/Freelancers, Vibe Coders IL, Base44 IL, automation-for-business) - the
+    # night's job-board groups produced 50 messages and 0 leads
+    "קבוצת וואטסאפ העברת עבודות פיתוח",
+    "קבוצת וואטסאפ דרוש מפתח פרילנס",
+    "קבוצת וואטסאפ קהילת יזמים AI",
+    'site:chat.whatsapp.com "GenAI" jobs freelancers',
+    'site:chat.whatsapp.com "vibe coders" OR "vibe coding"',
+    'site:chat.whatsapp.com base44 OR lovable OR bolt',
+    'site:chat.whatsapp.com "claude code" OR cursor OR MCP',
+    'site:chat.whatsapp.com "AI agents" builders',
+    '"chat.whatsapp.com" "AI automation agency"',
+    'site:linktr.ee "chat.whatsapp.com" vibe coding OR no-code',
 ]
 CLIENT_REDDIT_QUERIES = [
     '"chat.whatsapp.com" founders', '"chat.whatsapp.com" saas',
     '"chat.whatsapp.com" "small business" AI', '"chat.whatsapp.com" n8n OR zapier OR make.com',
     '"chat.whatsapp.com" agency owners', '"chat.whatsapp.com" israel startup',
+    '"chat.whatsapp.com" "vibe coding"', '"chat.whatsapp.com" lovable OR base44 OR bolt.new',
+    '"chat.whatsapp.com" "AI agents" community', '"chat.whatsapp.com" "AI automation" agency',
 ]
 CLIENT_HIVE_TOPICS = ["entrepreneurship", "startups", "saas", "e-commerce", "no-code",
                       "automation", "small-business", "business", "product-management",
@@ -198,6 +213,19 @@ def _apply_focus(focus: str) -> None:
         DIR_SEEDS = IL_DIR_SEEDS + [(f"{_HIVE}/topics/{t}/platform/whatsapp/", _HIVE_FOLLOW)
                                     for t in CLIENT_HIVE_TOPICS]
         _CUR_SUFFIX = "_client"
+
+
+# --focus auto (the cron default since 2026-10-23): each slice takes the next
+# focus, so half of every night hunts client / work-passing groups. Before this
+# the client lists only ran when someone dispatched them by hand.
+FOCUS_ROTATION = ["client", "all", "client", "cv"]
+
+
+def _auto_focus(conn) -> str:
+    import db
+    n = _kv_int(conn, "wa_night_focus_cur")
+    db.kv_set(conn, "wa_night_focus_cur", str(n + 1))
+    return FOCUS_ROTATION[n % len(FOCUS_ROTATION)]
 
 
 # Per-run budgets. Small on purpose - see module docstring.
@@ -257,11 +285,22 @@ TME_RE = re.compile(r"(?:https?://)?(?:www\.)?t(?:elegram)?\.me/(?!s/|joinchat|s
 _TG_SEEN: set[str] = set()
 TG_FOUND_FILE = config.BASE_DIR / "telegram_found.txt"
 
+# Community hub pages (link-in-bio, event pages) seen in the same text: they carry
+# a community's WhatsApp links in plain HTML, which is how GenAI Israel's
+# Jobs/Freelancers groups were found. Queued for surf_dirs, one hop only.
+HUB_RE = re.compile(r"https?://(?:www\.)?(?:linktr\.ee/[A-Za-z0-9_.]{2,40}|lu\.ma/[A-Za-z0-9_-]{3,40}"
+                    r"|meetup\.com/[A-Za-z0-9_-]{3,60})/?(?![\w./-])")
+_HUB_SKIP = ("meetup.com/find", "meetup.com/topics", "lu.ma/discover", "lu.ma/signin",
+             "lu.ma/create", "linktr.ee/s", "linktr.ee/login")
+_HUB_SEEN: set[str] = set()
+
 
 def _add_codes(conn, text: str, via: str) -> int:
     import discover_whatsapp_groups as wa
     _TG_SEEN.update(h.lower() for h in TME_RE.findall(text or "")
                     if not h.lower().endswith("bot"))
+    _HUB_SEEN.update(m.group(0).rstrip("/") for m in HUB_RE.finditer(text or "")
+                     if not any(s in m.group(0) for s in _HUB_SKIP))
     new = 0
     for code in set(wa.WA_INVITE_RE.findall(text or "")):
         if wa._add(conn, code, via):
@@ -417,11 +456,24 @@ DIR_SEEDS = IL_DIR_SEEDS + DIR_SEEDS + [(f"{_HIVE}/topics/{t}/platform/whatsapp/
                                         for t in _HIVE_TOPICS]
 
 
+def _save_hubs(conn) -> int:
+    """Put hub pages seen this slice at the FRONT of surf_dirs' page queue."""
+    import db
+    pages = json.loads(db.kv_get(conn, "wa_night_dir_pages", "[]") or "[]")
+    done = set(json.loads(db.kv_get(conn, "wa_night_dir_done", "[]") or "[]"))
+    fresh = sorted(_HUB_SEEN - done - set(pages))
+    if fresh:
+        keep = [p for p in pages if p not in done]
+        db.kv_set(conn, "wa_night_dir_pages", json.dumps((fresh + keep)[:600]))
+    return len(fresh)
+
+
 def surf_dirs(conn, client_factory) -> int:
-    """Crawl directory/blog pages: the seeds above first, then pages DDG surfaced.
-    Cheap - plain GETs, no search engine, so it is not subject to captcha walls."""
+    """Crawl directory/blog pages: the seeds above first, then hub pages and pages
+    DDG surfaced. Cheap - plain GETs, no search engine, so no captcha walls."""
     import db
     import httpx
+    _save_hubs(conn)
     pages = json.loads(db.kv_get(conn, "wa_night_dir_pages", "[]") or "[]")
     done = set(json.loads(db.kv_get(conn, "wa_night_dir_done", "[]") or "[]"))
     follow = {u: pat for u, pat in DIR_SEEDS if pat}
@@ -571,15 +623,17 @@ def seed_from_md(conn) -> int:
 _LLM_SYSTEM = """You judge WhatsApp group NAMES for ONE person: a freelance AI engineer
 based in ISRAEL (computer vision, OCR, ML, algorithms, data visualization, automation, AI
 web apps) who works remotely for clients. He reads Hebrew and English only. He wants groups
-where people POST PAID freelance/contract tech work, or where the people who BUY such work
-(startup founders, agency/SaaS/e-commerce owners, product managers) talk.
+where WORK IS HANDED OUT or ASKED FOR: people post paid freelance/contract tech work, pass
+projects on, or the people who BUY such work (founders, business owners, agencies) talk.
 For each numbered name give s:
- 3 = very likely: Hebrew or English FREELANCE / contract / part-time / gigs / projects board for
-     tech/AI/dev, founders or business owners looking for developers, 'דרושים' AI/dev groups
- 2 = plausible: AI/ML/automation/data/startup community with a jobs or clients angle
- 1 = weak: general tech/AI chat with no hiring angle, and FULL-TIME-only job boards (salaried
-     roles, career coaching, job-seeker communities) - he does not take full-time jobs
- 0 = no: students, colleges, cohorts, batches, courses, bootcamps, internships, exam prep,
+ 3 = very likely: FREELANCE / contract / gigs / projects / 'העברת עבודות' groups for tech/AI/dev;
+     founders, startup or business-owner groups; AI automation / n8n / no-code / vibe-coding /
+     Base44 / Lovable / AI-agent builder communities (non-engineers who need a real engineer);
+     a community's 'Jobs/Freelancers' sub-group
+ 2 = plausible: AI/ML/LLM/data/startup community with a jobs, freelancers or clients angle
+ 1 = weak: general tech/AI chat with no work angle
+ 0 = no: FULL-TIME job boards (salaried roles, 'משרות' / 'דרושים' hi-tech job feeds, career,
+     job-seeker, recruiter groups - measured: they never post freelance work), students, colleges, cohorts, batches, courses, bootcamps, internships, exam prep,
      hackathons, events, hobbies, local-neighbourhood groups, and ANY group tied to another
      country, city, language or college (e.g. India, Brazil, Indonesia, Africa, Pakistan,
      Philippines, Spanish/Portuguese/Arabic-language groups), plus crypto/giveaway/earn-money.
@@ -609,9 +663,17 @@ def _llm_batch(names: list[str]) -> dict[int, int] | None:
         return None
 
 
+LLM_RUBRIC_VER = "2"     # bump when _LLM_SYSTEM changes: the pool is re-rated once
+
+
 def llm_pass(conn, batch: int = 40) -> int:
     """Rate every live, un-noised, unrated group name; ~3-4 calls for a few hundred."""
+    import db
     import discover_whatsapp_groups as wa
+    if db.kv_get(conn, "wa_llm_ver", "") != LLM_RUBRIC_VER:
+        conn.execute("UPDATE whatsapp_groups SET llm_relevant=NULL "
+                     "WHERE llm_relevant IS NOT NULL AND COALESCE(found_via,'') != 'manual'")
+        db.kv_set(conn, "wa_llm_ver", LLM_RUBRIC_VER)
     rows = []
     for r in conn.execute("SELECT code, name FROM whatsapp_groups "
                           "WHERE status='live' AND llm_relevant IS NULL").fetchall():
@@ -662,10 +724,11 @@ def _tried_codes() -> set[str]:
 
 
 def select_top(conn, n: int = 50, exclude: set[str] | None = None) -> list[sqlite3.Row]:
-    """Pick n groups, ~half Hebrew/Israeli, dropping anything the LLM said is a 0.
+    """Pick up to n groups, ~half Hebrew/Israeli, that the LLM rated 2 or 3.
 
-    When the LLM was unavailable (llm_relevant NULL) the regex relevance alone
-    decides, so a dead quota degrades the ranking instead of emptying the list.
+    1s are never used as padding (2026-10-23: the 1s were general chats and
+    full-time job boards, and 43 such joins produced 0 leads). When the LLM was
+    unavailable (llm_relevant NULL) a regex relevance of 2+ stands in for it.
     """
     rows = conn.execute(
         "SELECT * FROM whatsapp_groups WHERE status='live' AND COALESCE(joined,0)=0"
@@ -678,7 +741,7 @@ def select_top(conn, n: int = 50, exclude: set[str] | None = None) -> list[sqlit
         llm = r["llm_relevant"]
         if FOREIGN_RE.search(r["name"] or ""):
             continue
-        if llm == 0 or (llm is None and (r["relevance"] or 0) < 1):
+        if (llm is not None and llm < 2) or (llm is None and (r["relevance"] or 0) < 2):
             continue
         keep.append(r)
     keep.sort(key=_rank)
@@ -755,9 +818,10 @@ def main() -> None:
     ap.add_argument("--via", choices=["manual", "research"], default="research",
                     help="with --add-links: manual = Or's own groups (tier A)")
     ap.add_argument("--validate-cap", type=int, default=VALIDATE_CAP)
-    ap.add_argument("--focus", choices=["all", "cv", "client"], default="all",
+    ap.add_argument("--focus", choices=["all", "cv", "client", "auto"], default="all",
                     help="cv = computer-vision lists, client = client/work-passing groups "
-                         "and community hubs (each with own cursors)")
+                         "and community hubs (each with own cursors), auto = the next "
+                         "focus in FOCUS_ROTATION, one per slice")
     args = ap.parse_args()
     _apply_focus(args.focus)
 
@@ -818,6 +882,8 @@ def main() -> None:
             db.kv_set(conn, "wa_top50_sent", time.strftime("%Y-%m-%d"))
         return
 
+    if args.focus == "auto":
+        _apply_focus(_auto_focus(conn))
     counts: dict[str, int] = {}
     names = [args.surface] if args.surface else list(SURFACES)
     for name in names:
@@ -829,12 +895,13 @@ def main() -> None:
     if args.mine_from:
         counts["leads_db"] = mine_other_db(conn, args.mine_from)
     counts["tg_candidates"] = _save_tg_seen(conn)
+    counts["hub_pages"] = _save_hubs(conn)
     wa.validate_pending(conn, cap=args.validate_cap)
     wa.rescore(conn)
     pool = dict(conn.execute(
         "SELECT status, COUNT(*) FROM whatsapp_groups GROUP BY status").fetchall())
     # counts only - the public workflow log must not become a lead list
-    print(f"slice new-invites {counts}; pool {pool}")
+    print(f"slice focus {_CUR_SUFFIX.lstrip('_') or 'all'} new-invites {counts}; pool {pool}")
 
 
 if __name__ == "__main__":

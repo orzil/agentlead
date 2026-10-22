@@ -65,6 +65,7 @@ JOIN_MIN_GAP_MIN = 90              # never two joins closer than this
 # list is done. Still daytime only, still stops on any ban screen, and stops
 # itself after a few failed joins in a row (that pattern = WhatsApp rate limit).
 BURST_KEY = "wa_join_all"
+BURST_PAUSED_KEY = "wa_join_all_paused"   # set by a failure pause; blocks the auto re-arm
 BURST_HOURS = (8, 23)
 BURST_DAILY_CAP = int(config.env("WA_BURST_DAILY_CAP", "50"))
 BURST_GAP_MIN = (3.0, 8.0)         # random minutes between joins
@@ -496,7 +497,7 @@ def join_next(conn) -> str:
     ok, why = _join_quota_open(conn)
     if not ok:
         return f"no join ({why})"
-    for _ in range(5):                       # skip at most a few spam sheets per pass
+    for _ in range(10):                      # skip at most a few spam/off-topic sheets per call
         row = conn.execute(
             "SELECT code, name, found_via FROM whatsapp_groups WHERE priority IS NOT NULL "
             "AND joined=0 AND status='live' AND join_status IS NULL "
@@ -528,11 +529,11 @@ def join_next(conn) -> str:
             _close_sheet(root)
             log.info("wa join: skipped a get-rich group (priority %s)", code[:4])
             continue
-        if row["found_via"] == IN_GROUP and not _on_topic(title, desc):
-            # a link someone pasted in a group: unvetted, so the sheet decides
-            _set_group(conn, code, join_status="skipped_offtopic", name=title)
+        if not _sheet_ok(title, desc, row["found_via"]):
+            # the sheet's real title + description decide, before a join slot is spent
+            _set_group(conn, code, join_status="skipped_offtopic", name=row["name"] or title)
             _close_sheet(root)
-            log.info("wa join: skipped an off-topic in-group link (%s)", code[:4])
+            log.info("wa join: skipped an off-topic group on its join sheet (%s)", code[:4])
             continue
 
         approval = bool(first(root, "join_group_bottom_sheet_disclaimer") is not None)
@@ -557,6 +558,7 @@ def join_next(conn) -> str:
 
 IN_GROUP = "in_group"
 IN_GROUP_PRIORITY = 3000          # after every night-hunt target (tiers 0-2)
+IN_GROUP_GOOD_PRIORITY = 500      # pasted in a work-passing group: tier-0 band
 
 
 def _on_topic(title: str, desc: str) -> bool:
@@ -572,25 +574,55 @@ def _on_topic(title: str, desc: str) -> bool:
             and not config.WA_SKIP_GROUP_RE.search(title))
 
 
-def harvest_invites(conn, msgs: list[dict]) -> int:
+def _sheet_ok(title: str, desc: str, found_via: str | None) -> bool:
+    """Every target's join sheet is checked, not just in-group links (2026-10-23:
+    43 joined job boards gave 0 leads). Off-topic, foreign or full-time-only
+    groups are skipped without spending a join slot. In-group links are
+    unvetted, so they must also show on-topic vocabulary (_on_topic)."""
+    if found_via == IN_GROUP:
+        return _on_topic(title, desc)
+    import discover_whatsapp_groups as dwg
+    import wa_night
+    if (config.WA_SKIP_GROUP_RE.search(title) or dwg.WA_NOISE_RE.search(title)
+            or wa_night.FOREIGN_RE.search(title)):
+        return False
+    work = f"{title} {desc}"
+    if config.WA_JOB_BOARD_TITLE_RE.search(title) and not (
+            config.WA_FREELANCE_GROUP_RE.search(work) or config.WA_BUYER_GROUP_RE.search(work)
+            or config.WA_CV_GROUP_RE.search(title)):
+        return False
+    return not (config.WA_FT_ONLY_SHEET_RE.search(desc)
+                and not config.WA_FREELANCE_GROUP_RE.search(f"{title} {desc}"))
+
+
+def harvest_invites(conn, msgs: list[dict], src_code: str = "") -> int:
     """Members paste other groups' invite links all the time - the cheapest
-    discovery surface there is. Queue them behind the night-hunt targets;
-    join_next vets each one on its join sheet (_on_topic)."""
+    discovery surface there is. Queue them behind the night-hunt targets, or in
+    the freelance band when the group they came from is itself a work-passing
+    one; join_next vets each one on its join sheet (_on_topic)."""
     import discover_whatsapp_groups as dwg
     now = datetime.now(timezone.utc).isoformat()
+    base = IN_GROUP_PRIORITY
+    src = conn.execute("SELECT name, title_on_phone, found_via FROM whatsapp_groups WHERE code=?",
+                       (src_code,)).fetchone() if src_code else None
+    if src is not None:
+        src_name = f"{src['name'] or ''} {src['title_on_phone'] or ''}"
+        if (src["found_via"] == "research" or config.WA_FREELANCE_GROUP_RE.search(src_name)
+                or config.WA_BUYER_GROUP_RE.search(src_name)):
+            base = IN_GROUP_GOOD_PRIORITY
     new = 0
     for m in msgs:
         for code in set(dwg.WA_INVITE_RE.findall(m["text"])):
             cur = conn.execute(
                 "INSERT OR IGNORE INTO whatsapp_groups (code, url, status, found_via, first_seen,"
                 " priority) VALUES (?, ?, 'live', ?, ?, ?)",
-                (code, f"https://chat.whatsapp.com/{code}", IN_GROUP, now, IN_GROUP_PRIORITY + new))
+                (code, f"https://chat.whatsapp.com/{code}", IN_GROUP, now, base + new))
             if cur.rowcount:
                 new += 1
             else:   # known from the hunt but never a target: make it one
                 conn.execute("UPDATE whatsapp_groups SET priority=?, status='live' WHERE code=? "
                              "AND priority IS NULL AND status IN ('pending','live')",
-                             (IN_GROUP_PRIORITY, code))
+                             (base, code))
     conn.commit()
     return new
 
@@ -660,6 +692,7 @@ def join_burst(conn) -> str:
         fails_in_row = fails_in_row + 1 if r == "join: failed" else 0
         if fails_in_row >= BURST_MAX_FAILS:
             db.kv_set(conn, BURST_KEY, "")
+            db.kv_set(conn, BURST_PAUSED_KEY, datetime.now(timezone.utc).isoformat())
             notifier._send_raw(f"⚠️ <b>WhatsApp join-all paused</b>: {fails_in_row} joins "
                                "failed in a row - maybe a WhatsApp limit. Back to slow joins "
                                "(6/day). Check the phone.")
@@ -945,7 +978,7 @@ def read_pass(conn) -> list[Lead]:
             back()
             time.sleep(1.5)
         code = titles[title]
-        found = harvest_invites(conn, msgs)
+        found = harvest_invites(conn, msgs, code)
         if found:
             log.info("wa read: %d new invite link(s) queued from a group", found)
         _count_truncated(conn, msgs)
@@ -1006,7 +1039,10 @@ def run_pass(conn) -> list[Lead]:
     if killed(conn):
         log.warning("wa pass skipped: kill switch set (%s)", killed(conn))
         return []
-    load_targets(conn)
+    if (load_targets(conn) and config.WA_JOIN_ALL_AUTO and not db.kv_get(conn, BURST_KEY, "")
+            and not db.kv_get(conn, BURST_PAUSED_KEY, "")):
+        db.kv_set(conn, BURST_KEY, "1")      # a new night list: join it all (Or's call)
+        log.info("wa: new night-hunt targets - join-all re-armed")
     try:
         ensure_ready()
         result = _stage("join", lambda c: join_burst(c) if db.kv_get(c, BURST_KEY, "")
@@ -1121,7 +1157,8 @@ def main() -> None:
                     help="one join+read pass; prints counts, does not ingest")
     ap.add_argument("--unkill", action="store_true", help="clear the kill switch")
     ap.add_argument("--join-all", choices=["on", "off"],
-                    help="burst-join every remaining group (3-8 min apart, 08-23 IL)")
+                    help="burst-join every remaining group (3-8 min apart, 08-23 IL); each new "
+                         "night list re-arms it (WA_JOIN_ALL_AUTO) until a manual off")
     ap.add_argument("--wifi-setup", action="store_true",
                     help="(USB plugged) enable adb over Wi-Fi as the fallback link")
     ap.add_argument("--add-targets", metavar="FILE",
@@ -1136,6 +1173,8 @@ def main() -> None:
         print("kill switch cleared")
     elif args.join_all:
         db.kv_set(conn, BURST_KEY, "1" if args.join_all == "on" else "")
+        # a manual off also stops the morning auto re-arm until the next `on`
+        db.kv_set(conn, BURST_PAUSED_KEY, "" if args.join_all == "on" else "manual off")
         print(f"join-all {args.join_all}")
     elif args.wifi_setup:
         print(f"Wi-Fi adb ready: {wifi_setup()} (saved to {WIFI_FILE.name})")

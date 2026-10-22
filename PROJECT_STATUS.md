@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-10-22*
+*Last updated: 2026-10-23*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -702,6 +702,23 @@ Israeli founder/business-owner networks, and global founder / AI-builder groups.
 - Join-all is ON (cap 50/day); ~100 targets queued -> ~2-3 days to work through.
 - Note: two agents checked invite pages from this machine's IP until chat.whatsapp.com
   rate-limited it (web previews only; not the phone app).
+
+### 2026-10-23 - WhatsApp: the night hunt aims at work-passing groups, phone joins daily
+
+Measured: 43 joined groups, 50 messages read, 38 gated full-time + 11 off-topic, **0 leads**;
+94 joins still waiting for admin approval, 53 dead links.
+- `wa_night.py --focus auto` (workflow default): slices rotate client/all/client/cv. New
+  client queries (GenAI jobs/freelancers, vibe coding, Base44/Lovable, Claude Code/Cursor/MCP,
+  AI agents, העברת עבודות). Hub pages (linktr.ee / lu.ma / meetup) seen in any page or stored
+  post go to the front of `surf_dirs`' queue. Local dry run: 1,037 invites + 55 hub pages.
+- Rubric v2 (`LLM_RUBRIC_VER`): full-time job boards = 0, builders/founders/freelance = 3;
+  the pool is re-rated once. `select_top` keeps LLM >= 2 only (no padding with 1s).
+- `wa_phone._sheet_ok` vets every target's join sheet (`WA_JOB_BOARD_TITLE_RE`,
+  `WA_FT_ONLY_SHEET_RE`); 13 of the 43 joined titles would now be skipped.
+- Join-all re-arms on each new night list (`WA_JOIN_ALL_AUTO`); invites pasted in
+  work-passing groups queue at priority 500.
+- Fixed `WA_BUYER_GROUP_RE`: `אוטומציות?` never matched the singular "אוטומציה".
+- **Re-check on 2026-10-30:** heartbeat "best 7d" should show pushes from the new groups.
 
 ## Open items
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:
