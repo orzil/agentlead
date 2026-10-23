@@ -4,15 +4,15 @@
 
 | tier | lang | group | invite |
 |:---:|:---:|:---|:---|
-| A | HE | משרות בענף הבנייה : הנדסת בניין \| מהנדסי ביצוע \| מנהלי עבודה \| מנהלי פרויקטים | https://chat.whatsapp.com/Jt0ESumMXs7K1rEKBS7atn |
-| A | HE | - DH לוח משרות חמות בהייטק - מלחמת חרבות הברזל 🇮🇱 🤺🧑🏻‍💻 | https://chat.whatsapp.com/Go4WFJoda6E1IrcOZlCM9v |
-| A | HE | 3,4 לעבודה! מאגר משרות שוות לגיוס | https://chat.whatsapp.com/FzjJ3MR8W5L2EqIKQHXu0B |
-| A | EN | AI Jobs 26' | https://chat.whatsapp.com/HDhzhsrlIXq3goC86OtE6y |
-| A | HE | משרות- עבודה סוציאלית | https://chat.whatsapp.com/HcUP6xExwyrE3KskQ225ci |
-| A | HE | 💻 דרושים הייטק – ללא פיתוח | https://chat.whatsapp.com/Bck0SER2ua4D4VjmWeHlFt |
-| A | EN | AI ML Entrance exam TU Darmstadt | https://chat.whatsapp.com/IXxHehjqyfn6LgDLtICmlc |
-| A | EN | AI/ML at FODUU | https://chat.whatsapp.com/BEa1AojoPjvABoxVKKTphj |
-| A | EN | Data Science & AI Community 🇲🇿 | https://chat.whatsapp.com/IcqlFviLiHIBD3DBNBXfgc |
-| A | EN | ML & AI Online training | https://chat.whatsapp.com/DNQ1rkB4QDQ9JitYXxF61w |
-| A | EN | ML/AI by Aniket Chauhan | https://chat.whatsapp.com/HjnBBOAvczAF0TsrkBrDdq |
-| A | EN | SRM AI ML | https://chat.whatsapp.com/LEzMrLIYddZLWdhBXmuL5Y |
+| A | EN | CSN Startups & MSME | https://chat.whatsapp.com/LHcrQENPoL7AI3oKMsl13G |
+| A | EN | CEO & GM - Non Hi-Tech 2 | https://chat.whatsapp.com/JVyhnZXPB0zB0C9jxGtxHl |
+| B | EN | AI Founder Hub - Community | https://chat.whatsapp.com/FBrasZIfmvLAZxcR2Yjcho |
+| B | EN | Freelancer Community (Flareonix) | https://chat.whatsapp.com/EXnXmiNncJPETuUgk5LPOI |
+| B | EN | Startup Founders ⚡️ | https://chat.whatsapp.com/Flp6owa0hvS7Y8LnJ1VFsK |
+| C | EN | Global Founders | https://chat.whatsapp.com/KWHGOpetLlkFBaCTDwegTB |
+| C | EN | London Top Founders | https://chat.whatsapp.com/JokltJKwEX27zpV0ButmU3 |
+| C | EN | Potential 💡\| Robotics society of SNUC | https://chat.whatsapp.com/Cw3bsFka26E2lnB9jZioKt |
+| B | EN | Startup for Startup Updates | https://chat.whatsapp.com/DHfMDuQsbxoG5lGMwNqeOf |
+| C | EN | The Last Founder (Builders/Cowork) | https://chat.whatsapp.com/DgKpG63438y8N7D3pHJ57t |
+| C | EN | VOICE RECORDING PROJECT | https://chat.whatsapp.com/E75Sf2rHxIY6P6VwHEdMCp |
+| C | HE | הרשת העסקית- קהילת יזמים.ות | https://chat.whatsapp.com/KtkI0kVmQjw0HNB4xaEft4 |
