@@ -732,6 +732,19 @@ Same day, later:
 - **2020 Facebook posts reached Telegram.** `facebook/search` gets no post date and DDG returns
   old posts. Now `df=m` (past month, `FBSEARCH_DATE_FILTER`), and nothing older than
   `PUSH_MAX_AGE_DAYS` (21) is pushed, whatever its score.
+- **Phone unreachable alert** (`adb connect ... timed out`): a dead Wi-Fi link no longer
+  crashes the pass; the alert says to plug USB in, and a USB pass re-arms Wi-Fi adb itself.
+- **Cleanup / efficiency pass:**
+  - Cloud scoring: `_openai_chat` retries a 5xx once, then parks that provider 10 min
+    (the primary 502'd for a whole run and every lead paid for it). Third model added:
+    `nemotron-3.5-lightning:free` (gemma's free endpoint is upstream-429 most of the day).
+  - `JOBS`: linkedin/reddit/reddit_search moved after the cheap fetchers (cloud: ~26 min sooner).
+  - `wa_loop`: no 5-min burst passes once the day's 50 joins are used (it ran a 107s screen-on
+    pass every 7 min all evening). Restarted wa_loop to load it.
+  - Fuzzy dedup reads only the 1,500-char prefix with a rapidfuzz cutoff: identical verdicts on
+    300 real posts, ~18% faster. `agent.log` (5 MB x 2) and `wa_pass.log` (5 MB + .1) rotate.
+  - Untracked 3 stray `scratch_*` files from the public repo; old local exports moved to
+    the gitignored `archive/` (nothing deleted).
 
 ## Open items
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:

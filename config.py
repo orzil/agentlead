@@ -116,6 +116,17 @@ LLM_PROVIDERS = [
         "model": env("OPENROUTER_BACKUP_MODEL", "google/gemma-4-31b-it:free"),
     },
     {
+        # 2026-10-23: gemma's free endpoint is "rate-limited upstream" most of the
+        # day, so a 502 on the primary left nothing to fall back on. lightning
+        # rated the 6-group test set within one point. Same key and daily quota:
+        # this guards against one model's outage, not against the quota.
+        "name": "openrouter-backup2",
+        "base": "https://openrouter.ai/api/v1",
+        "key": env("OPENROUTER_API_KEY"),
+        "model": env("OPENROUTER_BACKUP2_MODEL", "nvidia/nemotron-3.5-lightning:free"),
+        "min_tokens": 4000,
+    },
+    {
         "name": "groq",
         "base": "https://api.groq.com/openai/v1",
         "key": env("GROQ_API_KEY"),

@@ -23,8 +23,10 @@ IP rules below.
 GitHub IP `reddit` costs 13–17 min (Reddit 429s nearly every sub; the 20s/40s backoff fires ~11
 of 13 times) and `linkedin` another 5–7, while the ~15 jobs after it cost ~7 min combined. At
 `timeout-minutes: 30` two of every three runs were cancelled mid-pass and lost that entire cheap
-tail (measured 2026-08-13); it is 50 now. If you add a slow fetcher, put it **after** the cheap
-ones or split the pass with `--only`/`--skip`.
+tail (measured 2026-08-13); it is 50 now. Since 2026-10-23 `linkedin`, `reddit` and
+`reddit_search` run **last** among the fetchers, so the cheap sources push ~26 min sooner and
+survive a cancelled run. If you add a slow fetcher, put it with them, or split the pass with
+`--only`/`--skip`.
 
 **Scoring is a hybrid** (`scorer.py`): Gemini free tier first, then **local Ollama**
 (`qwen2.5:7b`) once Gemini's daily quota dies. Measured 2026-08-06: that quota is ~20 requests/day

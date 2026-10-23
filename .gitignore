@@ -3,6 +3,7 @@
 leads.db
 leads.db-*
 *.log
+*.log.[0-9]*
 outbox.log
 
 # exports / scratch — lead data (incl. posters' names) stays out of git; the
@@ -42,3 +43,6 @@ scratch_*
 # researched outbound targets (company list) - local only
 agencies_il.jsonl
 .adb_wifi
+
+# old local exports / scratch moved out of the project root (not deleted)
+archive/

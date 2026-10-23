@@ -265,6 +265,14 @@ def _score_gemini(lead: Lead) -> LeadScore | None:
     raise RuntimeError("gemini scoring failed after retries")
 
 
+# A provider whose retry also failed (5xx / network) is skipped for this long.
+# OpenRouter's free models go through upstream outages of several minutes
+# (502 on every call, 2026-10-23); without this every lead in the pass paid
+# for the dead call before moving on to the backup.
+_PROVIDER_COOLDOWN_SECONDS = 600
+_provider_down_until: dict[str, float] = {}
+
+
 def _openai_chat(provider: dict, system: str, user: str,
                  json_mode: bool = True, max_tokens: int = 1024,
                  temperature: float = 0.2) -> str | None:
@@ -274,7 +282,34 @@ def _openai_chat(provider: dict, system: str, user: str,
     shape, so a single adapter reaches every free tier going - and when one
     exhausts its quota the chain simply moves to the next. Returns the raw
     content string, or None so the caller can try the next provider.
+
+    A 5xx or connection error is retried once after a short pause (most are
+    momentary); a second failure parks the provider for
+    _PROVIDER_COOLDOWN_SECONDS.
     """
+    name = provider["name"]
+    if time.time() < _provider_down_until.get(name, 0.0):
+        return None
+    for attempt in (1, 2):
+        result, outcome = _openai_chat_once(provider, system, user, json_mode,
+                                            max_tokens, temperature)
+        if outcome == "done":
+            return result
+        if outcome == "retry" and attempt == 1:
+            time.sleep(5)
+            continue
+        break           # second failure, or a timeout (retrying doubles a 90s wait)
+    _provider_down_until[name] = time.time() + _PROVIDER_COOLDOWN_SECONDS
+    log.info("%s is failing - skipping it for %d min", name,
+             _PROVIDER_COOLDOWN_SECONDS // 60)
+    return None
+
+
+def _openai_chat_once(provider: dict, system: str, user: str, json_mode: bool,
+                      max_tokens: int, temperature: float) -> tuple[str | None, str]:
+    """One HTTP attempt -> (content or None, outcome). outcome is "done" (answer
+    or a definite no: quota, bad key, empty), "retry" (5xx / connection error)
+    or "park" (timeout)."""
     body = {
         "model": provider["model"],
         "messages": [{"role": "system", "content": system},
@@ -292,19 +327,28 @@ def _openai_chat(provider: dict, system: str, user: str,
                        json=body, timeout=90)
         if r.status_code in (401, 403):
             log.warning("%s rejected the key", provider["name"])
-            return None
+            return None, "done"
         if r.status_code == 429:
             log.info("%s rate-limited/quota gone - trying the next provider",
                      provider["name"])
-            return None
+            return None, "done"
+        if r.status_code >= 500:
+            log.info("%s failed: HTTP %d", provider["name"], r.status_code)
+            return None, "retry"
         r.raise_for_status()
         content = r.json()["choices"][0]["message"]["content"]
         if not content:
             log.info("%s returned an empty answer", provider["name"])
-        return content or None
+        return content or None, "done"
+    except httpx.TimeoutException as e:
+        log.info("%s timed out: %s", provider["name"], str(e)[:90])
+        return None, "park"
+    except httpx.TransportError as e:
+        log.info("%s failed: %s", provider["name"], str(e)[:90])
+        return None, "retry"
     except Exception as e:
         log.info("%s failed: %s", provider["name"], str(e)[:90])
-        return None
+        return None, "done"
 
 
 def _score_via_providers(lead: Lead) -> LeadScore | None:

@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import logging.handlers
 import os
 import sys
 import time
@@ -48,7 +49,9 @@ ERROR_THROTTLE_SECONDS = 6 * 3600  # at most one Telegram error alert per job pe
 
 def setup_logging() -> None:
     fmt = logging.Formatter("%(asctime)s %(levelname)-7s [%(name)s] %(message)s")
-    file_h = logging.FileHandler(config.LOG_PATH, encoding="utf-8")
+    # bounded: the phone pass appends here every few minutes, forever
+    file_h = logging.handlers.RotatingFileHandler(
+        config.LOG_PATH, maxBytes=5 * 1024 * 1024, backupCount=2, encoding="utf-8")
     file_h.setFormatter(fmt)
     console_h = logging.StreamHandler(sys.stdout)
     console_h.setFormatter(fmt)
@@ -270,9 +273,6 @@ def job_scoring_watch(conn) -> None:
 JOBS = [
     # (name, interval seconds, function)
     ("email", 5 * 60, job_email),           # Facebook / Upwork / Wellfound / LinkedIn alerts
-    ("reddit", 10 * 60, job_reddit),         # 13 subs x 8s spacing ~= 2 min/run
-    ("reddit_search", 20 * 60, job_reddit_search),  # sitewide search, t=week window
-    ("linkedin", 90 * 60, job_linkedin),    # guest endpoint; self-cools 6h on a bot-wall
     ("hn", 60 * 60, job_hn),
     ("xplace", 2 * 3600, job_xplace),
     ("secrettlv", 2 * 3600, job_secrettlv),
@@ -289,6 +289,12 @@ JOBS = [
     ("facebook", 8 * 3600, job_facebook),      # public groups; self-caps at 3 runs/day
     ("whatsapp_read", 2 * 3600, job_whatsapp_read),  # dedicated phone over ADB (local; no-op without adb)
     ("whatsapp", 24 * 3600, job_whatsapp),     # mine invite links out of stored posts
+    # The slow three go after every cheap source. On a GitHub IP they cost
+    # ~2.5 + 17 + 9 min (measured 2026-10-23), and the ~17 cheap jobs used to
+    # wait behind them - so those sources' pushes landed ~26 min late every run.
+    ("linkedin", 90 * 60, job_linkedin),    # guest endpoint; self-cools 6h on a bot-wall
+    ("reddit", 10 * 60, job_reddit),         # 13 subs x 8s spacing ~= 2 min/run (local)
+    ("reddit_search", 20 * 60, job_reddit_search),  # sitewide search, t=week window
     ("feedback", 5 * 60, job_feedback),        # one-word verdicts from the phone
     ("cloud_sync", 20 * 60, job_cloud_sync),   # pull cloud-found leads home
     ("linkcheck", 6 * 3600, job_linkcheck),   # drop leads whose posting died

@@ -25,6 +25,19 @@ LOCK_PORT = 47361
 LOG = HERE / "wa_pass.log"
 
 
+LOG_MAX_BYTES = 5 * 1024 * 1024
+
+
+def _rotate_log() -> None:
+    """Keep wa_pass.log bounded: past LOG_MAX_BYTES it becomes wa_pass.log.1
+    (one old copy kept). Runs between passes, when nothing holds the file."""
+    try:
+        if LOG.exists() and LOG.stat().st_size > LOG_MAX_BYTES:
+            LOG.replace(LOG.with_name(LOG.name + ".1"))
+    except OSError:
+        pass                        # never let housekeeping stop a pass
+
+
 def _log(msg: str) -> None:
     with LOG.open("a", encoding="utf-8") as f:
         f.write(f"{datetime.now():%Y-%m-%d %H:%M:%S} [wa_loop] {msg}\n")
@@ -40,6 +53,7 @@ def main() -> None:
     _log(f"started (pid via {python.name}), every {INTERVAL // 3600}h")
     while True:
         started = time.time()
+        _rotate_log()
         try:
             with LOG.open("a", encoding="utf-8") as out:
                 r = subprocess.run([str(python), "-X", "utf8", "main.py", "--wa-pass"],
@@ -55,16 +69,21 @@ def main() -> None:
 
 
 def _next_sleep(started: float) -> float:
-    """Every 2h normally. While join-all is on (kill switch off, 08-23 IL),
-    come back in 5 min - that also catches the phone being plugged back in.
-    At night it falls back to 2h, so the first daytime pass may start up to
-    2h after 08:00."""
+    """Every 2h normally. While join-all is on (kill switch off, 08-23 IL,
+    today's join cap not reached), come back in 5 min - that also catches the
+    phone being plugged back in. At night it falls back to 2h, so the first
+    daytime pass may start up to 2h after 08:00. Once the cap is used up the
+    5-min passes could join nothing; they only woke the screen (measured
+    2026-10-23: a 107s pass every 7 min from mid-afternoon to 23:00)."""
     try:
         import db
-        from wa_phone import BURST_HOURS, IL
+        from wa_phone import BURST_DAILY_CAP, BURST_HOURS, IL
         conn = db.connect()
+        now = datetime.now(IL)
+        capped = (db.kv_get(conn, "wa_join_day", "") == now.date().isoformat()
+                  and int(db.kv_get(conn, "wa_join_count", "0") or 0) >= BURST_DAILY_CAP)
         if (db.kv_get(conn, "wa_join_all", "") and not db.kv_get(conn, "wa_phone_killed", "")
-                and BURST_HOURS[0] <= datetime.now(IL).hour < BURST_HOURS[1]):
+                and BURST_HOURS[0] <= now.hour < BURST_HOURS[1] and not capped):
             return BURST_RETRY
     except Exception as e:
         _log(f"kv read failed: {e}")

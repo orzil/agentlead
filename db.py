@@ -13,12 +13,13 @@ from models import Lead, LeadScore
 try:
     from rapidfuzz import fuzz
 
-    def _similarity(a: str, b: str) -> float:
-        return fuzz.token_set_ratio(a, b)
+    def _similarity(a: str, b: str, cutoff: float = 0) -> float:
+        # below the cutoff rapidfuzz returns 0 early - same verdict, less work
+        return fuzz.token_set_ratio(a, b, score_cutoff=cutoff)
 except ImportError:  # graceful fallback, no hard dependency
     from difflib import SequenceMatcher
 
-    def _similarity(a: str, b: str) -> float:
+    def _similarity(a: str, b: str, cutoff: float = 0) -> float:
         return SequenceMatcher(None, a, b).ratio() * 100
 
 
@@ -220,17 +221,19 @@ def insert_lead(conn: sqlite3.Connection, lead: Lead) -> int | None:
         return None
 
     # Fuzzy dedup against the last 7 days (cross-posted FB group posts etc.)
-    week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
-    recent = conn.execute(
-        "SELECT id, raw_text FROM leads WHERE fetched_at > ? ORDER BY id DESC LIMIT 400",
-        (week_ago,),
-    ).fetchall()
     text = lead.raw_text[:1500]
-    own_ids = _id_links(text)
     if len(text) > 60:  # too-short texts fuzz-match everything
+        week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+        # only the compared prefix leaves SQLite (rows average ~2.3 KB)
+        recent = conn.execute(
+            "SELECT id, substr(raw_text, 1, 1500) AS head FROM leads"
+            " WHERE fetched_at > ? ORDER BY id DESC LIMIT 400",
+            (week_ago,),
+        ).fetchall()
+        own_ids = _id_links(text)
         for row in recent:
-            if _similarity(text, row["raw_text"][:1500]) >= config.DEDUP_SIMILARITY:
-                other_ids = _id_links(row["raw_text"][:1500])
+            if _similarity(text, row["head"], config.DEDUP_SIMILARITY) >= config.DEDUP_SIMILARITY:
+                other_ids = _id_links(row["head"])
                 if own_ids and other_ids and not (own_ids & other_ids):
                     continue    # same template, different job (WhatsApp job-board bots)
                 conn.execute(
