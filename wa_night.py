@@ -705,6 +705,9 @@ def llm_pass(conn, batch: int = 30, max_calls: int = LLM_CALLS_PER_PASS) -> int:
             break
         chunk = rows[i:i + batch]
         scores = _llm_batch([r["name"] for r in chunk])
+        if scores is None:               # one retry: OpenRouter throws the odd 502
+            time.sleep(20)
+            scores = _llm_batch([r["name"] for r in chunk])
         if scores is None:
             log.info("llm pass unavailable - leaving %d unrated", len(rows) - i)
             break
