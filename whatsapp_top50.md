@@ -1,86 +1,18 @@
 # WhatsApp groups to join (night hunt)
 
-*80 groups; tier A = strongest. Join by hand with the second phone.*
+*12 groups; tier A = strongest. Join by hand with the second phone.*
 
 | tier | lang | group | invite |
 |:---:|:---:|:---|:---|
-| C | EN | Hr. Job Requirements | https://chat.whatsapp.com/K8rAhWaswaxESKmtRuwlK6 |
-| C | EN | Job's available | https://chat.whatsapp.com/Ed08EKIGhmU0yUovJgt1In |
-| B | EN | iOS Developers | https://chat.whatsapp.com/GUeU4cW6wrrJpO5KntBujd |
-| B | HE | קהילת מציאת עבודה 2 | https://chat.whatsapp.com/I8cS1t7hJ2nGLKTZGZBNRT |
-| C | EN | .NET Community | https://chat.whatsapp.com/Fw4dF5UD3zN4LOZHhTivp8 |
-| C | HE | 20-80 תמיכה מרחוק 🟣 | https://chat.whatsapp.com/JmkJMCTiDnYFNftRxhSKP9 |
-| C | HE | 4 קבוצת עובדים/מעסיקים מס 4 | https://chat.whatsapp.com/BlwZhCFMEYyLc8Ke9uwxxR |
-| C | EN | AIM B17 | https://chat.whatsapp.com/CI6TmEvT2OJE8qMtuOAiP4 |
-| C | EN | AIhunterPro | https://chat.whatsapp.com/EkbyX9RcPVTD4yGYK8mRyA |
-| C | EN | AgTech, FoodTech, Food - 2 | https://chat.whatsapp.com/EcNxOpPkXPPLOpsK5CXC3Q |
-| C | EN | Ahnlich General | https://chat.whatsapp.com/E4CP7VZ1lNH9dJUxpsZVvD |
-| C | EN | Aiworld_Tomorrow | https://chat.whatsapp.com/BxiwRQ9Raz2L15oxYO0lV6 |
-| C | EN | Amazon Community | https://chat.whatsapp.com/HqTKL9MfozXEW8RHYGlRCP |
-| C | HE | Ansible IL | https://chat.whatsapp.com/FRBccYUhOEz6IF4LtPAXJm |
-| C | HE | ArgoCD IL | https://chat.whatsapp.com/DLEOdj4ujmg72gXoXMmmjO |
-| C | EN | Artificial intelligence | https://chat.whatsapp.com/Kg9BmW80oPT1hFNENyllvq |
-| C | HE | Atlassian IL | https://chat.whatsapp.com/D8GfxYbxruzBadUlVWaBvE |
-| C | HE | Aws IL | https://chat.whatsapp.com/KZrY3zMd5v3Ax2HpngvFcf |
-| C | HE | Azure IL | https://chat.whatsapp.com/FUM6ujKl1Zw58MDrk1fwkT |
-| C | EN | BlackTheory Solutions | https://chat.whatsapp.com/Fjo0kVSOkpLA04wFhdMo3l |
-| C | EN | Business Connect | https://chat.whatsapp.com/Lp1Ynx9GAvG2tJsAXTjZvw |
-| C | HE | Business Connect – קהילה לצמיחה 🚀💼📈2 | https://chat.whatsapp.com/Jobq1XglUgHJA7CeZtDy9e |
-| C | EN | COO, Operations, Supply Chain, Logistics, Manufacturing | https://chat.whatsapp.com/LIjkapvEBGdDSLNBu9s15N |
-| C | EN | CRO, CMO, BizDev, Sales, CS, CX | https://chat.whatsapp.com/LrigF48w29S7rJtkDuGzGR |
-| C | EN | CloudFrox | https://chat.whatsapp.com/JIvsZD5vHVb1jMPkTOl37k |
-| C | EN | ClusterNeuron | https://chat.whatsapp.com/LVt4h7t4W5BElw3XoAUVkX |
-| C | EN | Code Clan 🧙‍♂️ | https://chat.whatsapp.com/JPzFKZqQs86Glwe2FnnUGB |
-| C | EN | CodeChat | https://chat.whatsapp.com/HyO8X8K0bAo0bfaeW8bhY5 |
-| C | EN | Codedynamo Coding </> Community | https://chat.whatsapp.com/EvteXnRd9Q0DdaU7juh2fE |
-| C | EN | Coding in C/C++/C# | https://chat.whatsapp.com/DCKXhC29PmVD2CFYpSOe48 |
-| C | EN | Coding in Community | https://chat.whatsapp.com/DMSbokWTwD26gl7Wr5nDLz |
-| C | EN | Coding in JavaScript | https://chat.whatsapp.com/H5sFRuP2w3W815eQZoeewL |
-| C | EN | Coding world | https://chat.whatsapp.com/GxF6dhji8t3BkPBjUdIEPu |
-| C | EN | Connect & Network✨ | https://chat.whatsapp.com/KY8XvaNYOTIIUPuq4xlU6T |
-| C | HE | GCP IL | https://chat.whatsapp.com/J9pRKNdUuovD5iHF9DsRrr |
-| C | HE | Git IL | https://chat.whatsapp.com/BiaXJBlPCCC39mNBSdEYAz |
-| C | HE | GitHub Actions IL | https://chat.whatsapp.com/Bj2ntRKefqU3XztaRFuk1z |
-| C | HE | Go IL | https://chat.whatsapp.com/HGYnAeN6MPmEbHxmFg9fpq |
-| C | HE | Jenkins IL | https://chat.whatsapp.com/LGTRD3KkwnV7Gb1dGWREaK |
-| C | HE | K8S IL | https://chat.whatsapp.com/KWy9m1vd1VNJnfGFSpOgPr |
-| C | HE | Loki IL | https://chat.whatsapp.com/ISegBhu9Eel3s0z7Ngyfdm |
-| C | HE | MCP IL | https://chat.whatsapp.com/DPkiHuArlfJ2AM69XVyANZ |
-| C | HE | Nodes IL | https://chat.whatsapp.com/KxBHlXjaCiuGEMpyyWgGfi |
-| C | HE | Rust in Israel Announcements - ראסט בישראל הודעות | https://chat.whatsapp.com/JPsJlufW5D1ECfkTQq5b9a |
-| C | HE | Terraform IL | https://chat.whatsapp.com/Icvqv0gw5ZlLO60YJ9iVhu |
-| C | HE | Unicorn Hr- דור חדש של משאבי אנוש | https://chat.whatsapp.com/JXTh6NByoIYElz8io5rHkr |
-| C | HE | Vault IL | https://chat.whatsapp.com/HHZVUDPACUcBs2M3TZWR8o |
-| C | HE | דרופשיפינג לאלופים / SITIFY | https://chat.whatsapp.com/GWYBHKIJHGGFP79Itef4no |
-| C | HE | דרופשיפינג למתחילים - תמיכה שאלות ושת״פ | https://chat.whatsapp.com/Fx5Ma06ixYEEFLb5zWxzOI |
-| C | HE | וורדפרס אלמנטור ווקומרס ועוד | https://chat.whatsapp.com/JQF05uWNUAkKdNQm7YXmpL |
-| C | EN | Customer Success | https://chat.whatsapp.com/KQSkCXY6uNf1nfNP5wnYcE |
-| C | EN | DataSquare | https://chat.whatsapp.com/BoTY6Ynn7h5JeichU8Ybcb |
-| C | EN | Deep Engineering Community | https://chat.whatsapp.com/KmszUQCmjDR5FnnJ09ZeoD |
-| C | EN | Design Community | https://chat.whatsapp.com/DHkkXaywCwgKMKtToh45ia |
-| C | EN | Designers | https://chat.whatsapp.com/IrfyrCjkgz3Ekl72mxcMpM |
-| C | EN | DevAnalytica | https://chat.whatsapp.com/L3khg36K9quArXj79pSARr |
-| C | EN | DevPath | https://chat.whatsapp.com/D2PRfQy4HYgC4XURhY2X8C |
-| C | EN | Digital technology | https://chat.whatsapp.com/Ku6pSKfn9sZG2YIOtuRcao |
-| C | EN | Django Community | https://chat.whatsapp.com/H33ru8veuXNKSHo6TTtbYz |
-| C | EN | DockerIL | https://chat.whatsapp.com/E3046OAkEXNBw0QQq4mL1E |
-| C | EN | ENLIGHT TECHZ | https://chat.whatsapp.com/EqDbdUVUEyA3f2Hz5JGP8b |
-| C | EN | Entrepreneurs - Business Group (No Promotions) | https://chat.whatsapp.com/EzbZigIm7T51vKisHv8ipH |
-| C | EN | Everything Tech | https://chat.whatsapp.com/6wVfmoe7q6QFRu3UXtBM6X |
-| C | EN | Exodus Space - Discussions and Sharing Resources | https://chat.whatsapp.com/Bt1Pxb13v3oJPEOYH0NeIb |
-| C | EN | Flutter Community | https://chat.whatsapp.com/JljM00GRnhVKocT9Ki6oT5 |
-| C | HE | מהנדסי חומרה | https://chat.whatsapp.com/K90MaZVxi3Y8zFg6AqkFBs |
-| C | HE | מהנדסי חשמל ואלקטרוניקה | https://chat.whatsapp.com/LZxGmA8hD4cD1QA5vUkLxX |
-| C | HE | מקצועני ווקומרס דרופשיפינג ושופיפיי | https://chat.whatsapp.com/EqT1sICIXWg0iZMSk4EJld |
-| C | HE | מקצועני פרסום בגוגל | https://chat.whatsapp.com/KfbSbGDJFR13ZUPFE7jneZ |
-| C | HE | נוודים דיגיטליים עם בר ושני 🧑‍💻 | https://chat.whatsapp.com/KecT0Wv959y09j8izTFX8O |
-| C | HE | סמנכ״לי כספים מתייעצים 1 | https://chat.whatsapp.com/JPCbc7EA58oITzXcoCgQ7N |
-| C | HE | עבודות מזדמנות וקבועות | https://chat.whatsapp.com/LdQ5sVSfyGX7RVSOIJByvg |
-| C | HE | עבודל'ה - עבודות בגרפיקה 2 | https://chat.whatsapp.com/DHCiVNwYOPJAB62uIuKKuF |
-| C | HE | פוסטים בלינקדאין | https://chat.whatsapp.com/EccxzPBXxN81oP9xLyF6y4 |
-| C | HE | פורום מנהלות תל אביב 7 | https://chat.whatsapp.com/H4ojYMbO8SwLmZTD1R5vRu |
-| C | HE | פרסום בטיקטוק - קליבר | https://chat.whatsapp.com/BC6zBNGo33n8b1r8jPIfzg |
-| C | HE | פרסום בפייסבוק - קליבר | https://chat.whatsapp.com/LJUkm6PN2TN4Bv0cfTv1qV |
-| C | HE | תוכנה ראסט 🦀 בעברית | https://chat.whatsapp.com/GSDu36xgHTTKFlwsoO2CI5 |
-| C | HE | ‏UX & Beyond – תובנות מקצועיות מבית TZUR | https://chat.whatsapp.com/DPFnZgpd2Bn6ga6LKMvPxK |
-| C | HE | 👩‍💻 עבודות בין שוות 2 💌 | https://chat.whatsapp.com/E0CqAIzkUUi3XHCug75Rpu |
+| A | HE | משרות בענף הבנייה : הנדסת בניין \| מהנדסי ביצוע \| מנהלי עבודה \| מנהלי פרויקטים | https://chat.whatsapp.com/Jt0ESumMXs7K1rEKBS7atn |
+| A | HE | - DH לוח משרות חמות בהייטק - מלחמת חרבות הברזל 🇮🇱 🤺🧑🏻‍💻 | https://chat.whatsapp.com/Go4WFJoda6E1IrcOZlCM9v |
+| A | HE | 3,4 לעבודה! מאגר משרות שוות לגיוס | https://chat.whatsapp.com/FzjJ3MR8W5L2EqIKQHXu0B |
+| A | EN | AI Jobs 26' | https://chat.whatsapp.com/HDhzhsrlIXq3goC86OtE6y |
+| A | HE | משרות- עבודה סוציאלית | https://chat.whatsapp.com/HcUP6xExwyrE3KskQ225ci |
+| A | HE | 💻 דרושים הייטק – ללא פיתוח | https://chat.whatsapp.com/Bck0SER2ua4D4VjmWeHlFt |
+| A | EN | AI ML Entrance exam TU Darmstadt | https://chat.whatsapp.com/IXxHehjqyfn6LgDLtICmlc |
+| A | EN | AI/ML at FODUU | https://chat.whatsapp.com/BEa1AojoPjvABoxVKKTphj |
+| A | EN | Data Science & AI Community 🇲🇿 | https://chat.whatsapp.com/IcqlFviLiHIBD3DBNBXfgc |
+| A | EN | ML & AI Online training | https://chat.whatsapp.com/DNQ1rkB4QDQ9JitYXxF61w |
+| A | EN | ML/AI by Aniket Chauhan | https://chat.whatsapp.com/HjnBBOAvczAF0TsrkBrDdq |
+| A | EN | SRM AI ML | https://chat.whatsapp.com/LEzMrLIYddZLWdhBXmuL5Y |
