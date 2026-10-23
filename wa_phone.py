@@ -230,7 +230,10 @@ def device_state() -> str:
     wifi = _wifi_addr()
     if wifi:
         if devs.get(wifi) != "device":
-            adb("connect", wifi, timeout=20)
+            try:
+                adb("connect", wifi, timeout=20)
+            except PhoneError:      # phone off Wi-Fi: a timeout, not a crash (2026-10-23)
+                pass
             devs = _devices()
         if devs.get(wifi) == "device":
             log.info("wa: using Wi-Fi adb (USB not attached)")
@@ -238,6 +241,21 @@ def device_state() -> str:
             return "device"
     SERIAL = ""
     return next(iter(usb.values()), "")
+
+
+def keep_wifi_fallback() -> None:
+    """On USB and the saved Wi-Fi link is dead (phone rebooted or roamed): set it
+    up again, so the cable can come out without anyone running --wifi-setup."""
+    if not SERIAL or ":" in SERIAL:
+        return
+    wifi = _wifi_addr()
+    if wifi and _devices().get(wifi) == "device":
+        return
+    try:
+        shell("settings", "put", "global", "wifi_sleep_policy", "2")   # keep Wi-Fi up asleep
+        log.info("wa: Wi-Fi adb restored at %s", wifi_setup())
+    except PhoneError as e:
+        log.warning("wa: Wi-Fi adb setup failed: %s", e)
 
 
 def wifi_setup() -> str:
@@ -287,7 +305,10 @@ def sleep_screen() -> None:
 def ensure_ready() -> None:
     state = device_state()
     if state != "device":
-        raise PhoneError(f"phone not available over USB or Wi-Fi (adb state: {state or 'none'})")
+        wifi = _wifi_addr() or "not set up"
+        raise PhoneError(f"phone unreachable (adb state: {state or 'none'}): not on USB and "
+                         f"Wi-Fi {wifi} does not answer. Plug the USB cable in (file-transfer "
+                         "mode); the next pass restores the Wi-Fi link by itself.")
     wake()
     if "deviceLocked=1" in shell("dumpsys", "trust"):
         raise PhoneError("phone is locked - set Screen lock to None/Swipe")
@@ -1070,6 +1091,7 @@ def run_pass(conn) -> list[Lead]:
         raise
     finally:
         sleep_screen()
+        keep_wifi_fallback()      # after the pass: `adb tcpip` restarts adbd
 
 
 def group_yield(conn) -> tuple[list[tuple[str, int]], list[str]]:
