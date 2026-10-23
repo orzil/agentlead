@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-23T01:59:40+00:00",
- "count": 1152,
+ "generated": "2026-10-23T03:01:23+00:00",
+ "count": 1153,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -2385,6 +2385,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T03:11:55+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "7588730134550590",
+   "name": "אאוטסורסינג - מיקור חוץ Outsourc- ing.com",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-23T03:01:20+00:00",
    "last_checked": null
   },
   {
