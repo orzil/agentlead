@@ -15,3 +15,5 @@ forhr
 forproducts
 forpython
 getjobss
+jobforpr
+jobfortm
