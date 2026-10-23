@@ -643,11 +643,18 @@ _LLM_SCHEMA = {"type": "OBJECT", "properties": {"items": {"type": "ARRAY", "item
     "required": ["i", "s"]}}}, "required": ["items"]}
 
 
+_GEMINI_DOWN = False     # one failure (a 60 s read timeout, measured) skips it for the run
+
+
 def _llm_batch(names: list[str]) -> dict[int, int] | None:
+    global _GEMINI_DOWN
     import scorer
     user = "\n".join(f"{i}. {n}" for i, n in enumerate(names))
-    out = scorer.generate(_LLM_SYSTEM, user, schema=_LLM_SCHEMA, temperature=0.0,
-                          max_tokens=2000)
+    out = None
+    if not _GEMINI_DOWN:
+        out = scorer.generate(_LLM_SYSTEM, user, schema=_LLM_SCHEMA, temperature=0.0,
+                              max_tokens=2000)
+        _GEMINI_DOWN = not out
     if not out:
         for p in config.active_providers():
             out = scorer._openai_chat(p, _LLM_SYSTEM, user, max_tokens=8000, temperature=0.0)
@@ -667,6 +674,7 @@ LLM_RUBRIC_VER = "2"     # bump when _LLM_SYSTEM changes: the pool is re-rated o
 
 
 LLM_CALLS_PER_PASS = 12   # OpenRouter free is ~50 calls/day, shared with cloud lead scoring
+LLM_PASS_SECONDS = 540    # the select job has 20 min, and a 30-name call takes ~50 s
 
 
 def llm_pass(conn, batch: int = 30, max_calls: int = LLM_CALLS_PER_PASS) -> int:
@@ -690,7 +698,11 @@ def llm_pass(conn, batch: int = 30, max_calls: int = LLM_CALLS_PER_PASS) -> int:
     rows.sort(key=lambda r: not _name_ok_without_llm(r["name"]))
     rows = rows[:batch * max_calls]
     done = 0
+    t0 = time.time()
     for i in range(0, len(rows), batch):
+        if time.time() - t0 > LLM_PASS_SECONDS:
+            log.info("llm pass time budget spent - %d left for the next night", len(rows) - i)
+            break
         chunk = rows[i:i + batch]
         scores = _llm_batch([r["name"] for r in chunk])
         if scores is None:

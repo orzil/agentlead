@@ -55,6 +55,7 @@ jobs:
       actions: write          # lets a slice dispatch the next one
     env:
       MODE: ${{ (github.event.schedule == '50 2 * * *' || inputs.mode == 'select') && 'select' || 'slice' }}
+      PYTHONUNBUFFERED: "1"   # a cancelled run still shows how far it got
     steps:
       - uses: actions/checkout@v4
 
