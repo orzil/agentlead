@@ -280,7 +280,8 @@ def _openai_chat(provider: dict, system: str, user: str,
         "messages": [{"role": "system", "content": system},
                      {"role": "user", "content": user}],
         "temperature": temperature,
-        "max_tokens": max_tokens,
+        # reasoning models spend the budget thinking and return content=None
+        "max_tokens": max(max_tokens, provider.get("min_tokens", 0)),
     }
     if json_mode:
         body["response_format"] = {"type": "json_object"}
@@ -297,7 +298,10 @@ def _openai_chat(provider: dict, system: str, user: str,
                      provider["name"])
             return None
         r.raise_for_status()
-        return r.json()["choices"][0]["message"]["content"]
+        content = r.json()["choices"][0]["message"]["content"]
+        if not content:
+            log.info("%s returned an empty answer", provider["name"])
+        return content or None
     except Exception as e:
         log.info("%s failed: %s", provider["name"], str(e)[:90])
         return None

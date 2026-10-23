@@ -69,6 +69,9 @@ def ingest(conn: sqlite3.Connection, lead: Lead) -> str:
     # Or can retune this from his phone with "less"/"more" - read it per lead so
     # the change takes effect immediately, not at the next restart.
     push_at = int(db.kv_get(conn, "push_threshold_override", "") or config.PUSH_THRESHOLD)
+    if _days is not None and _days > config.PUSH_MAX_AGE_DAYS:
+        db.save_score(conn, lead_id, score, "scored")      # too old to be worth a ping
+        return "scored_stale"
     if score.score >= push_at:
         db.save_score(conn, lead_id, score, "scored")
         row = conn.execute("SELECT * FROM leads WHERE id=?", (lead_id,)).fetchone()

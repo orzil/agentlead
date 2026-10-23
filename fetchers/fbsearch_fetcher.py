@@ -110,7 +110,10 @@ def search(queries: list[str], conn=None) -> list[Lead]:
             if i:
                 time.sleep(_SLEEP)
             try:
-                r = client.post(_LITE, data={"q": q})
+                # df=m: past month only. The index keeps posts for years and a
+                # snippet rarely shows the date, so 2020 posts reached Telegram
+                # looking fresh (2026-10-23).
+                r = client.post(_LITE, data={"q": q, "df": config.FBSEARCH_DATE_FILTER})
             except Exception as e:
                 log.error("query %r failed: %s", q[:50], e)
                 continue

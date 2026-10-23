@@ -102,13 +102,18 @@ LLM_PROVIDERS = [
         # UNSCORED and never pushed. minimax-m3.1-flash scored a 3-lead test set
         # right (CV POC 9, full-time 3, Hebrew OCR project 9) with clean JSON;
         # ultra-550b leaked its reasoning again. super stays as the backup.
-        "model": env("OPENROUTER_MODEL", "minimax/minimax-m3.1-flash:free"),
+        # 2026-10-23: minimax-m3.1-flash left the free tier (404) and super still
+        # 404s, so the cloud rated nothing and fell back to name keywords.
+        # nemotron-3.5-super-vl rated a 6-group test set exactly right. It is a
+        # reasoning model: below ~3k max_tokens the answer comes back empty.
+        "model": env("OPENROUTER_MODEL", "nvidia/nemotron-3.5-super-vl:free"),
+        "min_tokens": 4000,
     },
     {
         "name": "openrouter-backup",
         "base": "https://openrouter.ai/api/v1",
         "key": env("OPENROUTER_API_KEY"),
-        "model": env("OPENROUTER_BACKUP_MODEL", "nvidia/nemotron-3-super-120b-a12b:free"),
+        "model": env("OPENROUTER_BACKUP_MODEL", "google/gemma-4-31b-it:free"),
     },
     {
         "name": "groq",
@@ -631,7 +636,8 @@ WHATSAPP_DDG_QUERIES = [
 #               roles Or doesn't do (DevOps, QA, cyber, marketing, embedded...)
 WA_FREELANCE_GROUP_RE = re.compile(
     r"(freelanc|פרילנס|part[\s-]?time|משרה\s+חלקית|חלקיות|contract(or|s)?\b|gigs?\b"
-    r"|projects?\b|פרויקטים|outsourc|\bremote\b|מהבית)", re.IGNORECASE)
+    # not "project managers" / "מנהלי פרויקטים": a construction job board passed on that
+    r"|projects?\b(?!\s*manag)|(?<!מנהלי\s)פרויקטים|outsourc|\bremote\b|מהבית)", re.IGNORECASE)
 WA_CV_GROUP_RE = re.compile(
     r"(computer\s*vision|\bCV\b|ראייה\s+ממוחשבת|ראיה\s+ממוחשבת|image\s+processing|עיבוד\s+תמונה"
     r"|opencv|yolo|machine\s+vision|medical\s+imaging|\bOCR\b|object\s+detection|lidar"
@@ -1037,6 +1043,11 @@ HOURLY_RE = re.compile(
 # parsed by STALE_DATE_RE, because Facebook gives the fetcher no post date at
 # all - measured: a 2-year-old OCR gig scored 7 and reached the user's table.
 MAX_LEAD_AGE_DAYS = int(env("MAX_LEAD_AGE_DAYS", "45"))
+# Never PUSH a lead older than this, whatever it scored: Or got 2020 Facebook
+# posts on Telegram (2026-10-23). Older ones still land in the DB/table.
+PUSH_MAX_AGE_DAYS = int(env("PUSH_MAX_AGE_DAYS", "21"))
+# DuckDuckGo date filter for facebook/search: d / w / m / y, or "" for any time
+FBSEARCH_DATE_FILTER = env("FBSEARCH_DATE_FILTER", "m")
 STALE_DATE_RE = re.compile(
     # Abbreviated forms matter: search-index results render Facebook dates as
     # "Mar 7, 2022", and a full-month-only pattern let a 2022 post through as

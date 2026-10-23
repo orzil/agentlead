@@ -650,7 +650,7 @@ def _llm_batch(names: list[str]) -> dict[int, int] | None:
                           max_tokens=2000)
     if not out:
         for p in config.active_providers():
-            out = scorer._openai_chat(p, _LLM_SYSTEM, user, max_tokens=2000, temperature=0.0)
+            out = scorer._openai_chat(p, _LLM_SYSTEM, user, max_tokens=8000, temperature=0.0)
             if out:
                 break
     if not out:
@@ -666,8 +666,12 @@ def _llm_batch(names: list[str]) -> dict[int, int] | None:
 LLM_RUBRIC_VER = "2"     # bump when _LLM_SYSTEM changes: the pool is re-rated once
 
 
-def llm_pass(conn, batch: int = 40) -> int:
-    """Rate every live, un-noised, unrated group name; ~3-4 calls for a few hundred."""
+LLM_CALLS_PER_PASS = 12   # OpenRouter free is ~50 calls/day, shared with cloud lead scoring
+
+
+def llm_pass(conn, batch: int = 30, max_calls: int = LLM_CALLS_PER_PASS) -> int:
+    """Rate live, un-noised, unrated group names, most promising first. The rest
+    wait for the next night; select_top holds them to the strict name rule."""
     import db
     import discover_whatsapp_groups as wa
     if db.kv_get(conn, "wa_llm_ver", "") != LLM_RUBRIC_VER:
@@ -683,6 +687,8 @@ def llm_pass(conn, batch: int = 40) -> int:
             conn.execute("UPDATE whatsapp_groups SET llm_relevant=0 WHERE code=?", (r["code"],))
         else:
             rows.append(r)
+    rows.sort(key=lambda r: not _name_ok_without_llm(r["name"]))
+    rows = rows[:batch * max_calls]
     done = 0
     for i in range(0, len(rows), batch):
         chunk = rows[i:i + batch]
@@ -723,12 +729,24 @@ def _tried_codes() -> set[str]:
             if ln.strip() and not ln.startswith("#")}
 
 
+def _name_ok_without_llm(name: str) -> bool:
+    import discover_whatsapp_groups as dwg
+    if dwg.WA_NOISE_RE.search(name):
+        return False
+    work = config.WA_FREELANCE_GROUP_RE.search(name) or config.WA_BUYER_GROUP_RE.search(name)
+    if config.WA_JOB_BOARD_TITLE_RE.search(name):
+        return bool(work)
+    return bool(work or config.WA_CV_GROUP_RE.search(name))
+
+
 def select_top(conn, n: int = 50, exclude: set[str] | None = None) -> list[sqlite3.Row]:
     """Pick up to n groups, ~half Hebrew/Israeli, that the LLM rated 2 or 3.
 
     1s are never used as padding (2026-10-23: the 1s were general chats and
     full-time job boards, and 43 such joins produced 0 leads). When the LLM was
-    unavailable (llm_relevant NULL) a regex relevance of 2+ stands in for it.
+    unavailable (llm_relevant NULL) the name must carry a work-passing word
+    (freelance / buyer / CV) and not read as a job board: relevance 2+ alone
+    sent construction and social-work job boards on 2026-10-23.
     """
     rows = conn.execute(
         "SELECT * FROM whatsapp_groups WHERE status='live' AND COALESCE(joined,0)=0"
@@ -741,7 +759,9 @@ def select_top(conn, n: int = 50, exclude: set[str] | None = None) -> list[sqlit
         llm = r["llm_relevant"]
         if FOREIGN_RE.search(r["name"] or ""):
             continue
-        if (llm is not None and llm < 2) or (llm is None and (r["relevance"] or 0) < 2):
+        if llm is not None and llm < 2:
+            continue
+        if llm is None and not _name_ok_without_llm(r["name"] or ""):
             continue
         keep.append(r)
     keep.sort(key=_rank)

@@ -720,6 +720,19 @@ Measured: 43 joined groups, 50 messages read, 38 gated full-time + 11 off-topic,
 - Fixed `WA_BUYER_GROUP_RE`: `אוטומציות?` never matched the singular "אוטומציה".
 - **Re-check on 2026-10-30:** heartbeat "best 7d" should show pushes from the new groups.
 
+Same day, later:
+- **Cloud LLM was dead.** OpenRouter's `minimax-m3.1-flash:free` left the free tier and
+  `nemotron-3-super:free` still 404s, so the 05:50 select rated 0 groups and sent 12 job boards
+  and student groups, and cloud leads were stored unscored. Now `nemotron-3.5-super-vl:free`
+  (reasoning model: `min_tokens` 4000 in `LLM_PROVIDERS`, empty content = next provider), with
+  `gemma-4-31b-it:free` as backup. `llm_pass` rates at most 12 × 30 names a night (a 60-name call
+  takes ~200 s and the free tier is ~50 calls/day). Without an LLM rating, `select_top` needs a
+  work-passing word in the name (`_name_ok_without_llm`). "מנהלי פרויקטים" / "project managers"
+  no longer count as freelance. Student and course names are now noise.
+- **2020 Facebook posts reached Telegram.** `facebook/search` gets no post date and DDG returns
+  old posts. Now `df=m` (past month, `FBSEARCH_DATE_FILTER`), and nothing older than
+  `PUSH_MAX_AGE_DAYS` (21) is pushed, whatever its score.
+
 ## Open items
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:
   the night crawl (Community sister-groups + group-description invite links). It needs live screens

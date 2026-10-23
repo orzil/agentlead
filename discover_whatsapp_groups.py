@@ -66,7 +66,10 @@ WA_NOISE_RE = re.compile(
     r"|university|alumni|helpdesk|fall\s*\d{2}|ws\s*\d{2}/\d{2}|20\d\d[-/]20\d\d"
     # events/meetups/courses are noise here for the same reason NOISE_RE kills
     # them in the lead gate: they are not client work
-    r"|meetup|\bevents?\b|webinar|\bcourse\b|bootcamp)",
+    r"|meetup|\bevents?\b|webinar|\bcourse\b|bootcamp"
+    # 2026-10-23: student/course groups ("SRM AI ML", "ML & AI Online training",
+    # "Entrance exam") reached the phone when the LLM was down
+    r"|online\s+training|\bexams?\b|students?|סטודנטים|\bSRM\b)",
     re.IGNORECASE)
 
 _VALIDATE_SLEEP = 6
