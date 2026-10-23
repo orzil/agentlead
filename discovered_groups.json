@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-23T20:25:24+00:00",
- "count": 1155,
+ "generated": "2026-10-23T23:13:35+00:00",
+ "count": 1157,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -9378,6 +9378,21 @@
    "last_checked": null
   },
   {
+   "slug": "1558887357711886",
+   "name": "Real Estate Investors-Fix N Flip, Wholesale, Private/Hard Money",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-23T23:13:33+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1565114961444047",
    "name": null,
    "status": "pending",
@@ -16335,6 +16350,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-10T16:31:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "realestateinvestorsworldwide",
+   "name": "Real Estate Investors Worldwide",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-23T23:13:33+00:00",
    "last_checked": null
   },
   {
