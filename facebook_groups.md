@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-23T23:13:35+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-24T02:02:15+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1170)
+## Not yet probed (1172)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -1018,6 +1018,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ai.app.builders` (found via leads_db)
 - `614090738935143` (found via leads_db)
 - `itjobsaustralia` (found via leads_db)
+- `855692978407532` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -1082,6 +1083,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `FindRemoteJobs` (found via ddg)
 - `ilovelimerick` (found via ddg)
 - `7761445099` (found via ddg)
+- `434751060047122` (found via ddg)
 - `insuranceagen` (found via ddg)
 - `1050679009595609` (found via ddg)
 - `lawfirmowners` (found via ddg)

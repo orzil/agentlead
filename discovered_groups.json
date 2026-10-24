@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-23T23:13:35+00:00",
- "count": 1157,
+ "generated": "2026-10-24T02:02:15+00:00",
+ "count": 1159,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -11718,6 +11718,21 @@
    "last_checked": null
   },
   {
+   "slug": "434751060047122",
+   "name": "Independent Insurance Agents",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-24T02:01:37+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "434998574369387",
    "name": null,
    "status": "pending",
@@ -13320,6 +13335,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T03:08:45+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "855692978407532",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-24T02:02:15+00:00",
    "last_checked": null
   },
   {
