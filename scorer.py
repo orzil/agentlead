@@ -423,11 +423,20 @@ def score_lead(lead: Lead) -> LeadScore | None:
                 return s
             # Ollama is down - fall through and spend Gemini rather than lose
             # the lead entirely.
-        if not _daily_quota_exhausted:
-            score = _score_gemini(lead)
+        if not _daily_quota_exhausted and time.time() >= _provider_down_until.get("gemini", 0.0):
+            try:
+                score = _score_gemini(lead)
+            except (httpx.HTTPError, RuntimeError) as e:
+                # 2026-10-24: every Gemini call timed out for a whole cloud run;
+                # the error escaped, each lead cost ~2 min and was stored as
+                # 'error' without the free providers ever being asked.
+                _provider_down_until["gemini"] = time.time() + _PROVIDER_COOLDOWN_SECONDS
+                log.info("gemini failed (%s) - skipping it for %d min", str(e)[:80],
+                         _PROVIDER_COOLDOWN_SECONDS // 60)
+                score = None
             if score is not None:
                 return score
-            # fall through: the call above just flagged the daily quota as gone
+            # fall through: quota gone, or Gemini is failing right now
         via = _score_via_providers(lead)      # other free tiers, if configured
         if via is not None:
             return via
@@ -596,7 +605,8 @@ def draft_pitch(lead: Lead) -> str | None:
     the pitch rather than showing Or something embarrassing to paste.
     """
     raw = None
-    if config.LLM_BACKEND == "gemini" and config.GEMINI_API_KEY and not _daily_quota_exhausted:
+    if (config.LLM_BACKEND == "gemini" and config.GEMINI_API_KEY and not _daily_quota_exhausted
+            and time.time() >= _provider_down_until.get("gemini", 0.0)):
         try:
             model = _pick_gemini_model()
             body = {

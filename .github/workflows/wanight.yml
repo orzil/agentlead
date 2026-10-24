@@ -2,8 +2,9 @@ name: WhatsApp night hunt
 
 # Overnight hunt for WhatsApp groups Or can join by hand (second phone).
 #
-# ~30 small slices between 20:00 and 05:59 Israel (UTC+3 until the clock change
-# on 25 Oct 2026; shift the crons by an hour after that), then ONE final run at
+# ~30 small slices between 20:00 and 05:59 Israel (crons are UTC: written for
+# winter time, UTC+2, since 25 Oct 2026 - in summer time, UTC+3, every slice
+# runs an hour later in Israel), then ONE final run at
 # 05:50 Israel that validates, rates and Telegrams the top 50.
 #
 # Why small slices: DuckDuckGo challenges an IP after ~1-2 queries and Reddit
@@ -22,9 +23,9 @@ on:
     # Hourly BACKSTOP only. GitHub throttled the old */20 schedule to 4 runs in a
     # night; the real cadence now comes from each slice re-dispatching the next
     # (see the "Chain" step), which also gives every slice a fresh IP.
-    - cron: "10 17-23 * * *"     # 20:10-02:10 Israel
-    - cron: "10 0-2 * * *"       # 03:10-05:10 Israel
-    - cron: "50 2 * * *"         # 05:50 Israel: final selection + Telegram
+    - cron: "10 18-23 * * *"     # 20:10-01:10 Israel (winter, UTC+2)
+    - cron: "10 0-3 * * *"       # 02:10-05:10 Israel
+    - cron: "50 3 * * *"         # 05:50 Israel: final selection + Telegram
   workflow_dispatch:
     inputs:
       mode:
@@ -54,7 +55,7 @@ jobs:
       contents: write
       actions: write          # lets a slice dispatch the next one
     env:
-      MODE: ${{ (github.event.schedule == '50 2 * * *' || inputs.mode == 'select') && 'select' || 'slice' }}
+      MODE: ${{ (github.event.schedule == '50 3 * * *' || inputs.mode == 'select') && 'select' || 'slice' }}
       PYTHONUNBUFFERED: "1"   # a cancelled run still shows how far it got
     steps:
       - uses: actions/checkout@v4
@@ -128,7 +129,7 @@ jobs:
             git push origin HEAD:main
           fi
 
-      # Self-chaining: wait, then start the next slice. After 02:45 UTC (05:45 IL)
+      # Self-chaining: wait, then start the next slice. After 03:45 UTC (05:45 IL)
       # the next dispatch is the final selection instead, and the chain ends there.
       # Daytime manual dispatches do not chain (the hour window below).
       - name: Chain next slice
@@ -138,11 +139,11 @@ jobs:
         run: |
           H=$(date -u +%H); M=$(date -u +%M)
           T=$((10#$H * 60 + 10#$M))
-          if [ "$T" -ge 1020 ] || [ "$T" -lt 165 ]; then       # 17:00 .. 02:44 UTC
+          if [ "$T" -ge 1080 ] || [ "$T" -lt 225 ]; then       # 18:00 .. 03:44 UTC
             sleep 420
             # keep the night on the focus it was started with (cron starts = auto)
             gh workflow run wanight.yml --ref main -f mode=slice -f focus=${{ inputs.focus || 'auto' }}
-          elif [ "$T" -ge 165 ] && [ "$T" -lt 240 ]; then      # 02:45 .. 03:59 UTC
+          elif [ "$T" -ge 225 ] && [ "$T" -lt 300 ]; then      # 03:45 .. 04:59 UTC
             gh workflow run wanight.yml --ref main -f mode=select
           else
             echo "outside the night window - chain ends"

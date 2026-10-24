@@ -745,14 +745,18 @@ Same day, later:
     300 real posts, ~18% faster. `agent.log` (5 MB x 2) and `wa_pass.log` (5 MB + .1) rotate.
   - Untracked 3 stray `scratch_*` files from the public repo; old local exports moved to
     the gitignored `archive/` (nothing deleted).
+  - 2026-10-24: Gemini timed out on every call of a cloud run; the error escaped `score_lead`,
+    so each lead cost ~2 min and was stored as `error`. Gemini now parks 10 min on a
+    network/HTTP error and the lead goes to the OpenRouter chain.
 
 ## Open items
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:
   the night crawl (Community sister-groups + group-description invite links). It needs live screens
   for resource ids.
 - **F5Bot sign-up (Or, 2 min):** f5bot.com with orzilber0@gmail.com, then add the keywords above.
-- **25 Oct 2026 clock change:** shift `wanight.yml` by one hour — the cron lines, the `MODE` expression
-  (`'50 2 * * *'`) and the chain thresholds in the "Chain" step are all UTC. Not done early on purpose.
+- ~~25 Oct 2026 clock change~~ done 2026-10-24: `wanight.yml` crons, `MODE` (`'50 3 * * *'`) and
+  the chain window moved +1h UTC. The other workflows' Israel times now run an hour earlier
+  (morning report 06:25 IL); shift them back in late March if that matters.
 - **WhatsApp "read more" tap** once `wa_phone.py --status` shows truncated > 0.
 - **Nothing is blocked on the user.** Checked 2026-09-06: the two standing "user action" items
   (join FB / WhatsApp groups) were measured and demoted below — see the yield table reasoning.
