@@ -215,9 +215,18 @@ the normal pipeline; a domain **question** (`prefilter` verdict `question`, `QUE
 phone's screen lock at None and the S9's screen asleep between passes (AMOLED burn-in).
 UI facts that cost a day to find: the unread badge's count is in **`content-desc`**, not `text`;
 the group sender id is `name_in_group_tv`.
-The reader starts from a **force-stopped** WhatsApp: the app restores its old scroll position, and
-passes that started mid-list never saw the groups with new messages, which sort to the top (2026-10-24).
-An approved join request shows no invite sheet; it is detected when its name appears in the chat list.
+**Reading is a timestamp diff (2026-10-24).** Each joined group has a watermark (`last_msg_at`):
+the list walk (from a force-stopped WhatsApp, which always starts at the top) opens only groups whose
+row time is newer than it, stops once rows are older than every listed group's watermark, opens each
+picked group by its **invite link** (a member lands in the chat; row tap is the fallback), and
+`read_chat` scrolls up from the bottom only until it reaches the watermark. Message identity is
+`wa_msg_key` (group + minute + text start), shared with `wa_notify.py`, which first reads WhatsApp's
+notifications through `dumpsys notification --noredact` (full text, exact ms time, last 7 per group,
+unmuted groups only; opening the app clears them). The sender and number sit in the row
+(`name_in_group_tv` / `secondary_name_in_group_tv`), one level above the text block.
+An approved join request shows no invite sheet; it is detected when its name appears in the chat list
+or in a notification. Groups that are >=90% full-time cards over 7 days stop being opened
+(`WA_AUTOSKIP_*`).
 **Never run `--wa-pass` by hand while `wa_loop` is running one.** `dump()` pkills uiautomator on
 retry, so two passes kill each other's dumps (exit 137). Check for a running `--wa-pass` process
 first. The link is USB first, then the Wi-Fi address in the gitignored `.adb_wifi`. A phone

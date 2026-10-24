@@ -680,6 +680,11 @@ WA_JOB_BOARD_TITLE_RE = re.compile(r"(משרות|משרה|דרושים|דרוש�
 # A new night list re-arms --join-all by itself (Or chose join-all, 2026-10-22),
 # unless a burst was paused by repeated failures (then it waits for --join-all on).
 WA_JOIN_ALL_AUTO = env("WA_JOIN_ALL_AUTO", "1") in ("1", "true", "yes")
+# A joined group stops being opened once its last 7 days held at least this
+# many messages and this share of them gated as full-time job cards
+# (wa_phone._autoskip_codes) - WA_SKIP_GROUP_RE by measurement, not by name.
+WA_AUTOSKIP_MIN_MSGS = int(env("WA_AUTOSKIP_MIN_MSGS", "20"))
+WA_AUTOSKIP_FT_SHARE = float(env("WA_AUTOSKIP_FT_SHARE", "0.9"))
 
 # --- Night search rotation ----------------------------------------------------
 # DuckDuckGo challenges an IP after ~1-2 queries, so the three query families

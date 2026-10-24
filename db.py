@@ -171,6 +171,12 @@ _MIGRATIONS = [
     ("whatsapp_groups", "title_on_phone", "TEXT"),
     ("whatsapp_groups", "priority", "INTEGER"),
     ("whatsapp_groups", "last_read", "TEXT"),
+    # Per-group watermark (wa_phone.read_pass): the newest message already
+    # ingested. A group whose chat-list row is not newer is never opened, and
+    # a read stops scrolling up once it reaches this point.
+    ("whatsapp_groups", "last_msg_at", "TEXT"),
+    ("whatsapp_groups", "last_msg_key", "TEXT"),
+    ("whatsapp_groups", "msgs_seen", "INTEGER DEFAULT 0"),
 ]
 
 

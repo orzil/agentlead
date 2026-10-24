@@ -11,7 +11,8 @@ Rules, all load-bearing:
   * DEDICATED NUMBER ONLY. Or's own WhatsApp is never touched.
   * NEVER SENDS. No code path types text. The only taps are: the Join button,
     the close/OK buttons of WhatsApp's own sheets and banners, and chat rows
-    whose title is on the allowlist.
+    whose title is on the allowlist. Allowlisted groups are also opened by
+    their own invite link (a member lands in the chat).
   * ALLOWLIST. Only groups this module joined (title_on_phone in
     whatsapp_groups) are opened. Private chats and other groups on the phone
     are never read.
@@ -35,6 +36,7 @@ wa_pass.bat). Local only: the phone is on this PC's USB port.
 from __future__ import annotations
 
 import hashlib
+import json
 import logging
 import os
 import re
@@ -832,20 +834,44 @@ def parse_divider(text: str, today: date) -> date | None:
 
 _TEXT_IDS = ("message_text", "caption")
 # Ids of text-bearing nodes seen inside bubbles, saved to kv `wa_bubble_ids`
-# after each pass. The sender ids below are WhatsApp's usual names but were not
-# yet observed on this phone (2026-10-18: only admin-only groups to test on);
-# this list is how to confirm or fix them without dumping anyone's messages.
+# after each pass - how to confirm or fix the ids below without dumping
+# anyone's messages.
 BUBBLE_IDS_SEEN: set[str] = set()
-_SENDER_IDS = ("name_in_group_tv", "name_in_group", "pushname_in_group_tv", "pushname_in_group")
-# Not-yet-decrypted bubble ("Waiting for this message"): WhatsApp's text, not the sender's.
-_PLACEHOLDER_RE = re.compile(r"בהמתנה להודעה זו|Waiting for this message")
+# The sender's display name, then the number WhatsApp shows next to an unsaved
+# name ("+92 325 ..."); a number becomes the wa.me link on the lead.
+_SENDER_IDS = ("name_in_group_tv", "secondary_name_in_group_tv", "name_in_group",
+               "pushname_in_group_tv", "pushname_in_group")
+# WhatsApp's own text in a bubble, not the sender's: not-yet-decrypted
+# ("Waiting for this message") and deleted messages.
+_PLACEHOLDER_RE = re.compile(r"בהמתנה להודעה זו|Waiting for this message|ההודעה נמחקה|הודעה זו נמחקה"
+                             r"|This message was deleted")
+_TRUNCATED_RE = re.compile(r"(קרא עוד|Read more)\s*$")
+# A new member sees no history from before the join, and a group never read
+# before starts this far back.
+WATERMARK_SEED_DAYS = 3
+_OLD = date(1970, 1, 1)         # "older than anything": rows above a divider we stopped at
+
+
+def _bubble_of(n: ET.Element, parent: dict) -> ET.Element | None:
+    """The message row that holds text node `n`. The sender's name and number
+    sit in the row, one level ABOVE the text+time block; stopping at the first
+    ancestor that holds a time node (the old rule) lost every sender
+    (2026-10-24). Falls back to that ancestor for row types not seen yet."""
+    timed, p = None, parent.get(n)
+    while p is not None:
+        if rid(p).startswith("conversation_row"):
+            return p
+        if timed is None and any(rid(x) == "date" for x in p.iter("node")):
+            timed = p
+        p = parent.get(p)
+    return timed
 
 
 def _messages_on_screen(root: ET.Element, carry_date: date | None, today: date
                         ) -> tuple[list[dict], date | None]:
     """Messages visible now, top to bottom, plus the date in force at the bottom.
-    A bubble is the nearest ancestor of a text node that also holds a 'date'
-    (time) node; the sender is any name_in_group* node inside it."""
+    A message's date is the last date divider above it (`carry_date` for the
+    ones above the first divider on this screen)."""
     parent = {c: p for p in root.iter() for c in p}
     out: list[dict] = []
     cur_date = carry_date
@@ -859,12 +885,7 @@ def _messages_on_screen(root: ET.Element, carry_date: date | None, today: date
         text = (n.get("text") or "").strip()
         if not text or _PLACEHOLDER_RE.search(text):
             continue
-        bubble, p = None, parent.get(n)
-        while p is not None:
-            if any(rid(x) == "date" for x in p.iter("node")):
-                bubble = p
-                break
-            p = parent.get(p)
+        bubble = _bubble_of(n, parent)
         hhmm, sender, number = "", "", ""
         if bubble is not None:
             for x in bubble.iter("node"):
@@ -876,7 +897,7 @@ def _messages_on_screen(root: ET.Element, carry_date: date | None, today: date
                 elif xr in _SENDER_IDS and clean(x.get("text")):
                     val = clean(x.get("text"))
                     if re.fullmatch(r"\+?[\d\s\-()]{8,}", val):
-                        number = re.sub(r"\D", "", val)
+                        number = number or re.sub(r"\D", "", val)
                     elif not sender:
                         sender = val.lstrip("~ ").strip()
         out.append({"text": text, "time": hhmm, "date": cur_date,
@@ -885,6 +906,8 @@ def _messages_on_screen(root: ET.Element, carry_date: date | None, today: date
 
 
 def _posted(msg: dict, today: date) -> datetime | None:
+    if msg.get("posted"):
+        return msg["posted"]
     m = re.match(r"(\d{1,2}):(\d{2})", msg.get("time") or "")
     if not m:
         return None
@@ -893,6 +916,74 @@ def _posted(msg: dict, today: date) -> datetime | None:
     if local > datetime.now(IL) + timedelta(minutes=5):     # undated row seen after midnight
         local -= timedelta(days=1)
     return local.astimezone(timezone.utc)
+
+
+def wa_msg_key(code: str, posted: datetime | None, text: str) -> str:
+    """One identity per message, however it was read: group, minute (Israel
+    time) and the start of the text. No sender - a notification says '~ name',
+    a bubble a name or a number. So a message seen in a notification and again
+    on screen, or cut at 'קרא עוד' and later whole, gets the same lead URL and
+    db.insert_lead drops the second copy."""
+    minute = posted.astimezone(IL).strftime("%Y-%m-%d %H:%M") if posted else "?"
+    body = re.sub(r"\s+", " ", clean(_TRUNCATED_RE.sub("", text)))[:200]
+    return hashlib.sha1(f"{code}|{minute}|{body}".encode("utf-8")).hexdigest()[:16]
+
+
+def _row_time(text: str, today: date) -> datetime | None:
+    """A chat-list row's last-activity stamp, as an UPPER bound in Israel time:
+    '13:44' is today at 13:44; 'אתמול', a weekday or '22.10.2026' name only
+    the day, so the end of that day."""
+    t = clean(text)
+    m = re.fullmatch(r"(\d{1,2}):(\d{2})", t)
+    if m:
+        return datetime(today.year, today.month, today.day, int(m.group(1)), int(m.group(2)),
+                        tzinfo=IL)
+    d = parse_divider(t, today) if t else None
+    return datetime(d.year, d.month, d.day, 23, 59, 59, tzinfo=IL) if d else None
+
+
+def _watermarks(conn, titles: dict[str, str]) -> dict[str, datetime]:
+    """last_msg_at per allowlisted title (UTC). A group never read through the
+    watermark starts at the newest message already stored from it, else
+    WATERMARK_SEED_DAYS back."""
+    floor = datetime.now(timezone.utc) - timedelta(days=WATERMARK_SEED_DAYS)
+    out = {}
+    for title, code in titles.items():
+        row = conn.execute("SELECT last_msg_at FROM whatsapp_groups WHERE code=?",
+                           (code,)).fetchone()
+        if row and row[0]:
+            out[title] = datetime.fromisoformat(row[0])
+            continue
+        got = conn.execute("SELECT MAX(posted_at) FROM leads WHERE source=?",
+                           (f"whatsapp/{title}",)).fetchone()[0]
+        out[title] = datetime.fromisoformat(got) if got else floor
+    return out
+
+
+def _advance_watermark(conn, code: str, msgs: list[dict],
+                       read_at: datetime | None = None) -> None:
+    """Move the group's watermark forward (never back): to its newest message,
+    and after a complete read to `read_at` as well - everything before it has
+    been seen. Without that, a group whose latest activity was a 'joined' line
+    or a photo kept its old watermark and was reopened every pass (2026-10-24:
+    46 groups opened for 19 messages)."""
+    dated = [m for m in msgs if m.get("posted")]
+    conn.execute("UPDATE whatsapp_groups SET msgs_seen=COALESCE(msgs_seen,0)+? WHERE code=?",
+                 (len(msgs), code))
+    marks = []
+    if dated:
+        newest = max(dated, key=lambda m: m["posted"])
+        marks.append((newest["posted"], wa_msg_key(code, newest["posted"], newest["text"])))
+    if read_at is not None:
+        # a margin for the phone clock and for a message landing mid-read
+        marks.append((read_at - timedelta(minutes=2), None))
+    if marks:
+        at, key = max(marks, key=lambda x: x[0])
+        conn.execute("UPDATE whatsapp_groups SET last_msg_at=?, "
+                     "last_msg_key=COALESCE(?, last_msg_key) "
+                     "WHERE code=? AND (last_msg_at IS NULL OR last_msg_at < ?)",
+                     (at.isoformat(), key, code, at.isoformat()))
+    conn.commit()
 
 
 def _dismiss_banners(root: ET.Element) -> bool:
@@ -906,10 +997,41 @@ def _dismiss_banners(root: ET.Element) -> bool:
     return False
 
 
-def read_chat(title: str) -> list[dict]:
-    """Read from where WhatsApp opened the chat (the first unread message) down
-    to the bottom. Called with the chat already open."""
+def _screen_sig(root: ET.Element) -> tuple:
+    return tuple(clean(n.get("text"))[:40] for n in root.iter("node")
+                 if rid(n) in _TEXT_IDS + ("date", "conversation_row_date_divider", "info"))
+
+
+def _reaches(root: ET.Element, since: datetime, latest_day: date, divider_seen: bool,
+             today: date) -> bool:
+    """While scrolling UP: is this screen already back at the watermark, so
+    nothing above it can be new?"""
+    since_il = since.astimezone(IL)
+    dividers = [d for d in (parse_divider(n.get("text") or "", today)
+                            for n in find(root, "conversation_row_date_divider")) if d]
+    if dividers and dividers[0] <= since_il.date():
+        return True             # everything above the top divider is from an older day
+    # below this screen's first divider the date is known; with no divider seen
+    # yet at all, the bottom of the chat is the day of its last activity
+    page, _ = _messages_on_screen(root, None if divider_seen or dividers else latest_day, today)
+    for m in page:
+        if m["date"] is None:
+            continue
+        posted = _posted(m, today)
+        if posted is not None and posted <= since:
+            return True
+    return False
+
+
+def read_chat(title: str, since: datetime, latest_day: date | None = None) -> list[dict]:
+    """The messages newer than `since` (the group's watermark), oldest first.
+    Called with the chat open. Jumps to the bottom, reads UP a screen at a
+    time until a screen reaches back to `since` (or the top of the chat), then
+    parses those screens top-down so each message gets the date divider in
+    force above it. The unread badge plays no part: a badge cleared on the
+    phone no longer loses messages."""
     today = datetime.now(IL).date()
+    latest_day = latest_day or today
     root = dump()
     if _dismiss_banners(root):
         root = dump()
@@ -917,45 +1039,52 @@ def read_chat(title: str) -> list[dict]:
     header = first(root, "conversation_contact_name")
     if header is None or clean(header.get("text"))[:6] != title[:6]:
         raise PhoneError("opened chat does not match the allowlisted title")
+    jump = first(root, "scroll_bottom")
+    if jump is not None:
+        tap(*center(jump))
+        time.sleep(1.5)
+        root = dump()
+    screens = [root]
+    divider_seen = False
+    for _ in range(MAX_SCREENS_PER_CHAT):
+        if _reaches(root, since, latest_day, divider_seen, today):
+            break
+        divider_seen = divider_seen or bool(find(root, "conversation_row_date_divider"))
+        swipe(600, 1500)
+        time.sleep(1.2)
+        nxt = dump()
+        if _screen_sig(nxt) == _screen_sig(root):
+            break                                   # top of the chat
+        root = nxt
+        screens.append(root)
+    any_divider = any(find(s, "conversation_row_date_divider") for s in screens)
+    # rows above the top-most divider belong to an older day we did not
+    # scroll to; with no divider anywhere, the whole range is latest_day
+    carry: date | None = _OLD if any_divider else latest_day
     seen: set[tuple] = set()
     msgs: list[dict] = []
-    carry: date | None = None
-    if not find(root, "conversation_row_date_divider"):
-        # no date on screen: peek one screen up for the divider in force, so
-        # yesterday's posts aren't stamped as today's
-        swipe(600, 1500)
-        time.sleep(1)
-        dividers = find(dump(), "conversation_row_date_divider")
-        if dividers:
-            carry = parse_divider(dividers[-1].get("text") or "", today)
-        swipe(1500, 600)
-        time.sleep(1)
-        root = dump()
-    for _ in range(MAX_SCREENS_PER_CHAT):
-        page, carry = _messages_on_screen(root, carry, today)
-        fresh = 0
+    for scr in reversed(screens):
+        page, carry = _messages_on_screen(scr, carry, today)
         for m in page:
-            key = (m["sender"], m["time"], m["text"][:80])
-            if key not in seen:
-                seen.add(key)
+            k = (m["sender"], m["time"], m["text"][:80])
+            if k not in seen:
+                seen.add(k)
                 msgs.append(m)
-                fresh += 1
-        if fresh == 0 and first(root, "scroll_bottom") is None:
-            break                                   # bottom reached, nothing new
-        swipe(1500, 600)
-        time.sleep(1.2)
-        root = dump()
-    return msgs
-
-
-_TRUNCATED_RE = re.compile(r"(קרא עוד|Read more)\s*$")
+    out = []
+    for m in msgs:
+        m["posted"] = _posted(m, today)
+        if m["posted"] is None or m["posted"] >= since:
+            out.append(m)
+    return out
 
 
 def _count_truncated(conn, msgs: list[dict]) -> None:
-    """Long posts end in WhatsApp's 'קרא עוד' span and are read cut off. The tap
-    that expands them isn't built yet: no truncated message had arrived to test
-    where the span sits, and a blind tap can hit a link and leave WhatsApp.
-    Count them (kv wa_truncated_seen) so we know when it's worth building."""
+    """Long posts end in WhatsApp's 'קרא עוד' span and are read cut off. When
+    the message also came in a notification, that copy is whole and shares the
+    lead URL (wa_msg_key), so it wins. The tap that expands the span isn't
+    built: none had been seen when this was written, and a blind tap can hit a
+    link and leave WhatsApp. Count them (kv wa_truncated_seen) to know when it
+    is worth building."""
     n = sum(1 for m in msgs if _TRUNCATED_RE.search(clean(m["text"])))
     if n:
         db.kv_set(conn, "wa_truncated_seen",
@@ -973,100 +1102,304 @@ def _unread(row: ET.Element) -> bool:
     return False
 
 
-def read_pass(conn) -> list[Lead]:
-    """Open every allowlisted group that shows an unread badge, read it, and
-    return its messages as Leads. Walks the chat list page by page.
-    Joined groups that turned out to be full-time feeds (WA_SKIP_GROUP_RE) are
-    not opened (Or, 2026-10-20: stay in them, stop reading them)."""
+def _row_text(row: ET.Element, name: str) -> str:
+    n = next((x for x in row.iter("node") if rid(x) == name), None)
+    return "" if n is None else (n.get("text") or n.get("content-desc") or "")
+
+
+def _autoskip_codes(conn, titles: dict[str, str]) -> set[str]:
+    """Joined groups whose last 7 days were (almost) all full-time job cards:
+    stop opening them, as WA_SKIP_GROUP_RE does by name. Measured, not guessed."""
+    since = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+    out = set()
+    for src, n, ft in conn.execute(
+            "SELECT source, COUNT(*), SUM(reasoning='gate: full_time') FROM leads "
+            "WHERE source LIKE 'whatsapp/%' AND fetched_at >= ? GROUP BY source", (since,)):
+        code = titles.get(src.removeprefix("whatsapp/"))
+        if (code and n >= config.WA_AUTOSKIP_MIN_MSGS
+                and (ft or 0) >= config.WA_AUTOSKIP_FT_SHARE * n):
+            out.add(code)
+    return out
+
+
+def _open_chat(code: str, title: str) -> bool:
+    """Open a joined group straight from its invite link: for a member WhatsApp
+    goes to the chat itself (verified 2026-10-24), wherever the group sits in
+    the list and also inside a community. False when the link was reset or
+    the chat that opened is not this one."""
+    root = _open_invite(code)
+    header = first(root, "conversation_contact_name")
+    if header is not None and clean(header.get("text"))[:6] == title[:6]:
+        return True
+    if (first(root, "join_group_bottom_sheet_view_group") is not None
+            or first(root, "join_group_bottom_sheet_close_button") is not None):
+        _close_sheet(root)
+    else:
+        back()
+        time.sleep(1)
+    return False
+
+
+def read_pass(conn, notified: dict[str, int] | None = None) -> list[Lead]:
+    """Read every allowlisted group that has something new since its
+    watermark - and open nothing else.
+
+    1. Walk the chat list from the top. A group is picked when its row is
+       newer than its watermark, shows an unread badge, or a notification
+       said it has news. No tap happens here.
+    2. The list is newest-first, so once a row is older than every
+       not-yet-seen group's watermark nothing below it can be new: stop.
+       (Once a day the walk goes the full MAX_LIST_PAGES, to catch approved
+       join requests whose 'you joined' line has sunk.)
+    3. Open each picked group by its invite link (row tap as the fallback)
+       and read only the messages after its watermark.
+    Joined groups that are full-time feeds - by name (WA_SKIP_GROUP_RE) or by
+    their measured last 7 days - are not opened (Or, 2026-10-20)."""
+    notified = notified or {}
     joined = _joined_titles(conn)
-    titles = {t: c for t, c in joined.items() if not config.WA_SKIP_GROUP_RE.search(t)}
+    auto = _autoskip_codes(conn, joined)
+    titles = {t: c for t, c in joined.items()
+              if not config.WA_SKIP_GROUP_RE.search(t) and c not in auto}
     if len(titles) < len(joined):
-        log.info("wa read: %d full-time feed group(s) not read", len(joined) - len(titles))
+        log.info("wa read: %d full-time feed group(s) not read (%d by measurement)",
+                 len(joined) - len(titles), len(auto))
     # recheck_requested only spots an approval on the invite sheet, and once
     # you are a member WhatsApp skips the sheet and opens the chat - so 24
     # approved groups (2026-10-24) sat as 'requested' and were never read
     requested = _requested_titles(conn)
-    leads: list[Lead] = []
-    done: set[str] = set()
+    marks = _watermarks(conn, titles)
+    today = datetime.now(IL).date()
+    picked: dict[str, date] = {}            # title -> day of its last activity
+    checked: set[str] = set()
+    listed: set[str] = set()                # codes seen on the list in this walk
+    was_listed = set(_kv_json(conn, "wa_listed_codes", []))
+    full_walk = (db.kv_get(conn, "wa_full_walk_day", "") != today.isoformat()
+                 or not was_listed)
+    unreachable = _recent_unreachable(conn)
+    read_at = datetime.now(timezone.utc)
     root = open_home_top()
     last_page: tuple = ()
-    today = datetime.now(IL).date()
-    pages = 0
-    accepted = 0
-    while pages < MAX_LIST_PAGES and (len(done) < len(titles) or requested):
-        target, page_names = None, []
+    pages = rows = accepted = 0
+    stop = False
+    while pages < MAX_LIST_PAGES and not stop:
+        page_names = []
         for row in find(root, "contact_row_container"):
-            name_n = next((x for x in row.iter("node")
-                           if rid(x) == "conversations_row_contact_name"), None)
-            if name_n is None:
+            name = _row_text(row, "conversations_row_contact_name")
+            if not name:
                 continue
-            shown = name_n.get("text") or ""
-            page_names.append(shown)
-            approved = _match_title(shown, requested)
+            page_names.append(name)
+            rows += 1
+            when = _row_time(_row_text(row, "conversations_row_date"), today)
+            approved = _match_title(name, requested)
             if approved:
                 code = requested.pop(approved)
                 _mark_accepted(conn, code, approved)
                 accepted += 1
                 if not config.WA_SKIP_GROUP_RE.search(approved):
                     titles[approved] = code
-            title = _match_title(shown, titles)
-            if title and title not in done and _unread(row):
-                target = (title, row)
-                break
-        if target is None:                          # nothing (more) on this page
-            if tuple(page_names) == last_page:
-                break                               # end of the chat list
-            last_page = tuple(page_names)
-            pages += 1
-            swipe(1700, 700)
-            time.sleep(1.2)
-            root = dump()
-            continue
-        title, row = target
-        done.add(title)
-        tap(*center(row))
-        time.sleep(2.5)
+                    marks[approved] = (datetime.now(timezone.utc)
+                                       - timedelta(days=WATERMARK_SEED_DAYS))
+            title = _match_title(name, titles)
+            if title is None and "קהילה" in _row_text(row, "conversations_row_header"):
+                # a group inside a community is listed under the community's
+                # name; the line under it names the sub-group
+                title = _match_title(clean(_row_text(row, "msg_from_tv")).strip(" :~ "),
+                                     titles)
+            if title and title not in checked:
+                checked.add(title)
+                listed.add(titles[title])
+                # a row with no time (a community row) counts only with a badge
+                news = (title in notified
+                        or (title not in unreachable
+                            and (_unread(row) or (when is not None
+                                                  and when > marks[title].astimezone(IL)))))
+                if news:
+                    picked[title] = (when or datetime.now(IL)).date()
+            if not full_walk and rows > 3 and when is not None:   # pinned chats sit on top
+                # groups not on the chat list at all (left, or reachable only
+                # through a community) must not hold the walk open
+                waiting = [marks[t] for t in titles if t not in checked
+                           and titles[t] in was_listed and t not in unreachable]
+                if not waiting or when < min(waiting).astimezone(IL):
+                    stop = True
+                    break
+        if stop or tuple(page_names) == last_page:
+            break                                   # nothing older can be new / list end
+        last_page = tuple(page_names)
+        pages += 1
+        swipe(1700, 700)
+        time.sleep(1.2)
+        root = dump()
+    if full_walk:
+        db.kv_set(conn, "wa_full_walk_day", today.isoformat())
+        db.kv_set(conn, "wa_listed_codes", json.dumps(sorted(listed)))
+    for title in notified:                          # news the list walk missed
+        if title in titles and title not in picked:
+            picked[title] = today
+    # a row no newer than its watermark means nothing new up to now: move the
+    # watermark to now, so the next walk can stop as soon as it passes the
+    # previous pass instead of digging down to the quietest group's last post
+    for title in checked - set(picked):
+        _advance_watermark(conn, titles[title], [], read_at)
+    log.info("wa read: %d list page(s), %d group row(s) checked, %d with news, %d unchanged "
+             "(not opened)", pages + 1, len(checked), len(picked),
+             len(checked - set(picked)))
+
+    leads: list[Lead] = []
+    by_row: list[str] = []
+    new_msgs = 0
+    for title, last_day in picked.items():
+        code = titles[title]
+        msgs, opened = None, False
         try:
-            msgs = read_chat(title)
+            opened = _open_chat(code, title)
+            if opened:
+                msgs = read_chat(title, marks[title], last_day)
+            else:
+                by_row.append(title)
         except PhoneError as e:
             if isinstance(e, Banned):
                 raise
             log.error("wa read: one group failed: %s", e)     # keep the other groups' leads
             LAST_ERRORS.append(f"read: {e}")
-            msgs = []
+        finally:
+            if opened:
+                back()
+                time.sleep(1)
+        if msgs is not None:
+            leads += _ingestable(conn, code, title, msgs, read_at)
+            new_msgs += len(msgs)
+    if by_row:
+        leads += _read_by_row(conn, by_row, titles, marks, picked, read_at)
+    if accepted:
+        log.info("wa read: %d join request(s) found approved on the chat list", accepted)
+    log.info("wa read: %d new message(s) from %d group(s)", new_msgs, len(picked))
+    _bump_read_stats(conn, opened=len(picked), skipped=len(checked - set(picked)),
+                     msgs=new_msgs)
+    return leads
+
+
+def _kv_json(conn, key: str, default):
+    try:
+        return json.loads(db.kv_get(conn, key, "") or "null") or default
+    except ValueError:
+        return default
+
+
+UNREACHABLE_HOURS = 24
+
+
+def _recent_unreachable(conn) -> set[str]:
+    """Titles neither the invite link nor the row tap could open lately (a
+    reset link plus a community row): not retried for UNREACHABLE_HOURS,
+    unless a notification says they have news."""
+    cutoff = (datetime.now(timezone.utc) - timedelta(hours=UNREACHABLE_HOURS)).isoformat()
+    return {t for t, at in _kv_json(conn, "wa_unreachable", {}).items() if at >= cutoff}
+
+
+def _remember_unreachable(conn, titles: set[str]) -> None:
+    cur = _kv_json(conn, "wa_unreachable", {})
+    now = datetime.now(timezone.utc).isoformat()
+    cur.update({t: now for t in titles})
+    db.kv_set(conn, "wa_unreachable", json.dumps(cur, ensure_ascii=False))
+
+
+def _bump_read_stats(conn, **add: int) -> None:
+    """Today's reader totals for the heartbeat (kv wa_read_stats)."""
+    today = datetime.now(IL).date().isoformat()
+    try:
+        cur = json.loads(db.kv_get(conn, "wa_read_stats", "") or "{}")
+    except ValueError:
+        cur = {}
+    if cur.get("day") != today:
+        if cur.get("day"):
+            db.kv_set(conn, "wa_read_stats_prev", json.dumps(cur))   # the heartbeat's "yesterday"
+        cur = {"day": today}
+    for k, v in add.items():
+        cur[k] = cur.get(k, 0) + v
+    db.kv_set(conn, "wa_read_stats", json.dumps(cur))
+
+
+def _ingestable(conn, code: str, title: str, msgs: list[dict],
+                read_at: datetime | None = None) -> list[Lead]:
+    """Bookkeeping after one group's read, then its messages as Leads."""
+    found = harvest_invites(conn, msgs, code)
+    if found:
+        log.info("wa read: %d new invite link(s) queued from a group", found)
+    _count_truncated(conn, msgs)
+    today = datetime.now(IL).date()
+    leads = [ld for ld in (_to_lead(code, title, m, today) for m in msgs) if ld]
+    _advance_watermark(conn, code, msgs, read_at)
+    _set_group(conn, code, last_read=datetime.now(timezone.utc).isoformat())
+    log.info("wa read: a group gave %d new message(s)", len(msgs))
+    return leads
+
+
+def _read_by_row(conn, wanted: list[str], titles: dict[str, str],
+                 marks: dict[str, datetime], picked: dict[str, date],
+                 read_at: datetime | None = None) -> list[Lead]:
+    """Fallback for groups whose invite link was reset: find the row and tap it."""
+    leads: list[Lead] = []
+    todo = set(wanted)
+    failed: set[str] = set()
+    root = open_home_top()
+    last_page: tuple = ()
+    for _ in range(MAX_LIST_PAGES):
+        names, hit = [], None
+        for row in find(root, "contact_row_container"):
+            name = _row_text(row, "conversations_row_contact_name")
+            names.append(name)
+            title = _match_title(name, {t: titles[t] for t in todo})
+            if title:
+                hit = (title, row)
+                break
+        if hit is None:
+            if tuple(names) == last_page:
+                break
+            last_page = tuple(names)
+            swipe(1700, 700)
+            time.sleep(1.2)
+            root = dump()
+            continue
+        title, row = hit
+        todo.discard(title)
+        tap(*center(row))
+        time.sleep(2.5)
+        try:
+            msgs = read_chat(title, marks[title], picked.get(title))
+            leads += _ingestable(conn, titles[title], title, msgs, read_at)
+        except PhoneError as e:
+            if isinstance(e, Banned):
+                raise
+            # expected for a community row (it opens the community, not the
+            # sub-group): counted below, not an alert every pass
+            log.info("wa read: row fallback did not open the group: %s", e)
+            failed.add(title)
         finally:
             back()
             time.sleep(1.5)
-        code = titles[title]
-        found = harvest_invites(conn, msgs, code)
-        if found:
-            log.info("wa read: %d new invite link(s) queued from a group", found)
-        _count_truncated(conn, msgs)
-        for m in msgs:
-            lead = _to_lead(code, title, m, today)
-            if lead:
-                leads.append(lead)
-        _set_group(conn, code, last_read=datetime.now(timezone.utc).isoformat())
-        log.info("wa read: a group gave %d message(s)", len(msgs))
-        root = dump()                               # same page; rows may have shifted
-    if accepted:
-        log.info("wa read: %d join request(s) found approved on the chat list", accepted)
+        if not todo:
+            break
+        root = dump()
+    if todo or failed:
+        log.info("wa read: %d group(s) not reachable by link or row", len(todo) + len(failed))
+        _remember_unreachable(conn, todo | failed)
     return leads
 
 
 def _to_lead(code: str, title: str, m: dict, today: date) -> Lead | None:
     """Reuse whatsapp_reader._to_lead so every WhatsApp path builds leads the
-    same way. The id hashes group+sender+day+time+text: stable across passes,
-    so re-reading a screen is a no-op in db.insert_lead."""
+    same way. The URL id is wa_msg_key: stable across passes and across the
+    two read paths (screen, notification), so a re-read is a no-op in
+    db.insert_lead."""
     import whatsapp_reader
     posted = _posted(m, today)
     text = m["text"]
     if m["number"]:
         text += f"\n\nhttps://wa.me/{m['number']}"
-    key = f"{code}|{m['sender'] or m['number']}|{m['date']}|{m['time']}|{m['text']}"
     return whatsapp_reader._to_lead({
         "text": text, "chat_jid": code, "chat_name": title,
-        "id": hashlib.sha1(key.encode("utf-8")).hexdigest()[:16],
+        "id": wa_msg_key(code, posted, m["text"]),
         "sender_name": m["sender"] or (f"+{m['number']}" if m["number"] else None),
         "timestamp": int(posted.timestamp()) if posted else None,
     })
@@ -1107,11 +1440,16 @@ def run_pass(conn) -> list[Lead]:
         log.info("wa: new night-hunt targets - join-all re-armed")
     try:
         ensure_ready()
+        # before anything opens WhatsApp: opening the app clears its notifications
+        import wa_notify
+        notif_leads, news = _stage("notify", wa_notify.harvest, conn, ([], {}))
         result = _stage("join", lambda c: join_burst(c) if db.kv_get(c, BURST_KEY, "")
                         else join_next(c), conn, "join failed")
         accepted = _stage("recheck", recheck_requested, conn, 0)
         _stage("home", lambda c: open_home(), conn, None)    # a failed stage may leave a sheet open
-        leads = _stage("read", read_pass, conn, [])
+        # notification copies first: they are whole where the screen shows
+        # 'קרא עוד', and share the lead URL, so the screen copy is the duplicate
+        leads = notif_leads + _stage("read", lambda c: read_pass(c, news), conn, [])
         try:
             export_tried(conn)
         except (OSError, subprocess.SubprocessError) as e:
@@ -1180,6 +1518,19 @@ def _daily_heartbeat(conn) -> None:
              f"approval, {groups.get('todo', 0)} to go, {groups.get('skipped_spam', 0)} spam / "
              f"{groups.get('skipped_offtopic', 0)} off-topic skipped",
              f"last 24h: {read} message(s) read, {pushed} pushed to you"]
+    try:
+        prev = json.loads(db.kv_get(conn, "wa_read_stats_prev", "") or "{}")
+    except ValueError:
+        prev = {}
+    if prev:
+        lines.append(f"reader {prev['day']}: {prev.get('opened', 0)} group read(s) with news, "
+                     f"{prev.get('skipped', 0)} unchanged skipped, {prev.get('msgs', 0)} new msg(s)")
+    gate = dict(conn.execute(
+        "SELECT reasoning, COUNT(*) FROM leads WHERE source LIKE 'whatsapp/%' AND fetched_at >= ? "
+        "AND status='gated_out' GROUP BY reasoning", (since,)).fetchall())
+    if gate:
+        lines.append("gated 24h: " + ", ".join(f"{k.removeprefix('gate: ')} {v}"
+                                                for k, v in sorted(gate.items(), key=lambda x: -x[1])))
     if best:
         lines.append("best 7d: " + ", ".join(f"{html.escape(t[:30])} ({n})" for t, n in best))
     if silent:

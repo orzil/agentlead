@@ -756,6 +756,14 @@ Same day, later:
   העסקית...) stayed 'requested' forever: once you are a member the invite opens the chat, not the
   sheet `recheck_requested` looks for. Now read_pass marks them joined when their name is in the list.
   Not handled yet: community sub-groups show under the community's name in the list.
+- **New WhatsApp reader (same evening):** watermark diff per group, invite-link opening,
+  notification harvest (`wa_notify.py`), senders + wa.me numbers (every earlier WhatsApp lead had
+  lost them), deleted-message placeholders skipped, unreachable groups remembered 24h.
+  Measured: pass 1 read 163 new messages from 50 groups (the old reader: ~2/day); pass 6 walked
+  1 list page, opened 2 groups, 75s (was 12 pages / 46 groups / 882s). The gate is right about
+  the chatter (sampled 40 off-topic: student Q&A, discounts, plugin talk), so the lever now is
+  which groups we are in. Open: 11 groups (mostly community sub-groups with reset links) are not
+  reachable; "קרא עוד" tap not built (0 seen; notification copies are whole).
 
 ## Open items
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:
