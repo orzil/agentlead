@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-24T02:02:15+00:00",
- "count": 1159,
+ "generated": "2026-10-24T02:58:15+00:00",
+ "count": 1160,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -8115,6 +8115,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-05T09:55:32+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "theluau",
+   "name": "The Luau: Where Law Firm Owners Come to Live Better Lives",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-24T02:58:12+00:00",
    "last_checked": null
   },
   {
