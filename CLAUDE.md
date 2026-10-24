@@ -215,6 +215,9 @@ the normal pipeline; a domain **question** (`prefilter` verdict `question`, `QUE
 phone's screen lock at None and the S9's screen asleep between passes (AMOLED burn-in).
 UI facts that cost a day to find: the unread badge's count is in **`content-desc`**, not `text`;
 the group sender id is `name_in_group_tv`.
+The reader starts from a **force-stopped** WhatsApp: the app restores its old scroll position, and
+passes that started mid-list never saw the groups with new messages, which sort to the top (2026-10-24).
+An approved join request shows no invite sheet; it is detected when its name appears in the chat list.
 **Never run `--wa-pass` by hand while `wa_loop` is running one.** `dump()` pkills uiautomator on
 retry, so two passes kill each other's dumps (exit 137). Check for a running `--wa-pass` process
 first. The link is USB first, then the Wi-Fi address in the gitignored `.adb_wifi`. A phone

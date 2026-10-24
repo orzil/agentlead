@@ -748,6 +748,14 @@ Same day, later:
   - 2026-10-24: Gemini timed out on every call of a cloud run; the error escaped `score_lead`,
     so each lead cost ~2 min and was stored as `error`. Gemini now parks 10 min on a
     network/HTTP error and the lead goes to the OpenRouter chain.
+- **Why WhatsApp gave 0 leads (2026-10-24): the reader barely read.** 2 reads today, 3 yesterday.
+  (1) Each pass started mid-list (WhatsApp keeps the scroll position; scroll-to-top gave up after
+  10 swipes or one look-alike dump) and only scrolled down, so groups with new messages - at the
+  top - were skipped. Fix: force-stop WhatsApp before reading; a fresh process starts at the top.
+  (2) 24 approved join requests (Base44 IL, TESTAIMND AI automation freelance, RiseHub, הרשת
+  העסקית...) stayed 'requested' forever: once you are a member the invite opens the chat, not the
+  sheet `recheck_requested` looks for. Now read_pass marks them joined when their name is in the list.
+  Not handled yet: community sub-groups show under the community's name in the list.
 
 ## Open items
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:

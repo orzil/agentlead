@@ -335,20 +335,34 @@ def open_home() -> ET.Element:
 
 def scroll_list_top(root: ET.Element) -> ET.Element:
     """WhatsApp keeps the chat list's scroll position between launches, so a
-    pass can start mid-list; swipe down until the top row stops changing."""
+    pass can start mid-list; swipe down until the top rows stop changing.
+    Two unchanged dumps in a row, not one: a single dump taken mid-animation
+    looked "stopped" and left passes reading from the middle of the list."""
     def top(r):
         names = [n.get("text") for n in find(r, "conversations_row_contact_name")]
-        return names[:2]
-    prev = top(root)
-    for _ in range(10):
+        return names[:3]
+    prev, same = top(root), 0
+    for _ in range(30):
         swipe(700, 1700, 300)
         time.sleep(0.8)
         root = dump()
         now = top(root)
-        if now == prev:
+        same = same + 1 if now == prev else 0
+        if same >= 2:
             break
         prev = now
     return root
+
+
+def open_home_top() -> ET.Element:
+    """The chat list scrolled to its top - where every group with new messages
+    is. A fresh app process always starts there (measured 2026-10-24), while
+    the swipe-up alone left passes reading from mid-list: each pass scrolled
+    down up to MAX_LIST_PAGES, the next one swiped back up at most 10 times,
+    and the groups with new messages, sorted above, were never seen."""
+    shell("am", "force-stop", PKG)
+    time.sleep(1)
+    return scroll_list_top(open_home())
 
 
 def killed(conn) -> str:
@@ -447,6 +461,21 @@ def _joined_titles(conn) -> dict[str, str]:
     rows = conn.execute("SELECT code, title_on_phone FROM whatsapp_groups "
                         "WHERE join_status='joined' AND title_on_phone IS NOT NULL").fetchall()
     return {r["title_on_phone"]: r["code"] for r in rows}
+
+
+def _requested_titles(conn) -> dict[str, str]:
+    """Groups this phone asked to join, by the name the invite sheet showed.
+    A pending request never creates a chat, so one of these names in the chat
+    list means the admin approved it."""
+    rows = conn.execute("SELECT code, COALESCE(title_on_phone, name) AS t FROM whatsapp_groups "
+                        "WHERE join_status='requested' AND COALESCE(title_on_phone, name) IS NOT NULL"
+                        ).fetchall()
+    return {clean(r["t"]): r["code"] for r in rows if len(clean(r["t"])) >= 4}
+
+
+def _mark_accepted(conn, code: str, title: str) -> None:
+    _set_group(conn, code, joined=1, join_status="joined", title_on_phone=title,
+               joined_at=datetime.now(timezone.utc).isoformat())
 
 
 def _match_title(shown: str, titles: dict[str, str]) -> str | None:
@@ -953,15 +982,18 @@ def read_pass(conn) -> list[Lead]:
     titles = {t: c for t, c in joined.items() if not config.WA_SKIP_GROUP_RE.search(t)}
     if len(titles) < len(joined):
         log.info("wa read: %d full-time feed group(s) not read", len(joined) - len(titles))
-    if not titles:
-        return []
+    # recheck_requested only spots an approval on the invite sheet, and once
+    # you are a member WhatsApp skips the sheet and opens the chat - so 24
+    # approved groups (2026-10-24) sat as 'requested' and were never read
+    requested = _requested_titles(conn)
     leads: list[Lead] = []
     done: set[str] = set()
-    root = scroll_list_top(open_home())
+    root = open_home_top()
     last_page: tuple = ()
     today = datetime.now(IL).date()
     pages = 0
-    while pages < MAX_LIST_PAGES and len(done) < len(titles):
+    accepted = 0
+    while pages < MAX_LIST_PAGES and (len(done) < len(titles) or requested):
         target, page_names = None, []
         for row in find(root, "contact_row_container"):
             name_n = next((x for x in row.iter("node")
@@ -970,6 +1002,13 @@ def read_pass(conn) -> list[Lead]:
                 continue
             shown = name_n.get("text") or ""
             page_names.append(shown)
+            approved = _match_title(shown, requested)
+            if approved:
+                code = requested.pop(approved)
+                _mark_accepted(conn, code, approved)
+                accepted += 1
+                if not config.WA_SKIP_GROUP_RE.search(approved):
+                    titles[approved] = code
             title = _match_title(shown, titles)
             if title and title not in done and _unread(row):
                 target = (title, row)
@@ -1010,6 +1049,8 @@ def read_pass(conn) -> list[Lead]:
         _set_group(conn, code, last_read=datetime.now(timezone.utc).isoformat())
         log.info("wa read: a group gave %d message(s)", len(msgs))
         root = dump()                               # same page; rows may have shifted
+    if accepted:
+        log.info("wa read: %d join request(s) found approved on the chat list", accepted)
     return leads
 
 
