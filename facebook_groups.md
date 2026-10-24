@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-24T07:50:03+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-24T19:19:12+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1173)
+## Not yet probed (1177)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -457,7 +457,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `nzsmallbusinessnetwork` (found via ddg)
 - `727549412373482` (found via ddg)
 - `newyorkstartups` (found via ddg)
+- `289716839970586` (found via ddg)
 - `itowner` (found via ddg)
+- `hospitalityownersgroup` (found via ddg)
 - `profitablelawfirmowners` (found via ddg)
 - `promptengineeringmastermind` (found via ddg)
 - `inventivehub` (found via config)
@@ -474,6 +476,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2099906750854206` (found via ddg)
 - `RestaurantOwnersAndManagers` (found via ddg)
 - `3187174424898197` (found via ddg)
+- `restaurantownersfb` (found via ddg)
 - `748711238658025` (found via ddg)
 - `388455554855609` (found via ddg)
 - `restaurantownersvendorsservices` (found via ddg)
@@ -1156,6 +1159,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `474293496993273` (found via ddg)
 - `1460476385552503` (found via ddg)
 - `coaches.and.consultants.community` (found via ddg)
+- `3511306142526440` (found via ddg)
 - `1031122788368778` (found via ddg)
 - `umake` (found via ddg)
 - `793335882635042` (found via ddg)

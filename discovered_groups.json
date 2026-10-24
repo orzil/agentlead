@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-24T07:50:03+00:00",
- "count": 1160,
+ "generated": "2026-10-24T19:19:12+00:00",
+ "count": 1164,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5088,6 +5088,21 @@
    "last_checked": null
   },
   {
+   "slug": "289716839970586",
+   "name": "Owners & Operations - Growth & Profit Hacks for Contractors & The ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-24T19:08:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "290592000669370",
    "name": "Founders & CEOs UK",
    "status": "pending",
@@ -7008,6 +7023,21 @@
    "last_checked": null
   },
   {
+   "slug": "hospitalityownersgroup",
+   "name": "Profitable Hospitality Owners Group",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-24T09:54:33+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "hubvalley",
    "name": "פרילנסרים בעמק - שיתופי פעולה | נטוורקינג | התפתחות עסקית",
    "status": "pending",
@@ -7560,6 +7590,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T18:34:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "restaurantownersfb",
+   "name": "Restaurant Owners Group - Restaurant Tips and Networking",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-24T09:54:33+00:00",
    "last_checked": null
   },
   {
@@ -11340,6 +11385,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-14T16:12:50+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "3511306142526440",
+   "name": "USA Construction Network",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-24T19:08:22+00:00",
    "last_checked": null
   },
   {
