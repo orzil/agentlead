@@ -62,17 +62,31 @@ JOIN_DAILY_CAP = int(config.env("WA_JOIN_DAILY_CAP", "6"))
 JOIN_HOURS = (9, 21)               # local Israel time, [start, end)
 JOIN_MIN_GAP_MIN = 90              # never two joins closer than this
 # JOIN-ALL burst (Or's call, 2026-10-19: "join all the groups"). Switched on by
-# `--join-all` (kv wa_join_all); each pass then joins for up to an hour with
-# random human-ish gaps, and wa_loop re-runs passes every few minutes until the
-# list is done. Still daytime only, still stops on any ban screen, and stops
-# itself after a few failed joins in a row (that pattern = WhatsApp rate limit).
+# `--join-all` (kv wa_join_all); each pass then joins for up to an hour and
+# wa_loop comes back when the next join is due. Still daytime only, still stops
+# on any ban screen, and stops itself after a few failed joins in a row.
+# Pace (2026-10-25, Or: "50 each day without Meta suspecting"): no official limit
+# exists; the known risk is MANY JOINS IN A SHORT WINDOW. So the day's joins are
+# spread over 08:00-22:30 with random 10-18 min gaps, a 30-60 min break after
+# every 8-12 joins, a cap drawn from 42-50 each day, and at most 12 invite
+# sheets an hour. A "try again later" screen stops joining for 24h and halves
+# the cap for the next days. Average ~18 min a join -> ~47 a day at most.
 BURST_KEY = "wa_join_all"
 BURST_PAUSED_KEY = "wa_join_all_paused"   # set by a failure pause; blocks the auto re-arm
-BURST_HOURS = (8, 23)
+BURST_WINDOW = (8 * 60, 22 * 60 + 30)     # IL minutes of the day, [start, end)
+BURST_START_JITTER_MIN = 45               # the day's first join: 08:00 + 0-45 min
 BURST_DAILY_CAP = int(config.env("WA_BURST_DAILY_CAP", "50"))
-BURST_GAP_MIN = (3.0, 8.0)         # random minutes between joins
+BURST_CAP_JITTER = 8                      # each day's cap: BURST_DAILY_CAP - 0..8
+BURST_GAP_MIN = (10.0, 18.0)       # random minutes between joins
+BURST_BREAK_EVERY = (8, 12)        # joins between longer breaks
+BURST_BREAK_MIN = (30.0, 60.0)
 BURST_MINUTES_PER_PASS = 60        # wa_loop's pass timeout is 90
 BURST_MAX_FAILS = 3
+SHEETS_PER_HOUR = 12               # invite sheets opened (joins + skips), any mode
+SKIP_PAUSE_S = (20.0, 60.0)        # after a skipped sheet: no back-to-back invite opens
+THROTTLE_KEY = "wa_join_throttled_until"
+THROTTLE_HOURS = 24
+RAMP_DAYS = 2                      # half cap for this many days after a throttle/pause
 MAX_SCREENS_PER_CHAT = 25
 MAX_LIST_PAGES = 12
 KILL_KEY = "wa_phone_killed"
@@ -90,6 +104,10 @@ SCAM_RE = re.compile(
 # focused activity name and the visible text.
 BAN_ACTIVITY_RE = re.compile(r"(registration|RegisterPhone|VerifySms|VerifyPhone|"
                              r"Banned|Eula|ChangeNumber)", re.IGNORECASE)
+# WhatsApp's "slow down" screens. Kept narrow on purpose: "couldn't join" alone
+# also means a reset link or a full group, which are not a rate limit.
+THROTTLE_TEXT_RE = re.compile(r"(try\s+again\s+later|too\s+many|temporarily"
+                              r"|מאוחר\s+יותר|יותר\s+מדי|באופן\s+זמני)", re.IGNORECASE)
 BAN_TEXT_RE = re.compile(r"(account\s+is\s+(banned|not\s+allowed)|this\s+account\s+can\s*not"
                          r"|החשבון\s+שלך\s+(נחסם|הושעה)|אין\s+לך\s+אפשרות\s+להשתמש\s+בוואטסאפ"
                          r"|verify\s+your\s+phone\s+number|אימות\s+מספר\s+הטלפון)", re.IGNORECASE)
@@ -512,28 +530,148 @@ def _close_sheet(root: ET.Element) -> None:
     time.sleep(1.5)
 
 
+def _kv_num(conn, key: str, default: float = 0.0) -> float:
+    try:
+        return float(db.kv_get(conn, key, "") or default)
+    except ValueError:
+        return default
+
+
+def _il_at(day: date, minute: float) -> float:
+    """Epoch seconds of IL `day` at `minute` past midnight."""
+    return datetime(day.year, day.month, day.day, tzinfo=IL).timestamp() + minute * 60
+
+
+def _roll_join_day(conn, now: datetime) -> None:
+    """A new IL day: zero the count, draw the day's cap, and put the first join
+    at a random minute after the window opens."""
+    import random
+    today = now.date().isoformat()
+    if db.kv_get(conn, "wa_join_day", "") == today:
+        return
+    if db.kv_get(conn, "wa_join_day", ""):       # yesterday's tally, for the heartbeat
+        db.kv_set(conn, "wa_join_prev", f"{db.kv_get(conn, 'wa_join_day', '')} "
+                  f"{db.kv_get(conn, 'wa_join_count', '0')}/{_burst_cap(conn)}")
+    db.kv_set(conn, "wa_join_day", today)
+    db.kv_set(conn, "wa_join_count", "0")
+    cap = BURST_DAILY_CAP - random.randint(0, BURST_CAP_JITTER)
+    if db.kv_get(conn, "wa_join_ramp_until", "") >= today:
+        cap //= 2
+    db.kv_set(conn, "wa_join_cap_today", str(max(1, cap)))
+    first_at = _il_at(now.date(), BURST_WINDOW[0] + random.uniform(0, BURST_START_JITTER_MIN))
+    db.kv_set(conn, "wa_join_next_at", str(max(first_at, _kv_num(conn, "wa_join_next_at"))))
+
+
+def _burst_cap(conn) -> int:
+    return int(_kv_num(conn, "wa_join_cap_today", BURST_DAILY_CAP))
+
+
+def _sheet_times(conn) -> list[float]:
+    try:
+        ts = json.loads(db.kv_get(conn, "wa_sheet_times", "") or "[]")
+    except ValueError:
+        ts = []
+    return [t for t in ts if time.time() - t < 3600]
+
+
+def _note_sheet(conn) -> None:
+    db.kv_set(conn, "wa_sheet_times", json.dumps(_sheet_times(conn) + [time.time()]))
+
+
 def _join_quota_open(conn) -> tuple[bool, str]:
     burst = bool(db.kv_get(conn, BURST_KEY, ""))
-    hours, cap, gap = ((BURST_HOURS, BURST_DAILY_CAP, BURST_GAP_MIN[0]) if burst
-                       else (JOIN_HOURS, JOIN_DAILY_CAP, JOIN_MIN_GAP_MIN))
     now = datetime.now(IL)
-    if not (hours[0] <= now.hour < hours[1]):
-        return False, "night"
-    today = now.date().isoformat()
-    if db.kv_get(conn, "wa_join_day", "") != today:
-        db.kv_set(conn, "wa_join_day", today)
-        db.kv_set(conn, "wa_join_count", "0")
-    if int(db.kv_get(conn, "wa_join_count", "0") or 0) >= cap:
-        return False, "daily cap"
-    last = float(db.kv_get(conn, "wa_join_last", "0") or 0)
-    if time.time() - last < gap * 60:
-        return False, "gap"
+    _roll_join_day(conn, now)
+    if time.time() < _kv_num(conn, THROTTLE_KEY):
+        return False, "throttled"
+    count = int(db.kv_get(conn, "wa_join_count", "0") or 0)
+    if burst:
+        if not (BURST_WINDOW[0] <= now.hour * 60 + now.minute < BURST_WINDOW[1]):
+            return False, "night"
+        if count >= _burst_cap(conn):
+            return False, "daily cap"
+        if time.time() < _kv_num(conn, "wa_join_next_at"):
+            return False, "gap"
+    else:
+        if not (JOIN_HOURS[0] <= now.hour < JOIN_HOURS[1]):
+            return False, "night"
+        if count >= JOIN_DAILY_CAP:
+            return False, "daily cap"
+        if time.time() - _kv_num(conn, "wa_join_last") < JOIN_MIN_GAP_MIN * 60:
+            return False, "gap"
+    if len(_sheet_times(conn)) >= SHEETS_PER_HOUR:
+        return False, "sheet rate"
     return True, ""
 
 
 def _count_join(conn) -> None:
+    """A Join tap: count it and schedule the next one - a random gap, or a
+    longer break after every few joins."""
+    import random
     db.kv_set(conn, "wa_join_count", str(int(db.kv_get(conn, "wa_join_count", "0") or 0) + 1))
     db.kv_set(conn, "wa_join_last", str(time.time()))
+    streak = int(_kv_num(conn, "wa_join_streak")) + 1
+    target = int(_kv_num(conn, "wa_join_streak_target")) or random.randint(*BURST_BREAK_EVERY)
+    if streak >= target:
+        wait = random.uniform(*BURST_BREAK_MIN) * 60
+        streak, target = 0, random.randint(*BURST_BREAK_EVERY)
+    else:
+        wait = random.uniform(*BURST_GAP_MIN) * 60
+    db.kv_set(conn, "wa_join_streak", str(streak))
+    db.kv_set(conn, "wa_join_streak_target", str(target))
+    db.kv_set(conn, "wa_join_next_at", str(time.time() + wait))
+
+
+def _set_ramp(conn) -> None:
+    until = (datetime.now(IL).date() + timedelta(days=RAMP_DAYS)).isoformat()
+    db.kv_set(conn, "wa_join_ramp_until", until)
+
+
+def _throttle(conn, why: str) -> None:
+    """WhatsApp said slow down: no joins for THROTTLE_HOURS, then half caps."""
+    import notifier
+    db.kv_set(conn, THROTTLE_KEY, str(time.time() + THROTTLE_HOURS * 3600))
+    _set_ramp(conn)
+    log.warning("wa join: throttle screen (%s) - joins stop for %dh", why[:80], THROTTLE_HOURS)
+    notifier._send_raw(f"⚠️ <b>WhatsApp asked to slow down</b> on a join. Joining stops for "
+                       f"{THROTTLE_HOURS}h, then runs at half pace for {RAMP_DAYS} days. "
+                       "Reading groups continues.")
+
+
+def next_join_at(conn) -> float | None:
+    """When the burst can next join (epoch seconds), or None when nothing more
+    is possible today (off, killed, capped, throttled, out of targets). wa_loop
+    sleeps until then instead of waking the phone every few minutes."""
+    if not db.kv_get(conn, BURST_KEY, "") or killed(conn) or _targets_left(conn) == 0:
+        return None
+    now = datetime.now(IL)
+    _roll_join_day(conn, now)
+    if int(db.kv_get(conn, "wa_join_count", "0") or 0) >= _burst_cap(conn):
+        return None
+    sheets = _sheet_times(conn)
+    rate_free = sheets[-SHEETS_PER_HOUR] + 3600 if len(sheets) >= SHEETS_PER_HOUR else 0
+    at = max(time.time(), _kv_num(conn, "wa_join_next_at"), _kv_num(conn, THROTTLE_KEY),
+             rate_free, _il_at(now.date(), BURST_WINDOW[0]))
+    return at if at < _il_at(now.date(), BURST_WINDOW[1]) else None
+
+
+def _dialog_text(root: ET.Element) -> str:
+    return " ".join(clean(n.get("text")) for n in root.iter("node") if n.get("text"))
+
+
+def _visit_chat(root: ET.Element) -> None:
+    """After a join, look like a member: open the chat, linger, scroll a little,
+    leave. Taps and swipes only - nothing is ever typed."""
+    import random
+    btn = first(root, "join_group_bottom_sheet_view_group")
+    if btn is None:
+        return
+    tap(*center(btn))
+    time.sleep(random.uniform(5, 15))
+    swipe(600, 1500)
+    time.sleep(random.uniform(2, 5))
+    back()
+    time.sleep(1.5)
 
 
 def _set_group(conn, code: str, **cols) -> None:
@@ -543,13 +681,23 @@ def _set_group(conn, code: str, **cols) -> None:
     conn.commit()
 
 
+def _skip_pause() -> None:
+    import random
+    time.sleep(random.uniform(*SKIP_PAUSE_S))
+
+
 def join_next(conn) -> str:
     """Join (or request to join) the best not-yet-tried target. At most one real
-    join per call; spam groups are skipped without spending the slot."""
+    join per call; spam groups are skipped without spending the slot, but every
+    skipped sheet costs a pause and counts toward SHEETS_PER_HOUR."""
     ok, why = _join_quota_open(conn)
     if not ok:
         return f"no join ({why})"
-    for _ in range(10):                      # skip at most a few spam/off-topic sheets per call
+    for i in range(10):                      # skip at most a few spam/off-topic sheets per call
+        if i:
+            _skip_pause()
+            if len(_sheet_times(conn)) >= SHEETS_PER_HOUR:
+                return "no join (sheet rate)"
         row = conn.execute(
             "SELECT code, name, found_via FROM whatsapp_groups WHERE priority IS NOT NULL "
             "AND joined=0 AND status='live' AND join_status IS NULL "
@@ -558,6 +706,7 @@ def join_next(conn) -> str:
             return "no join (all targets tried)"
         code = row["code"]
         root = _open_invite(code)
+        _note_sheet(conn)
         check_not_banned(root)
         title_n = first(root, "join_group_bottom_sheet_group_title")
         title = clean(title_n.get("text")) if title_n is not None else ""
@@ -600,9 +749,18 @@ def join_next(conn) -> str:
             status = "requested"
         else:
             status = "failed"
+        if status == "failed" and THROTTLE_TEXT_RE.search(_dialog_text(after)):
+            _throttle(conn, _dialog_text(after))
+            _close_sheet(after)
+            return "join: throttled"     # the target stays untried, retried after the pause
         _set_group(conn, code, joined=1 if status == "joined" else 0, join_status=status,
                    title_on_phone=title, joined_at=datetime.now(timezone.utc).isoformat())
-        _close_sheet(after)
+        if status == "joined":
+            _visit_chat(after)
+        else:
+            if status == "failed":       # learn WhatsApp's real wording (local log only)
+                log.info("wa join: failed screen text: %s", _dialog_text(after)[:160])
+            _close_sheet(after)
         log.info("wa join: %s (%s)", status, code[:4])
         return f"join: {status}"
     return "no join (skipped several)"
@@ -645,6 +803,56 @@ def _sheet_ok(title: str, desc: str, found_via: str | None) -> bool:
         return False
     return not (config.WA_FT_ONLY_SHEET_RE.search(desc)
                 and not config.WA_FREELANCE_GROUP_RE.search(f"{title} {desc}"))
+
+
+DESC_PER_PASS = 3
+
+
+def harvest_descriptions(conn, limit: int = DESC_PER_PASS) -> int:
+    """Read each joined group's description once (group info -> description
+    sheet) and queue the invite links in it, like links pasted in the chat.
+    Admins list sister groups there. Taps and Back only. Returns new targets."""
+    done = set(filter(None, db.kv_get(conn, "wa_desc_done", "").split(",")))
+    rows = [r for r in conn.execute(
+        "SELECT code, title_on_phone FROM whatsapp_groups WHERE join_status='joined' "
+        "AND title_on_phone IS NOT NULL ORDER BY joined_at DESC").fetchall()
+        if r["code"] not in done][:limit]
+    new = 0
+    for r in rows:
+        done.add(r["code"])                  # once, even if this attempt fails
+        if not _open_chat(r["code"], r["title_on_phone"]):
+            continue
+        hdr = first(dump(), "conversation_contact_name")
+        if hdr is None:
+            back()
+            continue
+        tap(*center(hdr))
+        time.sleep(3)
+        info = dump()
+        text = ""
+        card = first(info, "group_details_card_description")
+        if card is not None:
+            tap(*center(card))           # opens the full description in a sheet
+            time.sleep(2)
+            sheet = dump()
+            node = first(sheet, "group_description_text")
+            if node is not None:
+                text = clean(node.get("text"))
+                back()
+                time.sleep(1)
+        if not text:
+            node = first(info, "group_description")
+            text = clean(node.get("text")) if node is not None else ""
+        if text:
+            new += harvest_invites(conn, [{"text": text}], r["code"])
+        back()                               # info -> chat
+        time.sleep(1)
+        back()                               # chat -> list
+        time.sleep(1)
+    db.kv_set(conn, "wa_desc_done", ",".join(sorted(done)))
+    if rows:
+        log.info("wa descriptions: %d group(s) read, %d new invite target(s)", len(rows), new)
+    return new
 
 
 def harvest_invites(conn, msgs: list[dict], src_code: str = "") -> int:
@@ -724,10 +932,10 @@ def _targets_left(conn) -> int:
 
 
 def join_burst(conn) -> str:
-    """JOIN-ALL mode: join one group after another for up to an hour, with a
-    random 3-8 min gap. Ends the burst (clears the kv flag + tells Telegram)
-    when the list is done or joins keep failing."""
-    import random
+    """JOIN-ALL mode: join one group after another for up to an hour, each when
+    _count_join's schedule allows (screen asleep while waiting). Ends the burst
+    (clears the kv flag + tells Telegram) when the list is done or joins keep
+    failing."""
     import notifier
     deadline = time.time() + BURST_MINUTES_PER_PASS * 60
     done: dict[str, int] = {}
@@ -737,7 +945,16 @@ def join_burst(conn) -> str:
         r = join_next(conn)
         if r == "no join (skipped several)":
             continue
-        if r.startswith("no join"):
+        if r in ("no join (gap)", "no join (sheet rate)"):
+            at = next_join_at(conn)
+            if at is None or at > deadline:
+                why = r
+                break
+            sleep_screen()
+            time.sleep(max(0.0, at - time.time()) + 5)
+            wake()
+            continue
+        if r.startswith("no join") or r == "join: throttled":
             why = r
             break
         done[r] = done.get(r, 0) + 1
@@ -745,15 +962,12 @@ def join_burst(conn) -> str:
         if fails_in_row >= BURST_MAX_FAILS:
             db.kv_set(conn, BURST_KEY, "")
             db.kv_set(conn, BURST_PAUSED_KEY, datetime.now(timezone.utc).isoformat())
+            _set_ramp(conn)
             notifier._send_raw(f"⚠️ <b>WhatsApp join-all paused</b>: {fails_in_row} joins "
                                "failed in a row - maybe a WhatsApp limit. Back to slow joins "
                                "(6/day). Check the phone.")
             why = "paused after failures"
             break
-        wait = random.uniform(*BURST_GAP_MIN) * 60
-        if time.time() + wait > deadline:
-            break
-        time.sleep(wait)
     if _targets_left(conn) == 0 and db.kv_get(conn, BURST_KEY, ""):
         db.kv_set(conn, BURST_KEY, "")
         groups = dict(conn.execute(
@@ -1434,10 +1648,13 @@ def run_pass(conn) -> list[Lead]:
     if killed(conn):
         log.warning("wa pass skipped: kill switch set (%s)", killed(conn))
         return []
-    if (load_targets(conn) and config.WA_JOIN_ALL_AUTO and not db.kv_get(conn, BURST_KEY, "")
+    load_targets(conn)
+    # any untried target (night list, research, in-group, community) re-arms
+    # join-all (Or's call); the pace rails decide when each join happens
+    if (_targets_left(conn) and config.WA_JOIN_ALL_AUTO and not db.kv_get(conn, BURST_KEY, "")
             and not db.kv_get(conn, BURST_PAUSED_KEY, "")):
-        db.kv_set(conn, BURST_KEY, "1")      # a new night list: join it all (Or's call)
-        log.info("wa: new night-hunt targets - join-all re-armed")
+        db.kv_set(conn, BURST_KEY, "1")
+        log.info("wa: untried targets - join-all re-armed")
     try:
         ensure_ready()
         # before anything opens WhatsApp: opening the app clears its notifications
@@ -1450,6 +1667,7 @@ def run_pass(conn) -> list[Lead]:
         # notification copies first: they are whole where the screen shows
         # 'קרא עוד', and share the lead URL, so the screen copy is the duplicate
         leads = notif_leads + _stage("read", lambda c: read_pass(c, news), conn, [])
+        _stage("descriptions", harvest_descriptions, conn, 0)
         try:
             export_tried(conn)
         except (OSError, subprocess.SubprocessError) as e:
@@ -1518,6 +1736,14 @@ def _daily_heartbeat(conn) -> None:
              f"approval, {groups.get('todo', 0)} to go, {groups.get('skipped_spam', 0)} spam / "
              f"{groups.get('skipped_offtopic', 0)} off-topic skipped",
              f"last 24h: {read} message(s) read, {pushed} pushed to you"]
+    queue = dict(conn.execute(
+        "SELECT COALESCE(found_via,'?'), COUNT(*) FROM whatsapp_groups WHERE priority IS NOT NULL "
+        "AND joined=0 AND status='live' AND join_status IS NULL GROUP BY 1").fetchall())
+    prev_j = db.kv_get(conn, "wa_join_prev", "")
+    throttled = time.time() < _kv_num(conn, THROTTLE_KEY)
+    lines.append(f"joins {prev_j or '-'} (day/cap); queue {sum(queue.values())}: "
+                 + (", ".join(f"{k} {v}" for k, v in sorted(queue.items(), key=lambda x: -x[1]))
+                    or "empty") + ("; THROTTLED" if throttled else ""))
     try:
         prev = json.loads(db.kv_get(conn, "wa_read_stats_prev", "") or "{}")
     except ValueError:
@@ -1554,7 +1780,11 @@ def status(conn) -> None:
     burst = bool(db.kv_get(conn, BURST_KEY, ""))
     print(f"join-all  : {'ON' if burst else 'off'}")
     print(f"joins today: {db.kv_get(conn, 'wa_join_count', '0')} / "
-          f"{BURST_DAILY_CAP if burst else JOIN_DAILY_CAP} ({db.kv_get(conn, 'wa_join_day', '-')})")
+          f"{_burst_cap(conn) if burst else JOIN_DAILY_CAP} ({db.kv_get(conn, 'wa_join_day', '-')})")
+    nxt = next_join_at(conn)
+    print(f"next join : {datetime.fromtimestamp(nxt, IL):%H:%M} IL" if nxt else "next join : none today")
+    if time.time() < _kv_num(conn, THROTTLE_KEY):
+        print(f"throttled : until {datetime.fromtimestamp(_kv_num(conn, THROTTLE_KEY), IL):%m-%d %H:%M} IL")
     n = conn.execute("SELECT COUNT(*) FROM leads WHERE source LIKE 'whatsapp/%'").fetchone()[0]
     print(f"leads     : {n} WhatsApp message(s) stored")
     q = conn.execute("SELECT COUNT(*), SUM(join_status IS NULL) FROM whatsapp_groups "

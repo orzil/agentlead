@@ -186,6 +186,23 @@ CLIENT_DDG_QUERIES = [
     'site:chat.whatsapp.com "AI agents" builders',
     '"chat.whatsapp.com" "AI automation agency"',
     'site:linktr.ee "chat.whatsapp.com" vibe coding OR no-code',
+    # 2026-10-25: the list ran dry (50 -> 0 in four nights); these aim at where
+    # work is handed out rather than at more job boards
+    '"chat.whatsapp.com" העברת פרויקטים',
+    "קבוצת וואטסאפ למפתחים פרילנסרים עבודות",
+    "קבוצת וואטסאפ בעלי עסקים AI אוטומציה",
+    "קבוצת וואטסאפ עצמאים הייטק פרויקטים",
+    "קבוצת וואטסאפ סוכנויות דיגיטל העברת לקוחות",
+    "קבוצת וואטסאפ מנכלים יזמים ישראל",
+    'site:chat.whatsapp.com "העברת עבודות"',
+    'site:chat.whatsapp.com פרילנסרים פיתוח',
+    '"chat.whatsapp.com" agency owners white label',
+    '"chat.whatsapp.com" founders group UK OR London',
+    '"chat.whatsapp.com" founders group "United States" OR NYC OR "San Francisco"',
+    '"chat.whatsapp.com" e-commerce store owners community',
+    'site:linktr.ee "chat.whatsapp.com" founders',
+    'site:lu.ma "chat.whatsapp.com" AI builders',
+    'site:lu.ma "chat.whatsapp.com" founders',
 ]
 CLIENT_REDDIT_QUERIES = [
     '"chat.whatsapp.com" founders', '"chat.whatsapp.com" saas',
@@ -412,14 +429,16 @@ def surf_ddg(conn, client_factory) -> int:
                 return new
             new += _add_codes(conn, page, "ddg")
             # remember non-whatsapp result pages: directories / blogs to crawl
-            pages = set(json.loads(db.kv_get(conn, "wa_night_dir_pages", "[]") or "[]"))
+            pages = json.loads(db.kv_get(conn, "wa_night_dir_pages", "[]") or "[]")
             for href in re.findall(r'class="result__a"[^>]*href="([^"]+)"', page):
                 qs = parse_qs(urlparse(href).query)
                 url = unquote(qs["uddg"][0]) if "uddg" in qs else href
                 host = urlparse(url).netloc.lower()
-                if url.startswith("http") and not any(s in host for s in _SKIP_HOSTS):
-                    pages.add(url)
-            db.kv_set(conn, "wa_night_dir_pages", json.dumps(sorted(pages)[:400]))
+                if (url.startswith("http") and not any(s in host for s in _SKIP_HOSTS)
+                        and url not in pages):
+                    pages.append(url)
+            # arrival order, oldest first (alphabetical trimming dropped new pages)
+            db.kv_set(conn, "wa_night_dir_pages", json.dumps(pages[:400]))
     return new
 
 
@@ -468,22 +487,37 @@ def _save_hubs(conn) -> int:
     return len(fresh)
 
 
+SEED_RECRAWL_DAYS = 7     # directories keep adding invites; a seed read once went stale
+
+
 def surf_dirs(conn, client_factory) -> int:
-    """Crawl directory/blog pages: the seeds above first, then hub pages and pages
-    DDG surfaced. Cheap - plain GETs, no search engine, so no captcha walls."""
+    """Crawl directory/blog pages: the seeds that are due first, then hub pages
+    and pages DDG surfaced. Cheap - plain GETs, no search engine, so no captcha
+    walls. Seeds are re-read every SEED_RECRAWL_DAYS; other pages once."""
     import db
     import httpx
+    from datetime import datetime, timedelta, timezone
     _save_hubs(conn)
     pages = json.loads(db.kv_get(conn, "wa_night_dir_pages", "[]") or "[]")
-    done = set(json.loads(db.kv_get(conn, "wa_night_dir_done", "[]") or "[]"))
+    done = list(dict.fromkeys(json.loads(db.kv_get(conn, "wa_night_dir_done", "[]") or "[]")))
+    done_set = set(done)
+    seed_at = json.loads(db.kv_get(conn, "wa_night_seed_at", "{}") or "{}")
+    stale = (datetime.now(timezone.utc) - timedelta(days=SEED_RECRAWL_DAYS)).isoformat()
     follow = {u: pat for u, pat in DIR_SEEDS if pat}
-    queue = [u for u, _ in DIR_SEEDS if u not in done] + [p for p in pages if p not in done]
+    seeds = {u for u, _ in DIR_SEEDS}
+    due = sorted((u for u in seeds if seed_at.get(u, "") < stale), key=lambda u: seed_at.get(u, ""))
+    queue = due + [p for p in pages if p not in done_set and p not in seeds]
     todo = queue[:DIR_PAGES_PER_RUN]
     new = 0
+    now_iso = datetime.now(timezone.utc).isoformat()
     with httpx.Client(headers={"User-Agent": config.USER_AGENT}, timeout=20,
                       follow_redirects=True) as client:
         for url in todo:
-            done.add(url)
+            if url in seeds:
+                seed_at[url] = now_iso
+            elif url not in done_set:
+                done.append(url)
+                done_set.add(url)
             try:
                 r = client.get(url)
                 if r.status_code != 200:
@@ -493,12 +527,14 @@ def surf_dirs(conn, client_factory) -> int:
                 if url in follow:      # queue the community pages this topic page lists
                     base = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
                     found = {base + m for m in re.findall(follow[url], text)}
-                    pages = sorted(set(pages) | found)[:600]
+                    pages += sorted(found - set(pages) - done_set)
             except Exception:
                 continue
             time.sleep(1)
+    pages = [p for p in pages if p not in done_set][:600]
     db.kv_set(conn, "wa_night_dir_pages", json.dumps(pages))
-    db.kv_set(conn, "wa_night_dir_done", json.dumps(sorted(done)[-2500:]))
+    db.kv_set(conn, "wa_night_dir_done", json.dumps(done[-2500:]))    # newest kept
+    db.kv_set(conn, "wa_night_seed_at", json.dumps(seed_at))
     return new
 
 
@@ -674,10 +710,10 @@ LLM_RUBRIC_VER = "2"     # bump when _LLM_SYSTEM changes: the pool is re-rated o
 
 
 LLM_CALLS_PER_PASS = 12   # OpenRouter free is ~50 calls/day, shared with cloud lead scoring
-LLM_PASS_SECONDS = 540    # the select job has 20 min, and a 30-name call takes ~50 s
+LLM_PASS_SECONDS = 540    # the select job has 20 min; 30 names took ~35 s a call (2026-10-25)
 
 
-def llm_pass(conn, batch: int = 30, max_calls: int = LLM_CALLS_PER_PASS) -> int:
+def llm_pass(conn, batch: int = 60, max_calls: int = LLM_CALLS_PER_PASS) -> int:
     """Rate live, un-noised, unrated group names, most promising first. The rest
     wait for the next night; select_top holds them to the strict name rule."""
     import db
@@ -712,8 +748,10 @@ def llm_pass(conn, batch: int = 30, max_calls: int = LLM_CALLS_PER_PASS) -> int:
             log.info("llm pass unavailable - leaving %d unrated", len(rows) - i)
             break
         for j, r in enumerate(chunk):
+            if j not in scores:      # left out of the reply: stays unrated, re-asked next night
+                continue
             conn.execute("UPDATE whatsapp_groups SET llm_relevant=? WHERE code=?",
-                         (scores.get(j, 0), r["code"]))
+                         (scores[j], r["code"]))
             done += 1
     conn.commit()
     return done

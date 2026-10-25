@@ -20,7 +20,6 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 INTERVAL = 2 * 3600
-BURST_RETRY = 5 * 60
 LOCK_PORT = 47361
 LOG = HERE / "wa_pass.log"
 
@@ -69,22 +68,18 @@ def main() -> None:
 
 
 def _next_sleep(started: float) -> float:
-    """Every 2h normally. While join-all is on (kill switch off, 08-23 IL,
-    today's join cap not reached), come back in 5 min - that also catches the
-    phone being plugged back in. At night it falls back to 2h, so the first
-    daytime pass may start up to 2h after 08:00. Once the cap is used up the
-    5-min passes could join nothing; they only woke the screen (measured
-    2026-10-23: a 107s pass every 7 min from mid-afternoon to 23:00)."""
+    """Every 2h normally. While join-all has a join left today, come back when
+    wa_phone says the next one is due (its random gap / break / sheet-rate
+    schedule) - sooner than 2h, never a fixed 5-min poll: those only woke the
+    screen (measured 2026-10-23: a 107s pass every 7 min until 23:00). Nothing
+    left today (capped, throttled, night, no targets) falls back to 2h."""
     try:
         import db
-        from wa_phone import BURST_DAILY_CAP, BURST_HOURS, IL
+        from wa_phone import next_join_at
         conn = db.connect()
-        now = datetime.now(IL)
-        capped = (db.kv_get(conn, "wa_join_day", "") == now.date().isoformat()
-                  and int(db.kv_get(conn, "wa_join_count", "0") or 0) >= BURST_DAILY_CAP)
-        if (db.kv_get(conn, "wa_join_all", "") and not db.kv_get(conn, "wa_phone_killed", "")
-                and BURST_HOURS[0] <= now.hour < BURST_HOURS[1] and not capped):
-            return BURST_RETRY
+        at = next_join_at(conn)
+        if at is not None:
+            return max(60, min(INTERVAL - (time.time() - started), at - time.time()))
     except Exception as e:
         _log(f"kv read failed: {e}")
     return max(60, INTERVAL - (time.time() - started))

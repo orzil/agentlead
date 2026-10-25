@@ -765,6 +765,27 @@ Same day, later:
   which groups we are in. Open: 11 groups (mostly community sub-groups with reset links) are not
   reachable; "קרא עוד" tap not built (0 seen; notification copies are whole).
 
+## 2026-10-25: the join list ran dry - find relevant groups, join ~50/day at a human pace
+- **Joins stopped (0 on 10-25):** the night list went 50 -> 12 -> 12 -> 8 -> 0. Pool 2,143 live,
+  360 rated a night, 0 selected: the strong names were all tried, directory seeds were read once
+  ever, and a name the LLM left out of its reply was stored as 0 forever. Since 10-20 every message
+  that passed the gate came from founder / AI-builder / work-passing groups; general tech chats
+  and job boards: 0 of ~200. **Or: relevant only, up to 50/day** (fewer on a thin day).
+- **wa_night:** omitted names stay NULL (re-asked), 60-name LLM batches (~600/night), directory
+  seeds re-crawled every 7 days (kv `wa_night_seed_at`), queue/done trims keep arrival order
+  instead of alphabetical, +15 client-side queries.
+- **wa_phone pace:** see CLAUDE.md (10-18 min gaps, breaks, 42-50 cap, <=12 sheets/h, throttle
+  screen -> 24h stop + 2 half-cap days, post-join chat visit). Simulated: 45-50 joins 08:27-22:29,
+  min gap 10 min. `wa_loop` now sleeps until `next_join_at()`. Join-all re-arms on any untried target.
+- **Descriptions:** each joined group's description is read once (3/pass) for invite links.
+- **Communities (probed, not built):** the Communities tab -> community header shows
+  "קבוצות שזמינות להצטרפותך" rows (`name`, status "בקשת הצטרפות", no invite code). Our communities
+  are off-target (IITM cohort, AgTech, Coding, Modiin Tech, משרות מהבית, ACM) - build the
+  tap-to-request flow once a good one (e.g. GenAI Israel) is joined.
+- **Hand research:** 3 web-research agents (work-passing IL, founders/business owners, AI
+  builders/CV) -> `wa_phone.py --add-targets` (priority -3000), codes appended to
+  `wa_research_links.txt`.
+
 ## Open items
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:
   the night crawl (Community sister-groups + group-description invite links). It needs live screens

@@ -233,7 +233,12 @@ first. The link is USB first, then the Wi-Fi address in the gitignored `.adb_wif
 reboot loses it, so re-run `--wifi-setup`. `could not get idle state` that survives a relaunch
 is cleared only by `am force-stop` (2026-10-21), so `dump()`'s last retry does that. Invite links pasted inside groups are queued
 (`found_via='in_group'`) and vetted on the join sheet; `whatsapp_tried.txt` (codes only) tells the
-cloud hunt which groups the phone already tried. `--join-all on` bursts joins (Or's call). Joined groups
+cloud hunt which groups the phone already tried. `--join-all on` bursts joins (Or's call), re-armed by any
+untried target. **Join pace (2026-10-25):** up to ~47/day spread 08:00-22:30 IL - random 10-18 min gaps,
+a 30-60 min break every 8-12 joins, a 42-50 daily cap, <=12 invite sheets/hour, a 20-60 s pause after a
+skipped sheet, a short chat visit after each join. A "try again later" screen (`THROTTLE_TEXT_RE`) stops
+joins 24h and halves the cap for 2 days. `wa_loop` sleeps until `next_join_at()`; never back to a fixed
+5-min poll. Each joined group's description is read once for sister-group links. Joined groups
 matching `WA_SKIP_GROUP_RE` are not read (full-time feeds); job cards there gate as full-time and
 are dropped (full-time posts no longer become outbound prospects: `OUTBOUND_FULLTIME=0`, 2026-10-22). The phone pass also runs the local outbound batch
 (the gitignored `agencies_il.jsonl` drip). `wa_night --focus client` hunts
