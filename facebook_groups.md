@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-25T19:29:54+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-25T22:00:05+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1188)
+## Not yet probed (1191)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -416,6 +416,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `foundersnetwork` (found via ddg)
 - `foundersspace` (found via config)
 - `findingsuvfounders` (found via ddg)
+- `freimitshopify` (found via ddg)
 - `gamedev` (found via ddg)
 - `588730763335326` (found via ddg)
 - `525026358915707` (found via ddg)
@@ -510,6 +511,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1371381124945627` (found via ddg)
 - `667291046350388` (found via ddg)
 - `1017052997642628` (found via ddg)
+- `639560419215861` (found via ddg)
 - `shopifyowner` (found via ddg)
 - `shopifystoreowner` (found via ddg)
 - `2090005924981482` (found via ddg)
@@ -1090,6 +1092,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `founderscanada` (found via ddg)
 - `803297649286641` (found via ddg)
 - `1024387628004281` (found via ddg)
+- `fairedudropshipping` (found via ddg)
 - `fivemserverdevelopmenthelp2025` (found via leads_db)
 - `gtapreneurs` (found via ddg)
 - `918031175736092` (found via ddg)
