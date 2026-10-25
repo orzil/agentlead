@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-25T08:02:42+00:00",
- "count": 1170,
+ "generated": "2026-10-25T19:29:54+00:00",
+ "count": 1175,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1155,6 +1155,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1266694137317829",
+   "name": "Digital Marketing & Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-25T10:16:39+00:00",
    "last_checked": null
   },
   {
@@ -3390,6 +3405,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-26T02:26:11+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "gowpdigitalagencyowners",
+   "name": "Digital Agency Owners Community | Helping agencies grow and scale",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-25T10:16:39+00:00",
    "last_checked": null
   },
   {
@@ -8613,6 +8643,21 @@
    "last_checked": null
   },
   {
+   "slug": "1048273742930693",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-25T19:29:54+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1050679009595609",
    "name": "Integromat (Make), n8n & Zapier Community",
    "status": "pending",
@@ -10758,6 +10803,21 @@
    "last_checked": null
   },
   {
+   "slug": "257230967082904",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-25T15:30:43+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "262947785476285",
    "name": null,
    "status": "pending",
@@ -12735,6 +12795,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "652595047199427",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-25T15:30:43+00:00",
    "last_checked": null
   },
   {
