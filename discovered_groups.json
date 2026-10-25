@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-25T00:05:58+00:00",
- "count": 1165,
+ "generated": "2026-10-25T02:51:16+00:00",
+ "count": 1167,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -4563,6 +4563,21 @@
    "last_checked": null
   },
   {
+   "slug": "1499731707484113",
+   "name": "Coaches, Consultants & Entrepreneurs",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-25T02:51:14+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1516479358394352",
    "name": "India Startups and Businesses",
    "status": "pending",
@@ -6735,6 +6750,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T21:00:06+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "coaches360",
+   "name": "Coaches, Consultants & Entrepreneurs",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-25T02:51:14+00:00",
    "last_checked": null
   },
   {
