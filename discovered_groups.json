@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-25T02:51:16+00:00",
- "count": 1167,
+ "generated": "2026-10-25T08:02:42+00:00",
+ "count": 1170,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -525,6 +525,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T23:40:34+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "3236492669990110",
+   "name": "Digital Marketing Agency Owners- Hiring & Support",
+   "status": "pending",
+   "relevance": 3,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-25T08:02:40+00:00",
    "last_checked": null
   },
   {
@@ -2010,6 +2025,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-13T02:44:06+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "357504715495430",
+   "name": "Marketing Agency Owner Masterminds",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-25T08:02:40+00:00",
    "last_checked": null
   },
   {
@@ -3855,6 +3885,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T23:29:58+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smmaagencyowners",
+   "name": "SMMA - Social Media Marketing Agency Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-25T08:02:40+00:00",
    "last_checked": null
   },
   {

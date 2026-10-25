@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-25T02:51:16+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-25T08:02:42+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1180)
+## Not yet probed (1183)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -90,6 +90,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `694872252765229` (found via ddg)
 - `542314903206706` (found via ddg)
 - `1149887430103695` (found via ddg)
+- `3236492669990110` (found via ddg)
 - `872702652095435` (found via ddg)
 - `2109860309355224` (found via ddg)
 - `e4nepal` (found via ddg)
@@ -193,6 +194,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `LABusinessOwners` (found via ddg)
 - `makenthusiasts` (found via ddg)
 - `marketing.agency.automation.secrets` (found via ddg)
+- `357504715495430` (found via ddg)
 - `marketingagencyowners` (found via ddg)
 - `maopublic` (found via ddg)
 - `2978347045629927` (found via ddg)
@@ -214,6 +216,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `103362243079109` (found via ddg)
 - `agencyownerlab` (found via ddg)
 - `1738599183094782` (found via ddg)
+- `smmaagencyowners` (found via ddg)
 - `1290241845505841` (found via ddg)
 - `562631543884434` (found via ddg)
 - `4808168705943904` (found via ddg)
