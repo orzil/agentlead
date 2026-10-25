@@ -23,3 +23,5 @@ getjobss
 jobforpr
 jobfortm
 machinelearning_deeplearning
+neuro_channel
+newhrvacancies
