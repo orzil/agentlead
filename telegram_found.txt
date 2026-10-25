@@ -25,3 +25,8 @@ jobfortm
 machinelearning_deeplearning
 neuro_channel
 newhrvacancies
+py_interview_lib
+py_problems_lib
+pyproglib
+python53
+rabbiyaronreuvenrussian
