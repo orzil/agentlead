@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-25T22:00:05+00:00",
- "count": 1178,
+ "generated": "2026-10-26T00:09:39+00:00",
+ "count": 1180,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5508,6 +5508,21 @@
    "last_checked": null
   },
   {
+   "slug": "507556627295896",
+   "name": "n8n Business Automation Australia",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T00:09:37+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "525026358915707",
    "name": "Handyman Business Owners: Trade Talk & Business Growth | Anyone using ...",
    "status": "pending",
@@ -7515,6 +7530,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T03:45:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "n8nautomationenthusiasts",
+   "name": "n8n Automation Enthusiasts",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T00:09:37+00:00",
    "last_checked": null
   },
   {
