@@ -32,3 +32,4 @@ python53
 rabbiyaronreuvenrussian
 remotegeekjob
 roboticsjobs
+sqlspecialist
