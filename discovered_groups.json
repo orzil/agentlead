@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-26T02:49:37+00:00",
- "count": 1180,
+ "generated": "2026-10-26T08:24:54+00:00",
+ "count": 1181,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -2310,6 +2310,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T00:59:46+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "605226338479206",
+   "name": "THINKAIWORKS AI AUTOMATION (N8N, Zapier, Make",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T08:24:52+00:00",
    "last_checked": null
   },
   {
