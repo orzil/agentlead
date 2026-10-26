@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-26T08:24:54+00:00",
- "count": 1181,
+ "generated": "2026-10-26T21:29:40+00:00",
+ "count": 1213,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -15,7 +15,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-10-19T09:36:40+00:00"
+   "last_checked": "2026-10-26T09:28:46+00:00"
   },
   {
    "slug": "352958686292104",
@@ -45,7 +45,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-10-19T09:37:08+00:00"
+   "last_checked": "2026-10-26T09:29:13+00:00"
   },
   {
    "slug": "1162970365658943",
@@ -1155,6 +1155,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T18:39:41+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1254334341889540",
+   "name": "GoHighLevel & Agency Owners | Facebook - Meta Business Suite",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T21:22:50+00:00",
    "last_checked": null
   },
   {
@@ -2883,6 +2898,21 @@
    "last_checked": null
   },
   {
+   "slug": "aiautomationsforbusiness",
+   "name": "AI Automations For Business",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T21:22:50+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "aibusinessowners",
    "name": "AI For Business Owners: How To Deploy AI In Your Business ...",
    "status": "pending",
@@ -3585,6 +3615,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-17T21:29:01+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "joinecommercegrowth",
+   "name": "Ecommerce Growth for Store Owners",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:27+00:00",
    "last_checked": null
   },
   {
@@ -6273,6 +6318,21 @@
    "last_checked": null
   },
   {
+   "slug": "EntrepreneurEmpowermentMastermind",
+   "name": "Entrepreneur Empowerment",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:37+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "FounderNation",
    "name": "Founder Nation UK",
    "status": "pending",
@@ -7023,6 +7083,21 @@
    "last_checked": null
   },
   {
+   "slug": "entrepreneurpwrnetwork",
+   "name": "Entrepreneur Power Network",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:37+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "entrepreneurs.israel",
    "name": "יזמים למען יזמים",
    "status": "pending",
@@ -7065,6 +7140,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-21T08:30:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "entrepreneurssuccessbuildershub",
+   "name": "Entrepreneurs Success Builders Hub",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:37+00:00",
    "last_checked": null
   },
   {
@@ -7695,6 +7785,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T22:28:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "osghub",
+   "name": "Entrepreneurs Success Hub",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:37+00:00",
    "last_checked": null
   },
   {
@@ -8643,6 +8748,21 @@
    "last_checked": null
   },
   {
+   "slug": "1026009203843377",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:26+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1026867278991606",
    "name": "Coaches, Consultants & Course Creators Help, Hiring and Support",
    "status": "pending",
@@ -9183,6 +9303,21 @@
    "last_checked": null
   },
   {
+   "slug": "1333509977091507",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:26+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "135160182979507",
    "name": null,
    "status": "pending",
@@ -9240,6 +9375,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-12T11:20:37+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1371486725099827",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:25:00+00:00",
    "last_checked": null
   },
   {
@@ -9513,6 +9663,21 @@
    "last_checked": null
   },
   {
+   "slug": "1489599893271194",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:25:00+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "149984563348738",
    "name": null,
    "status": "pending",
@@ -9753,6 +9918,21 @@
    "last_checked": null
   },
   {
+   "slug": "1619063708419901",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:26+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1622740769010505",
    "name": "Amazon FBA Sellers Community",
    "status": "pending",
@@ -9933,6 +10113,21 @@
    "last_checked": null
   },
   {
+   "slug": "173750747824373",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:26+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1744966859135739",
    "name": null,
    "status": "pending",
@@ -9975,6 +10170,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "175225286146178",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:26+00:00",
    "last_checked": null
   },
   {
@@ -10065,6 +10275,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-08T04:07:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1833393350244670",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:25:00+00:00",
    "last_checked": null
   },
   {
@@ -10458,6 +10683,21 @@
    "last_checked": null
   },
   {
+   "slug": "2111811303056232",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:25:00+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2128494490777624",
    "name": null,
    "status": "pending",
@@ -10578,6 +10818,21 @@
    "last_checked": null
   },
   {
+   "slug": "2210352085",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:26+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2211686475827801",
    "name": null,
    "status": "pending",
@@ -10635,6 +10890,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:29:49+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "22831556930",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:25:00+00:00",
    "last_checked": null
   },
   {
@@ -11478,6 +11748,21 @@
    "last_checked": null
   },
   {
+   "slug": "3214794595406679",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T17:49:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "324538653155758",
    "name": null,
    "status": "pending",
@@ -11700,6 +11985,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T19:36:40+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "377768309042171",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:26+00:00",
    "last_checked": null
   },
   {
@@ -12648,6 +12948,21 @@
    "last_checked": null
   },
   {
+   "slug": "56297091943",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:25:00+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "567281480430235",
    "name": null,
    "status": "pending",
@@ -12660,6 +12975,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:33:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "570723630270488",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:25:00+00:00",
    "last_checked": null
   },
   {
@@ -13668,6 +13998,21 @@
    "last_checked": null
   },
   {
+   "slug": "855894022519114",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T17:49:45+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "860513401695427",
    "name": "Coaches, Consultants & Service Providers Group",
    "status": "pending",
@@ -13935,6 +14280,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-31T10:11:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "968618959649949",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:25:00+00:00",
    "last_checked": null
   },
   {
@@ -14418,6 +14778,21 @@
    "last_checked": null
   },
   {
+   "slug": "ShopifyStorePros",
+   "name": "Ecom Sellers",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:27+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "Slovio.Community",
    "name": null,
    "status": "pending",
@@ -14880,6 +15255,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-05T10:53:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "bciboardroom",
+   "name": "THE BOARDROOM",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:37+00:00",
    "last_checked": null
   },
   {
@@ -15573,6 +15963,21 @@
    "last_checked": null
   },
   {
+   "slug": "encome",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:25:00+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "entreprenellehub",
    "name": "Entreprenelle Hub",
    "status": "pending",
@@ -15585,6 +15990,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-05T09:55:32+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "evolutionunleashedai",
+   "name": "Custom GPT Builders: One Folder Might Be Smarter",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T11:37:16+00:00",
    "last_checked": null
   },
   {
@@ -16863,6 +17283,21 @@
    "last_checked": null
   },
   {
+   "slug": "revopoint3dofficial",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:26+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "rv.wordle.share",
    "name": null,
    "status": "pending",
@@ -17193,6 +17628,36 @@
    "last_checked": null
   },
   {
+   "slug": "startyourhvacbusiness",
+   "name": "Your HVAC Business: Set-up, Start-up, and Beyond!",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:37+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "stopgangstalking",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:26+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "superface.marketing.digital",
    "name": "שיווק, דיגיטל, ומדיה חברתית",
    "status": "pending",
@@ -17250,6 +17715,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-01T03:42:47+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "tacomapolitics",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-26T09:28:26+00:00",
    "last_checked": null
   },
   {
