@@ -538,8 +538,63 @@ def surf_dirs(conn, client_factory) -> int:
     return new
 
 
+# israelgroups.com publishes its whole directory as one JSON file (6,508 groups,
+# 2,746 WhatsApp, 2026-10-26). Almost all of it is rides, travel, city and job-board
+# groups, so a name must carry a work/AI word and the junk categories are dropped
+# before anything is stored; the LLM pass then rates what is left.
+IG_URL = "https://israelgroups.com/data/groups.json"
+IG_DAYS = 7
+IG_DROP_CATS = {"education", "travel", "religion", "dating", "shopping", "yad2", "links",
+                "food", "health", "sports", "realestate", "parenting", "gaming", "pets",
+                "fashion", "music", "cars", "art", "entertainment", "news", "politics", "crypto"}
+IG_ON_TOPIC_RE = re.compile(
+    r"(\bAI\b|בינה מלאכותית|פרילנס|יזמ|סטארט|startup|founder|מפתח|developer|אוטומצי|automation"
+    r"|n8n|\bdata\b|דאטה|בעלי עסקים|עצמאי|saas|no-?code|בניית אתרים|\bweb|פיתוח|תוכנה|python"
+    r"|machine learning|ניהול מוצר|ראייה ממוחשבת|computer vision)", re.IGNORECASE)
+IG_NOISE_RE = re.compile(
+    r"(בהוראת|הוראה|מורים|מורי\b|בכיתה|תלמיד|לבתי ה?ס|ממלכתי|יסודי|חינוך|גילאי|ג.וניור|junior"
+    r"|סטודנט|משרות|דרושים|תמיכה טכנית|קישורים|פרסום|דרופשיפינג|כסף באינטרנט|הזדמנות|קידום"
+    r"|דילים|זול|aliexpress"
+    # the Education Ministry's "AI in <school subject>" teacher groups
+    r"|וובינר|webinar|ספרות|אזרחות|ביולוגיה|גאוגרפיה|מוזיקה|מחשבת|תרבות|מוט.ל|קולנוע)",
+    re.IGNORECASE)
+
+
+def surf_israelgroups(conn, client_factory) -> int:
+    """Weekly: the israelgroups.com JSON, filtered to work/AI names, stored live
+    with their names (no chat.whatsapp.com preview needed)."""
+    import db
+    import discover_whatsapp_groups as wa
+    import httpx
+    from datetime import datetime, timedelta, timezone
+    stale = (datetime.now(timezone.utc) - timedelta(days=IG_DAYS)).isoformat()
+    if db.kv_get(conn, "wa_night_ig_at", "") > stale:
+        return 0
+    r = httpx.get(IG_URL, headers={"User-Agent": config.USER_AGENT}, timeout=60,
+                  follow_redirects=True)
+    r.raise_for_status()
+    new = 0
+    for it in r.json().get("items", []):
+        m = wa.WA_INVITE_RE.search(it.get("u") or "")
+        name = (it.get("n") or "").strip()
+        cat = it.get("c") or ""
+        if (not m or it.get("p") != "whatsapp" or cat.startswith("jobs_") or cat in IG_DROP_CATS
+                or not IG_ON_TOPIC_RE.search(name) or IG_NOISE_RE.search(name)):
+            continue
+        relevance, region = wa._score(name)
+        cur = conn.execute(
+            "INSERT OR IGNORE INTO whatsapp_groups (code, url, name, status, relevance, region,"
+            " found_via, first_seen) VALUES (?, ?, ?, 'live', ?, ?, 'israelgroups', ?)",
+            (m.group(1), f"https://chat.whatsapp.com/{m.group(1)}", name, relevance, region,
+             datetime.now(timezone.utc).isoformat()))
+        new += cur.rowcount
+    conn.commit()
+    db.kv_set(conn, "wa_night_ig_at", datetime.now(timezone.utc).isoformat())
+    return new
+
+
 SURFACES = {"reddit": surf_reddit, "github": surf_github, "telegram": surf_telegram,
-            "ddg": surf_ddg, "dirs": surf_dirs}
+            "ddg": surf_ddg, "dirs": surf_dirs, "israelgroups": surf_israelgroups}
 
 
 def _save_tg_seen(conn) -> int:

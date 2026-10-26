@@ -786,6 +786,23 @@ Same day, later:
   builders/CV) -> `wa_phone.py --add-targets` (priority -3000), codes appended to
   `wa_research_links.txt`.
 
+## 2026-10-26: join backlog 62 -> 193
+
+- **The phone was unplugged 08:55-19:44**, so only 1 join happened that day. `wa_loop` retried every ~80 s while it was unreachable. That is harmless, but it is log noise.
+- **Second research round:** 3 agents found 211 links, and 140 relevant ones were queued with `--add-targets`:
+  - Israel business and founder groups, including the IT chamber's Data & AI, digital health and smart-industry groups;
+  - AI and industry communities;
+  - international founder and AI-builder groups (INSEAD AI, Data & AI Product London, AI Underground Dubai, Networx London and others).
+
+  Dropped: running clubs, French/Spanish/Portuguese groups, course groups and event-only groups. The codes are in `wa_research_links.txt`. The names are in the gitignored `whatsapp_research_2026-10-26.txt`.
+- **No public WhatsApp groups exist** for CV, medical imaging, drones, agritech, GIS or BI. Those communities are on Meetup, Discord and Facebook only.
+- **New night surface `israelgroups`** (weekly): reads `israelgroups.com/data/groups.json`, keeps names with a work or AI word, and drops junk categories and teacher groups. Only about 7 of 2,746 WhatsApp groups pass today, so it exists to catch future additions. The research round had already taken the good ones.
+- **Best research sources:**
+  - Meetup group descriptions, via its GraphQL search;
+  - Luma event descriptions and calendars;
+  - linktr.ee pages;
+  - the community pages of israel-it.org (the Israel Chamber of Information Technology).
+
 ## Open items
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:
   the night crawl (Community sister-groups + group-description invite links). It needs live screens
