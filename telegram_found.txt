@@ -30,3 +30,5 @@ py_problems_lib
 pyproglib
 python53
 rabbiyaronreuvenrussian
+remotegeekjob
+roboticsjobs
