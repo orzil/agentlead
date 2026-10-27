@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-27T08:34:36+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-27T21:09:40+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1229)
+## Not yet probed (1230)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -349,8 +349,10 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `aiagentsforbusiness` (found via ddg)
 - `chatgptpromptsandaitools` (found via ddg)
 - `aieducatortools` (found via ddg)
+- `2684404094914030` (found via leads_db)
 - `aifire.co` (found via ddg)
 - `aiprompthouse` (found via ddg)
+- `398239835935010` (found via ddg)
 - `aiforbeginners` (found via ddg)
 - `aiforconstructioncompanies` (found via ddg)
 - `698593531630485` (found via leads_db)
@@ -1033,7 +1035,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2494279667287246` (found via reddit_search)
 - `aitoolsandpromptsthatactuallywork` (found via ddg)
 - `296690297895894` (found via leads_db)
-- `2684404094914030` (found via leads_db)
 - `votel` (found via leads_db)
 - `vibecodinglife` (found via leads_db)
 - `httpsmaosim1991.wixsite.compremierisrael` (found via leads_db)

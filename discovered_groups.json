@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-27T08:34:36+00:00",
- "count": 1216,
+ "generated": "2026-10-27T21:09:40+00:00",
+ "count": 1217,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5133,6 +5133,21 @@
    "last_checked": null
   },
   {
+   "slug": "2684404094914030",
+   "name": "AI Engineering Community | Please anyone knows about AI ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-20T10:22:57+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2687952944937992",
    "name": "Early-Stage Founders Network (Verified)",
    "status": "pending",
@@ -5475,6 +5490,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-14T23:44:14+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "398239835935010",
+   "name": "AI Uncensored | This group is dedicated to all things Artificial ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-27T09:32:46+00:00",
    "last_checked": null
   },
   {
@@ -11220,21 +11250,6 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
-   "last_checked": null
-  },
-  {
-   "slug": "2684404094914030",
-   "name": null,
-   "status": "pending",
-   "relevance": 0,
-   "region": null,
-   "found_via": "leads_db",
-   "activity": null,
-   "in_rotation": 0,
-   "posts_seen": 0,
-   "gate_passed": 0,
-   "scrapes": 0,
-   "first_seen": "2026-10-20T10:22:57+00:00",
    "last_checked": null
   },
   {
