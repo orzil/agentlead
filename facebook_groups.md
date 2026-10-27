@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-26T21:29:40+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-27T00:57:37+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1226)
+## Not yet probed (1228)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -1100,6 +1100,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `agencysaaslaunch` (found via ddg)
 - `869864385574175` (found via ddg)
 - `272952645069089` (found via ddg)
+- `chatgptinteractivecommunity` (found via ddg)
 - `chatgpt` (found via ddg)
 - `claudeprompts` (found via ddg)
 - `1698653417237262` (found via ddg)
@@ -1190,6 +1191,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `bciboardroom` (found via ddg)
 - `TechForTechs` (found via ddg)
 - `texassemitrucksandtrailers` (found via ddg)
+- `1673092681183953` (found via ddg)
 - `190482421294295` (found via ddg)
 - `buildxact` (found via ddg)
 - `thecommunityhub` (found via ddg)

@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-26T21:29:40+00:00",
- "count": 1213,
+ "generated": "2026-10-27T00:57:37+00:00",
+ "count": 1215,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -10008,6 +10008,21 @@
    "last_checked": null
   },
   {
+   "slug": "1673092681183953",
+   "name": "That's So ChatGPTea ☕️ (Everything ChatGPT)",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-27T00:56:57+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1683018152704933",
    "name": null,
    "status": "pending",
@@ -15555,6 +15570,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-29T02:14:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "chatgptinteractivecommunity",
+   "name": "ChatGPT Commubication",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-27T00:56:57+00:00",
    "last_checked": null
   },
   {
