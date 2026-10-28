@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-27T21:09:40+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-28T00:33:37+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1230)
+## Not yet probed (1232)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -1069,6 +1069,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `revopoint3dofficial` (found via reddit_search)
 - `3214794595406679` (found via leads_db)
 - `855894022519114` (found via leads_db)
+- `629437286313102` (found via leads_db)
+- `1311888847197591` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
