@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-28T03:39:31+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-28T09:14:04+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1232)
+## Not yet probed (1235)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -67,6 +67,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `facebook.comgroupsaiforsmallbusinessowners` (found via ddg)
 - `aiforsmallbusinessgrowth` (found via ddg)
 - `1368272169970017` (found via ddg)
+- `californiaentrepreneursstartups` (found via ddg)
 - `datin1` (found via ddg)
 - `810244532098547` (found via ddg)
 - `losangelesentrepreneursstartups` (found via ddg)
@@ -153,6 +154,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `automationcommunity.bd` (found via ddg)
 - `279906104787742` (found via ddg)
 - `580118425856327` (found via ddg)
+- `CaliforniaBusinessSavvyEntrepreneursAndStartups` (found via ddg)
 - `callcentreprojects` (found via ddg)
 - `canada.startup.jobs` (found via ddg)
 - `chatbotjobs` (found via config)
@@ -1100,6 +1102,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
 - `cxforumsgroup` (found via ddg)
+- `1910783809822687` (found via ddg)
 - `1429763737480567` (found via ddg)
 - `agencysaaslaunch` (found via ddg)
 - `869864385574175` (found via ddg)
