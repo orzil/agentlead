@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-28T09:14:04+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-28T21:33:03+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1235)
+## Not yet probed (1237)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -1073,6 +1073,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `855894022519114` (found via leads_db)
 - `629437286313102` (found via leads_db)
 - `1311888847197591` (found via leads_db)
+- `2327375611076477` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -1193,6 +1194,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupUK` (found via ddg)
 - `1435491713362512` (found via ddg)
 - `SuppliersManufacturers` (found via ddg)
+- `2211430848` (found via ddg)
 - `sydneybuyingandsellin` (found via ddg)
 - `sydneymumsgroup` (found via ddg)
 - `bciboardroom` (found via ddg)
