@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-29T01:38:31+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-29T03:59:26+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1238)
+## Not yet probed (1241)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -347,6 +347,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `115698605766601` (found via ddg)
 - `1217610615947693` (found via ddg)
 - `506523693145809` (found via ddg)
+- `allremotejobs` (found via ddg)
 - `1119683669324970` (found via ddg)
 - `aiagentsforbusiness` (found via ddg)
 - `chatgptpromptsandaitools` (found via ddg)
@@ -419,6 +420,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `osghub` (found via ddg)
 - `1ib.marioschaefer.032` (found via ddg)
 - `222801067848068` (found via ddg)
+- `europeanfoundernetwork` (found via ddg)
 - `ESC.STARTUS` (found via ddg)
 - `findyourcofounder` (found via config)
 - `RosenbergMeansBusiness` (found via ddg)
@@ -1075,6 +1077,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `629437286313102` (found via leads_db)
 - `1311888847197591` (found via leads_db)
 - `2327375611076477` (found via leads_db)
+- `2283669242378939` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
