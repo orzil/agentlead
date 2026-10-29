@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-28T21:33:03+00:00",
- "count": 1224,
+ "generated": "2026-10-29T01:38:31+00:00",
+ "count": 1225,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -6645,6 +6645,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-20T22:10:09+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "StartupNetworkIndia",
+   "name": "Startup Network India",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-29T01:38:00+00:00",
    "last_checked": null
   },
   {

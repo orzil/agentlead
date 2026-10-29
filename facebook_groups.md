@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-28T21:33:03+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-29T01:38:31+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1237)
+## Not yet probed (1238)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -549,6 +549,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `startupsofindiacommunity` (found via ddg)
 - `242109094001690` (found via ddg)
 - `StartupIrelandClub` (found via ddg)
+- `StartupNetworkIndia` (found via ddg)
 - `startupincanada` (found via ddg)
 - `startupfrat` (found via ddg)
 - `startupsbusinessind` (found via ddg)
