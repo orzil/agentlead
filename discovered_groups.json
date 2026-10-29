@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-29T09:14:12+00:00",
- "count": 1228,
+ "generated": "2026-10-29T21:39:56+00:00",
+ "count": 1237,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1863,6 +1863,21 @@
    "last_checked": null
   },
   {
+   "slug": "262663949723327",
+   "name": "דרוש מתכנת לעבודה לפי פרוייקטים בצורה עצמאית. דרוש נסיון בפיתוח ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-29T21:39:53+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2709340372800064",
    "name": "GoHighLevel Agency Owners!",
    "status": "pending",
@@ -2265,6 +2280,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T18:58:24+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "557735016862777",
+   "name": "דרושים פרילנסרים קבלני משנה בכל התחומים בכל הארץ",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-29T17:52:15+00:00",
    "last_checked": null
   },
   {
@@ -4773,6 +4803,21 @@
    "last_checked": null
   },
   {
+   "slug": "1538071903164089",
+   "name": "פרילנסרים ישראל",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-29T17:52:15+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1540879694455843",
    "name": "Founders Connect UK",
    "status": "pending",
@@ -4995,6 +5040,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-10T07:41:00+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2090021601404911",
+   "name": "Remote Work & Online Jobs Worldwide",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-29T10:22:34+00:00",
    "last_checked": null
   },
   {
@@ -6450,6 +6510,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-05T02:33:55+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "IsraeliFreelancersUSA",
+   "name": "פרילנסרים ובעלי עסקים קטנים בארה\"ב",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-29T17:52:15+00:00",
    "last_checked": null
   },
   {
@@ -7980,6 +8055,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-17T22:51:34+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "remoteworkandfreelancejobopportunities",
+   "name": "Remote Work and Freelance Job Opportunities",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-29T10:22:34+00:00",
    "last_checked": null
   },
   {
@@ -10170,6 +10260,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1689553871337142",
+   "name": "דרוש מתכנת בקרים סימנס",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-29T21:39:53+00:00",
    "last_checked": null
   },
   {
@@ -13413,6 +13518,21 @@
    "last_checked": null
   },
   {
+   "slug": "641355638126397",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-29T21:33:25+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "652595047199427",
    "name": null,
    "status": "pending",
@@ -13935,6 +14055,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-05T10:53:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "775313484905684",
+   "name": "Work From Home - Job Seekers",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-29T10:22:34+00:00",
    "last_checked": null
   },
   {

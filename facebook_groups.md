@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-29T09:14:12+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-29T21:39:56+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1241)
+## Not yet probed (1250)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -309,6 +309,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `932457121284600` (found via ddg)
 - `ai.israel.official` (found via ddg)
 - `2920195654986279` (found via ddg)
+- `262663949723327` (found via ddg)
 - `1541377239216681` (found via ddg)
 - `773870394547175` (found via ddg)
 - `2323579111384503` (found via ddg)
@@ -321,6 +322,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `493890216609239` (found via ddg)
 - `1786020114969358` (found via ddg)
 - `freelancerneeded` (found via ddg)
+- `557735016862777` (found via ddg)
 - `automationisrael` (found via ddg)
 - `223303087850326` (found via ddg)
 - `freelancersautocadandmore` (found via ddg)
@@ -488,7 +490,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `inventivehub` (found via config)
 - `remotestartupmakers` (found via ddg)
 - `remotestartupjobs` (found via config)
+- `2090021601404911` (found via ddg)
 - `usremotenowhiring` (found via ddg)
+- `remoteworkandfreelancejobopportunities` (found via ddg)
 - `restaurantimage` (found via ddg)
 - `581853060030923` (found via ddg)
 - `192784851327609` (found via ddg)
@@ -645,6 +649,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `freelanceIL` (found via leads_db)
 - `1213894351964666` (found via ddg)
 - `hubvalley` (found via ddg)
+- `IsraeliFreelancersUSA` (found via ddg)
+- `1538071903164089` (found via ddg)
 - `107914806514702` (found via ddg)
 - `1496943943857797` (found via ddg)
 - `832763754922199` (found via ddg)
@@ -1078,6 +1084,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1311888847197591` (found via leads_db)
 - `2327375611076477` (found via leads_db)
 - `2283669242378939` (found via leads_db)
+- `641355638126397` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -1230,6 +1237,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `workfromwifi` (found via ddg)
 - `websitedesigningdevelopmentcompanyindia` (found via ddg)
 - `669886889110965` (found via ddg)
+- `775313484905684` (found via ddg)
 - `wunderbuilders` (found via ddg)
 - `startyourhvacbusiness` (found via ddg)
 - `zapierusercommunity` (found via ddg)
@@ -1261,6 +1269,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `7111013388975795` (found via ddg)
 - `2079238568790422` (found via leads_db)
 - `2786770884931764` (found via ddg)
+- `1689553871337142` (found via ddg)
 - `473051352513816` (found via ddg)
 - `748259480517030` (found via ddg)
 - `270931709946261` (found via ddg)
