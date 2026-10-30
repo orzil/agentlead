@@ -16,6 +16,7 @@ forallqa
 foranalysts
 forchiefs
 fordesigner
+forgamedev
 forhr
 forproducts
 forpython

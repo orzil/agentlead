@@ -1,6 +1,6 @@
 # WhatsApp groups to join (night hunt)
 
-*22 groups; tier A = strongest. Join by hand with the second phone.*
+*21 groups; tier A = strongest. Join by hand with the second phone.*
 
 | tier | lang | group | invite |
 |:---:|:---:|:---|:---|
@@ -12,7 +12,6 @@
 | B | HE | בעלי עסקים משווקים #2 • Digital-ID | https://chat.whatsapp.com/HkPWXAITNGF7wxeKQW3rx2 |
 | B | HE | הנכסים השקטים \| אוטומציה, לא מוטיבציה 🤖💰 | https://chat.whatsapp.com/ERYwZTXIlef4j8IbZE3Wl4 |
 | B | EN | Nexcarinner Freelance | https://chat.whatsapp.com/FuEkJM7uBqbC26GPpSscUO |
-| C | EN | BRISA - Berlin Robotics & Intelligent Systems Association | https://chat.whatsapp.com/BvV9jLjwbODKPyk6ALzPIO |
 | B | EN | Bali Startup & Tech - General Community Discussion | https://chat.whatsapp.com/GkG5rXQsBcfIBGuuJSkjxm |
 | C | EN | Free Founders' Club Chat (FFCC) | https://chat.whatsapp.com/H1rM3mqMFKDDn6bdPW805b |
 | B | EN | Leuven Startup Circle | https://chat.whatsapp.com/C743L7S5WIa80eJekkwoCJ |
