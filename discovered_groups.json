@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-30T01:41:07+00:00",
- "count": 1238,
+ "generated": "2026-10-30T04:00:41+00:00",
+ "count": 1239,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5310,6 +5310,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-07T09:40:37+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2779846762051712",
+   "name": "Flutter Israel Developers",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-30T04:00:38+00:00",
    "last_checked": null
   },
   {
