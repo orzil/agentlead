@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-29T21:39:56+00:00",
- "count": 1237,
+ "generated": "2026-10-30T01:41:07+00:00",
+ "count": 1238,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -4980,6 +4980,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-14T23:44:14+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1902241563347230",
+   "name": "Full Stack Developers Goodies - Israel",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-30T01:41:05+00:00",
    "last_checked": null
   },
   {

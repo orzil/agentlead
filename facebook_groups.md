@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-29T21:39:56+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-30T01:41:07+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1250)
+## Not yet probed (1251)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -434,6 +434,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `foundersspace` (found via config)
 - `findingsuvfounders` (found via ddg)
 - `freimitshopify` (found via ddg)
+- `1902241563347230` (found via ddg)
 - `gamedev` (found via ddg)
 - `588730763335326` (found via ddg)
 - `525026358915707` (found via ddg)
