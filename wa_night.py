@@ -593,8 +593,31 @@ def surf_israelgroups(conn, client_factory) -> int:
     return new
 
 
+WB_CDX = "https://web.archive.org/cdx/search/cdx"
+WB_PAGE = 3000     # archived invite URLs read per run; the cursor walks the whole index
+
+
+def surf_wayback(conn, client_factory) -> int:
+    """Invite codes the Internet Archive crawler already collected from public pages.
+    One plain GET to the CDX index, no search engine and no captcha. Most codes are
+    old; the normal validation step (og:title) throws the revoked ones away."""
+    import db
+    import httpx
+    off = int(db.kv_get(conn, "wa_night_wb_off", "0") or 0)
+    r = httpx.get(WB_CDX, params={"url": "chat.whatsapp.com/*", "fl": "original",
+                                  "collapse": "urlkey", "filter": "statuscode:200",
+                                  "limit": WB_PAGE, "offset": off},
+                  headers={"User-Agent": config.USER_AGENT}, timeout=90)
+    r.raise_for_status()
+    n_lines = len(r.text.split())
+    new = _add_codes(conn, r.text, "wayback")
+    db.kv_set(conn, "wa_night_wb_off", str(off + n_lines if n_lines >= WB_PAGE else 0))
+    return new
+
+
 SURFACES = {"reddit": surf_reddit, "github": surf_github, "telegram": surf_telegram,
-            "ddg": surf_ddg, "dirs": surf_dirs, "israelgroups": surf_israelgroups}
+            "ddg": surf_ddg, "dirs": surf_dirs, "israelgroups": surf_israelgroups,
+            "wayback": surf_wayback}
 
 
 def _save_tg_seen(conn) -> int:
