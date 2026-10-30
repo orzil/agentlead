@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-30T04:00:41+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-30T09:29:00+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1252)
+## Not yet probed (1256)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -309,7 +309,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `932457121284600` (found via ddg)
 - `ai.israel.official` (found via ddg)
 - `2920195654986279` (found via ddg)
+- `1100513970029408` (found via ddg)
 - `262663949723327` (found via ddg)
+- `1062226447164962` (found via ddg)
 - `1541377239216681` (found via ddg)
 - `773870394547175` (found via ddg)
 - `2323579111384503` (found via ddg)
@@ -611,6 +613,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `289118210401946` (found via ddg)
 - `1467120475073886` (found via ddg)
 - `Software.Developers.Israel` (found via ddg)
+- `1311913152868251` (found via ddg)
 - `5440649196012252` (found via ddg)
 - `705061861437260` (found via ddg)
 - `ellersmisrot` (found via ddg)
@@ -1294,6 +1297,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `smallbusinessesaregrowing` (found via ddg)
 - `shavit` (found via ddg)
 - `209262042417914` (found via ddg)
+- `new.nahariya` (found via ddg)
 - `186860244674907` (found via ddg)
 - `1417623821789515` (found via ddg)
 - `portalil` (found via ddg)

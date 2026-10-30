@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-30T04:00:41+00:00",
- "count": 1239,
+ "generated": "2026-10-30T09:29:00+00:00",
+ "count": 1243,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1038,6 +1038,21 @@
    "last_checked": null
   },
   {
+   "slug": "1062226447164962",
+   "name": "דרושים - עבודה מיידית",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-30T09:28:57+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1082974512753118",
    "name": "SaaS Founders Network",
    "status": "pending",
@@ -1050,6 +1065,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-12T11:22:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1100513970029408",
+   "name": "גדרה רחובות - לוח דרושים עבודה מהבית עסקים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-30T09:28:57+00:00",
    "last_checked": null
   },
   {
@@ -4590,6 +4620,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1311913152868251",
+   "name": "דרושים HelpDesk | IT | System",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-30T09:28:57+00:00",
    "last_checked": null
   },
   {
@@ -17175,6 +17220,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:32:36+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "new.nahariya",
+   "name": "פורום נהריה החדשה !",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-30T09:28:57+00:00",
    "last_checked": null
   },
   {
