@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-30T09:29:00+00:00",
- "count": 1243,
+ "generated": "2026-10-30T21:24:19+00:00",
+ "count": 1246,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -2445,6 +2445,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-20T01:36:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "636893419691641",
+   "name": "קהילת Ai בינה מלאכותית ישראל",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-30T21:11:19+00:00",
    "last_checked": null
   },
   {
@@ -5040,6 +5055,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-30T01:41:05+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "192374190866342",
+   "name": "Israel-US start up/ venture network - רשת סטארט אפ / יזמים",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-30T11:52:43+00:00",
    "last_checked": null
   },
   {
@@ -12000,6 +12030,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-21T08:12:44+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "315034838261817",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-30T17:26:54+00:00",
    "last_checked": null
   },
   {
