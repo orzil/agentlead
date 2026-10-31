@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-10-31T09:12:12+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-10-31T20:26:04+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1263)
+## Not yet probed (1267)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -100,6 +100,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1418563452142232` (found via ddg)
 - `agencybusinessowners` (found via ddg)
 - `1527705608867878` (found via ddg)
+- `4478714448882966` (found via ddg)
 - `216499291720732` (found via ddg)
 - `saasaitools` (found via ddg)
 - `331399459887663` (found via ddg)
@@ -192,6 +193,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `needwebsitedesignerordeveloper` (found via leads_db)
 - `903983456080142` (found via ddg)
 - `616668068847832` (found via ddg)
+- `629437286313102` (found via leads_db)
 - `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
 - `ITprojectOutsourcing` (found via ddg)
 - `144015363604936` (found via ddg)
@@ -286,6 +288,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `unfilteredagency` (found via ddg)
 - `342228509513052` (found via ddg)
 - `1496314008061319` (found via ddg)
+- `3101572833506911` (found via ddg)
 - `398294859512130` (found via ddg)
 - `ecommerce.entrepreneurs.us` (found via ddg)
 - `ecommerceentrepreneurs` (found via ddg)
@@ -446,6 +449,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1100802378915693` (found via ddg)
 - `freelancersrequired` (found via ddg)
 - `307912236406923` (found via ddg)
+- `1753244511523930` (found via ddg)
 - `businessowneraustralia` (found via ddg)
 - `theipg` (found via ddg)
 - `indiastartups` (found via ddg)
@@ -1089,7 +1093,6 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `revopoint3dofficial` (found via reddit_search)
 - `3214794595406679` (found via leads_db)
 - `855894022519114` (found via leads_db)
-- `629437286313102` (found via leads_db)
 - `1311888847197591` (found via leads_db)
 - `2327375611076477` (found via leads_db)
 - `2283669242378939` (found via leads_db)
@@ -1114,6 +1117,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `fbabeginners` (found via ddg)
 - `1002630209124759` (found via ddg)
 - `amazonfba` (found via ddg)
+- `112576118784350` (found via ddg)
 - `404280159946930` (found via ddg)
 - `661035522370697` (found via ddg)
 - `blackexpatsindubai` (found via ddg)
