@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-30T21:24:19+00:00",
- "count": 1246,
+ "generated": "2026-10-31T01:25:29+00:00",
+ "count": 1248,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -12258,6 +12258,21 @@
    "last_checked": null
   },
   {
+   "slug": "3347199695494901",
+   "name": "ChatGPT - ישראל הקהילה",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-31T01:24:43+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "338330086179568",
    "name": null,
    "status": "pending",
@@ -16605,6 +16620,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-10T15:22:54+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "friendbringsfriend",
+   "name": "חבר מביא חבר",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-31T01:24:43+00:00",
    "last_checked": null
   },
   {
