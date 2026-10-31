@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-31T03:45:13+00:00",
- "count": 1249,
+ "generated": "2026-10-31T09:12:12+00:00",
+ "count": 1250,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3585,6 +3585,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-25T10:16:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "graphic.designers.in.israel",
+   "name": "דרושים / משרות - עיצוב, מעצבים גרפיים, תקשורת חזותית, Ux, Ui | מחפשים ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-31T07:30:14+00:00",
    "last_checked": null
   },
   {
