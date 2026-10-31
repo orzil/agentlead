@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-31T01:25:29+00:00",
- "count": 1248,
+ "generated": "2026-10-31T03:45:13+00:00",
+ "count": 1249,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5835,6 +5835,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-29T02:14:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "540065381608725",
+   "name": "עבודות ביקנעם והסביבה דרושים יקנעם | ⚙️ מנהלים/ות צוות בסביבה יצרנית ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-10-31T02:52:32+00:00",
    "last_checked": null
   },
   {
