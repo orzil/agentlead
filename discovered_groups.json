@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-01T09:58:33+00:00",
- "count": 1254,
+ "generated": "2026-11-01T21:00:28+00:00",
+ "count": 1255,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -13740,6 +13740,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "640514310704403",
+   "name": "GHL Insiders - For Go HighLevel Users",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-01T10:50:16+00:00",
    "last_checked": null
   },
   {
