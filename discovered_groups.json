@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-02T10:27:02+00:00",
- "count": 1259,
+ "generated": "2026-11-02T23:57:06+00:00",
+ "count": 1283,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -15,7 +15,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-10-26T09:28:46+00:00"
+   "last_checked": "2026-11-02T11:33:41+00:00"
   },
   {
    "slug": "352958686292104",
@@ -45,7 +45,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-10-26T09:29:13+00:00"
+   "last_checked": "2026-11-02T11:34:09+00:00"
   },
   {
    "slug": "1162970365658943",
@@ -1470,6 +1470,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-18T01:37:07+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1638444529751821",
+   "name": "I have 2 clients looking for remote workers (1 each)",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T23:56:28+00:00",
    "last_checked": null
   },
   {
@@ -4845,6 +4860,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T23:40:34+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1439278313025951",
+   "name": "Software Development & OutSourcing Canada",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T23:56:28+00:00",
    "last_checked": null
   },
   {
@@ -9138,6 +9168,21 @@
    "last_checked": null
   },
   {
+   "slug": "1021632697900456",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:30:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1023653631013270",
    "name": null,
    "status": "pending",
@@ -10728,6 +10773,21 @@
    "last_checked": null
   },
   {
+   "slug": "178945218968968",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:30:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "17wBZ9RP4w",
    "name": null,
    "status": "pending",
@@ -11718,6 +11778,21 @@
    "last_checked": null
   },
   {
+   "slug": "2594679940975893",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:29:25+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "262947785476285",
    "name": null,
    "status": "pending",
@@ -11943,6 +12018,21 @@
    "last_checked": null
   },
   {
+   "slug": "2885391145170355",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:30:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "288970654518121",
    "name": null,
    "status": "pending",
@@ -12153,6 +12243,21 @@
    "last_checked": null
   },
   {
+   "slug": "314682737461542",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:30:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "3149120755345992",
    "name": "Travailler à Dubaï? echange francophone.",
    "status": "pending",
@@ -12348,6 +12453,21 @@
    "last_checked": null
   },
   {
+   "slug": "330368320722450",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:29:25+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "332087790866175",
    "name": null,
    "status": "pending",
@@ -12480,6 +12600,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-24T19:08:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "352719814919926",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:30:34+00:00",
    "last_checked": null
   },
   {
@@ -13263,6 +13398,21 @@
    "last_checked": null
   },
   {
+   "slug": "507312936993423",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:33:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "511333728510695",
    "name": "n8n (Community) - Free Zapier Alternative",
    "status": "pending",
@@ -13428,6 +13578,21 @@
    "last_checked": null
   },
   {
+   "slug": "540012408310498",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:30:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "547621527071988",
    "name": null,
    "status": "pending",
@@ -13440,6 +13605,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "548974998586256",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:30:34+00:00",
    "last_checked": null
   },
   {
@@ -14583,6 +14763,21 @@
    "last_checked": null
   },
   {
+   "slug": "839081586268714",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:30:34+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "851415561261142",
    "name": "Amazon FBA Sellers and Community",
    "status": "pending",
@@ -14775,6 +14970,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-26T02:26:11+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "919732611373456",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T21:13:18+00:00",
    "last_checked": null
   },
   {
@@ -15258,6 +15468,21 @@
    "last_checked": null
   },
   {
+   "slug": "LearningLatin",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:31:02+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "LoveMeSuperMekori",
    "name": "עסקים בצפון - הפניות, נטוורקינג , שיתופי פעולה, פרסום וקידום בדיגיטל",
    "status": "pending",
@@ -15468,6 +15693,21 @@
    "last_checked": null
   },
   {
+   "slug": "TiamatsTavern",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:33:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "TorontoCyclists",
    "name": null,
    "status": "pending",
@@ -15510,6 +15750,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-14T09:30:22+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "WhatisgoingoninRiversideCounty",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:30:34+00:00",
    "last_checked": null
   },
   {
@@ -16035,6 +16290,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-12T11:19:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "buscomingsemi",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:29:25+00:00",
    "last_checked": null
   },
   {
@@ -16683,6 +16953,21 @@
    "last_checked": null
   },
   {
+   "slug": "ffhmijobsnowhiring",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:29:25+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "fivemserverdevelopmenthelp2025",
    "name": "FiveM Server Development Help 2026 | Hi there,I am looking ...",
    "status": "pending",
@@ -17118,6 +17403,21 @@
    "last_checked": null
   },
   {
+   "slug": "kiaevownersusa",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:33:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "kiwihomebusiness",
    "name": "New Zealand Business",
    "status": "pending",
@@ -17310,6 +17610,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-02T07:33:12+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "michiganfreebies",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:29:25+00:00",
    "last_checked": null
   },
   {
@@ -17685,6 +18000,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-19T02:54:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "popdom",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:33:20+00:00",
    "last_checked": null
   },
   {
@@ -18498,6 +18828,21 @@
    "last_checked": null
   },
   {
+   "slug": "theresourcesa",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:33:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "thesouthafricanbusinessnetwork",
    "name": "The South African Business Network",
    "status": "pending",
@@ -18555,6 +18900,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:33:04+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "treasurevalleygamers",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T11:30:34+00:00",
    "last_checked": null
   },
   {

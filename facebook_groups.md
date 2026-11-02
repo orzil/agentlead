@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-02T10:27:02+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-02T23:57:06+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1272)
+## Not yet probed (1296)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -193,6 +193,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1581116555860881` (found via ddg)
 - `needwebsitedesignerordeveloper` (found via leads_db)
 - `903983456080142` (found via ddg)
+- `1638444529751821` (found via ddg)
 - `616668068847832` (found via ddg)
 - `629437286313102` (found via leads_db)
 - `elite.itandcallcenterprojectsoutsourcing` (found via ddg)
@@ -557,6 +558,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `sasmallbusinessnetwork` (found via ddg)
 - `smallbusinessnz24` (found via ddg)
 - `1374006380366953` (found via ddg)
+- `1439278313025951` (found via ddg)
 - `startupcaliforniaclub` (found via ddg)
 - `StartupDublinClub` (found via ddg)
 - `startupeurope` (found via ddg)
@@ -1101,6 +1103,28 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `315034838261817` (found via leads_db)
 - `sqaengineerjobs` (found via leads_db)
 - `1023653631013270` (found via leads_db)
+- `330368320722450` (found via reddit_search)
+- `buscomingsemi` (found via reddit_search)
+- `michiganfreebies` (found via reddit_search)
+- `2594679940975893` (found via reddit_search)
+- `ffhmijobsnowhiring` (found via reddit_search)
+- `352719814919926` (found via reddit_search)
+- `314682737461542` (found via reddit_search)
+- `178945218968968` (found via reddit_search)
+- `WhatisgoingoninRiversideCounty` (found via reddit_search)
+- `1021632697900456` (found via reddit_search)
+- `540012408310498` (found via reddit_search)
+- `2885391145170355` (found via reddit_search)
+- `treasurevalleygamers` (found via reddit_search)
+- `548974998586256` (found via reddit_search)
+- `839081586268714` (found via reddit_search)
+- `LearningLatin` (found via reddit_search)
+- `popdom` (found via reddit_search)
+- `kiaevownersusa` (found via reddit_search)
+- `theresourcesa` (found via reddit_search)
+- `507312936993423` (found via reddit_search)
+- `TiamatsTavern` (found via reddit_search)
+- `919732611373456` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
