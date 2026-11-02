@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-02T00:47:26+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-02T03:57:54+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1268)
+## Not yet probed (1272)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -180,6 +180,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ecommerceowner` (found via ddg)
 - `ecommercedropshipforstartup` (found via ddg)
 - `entrepreneursandbusinessownerscalifornia` (found via ddg)
+- `entrepreneursstartup` (found via ddg)
 - `EABOSA` (found via ddg)
 - `201748110567171` (found via ddg)
 - `NYCESN` (found via ddg)
@@ -1098,6 +1099,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2283669242378939` (found via leads_db)
 - `641355638126397` (found via leads_db)
 - `315034838261817` (found via leads_db)
+- `sqaengineerjobs` (found via leads_db)
+- `1023653631013270` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -1172,6 +1175,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `434751060047122` (found via ddg)
 - `insuranceagen` (found via ddg)
 - `1050679009595609` (found via ddg)
+- `junkremovalforbeginners` (found via ddg)
 - `lawfirmowners` (found via ddg)
 - `1598268047627604` (found via ddg)
 - `505933192026047` (found via ddg)

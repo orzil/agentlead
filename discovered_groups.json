@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-02T00:47:26+00:00",
- "count": 1255,
+ "generated": "2026-11-02T03:57:54+00:00",
+ "count": 1259,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3540,6 +3540,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T03:30:43+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "entrepreneursstartup",
+   "name": "Entrepreneurs Startup",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T01:19:09+00:00",
    "last_checked": null
   },
   {
@@ -9120,6 +9135,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-06T18:56:34+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1023653631013270",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T01:19:11+00:00",
    "last_checked": null
   },
   {
@@ -17058,6 +17088,21 @@
    "last_checked": null
   },
   {
+   "slug": "junkremovalforbeginners",
+   "name": "Junk Removal for Beginners",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T01:19:09+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "kakampinoy",
    "name": null,
    "status": "pending",
@@ -18240,6 +18285,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-05T10:53:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "sqaengineerjobs",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-02T01:19:11+00:00",
    "last_checked": null
   },
   {
