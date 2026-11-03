@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-03T10:24:20+00:00",
- "count": 1289,
+ "generated": "2026-11-03T22:13:50+00:00",
+ "count": 1291,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -6615,6 +6615,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-19T00:04:21+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "941214220044796",
+   "name": "Small Business Support Group Australia",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-03T22:11:56+00:00",
    "last_checked": null
   },
   {
@@ -16410,6 +16425,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T05:15:35+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "businessaustraliagroup",
+   "name": "Business Australia",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-03T22:11:56+00:00",
    "last_checked": null
   },
   {

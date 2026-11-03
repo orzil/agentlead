@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-03T10:24:20+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-03T22:13:50+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1302)
+## Not yet probed (1304)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -558,6 +558,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `singapore.startups.tech` (found via ddg)
 - `sasmallbusinessnetwork` (found via ddg)
 - `smallbusinessnz24` (found via ddg)
+- `941214220044796` (found via ddg)
 - `1374006380366953` (found via ddg)
 - `1439278313025951` (found via ddg)
 - `startupcaliforniaclub` (found via ddg)
@@ -1154,6 +1155,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `blackexpatsindubai` (found via ddg)
 - `britsindubai` (found via ddg)
 - `1025345130878473` (found via ddg)
+- `businessaustraliagroup` (found via ddg)
 - `BusinessBusinessBusiness` (found via ddg)
 - `254113251820121` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
