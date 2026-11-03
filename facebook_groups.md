@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-03T04:59:22+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-03T10:24:20+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1299)
+## Not yet probed (1302)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -256,6 +256,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `sbo.nz` (found via ddg)
 - `1143155100957548` (found via ddg)
 - `3418202234922142` (found via ddg)
+- `smallbusinessownersuk2020` (found via ddg)
 - `312322538374187` (found via ddg)
 - `1479200462154545` (found via ddg)
 - `socialmediaforsmallbusinessownersuk` (found via ddg)
@@ -584,6 +585,8 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `182811227011330` (found via ddg)
 - `453272245095585` (found via ddg)
 - `UKEntrepreneursandStartups` (found via ddg)
+- `uksmallbusinesscommunitynetwork` (found via ddg)
+- `812296605969002` (found via ddg)
 - `uksmallbusinessowners` (found via ddg)
 - `557897198086356` (found via ddg)
 - `usabusinessownersusabusinessgroupusa` (found via ddg)
