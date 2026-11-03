@@ -23,6 +23,7 @@ forpython
 getjobss
 jobforpr
 jobfortm
+machinelearning9
 machinelearning_deeplearning
 neuro_channel
 newhrvacancies
