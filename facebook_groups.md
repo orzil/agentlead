@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-02T23:57:06+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-03T04:59:22+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1296)
+## Not yet probed (1299)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -560,6 +560,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1374006380366953` (found via ddg)
 - `1439278313025951` (found via ddg)
 - `startupcaliforniaclub` (found via ddg)
+- `startupdirectoryuk` (found via ddg)
 - `StartupDublinClub` (found via ddg)
 - `startupeurope` (found via ddg)
 - `StartupEuropeClub` (found via ddg)
@@ -1154,6 +1155,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `254113251820121` (found via ddg)
 - `businessnetworkingnewzealand` (found via ddg)
 - `businessinuk` (found via ddg)
+- `844843736456088` (found via ddg)
 - `cxforumsgroup` (found via ddg)
 - `1910783809822687` (found via ddg)
 - `1429763737480567` (found via ddg)
@@ -1208,6 +1210,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `makecomcommunity` (found via ddg)
 - `1224465495385964` (found via ddg)
 - `MedPM` (found via ddg)
+- `mumbaistartupsmeetup` (found via ddg)
 - `n8ncommunity` (found via ddg)
 - `487179101297434` (found via ddg)
 - `kiwihomebusiness` (found via ddg)

@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-02T23:57:06+00:00",
- "count": 1283,
+ "generated": "2026-11-03T04:59:22+00:00",
+ "count": 1286,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -8733,6 +8733,21 @@
    "last_checked": null
   },
   {
+   "slug": "startupdirectoryuk",
+   "name": "Startup Directory UK",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-03T04:59:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "startupeurope",
    "name": "Startup Europe",
    "status": "pending",
@@ -14778,6 +14793,21 @@
    "last_checked": null
   },
   {
+   "slug": "844843736456088",
+   "name": "Business Swansea",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-03T04:59:20+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "851415561261142",
    "name": "Amazon FBA Sellers and Community",
    "status": "pending",
@@ -17655,6 +17685,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-21T22:04:47+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "mumbaistartupsmeetup",
+   "name": "Mumbai Startups Meetup",
+   "status": "pending",
+   "relevance": 0,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-03T04:59:20+00:00",
    "last_checked": null
   },
   {
