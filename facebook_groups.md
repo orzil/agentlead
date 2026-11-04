@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-04T02:25:58+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-04T04:30:32+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1305)
+## Not yet probed (1309)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -1190,6 +1190,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `ShopifyStorePros` (found via ddg)
 - `Engineers` (found via ddg)
 - `entreprenellehub` (found via ddg)
+- `657791967566525` (found via ddg)
 - `345613409204417` (found via ddg)
 - `founderscanada` (found via ddg)
 - `803297649286641` (found via ddg)
@@ -1199,6 +1200,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `640514310704403` (found via ddg)
 - `gtapreneurs` (found via ddg)
 - `918031175736092` (found via ddg)
+- `homebasedworker` (found via ddg)
 - `575563373744118` (found via ddg)
 - `764877593708803` (found via ddg)
 - `FindRemoteJobs` (found via ddg)
@@ -1208,6 +1210,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `insuranceagen` (found via ddg)
 - `1050679009595609` (found via ddg)
 - `junkremovalforbeginners` (found via ddg)
+- `leowexfordwomeninbusinessnetwork` (found via ddg)
 - `lawfirmowners` (found via ddg)
 - `1598268047627604` (found via ddg)
 - `505933192026047` (found via ddg)
@@ -1293,6 +1296,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `wunderbuilders` (found via ddg)
 - `startyourhvacbusiness` (found via ddg)
 - `zapierusercommunity` (found via ddg)
+- `1030517123630420` (found via ddg)
 - `403307456733049` (found via ddg)
 - `4046763412236611` (found via ddg)
 - `511333728510695` (found via ddg)
