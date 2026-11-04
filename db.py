@@ -190,7 +190,9 @@ def _migrate(conn: sqlite3.Connection) -> None:
 
 
 def connect() -> sqlite3.Connection:
-    conn = sqlite3.connect(config.DB_PATH)
+    # 30 s busy wait: the home Reddit trickle and the WhatsApp pass write the
+    # same local DB from two processes
+    conn = sqlite3.connect(config.DB_PATH, timeout=30)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
     _migrate(conn)

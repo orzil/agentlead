@@ -176,9 +176,15 @@ REDDIT_MIN_ACCOUNT_AGE_DAYS = int(env("REDDIT_MIN_ACCOUNT_AGE_DAYS", "30"))
 # Reddit rate-limits new accounts to roughly one comment per 10 minutes.
 REDDIT_MIN_SECONDS_BETWEEN_REPLIES = int(env("REDDIT_MIN_SECONDS_BETWEEN_REPLIES", "900"))
 SUBREDDITS = ["MachineLearningJobs", "computervision", "forhire",
-              "freelance_forhire", "DataScienceJobs", "BigDataJobs",
+              # freelance_forhire removed 2026-11-04: 404 (gone; last post seen 2026-07-16)
+              "DataScienceJobs", "BigDataJobs",
               # job subs -> loose default gate (a domain OR engage term passes)
               "PythonJobs",
+              # 2026-11-04: the subs behind sitewide search's >=6 hits (>=6 / search
+              # hits since August): mljobs 6/60, menajobs 6/76 (MENA = Israel's
+              # region), aijobs 2/14, freelances_forhire 3/8. A direct feed also
+              # catches posts whose TITLE lacks "hiring"/"task".
+              "mljobs", "menajobs", "aijobs", "freelances_forhire",
               # discussion / firehose subs -> listed in INTENT_REQUIRED_SOURCES
               # below, so they need DOMAIN *and* ENGAGE to become candidates
               "hiring", "AI_Agents", "n8n", "automation", "deeplearning",
@@ -202,7 +208,25 @@ REDDIT_SEARCHES = [
     # AI-training/evaluation contracts were the most frequent >=6 kind
     'title:hiring ("document intelligence" OR "document AI" OR "document processing" OR "AI trainer")',
     'title:hiring ("AI training" OR "model evaluation" OR "expert contributors") (remote OR contract)',
+    # 2026-11-04: more of the shapes that won (a $10 image-scraping pipeline, a
+    # founder's remote ML contract). Cheap now that the home trickle reads one
+    # feed a minute instead of bursting the whole list.
+    'title:(hiring OR task) (opencv OR pytorch OR "image generation" OR "stable diffusion" OR "face recognition")',
+    'title:(hiring OR task) (dashboard OR "power bi" OR tableau OR streamlit OR plotly)',
+    'title:(hiring OR paid OR task) (MVP OR prototype OR "proof of concept") (AI OR vision OR ML OR LLM)',
+    'title:(hiring OR task) (scraping OR scraper OR "web scraping" OR "data pipeline")',
+    'title:(hiring OR task) (robotics OR drone OR satellite OR "medical imaging" OR lidar)',
 ]
+
+# Home trickle (main.py --loop --only reddit_trickle,...): ONE Reddit feed per
+# tick, rotating subs + searches. Measured 2026-11-04: anonymous Reddit allows
+# about one request per 10-20 s window from ANY IP (x-ratelimit-remaining 0 after
+# a single call), so bursting 19 feeds 7x/day in the cloud mostly collected 429s.
+# One a minute, all day, reaches every feed about every 25 min.
+REDDIT_TRICKLE_SECONDS = int(env("REDDIT_TRICKLE_SECONDS", "60"))
+# The cloud skips its Reddit jobs while the home trickle's heartbeat (GitHub repo
+# variable, epoch seconds) is younger than this.
+REDDIT_HOME_FRESH_SECONDS = 2 * 3600
 
 # --- LinkedIn ---------------------------------------------------------------
 # Logged-out "jobs-guest" endpoints; no account, no key. Searched with

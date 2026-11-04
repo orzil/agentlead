@@ -137,6 +137,46 @@ def _fetch_public_rss() -> list[Lead]:
     return leads
 
 
+def _trickle_feeds() -> list[tuple[str, str, dict]]:
+    """(source label, url, params) for every feed, subs then searches."""
+    feeds = [(f"r/{s}", f"https://www.reddit.com/r/{s}/new/.rss", {"limit": 25})
+             for s in config.SUBREDDITS]
+    feeds += [("r/search", "https://www.reddit.com/search.rss",
+               {"q": q, "sort": "new", "t": "week"}) for q in config.REDDIT_SEARCHES]
+    return feeds
+
+
+def fetch_next(conn) -> tuple[list[Lead], bool]:
+    """Home trickle: fetch ONE feed (round-robin, cursor in kv) and return
+    (leads, ok). A 429 does not advance the cursor; it waits out Reddit's own
+    x-ratelimit-reset instead of the blind 20/40 s backoff."""
+    import httpx
+    import db
+
+    if time.time() < float(db.kv_get(conn, "reddit_trickle_wait", "0") or 0):
+        return [], False
+    feeds = _trickle_feeds()
+    i = int(db.kv_get(conn, "reddit_trickle_i", "0") or 0) % len(feeds)
+    label, url, params = feeds[i]
+    with httpx.Client(headers={"User-Agent": config.REDDIT_USER_AGENT}, timeout=20,
+                      follow_redirects=True) as client:
+        r = client.get(url, params=params)
+    if r.status_code == 429:
+        reset = float(r.headers.get("x-ratelimit-reset", "30") or 30)
+        db.kv_set(conn, "reddit_trickle_wait", str(time.time() + reset + 2))
+        log.info("reddit trickle: %s rate-limited, waiting %.0fs", label, reset + 2)
+        return [], False
+    # any other answer moves on: a dead feed (404 - r/freelance_forhire, 2026-11-04)
+    # must not pin the rotation to itself
+    db.kv_set(conn, "reddit_trickle_i", str(i + 1))
+    if r.status_code != 200:
+        log.warning("reddit trickle: %s -> HTTP %d, skipped", label, r.status_code)
+        return [], False
+    leads = _parse_feed(r.content, label)
+    log.info("reddit trickle: %s -> %d posts (feed %d/%d)", label, len(leads), i + 1, len(feeds))
+    return leads, True
+
+
 def fetch() -> list[Lead]:
     if config.REDDIT_CLIENT_ID and config.REDDIT_CLIENT_SECRET:
         return _fetch_praw()

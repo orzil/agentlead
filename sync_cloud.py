@@ -30,17 +30,36 @@ import db
 REPO = "orzil/agentlead"
 
 
-def _newest_artifact(tmp: str) -> str | None:
-    """Download the most recent leads.db artifact via gh."""
+def newest_artifact_name() -> str | None:
+    """Name of the newest unexpired leadsdb-<run id> artifact: one cheap API call,
+    so a sync can skip the 262 MB download when nothing new was uploaded."""
     try:
         out = subprocess.run(
-            ["gh", "run", "list", "--repo", REPO, "--limit", "25",
-             "--json", "databaseId,conclusion,name"],
-            capture_output=True, text=True, timeout=90).stdout
-        runs = [r for r in json.loads(out or "[]") if r.get("conclusion") == "success"]
+            ["gh", "api", f"repos/{REPO}/actions/artifacts?per_page=100", "--jq",
+             '[.artifacts[] | select((.name|startswith("leadsdb-")) and (.expired|not))]'
+             ' | sort_by(.created_at) | last | .name // ""'],
+            capture_output=True, text=True, timeout=90,
+            creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0)).stdout.strip()
+        return out or None
     except Exception as e:
-        print("could not list runs:", e)
+        print("could not list artifacts:", e)
         return None
+
+
+def _newest_artifact(tmp: str, name: str | None = None) -> str | None:
+    """Download the most recent leads.db artifact via gh."""
+    if name:
+        runs = [{"databaseId": name.split("-", 1)[1], "name": "newest artifact"}]
+    else:
+        try:
+            out = subprocess.run(
+                ["gh", "run", "list", "--repo", REPO, "--limit", "25",
+                 "--json", "databaseId,conclusion,name"],
+                capture_output=True, text=True, timeout=90).stdout
+            runs = [r for r in json.loads(out or "[]") if r.get("conclusion") == "success"]
+        except Exception as e:
+            print("could not list runs:", e)
+            return None
     for r in runs:
         p = subprocess.run(["gh", "run", "download", str(r["databaseId"]),
                             "--repo", REPO, "-n", f"leadsdb-{r['databaseId']}", "-D", tmp],
@@ -119,12 +138,18 @@ def run_once() -> dict:
     Returns {} rather than raising when gh is missing or no artifact exists -
     this runs every 2 hours and must never be the reason the loop dies.
     """
+    name = newest_artifact_name()
+    conn = db.connect()
+    if name and db.kv_get(conn, "cloud_sync_artifact", "") == name:
+        return {}               # already merged: no 262 MB re-download (2026-11-04)
     tmp = tempfile.mkdtemp(prefix="agentlead_cloud_")
     try:
-        path = _newest_artifact(tmp)
+        path = _newest_artifact(tmp, name)
         if not path:
             return {}
         stats = merge(path)
+        if name:
+            db.kv_set(conn, "cloud_sync_artifact", name)
     except Exception as e:
         print("cloud sync failed:", str(e)[:120])
         return {}

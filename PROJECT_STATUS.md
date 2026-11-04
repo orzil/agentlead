@@ -839,6 +839,36 @@ Same day, later:
 - **Next check (~11-11):** did the research-round groups produce anything ≥6 that Or rates `good`?
   If not, WhatsApp joining has had a fair test; stop spending research rounds on it.
 
+- **Same night, part 2: Reddit moved home + exposure.**
+  - Measured: Reddit = 47 of the ~80 leads >=6 in 30 days (32 from sitewide search), but anonymous
+    Reddit gives ~1 request per 10-20 s window from any IP, home too. The cloud's 7x/day bursts of
+    19 feeds were mostly 429s and cost 13-17 min a pass.
+  - Now `reddit_loop.pyw` (Startup folder) trickles one feed a minute from home: every feed every
+    ~25 min, all day. Heartbeat repo variable `REDDIT_HOME_AT`; the cloud skips Reddit while it is
+    fresh and takes over if the PC is off.
+  - +5 search angles (opencv/pytorch/image-gen, dashboards/Power BI, MVP/POC, scraping,
+    robotics/drone/satellite/medical imaging): 24 feeds in the rotation.
+  - Exposure drafts sent to Telegram for Or to post himself: HN "Who wants to be hired?
+    (November 2026)" (item 50338726) and a weekly r/forhire [For Hire] post. The links are
+    placeholders; nothing was invented about past clients.
+  - +4 direct subs: the subs behind sitewide search's >=6 hits since August: r/mljobs (6/60),
+    r/menajobs (6/76), r/aijobs (2/14), r/freelances_forhire (3/8). 27 feeds, about 27 min a cycle.
+    r/mljobs pushed a remote EMEA "Computer Vision + Agentic AI" contract on its first read.
+  - **r/freelance_forhire is dead** (404; its last post in the DB is from 2026-07-16), so it was removed.
+    The trickle now steps past any non-429 error instead of retrying it forever.
+  - `sync_cloud`: the cloud DB artifact is **262 MB**, and it was re-downloaded every 20 min. Now one API
+    call checks the newest `leadsdb-*` name and skips if it was already merged (kv `cloud_sync_artifact`):
+    0.6 s instead of ~10 min.
+  - Measured and rejected:
+    - **Bluesky** search: `api.bsky.app` works logged-out, but there is about one niche client ask per
+      few months.
+    - **Mastodon** #hiring/#freelance: 720 posts, 487 pass the gate, almost all recruiter bots and
+      full-time jobs; the contract-AI part duplicates Mercor.
+  - r/computervision help posts ("we have a YOLOv8 project and hit a wall") get pushed at 6. They
+    are not hiring posts, but they are businesses with a problem in Or's niche, so they were left in.
+  - **Check ~11-07:** r/ leads >=6 per day vs the 30-day baseline (~1.6/day), and cloud
+    leadagent pass time (should drop by ~15 min).
+
 ## Open items
 - **Cloud WhatsApp select has no LLM.** Its pass runs at 03:48 UTC, after lead scoring has spent the
   OpenRouter free quota. Low value while the pool is tapped out (see 2026-11-04). If the pool grows

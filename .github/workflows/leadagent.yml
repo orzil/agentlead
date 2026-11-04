@@ -105,7 +105,17 @@ jobs:
           FB_GROUPS_PER_RUN: ${{ github.event.inputs.fb_groups_per_run || '6' }}
           FB_GROUP_GAP_SECONDS: "90"
           FB_POSTS_PER_GROUP: "12"
-        run: python -X utf8 main.py --once
+        # Reddit runs from the home PC as a 1-feed-a-minute trickle (2026-11-04).
+        # While its heartbeat is < 2h old, skip the bursty, 429-bound Reddit jobs
+        # here (13-17 min of every pass); a stale heartbeat brings them back.
+        run: |
+          SKIP=""
+          BEAT="${{ vars.REDDIT_HOME_AT }}"
+          if [ -n "$BEAT" ] && [ $(( $(date +%s) - BEAT )) -lt 7200 ]; then
+            SKIP="--skip reddit,reddit_search"
+            echo "home Reddit trickle alive - skipping Reddit here"
+          fi
+          python -X utf8 main.py --once $SKIP
 
       # Mop up leads an EARLIER pass had to store unscored.
       #

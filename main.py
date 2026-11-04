@@ -50,12 +50,18 @@ ERROR_THROTTLE_SECONDS = 6 * 3600  # at most one Telegram error alert per job pe
 def setup_logging() -> None:
     fmt = logging.Formatter("%(asctime)s %(levelname)-7s [%(name)s] %(message)s")
     # bounded: the phone pass appends here every few minutes, forever
+    # AGENT_LOG: a second long-running process (the home Reddit trickle) gets its
+    # own file - two processes rotating one file on Windows fight over the lock
     file_h = logging.handlers.RotatingFileHandler(
-        config.LOG_PATH, maxBytes=5 * 1024 * 1024, backupCount=2, encoding="utf-8")
+        os.environ.get("AGENT_LOG") or config.LOG_PATH, maxBytes=5 * 1024 * 1024,
+        backupCount=2, encoding="utf-8")
     file_h.setFormatter(fmt)
-    console_h = logging.StreamHandler(sys.stdout)
-    console_h.setFormatter(fmt)
-    logging.basicConfig(level=logging.INFO, handlers=[file_h, console_h])
+    handlers: list[logging.Handler] = [file_h]
+    if sys.stdout is not None:          # pythonw has no console
+        console_h = logging.StreamHandler(sys.stdout)
+        console_h.setFormatter(fmt)
+        handlers.append(console_h)
+    logging.basicConfig(level=logging.INFO, handlers=handlers)
     logging.getLogger("httpx").setLevel(logging.WARNING)
 
 
@@ -67,6 +73,26 @@ def job_reddit(conn) -> None:
 
 def job_reddit_search(conn) -> None:
     pipeline.ingest_many(conn, reddit_fetcher.fetch_search(), "reddit_search")
+
+
+def job_reddit_trickle(conn) -> None:
+    """One Reddit feed per tick from the home PC (see REDDIT_TRICKLE_SECONDS),
+    plus a heartbeat the cloud reads to skip its own bursty Reddit jobs."""
+    leads, ok = reddit_fetcher.fetch_next(conn)
+    if leads:
+        pipeline.ingest_many(conn, leads, "reddit")
+    if ok and not os.environ.get("GITHUB_ACTIONS"):
+        last = float(db.kv_get(conn, "reddit_home_beat", "0") or 0)
+        if time.time() - last > 20 * 60:
+            import subprocess
+            r = subprocess.run(["gh", "variable", "set", "REDDIT_HOME_AT", "--repo",
+                                "orzil/agentlead", "--body", str(int(time.time()))],
+                               capture_output=True, text=True, timeout=60,
+                               creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+            if r.returncode == 0:
+                db.kv_set(conn, "reddit_home_beat", str(time.time()))
+            else:
+                log.warning("reddit heartbeat failed: %s", (r.stderr or "")[:120])
 
 
 def job_linkedin(conn) -> None:
@@ -318,19 +344,28 @@ def run_job_safe(conn, name: str, fn) -> None:
             db.kv_set(conn, key, str(time.time()))
 
 
-def run_forever() -> None:
+def run_forever(only: str | None = None, skip: str | None = None) -> None:
+    """The poll loop. `only`/`skip` pick jobs, e.g. the home Reddit trickle:
+    main.py --loop --only reddit_trickle,cloud_sync (reddit_trickle is a
+    loop-only job: never part of a --once pass or the default loop)."""
     conn = db.connect()
-    next_run = {name: 0.0 for name, _, _ in JOBS}
-    log.info("lead-agent started (backend=%s, telegram=%s)",
+    wanted = {s.strip() for s in only.split(",")} if only else None
+    unwanted = {s.strip() for s in skip.split(",")} if skip else set()
+    pool = JOBS + [("reddit_trickle", config.REDDIT_TRICKLE_SECONDS, job_reddit_trickle)]
+    jobs = [j for j in pool if (j[0] in wanted if wanted else j[0] != "reddit_trickle")
+            and j[0] not in unwanted]
+    next_run = {name: 0.0 for name, _, _ in jobs}
+    log.info("lead-agent started (backend=%s, telegram=%s, jobs=%s)",
              config.LLM_BACKEND,
-             "on" if config.TELEGRAM_BOT_TOKEN else "OFF -> outbox.log")
+             "on" if config.TELEGRAM_BOT_TOKEN else "OFF -> outbox.log",
+             ",".join(n for n, _, _ in jobs))
     while True:
         now = time.time()
-        for name, interval, fn in JOBS:
+        for name, interval, fn in jobs:
             if now >= next_run[name]:
                 run_job_safe(conn, name, fn)
                 next_run[name] = time.time() + interval
-        time.sleep(30)
+        time.sleep(15 if wanted and "reddit_trickle" in wanted else 30)
 
 
 def run_once(only: str | None = None, skip: str | None = None) -> None:
@@ -854,10 +889,11 @@ def main() -> None:
     ap.add_argument("--notify", action="store_true",
                     help="with --morning-report: also push the top rows to Telegram")
     ap.add_argument("--only", metavar="JOBS",
-                    help="with --once: run only these jobs, comma-separated "
-                         "(e.g. --only aijobs,companies,telegram)")
+                    help="run only these jobs, comma-separated, in a --once pass or the "
+                         "loop (e.g. --only aijobs,companies,telegram; the home Reddit "
+                         "trickle is --only reddit_trickle,cloud_sync)")
     ap.add_argument("--skip", metavar="JOBS",
-                    help="with --once: skip these jobs, comma-separated")
+                    help="skip these jobs, comma-separated (--once or the loop)")
     ap.add_argument("--wa-pass", action="store_true",
                     help="one WhatsApp phone pass: join <=1 group, read unread groups, "
                          "ingest (local; run by wa_pass.bat every 2h)")
@@ -953,7 +989,7 @@ def main() -> None:
     if args.once:
         run_once(only=args.only, skip=args.skip)
         return
-    run_forever()
+    run_forever(only=args.only, skip=args.skip)
 
 
 if __name__ == "__main__":

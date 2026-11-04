@@ -66,6 +66,7 @@ python -X utf8 discover_whatsapp_groups.py --search --write   # find joinable Wh
 python -X utf8 discover_fb_groups.py --write # FB group join list (add --search/--probe in CLOUD)
 python -X utf8 sync_cloud.py                 # pull + decrypt the newest cloud leads.db.enc, merge
 python -X utf8 main.py --wa-pass             # one WhatsApp phone pass (what wa_loop runs)
+python -X utf8 main.py --only reddit_trickle,cloud_sync   # home Reddit loop (what reddit_loop.pyw runs)
 python -X utf8 wa_phone.py --wifi-setup      # cable plugged in: enable the Wi-Fi adb fallback
 python -X utf8 wa_phone.py --add-targets f.txt  # queue vetted invite links (name | url) ahead of the hunt list
 ```
@@ -267,6 +268,16 @@ about it, there is big competition and we need to be fast."* So `PUSH_THRESHOLD=
 5 min, Reddit 10, `cloud_sync` 20. The cloud scores and pushes **directly** now
 that `OPENROUTER_API_KEY` is in its secrets — before that, cloud finds waited up
 to 2h to come home. Don't slow these back down without a measured reason.
+
+**Reddit runs from home as a trickle (2026-11-04).** Reddit is the top source (47 of ~80
+leads >=6 in 30 days, 32 of them from sitewide search). Anonymous Reddit allows about one
+request per 10-20 s window from *any* IP, home included (`x-ratelimit-remaining: 0` after a
+single call), so the cloud's 19-feed bursts mostly collected 429s. `reddit_loop.pyw` (Startup
+folder, log `reddit_loop.log`) reads ONE feed a minute, rotating subs + `REDDIT_SEARCHES`
+(cursor in kv `reddit_trickle_i`; a 429 waits out `x-ratelimit-reset` without advancing it), so
+each feed is checked every ~27 min (27 feeds). It sets the repo variable `REDDIT_HOME_AT` every 20 min;
+`leadagent.yml` skips `reddit,reddit_search` while that is < 2h old, so the cloud takes Reddit
+back by itself if the PC is off. `reddit_trickle` is a loop-only job, never in a `--once` pass.
 
 ## Feedback: one word from the phone
 
