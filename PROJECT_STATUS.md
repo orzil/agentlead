@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-10-23*
+*Last updated: 2026-11-04*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -803,7 +803,47 @@ Same day, later:
   - linktr.ee pages;
   - the community pages of israel-it.org (the Israel Chamber of Information Technology).
 
+## 2026-11-04: phone back after 38 h, join queue refilled, WhatsApp push noise fixed
+
+- **Outage:** the phone rebooted (~08:57 on 11-04), which killed Wi-Fi adb. It was unreachable from
+  11-03 05:59 to 11-04 19:57. Or plugged USB in. The first pass read the backlog (443 new messages from
+  54 groups, 1 join) and restored Wi-Fi adb at 192.168.1.167:5555 by itself. None of it scored high.
+- **The join queue had been empty since 11-01.** `whatsapp_top50.md` said "0 groups". Night select runs
+  failed their LLM pass 6 of 7 nights: Gemini 429, and the OpenRouter free quota (~50/day) was already
+  spent by cloud lead scoring at 03:48 UTC. On the one night it rated (11-03, 420 names) it still
+  selected 0. The cloud pool (2,379 live) is the tapped-out tail; fixing the quota would not refill it.
+- **Research round 3** (3 web agents): 137 new links. 94 were kept after dropping WordPress/Elementor
+  chats, founder social clubs and 11 of 15 near-identical US "AI for business owners" Meetup chats
+  (4 kept as a quality test). They are queued with `--add-targets`. Best: "מפרילנסר לסוכנות" (AI/automation
+  freelancers swap clients), Fusion VC AI Builders, Hebrew vibe-coding groups, AIL tracks
+  (finance & law, healthcare, product), AI Finance Transformation (CPAs/CFOs), Microsoft Data Analysts
+  Club TLV, LangTalks, Agentic Founder, Pitch Network London. Join-all is ON. Codes are in
+  `wa_research_links.txt`, names in the gitignored `whatsapp_research_2026-11-04.txt`.
+  - Productive sources: podcast RSS show notes (via the iTunes search API), YouTube descriptions,
+    linktr.ee (webcreators, ail.community, fusionvc), Meetup event chats, Luma host profiles,
+    WordPress `wp-json` search on organisation sites.
+  - **Home IP got YouTube "unusual traffic" + Linktree 429** near the end. Run future YouTube scraping
+    in the cloud.
+  - Two names in `whatsapp_research_2026-10-25.txt` are wrong: `DqJbhE8EKCA7vjLvosI9dx` is a TESTAMIND
+    n8n *course* group; `LeuNHdjrs9GHMi7QKukbLa` is Schooliner's announcement-only group.
+- **Yield check (10-21 → 11-03):** WhatsApp read 2,328 messages. 10 were pushed and **none was a real
+  lead**. Only 1 real freelance ask was seen (a Power BI freelance request, scored 4).
+  Two noise paths are fixed:
+  - **Question path:** all 17 `question` verdicts were announcements with a '?' (hiring ads, webinar
+    and meetup promos, articles, a lecturer's self-promo, a riddle), and 4 were pushed at 7-8. New
+    `QUESTION_BLOCK_RE` + 600-char cap block 13 of 14 announcements (the other 3 are one-liners scored
+    1), while real OCR/YOLO questions still pass. 2 cases were added to `test_gate.py` (32/32).
+  - **qwen2.5:7b wrote `why`/`angle` in Chinese/Korean** on Hebrew input. The language rule now sits at
+    the end of the user turn, and any field containing CJK is dropped.
+  - **Freshness +1 no longer lifts `full_time`** over the push line (two full-time 5s had become pushed 6s).
+- **Next check (~11-11):** did the research-round groups produce anything ≥6 that Or rates `good`?
+  If not, WhatsApp joining has had a fair test; stop spending research rounds on it.
+
 ## Open items
+- **Cloud WhatsApp select has no LLM.** Its pass runs at 03:48 UTC, after lead scoring has spent the
+  OpenRouter free quota. Low value while the pool is tapped out (see 2026-11-04). If the pool grows
+  again, rate it in the first slice after 00:00 UTC, or add a free Groq/Cerebras key (needs Or's
+  sign-up; the secrets are already wired in `wanight.yml`).
 - **Phone:** reconnected and Wi-Fi adb is set (2026-10-21 22:20). Still to build:
   the night crawl (Community sister-groups + group-description invite links). It needs live screens
   for resource ids.

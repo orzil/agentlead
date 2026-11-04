@@ -139,7 +139,9 @@ def classify(lead: Lead) -> str:
         # (URLs stripped first: '?utm_source=' in a job-board link is not a question)
         prose = re.sub(r"\S+://\S+", " ", text)
         if (src_root in config.QUESTION_ROOTS and config.STRONG_DOMAIN_RE.search(prose)
-                and config.QUESTION_RE.search(prose) and not config.LEARNER_RE.search(prose)):
+                and config.QUESTION_RE.search(prose) and not config.LEARNER_RE.search(prose)
+                and not config.QUESTION_BLOCK_RE.search(prose)
+                and len(prose.strip()) <= config.QUESTION_MAX_CHARS):
             return "question"
         return "gate_offtopic"
     ok = config.DOMAIN_RE.search(text) or config.ENGAGE_RE.search(text)

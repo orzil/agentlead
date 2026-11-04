@@ -133,6 +133,13 @@ CASES = [
     ("opencv gig, no 'AI' word", "r/computervision",
      "Need help with an OpenCV pipeline for bounding box detection, paid freelance project, "
      "remote, budget $3000.", NOW, "pass"),
+    # 2026-11-04: announcements with a '?' were routed (and pushed) as questions
+    ("wa webinar promo is not a question", "whatsapp/Test Group",
+     "מחר ב-20:00 נקיים לייב זום חינמי על AI לעסקים, פה נרשמים. מה יהיה שם? "
+     "נעבוד עם סוכני AI בתוך אקסל ונאתר חריגים עם AI", NOW, "gate_offtopic"),
+    ("wa real OCR question", "whatsapp/Test Group",
+     "מישהו מכיר ספרייה טובה ל-OCR על חשבוניות בעברית? יש לנו אלפי סריקות בחודש",
+     NOW, "question"),
     ("hebrew client post", "facebook/דרושים מתכנתים ואנשי פיתוח",
      "דרוש מפתח פרילנסר לפרויקט ראייה ממוחשבת - זיהוי אובייקטים בוידאו. עבודה מרחוק, "
      "תקציב 15000 שח, כחודשיים.", NOW, "pass"),

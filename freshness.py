@@ -105,6 +105,10 @@ def apply(score, posted_at=None, raw_text: str = "", fetched_at=None):
     delta = adjustment(days)
     if not delta or score is None:
         return score, days
+    # freshness speeds up a good lead; it must not lift a full-time role over the
+    # push line (2026-11-04: two full-time 5s became pushed 6s)
+    if delta > 0 and getattr(score, "work_type", None) == "full_time":
+        return score, days
     original = score.score
     score.score = max(1, min(10, original + delta))
     if score.score == original:      # already at the ceiling/floor

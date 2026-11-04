@@ -996,6 +996,17 @@ LEARNER_RE = re.compile(
     r"|homework|assignment|thesis|exam|syllabus|internship|interview"
     r"|(?<![א-ת])קורס|ללמוד|למתחילים|תואר|מבחן|עבודת\s+סמינר|התמחות|ראיון)",
     re.IGNORECASE)
+# Announcements that merely contain a '?' (2026-11-04: all 17 'question' verdicts
+# so far were these - hiring ads, webinar/meetup promos, articles, a lecturer's
+# self-promo, a riddle - and 4 were pushed at 7-8). A real question is short and
+# asks; an announcement invites you to register, apply or read more.
+QUESTION_BLOCK_RE = re.compile(
+    r"(webinar|zoom|meetup|workshop|register|sign\s*up|join\s+(us|our)|we'?re\s+hiring"
+    r"|years\s+of\s+experience|press\s+release|hybrid"
+    r"|הרשמה|להירשם|נרשמים|הירשמו|הצטרפו|להצטרף|מפגש|לייב|זום|וובינר|הרצאה|מרצה|כנס|סדנה"
+    r"|לכתבה|כתבה|לפרטים|דרוש|משרה|משרות|מגייס|גיוס|דרישות|שנות\s+ניסיון|היברידי|חידה)",
+    re.IGNORECASE)
+QUESTION_MAX_CHARS = 600     # prose (URLs stripped); longer reads as an announcement
 
 # Fuzzy-dedup: posts >= this similar (0-100) within 7 days are duplicates.
 DEDUP_SIMILARITY = 90

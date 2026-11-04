@@ -211,7 +211,7 @@ or re-verify screen sets kv `wa_phone_killed` and every later pass stops until
 `wa_phone.py --unkill`. It is **local only** and runs from `wa_loop.py` (Startup-folder shortcut,
 every 2h) because Task Scheduler is access-denied on this account. Group messages flow through
 the normal pipeline; a domain **question** (`prefilter` verdict `question`, `QUESTION_RE` minus
-`LEARNER_RE`, WhatsApp only) is scored by `scorer.score_question` and pushed as ❓. Keep the
+`LEARNER_RE` and `QUESTION_BLOCK_RE` (event/hiring/article announcements), ≤600 chars, WhatsApp only) is scored by `scorer.score_question` and pushed as ❓. Keep the
 phone's screen lock at None and the S9's screen asleep between passes (AMOLED burn-in).
 UI facts that cost a day to find: the unread badge's count is in **`content-desc`**, not `text`;
 the group sender id is `name_in_group_tv`.
