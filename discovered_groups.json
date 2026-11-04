@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-04T10:21:08+00:00",
- "count": 1296,
+ "generated": "2026-11-04T22:29:19+00:00",
+ "count": 1299,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1380,6 +1380,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-07T09:40:37+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1455341017901467",
+   "name": "Freelance / Part Time / Full Time Jobs in Dubai UAE",
+   "status": "pending",
+   "relevance": 2,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-04T19:04:13+00:00",
    "last_checked": null
   },
   {
@@ -6378,6 +6393,21 @@
    "last_checked": null
   },
   {
+   "slug": "736512037820661",
+   "name": "Dubai Jobs 2026 UAE",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-04T19:04:13+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "748711238658025",
    "name": "Restaurant Owners and Managers",
    "status": "pending",
@@ -8655,6 +8685,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-29T00:59:53+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "singaporecofounders",
+   "name": "Singapore Co-Founders",
+   "status": "pending",
+   "relevance": 1,
+   "region": "GLOBAL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-04T11:23:42+00:00",
    "last_checked": null
   },
   {

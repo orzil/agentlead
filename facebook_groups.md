@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-04T10:21:08+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-04T22:29:19+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1309)
+## Not yet probed (1312)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -185,6 +185,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `201748110567171` (found via ddg)
 - `NYCESN` (found via ddg)
 - `2936517136591278` (found via leads_db)
+- `1455341017901467` (found via ddg)
 - `361717460552082` (found via config)
 - `1254334341889540` (found via ddg)
 - `highlevelagencyowner` (found via ddg)
@@ -419,6 +420,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `remoteworkforce` (found via ddg)
 - `thedrivenentrepreneurs` (found via ddg)
 - `490880091107538` (found via ddg)
+- `736512037820661` (found via ddg)
 - `dublin.ireland.startups` (found via ddg)
 - `2687952944937992` (found via ddg)
 - `entrepreneurA1` (found via ddg)
@@ -549,6 +551,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2090005924981482` (found via ddg)
 - `shopifystoreowners` (found via ddg)
 - `1170892738160019` (found via ddg)
+- `singaporecofounders` (found via ddg)
 - `singapore.entrepreneurs.network` (found via ddg)
 - `Singaporestartupclub` (found via ddg)
 - `sg.startup` (found via ddg)
