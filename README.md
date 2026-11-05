@@ -30,7 +30,7 @@ LLM scoring (1–10), and pushes leads scoring ≥ 8 to your Telegram instantly.
 | **LinkedIn** | **Job-alert emails → Gmail IMAP** *(robust)* + logged-out `jobs-guest` endpoints *(best-effort)* | no login either way. The guest filters are unreliable, so the full-time gate does the real filtering; see setup below |
 | **Reddit sitewide search** | Public `search.rss` (no key) | `title:(hiring OR task)` queries catch gigs in subs we don't poll; list in `config.REDDIT_SEARCHES` |
 | **WhatsApp groups** | **Discovery only** — `discover_whatsapp_groups.py` | finds joinable invite links; **you join by hand**, the account is never automated |
-| X-Place | Site's own public JSON API | 25 newest projects per poll |
+| ~~X-Place~~ | removed 2026-11-05: charges to register before you can bid | - |
 | Secret Tel Aviv jobs board | Plain HTML (WPJobBoard) | full description fetched for relevant titles |
 
 Scoring: **Gemini API free tier** (~1,500 req/day, no credit card) or local
@@ -273,4 +273,4 @@ python main.py --approve-reply 3      # approve + send one (or: --approve-reply 
   The scorer self-throttles to 1 call / 6.5 s; the keyword gate keeps daily volume
   in the low hundreds at most.
 - **Reddit free tier**: ~60–100 req/min — this agent uses 4 per 15 minutes.
-- **Telegram / HN Algolia / X-Place / IMAP**: no meaningful limits at this volume.
+- **Telegram / HN Algolia / IMAP**: no meaningful limits at this volume.

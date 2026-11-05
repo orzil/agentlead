@@ -24,7 +24,7 @@ and will score + push + auto-reply once API keys are added.
 | **LinkedIn** — job-alert emails (robust, needs 5-min user setup) + logged-out `jobs-guest` scraper (best-effort; guest filters unreliable) | 🟡 email path awaiting user setup |
 | **WhatsApp** — discovery only (`discover_whatsapp_groups.py`); user joins by hand, never automated | 🟢 23 live groups found; 2–3 worth joining |
 | HN "Who is hiring?" + revived "Freelancer? Seeking freelancer?" | 🟢 |
-| X-Place, Secret Tel Aviv | 🟢 |
+| Secret Tel Aviv (X-Place removed 2026-11-05: paid registration) | 🟢 |
 | RemoteOK, Remotive, We Work Remotely, Arbeitnow, Working Nomads, Himalayas, Jobspresso | 🟢 |
 | Company career boards (Greenhouse/Comeet/Workable/Ashby — Israeli CV cos + AI cos) | 🟢 14 boards |
 | Upwork/Wellfound | via saved-search email alerts (needs Gmail setup) |
@@ -892,6 +892,9 @@ Same day, later:
   to 300 of the 6,086 unscored backlog with Ollama, inline, in the single-thread loop. That scoring
   now runs on a background thread.
 - `test_gate.py`: 35/35, with 3 new cases.
+- **X-Place removed** (Or: they want him to pay to register). The fetcher and job are deleted, and any
+  `xplace.com` link reshared in a group now gives `gate_paywall`. The 149 stored X-Place leads were
+  marked `gated_out`. `test_gate.py`: 36/36.
 
 ## Open items
 - **Cloud WhatsApp select has no LLM.** Its pass runs at 03:48 UTC, after lead scoring has spent the

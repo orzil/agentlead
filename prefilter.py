@@ -15,6 +15,7 @@ classify() returns a reason string:
   gate_spam        -> design/typing/marketing gig with no strong domain term
   gate_offtopic    -> fails the domain/intent keyword requirements
   gate_closed      -> the posting says it stopped accepting applications
+  gate_paywall     -> a board that makes Or pay to register (X-Place)
   gate_stale       -> older than MAX_LEAD_AGE_DAYS; almost certainly filled
   gate_lowbudget   -> stated budget (converted to USD) is below the floor
 
@@ -74,6 +75,11 @@ def classify(lead: Lead) -> str:
     # gig is worth nothing no matter how well it matches.
     if "[CLOSED" in text[:120]:
         return "gate_closed"
+    # boards that charge Or to register before he can bid (X-Place, 2026-11-05):
+    # a lead there costs money to act on, also when reshared in a group
+    if src_root in config.PAID_BOARD_SOURCES or config.PAID_BOARD_RE.search(
+            f"{lead.url} {text}"):
+        return "gate_paywall"
     if _too_old(lead):
         return "gate_stale"
 

@@ -155,6 +155,9 @@ CASES = [
      "object detection labels. What you'll do: audit YOLO datasets. Requirements: 3 years "
      "of computer vision experience. Commitment: approximately 8-12 hours/week, paid weekly.",
      NOW, "pass"),
+    ("xplace link reshared in a group", "whatsapp/Test Group",
+     "דרוש פרילנסר לפרויקט ראייה ממוחשבת, תקציב 5000 ש\"ח. פרטים: "
+     "https://www.xplace.com/il/job/123456", NOW, "gate_paywall"),
     ("wa real OCR question", "whatsapp/Test Group",
      "מישהו מכיר ספרייה טובה ל-OCR על חשבוניות בעברית? יש לנו אלפי סריקות בחודש",
      NOW, "question"),

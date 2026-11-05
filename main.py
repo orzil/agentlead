@@ -39,7 +39,6 @@ from fetchers import (
     secrettlv_fetcher,
     telegram_fetcher,
     weworkremotely_fetcher,
-    xplace_fetcher,
 )
 
 log = logging.getLogger("main")
@@ -153,10 +152,6 @@ def job_fbsearch(conn) -> None:
     redirect to login, 0 leads across three cloud runs). Touches no Facebook
     URL, so it carries no ban risk and no rate limit of its own."""
     pipeline.ingest_many(conn, fbsearch_fetcher.fetch(conn), "fbsearch")
-
-
-def job_xplace(conn) -> None:
-    pipeline.ingest_many(conn, xplace_fetcher.fetch(), "xplace")
 
 
 def job_secrettlv(conn) -> None:
@@ -300,7 +295,6 @@ JOBS = [
     # (name, interval seconds, function)
     ("email", 5 * 60, job_email),           # Facebook / Upwork / Wellfound / LinkedIn alerts
     ("hn", 60 * 60, job_hn),
-    ("xplace", 2 * 3600, job_xplace),
     ("secrettlv", 2 * 3600, job_secrettlv),
     ("braintrust", 2 * 3600, job_braintrust),  # 100%-freelance marketplace
     ("aijobs", 2 * 3600, job_aijobs),          # dedicated AI/ML board

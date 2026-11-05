@@ -6,7 +6,7 @@ Everything in this project is free-tier only:
   - Reddit:        official API free tier
   - HN:            Algolia public API
   - Facebook/Upwork/Wellfound: email alerts parsed over Gmail IMAP
-  - X-Place / Secret Tel Aviv: public endpoints
+  - Secret Tel Aviv: public endpoint (X-Place removed 2026-11-05: paid registration)
 """
 from __future__ import annotations
 
@@ -987,6 +987,11 @@ LOCATION_BLOCK_RE = re.compile(
 LOCATION_OK_RE = re.compile(
     r"(israel|ישראל|\bIL\b|worldwide|world[- ]wide|anywhere|global(ly)?|any location"
     r"|remote.{0,25}(anywhere|worldwide|global)|\bEMEA\b|europe.{0,20}israel)", re.I)
+
+# Boards that make Or pay to register before he can apply (X-Place, 2026-11-05;
+# remoteok/himalayas/Freelancer.com were dropped for the same reason earlier).
+PAID_BOARD_SOURCES = {"xplace"}
+PAID_BOARD_RE = re.compile(r"xplace\.co(m|\.il)", re.IGNORECASE)
 
 # Sources whose listings are full-time by default (career boards) - a post there
 # must show a FLEX signal to survive.
