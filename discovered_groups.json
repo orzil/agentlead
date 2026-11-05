@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-05T10:13:00+00:00",
- "count": 1305,
+ "generated": "2026-11-05T22:36:33+00:00",
+ "count": 1307,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -9450,6 +9450,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-05T10:53:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1042317172615399",
+   "name": "נשים יפות",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-05T13:23:29+00:00",
    "last_checked": null
   },
   {
@@ -19335,6 +19350,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-23T04:31:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "vacationmode",
+   "name": "וויב קודינג ישראל - Vibe Coding Israel",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-05T13:23:29+00:00",
    "last_checked": null
   },
   {
