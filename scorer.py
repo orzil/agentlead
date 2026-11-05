@@ -406,8 +406,41 @@ def _score_ollama_safe(lead: Lead) -> LeadScore | None:
         return None
 
 
+FULL_TIME_CAP = 3       # the rubric's own band for full-time-only roles
+
+
+def enforce_full_time(score: LeadScore | None) -> LeadScore | None:
+    """Deterministic version of the rubric's "full-time scores 1-3" rule.
+
+    The 7B model knows the rule and still breaks it: 2026-11-04 it wrote "the
+    role is ... full-time and location-restricted", filled work_type='contract'
+    and scored 7 - pushed three times. So a full_time work_type, or the model's
+    own reasoning calling the role full-time, caps the score here.
+    """
+    if score is None:
+        return None
+    said = " ".join(filter(None, (score.reasoning, score.summary)))
+    claim = None
+    for m in config.FT_CLAIM_RE.finditer(said):
+        before = said[max(0, m.start() - 12):m.start()].lower()
+        if not re.search(r"\b(not|n't|no|non|never)\b|n't\s*$", before):
+            claim = m
+            break
+    if score.work_type == "full_time" or claim:
+        if score.score > FULL_TIME_CAP:
+            score.reasoning = (f"[full-time: was {score.score}/10] "
+                               f"{score.reasoning or ''}").strip()
+            score.score = FULL_TIME_CAP
+        score.work_type = "full_time"
+    return score
+
+
 def score_lead(lead: Lead) -> LeadScore | None:
     """Returns a LeadScore, or None when no backend is configured (store-only mode)."""
+    return enforce_full_time(_score_lead_any(lead))
+
+
+def _score_lead_any(lead: Lead) -> LeadScore | None:
     backend = config.LLM_BACKEND
     if backend == "gemini" and config.GEMINI_API_KEY:
         # Gemini's free tier is ~20 calls a DAY. Scoring runs on hundreds of

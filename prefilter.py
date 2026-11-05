@@ -105,6 +105,10 @@ def classify(lead: Lead) -> str:
             return "gate_full_time"
         if src_root == "whatsapp" and config.WA_JOB_CARD_RE.search(text):
             return "gate_full_time"
+        # a salaried job-ad template (about us / responsibilities / benefits /
+        # company size / salary) that never says "full-time" - 2026-11-05
+        if config.employee_ad_hits(text) >= config.EMPLOYEE_AD_MIN:
+            return "gate_full_time"
 
     if config.PARTNER_RE.search(text) and not config.BUDGET_SIGNAL_RE.search(text):
         return "partnership"

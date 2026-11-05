@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-11-04*
+*Last updated: 2026-11-05*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -868,6 +868,30 @@ Same day, later:
     are not hiring posts, but they are businesses with a problem in Or's niche, so they were left in.
   - **Check ~11-07:** r/ leads >=6 per day vs the 30-day baseline (~1.6/day), and cloud
     leadagent pass time (should drop by ~15 min).
+
+## 2026-11-05: full-time jobs still reaching Telegram (Or: "still i get full time jobs")
+- Pushes in the 3 days before: one company role ("Product Engineer, CV + Agentic AI", a ~130-person
+  company) went out 3 times at 6-8, and a WhatsApp "Level: Senior" job card at 6. Neither post says
+  "full-time", so `FT_RE` never fired. The model's reasoning even said "is full-time", but it filled
+  `work_type=contract`.
+- Fixes, each replayed on the 98 leads >=6 from the last 30 days:
+  - **Gate:** `EMPLOYEE_AD_RES` looks for 7 sections of a salaried job ad: about us,
+    responsibilities, requirements, benefits, company size, salary, seniority level. Two or more,
+    with no FLEX term, gives `gate_full_time`. It gated 4 of the 98. One of them was a weekend gig
+    (8-12 hours/week) that slipped only because FLEX lacked "hours/week" and "weekends"; both are now
+    in FLEX, so it passes again.
+  - **Scorer cap:** `scorer.enforce_full_time` caps the score at 3 when `work_type=full_time` or when
+    the model's own reasoning calls the role full-time (`FT_CLAIM_RE`, with negation checked). It hit
+    3 of the 98, all full-time.
+  - **Freshness:** the +1 is no longer given to `unclear` either. That removes 16 pushes in 30 days,
+    14 of them noise: discussions, self-promos, job ads.
+  - **WhatsApp:** `hiremetech.com/job/` and `Level: Senior` cards are now job cards.
+  - **Dedup:** Reddit uses an exact title match over 7 days. The fuzzy pass sees only the newest
+    400 rows, about 4 h at ~2,300 rows a day, so cross-posts were pushed again.
+- **The trickle stalled for 6 h (08:06-14:11).** A cloud sync that merged new leads then scored up
+  to 300 of the 6,086 unscored backlog with Ollama, inline, in the single-thread loop. That scoring
+  now runs on a background thread.
+- `test_gate.py`: 35/35, with 3 new cases.
 
 ## Open items
 - **Cloud WhatsApp select has no LLM.** Its pass runs at 03:48 UTC, after lead scoring has spent the

@@ -228,6 +228,24 @@ def insert_lead(conn: sqlite3.Connection, lead: Lead) -> int | None:
     if exists:
         return None
 
+    # Reddit cross-posts: the same [Hiring] title in r/computervision, r/techjobs
+    # and r/MLjobs was pushed 3x on 2026-11-04 - the fuzzy pass below only sees
+    # the newest 400 rows (~4h at ~2,300 rows/day) and one copy was title-only.
+    # An exact title match over 7 days, done inside SQLite, catches them all.
+    title = lead.raw_text.split("\n", 1)[0].strip()
+    if lead.source.startswith("r/") and len(title) >= 30:
+        week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+        prefix = title + "\n"
+        row = conn.execute(
+            "SELECT id FROM leads WHERE fetched_at > ? AND source LIKE 'r/%'"
+            " AND substr(raw_text, 1, ?) = ? LIMIT 1",
+            (week_ago, len(prefix), prefix)).fetchone()
+        if row:
+            conn.execute("UPDATE leads SET extra_urls = extra_urls || ' ' || ? WHERE id=?",
+                         (lead.url, row["id"]))
+            conn.commit()
+            return None
+
     # Fuzzy dedup against the last 7 days (cross-posted FB group posts etc.)
     text = lead.raw_text[:1500]
     if len(text) > 60:  # too-short texts fuzz-match everything

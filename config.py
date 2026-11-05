@@ -862,7 +862,41 @@ FLEX_RE = re.compile(
     r"(פרילנס|עצמאי|עצמאית|משרה חלקית|מיקור חוץ|לפרויקט|פרויקטלי"
     r"|freelanc|contract(or|\s+work|\s+role|\b)|part[\s-]?time|hourly|per\s+hour"
     r"|\bPOC\b|proof\s+of\s+concept|\bgig\b|one[\s-]off|Type:\s*(fixed|hourly)"
-    r"|/hr\b|hrs?/w(ee)?k)", re.IGNORECASE)
+    r"|/hr\b|hrs?/w(ee)?k|hours?\s*(/|per|a)\s*w(ee)?k|weekends?\b)", re.IGNORECASE)
+
+# A salaried job ad that never says "full-time" (2026-11-05: Evercam's "Product
+# Engineer, ~130-person company" was pushed 3x at 8/10). Each pattern is one
+# section of the employee-ad template; >= EMPLOYEE_AD_MIN distinct sections with
+# no FLEX term -> gate_full_time. 30d replay: 4 of 98 leads >=6 hit it - both
+# Evercam copies, one salaried "own what you build" role, and a weekend gig that
+# the "hours/week" FLEX fix above now rescues.
+EMPLOYEE_AD_RES = [re.compile(p, re.IGNORECASE) for p in (
+    r"who\s+we\s+are|about\s+(us|the\s+(company|team|role))|אודות\s+החברה|על\s+החברה",
+    r"what\s+you['’]?ll\s+(do|build|own|work\s+on)|(key\s+)?responsibilities|your\s+role"
+    r"|in\s+this\s+role|תחומי\s+אחריות|מה\s+תעשו|תיאור\s+התפקיד",
+    r"you\s+might\s+be\s+a\s+fit|what\s+we['’]?re\s+looking\s+for|requirements\s*:"
+    r"|qualifications|nice[\s-]to[\s-]have|must[\s-]have|you\s+have\s*:"
+    r"|דרישות(\s+התפקיד)?\s*:|יתרון\s+משמעותי",
+    r"benefits|perks|paid\s+time\s+off|\bPTO\b|health\s+(insurance|care)|401\(?k"
+    r"|stock\s+options|equity\s+(package|grant)|annual\s+leave|vacation\s+days"
+    r"|תנאים\s+סוציאליים|קרן\s+השתלמות",
+    r"~?\d{2,5}[\s-]+(person|people|employee)s?\b|team\s+of\s+\d{2,}|\d{2,}\s+employees",
+    r"salary|per\s+annum|/\s*year\b|per\s+year|[$€£]\s?\d{2,3}\s?k\b|שכר",
+    r"level\s*:\s*(junior|mid|senior)"
+    r"|\b(senior|staff|principal|lead)\s+\w+\s+(engineer|researcher|scientist)",
+)]
+EMPLOYEE_AD_MIN = 2
+
+
+def employee_ad_hits(text: str) -> int:
+    return sum(1 for r in EMPLOYEE_AD_RES if r.search(text or ""))
+
+
+# The LLM's own words calling the role full-time ("relevant ... but is full-time
+# and location-restricted") while it filled work_type='contract' and scored 7.
+FT_CLAIM_RE = re.compile(
+    r"\b(is|as|a|seems|appears|likely|probably)\s+(to\s+be\s+)?(a\s+)?"
+    r"(salaried\s+|permanent\s+)?full[\s-]?time\b(?!\s+or\b)", re.IGNORECASE)
 
 # Job-seekers (people offering themselves, not hiring).
 # The "open to ... opportunities" / "[Hiring Me]" / "I need clients" variants were
@@ -1003,7 +1037,8 @@ INTENT_REQUIRED_ROOTS = {"whatsapp"}
 # ads: "דרוש/ה ... לתפקיד"). Without a FLEX term these are full-time - and an
 # in-domain one is an outbound prospect, not a question (2026-10-20).
 WA_JOB_CARD_RE = re.compile(
-    r"(secrethunter\.io/jobz/|ㅤ\s*(Junior|Mid|Senior|Techlead|Teamleader|Student)\b"
+    r"(secrethunter\.io/jobz/|hiremetech\.com/job/|Level:\s*(Junior|Mid|Senior)"
+    r"|ㅤ\s*(Junior|Mid|Senior|Techlead|Teamleader|Student)\b"
     r"|דרוש/ה|לתפקיד|למשרה|למשרת)", re.IGNORECASE)
 
 QUESTION_ROOTS = {"whatsapp"}

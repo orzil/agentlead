@@ -23,6 +23,7 @@ import shutil
 import sqlite3
 import subprocess
 import tempfile
+import threading
 
 import config
 import db
@@ -157,10 +158,28 @@ def run_once() -> dict:
         shutil.rmtree(tmp, ignore_errors=True)
     if stats.get("leads_added"):
         # score them here, where Ollama is free and unlimited - the whole point
-        # of bringing them home. Pushes for >=8 fire from score_backlog.
-        import main as m
-        m.score_backlog(db.connect(), min(stats["leads_added"], 300))
+        # of bringing them home. Pushes fire from score_backlog. On a background
+        # thread: inline, 300 local scorings blocked the single-thread Reddit
+        # trickle for ~6h on 2026-11-05 (08:06-14:11, no feed read).
+        _score_in_background(min(stats["leads_added"], 300))
     return stats
+
+
+_scoring = threading.Lock()
+
+
+def _score_in_background(n: int) -> None:
+    def work():
+        if not _scoring.acquire(blocking=False):
+            return                  # the previous batch is still running
+        try:
+            import main as m
+            m.score_backlog(db.connect(), n)
+        except Exception as e:
+            print("background scoring failed:", str(e)[:120])
+        finally:
+            _scoring.release()
+    threading.Thread(target=work, name="cloud-score", daemon=True).start()
 
 
 def main() -> None:

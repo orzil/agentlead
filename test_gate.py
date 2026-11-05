@@ -137,6 +137,24 @@ CASES = [
     ("wa webinar promo is not a question", "whatsapp/Test Group",
      "מחר ב-20:00 נקיים לייב זום חינמי על AI לעסקים, פה נרשמים. מה יהיה שם? "
      "נעבוד עם סוכני AI בתוך אקסל ונאתר חריגים עם AI", NOW, "gate_offtopic"),
+    # --- 2026-11-05: salaried roles that never say "full-time" (Or: "still I get
+    # full time jobs") - a company job-ad template, and a hiremetech WA card ---
+    ("salaried ad without the word", "r/search",
+     "[Hiring] [Remote] [EMEA] - Product Engineer (Computer Vision + Agentic AI) for "
+     "construction safety\n\nTL;DR: Build an AI agent that watches live construction sites. "
+     "Remote, ~130-person company. Who we are: a remote-first construction tech company. "
+     "What you'll build: an AI system that observes sites through live video. "
+     "You might be a fit if you have shipped production vision systems. "
+     "Interested? Hiring now, apply via DM.", NOW, "gate_full_time"),
+    ("wa hiremetech senior card", "whatsapp/Test Group",
+     "Distinguished AI Researcher, Advanced Development Engineer\nLevel: Senior\n"
+     "משרה שכנראה תיסגר מהר\nפרטים מלאים והגשה בקישור:\n"
+     "https://hiremetech.com/job/152638714?utm_source=wa", NOW, "gate_full_time"),
+    ("weekend gig in hours/week stays", "r/search",
+     "[Hiring] [Remote] Computer vision annotation QA lead\n\nWe're hiring someone to review "
+     "object detection labels. What you'll do: audit YOLO datasets. Requirements: 3 years "
+     "of computer vision experience. Commitment: approximately 8-12 hours/week, paid weekly.",
+     NOW, "pass"),
     ("wa real OCR question", "whatsapp/Test Group",
      "מישהו מכיר ספרייה טובה ל-OCR על חשבוניות בעברית? יש לנו אלפי סריקות בחודש",
      NOW, "question"),

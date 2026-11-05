@@ -106,8 +106,10 @@ def apply(score, posted_at=None, raw_text: str = "", fetched_at=None):
     if not delta or score is None:
         return score, days
     # freshness speeds up a good lead; it must not lift a full-time role over the
-    # push line (2026-11-04: two full-time 5s became pushed 6s)
-    if delta > 0 and getattr(score, "work_type", None) == "full_time":
+    # push line (2026-11-04: two full-time 5s became pushed 6s). 'unclear' too:
+    # 2026-11-02 a "Level: Senior" job card scored 5/unclear and was pushed as a
+    # fresh 6 - the bonus is for leads known to be freelance, not for guesses.
+    if delta > 0 and getattr(score, "work_type", None) in ("full_time", "unclear"):
         return score, days
     original = score.score
     score.score = max(1, min(10, original + delta))
