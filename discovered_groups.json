@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-04T22:29:19+00:00",
- "count": 1299,
+ "generated": "2026-11-05T02:43:42+00:00",
+ "count": 1300,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -3375,6 +3375,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-14T08:28:17+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "drushimboneiatarim",
+   "name": "דרושים מתכנתים ובוני אתרים",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-05T02:43:40+00:00",
    "last_checked": null
   },
   {
