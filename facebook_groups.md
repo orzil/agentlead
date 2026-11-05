@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-05T02:43:42+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-05T04:47:06+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1313)
+## Not yet probed (1316)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -1135,6 +1135,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `TiamatsTavern` (found via reddit_search)
 - `919732611373456` (found via leads_db)
 - `bioinformatix` (found via leads_db)
+- `809907055730338` (found via leads_db)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
@@ -1321,7 +1322,9 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `863785725675859` (found via ddg)
 - `independant.il` (found via ddg)
 - `business.owners.israel` (found via ddg)
+- `business.ownerz` (found via ddg)
 - `business.marketing.ai.il` (found via ddg)
+- `hadar.afeka` (found via ddg)
 - `318547103365148` (found via ddg)
 - `1774931386364154` (found via ddg)
 - `asakimktanim` (found via ddg)

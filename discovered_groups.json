@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-05T02:43:42+00:00",
- "count": 1300,
+ "generated": "2026-11-05T04:47:06+00:00",
+ "count": 1303,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -14838,6 +14838,21 @@
    "last_checked": null
   },
   {
+   "slug": "809907055730338",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "leads_db",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-05T03:43:42+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "815933868573559",
    "name": null,
    "status": "pending",
@@ -16533,6 +16548,21 @@
    "last_checked": null
   },
   {
+   "slug": "business.ownerz",
+   "name": "בעלי עסקים בישראל | פרסום, לידים ושיתופי פעולה",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-05T04:47:05+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "businessaustraliagroup",
    "name": "Business Australia",
    "status": "pending",
@@ -17370,6 +17400,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:30:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "hadar.afeka",
+   "name": "בעלי עסקים בתל אביב והמרכז",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-05T04:47:05+00:00",
    "last_checked": null
   },
   {
