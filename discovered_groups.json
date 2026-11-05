@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-05T04:47:06+00:00",
- "count": 1303,
+ "generated": "2026-11-05T10:13:00+00:00",
+ "count": 1305,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -12843,6 +12843,21 @@
    "last_checked": null
   },
   {
+   "slug": "374746629656498",
+   "name": "עסקים קטנים ובינוניים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-05T10:12:57+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "377768309042171",
    "name": null,
    "status": "pending",
@@ -18810,6 +18825,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-11T07:28:59+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "smallbizthoughts",
+   "name": "מחשבות של בעלי עסקים קטנים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-05T10:12:57+00:00",
    "last_checked": null
   },
   {
