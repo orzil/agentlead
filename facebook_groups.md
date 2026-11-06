@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-05T22:36:33+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-06T02:50:54+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1320)
+## Not yet probed (1322)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -1366,6 +1366,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1417623821789515` (found via ddg)
 - `portalil` (found via ddg)
 - `digitalz.co.il` (found via ddg)
+- `Pirsum.Asakim.Baarez` (found via ddg)
 - `persum.israel` (found via ddg)
 - `527371684110657` (found via ddg)
 - `buslness` (found via ddg)
@@ -1376,6 +1377,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `slikot` (found via ddg)
 - `1911133942442554` (found via ddg)
 - `workfromhomenospam` (found via leads_db)
+- `759560490801192` (found via ddg)
 - `1298319104548368` (found via ddg)
 - `superface.marketing.digital` (found via ddg)
 - `1175523289159038` (found via ddg)

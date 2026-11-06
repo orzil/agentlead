@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-05T22:36:33+00:00",
- "count": 1307,
+ "generated": "2026-11-06T02:50:54+00:00",
+ "count": 1309,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -14628,6 +14628,21 @@
    "last_checked": null
   },
   {
+   "slug": "759560490801192",
+   "name": "שיווק דיגיטלי לעסקים ישראלים בארה״ב",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-06T01:49:16+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "763044283717023",
    "name": null,
    "status": "pending",
@@ -15780,6 +15795,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "Pirsum.Asakim.Baarez",
+   "name": "פרסום עסקים בארץ - קהילת שיווק וצמיחה לבעלי עסקים",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-06T01:49:16+00:00",
    "last_checked": null
   },
   {
