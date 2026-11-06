@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-06T10:16:16+00:00",
- "count": 1314,
+ "generated": "2026-11-06T22:05:25+00:00",
+ "count": 1317,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -1635,6 +1635,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T23:27:25+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1856249534662684",
+   "name": "סטארט אפ ישראל - הבית של הסטארטאפיסטים | כל היתרונות של מיקור חוץ במקום ...",
+   "status": "pending",
+   "relevance": 2,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 1,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-06T18:33:39+00:00",
    "last_checked": null
   },
   {
@@ -4578,6 +4593,21 @@
    "last_checked": null
   },
   {
+   "slug": "1097235657887363",
+   "name": "דרושים - עבודות מפה לאוזן במרכז חולון, בת ים, ראשון לציון, רמלה, תל ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-06T18:33:39+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1100802378915693",
    "name": "Help with ecommerce store",
    "status": "pending",
@@ -4740,6 +4770,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T21:36:49+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "12537514197",
+   "name": "ליהוק שחקנים | לחברת סטארטאפ ישראלי מצליח אנחנו מחפשים פרזנטור/ית מוכשר ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-06T11:41:27+00:00",
    "last_checked": null
   },
   {
