@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-06T04:46:17+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-06T10:16:16+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1322)
+## Not yet probed (1327)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -679,6 +679,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `107914806514702` (found via ddg)
 - `1496943943857797` (found via ddg)
 - `832763754922199` (found via ddg)
+- `645209501480907` (found via ddg)
 - `919359532765118` (found via ddg)
 - `692392677552880` (found via ddg)
 - `698911985645824` (found via ddg)
@@ -1335,11 +1336,13 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `2786770884931764` (found via ddg)
 - `1689553871337142` (found via ddg)
 - `473051352513816` (found via ddg)
+- `178399528913967` (found via ddg)
 - `748259480517030` (found via ddg)
 - `vacationmode` (found via ddg)
 - `friendbringsfriend` (found via ddg)
 - `270931709946261` (found via ddg)
 - `1308879656987184` (found via ddg)
+- `2938744149529786` (found via ddg)
 - `462672717191788` (found via ddg)
 - `386869638147419` (found via ddg)
 - `677520975925772` (found via ddg)
@@ -1362,10 +1365,12 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `shavit` (found via ddg)
 - `209262042417914` (found via ddg)
 - `new.nahariya` (found via ddg)
+- `698910430759666` (found via ddg)
 - `186860244674907` (found via ddg)
 - `1417623821789515` (found via ddg)
 - `portalil` (found via ddg)
 - `digitalz.co.il` (found via ddg)
+- `250636145007603` (found via ddg)
 - `Pirsum.Asakim.Baarez` (found via ddg)
 - `persum.israel` (found via ddg)
 - `527371684110657` (found via ddg)

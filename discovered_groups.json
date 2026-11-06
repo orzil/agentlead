@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-06T04:46:17+00:00",
- "count": 1309,
+ "generated": "2026-11-06T10:16:16+00:00",
+ "count": 1314,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -6198,6 +6198,21 @@
    "last_checked": null
   },
   {
+   "slug": "645209501480907",
+   "name": "קבלנים • יזמים • שיפוצים • עובדים • תיווך • פינוי בינוי • שת״פ עולם ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-06T08:34:21+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "6508644522524665",
    "name": "Construction Owners Club",
    "status": "pending",
@@ -10938,6 +10953,21 @@
    "last_checked": null
   },
   {
+   "slug": "178399528913967",
+   "name": "הזדמנויות נדל\"ן",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-06T08:34:21+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "178945218968968",
    "name": null,
    "status": "pending",
@@ -11898,6 +11928,21 @@
    "last_checked": null
   },
   {
+   "slug": "250636145007603",
+   "name": "פרסום נדל\"ן מסחרי",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-06T08:34:21+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "254113251820121",
    "name": "Business For Practice Managers",
    "status": "pending",
@@ -12255,6 +12300,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-11T23:38:56+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "2938744149529786",
+   "name": "כל מה שקורה בבית שמש",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-06T08:34:21+00:00",
    "last_checked": null
   },
   {
@@ -14355,6 +14415,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-05T10:53:18+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "698910430759666",
+   "name": "פורום עסקים נהריה",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-06T08:34:21+00:00",
    "last_checked": null
   },
   {
