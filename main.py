@@ -330,12 +330,18 @@ def run_job_safe(conn, name: str, fn) -> None:
         fn(conn)
     except Exception as e:
         log.exception("job %s failed: %s", name, e)
-        # self-report to Telegram, throttled
-        key = f"last_error_alert_{name}"
-        last = float(db.kv_get(conn, key, "0") or 0)
-        if time.time() - last > ERROR_THROTTLE_SECONDS:
-            notifier.send_error(name, str(e))
-            db.kv_set(conn, key, str(time.time()))
+        # self-report to Telegram, throttled. Guarded: on 2026-11-06 a "database
+        # is locked" job error hit the same lock here, escaped, and killed the
+        # home Reddit loop for 2 days.
+        try:
+            conn.rollback()
+            key = f"last_error_alert_{name}"
+            last = float(db.kv_get(conn, key, "0") or 0)
+            if time.time() - last > ERROR_THROTTLE_SECONDS:
+                notifier.send_error(name, str(e))
+                db.kv_set(conn, key, str(time.time()))
+        except Exception as e2:
+            log.error("error alert for %s failed too: %s", name, e2)
 
 
 def run_forever(only: str | None = None, skip: str | None = None) -> None:
