@@ -14,7 +14,7 @@ HERE = Path(__file__).resolve().parent
 os.chdir(HERE)
 sys.path.insert(0, str(HERE))
 os.environ.setdefault("AGENT_LOG", str(HERE / "reddit_loop.log"))
-sys.argv = ["main.py", "--only", "reddit_trickle,cloud_sync"]
+sys.argv = ["main.py", "--only", "reddit_trickle,cloud_sync,agency_mail"]
 
 import main  # noqa: E402
 

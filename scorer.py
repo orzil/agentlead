@@ -67,6 +67,10 @@ HARD RULES
   initiatives, surveys/questionnaires, open-source contribution requests -
   even in his exact specialty.
 - Course/workshop/webinar/event ads and group admin posts score 1.
+- A post asking for ADVICE, opinions, recommendations, or a library/framework/
+  repo - with no offer to hire or pay anyone - is a discussion post, not a
+  lead: score 1-4 with the red_flag "advice only". If it says it will pay or
+  hire someone, it is a lead and this rule does not apply.
 - Equity-only partnership or co-founder offers (no cash budget) cap at 4 and
   must include the red_flag "equity only".
 - The engineer is in Israel and works remotely or on-site in Israel. A role
@@ -376,13 +380,21 @@ def _score_ollama(lead: Lead) -> LeadScore:
             "options": {"temperature": 0.1},
             "messages": [
                 {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": _lead_prompt(lead)},
+                {"role": "user", "content": _lead_prompt(lead) + _ENGLISH_NOTE},
             ],
         },
         timeout=300,
     )
     r.raise_for_status()
     return LeadScore.from_dict(json.loads(r.json()["message"]["content"]))
+
+
+# qwen2.5:7b drifts into Chinese on Hebrew posts ("有实际问题..." summaries that
+# reached Telegram, 2026-11). Repeating the language rule next to the post fixes
+# most of it; _fix_language handles the rest.
+_ENGLISH_NOTE = ("\n\nWrite summary and reasoning in ENGLISH only - never Chinese "
+                 "or any other language, even when the post is in Hebrew.")
+_CJK_RE = re.compile(r"[぀-ヿ㐀-鿿가-힯]")
 
 
 _ollama_unavailable = False
@@ -435,9 +447,56 @@ def enforce_full_time(score: LeadScore | None) -> LeadScore | None:
     return score
 
 
+ADVICE_CAP = 4          # the rubric's band for discussion posts
+_ADVICE_CLAIM_RE = re.compile(
+    r"\b(seek(s|ing)?|asks?|asking|looking|wants?)\s+(for\s+)?(some\s+)?"
+    r"(advice|recommendations?|guidance|opinions?|suggestions?|tips|input|"
+    r"(a\s+)?(lightweight\s+|reliable\s+|good\s+)?(frameworks?|librar(y|ies)|repos?|tools?))\b",
+    re.IGNORECASE)
+# "rate" is not here on purpose: "frame rate" kept a restaurant-CV advice
+# thread at 8
+_PAYS_RE = re.compile(r"\b(hire|hiring|paid|pay(ing)?\b(?!\s+attention)|budget|contractor|freelancer|"
+                      r"quote|\$\s?\d)|שכר|תשלום|תקציב|פרילנסר|בתשלום", re.IGNORECASE)
+
+
+def enforce_advice(score: LeadScore | None, lead: Lead) -> LeadScore | None:
+    """A post that only asks for advice / a library is not a lead. The 7B model
+    scored three of them 8 in one week (2026-11-08: a VLM-repo ask, a restaurant
+    CV 'how do I build', a factory 'AI agents?' thread) because the domain fit was
+    perfect. Its own summary says so; cap unless the post offers money or hiring."""
+    if score is None or score.score <= ADVICE_CAP or score.budget_mentioned:
+        return score
+    said = " ".join(filter(None, (score.reasoning, score.summary)))
+    if _ADVICE_CLAIM_RE.search(said) and not _PAYS_RE.search(lead.raw_text or ""):
+        score.reasoning = f"[advice only: was {score.score}/10] {score.reasoning or ''}".strip()
+        score.score = ADVICE_CAP
+        score.red_flags = list(score.red_flags or []) + ["advice only"]
+    return score
+
+
+def _fix_language(score: LeadScore | None, lead: Lead) -> LeadScore | None:
+    """Re-score once on the free cloud providers when the local model answered in
+    Chinese; if that fails too, keep the lead but mark it and hold it below the
+    push line - a score from a model that lost the language is not trustworthy."""
+    if score is None or not _CJK_RE.search(f"{score.summary} {score.reasoning}"):
+        return score
+    try:
+        again = _score_via_providers(lead)
+    except Exception:
+        again = None
+    if again is not None and not _CJK_RE.search(f"{again.summary} {again.reasoning}"):
+        return again
+    first = (lead.raw_text or "").strip().splitlines()[0][:160] if lead.raw_text else ""
+    score.summary = first
+    score.reasoning = f"[model answered in Chinese: was {score.score}/10, unverified]"
+    score.score = min(score.score, 5)
+    return score
+
+
 def score_lead(lead: Lead) -> LeadScore | None:
     """Returns a LeadScore, or None when no backend is configured (store-only mode)."""
-    return enforce_full_time(_score_lead_any(lead))
+    s = _fix_language(_score_lead_any(lead), lead)
+    return enforce_advice(enforce_full_time(s), lead)
 
 
 def _score_lead_any(lead: Lead) -> LeadScore | None:
@@ -543,11 +602,20 @@ obviously written for THEM.
 Write 2-3 sentences, under 60 words total:
 1. Open on THEIR specific problem, with one concrete technical detail that shows
    you actually understood it (name the real obstacle, tool or trade-off).
-2. One short line of relevant CAPABILITY - the techniques and tools you work
-   with for this class of problem. Never invent a client, industry or past
-   project: write "I work on real-time multi-camera detection pipelines", never
-   "I built this for a hospital". A fabricated credential is worse than none,
-   because it collapses the moment they ask about it.
+2. One short line of relevant, REAL experience. Your actual background (from
+   your CV - cite only what fits this post, at most one item):
+   - Juganu: computer vision in retail at scale - YOLO detection,
+     person re-identification, face recognition, product recognition, PyTorch->
+     ONNX models running real-time on edge devices.
+   - Bright Machines (2019-2022): machine vision for automated assembly lines -
+     inspection, OCR, robot navigation, anomaly detection on small datasets
+     (autoencoders, PCA), CAD-to-image synthetic training data.
+   - Autotalks (2017-2019): DSP performance automation and data-analysis tools.
+   - B.Sc. Electrical Engineering, computer-vision track; Python, OpenCV, C++.
+   Describe an item only with the techniques listed for it (Bright Machines did
+   OCR, not "layout understanding"); no years, no "perfect fit" filler.
+   Never invent any other client, industry, project or number. A fabricated
+   credential is worse than none: it collapses the moment they ask about it.
 3. End with ONE precise question they can answer in a single line. Not "happy to
    jump on a call", not "let me know if interested" - something like "Is the
    footage fixed-camera or moving?" or "Roughly how many documents per month?"
@@ -681,7 +749,11 @@ def draft_pitch(lead: Lead) -> str | None:
             raw = None
     if raw is None and config.LLM_FALLBACK_OLLAMA:
         raw = _pitch_ollama(lead)
-    return _clean_pitch(raw)
+    msg = _clean_pitch(raw)
+    # proof travels with every reply: the case-study page (2026-11-08)
+    if msg and config.PORTFOLIO_URL and config.PORTFOLIO_URL not in msg:
+        msg = f"{msg}\n\n{config.PORTFOLIO_URL}"
+    return msg
 
 
 # --- domain questions (WhatsApp group chat) ----------------------------------

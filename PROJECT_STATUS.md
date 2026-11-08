@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-11-05*
+*Last updated: 2026-11-08*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -896,7 +896,45 @@ Same day, later:
   `xplace.com` link reshared in a group now gives `gate_paywall`. The 149 stored X-Place leads were
   marked `gated_out`. `test_gate.py`: 36/36.
 
+## 2026-11-08: no money yet (Or: "still i didnt earn anything") - the gap is acting, not finding
+- **Funnel, 30 days:** 125 leads >=6 (~4/day, 30 at >=8), 69 Telegram pushes in 14 days. But
+  0 feedback replies, 0 Reddit replies (no Reddit API creds in `.env`), 0 of 43 outbound drafts
+  marked contacted. Discovery works; nothing was being sent.
+- **Outage:** `reddit_loop` was dead 2026-11-06 06:08 -> 11-08 12:47. A `database is locked` job
+  error hit the same lock inside `run_job_safe`'s Telegram-alert block, escaped, and ended the
+  process. The alert is now guarded (rollback + try), and `reddit_loop.pyw` restarts the loop if it
+  ever dies. On restart the cloud sync brought 2,688 leads home.
+- **`gate_ai_training`:** 45 of the 125 were the same AI-training pools (Mercor, micro1, Alignerr,
+  DataAnnotation, Outlier, Mindrift) reposted by referral hunters. `AI_TRAINING_RE` gates them on
+  every source except `mercor`/`braintrust` (original listings). The replay had 0 false hits. Or
+  joins the pools once; the profile and list are in the gitignored `talent_networks.md`.
+- **Advice cap:** `scorer.enforce_advice` caps at 4 when the model's own summary says the post seeks
+  advice/a library/a repo, unless it is backed by a budget or the text says hire/pay/budget
+  (`_PAYS_RE`, which skips "frame rate" and "pay attention"). 4 of the 125 hit, all of them
+  discussions. A matching rule was added to the rubric.
+- **Chinese summaries:** qwen wrote 4 summaries in Chinese on Hebrew WhatsApp posts. The Ollama
+  prompt now ends with an English-only note. If CJK still appears, the lead is rescored on the
+  cloud providers; failing that, it is marked unverified and capped at 5.
+- **Pitches use Or's real CV** (Juganu, Bright Machines, Autotalks; source
+  `Desktop/Or/Me/CV/new/Or Zilberberg - CV.docx`) and end with the portfolio link
+  (`config.PORTFOLIO_URL`).
+- **Portfolio:** https://orzil.github.io (repo `orzil/orzil.github.io`, source
+  `freelance/portfolio/index.html`). Every claim on it is from the CV; it shows no phone number.
+- **Agency email drip (`agency_mail.py`):** 13 good-fit Israeli CV/ML consultancies, each
+  hand-personalised from its own site, queued in the gitignored `agency_outreach.jsonl`. The emails
+  go from Or's Gmail over SMTP with the IMAP app password: Sun-Thu 09-16 IL, up to 4 a day, at least
+  50 min apart, one per company ever (kv `agency_mail_sent:<addr>`). Each is copied to Telegram. It
+  is a loop-only job in `reddit_loop`. The kill switch is `agency_mail.py --off`. Of the 39
+  agencies, 34 publish an email; 24 are weak fits and 2 are dead (the scratch research isn't kept).
+  The sent folder showed no prior mail to the 13. Note: the separate `find_business` project also
+  sends cold emails (to factories) from the same Gmail.
+- `test_gate.py`: 41/41.
+
 ## Open items
+- **Check ~11-15:** replies to the agency emails, and whether Or joined Mercor/micro1/Alignerr. If
+  agencies reply, queue the 24 weak fits; if none reply, rewrite the hook rather than send more.
+- **Reddit replies still need a Reddit app** (free, `REDDIT_CLIENT_ID`/`SECRET`/`USERNAME`/
+  `PASSWORD`); without them `replier.py` cannot send, and only Or can create the app.
 - **Cloud WhatsApp select has no LLM.** Its pass runs at 03:48 UTC, after lead scoring has spent the
   OpenRouter free quota. Low value while the pool is tapped out (see 2026-11-04). If the pool grows
   again, rate it in the first slice after 00:00 UTC, or add a free Groq/Cerebras key (needs Or's

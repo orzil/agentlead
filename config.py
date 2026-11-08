@@ -751,6 +751,9 @@ DIGEST_HOUR = int(env("DIGEST_HOUR", "18"))           # local time
 # Draft a copy-paste first-contact reply for pushed leads (Gemini only; a few
 # extra calls per day at most). Set PITCH_DRAFTS=0 to disable.
 PITCH_DRAFTS = env("PITCH_DRAFTS", "1") in ("1", "true", "yes")
+# Or's public case-study page, appended to every pitch draft (GitHub Pages,
+# repo orzil/orzil.github.io). Empty disables it.
+PORTFOLIO_URL = env("PORTFOLIO_URL", "https://orzil.github.io")
 # Turn gate-rejected FULL-TIME job posts into outbound "pitch contract capacity"
 # prospects. Off since 2026-10-22: Or saw them on Telegram as full-time jobs and
 # asked for none. Agency and funding-news prospects are unaffected.
@@ -992,6 +995,23 @@ LOCATION_OK_RE = re.compile(
 # remoteok/himalayas/Freelancer.com were dropped for the same reason earlier).
 PAID_BOARD_SOURCES = {"xplace"}
 PAID_BOARD_RE = re.compile(r"xplace\.co(m|\.il)", re.IGNORECASE)
+
+# AI-training / model-evaluation talent pools (Mercor, micro1, DataAnnotation,
+# Outlier, Alignerr, Mindrift...). Measured 2026-11-08: 48 of the 112 leads
+# scored >=6 in 30 days were the SAME few pools reposted by referral hunters
+# across subreddits. They are real paid work, but you apply ONCE to the pool,
+# not per post - so reposts are gated and Or joins the pools directly (see
+# PROJECT_STATUS.md). The pools' own fetchers (mercor, braintrust) still pass:
+# those are original listings with an apply button.
+AI_TRAINING_SOURCES_OK = {"mercor", "braintrust"}
+AI_TRAINING_RE = re.compile(
+    r"\b(mercor|micro1|alignerr|outlier(\.ai|\s+ai\b)|data\s*annotation\s*tech|"
+    r"dataannotation|mindrift|ai\s+gig\s+scout|evallabs|elitebrain|superannotate)\b"
+    r"|\bai[\s-]+(train(ing|er)s?|evaluat(or|ion)s?)\b(?!\s+(pipeline|infrastructure|cluster|code\b))"
+    r"|\bai[\s-]+code\s+(evaluation|review)"
+    r"|\bevaluat\w+[^.\n]{0,60}\bai[\s-]+(generated|written)\b"
+    r"|\bfrontier\s+ai\s+(labs?|models?)\b",
+    re.IGNORECASE)
 
 # Sources whose listings are full-time by default (career boards) - a post there
 # must show a FLEX signal to survive.

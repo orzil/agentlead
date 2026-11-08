@@ -16,6 +16,7 @@ classify() returns a reason string:
   gate_offtopic    -> fails the domain/intent keyword requirements
   gate_closed      -> the posting says it stopped accepting applications
   gate_paywall     -> a board that makes Or pay to register (X-Place)
+  gate_ai_training -> a reposted AI-training talent pool (Mercor, micro1...)
   gate_stale       -> older than MAX_LEAD_AGE_DAYS; almost certainly filled
   gate_lowbudget   -> stated budget (converted to USD) is below the floor
 
@@ -80,6 +81,10 @@ def classify(lead: Lead) -> str:
     if src_root in config.PAID_BOARD_SOURCES or config.PAID_BOARD_RE.search(
             f"{lead.url} {text}"):
         return "gate_paywall"
+    # an AI-training talent pool reposted by a referral hunter: Or applies to
+    # the pool once, so 48 reposts in 30 days were noise (2026-11-08)
+    if src_root not in config.AI_TRAINING_SOURCES_OK and config.AI_TRAINING_RE.search(text):
+        return "gate_ai_training"
     if _too_old(lead):
         return "gate_stale"
 

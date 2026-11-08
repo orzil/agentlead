@@ -155,6 +155,26 @@ CASES = [
      "object detection labels. What you'll do: audit YOLO datasets. Requirements: 3 years "
      "of computer vision experience. Commitment: approximately 8-12 hours/week, paid weekly.",
      NOW, "pass"),
+    # --- 2026-11-08: AI-training pools reposted across subs (48 of 112 top leads) ---
+    ("micro1 repost", "r/MachineLearningJobs",
+     "Hiring - ML Engineers (MSc/PhD) | Remote Worldwide | $60-$120/hour\n\nmicro1 is hiring "
+     "experienced Machine Learning Engineers for a coding-intensive AI training project. "
+     "Type: Contractor, approximately 15 hours/week.", NOW, "gate_ai_training"),
+    ("ai code evaluation repost", "r/DataScienceJobs",
+     "[Hiring] [Remote] Python, ML & Data Engineers for Async AI Code Evaluation | Up to "
+     "$150+ USD / hr\n\nSeeking Python developers for flexible, 100% asynchronous remote "
+     "contract work evaluating, debugging, and benchmarking AI-generated code.",
+     NOW, "gate_ai_training"),
+    ("mercor's own listing stays", "mercor",
+     "Machine Learning Expert at Deeptune | Type: contract (hourly) | Rate: 150.0-200.0 "
+     "USD/hourly | Hours/wk: 20 | Location: Remote\n\nTrain and evaluate frontier AI models "
+     "in PyTorch.", NOW, "pass"),
+    ("client wants an AI training pipeline", "r/computervision",
+     "[Hiring] Need a contractor to build our AI training pipeline for a YOLO defect "
+     "detector, paid project, budget $4000, remote.", NOW, "pass"),
+    ("outlier detection is not Outlier AI", "r/forhire",
+     "[Hiring] Freelance ML engineer for outlier detection on sensor data, $90/hr, "
+     "about 2 weeks, remote.", NOW, "pass"),
     ("xplace link reshared in a group", "whatsapp/Test Group",
      "דרוש פרילנסר לפרויקט ראייה ממוחשבת, תקציב 5000 ש\"ח. פרטים: "
      "https://www.xplace.com/il/job/123456", NOW, "gate_paywall"),

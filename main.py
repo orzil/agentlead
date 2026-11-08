@@ -351,8 +351,12 @@ def run_forever(only: str | None = None, skip: str | None = None) -> None:
     conn = db.connect()
     wanted = {s.strip() for s in only.split(",")} if only else None
     unwanted = {s.strip() for s in skip.split(",")} if skip else set()
-    pool = JOBS + [("reddit_trickle", config.REDDIT_TRICKLE_SECONDS, job_reddit_trickle)]
-    jobs = [j for j in pool if (j[0] in wanted if wanted else j[0] != "reddit_trickle")
+    import agency_mail
+    # loop-only jobs: never in a --once pass or the default loop (home PC only)
+    loop_only = [("reddit_trickle", config.REDDIT_TRICKLE_SECONDS, job_reddit_trickle),
+                 ("agency_mail", 10 * 60, agency_mail.job)]
+    pool = JOBS + loop_only
+    jobs = [j for j in pool if (j[0] in wanted if wanted else j not in loop_only)
             and j[0] not in unwanted]
     next_run = {name: 0.0 for name, _, _ in jobs}
     log.info("lead-agent started (backend=%s, telegram=%s, jobs=%s)",
