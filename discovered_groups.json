@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-09T10:48:31+00:00",
- "count": 1317,
+ "generated": "2026-11-10T00:35:33+00:00",
+ "count": 1330,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -15,7 +15,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-11-02T11:33:41+00:00"
+   "last_checked": "2026-11-09T11:55:18+00:00"
   },
   {
    "slug": "352958686292104",
@@ -45,7 +45,7 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-25T02:18:07+00:00",
-   "last_checked": "2026-11-02T11:34:09+00:00"
+   "last_checked": "2026-11-09T11:55:46+00:00"
   },
   {
    "slug": "1162970365658943",
@@ -9333,6 +9333,21 @@
    "last_checked": null
   },
   {
+   "slug": "1008961741350807",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:52:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1018906960238126",
    "name": null,
    "status": "pending",
@@ -9648,6 +9663,21 @@
    "last_checked": null
   },
   {
+   "slug": "1101021167652034",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:52:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1105046720116682",
    "name": null,
    "status": "pending",
@@ -9660,6 +9690,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-28T10:11:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1113287361465366",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:55:09+00:00",
    "last_checked": null
   },
   {
@@ -10728,6 +10773,21 @@
    "last_checked": null
   },
   {
+   "slug": "1646132576695523",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:52:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1661983438866806",
    "name": null,
    "status": "pending",
@@ -10770,6 +10830,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-24T04:31:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "1687253686318894",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:55:09+00:00",
    "last_checked": null
   },
   {
@@ -12183,6 +12258,21 @@
    "last_checked": null
   },
   {
+   "slug": "277575515608051",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:52:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "2786770884931764",
    "name": "דרוש מפתח/ת Full Stack",
    "status": "pending",
@@ -12210,6 +12300,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-07T08:51:27+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "281754528857969",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:55:09+00:00",
    "last_checked": null
   },
   {
@@ -12738,6 +12843,21 @@
    "last_checked": null
   },
   {
+   "slug": "331265881821489",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:52:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "332087790866175",
    "name": null,
    "status": "pending",
@@ -13110,6 +13230,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-12T11:19:28+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "394764144771910",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:52:23+00:00",
    "last_checked": null
   },
   {
@@ -14415,6 +14550,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-09-28T10:11:20+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "689453359703338",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:52:23+00:00",
    "last_checked": null
   },
   {
@@ -17073,6 +17223,21 @@
    "last_checked": null
   },
   {
+   "slug": "creality3dscanner",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:52:23+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "cs50",
    "name": null,
    "status": "pending",
@@ -18318,6 +18483,21 @@
    "last_checked": null
   },
   {
+   "slug": "officialmetroid",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:55:09+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "offroad4wdtrackssydney",
    "name": "4wd Tracks Sydney 4x4 ONLY and Camping Buy, Swap, Sell & Trade ...",
    "status": "pending",
@@ -19155,6 +19335,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-10-26T09:28:37+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "stlbuyrentsellstlbuyandsellrealtorsstpeters",
+   "name": null,
+   "status": "pending",
+   "relevance": 0,
+   "region": null,
+   "found_via": "reddit_search",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-09T11:53:32+00:00",
    "last_checked": null
   },
   {

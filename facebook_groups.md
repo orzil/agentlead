@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-09T10:48:31+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-10T00:35:33+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1330)
+## Not yet probed (1343)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -1140,6 +1140,19 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `919732611373456` (found via leads_db)
 - `bioinformatix` (found via leads_db)
 - `809907055730338` (found via leads_db)
+- `394764144771910` (found via reddit_search)
+- `creality3dscanner` (found via reddit_search)
+- `689453359703338` (found via reddit_search)
+- `1008961741350807` (found via reddit_search)
+- `1101021167652034` (found via reddit_search)
+- `277575515608051` (found via reddit_search)
+- `331265881821489` (found via reddit_search)
+- `1646132576695523` (found via reddit_search)
+- `stlbuyrentsellstlbuyandsellrealtorsstpeters` (found via reddit_search)
+- `officialmetroid` (found via reddit_search)
+- `1113287361465366` (found via reddit_search)
+- `281754528857969` (found via reddit_search)
+- `1687253686318894` (found via reddit_search)
 - `offroad4wdtrackssydney` (found via ddg)
 - `1271378943826323` (found via config)
 - `1164103449222930` (found via ddg)
