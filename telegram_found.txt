@@ -13,6 +13,7 @@ dsproglib
 forallmarketing
 forallmedia
 forallqa
+forallsales
 foranalysts
 forchiefs
 fordesigner
