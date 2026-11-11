@@ -1333,6 +1333,18 @@ def _autoskip_codes(conn, titles: dict[str, str]) -> set[str]:
         if (code and n >= config.WA_AUTOSKIP_MIN_MSGS
                 and (ft or 0) >= config.WA_AUTOSKIP_FT_SHARE * n):
             out.add(code)
+    # Dead weight (2026-11-11): 12 of 138 groups sent 1,237 messages in 21 days
+    # (24% of all reading) and not one scored >=5 or was a question. A group
+    # that goes quiet in our DB drops under the floor and is read again.
+    since = (datetime.now(timezone.utc)
+             - timedelta(days=config.WA_DEADSKIP_DAYS)).isoformat()
+    for src, n, useful in conn.execute(
+            "SELECT source, COUNT(*), SUM(COALESCE(score,0) >= 5 OR reasoning LIKE "
+            "'question%' OR category = 'question') FROM leads WHERE source LIKE "
+            "'whatsapp/%' AND fetched_at >= ? GROUP BY source", (since,)):
+        code = titles.get(src.removeprefix("whatsapp/"))
+        if code and n >= config.WA_DEADSKIP_MIN_MSGS and not useful:
+            out.add(code)
     return out
 
 

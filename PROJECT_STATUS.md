@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-11-08*
+*Last updated: 2026-11-11*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -930,9 +930,36 @@ Same day, later:
   sends cold emails (to factories) from the same Gmail.
 - `test_gate.py`: 41/41.
 
+## 2026-11-11: AI-training pools researched; WhatsApp relevance measured
+- **Pools, researched for Or before he spends the time** (reviews + our own data): the pay is real
+  but irregular. Passing the AI interview does not guarantee work; projects stall or pause, and
+  rates are cut after acceptance (Glassdoor, Trustpilot, parailabs). Mercor: 316 listings open to
+  Israel in 60 days, ~2 fit his profile (130 were 40 h/week). Alignerr: a "Computer Vision & ML
+  Expert" role posted for Tel Aviv. DataAnnotation: reportedly US/CA/UK/IE/AU/NZ only, so skip.
+  Or's decision: Alignerr + Mercor go on his to-do list.
+- **Agency emails:** 8 of 13 sent by 11-11; SagivTech answered "not relevant right now".
+- **WhatsApp, 21 days:** 138 groups posted 5,255 messages. 13 were scored >=6 and **0** of them were
+  real freelance work (talks, a free Zoom, salaried ads, a freelancer's self-ad, chat). There were
+  18 Telegram pushes from WhatsApp, all noise.
+  - **Gate:** Hebrew recruiter ads count as employee-ad hits (`לחברה מובילה`, `דרוש.ה`, `מוביל/ת`,
+    `נדרש ניסיון`, `תואר ראשון`). `SEEKER_RE` gains `מחפש לקוחות` and agency showcases
+    (`שסיימנו לאחרונה`). `NOISE_RE` gains Zoom/talk/video promos. The 30-day replay catches only
+    those posts. `test_gate.py`: 45/45.
+  - **Reading:** `_autoskip_codes` also skips dead weight: >=40 messages in 21 days with none
+    scored >=5 and no question (`WA_DEADSKIP_*`). That is 12 groups (job boards, dev chat) and
+    24% of all reading. A group is read again once it falls under the floor.
+  - **Joining:** every known invite has been tried, and the night hunt has returned 0 groups for
+    several nights. A web search found one fitting group, a WhatsApp group for tech freelancers
+    (itconsulting.co.il), queued first. In-group invites are the only steady source left (61 ever).
+
 ## Open items
-- **Check ~11-15:** replies to the agency emails, and whether Or joined Mercor/micro1/Alignerr. If
-  agencies reply, queue the 24 weak fits; if none reply, rewrite the hook rather than send more.
+- **Or's to-do (decided 2026-11-11):** sign up to **Alignerr** (one-attempt assessment: prepare)
+  and **Mercor** (CV + about 20 min AI interview). The profile text is in `talent_networks.md`.
+  Don't buy equipment for a project before it has actually started.
+- **Check ~11-15:** replies to the agency emails, and whether Or joined Alignerr/Mercor. If agencies
+  reply, queue the 24 weak fits; if none reply, rewrite the hook rather than send more.
+- **WhatsApp is close to tapped out as a lead source.** If the dead-skip leaves under ~20 active
+  groups yielding nothing by ~11-25, stop spending effort on joins and put it into email outreach.
 - **Reddit replies still need a Reddit app** (free, `REDDIT_CLIENT_ID`/`SECRET`/`USERNAME`/
   `PASSWORD`); without them `replier.py` cannot send, and only Or can create the app.
 - **Cloud WhatsApp select has no LLM.** Its pass runs at 03:48 UTC, after lead scoring has spent the

@@ -709,6 +709,10 @@ WA_JOIN_ALL_AUTO = env("WA_JOIN_ALL_AUTO", "1") in ("1", "true", "yes")
 # (wa_phone._autoskip_codes) - WA_SKIP_GROUP_RE by measurement, not by name.
 WA_AUTOSKIP_MIN_MSGS = int(env("WA_AUTOSKIP_MIN_MSGS", "20"))
 WA_AUTOSKIP_FT_SHARE = float(env("WA_AUTOSKIP_FT_SHARE", "0.9"))
+# ...and groups that are pure chatter: >= this many messages in the window and
+# none scored >= 5 or became a question (wa_phone._autoskip_codes, 2026-11-11)
+WA_DEADSKIP_DAYS = int(env("WA_DEADSKIP_DAYS", "21"))
+WA_DEADSKIP_MIN_MSGS = int(env("WA_DEADSKIP_MIN_MSGS", "40"))
 
 # --- Night search rotation ----------------------------------------------------
 # DuckDuckGo challenges an IP after ~1-2 queries, so the three query families
@@ -879,7 +883,8 @@ EMPLOYEE_AD_RES = [re.compile(p, re.IGNORECASE) for p in (
     r"|in\s+this\s+role|תחומי\s+אחריות|מה\s+תעשו|תיאור\s+התפקיד",
     r"you\s+might\s+be\s+a\s+fit|what\s+we['’]?re\s+looking\s+for|requirements\s*:"
     r"|qualifications|nice[\s-]to[\s-]have|must[\s-]have|you\s+have\s*:"
-    r"|דרישות(\s+התפקיד)?\s*:|יתרון\s+משמעותי",
+    r"|דרישות(\s+התפקיד)?\s*:|יתרון\s+משמעותי"
+    r"|נדרש(ת|ים)?\s+ניסיון|מה\s+נדרש|תואר\s+ראשון",
     r"benefits|perks|paid\s+time\s+off|\bPTO\b|health\s+(insurance|care)|401\(?k"
     r"|stock\s+options|equity\s+(package|grant)|annual\s+leave|vacation\s+days"
     r"|תנאים\s+סוציאליים|קרן\s+השתלמות",
@@ -887,6 +892,11 @@ EMPLOYEE_AD_RES = [re.compile(p, re.IGNORECASE) for p in (
     r"salary|per\s+annum|/\s*year\b|per\s+year|[$€£]\s?\d{2,3}\s?k\b|שכר",
     r"level\s*:\s*(junior|mid|senior)"
     r"|\b(senior|staff|principal|lead)\s+\w+\s+(engineer|researcher|scientist)",
+    # Hebrew recruiter ad, 2026-11-11: "לחברה מובילה באזור חיפה דרוש.ה מוביל/ת AI"
+    # was pushed twice at 6. The gendered "דרוש.ה" / "מוביל/ת" is how salaried
+    # Israeli job ads are written; a client wanting a freelancer writes "דרוש פרילנסר".
+    r"לחברה\s+(מובילה|גדולה|ותיקה|בינלאומית|גלובלית)|(?<![א-ת])דרוש[./]ה(?![א-ת])"
+    r"|(?<![א-ת])(מוביל|מפתח|מהנדס|ראש|מנהל|חוקר)/ת(?![א-ת])",
 )]
 EMPLOYEE_AD_MIN = 2
 
@@ -940,7 +950,12 @@ SEEKER_RE = re.compile(
     # lead on the first facebook/search run.
     r"|שמי\s+[֐-׿\s]{2,20}(מהנדס|מפתח|מתכנת|יועץ|פרילנסר)"
     r"|בעל\s+ניסיון\s+ב(פיתוח|תכנות)"
-    r"|מחפש\s+פרויקטים|לקוחות\s+חדשים)", re.IGNORECASE)
+    r"|מחפש\s+פרויקטים|לקוחות\s+חדשים"
+    # 2026-11-11, both pushed from WhatsApp at 6: "אני כרגע מחפש לקוחות עם עסק
+    # קיים" (a freelancer's ad) and "רוצה לשתף אתכם בפרויקט ... שסיימנו לאחרונה"
+    # (a studio showing off its own work)
+    r"|מחפש(ת|ים)?\s+לקוחות|רוצ(ה|ים)\s+לשתף\s+אתכם\s+בפרויקט|שסיימנו\s+לאחרונה)",
+    re.IGNORECASE)
 
 # Unpaid community / volunteer / data-collection / survey asks
 COMMUNITY_RE = re.compile(
@@ -955,6 +970,8 @@ NOISE_RE = re.compile(
     r"(ברוכים הבאים|הצטרפו לקבוצ|קבוצת הטלגרם|בואו ללמוד|(?<![א-ת])קורס(?![א-ת])"
     r"|סדנה|סדנת|מכללה"
     r"|הרשמה ל|וובינר|מיטאפ|(?<![א-ת])כנס(?![א-ת])|מפגש קהילת"
+    # 2026-11-11: a free Zoom, a talk and a video promo were pushed from WhatsApp
+    r"|לייב\s+זום|זום\s+חינמי|פה\s+נרשמים|להיכנס\s+לסרטון|לצפייה\s+בסרטון|אני\s+מרצה"
     r"|masterclass|webinar|meetup|workshop\s+(on|for)|register\s+now|enroll"
     r"|free\s+course|bootcamp|interview\s+prep|career\s+guidance|coaching)",
     re.IGNORECASE)

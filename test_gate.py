@@ -136,7 +136,7 @@ CASES = [
     # 2026-11-04: announcements with a '?' were routed (and pushed) as questions
     ("wa webinar promo is not a question", "whatsapp/Test Group",
      "מחר ב-20:00 נקיים לייב זום חינמי על AI לעסקים, פה נרשמים. מה יהיה שם? "
-     "נעבוד עם סוכני AI בתוך אקסל ונאתר חריגים עם AI", NOW, "gate_offtopic"),
+     "נעבוד עם סוכני AI בתוך אקסל ונאתר חריגים עם AI", NOW, "gate_noise"),
     # --- 2026-11-05: salaried roles that never say "full-time" (Or: "still I get
     # full time jobs") - a company job-ad template, and a hiremetech WA card ---
     ("salaried ad without the word", "r/search",
@@ -175,6 +175,20 @@ CASES = [
     ("outlier detection is not Outlier AI", "r/forhire",
      "[Hiring] Freelance ML engineer for outlier detection on sensor data, $90/hr, "
      "about 2 weeks, remote.", NOW, "pass"),
+    # --- 2026-11-11: WhatsApp noise pushed in 3 weeks (0 of 18 pushes were real) ---
+    ("hebrew recruiter ad", "whatsapp/Test Group",
+     "לחברה מובילה באזור חיפה דרוש.ה מוביל/ת AI וחדשנות דיגיטלית. במסגרת התפקיד: הובלת "
+     "טרנספורמציה דיגיטלית בשילוב AI. נדרש ניסיון מעשי בארגונים. לפרטים אצלי", NOW,
+     "gate_full_time"),
+    ("gendered freelance ask stays", "whatsapp/Test Group",
+     "דרוש/ה מפתח/ת פרילנסר לפרויקט OCR על חשבוניות, תקציב 6000 ש\"ח, עבודה מרחוק",
+     NOW, "pass"),
+    ("freelancer looking for clients", "whatsapp/Test Group",
+     "היי לכולם, קוראים לי עומר ואני ארכיטקט ענן. אני כרגע מחפש לקוחות עם עסק קיים "
+     "שמחפש להתייעל עם אוטומציה וסוכני AI", NOW, "gate_seeker"),
+    ("studio showing its project", "whatsapp/Test Group",
+     "רוצה לשתף אתכם בפרויקט מיוחד במינו שסיימנו לאחרונה עבור מותג אופנה - אתר עם "
+     "התאמה אישית מבוססת AI", NOW, "gate_seeker"),
     ("xplace link reshared in a group", "whatsapp/Test Group",
      "דרוש פרילנסר לפרויקט ראייה ממוחשבת, תקציב 5000 ש\"ח. פרטים: "
      "https://www.xplace.com/il/job/123456", NOW, "gate_paywall"),
