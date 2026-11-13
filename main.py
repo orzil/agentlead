@@ -702,9 +702,8 @@ def morning_report(conn, path: str, hours: int, min_score: int,
     repo so the table survives the runner and is readable in the morning without
     anything of Or's needing to be switched on.
 
-    Unscored leads are included deliberately: the cloud's LLM budget can die
-    mid-night, and a gate-passed unscored lead is still a lead worth eyeballing
-    - it just sorts last.
+    Unscored leads are listed in the file (sorted last) but never sent to
+    Telegram: the gate alone passes too much noise.
     """
     from datetime import datetime, timedelta, timezone
 
@@ -794,11 +793,18 @@ def morning_report(conn, path: str, hours: int, min_score: int,
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
-    if notify and rows:
+    # Telegram gets LLM-scored leads only. The gate is recall-first (on a job
+    # channel the word "AI" is enough), so an unscored lead is mostly noise -
+    # e.g. an NVIDIA recruiter job in Munich, 2026-11-13. They stay in the
+    # markdown file and get scored by the next backlog pass.
+    sent = [r for r in rows if r["score"] is not None]
+    held = len(rows) - len(sent)
+    if notify and (sent or held):
         import html as _h
 
-        blocks = [f"\U0001F305 <b>Morning report</b> - {len(rows)} leads overnight"]
-        for r in rows:
+        blocks = [f"\U0001F305 <b>Morning report</b> - {len(sent)} scored leads overnight"
+                  + (f" ({held} more waiting for the LLM)" if held else "")]
+        for r in sent:
             score = r["score"] if r["score"] is not None else "?"
             blocks.append(
                 f"<b>[{score}]</b> {_h.escape(r['source'] or '')}\n"
