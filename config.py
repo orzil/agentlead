@@ -825,6 +825,27 @@ _ENGAGE_HE = [
 DOMAIN_RE = re.compile("|".join(_DOMAIN_EN + _DOMAIN_HE), re.IGNORECASE)
 ENGAGE_RE = re.compile("|".join(_ENGAGE_EN + _ENGAGE_HE), re.IGNORECASE)
 
+# Discussion subreddits (r/ entries of INTENT_REQUIRED_SOURCES): ENGAGE_RE is too
+# loose there - "project" and "contract" appear in every showcase and essay
+# (2026-11-13: an "Agent Control Language" research post and a "your agent found
+# the right contract" essay were pushed at 8). Require someone being SOUGHT or PAID.
+HIRE_INTENT_RE = re.compile(
+    r"\[hiring\]|\[task\]|\[paid\]|\bhiring\b|\bwe\s+are\s+hiring|\bpaid\s+(?:gig|project|task|work|role|position|opportunit)"
+    r"|\bwill(?:ing)?\s+(?:to\s+)?pay\b|\bpaying\b|\bbudget\b|\bcompensation\b|\brate\s+is\b"
+    r"|\$\s?\d|\d\s?(?:usd|eur|€|/h(?:r|our)?\b)"
+    r"|looking\s+for\s+(?:a|an|someone|somebody|freelancers?|contractors?|developers?|devs?|engineers?"
+    r"|consultants?|experts?|help\s+(?:with|building|to))\b"
+    # a business owner asking for hands: "I'm looking for some help/guidance" (2026-11-13)
+    r"|looking\s+for\s+(?:some\s+)?(?:help|assistance)\b"
+    r"|anyone\s+(?:willing|able|available)\s+to\s+(?:help|build|do|take|make)\b"
+    r"|(?:need|seeking|searching\s+for)\s+(?:a|an|someone|somebody)\s+(?:who|to|with|[\w\s/-]{0,30}?"
+    r"(?:developer|engineer|freelancer|expert|consultant|programmer|contractor))"
+    r"|\b(?:freelance|contract|part[\s-]?time|hourly)\s+(?:role|position|job|gig|work|opportunit|developer|engineer)"
+    r"|\boutsourc|\bdm\s+me\b"
+    r"|(?:recommend|know)\s+(?:a|an|any|some(?:one|body)?)\s+[\w\s/-]{0,40}?(?:developer|engineer|freelancer"
+    r"|expert|consultant|programmer|agency|studio|company)",
+    re.IGNORECASE)
+
 # STRONG domain terms = DOMAIN minus the weak catch-alls (\bAI\b matches "AI Art",
 # "AI Video" etc. on gig boards). Used by the spam gate below.
 _STRONG_EN = [
@@ -966,7 +987,13 @@ SEEKER_RE = re.compile(
     # 2026-11-11, both pushed from WhatsApp at 6: "אני כרגע מחפש לקוחות עם עסק
     # קיים" (a freelancer's ad) and "רוצה לשתף אתכם בפרויקט ... שסיימנו לאחרונה"
     # (a studio showing off its own work)
-    r"|מחפש(ת|ים)?\s+לקוחות|רוצ(ה|ים)\s+לשתף\s+אתכם\s+בפרויקט|שסיימנו\s+לאחרונה)",
+    r"|מחפש(ת|ים)?\s+לקוחות|רוצ(ה|ים)\s+לשתף\s+אתכם\s+בפרויקט|שסיימנו\s+לאחרונה"
+    # 2026-11-13, pushed from r/freelances_forhire: "I'm a 24F recent engineering
+    # grad ... I'm looking for remote work" and a bare "Open for freelancing"
+    r"|looking\s+for\s+(?:(?:remote|freelance|part[\s-]?time|full[\s-]?time|new|some|paid)\s+){0,3}"
+    r"(?:work|gigs?|clients|projects)\b"
+    r"|i\s*(?:'m|’m|\s+am)\s+(?:a\s+)?(?:\d{2}\s*[mf]\b|recent\s|fresh\s)"
+    r"|open\s+(?:to|for)\s+(?:freelanc|work\b|new\s+projects|projects|commissions|gigs))",
     re.IGNORECASE)
 
 # Unpaid community / volunteer / data-collection / survey asks

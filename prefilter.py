@@ -151,7 +151,8 @@ def classify(lead: Lead) -> str:
     # Discussion-heavy communities: every post matches DOMAIN, so require
     # hiring intent (ENGAGE) as well.
     if lead.source in config.INTENT_REQUIRED_SOURCES or src_root in config.INTENT_REQUIRED_ROOTS:
-        ok = config.DOMAIN_RE.search(text) and config.ENGAGE_RE.search(text)
+        intent_re = config.HIRE_INTENT_RE if src_root == "r" else config.ENGAGE_RE
+        ok = config.DOMAIN_RE.search(text) and intent_re.search(text)
         if ok:
             return "pass"
         # Not a job, but maybe a domain question Or can answer and convert.

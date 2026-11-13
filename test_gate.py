@@ -45,6 +45,26 @@ CASES = [
      "Machine Learning Engineer\nType: Full-Time | Location: Anywhere\n\n"
      "Build a computer vision POC for a freelance marketplace.",
      NOW, "gate_full_time"),
+    # 2026-11-13: Reddit discussion subs need someone sought/paid, not "project"
+    ("AI_Agents research showcase", "r/AI_Agents",
+     "Architectural Gravity - Cross-Model Agent Control Language\n\nThe project centers on "
+     "ArcGrav, a prompt-native Agent Control Language for LLM agents. Research ongoing.",
+     NOW, "gate_offtopic"),
+    ("AI_Agents essay on contracts", "r/AI_Agents",
+     "Your AI agent found the right contract. Would you trust it to approve the payment?\n\n"
+     "I've been working on ChronoRAG-G, a RAG agent that checks the contract version.",
+     NOW, "gate_offtopic"),
+    ("AI_Agents owner looking for help", "r/AI_Agents",
+     "Building a Custom AI Business Automation System\n\nI'm looking for some help building "
+     "AI agents for my factory, budget is flexible.",
+     NOW, "pass"),
+    ("forhire seeker grad", "r/freelances_forhire",
+     "I'm a 24F recent engineering grad with AI/ML research experience in computer vision. "
+     "I'm looking for remote work, full-time or part-time.",
+     NOW, "gate_seeker"),
+    ("forhire open for freelancing", "r/freelances_forhire",
+     "Open for freelancing\n\nsubmitted by /u/someone [link] [comments] computer vision",
+     NOW, "gate_seeker"),
     ("linkedin contract field", "linkedin",
      "Computer Vision Engineer at Acme\nEmployment type: Contract\n\n"
      "3-month computer vision project, remote.",

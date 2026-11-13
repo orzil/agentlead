@@ -112,6 +112,10 @@ def apply(score, posted_at=None, raw_text: str = "", fetched_at=None):
     if delta > 0 and getattr(score, "work_type", None) in ("full_time", "unclear"):
         return score, days
     original = score.score
+    # nor lift anything over the push line: a fresh 5 is still a 5 (2026-11-13:
+    # a seeker post and a $75/hr AI-rating study were pushed as fresh 6s)
+    if delta > 0 and original < config.PUSH_THRESHOLD <= original + delta:
+        return score, days
     score.score = max(1, min(10, original + delta))
     if score.score == original:      # already at the ceiling/floor
         return score, days
