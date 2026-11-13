@@ -1,6 +1,6 @@
 # Facebook groups
 
-*Generated 2026-11-13T10:27:10+00:00 by `discover_fb_groups.py`.*
+*Generated 2026-11-13T22:25:10+00:00 by `discover_fb_groups.py`.*
 
 ## Join these by hand (private groups)
 
@@ -55,7 +55,7 @@ No action needed — the logged-out scraper reads these on GitHub's IPs.
 | 1 | IL | משרות פרילאנסר/שכיר בRemote | yes |
 | 0 | GLOBAL | UK Software Developers Group | yes |
 
-## Not yet probed (1345)
+## Not yet probed (1348)
 
 Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 
@@ -681,6 +681,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1538071903164089` (found via ddg)
 - `107914806514702` (found via ddg)
 - `1496943943857797` (found via ddg)
+- `1802804096682489` (found via ddg)
 - `832763754922199` (found via ddg)
 - `645209501480907` (found via ddg)
 - `919359532765118` (found via ddg)
@@ -1364,6 +1365,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `462672717191788` (found via ddg)
 - `386869638147419` (found via ddg)
 - `677520975925772` (found via ddg)
+- `1422655951353964` (found via ddg)
 - `smallbizthoughts` (found via ddg)
 - `1635747173357439` (found via ddg)
 - `1959721957381848` (found via ddg)
@@ -1396,6 +1398,7 @@ Run `discover_fb_groups.py --probe` **in the cloud** to classify these.
 - `1451006476466780` (found via ddg)
 - `KsharimBiz` (found via ddg)
 - `2357057317963058` (found via ddg)
+- `170787118238154` (found via ddg)
 - `557768901584634` (found via ddg)
 - `slikot` (found via ddg)
 - `1911133942442554` (found via ddg)

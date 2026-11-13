@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-13T10:27:10+00:00",
- "count": 1332,
+ "generated": "2026-11-13T22:25:10+00:00",
+ "count": 1335,
  "groups": [
   {
    "slug": "1894771051403942",
@@ -5223,6 +5223,21 @@
    "last_checked": null
   },
   {
+   "slug": "1802804096682489",
+   "name": "פרסום חינם בעלי עסקים, עצמאיים, פרילנסרים בישראל - פרסומים וקידום ברשת ...",
+   "status": "pending",
+   "relevance": 1,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-13T11:09:19+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "182811227011330",
    "name": "The Shopify Store Owner's Network ️",
    "status": "pending",
@@ -10248,6 +10263,21 @@
    "last_checked": null
   },
   {
+   "slug": "1422655951353964",
+   "name": "מחפשים מתכנת, מחפשים משקיע, מחפשים רעיון",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-13T18:41:22+00:00",
+   "last_checked": null
+  },
+  {
    "slug": "1429763737480567",
    "name": "Call For Papers Journal and Conference",
    "status": "pending",
@@ -10920,6 +10950,21 @@
    "gate_passed": 0,
    "scrapes": 0,
    "first_seen": "2026-08-22T21:58:39+00:00",
+   "last_checked": null
+  },
+  {
+   "slug": "170787118238154",
+   "name": "שאל מתכנת",
+   "status": "pending",
+   "relevance": 0,
+   "region": "IL",
+   "found_via": "ddg",
+   "activity": null,
+   "in_rotation": 0,
+   "posts_seen": 0,
+   "gate_passed": 0,
+   "scrapes": 0,
+   "first_seen": "2026-11-13T18:41:22+00:00",
    "last_checked": null
   },
   {
