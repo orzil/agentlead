@@ -35,6 +35,20 @@ CASES = [
      "Mid-Senior Data Scientist Image Analysis Cybord Israel\n2 weeks ago | 41 applicants\n"
      "Employment type: Full-time\n\nImage analysis, computer vision and text reading.",
      NOW, "gate_full_time"),
+    # 2026-11-13: the field beats "proof of concept" in the description
+    ("Wix easyapply full-time", "linkedin/easyapply",
+     "Senior AI Engineer - Marketing AI Transformation at Wix\nLocation: Tel Aviv\n"
+     "Employment type: Full-time\n\nDesign and build agentic AI systems. "
+     "Not a demo and not a proof of concept. Hands-on building.",
+     NOW, "gate_full_time"),
+    ("jobicy full-time field", "jobicy",
+     "Machine Learning Engineer\nType: Full-Time | Location: Anywhere\n\n"
+     "Build a computer vision POC for a freelance marketplace.",
+     NOW, "gate_full_time"),
+    ("linkedin contract field", "linkedin",
+     "Computer Vision Engineer at Acme\nEmployment type: Contract\n\n"
+     "3-month computer vision project, remote.",
+     NOW, "pass"),
 
     # --- expired / stale: an aijobs listing 28 days dead, and a Facebook post
     # from 2024 that looked fresh because FB gives the fetcher no date ---

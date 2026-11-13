@@ -108,6 +108,10 @@ def classify(lead: Lead) -> str:
     m = re.search(r"Hours/wk:\s*(\d+)", text)
     if m and int(m.group(1)) >= 35:
         return "gate_full_time"
+    # the board's structured job-type field says full-time: trust it over
+    # flexible-sounding words in the description
+    if config.FT_FIELD_RE.search(text):
+        return "gate_full_time"
 
     has_flex = bool(config.FLEX_RE.search(text))
     if not has_flex:

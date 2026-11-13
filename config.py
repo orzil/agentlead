@@ -868,8 +868,20 @@ FT_RE = re.compile(
 FLEX_RE = re.compile(
     r"(פרילנס|עצמאי|עצמאית|משרה חלקית|מיקור חוץ|לפרויקט|פרויקטלי"
     r"|freelanc|contract(or|\s+work|\s+role|\b)|part[\s-]?time|hourly|per\s+hour"
-    r"|\bPOC\b|proof\s+of\s+concept|\bgig\b|one[\s-]off|Type:\s*(fixed|hourly)"
+    # "Not a demo and not a proof of concept" (Wix, 2026-11-13) is the opposite
+    r"|(?<!not )(?<!not a )(?:\bPOC\b|proof\s+of\s+concept)"
+    r"|\bgig\b|one[\s-]off|Type:\s*(fixed|hourly)"
     r"|/hr\b|hrs?/w(ee)?k|hours?\s*(/|per|a)\s*w(ee)?k|weekends?\b)", re.IGNORECASE)
+
+# The board's own job-type FIELD - "Employment type: Full-time" (LinkedIn),
+# "Type: Full-Time" (jobicy / WWR / remotive / company boards) - is the
+# employer's answer, so it beats FLEX words in the free-text description.
+# 2026-11-13: a Wix "Senior AI Engineer" with "Employment type: Full-time"
+# reached Telegram because its description said "not a proof of concept".
+# A field that also lists part-time / freelance stays flexible.
+FT_FIELD_RE = re.compile(
+    r"(?im)(?:^|\|)[ \t]*(?:employment[ \t]+)?type:[ \t]*full[ \t_-]?time\b"
+    r"(?![^\n|]{0,40}(?:part[\s_-]?time|freelanc))")
 
 # A salaried job ad that never says "full-time" (2026-11-05: Evercam's "Product
 # Engineer, ~130-person company" was pushed 3x at 8/10). Each pattern is one

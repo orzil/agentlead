@@ -716,6 +716,24 @@ def morning_report(conn, path: str, hours: int, min_score: int,
         "ORDER BY score IS NULL, score DESC, id DESC",
         (cutoff, min_score),
     ).fetchall()
+    # An unscored lead never had the LLM look at it, so the gate is its only
+    # check - re-run today's gate: a rule added after it was fetched (e.g. the
+    # full-time field rule, 2026-11-13) must keep it off Or's phone too.
+    import prefilter
+    from models import Lead
+
+    def _still_passes(r) -> bool:
+        if r["score"] is not None:
+            return True
+        try:
+            posted = datetime.fromisoformat(r["posted_at"]) if r["posted_at"] else None
+        except (TypeError, ValueError):
+            posted = None
+        return prefilter.classify(Lead(source=r["source"], url=r["url"],
+                                       raw_text=r["raw_text"] or "",
+                                       posted_at=posted)) in ("pass", "question")
+
+    rows = [r for r in rows if _still_passes(r)]
 
     def cell(text: str, limit: int) -> str:
         """Markdown table cells cannot contain a newline or a bare pipe."""
