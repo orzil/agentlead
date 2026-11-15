@@ -244,9 +244,14 @@ def pending(conn: sqlite3.Connection, limit: int) -> list[sqlite3.Row]:
 
 
 def _prospect_message(r: sqlite3.Row, draft: str | None, header: str = "") -> str:
-    text = (r["raw_text"] or "").replace("\n", " ")[:260]
+    # Or wants the approach, not the post (2026-11-15): one line saying WHO it is -
+    # the agency name is in the source label, a news item's headline names the
+    # company - then the drafted message.
     lines = [header] if header else []
-    lines.append(f"<b>[{html.escape(r['source'])}]</b> {html.escape(text)}")
+    who = ""
+    if r["source"].startswith("news/"):
+        who = (r["raw_text"] or "").split(". ", 1)[0][:90]
+    lines.append(f"<b>[{html.escape(r['source'])}]</b> {html.escape(who)}".rstrip())
     if draft:
         lines.append(f"<code>{html.escape(draft[:700])}</code>")
     url = r["url"]
