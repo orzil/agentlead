@@ -1,4 +1,4 @@
-﻿"""Outbound prospecting: turn rejected full-time posts into contract pitches.
+"""Outbound prospecting: turn rejected full-time posts into contract pitches.
 
 A company posting a FULL-TIME computer-vision / OCR / ML role has the need and
 the budget, but is trying to hire an employee. The gate (correctly) drops those
