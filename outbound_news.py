@@ -50,6 +50,31 @@ SECTOR_RE = re.compile(
 
 MAX_AGE_DAYS = 10
 
+# 2026-11-15: the loose regexes above sent Or a Tesla Cybertruck story ("השיקה" +
+# "ייצור"), layoffs at Innoviz/eBay and Nvidia-invests-in-Meta as "prospects".
+# A news item is a prospect only when a company RAISED A STATED AMOUNT, in a
+# vision/OCR/robotics field, and is not a giant, a layoff or an acquisition.
+ROUND_RE = re.compile(
+    r"(\braise[sd]?\b|\bfunding\b|\bseed\b|series\s+[a-c]\b|גייס(ה|ו)?\b|מגייס(ת|ים)?\b|גיוס|סבב)"
+    r".{0,80}?(\$\s?\d+(\.\d+)?\s?(m\b|million)|\d+(\.\d+)?\s*מיליון\s*(דולר|שקל|יורו))"
+    r"|(\$\s?\d+(\.\d+)?\s?(m\b|million)|\d+(\.\d+)?\s*מיליון\s*(דולר|שקל|יורו)).{0,40}?"
+    r"(\bround\b|\bfunding\b|\bseed\b|series\s+[a-c]\b|גיוס|סבב)", re.IGNORECASE | re.DOTALL)
+CORE_SECTOR_RE = re.compile(
+    r"(computer\s+vision|\bOCR\b|document\s+(ai|processing|intelligence)|machine\s+vision"
+    r"|robot|inspection|defect|medical\s+imag|radiolog|satellite\s+imag|drone|lidar"
+    r"|video\s+analytics|\bvision\b|imaging|sim-to-real"
+    r"|ראייה\s+ממוחשבת|רובוט|הדמיה|עיבוד\s+תמונה|בדיקה\s+אופטית|רחפן)", re.IGNORECASE)
+NOT_PROSPECT_RE = re.compile(
+    r"(billion|מיליארד|layoff|lay\s+off|פיטורים|מפטר|acquir|takeover|תשתלט|רוכשת|רכישת"
+    r"|\b(tesla|nvidia|meta|amazon|google|apple|microsoft|ebay|openai|anthropic)\b"
+    r"|טסלה|אנבידיה|מטא\b|אמזון|גוגל|אפל|מיקרוסופט|איביי)", re.IGNORECASE)
+
+
+def is_prospect(text: str) -> bool:
+    title = text.split(". ", 1)[0]
+    return bool(ROUND_RE.search(text) and CORE_SECTOR_RE.search(text)
+                and not NOT_PROSPECT_RE.search(title))
+
 
 def _parse(xml_bytes: bytes, site: str) -> list[Lead]:
     out: list[Lead] = []
@@ -65,7 +90,7 @@ def _parse(xml_bytes: bytes, site: str) -> list[Lead]:
         desc = re.sub(r"<[^>]+>", " ", html.unescape(item.findtext("description") or ""))
         desc = re.sub(r"\s+", " ", desc).strip()
         text = f"{title}. {desc}"[:1500]
-        if not (title and link and FUNDING_RE.search(text) and SECTOR_RE.search(text)):
+        if not (title and link and is_prospect(text)):
             continue
         posted = None
         try:

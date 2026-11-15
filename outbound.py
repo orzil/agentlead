@@ -1,4 +1,4 @@
-"""Outbound prospecting: turn rejected full-time posts into contract pitches.
+﻿"""Outbound prospecting: turn rejected full-time posts into contract pitches.
 
 A company posting a FULL-TIME computer-vision / OCR / ML role has the need and
 the budget, but is trying to hire an employee. The gate (correctly) drops those
@@ -310,7 +310,16 @@ def run(conn: sqlite3.Connection, dry_run: bool = False) -> int:
         age = datetime.now(timezone.utc) - datetime.fromisoformat(last)
         if age < timedelta(hours=MIN_HOURS_BETWEEN):
             return 0
-    rows = pending(conn, BATCH_SIZE)
+    # news items queued under the old loose rule must pass today's stricter one
+    import outbound_news
+    rows = []
+    for r in pending(conn, BATCH_SIZE * 4):
+        if r["source"].startswith("news/") and not outbound_news.is_prospect(r["raw_text"] or ""):
+            conn.execute("UPDATE prospects SET status='skip' WHERE lead_id=?", (r["id"],))
+            continue
+        rows.append(r)
+    rows = rows[:BATCH_SIZE]
+    conn.commit()
     if not rows:
         return 0
     head = (f"\U0001F91D <b>Outbound: {len(rows)} compan(ies)</b> in your niche (dev shops, "
