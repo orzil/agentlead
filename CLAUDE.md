@@ -152,6 +152,13 @@ one job tuple.
   canonical Reddit permalinks (shared dedup key with `reddit_fetcher`) labelled `r/<sub>`, HN as
   `hn`. Only hits whose own snippet matches `ENGAGE_RE` are kept. Built against a synthetic mail.
   Verify it against the first real one; the sign-up is Or's, and the keywords are in `PROJECT_STATUS.md`.
+- **Reddit sitewide search is 403 keyless since 2026-11-10** (www, old, `.json`, per-sub
+  `restrict_sr` — all probed). It ran dead for 6 days unnoticed while being 30% of leads >=6.
+  The 13 subs its good hits came from (`REDDIT_SEARCH_SUBS`) are now read directly, keep the
+  `r/search` label, and are cut to title `hiring|task|paid` + a domain term *before* ingest
+  (r/jobboardsearch alone posts ~1,350/day). The queries below run only with
+  `REDDIT_CLIENT_ID/SECRET` (app-only OAuth, `_oauth_token`). A feed failing 30 times in a
+  row raises so `run_job_safe` alerts.
 - **Reddit sitewide search** (`reddit_fetcher.fetch_search`) — plain keyword queries rank
   semantically and return career-advice threads and seeker self-promos (measured: 14/20 passed
   the gate, 0 real). Queries anchor on `title:(hiring OR task)` instead. `search.rss` also mixes
@@ -275,9 +282,20 @@ request per 10-20 s window from *any* IP, home included (`x-ratelimit-remaining:
 single call), so the cloud's 19-feed bursts mostly collected 429s. `reddit_loop.pyw` (Startup
 folder, log `reddit_loop.log`) reads ONE feed a minute, rotating subs + `REDDIT_SEARCHES`
 (cursor in kv `reddit_trickle_i`; a 429 waits out `x-ratelimit-reset` without advancing it), so
-each feed is checked every ~27 min (27 feeds). It sets the repo variable `REDDIT_HOME_AT` every 20 min;
+each feed is checked every ~29 min (29 feeds: 16 subs + 13 search-subs). It sets the repo variable `REDDIT_HOME_AT` every 20 min;
 `leadagent.yml` skips `reddit,reddit_search` while that is < 2h old, so the cloud takes Reddit
 back by itself if the PC is off. `reddit_trickle` is a loop-only job, never in a `--once` pass.
+
+**Israeli Facebook groups have one real-time route: notification mail (2026-11-16).** Scraping
+is off (`FB_PUBLIC_ENABLED=0`, Meta blocks GitHub IPs) and the DDG index is days late and
+usually walled. `facebook_notify_list.md` is the list Or switches to "All posts";
+`email_fetcher._parse_facebook` emits one lead per post link, labelled `facebook/<group>`. It
+was built on synthetic mails — the inbox had no group-post mail in 60 days — so check it
+against the first real one.
+
+**Git Bash heredocs eat backslashes.** A regex written to a file through `python - <<'EOF'`
+lost its `\b` (became a literal backspace) and silently matched nothing. Edit code with the
+Edit tool or a script file, never a heredoc.
 
 ## Feedback: one word from the phone
 

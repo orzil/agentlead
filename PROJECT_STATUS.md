@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-11-11*
+*Last updated: 2026-11-16*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -951,6 +951,37 @@ Same day, later:
   - **Joining:** every known invite has been tried, and the night hunt has returned 0 groups for
     several nights. A web search found one fitting group, a WhatsApp group for tech freelancers
     (itconsulting.co.il), queued first. In-group invites are the only steady source left (61 ever).
+
+## 2026-11-16 night: why the bot went quiet (Or: "barely see leads", "FB leads I didn't get")
+
+**Measured first.** Pushes fell from ~5.5/day (11-02..11-11) to ~1.4/day (11-12..11-16).
+Scorer and notifier were healthy (0 backlog, every >=6 pushed). The loss was upstream:
+
+| Cause | Evidence | Fix |
+|---|---|---|
+| Reddit sitewide `search.rss` -> HTTP 403 since 11-10 22:09, silently | 500+ `r/search -> HTTP 403` lines/day; it was 45 of 149 leads >=6 in 30 days. www, old, `.json`, per-sub `restrict_sr` all 403 (probed) | 13 subs its good hits came from are read directly (`REDDIT_SEARCH_SUBS`, label `r/search`, title + domain filter). 30 straight failures of a feed now alert. App-only OAuth search is coded and switches on with `REDDIT_CLIENT_ID/SECRET` |
+| Reddit gate tightened 11-13 (`c1c5bc3`) | 14 posts scored 6-8 now gate offtopic | Reviewed all 14: showcases and advice threads, none a paid ask. Kept |
+| Nothing reads Israeli FB groups in real time | `FB_PUBLIC_ENABLED=0` everywhere; 0 group-post mails in Gmail in 60 days; DDG 202 on first query in 11 of 12 cloud runs since 11-11 | `facebook_notify_list.md` (30 groups, Or switches to "All posts" + account email setting). `_parse_facebook`: one lead per post link, `facebook/<group>` label, redirect-encoded links. Built on synthetic mails |
+| Hebrew client phrasing died at the gate | 26 synthetic posts: "מי בונה בוטים", "בn8n", "פנו אליי בפרטי", "דרוש מתכנת בעל ניסיון" | Weak Hebrew domain list, request verbs, 4 seeker rules + 1 volunteer rule narrowed, `שותף`. 10 regression cases. Replay over 14 days: +3.4 passes/day, 0 good leads lost |
+| WhatsApp: no new groups since ~11-06 | night select "leaving 720 unrated, selected 0" two nights; all targets tried | no-LLM fallback accepts the lead-producing profile; rating moved to right after quota reset; dead hub pages remembered; rubric v3 |
+| WhatsApp phone offline 37% of 2 weeks | 157 h since 10-24; 400-620 failed passes/day at 80 s | backoff 5/10/20/30 min; one alert after 30 min, one on recovery |
+| WhatsApp reading losses | list walk capped at 12 pages (45 of ~213 groups); leads dropped on a late phone error (35 on 11-13, 39 on 11-10) | cap 70; leads kept; "אתמול" rows need an unread badge; renamed groups re-learned; proven groups exempt from skip rules |
+
+Also: `print_stats` printed lead summaries + URLs into the **public** workflow log; it now
+stops before "top scored" in Actions.
+
+**What works, by data (use this to aim discovery):** Reddit search; Israeli AI/data,
+founder, SaaS and business-networking WhatsApp communities (freelance-named and job-board
+groups: 0 leads); Israeli "דרושים"/freelance Facebook groups.
+
+**Not done / unverified**
+- Reddit API app: Claude in Chrome refuses reddit.com, so Or creates it
+  (reddit.com/prefs/apps -> "script" app -> id + secret into `.env` and repo secrets).
+- The FB mail parser has never seen a real group-post mail. First real one is the test.
+- WhatsApp changes were tested offline with a fake phone only; watch `wa_pass.log`.
+- No new WhatsApp invite links from web search (search engines do not index them);
+  supply now depends on the fixed night hunt and in-group links.
+- Telegram channels: 2 leads >=6 in 30 days from 51 channels; left as is.
 
 ## Open items
 - **Or's to-do (decided 2026-11-11):** sign up to **Alignerr** (one-attempt assessment: prepare)
