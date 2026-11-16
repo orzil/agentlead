@@ -73,16 +73,26 @@ def _next_sleep(started: float) -> float:
     schedule) - sooner than 2h, never a fixed 5-min poll: those only woke the
     screen (measured 2026-10-23: a 107s pass every 7 min until 23:00). Nothing
     left today (capped, throttled, night, no targets) falls back to 2h."""
+    normal = max(60, INTERVAL - (time.time() - started))
     try:
         import db
         from wa_phone import next_join_at
         conn = db.connect()
-        at = next_join_at(conn)
+        try:
+            at = next_join_at(conn)
+            # phone unreachable: wa_phone's backoff (5, 10, 20, then 30 min) says
+            # when to try again - join-all on or off, so an outage is noticed
+            # and recovered from within 30 min, not 2h (2026-11-16)
+            retry = float(db.kv_get(conn, "wa_unreach_retry_at", "") or 0)
+        finally:
+            conn.close()
+        if retry:
+            at = max(at or 0, retry)
         if at is not None:
-            return max(60, min(INTERVAL - (time.time() - started), at - time.time()))
+            return max(60, min(normal, at - time.time()))
     except Exception as e:
         _log(f"kv read failed: {e}")
-    return max(60, INTERVAL - (time.time() - started))
+    return normal
 
 
 if __name__ == "__main__":

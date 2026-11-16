@@ -25,6 +25,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import json
 import logging
@@ -309,17 +310,51 @@ HUB_RE = re.compile(r"https?://(?:www\.)?(?:linktr\.ee/[A-Za-z0-9_.]{2,40}|lu\.m
                     r"|meetup\.com/[A-Za-z0-9_-]{3,60})/?(?![\w./-])")
 _HUB_SKIP = ("meetup.com/find", "meetup.com/topics", "lu.ma/discover", "lu.ma/signin",
              "lu.ma/create", "linktr.ee/s", "linktr.ee/login")
-_HUB_SEEN: set[str] = set()
+# url -> score of the best place it was seen this slice (_hub_score). Was a plain
+# set: every lu.ma / meetup link in any stored post went to the FRONT of the
+# crawl queue, which sat at its 600 cap while 14 pages a slice were crawled
+# (2026-11-16) - hubs worth reading waited behind event pages from job posts.
+_HUB_SEEN: dict[str, int] = {}
+_HUB_CONTEXT_RE = re.compile(
+    r"(whatsapp|וואטסאפ|ווטסאפ|קבוצ|קהיל|communit|\bgroups?\b|\bjoin\b|הצטרפ|founders?|יזמים"
+    r"|freelanc|פרילנס|בעלי\s+עסקים|\bAI\b|בינה\s+מלאכותית|automation|אוטומצי)", re.IGNORECASE)
+_LOW_VIA = ("leads_db", "seed_md")       # text nobody searched for groups in
+HUB_QUEUE_CAP = 600
+HUB_DEAD_CAP = 20000
+
+
+def _hub_score(url: str, context: str, via: str, has_invite: bool) -> int:
+    """How much a hub page is worth a crawl, from WHERE it was seen. 0 = a bare
+    event/profile link in a stored post: never queued."""
+    score = 0
+    if has_invite:                       # the same post/page hands out WhatsApp invites
+        score += 3
+    if via not in _LOW_VIA:              # a page the hunt itself searched or crawled
+        score += 2
+    if _HUB_CONTEXT_RE.search(context):
+        score += 1
+    if IL_NAME_RE.search(context) or re.search(r"[א-ת]", context):
+        score += 1
+    if score and "linktr.ee/" in url:    # link-in-bio pages are where invites sit
+        score += 1
+    return score
 
 
 def _add_codes(conn, text: str, via: str) -> int:
     import discover_whatsapp_groups as wa
-    _TG_SEEN.update(h.lower() for h in TME_RE.findall(text or "")
+    text = text or ""
+    _TG_SEEN.update(h.lower() for h in TME_RE.findall(text)
                     if not h.lower().endswith("bot"))
-    _HUB_SEEN.update(m.group(0).rstrip("/") for m in HUB_RE.finditer(text or "")
-                     if not any(s in m.group(0) for s in _HUB_SKIP))
+    codes = set(wa.WA_INVITE_RE.findall(text))
+    for m in HUB_RE.finditer(text):
+        if any(s in m.group(0) for s in _HUB_SKIP):
+            continue
+        url = m.group(0).rstrip("/")
+        # the words around the link, without the link itself
+        context = text[max(0, m.start() - 150):m.start()] + " " + text[m.end():m.end() + 150]
+        _HUB_SEEN[url] = max(_HUB_SEEN.get(url, 0), _hub_score(url, context, via, bool(codes)))
     new = 0
-    for code in set(wa.WA_INVITE_RE.findall(text or "")):
+    for code in codes:
         if wa._add(conn, code, via):
             new += 1
     return new
@@ -430,15 +465,18 @@ def surf_ddg(conn, client_factory) -> int:
             new += _add_codes(conn, page, "ddg")
             # remember non-whatsapp result pages: directories / blogs to crawl
             pages = json.loads(db.kv_get(conn, "wa_night_dir_pages", "[]") or "[]")
+            dead = set(json.loads(db.kv_get(conn, "wa_night_dir_dead", "[]") or "[]"))
+            pri = json.loads(db.kv_get(conn, "wa_night_hub_pri", "{}") or "{}")
             for href in re.findall(r'class="result__a"[^>]*href="([^"]+)"', page):
                 qs = parse_qs(urlparse(href).query)
                 url = unquote(qs["uddg"][0]) if "uddg" in qs else href
                 host = urlparse(url).netloc.lower()
                 if (url.startswith("http") and not any(s in host for s in _SKIP_HOSTS)
-                        and url not in pages):
+                        and url not in pages and _url_key(url) not in dead):
                     pages.append(url)
-            # arrival order, oldest first (alphabetical trimming dropped new pages)
-            db.kv_set(conn, "wa_night_dir_pages", json.dumps(pages[:400]))
+            # arrival order; over the cap the lowest-priority pages go (the old
+            # [:400] cut dropped every new result once the queue was full)
+            db.kv_set(conn, "wa_night_dir_pages", json.dumps(_trim_queue(pages, pri)))
     return new
 
 
@@ -475,16 +513,50 @@ DIR_SEEDS = IL_DIR_SEEDS + DIR_SEEDS + [(f"{_HIVE}/topics/{t}/platform/whatsapp/
                                         for t in _HIVE_TOPICS]
 
 
+def _url_key(url: str) -> str:
+    return hashlib.sha1(url.encode("utf-8")).hexdigest()[:10]
+
+
+def _page_pri(url: str, pri: dict) -> int:
+    """Crawl priority of a queued page: a hub's _hub_score; 2 for a page DDG or
+    a directory surfaced (found while hunting groups); 0 for a hub queued
+    before scores existed, so the old backlog goes last."""
+    if url in pri:
+        return pri[url]
+    return 0 if HUB_RE.match(url) else 2
+
+
+def _trim_queue(pages: list[str], pri: dict) -> list[str]:
+    """At most HUB_QUEUE_CAP pages: the lowest-priority ones go, arrival order
+    kept otherwise (the old cut dropped whatever came last - the new pages)."""
+    if len(pages) <= HUB_QUEUE_CAP:
+        return pages
+    keep = set(sorted(pages, key=lambda p: -_page_pri(p, pri))[:HUB_QUEUE_CAP])
+    return [p for p in pages if p in keep]
+
+
 def _save_hubs(conn) -> int:
-    """Put hub pages seen this slice at the FRONT of surf_dirs' page queue."""
+    """Queue the hub pages seen this slice for surf_dirs, with their scores (kv
+    wa_night_hub_pri). Not queued: score 0, already crawled, or crawled before
+    with no invite on the page (kv wa_night_dir_dead)."""
     import db
     pages = json.loads(db.kv_get(conn, "wa_night_dir_pages", "[]") or "[]")
     done = set(json.loads(db.kv_get(conn, "wa_night_dir_done", "[]") or "[]"))
-    fresh = sorted(_HUB_SEEN - done - set(pages))
-    if fresh:
-        keep = [p for p in pages if p not in done]
-        db.kv_set(conn, "wa_night_dir_pages", json.dumps((fresh + keep)[:600]))
-    return len(fresh)
+    dead = set(json.loads(db.kv_get(conn, "wa_night_dir_dead", "[]") or "[]"))
+    pri = json.loads(db.kv_get(conn, "wa_night_hub_pri", "{}") or "{}")
+    queued = set(pages)
+    fresh = 0
+    for url, score in sorted(_HUB_SEEN.items()):
+        if score <= 0 or url in done or _url_key(url) in dead:
+            continue
+        if url not in queued:
+            pages.append(url)
+            fresh += 1
+        pri[url] = max(pri.get(url, 0), score)      # seen again somewhere better
+    pages = _trim_queue([p for p in pages if p not in done], pri)
+    db.kv_set(conn, "wa_night_dir_pages", json.dumps(pages))
+    db.kv_set(conn, "wa_night_hub_pri", json.dumps({p: pri[p] for p in pages if p in pri}))
+    return fresh
 
 
 SEED_RECRAWL_DAYS = 7     # directories keep adding invites; a seed read once went stale
@@ -493,37 +565,61 @@ SEED_RECRAWL_DAYS = 7     # directories keep adding invites; a seed read once we
 def surf_dirs(conn, client_factory) -> int:
     """Crawl directory/blog pages: the seeds that are due first, then hub pages
     and pages DDG surfaced. Cheap - plain GETs, no search engine, so no captcha
-    walls. Seeds are re-read every SEED_RECRAWL_DAYS; other pages once."""
+    walls. Seeds are re-read every SEED_RECRAWL_DAYS; other pages once.
+
+    The queue is read best-first (_page_pri), not first-in. A page that held no
+    invite at all goes to a long memory (kv wa_night_dir_dead, hashes) and is
+    never queued again: the 2,500-entry done list forgot such pages and
+    leads.db handed them straight back, every slice (2026-11-16)."""
     import db
+    import discover_whatsapp_groups as wa
     import httpx
     from datetime import datetime, timedelta, timezone
     _save_hubs(conn)
     pages = json.loads(db.kv_get(conn, "wa_night_dir_pages", "[]") or "[]")
     done = list(dict.fromkeys(json.loads(db.kv_get(conn, "wa_night_dir_done", "[]") or "[]")))
     done_set = set(done)
+    dead = list(dict.fromkeys(json.loads(db.kv_get(conn, "wa_night_dir_dead", "[]") or "[]")))
+    dead_set = set(dead)
+    pri = json.loads(db.kv_get(conn, "wa_night_hub_pri", "{}") or "{}")
     seed_at = json.loads(db.kv_get(conn, "wa_night_seed_at", "{}") or "{}")
     stale = (datetime.now(timezone.utc) - timedelta(days=SEED_RECRAWL_DAYS)).isoformat()
     follow = {u: pat for u, pat in DIR_SEEDS if pat}
     seeds = {u for u, _ in DIR_SEEDS}
     due = sorted((u for u in seeds if seed_at.get(u, "") < stale), key=lambda u: seed_at.get(u, ""))
-    queue = due + [p for p in pages if p not in done_set and p not in seeds]
+    waiting = [p for p in pages if p not in done_set and p not in seeds
+               and _url_key(p) not in dead_set]
+    queue = due + sorted(waiting, key=lambda p: -_page_pri(p, pri))   # stable: arrival order
     todo = queue[:DIR_PAGES_PER_RUN]
     new = 0
     now_iso = datetime.now(timezone.utc).isoformat()
+
+    def _dead(url: str) -> None:
+        if _url_key(url) not in dead_set:
+            dead.append(_url_key(url))
+            dead_set.add(_url_key(url))
+
     with httpx.Client(headers={"User-Agent": config.USER_AGENT}, timeout=20,
                       follow_redirects=True) as client:
         for url in todo:
+            try:
+                r = client.get(url)
+            except Exception:
+                r = None
             if url in seeds:
                 seed_at[url] = now_iso
+            elif r is not None and r.status_code in (400, 401, 403, 404, 410):
+                _dead(url)                          # gone or walled: not worth a retry
             elif url not in done_set:
                 done.append(url)
                 done_set.add(url)
+            if r is None or r.status_code != 200:
+                continue
             try:
-                r = client.get(url)
-                if r.status_code != 200:
-                    continue
                 text = html.unescape(r.text)
                 new += _add_codes(conn, text, "directory")
+                if url not in seeds and not wa.WA_INVITE_RE.search(text):
+                    _dead(url)                      # read fine, hands out no invite
                 if url in follow:      # queue the community pages this topic page lists
                     base = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
                     found = {base + m for m in re.findall(follow[url], text)}
@@ -531,9 +627,12 @@ def surf_dirs(conn, client_factory) -> int:
             except Exception:
                 continue
             time.sleep(1)
-    pages = [p for p in pages if p not in done_set][:600]
+    pages = _trim_queue([p for p in pages if p not in done_set
+                         and _url_key(p) not in dead_set], pri)
     db.kv_set(conn, "wa_night_dir_pages", json.dumps(pages))
+    db.kv_set(conn, "wa_night_hub_pri", json.dumps({p: pri[p] for p in pages if p in pri}))
     db.kv_set(conn, "wa_night_dir_done", json.dumps(done[-2500:]))    # newest kept
+    db.kv_set(conn, "wa_night_dir_dead", json.dumps(dead[-HUB_DEAD_CAP:]))
     db.kv_set(conn, "wa_night_seed_at", json.dumps(seed_at))
     return new
 
@@ -741,11 +840,20 @@ where WORK IS HANDED OUT or ASKED FOR: people post paid freelance/contract tech 
 projects on, or the people who BUY such work (founders, business owners, agencies) talk.
 For each numbered name give s:
  3 = very likely: FREELANCE / contract / gigs / projects / 'העברת עבודות' groups for tech/AI/dev;
-     founders, startup or business-owner groups; AI automation / n8n / no-code / vibe-coding /
-     Base44 / Lovable / AI-agent builder communities (non-engineers who need a real engineer);
-     a community's 'Jobs/Freelancers' sub-group
- 2 = plausible: AI/ML/LLM/data/startup community with a jobs, freelancers or clients angle
- 1 = weak: general tech/AI chat with no work angle
+     founders, entrepreneurs ('יזמים'), startup, SaaS or business-owner groups; AI automation /
+     n8n / no-code / vibe-coding / Base44 / Lovable / AI-agent builder communities (non-engineers
+     who need a real engineer); a community's 'Jobs/Freelancers' sub-group.
+     ALSO 3 - the groups that have actually produced his paid leads so far:
+     ISRAELI PROFESSIONAL AI / DATA communities (working practitioners, industry bodies and
+     forums: 'קהילת DATA & AI', 'GenAI Israel', smart-industry / Industry 4.0, AI-agents
+     communities); groups about AI / automation / tech tools FOR BUSINESSES and managers
+     ('AI לעסקים', 'כלי AI לצמיחת העסק', managers' AI groups); and BUSINESS-NETWORKING
+     communities of entrepreneurs and business owners ('הרשת העסקית', 'קהילת יזמים',
+     'SaaS Israel'). A Hebrew or Israel-named group of this kind is a 3 even with no word
+     about jobs or freelancing in its name.
+ 2 = plausible: AI/ML/LLM/data/startup community (not Israeli) with a jobs, freelancers or
+     clients angle
+ 1 = weak: general tech/AI chat with no work angle and no Israeli/professional/business signal
  0 = no: FULL-TIME job boards (salaried roles, 'משרות' / 'דרושים' hi-tech job feeds, career,
      job-seeker, recruiter groups - measured: they never post freelance work), students, colleges, cohorts, batches, courses, bootcamps, internships, exam prep,
      hackathons, events, hobbies, local-neighbourhood groups, and ANY group tied to another
@@ -767,7 +875,7 @@ def _llm_batch(names: list[str]) -> dict[int, int] | None:
     out = None
     if not _GEMINI_DOWN:
         out = scorer.generate(_LLM_SYSTEM, user, schema=_LLM_SCHEMA, temperature=0.0,
-                              max_tokens=2000)
+                              max_tokens=3000)       # 90 names a call since 2026-11-16
         _GEMINI_DOWN = not out
     if not out:
         for p in config.active_providers():
@@ -784,24 +892,47 @@ def _llm_batch(names: list[str]) -> dict[int, int] | None:
         return None
 
 
-LLM_RUBRIC_VER = "2"     # bump when _LLM_SYSTEM changes: the pool is re-rated once
+# Bump when _LLM_SYSTEM changes. Rubric 3 (2026-11-16) only moves names UP into
+# 3 (the lead-producing profile), so the bump re-asks the 1s and 2s and keeps
+# the 0s and 3s: wiping all ~2,400 ratings would take 3+ working nights, with
+# the LLM failing most nights, and send the old 0s back through the name rule.
+LLM_RUBRIC_VER = "3"
 
 
-LLM_CALLS_PER_PASS = 12   # OpenRouter free is ~50 calls/day, shared with cloud lead scoring
+# OpenRouter free is ~50 calls/day (resets 00:00 UTC), shared with cloud lead
+# scoring. The night's calls are one budget (kv wa_llm_calls_<UTC day>): slices
+# after 00:00 UTC spend it first, LLM_CALLS_PER_SLICE at a time, and the 03:50
+# select takes what is left. Before 2026-11-16 select made all 12 at 03:50 UTC,
+# after the 01:17 and 03:17 lead passes had spent the quota - "llm pass
+# unavailable ... selected 0" on 6 of 7 nights.
+LLM_CALLS_PER_PASS = 12
+LLM_CALLS_PER_SLICE = 2
+LLM_SLICE_HOURS_UTC = range(0, 4)
+LLM_BATCH = 90            # names per call (was 60); a failed call is retried with half
 LLM_PASS_SECONDS = 540    # the select job has 20 min; 30 names took ~35 s a call (2026-10-25)
 
 
-def llm_pass(conn, batch: int = 60, max_calls: int = LLM_CALLS_PER_PASS) -> int:
-    """Rate live, un-noised, unrated group names, most promising first. The rest
-    wait for the next night; select_top holds them to the strict name rule."""
+def _llm_calls_key() -> str:
+    return "wa_llm_calls_" + time.strftime("%Y-%m-%d", time.gmtime())
+
+
+def llm_calls_left(conn) -> int:
+    return max(0, LLM_CALLS_PER_PASS - _kv_int(conn, _llm_calls_key()))
+
+
+def llm_pass(conn, batch: int = LLM_BATCH, max_calls: int = LLM_CALLS_PER_PASS) -> int:
+    """Rate live, un-noised, unrated group names, most promising first: names
+    the no-LLM rule would already take, then by relevance. The rest stay NULL
+    and wait for the next slice or night; select_top holds them to the name
+    rule meanwhile. Never more than the night's remaining call budget."""
     import db
     import discover_whatsapp_groups as wa
     if db.kv_get(conn, "wa_llm_ver", "") != LLM_RUBRIC_VER:
         conn.execute("UPDATE whatsapp_groups SET llm_relevant=NULL "
-                     "WHERE llm_relevant IS NOT NULL AND COALESCE(found_via,'') != 'manual'")
+                     "WHERE llm_relevant IN (1, 2) AND COALESCE(found_via,'') != 'manual'")
         db.kv_set(conn, "wa_llm_ver", LLM_RUBRIC_VER)
     rows = []
-    for r in conn.execute("SELECT code, name FROM whatsapp_groups "
+    for r in conn.execute("SELECT code, name, region, relevance FROM whatsapp_groups "
                           "WHERE status='live' AND llm_relevant IS NULL").fetchall():
         if (not r["name"] or wa.WA_NOISE_RE.search(r["name"])
                 or FOREIGN_RE.search(r["name"])):
@@ -809,29 +940,38 @@ def llm_pass(conn, batch: int = 60, max_calls: int = LLM_CALLS_PER_PASS) -> int:
             conn.execute("UPDATE whatsapp_groups SET llm_relevant=0 WHERE code=?", (r["code"],))
         else:
             rows.append(r)
-    rows.sort(key=lambda r: not _name_ok_without_llm(r["name"]))
-    rows = rows[:batch * max_calls]
-    done = 0
+    conn.commit()
+    rows.sort(key=lambda r: (not _name_ok_without_llm(r["name"], r["region"]),
+                             -(r["relevance"] or 0)))
+    max_calls = min(max_calls, llm_calls_left(conn))
+    done = calls = i = 0
     t0 = time.time()
-    for i in range(0, len(rows), batch):
+    while i < len(rows) and calls < max_calls:
         if time.time() - t0 > LLM_PASS_SECONDS:
             log.info("llm pass time budget spent - %d left for the next night", len(rows) - i)
             break
         chunk = rows[i:i + batch]
         scores = _llm_batch([r["name"] for r in chunk])
-        if scores is None:               # one retry: OpenRouter throws the odd 502
+        if scores is None:
+            # one retry, with half the names: OpenRouter throws the odd 502, and
+            # a reply cut off mid-JSON (too many names) parses as nothing
             time.sleep(20)
+            batch = max(20, batch // 2)
+            chunk = rows[i:i + batch]
             scores = _llm_batch([r["name"] for r in chunk])
         if scores is None:
             log.info("llm pass unavailable - leaving %d unrated", len(rows) - i)
             break
+        calls += 1
+        db.kv_set(conn, _llm_calls_key(), str(_kv_int(conn, _llm_calls_key()) + 1))
         for j, r in enumerate(chunk):
             if j not in scores:      # left out of the reply: stays unrated, re-asked next night
                 continue
             conn.execute("UPDATE whatsapp_groups SET llm_relevant=? WHERE code=?",
                          (scores[j], r["code"]))
             done += 1
-    conn.commit()
+        conn.commit()
+        i += len(chunk)
     return done
 
 
@@ -842,6 +982,8 @@ def _rank(r: sqlite3.Row) -> tuple:
     # Or wants part-time/contract/freelance only: those groups and the groups
     # where buyers talk outrank the (LLM-favoured) general job boards
     if config.WA_FREELANCE_GROUP_RE.search(name) or config.WA_BUYER_GROUP_RE.search(name):
+        boost += 4
+    elif _lead_profile(name, r["region"]):      # where the leads actually came from
         boost += 4
     if config.WA_CV_GROUP_RE.search(name):      # Or's core niche
         boost += 5
@@ -860,14 +1002,48 @@ def _tried_codes() -> set[str]:
             if ln.strip() and not ln.startswith("#")}
 
 
-def _name_ok_without_llm(name: str) -> bool:
+# The profile that produced the WhatsApp leads so far (2026-11-16, leads >= 6 by
+# group): Israeli professional AI/data communities ("קהילת DATA & AI - הלשכה
+# לטכנולוגיות המידע", Industry 4.0, an AI-agents community), founders / SaaS,
+# business owners and managers using AI ("קבוצת המנהלים של LetsAI", "טיפ יומי
+# לצמיחת העסק שלך - כלי Ai"), business networking ("הרשת העסקית- קהילת יזמים").
+# Freelance-named and job-board groups produced none. Used when the LLM is down.
+PRO_COMMUNITY_RE = re.compile(
+    r"(\bgen\s?ai\b|\bAI\b|\bML\b|\bLLMs?\b|\bMLOps\b|\bNLP\b|machine\s+learning|deep\s+learning"
+    r"|\bdata\b|agentic|industry\s*4|בינה\s+מלאכותית|דאטה|למידת\s+מכונה|מדעני?\s+ה?נתונים"
+    r"|סוכני?\s+AI|תעשייה\s+חכמה|בוטים)", re.IGNORECASE)
+BIZ_NETWORK_RE = re.compile(
+    r"(רשת\s+ה?עסקית|נטוורקינג|קהילת\s+ה?(יזמים|עסקים|מנהלים)|קבוצת\s+ה?מנהלים|צמיחת\s+העסק"
+    r"|business\s+network(ing)?|entrepreneurs?)", re.IGNORECASE)
+LEARNER_NAME_RE = re.compile(
+    r"(course|קורס|students?|סטודנט|learn(ing|ers)?\b|ללמוד|לימוד|למתחילים|beginners?"
+    r"|bootcamp|study|מבחן|תואר|homework)", re.IGNORECASE)
+_HEBREW_RE = re.compile(r"[א-ת]")
+
+
+def _lead_profile(name: str, region: str | None = None) -> bool:
+    """A name of the profile above: business networking anywhere, or an AI/data
+    community that is Israeli (IL region, Israel in the name, or Hebrew)."""
+    if LEARNER_NAME_RE.search(name) or config.WA_JOB_BOARD_TITLE_RE.search(name):
+        return False
+    if BIZ_NETWORK_RE.search(name):
+        return True
+    israeli = region == "IL" or IL_NAME_RE.search(name) or _HEBREW_RE.search(name)
+    return bool(israeli and PRO_COMMUNITY_RE.search(name))
+
+
+def _name_ok_without_llm(name: str, region: str | None = None) -> bool:
+    """The no-LLM rule. 2026-11-15/16: the LLM was down ("leaving 720 unrated")
+    and this rule alone selected 0, because it only knew freelance / buyer / CV
+    words - so it now also takes the lead-producing profile (_lead_profile).
+    Job-board titles still need a freelance or buyer word."""
     import discover_whatsapp_groups as dwg
     if dwg.WA_NOISE_RE.search(name):
         return False
     work = config.WA_FREELANCE_GROUP_RE.search(name) or config.WA_BUYER_GROUP_RE.search(name)
     if config.WA_JOB_BOARD_TITLE_RE.search(name):
         return bool(work)
-    return bool(work or config.WA_CV_GROUP_RE.search(name))
+    return bool(work or config.WA_CV_GROUP_RE.search(name) or _lead_profile(name, region))
 
 
 def select_top(conn, n: int = 50, exclude: set[str] | None = None) -> list[sqlite3.Row]:
@@ -876,8 +1052,9 @@ def select_top(conn, n: int = 50, exclude: set[str] | None = None) -> list[sqlit
     1s are never used as padding (2026-10-23: the 1s were general chats and
     full-time job boards, and 43 such joins produced 0 leads). When the LLM was
     unavailable (llm_relevant NULL) the name must carry a work-passing word
-    (freelance / buyer / CV) and not read as a job board: relevance 2+ alone
-    sent construction and social-work job boards on 2026-10-23.
+    (freelance / buyer / CV) or fit the lead-producing profile (_lead_profile),
+    and not read as a job board: relevance 2+ alone sent construction and
+    social-work job boards on 2026-10-23.
     """
     rows = conn.execute(
         "SELECT * FROM whatsapp_groups WHERE status='live' AND COALESCE(joined,0)=0"
@@ -892,7 +1069,7 @@ def select_top(conn, n: int = 50, exclude: set[str] | None = None) -> list[sqlit
             continue
         if llm is not None and llm < 2:
             continue
-        if llm is None and not _name_ok_without_llm(r["name"] or ""):
+        if llm is None and not _name_ok_without_llm(r["name"] or "", r["region"]):
             continue
         keep.append(r)
     keep.sort(key=_rank)
@@ -1049,6 +1226,18 @@ def main() -> None:
     counts["hub_pages"] = _save_hubs(conn)
     wa.validate_pending(conn, cap=args.validate_cap)
     wa.rescore(conn)
+    # Rate a little in every slice right after OpenRouter's 00:00 UTC reset,
+    # before the 01:17 / 03:17 lead passes spend the free quota (2026-11-16).
+    # Three slices in a row with no LLM end it for the night; select still tries.
+    fails_key = _llm_calls_key().replace("calls", "fails")
+    if (not args.surface and not args.dry_run and time.gmtime().tm_hour in LLM_SLICE_HOURS_UTC
+            and llm_calls_left(conn) and _kv_int(conn, fails_key) < 3):
+        before = llm_calls_left(conn)
+        counts["llm_rated"] = llm_pass(conn, max_calls=LLM_CALLS_PER_SLICE)
+        if llm_calls_left(conn) == before and conn.execute(
+                "SELECT COUNT(*) FROM whatsapp_groups WHERE status='live' "
+                "AND llm_relevant IS NULL").fetchone()[0]:
+            db.kv_set(conn, fails_key, str(_kv_int(conn, fails_key) + 1))
     pool = dict(conn.execute(
         "SELECT status, COUNT(*) FROM whatsapp_groups GROUP BY status").fetchall())
     # counts only - the public workflow log must not become a lead list
