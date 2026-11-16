@@ -27,6 +27,7 @@ jobforpr
 jobfortm
 machinelearning9
 machinelearning_deeplearning
+mohammed_alhassani1
 neuro_channel
 newhrvacancies
 proglib_jobs
