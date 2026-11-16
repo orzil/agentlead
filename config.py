@@ -218,6 +218,24 @@ REDDIT_SEARCHES = [
     'title:(hiring OR task) (robotics OR drone OR satellite OR "medical imaging" OR lidar)',
 ]
 
+# Sitewide search.rss answers HTTP 403 to every keyless client since 2026-11-10
+# (www, old, .json, per-sub restrict_sr - all probed 2026-11-16). It had been 30%
+# of all leads >=6, and 38 of its 54 good hits in 60 days came from subs we did
+# not poll. So those subs are read directly (/new, limit 100) and filtered
+# locally with the same title convention the search used; they keep the
+# "r/search" label, hence the same INTENT_REQUIRED gate. Posting rates measured
+# 2026-11-16: jobboardsearch ~1,350/day (~28 per trickle cycle), b2bforhire ~130,
+# the rest 8-50. The real search comes back by itself once REDDIT_CLIENT_ID/SECRET
+# are set (app-only OAuth, see reddit_fetcher._oauth_token).
+REDDIT_SEARCH_SUBS = ["jobboardsearch", "b2bforhire", "programmers_forhire",
+                      "hiddenjobsdev", "softwareengineerjobs", "developers_hire",
+                      "forhirefreelance", "freelancing", "remoteaccountingroles",
+                      "techjobs", "devjobs", "claudeworkflows", "remoteworking"]
+REDDIT_SEARCH_TITLE_RE = re.compile(r"\b(hiring|task|paid)\b", re.I)
+# Consecutive non-200, non-429 answers from one feed label before the trickle
+# raises (-> one throttled Telegram alert). The 403 above ran 6 days unseen.
+REDDIT_FEED_FAIL_ALERT = 30
+
 # Home trickle (main.py --loop --only reddit_trickle,...): ONE Reddit feed per
 # tick, rotating subs + searches. Measured 2026-11-04: anonymous Reddit allows
 # about one request per 10-20 s window from ANY IP (x-ratelimit-remaining 0 after
@@ -544,7 +562,9 @@ FB_POST_INTENT_QUERIES = [
 
 # Groups worth querying individually - the curated public ones the scraper can
 # no longer read. Built at call time so newly promoted groups are included.
-FB_POST_GROUP_QUERY_CAP = int(env("FB_POST_GROUP_QUERY_CAP", "12"))
+# 20 since 2026-11-16, Israeli groups first: at 12 in config order, five public
+# Israeli groups never got a query, and Israel is where the good FB leads were.
+FB_POST_GROUP_QUERY_CAP = int(env("FB_POST_GROUP_QUERY_CAP", "20"))
 
 
 def fb_post_queries() -> list[str]:
@@ -553,7 +573,9 @@ def fb_post_queries() -> list[str]:
     Interleaved rather than concatenated because DDG allows only ~2 queries per
     IP: a run must get a mix, not fifteen intent queries before the first group.
     """
-    groups = [g["slug"] for g in FACEBOOK_GROUPS if g.get("public")][:FB_POST_GROUP_QUERY_CAP]
+    public = [g for g in FACEBOOK_GROUPS if g.get("public")]
+    public.sort(key=lambda g: g.get("region") != "IL")      # stable: IL first
+    groups = [g["slug"] for g in public][:FB_POST_GROUP_QUERY_CAP]
     per_group = [f"site:facebook.com/groups/{s}" for s in groups]
     out: list[str] = []
     for i in range(max(len(FB_POST_INTENT_QUERIES), len(per_group))):
@@ -798,6 +820,19 @@ _DOMAIN_EN = [
     r"\bIDP\b", r"(pdf|receipt|form)\s+(parsing|extraction|data)", r"\bRPA\b",
     r"(ai|workflow|process)\s+automation", r"ai\s+agents?", r"\bdashboards?\b",
     r"data\s+(pipeline|annotation|labell?ing)", r"synthetic\s+data", r"edge\s+(ai|inference)",
+    # 2026-11-16: the SMB-automation stack was only in _STRONG_EN, so "אוטומציה
+    # בn8n" style asks died as offtopic. No \b: a Hebrew prefix glues on ("בn8n").
+    r"n8n", r"make\.com", r"zapier", r"(web\s+)?scrap(ing|er)", r"\bAPI\s+integration",
+]
+# Hebrew client vocabulary that is too weak to count as a STRONG term (it must
+# not rescue spam or turn chat into a "question" lead), but is how Israeli
+# business owners ask for this work in Facebook/WhatsApp groups. Measured
+# 2026-11-16 on synthetic client posts: "מי בונה בוטים לטלגרם?", "סקרייפינג...
+# בתשלום", "מי יכול לבנות לי אפליקציה? אשלם טוב" all died as gate_offtopic.
+_DOMAIN_HE_WEAK = [
+    r"(?<![א-ת])[הלבו]?(צ['׳]?אט)?בוט(ים)?(?![א-ת])", "סקרייפינג", "אינטגרצי",
+    "אפליקצי", r"(בניית|לבנות|שיבנה|לפתח|פיתוח)\s+(לי\s+|לנו\s+)?(אתר|מערכת|כלי|מוצר|MVP)",
+    "סוכן AI", "סוכן בינה", r"(?<![א-ת])[הלבו](AI|GPT|LLM)(?![a-z])",
 ]
 _DOMAIN_HE = [
     "ראייה ממוחשבת", "ראיה ממוחשבת", "עיבוד תמונה", "למידת מכונה",
@@ -820,9 +855,15 @@ _ENGAGE_HE = [
     # "מישהו מכיר / ממליצים על מפתח..." - the Israeli way of hiring in a group
     r"(מכיר|מכירה|מכירים|ממליץ|ממליצה|ממליצים|המלצה|המלצות)\s+(על\s+|ל)?(מפתח|מתכנת|פרילנסר|מומחה|יועץ"
     r"|חברה|חברת|סטודיו|מישהו\s+ש|מישהי\s+ש)",
+    # 2026-11-16: the plain ways a client asks in a group. "צריך" alone is too
+    # common, so it must be followed by who/what is needed.
+    r"מי\s+(יכול|יכולה|יודע|יודעת|עושה|בונה|מפתח)", "בתשלום", "אשלם",
+    r"(מישהו|מישהי)\s+ש(יבנה|תבנה|יעשה|עושה|בונה|יודע|מתמחה|יפתח)",
+    r"צריכ?(ה|ים)?\s+(מישהו|מישהי|מפתח|מתכנת|מומחה|פרילנסר|עזרה\s+ב)",
+    r"יש\s+(פה|כאן)\s+(מישהו|מישהי)\s+ש",
 ]
 
-DOMAIN_RE = re.compile("|".join(_DOMAIN_EN + _DOMAIN_HE), re.IGNORECASE)
+DOMAIN_RE = re.compile("|".join(_DOMAIN_EN + _DOMAIN_HE + _DOMAIN_HE_WEAK), re.IGNORECASE)
 ENGAGE_RE = re.compile("|".join(_ENGAGE_EN + _ENGAGE_HE), re.IGNORECASE)
 
 # Discussion subreddits (r/ entries of INTENT_REQUIRED_SOURCES): ENGAGE_RE is too
@@ -974,16 +1015,25 @@ SEEKER_RE = re.compile(
     r"|my\s+(services|rates|portfolio|skills)\b|services\s+i\s+offer"
     r"|open\s+to\s+work\b|\bfor\s+hire\b"
     # Hebrew equivalents
-    r"|אני\s+מפתח|אני\s+מתכנת|זמין\s+לעבודה|מציע\s+שירותי"
+    # 2026-11-16: "אני מפתח מוצר ... ומחפש מישהו" is a founder DEVELOPING a
+    # product (a client), not "I am a developer" - same spelling in Hebrew
+    r"|אני\s+מפתח(?!\s+(מוצר|מערכת|אפליקצי|סטארט|מיזם|כלי|פלטפורמ|משחק|את\s))"
+    r"|אני\s+מתכנת|זמין\s+לעבודה|מציע\s+שירותי"
     # added 2026-10-09 with WhatsApp ingestion: "מפתח פרילנסר זמין לפרויקטים ...
     # פנו אליי בפרטי" (a freelancer advertising himself) passed the gate as a lead
-    r"|(זמין|זמינה|פנוי|פנויה)\s+ל(פרויקטים|עבודה|פרילנס)|פנו\s+אליי|דברו\s+איתי"
+    # 2026-11-16: bare "פנו אליי / דברו איתי" removed - it is every CLIENT's call
+    # to action too ("מחפש מפתח... פנו אליי בפרטי"); the ad above is still caught
+    # by "זמין לפרויקטים"
+    r"|(זמין|זמינה|פנוי|פנויה)\s+ל(פרויקטים|עבודה|פרילנס)"
     # "שמי טל כהן, מהנדס תוכנה ויועץ פיתוח" - the Hebrew self-introduction, which
     # is how Israeli freelancers open a self-promo. Slipped through as a 7/10
     # lead on the first facebook/search run.
     r"|שמי\s+[֐-׿\s]{2,20}(מהנדס|מפתח|מתכנת|יועץ|פרילנסר)"
-    r"|בעל\s+ניסיון\s+ב(פיתוח|תכנות)"
-    r"|מחפש\s+פרויקטים|לקוחות\s+חדשים"
+    # 2026-11-16: both narrowed to the self-offer form. "דרוש מתכנת בעל ניסיון
+    # בפיתוח" is a client's requirement, and "CRM לניהול לקוחות חדשים" a project.
+    r"|(אני|הנני|שמי)[^.\n]{0,60}בעלת?\s+ניסיון\s+ב(פיתוח|תכנות)"
+    r"|מחפש\s+פרויקטים"
+    r"|(מקבל|מקבלת|מקבלים|פנוי\s+ל|פנויה\s+ל|פתוח\s+ל|פתוחה\s+ל)\s*לקוחות\s+חדשים"
     # 2026-11-11, both pushed from WhatsApp at 6: "אני כרגע מחפש לקוחות עם עסק
     # קיים" (a freelancer's ad) and "רוצה לשתף אתכם בפרויקט ... שסיימנו לאחרונה"
     # (a studio showing off its own work)
@@ -998,7 +1048,9 @@ SEEKER_RE = re.compile(
 
 # Unpaid community / volunteer / data-collection / survey asks
 COMMUNITY_RE = re.compile(
-    r"(מתנדב|בהתנדבות|תיוג קהילתי|איסוף ה?דאטה|נשמח לעזרה|אוספים תמונות"
+    # "נשמח לעזרה" alone also ends paying clients' posts (2026-11-16) - it now
+    # needs the volunteer task after it
+    r"(מתנדב|בהתנדבות|תיוג קהילתי|איסוף ה?דאטה|נשמח לעזרה\s+ב(תיוג|איסוף|מילוי|הפצ)|אוספים תמונות"
     r"|volunteer|data\s+collection\s+(effort|project|initiative)"
     r"|fill\s+(out|in|up)\s+(this|the)\s+(survey|form|questionnaire)"
     r"|ענו על השאלון|שאלון קצר|open[\s-]source\s+contribut|contribute\s+to\s+our"
@@ -1017,9 +1069,12 @@ NOISE_RE = re.compile(
 
 # Partnership / co-founder / equity-only asks -> separate low-priority bucket
 PARTNER_RE = re.compile(
-    r"(שותפ(ה|ים)? טכנולוגי|מחפשת? שותפ|co[\s-]?founder|founding\s+partner"
+    # שות[פף]: the singular ends in a FINAL pe, which "שותפ" never matched (2026-11-16)
+    r"(שות[פף](ה|ים)? טכנולוגי|מחפש(ת|ים)? שות[פף]|co[\s-]?founder|founding\s+partner"
     r"|equity[\s-]only|תמורת אחוזים|אחוזים מהמיזם|שותפות במיזם"
-    r"|CTO\s*/|/\s*שותפ)", re.IGNORECASE)
+    r"|CTO\s*/|/\s*שות[פף])", re.IGNORECASE)
+# "אין תקציב" is the opposite of a budget signal
+NO_BUDGET_RE = re.compile(r"(אין|ללא|בלי)\s+תקציב|no\s+budget", re.IGNORECASE)
 # ...unless real money is on the table
 BUDGET_SIGNAL_RE = re.compile(
     r"(₪|\$|€|£|תקציב|budget|\d+\s*(ש\"ח|שח|nis|usd|eur)|/hr\b|per\s+hour|שעתי)",

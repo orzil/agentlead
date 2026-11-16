@@ -838,6 +838,10 @@ def print_stats(conn) -> None:
         "SELECT source, COUNT(*) n FROM leads GROUP BY source ORDER BY n DESC"
     ):
         print(f"  {row['source']:20} {row['n']}")
+    if os.environ.get("GITHUB_ACTIONS"):
+        # the repo is public, so its workflow logs are too: lead summaries and
+        # post URLs were being printed there after every pass (found 2026-11-16)
+        return
     print("=== top scored ===")
     for row in conn.execute(
         "SELECT score, source, substr(replace(summary,char(10),' '),1,80) s, url "

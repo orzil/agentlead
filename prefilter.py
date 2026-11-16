@@ -125,7 +125,8 @@ def classify(lead: Lead) -> str:
         if config.employee_ad_hits(text) >= config.EMPLOYEE_AD_MIN:
             return "gate_full_time"
 
-    if config.PARTNER_RE.search(text) and not config.BUDGET_SIGNAL_RE.search(text):
+    if config.PARTNER_RE.search(text) and not config.BUDGET_SIGNAL_RE.search(
+            config.NO_BUDGET_RE.sub(" ", text)):
         return "partnership"
 
     # Pays too little to be worth the engineer's time. Runs after the identity

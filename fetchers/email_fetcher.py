@@ -129,18 +129,71 @@ def _clean_url(url: str) -> str:
     return urlunsplit((s.scheme, s.netloc, s.path, "", ""))
 
 
+# "Dana posted in <group>", "New posts in <group>", "... פרסם/ה בקבוצה <group>".
+# Facebook wraps the group name in LRM/RLM marks, hence the [‎‏] class.
+_FB_GROUP_SUBJECT_RE = re.compile(
+    r"(?:posted\s+in|new\s+posts?\s+in|in\s+the\s+group|shared\s+(?:a\s+\w+\s+)?in"
+    r"|פרסמ?ה?\s+ב(?:קבוצה\s+)?|בקבוצה\s+|פוסט(?:ים)?\s+חדש(?:ים)?\s+ב)"
+    r"\s*[‎‏\"“”]*(.+?)[‎‏\"“”.:]*\s*$", re.I)
+
+
+def _fb_group_label(subject: str) -> str:
+    m = _FB_GROUP_SUBJECT_RE.search(subject or "")
+    name = re.sub(r"[‎‏/]", "", m.group(1)).strip()[:60] if m else ""
+    return f"facebook/{name}" if name else "facebook"
+
+
+def _fb_post_urls(blob: str) -> list[str]:
+    """Every distinct group-post link in a notification, in order. Facebook
+    writes them three ways: plain, HTML-escaped, and percent-encoded inside a
+    redirect ("/n/?groups%2F123%2Fpermalink%2F456", "l.php?u=https%3A%2F%2F...")."""
+    from html import unescape
+    from urllib.parse import unquote
+    blob = unquote(unescape(blob or ""))
+    blob = re.sub(r"facebook\.com/n/\?(?=groups/)", "facebook.com/", blob)
+    urls: list[str] = []
+    for m in FB_POST_RE.finditer(blob):
+        url = _clean_url(m.group(0).split("&")[0])
+        url = re.sub(r"^https://(?:m|l)\.facebook", "https://www.facebook", url).rstrip("/")
+        if url not in urls:
+            urls.append(url)
+    return urls
+
+
 def _parse_facebook(subject: str, html_body: str, text_body: str) -> list[Lead]:
-    combined = html_body or text_body
-    m = FB_POST_RE.search(combined)
-    if not m:
+    """One lead per post link (a digest mail carries several; until 2026-11-16
+    only the first was kept), labelled facebook/<group> from the subject. Mails
+    with no post link - join approvals, Messenger - parse to nothing.
+    Built without a real group-post mail to test on (none in the inbox in 60
+    days): check it against the first one that arrives."""
+    source = _fb_group_label(subject)
+    urls = _fb_post_urls(html_body or text_body)
+    if not urls:
         return []
-    url = _clean_url(m.group(0))
-    if html_body:
-        text = BeautifulSoup(html_body, "html.parser").get_text("\n", strip=True)
-    else:
-        text = text_body
-    text = FB_BOILERPLATE.sub("", text).strip()
-    return [Lead(source="facebook", url=url, raw_text=f"{subject}\n\n{text[:4000]}")]
+    soup = BeautifulSoup(html_body, "html.parser") if html_body else None
+    whole = soup.get_text("\n", strip=True) if soup else (text_body or "")
+    whole = FB_BOILERPLATE.sub("", whole).strip()
+    if len(urls) == 1 or soup is None:
+        return [Lead(source=source, url=urls[0], raw_text=f"{subject}\n\n{whole[:4000]}")]
+    leads: list[Lead] = []
+    for url in urls:
+        post_id = url.rsplit("/", 1)[-1]
+        text = ""
+        a = soup.find("a", href=re.compile(re.escape(post_id)))
+        node = a
+        # climb to the smallest block that holds this post's text and no other post
+        while node is not None and node.parent is not None:
+            node = node.parent
+            block = node.get_text("\n", strip=True)
+            others = [u for u in urls if u != url and u.rsplit("/", 1)[-1] in str(node)]
+            if others:
+                break
+            if len(block) >= 60:
+                text = block
+        if len(text) < 60:
+            continue                 # a bare link in a digest footer: nothing to score
+        leads.append(Lead(source=source, url=url, raw_text=f"{subject}\n\n{text[:4000]}"))
+    return leads or [Lead(source=source, url=urls[0], raw_text=f"{subject}\n\n{whole[:4000]}")]
 
 
 _AGO_RE = re.compile(r"(\d+)\s*(minute|hour|day|week|month)", re.I)

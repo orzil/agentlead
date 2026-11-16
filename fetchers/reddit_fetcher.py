@@ -137,13 +137,90 @@ def _fetch_public_rss() -> list[Lead]:
     return leads
 
 
-def _trickle_feeds() -> list[tuple[str, str, dict]]:
-    """(source label, url, params) for every feed, subs then searches."""
-    feeds = [(f"r/{s}", f"https://www.reddit.com/r/{s}/new/.rss", {"limit": 25})
+_SEARCH_SUB_MARK = "search-sub"     # feed kind: a sub read in place of sitewide search
+_oauth: dict = {"token": "", "until": 0.0}
+
+
+def _has_oauth() -> bool:
+    return bool(config.REDDIT_CLIENT_ID and config.REDDIT_CLIENT_SECRET)
+
+
+def _oauth_token(client) -> str:
+    """Application-only OAuth token (read-only, no user login), cached ~1h.
+    Sitewide search is 403 for keyless clients since 2026-11-10; with a token it
+    is served from oauth.reddit.com at the API's far higher limits."""
+    if _oauth["token"] and time.time() < _oauth["until"]:
+        return _oauth["token"]
+    r = client.post("https://www.reddit.com/api/v1/access_token",
+                    auth=(config.REDDIT_CLIENT_ID, config.REDDIT_CLIENT_SECRET),
+                    data={"grant_type": "client_credentials"})
+    r.raise_for_status()
+    d = r.json()
+    _oauth["token"] = d["access_token"]
+    _oauth["until"] = time.time() + int(d.get("expires_in", 3600)) - 120
+    return _oauth["token"]
+
+
+def _parse_listing(data: dict, source: str) -> list[Lead]:
+    """Parse an API listing (oauth.reddit.com/search) into Leads."""
+    leads: list[Lead] = []
+    for child in (data.get("data") or {}).get("children") or []:
+        if child.get("kind") != "t3":
+            continue
+        p = child.get("data") or {}
+        title = p.get("title") or ""
+        if _is_offering(source, title) or not p.get("permalink"):
+            continue
+        leads.append(Lead(
+            source=source,
+            url=f"https://www.reddit.com{p['permalink']}",
+            raw_text=f"{title}\n\n{p.get('selftext') or ''}",
+            author=p.get("author") or None,
+            posted_at=(datetime.fromtimestamp(p["created_utc"], tz=timezone.utc)
+                       if p.get("created_utc") else None),
+        ))
+    return leads
+
+
+def _title_filtered(leads: list[Lead]) -> list[Lead]:
+    """Keep what the sitewide `title:(hiring OR task) (<domain terms>)` search
+    would have kept. The domain check happens here, not only in the gate:
+    r/jobboardsearch alone posts ~1,350 a day, and storing them all as gated
+    rows would double the DB and the fuzzy-dedup work for nothing."""
+    return [l for l in leads
+            if config.REDDIT_SEARCH_TITLE_RE.search(l.raw_text.split("\n", 1)[0])
+            and config.DOMAIN_RE.search(l.raw_text)]
+
+
+def _trickle_feeds() -> list[tuple[str, str, dict, str]]:
+    """(source label, url, params, kind) for every feed: polled subs, the subs
+    read in place of sitewide search, and - only with API credentials - the
+    sitewide searches themselves (keyless they are a 403 and waste the slot)."""
+    feeds = [(f"r/{s}", f"https://www.reddit.com/r/{s}/new/.rss", {"limit": 25}, "sub")
              for s in config.SUBREDDITS]
-    feeds += [("r/search", "https://www.reddit.com/search.rss",
-               {"q": q, "sort": "new", "t": "week"}) for q in config.REDDIT_SEARCHES]
+    feeds += [("r/search", f"https://www.reddit.com/r/{s}/new/.rss", {"limit": 100},
+               _SEARCH_SUB_MARK) for s in config.REDDIT_SEARCH_SUBS]
+    if _has_oauth():
+        feeds += [("r/search", "https://oauth.reddit.com/search",
+                   {"q": q, "sort": "new", "t": "week", "limit": 50, "raw_json": 1},
+                   "oauth-search") for q in config.REDDIT_SEARCHES]
     return feeds
+
+
+def _note_feed_result(conn, name: str, ok: bool) -> None:
+    """Count consecutive failures per feed; raise at the threshold so
+    run_job_safe sends its (throttled) Telegram alert. A feed that fails
+    quietly is how sitewide search stayed dead for six days."""
+    import db
+    key = f"reddit_fail_{name}"
+    if ok:
+        if db.kv_get(conn, key, "0") != "0":
+            db.kv_set(conn, key, "0")
+        return
+    n = int(db.kv_get(conn, key, "0") or 0) + 1
+    db.kv_set(conn, key, str(n))
+    if n % config.REDDIT_FEED_FAIL_ALERT == 0:
+        raise RuntimeError(f"Reddit feed {name} failed {n} times in a row")
 
 
 def fetch_next(conn) -> tuple[list[Lead], bool]:
@@ -157,10 +234,13 @@ def fetch_next(conn) -> tuple[list[Lead], bool]:
         return [], False
     feeds = _trickle_feeds()
     i = int(db.kv_get(conn, "reddit_trickle_i", "0") or 0) % len(feeds)
-    label, url, params = feeds[i]
+    label, url, params, kind = feeds[i]
+    name = url.split("/r/")[1].split("/")[0] if "/r/" in url else kind
     with httpx.Client(headers={"User-Agent": config.REDDIT_USER_AGENT}, timeout=20,
                       follow_redirects=True) as client:
-        r = client.get(url, params=params)
+        headers = ({"Authorization": f"bearer {_oauth_token(client)}"}
+                   if kind == "oauth-search" else {})
+        r = client.get(url, params=params, headers=headers)
     if r.status_code == 429:
         reset = float(r.headers.get("x-ratelimit-reset", "30") or 30)
         db.kv_set(conn, "reddit_trickle_wait", str(time.time() + reset + 2))
@@ -170,9 +250,22 @@ def fetch_next(conn) -> tuple[list[Lead], bool]:
     # must not pin the rotation to itself
     db.kv_set(conn, "reddit_trickle_i", str(i + 1))
     if r.status_code != 200:
-        log.warning("reddit trickle: %s -> HTTP %d, skipped", label, r.status_code)
+        if r.status_code == 401:
+            _oauth["token"] = ""
+        log.warning("reddit trickle: %s (%s) -> HTTP %d, skipped", label, name, r.status_code)
+        _note_feed_result(conn, name, False)
         return [], False
-    leads = _parse_feed(r.content, label)
+    _note_feed_result(conn, name, True)
+    if kind == "oauth-search":
+        leads = _parse_listing(r.json(), label)
+    else:
+        leads = _parse_feed(r.content, label)
+        if kind == _SEARCH_SUB_MARK:
+            total = len(leads)
+            leads = _title_filtered(leads)
+            log.info("reddit trickle: %s via r/%s -> %d of %d posts (feed %d/%d)",
+                     label, name, len(leads), total, i + 1, len(feeds))
+            return leads, True
     log.info("reddit trickle: %s -> %d posts (feed %d/%d)", label, len(leads), i + 1, len(feeds))
     return leads, True
 
@@ -193,15 +286,29 @@ def fetch_search() -> list[Lead]:
     headers = {"User-Agent": config.REDDIT_USER_AGENT}
     leads: list[Lead] = []
     with httpx.Client(headers=headers, timeout=20, follow_redirects=True) as client:
-        for i, query in enumerate(config.REDDIT_SEARCHES):
+        # the subs read in place of the keyless search (403 since 2026-11-10)
+        for i, sub in enumerate(config.REDDIT_SEARCH_SUBS):
             if i:
                 time.sleep(8)
             try:
                 r = _get_with_backoff(
-                    client, "https://www.reddit.com/search.rss",
-                    {"q": query, "sort": "new", "t": "week"}, "r/search")
-                leads.extend(_parse_feed(r.content, "r/search"))
+                    client, f"https://www.reddit.com/r/{sub}/new/.rss",
+                    {"limit": 100}, f"r/{sub}")
+                leads.extend(_title_filtered(_parse_feed(r.content, "r/search")))
             except Exception as e:
-                log.error("reddit search %r failed: %s", query, e)
+                log.error("r/%s (search-sub) fetch failed: %s", sub, e)
+        if _has_oauth():
+            for query in config.REDDIT_SEARCHES:
+                time.sleep(2)
+                try:
+                    r = client.get(
+                        "https://oauth.reddit.com/search",
+                        params={"q": query, "sort": "new", "t": "week", "limit": 50,
+                                "raw_json": 1},
+                        headers={"Authorization": f"bearer {_oauth_token(client)}"})
+                    r.raise_for_status()
+                    leads.extend(_parse_listing(r.json(), "r/search"))
+                except Exception as e:
+                    log.error("reddit search %r failed: %s", query, e)
     log.info("Reddit (search): fetched %d posts", len(leads))
     return leads
