@@ -996,11 +996,12 @@ def _read_rated() -> dict[str, int]:
 
 
 def apply_rated(conn) -> int:
-    """Fill unrated names from the home-rated file. Never overwrites a rating."""
+    """Set ratings from the home-rated file. The file wins for its codes: they
+    were all unrated here when the home PC took them, and it may lower one later."""
     n = 0
     for code, s in _read_rated().items():
         n += conn.execute("UPDATE whatsapp_groups SET llm_relevant=? "
-                          "WHERE code=? AND llm_relevant IS NULL", (s, code)).rowcount
+                          "WHERE code=? AND llm_relevant IS NOT ?", (s, code, s)).rowcount
     conn.commit()
     return n
 
@@ -1023,6 +1024,38 @@ def _ollama_batch(names: list[str]) -> dict[int, int] | None:
     except Exception as e:
         log.warning("ollama rating failed: %s", str(e)[:100])
         return None
+
+
+_CONFIRM_SYSTEM = """You get ONE WhatsApp group name. Answer JSON {"ok": true|false}.
+ok=true if the name shows a TECH or BUSINESS-OWNER community:
+- a technology, tool or field of software / AI / data / ML / computer vision / cloud /
+  automation / coding (examples: "BigData IL", "MLOps TLV", "Vibe Coders IL", "GenAI Cyber",
+  "ClaudeCode IL", "Agentic Professionals Network", "AI Experts"). "IL" or "TLV" = Israel;
+- freelance / contract / project work for developers, designers of software, AI or data;
+- startup founders, indie builders, SaaS owners, business owners sharing knowledge.
+ok=false for: general, local or full-time job boards ("jobs all over the country",
+"workers 24/6"), sales funnels and guru courses, crypto, gaming and clans, sports, vehicles,
+hobbies, universities and student forums, consumer product fan groups (e.g. Apple users),
+buy/sell boards, and names made of abbreviations you cannot read as tech or business."""
+
+
+def _ollama_confirm(name: str) -> bool:
+    """Second look at a name the batch call rated 2-3. qwen2.5:7b is generous in
+    batches: the first run sent a motorbike group and gaming clans to the phone."""
+    import httpx
+    if (config.WA_FREELANCE_GROUP_RE.search(name) or config.WA_BUYER_GROUP_RE.search(name)
+            or config.WA_CV_GROUP_RE.search(name)):
+        return True         # the name rules Or's leads came from need no second opinion
+    try:
+        r = httpx.post(f"{config.OLLAMA_URL}/api/chat", timeout=120, json={
+            "model": config.OLLAMA_MODEL, "stream": False, "format": "json",
+            "options": {"temperature": 0.0},
+            "messages": [{"role": "system", "content": _CONFIRM_SYSTEM},
+                         {"role": "user", "content": name}]})
+        r.raise_for_status()
+        return json.loads(r.json()["message"]["content"]).get("ok") is True
+    except Exception:
+        return False
 
 
 def rate_home(max_names: int = 800) -> int:
@@ -1068,7 +1101,10 @@ def rate_home(max_names: int = 800) -> int:
             break
         for j, r in enumerate(chunk):
             if j in scores:
-                rated[r[0]] = scores[j]
+                s = scores[j]
+                if s >= 2 and not _ollama_confirm(r[1]):
+                    s = 1
+                rated[r[0]] = s
                 done += 1
     log.info("rate-home: %d unrated in the cloud pool, %d rated now (%s)", len(todo), done,
              {s: sum(1 for c in todo if rated.get(c[0]) == s) for s in (0, 1, 2, 3)})
