@@ -975,6 +975,122 @@ def llm_pass(conn, batch: int = LLM_BATCH, max_calls: int = LLM_CALLS_PER_PASS) 
     return done
 
 
+# --- home rating -------------------------------------------------------------
+# The cloud's free LLMs fail most nights (timeouts, empty answers, quota spent by
+# lead scoring): 617 names sat unrated on 2026-11-17 and select picked 0-4 a night.
+# The home PC has Ollama with no quota, so it rates a decrypted copy of the cloud
+# wa.db and ships the scores back in a committed file. Codes + a 0-3 score only,
+# the same exposure as whatsapp_tried.txt.
+RATED_FILE = config.BASE_DIR / "whatsapp_rated.txt"
+HOME_BATCH = 25
+
+
+def _read_rated() -> dict[str, int]:
+    out: dict[str, int] = {}
+    if RATED_FILE.exists():
+        for ln in RATED_FILE.read_text(encoding="utf-8").splitlines():
+            p = ln.split()
+            if len(p) == 2 and not ln.startswith("#") and p[1] in "0123":
+                out[p[0]] = int(p[1])
+    return out
+
+
+def apply_rated(conn) -> int:
+    """Fill unrated names from the home-rated file. Never overwrites a rating."""
+    n = 0
+    for code, s in _read_rated().items():
+        n += conn.execute("UPDATE whatsapp_groups SET llm_relevant=? "
+                          "WHERE code=? AND llm_relevant IS NULL", (s, code)).rowcount
+    conn.commit()
+    return n
+
+
+def _ollama_batch(names: list[str]) -> dict[int, int] | None:
+    import httpx
+    user = "\n".join(f"{i}. {n}" for i, n in enumerate(names))
+    try:
+        r = httpx.post(f"{config.OLLAMA_URL}/api/chat", timeout=600, json={
+            "model": config.OLLAMA_MODEL, "stream": False, "format": "json",
+            "options": {"temperature": 0.0, "num_ctx": 8192},
+            "messages": [{"role": "system", "content": _LLM_SYSTEM + (
+                '\nAnswer with JSON only: {"items": [{"i": <number>, "s": <0-3>}, ...]} '
+                "with one item for EVERY numbered name.")},
+                {"role": "user", "content": user}]})
+        r.raise_for_status()
+        data = json.loads(r.json()["message"]["content"])
+        return {int(x["i"]): max(0, min(3, int(x["s"]))) for x in data.get("items", [])
+                if 0 <= int(x["i"]) < len(names)}
+    except Exception as e:
+        log.warning("ollama rating failed: %s", str(e)[:100])
+        return None
+
+
+def rate_home(max_names: int = 800) -> int:
+    """Home PC only: download the newest encrypted cloud wa.db, rate its unrated
+    names with Ollama, append them to whatsapp_rated.txt and push it."""
+    import glob
+    import subprocess
+    import tempfile
+    import discover_whatsapp_groups as wa
+    import sync_cloud
+    flags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+    name = subprocess.run(
+        ["gh", "api", f"repos/{sync_cloud.REPO}/actions/artifacts?per_page=100", "--jq",
+         '[.artifacts[] | select((.name|startswith("wadb-")) and (.expired|not))]'
+         ' | sort_by(.created_at) | last | .name // ""'],
+        capture_output=True, text=True, timeout=90, creationflags=flags).stdout.strip()
+    if not name:
+        log.info("rate-home: no wadb artifact yet")
+        return 0
+    with tempfile.TemporaryDirectory() as tmp:
+        subprocess.run(["gh", "run", "download", name.split("-", 1)[1], "--repo",
+                        sync_cloud.REPO, "-n", name, "-D", tmp],
+                       capture_output=True, text=True, timeout=300, creationflags=flags)
+        hits = glob.glob(os.path.join(tmp, "**", "wa.db.enc"), recursive=True)
+        path = sync_cloud._decrypt(hits[0]) if hits else None
+        if not path:
+            log.warning("rate-home: could not download or decrypt %s", name)
+            return 0
+        src = sqlite3.connect(path)
+        rows = src.execute("SELECT code, name, region, relevance FROM whatsapp_groups "
+                           "WHERE status='live' AND llm_relevant IS NULL").fetchall()
+        src.close()
+    rated = _read_rated()
+    todo = [r for r in rows if r[0] not in rated and r[1]
+            and not wa.WA_NOISE_RE.search(r[1]) and not FOREIGN_RE.search(r[1])]
+    todo.sort(key=lambda r: (not _name_ok_without_llm(r[1], r[2]), -(r[3] or 0)))
+    todo = todo[:max_names]
+    done = 0
+    for i in range(0, len(todo), HOME_BATCH):
+        chunk = todo[i:i + HOME_BATCH]
+        scores = _ollama_batch([r[1] for r in chunk])
+        if scores is None:
+            break
+        for j, r in enumerate(chunk):
+            if j in scores:
+                rated[r[0]] = scores[j]
+                done += 1
+    log.info("rate-home: %d unrated in the cloud pool, %d rated now (%s)", len(todo), done,
+             {s: sum(1 for c in todo if rated.get(c[0]) == s) for s in (0, 1, 2, 3)})
+    if not done:
+        return 0
+    RATED_FILE.write_text(
+        "# home-rated WhatsApp invite codes: <code> <0-3> (wa_night.rate_home)\n"
+        + "".join(f"{c} {s}\n" for c, s in sorted(rated.items())), encoding="utf-8")
+    git = ["git", "-C", str(config.BASE_DIR)]
+    subprocess.run([*git, "add", "--", RATED_FILE.name], capture_output=True, creationflags=flags)
+    r = subprocess.run([*git, "commit", "-q", "-m", "whatsapp: home-rated codes", "--",
+                        RATED_FILE.name], capture_output=True, text=True, creationflags=flags)
+    if r.returncode == 0:
+        subprocess.run([*git, "pull", "-q", "--rebase", "--autostash"],
+                       capture_output=True, timeout=120, creationflags=flags)
+        r = subprocess.run([*git, "push", "-q"], capture_output=True, text=True,
+                           timeout=120, creationflags=flags)
+    if r.returncode != 0:
+        log.warning("rate-home: push failed (file kept, next run retries)")
+    return done
+
+
 def _rank(r: sqlite3.Row) -> tuple:
     llm = r["llm_relevant"]
     name = r["name"] or ""
@@ -1150,11 +1266,17 @@ def main() -> None:
                     help="cv = computer-vision lists, client = client/work-passing groups "
                          "and community hubs (each with own cursors), auto = the next "
                          "focus in FOCUS_ROTATION, one per slice")
+    ap.add_argument("--rate-home", action="store_true",
+                    help="HOME PC: rate the cloud pool's unrated names with Ollama and push "
+                         "whatsapp_rated.txt")
     args = ap.parse_args()
     _apply_focus(args.focus)
 
     logging.basicConfig(level=logging.INFO,
                         format="%(asctime)s %(levelname)-7s [%(name)s] %(message)s")
+    if args.rate_home:
+        print("rated", rate_home())
+        return
     if args.db:
         config.DB_PATH = Path(args.db)
     import db
@@ -1172,6 +1294,11 @@ def main() -> None:
 
     if conn.execute("SELECT COUNT(*) FROM whatsapp_groups").fetchone()[0] == 0:
         log.info("empty table: seeded %d invite(s) from whatsapp_groups.md", seed_from_md(conn))
+
+    if db.kv_get(conn, "wa_llm_ver", "") == LLM_RUBRIC_VER:   # else llm_pass would wipe them
+        n = apply_rated(conn)
+        if n:
+            log.info("applied %d home rating(s)", n)
 
     if args.add_links:
         add_links(conn, args.add_links, args.via)

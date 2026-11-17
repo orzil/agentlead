@@ -115,6 +115,27 @@ jobs:
           path: wa.db
           key: wadb-${{ github.run_id }}
 
+      # The home PC rates the unrated names with Ollama (the cloud's free LLMs
+      # fail most nights) and commits whatsapp_rated.txt. Encrypted like
+      # leads.db.enc: a public repo's artifacts are downloadable by anyone.
+      - name: Encrypt WhatsApp DB for home rating
+        if: always()
+        env:
+          DB_EXPORT_KEY: ${{ secrets.DB_EXPORT_KEY }}
+        run: |
+          if [ -n "$DB_EXPORT_KEY" ] && [ -f wa.db ]; then
+            openssl enc -aes-256-cbc -pbkdf2 -iter 200000 -salt -in wa.db -out wa.db.enc -pass env:DB_EXPORT_KEY
+          fi
+
+      - name: Upload WhatsApp DB snapshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wadb-${{ github.run_id }}
+          path: wa.db.enc
+          if-no-files-found: ignore
+          retention-days: 2
+
       - name: Commit the list
         if: env.MODE == 'select'
         run: |
