@@ -104,6 +104,43 @@ def _parse_feed(content: bytes, source: str) -> list[Lead]:
     return leads
 
 
+# Reddit's own RSS died on 2026-11-17 19:50 IL: every feed answers 404 with an
+# empty Atom body, .json is 403 and the HTML listing is a JS shell. Arctic Shift
+# is a free, keyless archive that ingests Reddit within minutes (measured: newest
+# post 0.1 h old) and serves one sub's newest posts as JSON, bodies included. It
+# has no sitewide search without a subreddit. One request a minute is our pace.
+ARCTIC_URL = "https://arctic-shift.photon-reddit.com/api/posts/search"
+
+
+def _sub_params(sub: str, limit: int) -> dict:
+    return {"subreddit": sub, "limit": limit, "sort": "desc"}
+
+
+def _parse_posts(content: bytes, source: str) -> list[Lead]:
+    """Parse an Arctic Shift listing ({"data": [post, ...]}) into Leads. Same
+    canonical permalink as the old RSS path, so dedup holds across the switch."""
+    import json
+    leads: list[Lead] = []
+    for p in (json.loads(content).get("data") or []):
+        title = (p.get("title") or "").strip()
+        link = p.get("permalink") or ""
+        if not title or "/comments/" not in link or _is_offering(source, title):
+            continue
+        body = p.get("selftext") or ""
+        if body.strip() in ("[removed]", "[deleted]"):
+            body = ""
+        body = re.sub(r"\s+", " ", body).strip()
+        leads.append(Lead(
+            source=source,
+            url=f"https://www.reddit.com{link}",
+            raw_text=f"{title}\n\n{body}",
+            author=p.get("author") or None,
+            posted_at=(datetime.fromtimestamp(int(p["created_utc"]), tz=timezone.utc)
+                       if p.get("created_utc") else None),
+        ))
+    return leads
+
+
 def _get_with_backoff(client, url: str, params: dict, label: str):
     """GET with Reddit's two-step 429 backoff. Returns the response."""
     r = client.get(url, params=params)
@@ -127,10 +164,8 @@ def _fetch_public_rss() -> list[Lead]:
             if i:
                 time.sleep(8)  # Reddit rate-limits bursts; space requests out
             try:
-                r = _get_with_backoff(
-                    client, f"https://www.reddit.com/r/{sub}/new/.rss",
-                    {"limit": 25}, f"r/{sub}")
-                leads.extend(_parse_feed(r.content, f"r/{sub}"))
+                r = _get_with_backoff(client, ARCTIC_URL, _sub_params(sub, 25), f"r/{sub}")
+                leads.extend(_parse_posts(r.content, f"r/{sub}"))
             except Exception as e:
                 log.error("r/%s (rss) fetch failed: %s", sub, e)
     log.info("Reddit (public RSS): fetched %d posts", len(leads))
@@ -196,10 +231,9 @@ def _trickle_feeds() -> list[tuple[str, str, dict, str]]:
     """(source label, url, params, kind) for every feed: polled subs, the subs
     read in place of sitewide search, and - only with API credentials - the
     sitewide searches themselves (keyless they are a 403 and waste the slot)."""
-    feeds = [(f"r/{s}", f"https://www.reddit.com/r/{s}/new/.rss", {"limit": 25}, "sub")
-             for s in config.SUBREDDITS]
-    feeds += [("r/search", f"https://www.reddit.com/r/{s}/new/.rss", {"limit": 100},
-               _SEARCH_SUB_MARK) for s in config.REDDIT_SEARCH_SUBS]
+    feeds = [(f"r/{s}", ARCTIC_URL, _sub_params(s, 25), "sub") for s in config.SUBREDDITS]
+    feeds += [("r/search", ARCTIC_URL, _sub_params(s, 100), _SEARCH_SUB_MARK)
+              for s in config.REDDIT_SEARCH_SUBS]
     if _has_oauth():
         feeds += [("r/search", "https://oauth.reddit.com/search",
                    {"q": q, "sort": "new", "t": "week", "limit": 50, "raw_json": 1},
@@ -235,7 +269,7 @@ def fetch_next(conn) -> tuple[list[Lead], bool]:
     feeds = _trickle_feeds()
     i = int(db.kv_get(conn, "reddit_trickle_i", "0") or 0) % len(feeds)
     label, url, params, kind = feeds[i]
-    name = url.split("/r/")[1].split("/")[0] if "/r/" in url else kind
+    name = params.get("subreddit") or kind
     with httpx.Client(headers={"User-Agent": config.REDDIT_USER_AGENT}, timeout=20,
                       follow_redirects=True) as client:
         headers = ({"Authorization": f"bearer {_oauth_token(client)}"}
@@ -259,7 +293,7 @@ def fetch_next(conn) -> tuple[list[Lead], bool]:
     if kind == "oauth-search":
         leads = _parse_listing(r.json(), label)
     else:
-        leads = _parse_feed(r.content, label)
+        leads = _parse_posts(r.content, label)
         if kind == _SEARCH_SUB_MARK:
             total = len(leads)
             leads = _title_filtered(leads)
@@ -291,10 +325,8 @@ def fetch_search() -> list[Lead]:
             if i:
                 time.sleep(8)
             try:
-                r = _get_with_backoff(
-                    client, f"https://www.reddit.com/r/{sub}/new/.rss",
-                    {"limit": 100}, f"r/{sub}")
-                leads.extend(_title_filtered(_parse_feed(r.content, "r/search")))
+                r = _get_with_backoff(client, ARCTIC_URL, _sub_params(sub, 100), f"r/{sub}")
+                leads.extend(_title_filtered(_parse_posts(r.content, "r/search")))
             except Exception as e:
                 log.error("r/%s (search-sub) fetch failed: %s", sub, e)
         if _has_oauth():

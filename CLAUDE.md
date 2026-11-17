@@ -152,6 +152,12 @@ one job tuple.
   canonical Reddit permalinks (shared dedup key with `reddit_fetcher`) labelled `r/<sub>`, HN as
   `hn`. Only hits whose own snippet matches `ENGAGE_RE` are kept. Built against a synthetic mail.
   Verify it against the first real one; the sign-up is Or's, and the keywords are in `PROJECT_STATUS.md`.
+- **Reddit's own RSS is dead since 2026-11-17 19:50 IL** (every feed: 404 + empty Atom body;
+  `.json` 403; the HTML listing is a JS shell). All sub feeds now come from **Arctic Shift**
+  (`reddit_fetcher.ARCTIC_URL`, free keyless archive, posts minutes old, JSON with bodies, same
+  permalinks so dedup holds). It needs a `subreddit` on every query, so there is no sitewide
+  search. It is a volunteer service: keep the one-request-a-minute pace, expect the odd 422,
+  and if it dies the only routes left are F5Bot mail or an approved Reddit API app.
 - **Reddit sitewide search is 403 keyless since 2026-11-10** (www, old, `.json`, per-sub
   `restrict_sr` — all probed). It ran dead for 6 days unnoticed while being 30% of leads >=6.
   The 13 subs its good hits came from (`REDDIT_SEARCH_SUBS`) are now read directly, keep the

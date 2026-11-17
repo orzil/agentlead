@@ -1020,6 +1020,12 @@ groups: 0 leads); Israeli "דרושים"/freelance Facebook groups.
   keywords are listed above; unverified that F5Bot still sees Reddit) and a **Reddit API
   access request** (Responsible Builder Policy).
 - `email_fb` no longer alerts on a dropped Gmail connection (one false alarm today).
+- **Fixed 20:53 IL: sub feeds moved to Arctic Shift** (free keyless Reddit archive). Measured:
+  newest post 0.1 h old, bodies included, URLs identical to the RSS ones (16 of 22 r/mljobs
+  posts were already in the DB by URL). Home trickle and the cloud `reddit` / `reddit_search`
+  jobs all use it. Removed posts come with a title only. PullPush was tried too: 429.
+- **Next:** with a per-sub archive there is no feed limit, so add more hiring subs
+  (the old search's hits also came from r/stemjobs, r/nearskilljobs and others).
 
 ## Open items
 - **Or's to-do (decided 2026-11-11):** sign up to **Alignerr** (one-attempt assessment: prepare)
