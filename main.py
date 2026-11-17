@@ -146,7 +146,16 @@ def job_email_fb(conn) -> None:
     """Home loop only: Facebook group-post mails every 5 min. The cloud reads
     mail 7x/day (gaps up to 6h), far too slow for a group post; it skips
     Facebook mail while the home heartbeat is fresh (leadagent.yml)."""
-    pipeline.ingest_many(conn, email_fetcher.fetch(conn, only={"facebook"}), "email")
+    import imaplib
+    try:
+        leads = email_fetcher.fetch(conn, only={"facebook"})
+    except (imaplib.IMAP4.abort, OSError) as e:
+        # Gmail drops a connection now and then; the next pass is 5 min away,
+        # so this is not worth a Telegram alert (it sent one on 2026-11-17)
+        logging.getLogger("email").warning("email_fb: connection dropped (%s), next pass retries",
+                                           str(e)[:80])
+        return
+    pipeline.ingest_many(conn, leads, "email")
 
 
 def job_wa_rate(conn) -> None:

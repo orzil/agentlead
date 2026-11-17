@@ -1010,6 +1010,17 @@ groups: 0 leads); Israeli "דרושים"/freelance Facebook groups.
   First run: 616 rated (504 / 59 / 30 / 23 for 0-3), select then picked 24.
 - **Watch:** qwen2.5:7b ratings are unaudited. The phone's join-sheet check is the second filter.
 
+### 2026-11-17 19:50 IL: Reddit RSS is gone
+- Every feed (subs, front page, `rss.reddit.com`) answers **HTTP 404 with an empty Atom feed**
+  since 19:50 IL, from the agent UA and a browser UA alike. `.json` is 403, the HTML listing
+  is a JS shell with no posts, redditstatus.com says operational. Third-party blogs say Reddit
+  announced the end of RSS for 2026-11-13 (not checked against a Reddit source).
+- So there is **no keyless Reddit route left**. Reddit was about half of all leads >=6.
+- Free routes that remain, both need Or: **F5Bot** keyword mails (`_parse_f5bot` is built,
+  keywords are listed above; unverified that F5Bot still sees Reddit) and a **Reddit API
+  access request** (Responsible Builder Policy).
+- `email_fb` no longer alerts on a dropped Gmail connection (one false alarm today).
+
 ## Open items
 - **Or's to-do (decided 2026-11-11):** sign up to **Alignerr** (one-attempt assessment: prepare)
   and **Mercor** (CV + about 20 min AI interview). The profile text is in `talent_networks.md`.
