@@ -20,6 +20,7 @@ import email
 import email.header
 import imaplib
 import logging
+import os
 import re
 import sqlite3
 import time
@@ -396,10 +397,16 @@ def _source_for(sender: str) -> str | None:
     return None
 
 
-def fetch(conn: sqlite3.Connection) -> list[Lead]:
+def fetch(conn: sqlite3.Connection, only: set[str] | None = None) -> list[Lead]:
+    """`only` limits the pass to those source labels (the home loop reads just
+    "facebook" every 5 min). EMAIL_SKIP_SOURCES is the other half: the cloud
+    sets it to "facebook" while the home loop is alive, so a post is not scored
+    and pushed twice from two DBs. Skipped mails are not marked seen."""
     if not (config.IMAP_USER and config.IMAP_PASSWORD):
         log.debug("IMAP not configured; skipping")
         return []
+    skip = {s.strip() for s in os.environ.get("EMAIL_SKIP_SOURCES", "").split(",") if s.strip()}
+    fb_mails = fb_leads = 0
 
     since = (datetime.now() - timedelta(days=config.IMAP_LOOKBACK_DAYS)).strftime("%d-%b-%Y")
     leads: list[Lead] = []
@@ -418,7 +425,7 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
             hdr = email.message_from_bytes(hdr_data[0][1])
             sender = _decode_header(hdr.get("From", ""))
             source = _source_for(sender)
-            if source is None:
+            if source is None or source in skip or (only and source not in only):
                 continue
             message_id = (hdr.get("Message-ID") or "").strip() or f"no-id-{num.decode()}"
             if db.email_seen(conn, message_id):
@@ -431,7 +438,10 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
 
             try:
                 if source == "facebook":
-                    leads.extend(_parse_facebook(subject, html_body, text_body))
+                    got = _parse_facebook(subject, html_body, text_body)
+                    fb_mails += 1
+                    fb_leads += len(got)
+                    leads.extend(got)
                 elif source == "upwork":
                     leads.extend(_parse_job_alert("upwork", html_body, UPWORK_JOB_RE))
                 elif source == "wellfound":
@@ -454,6 +464,8 @@ def fetch(conn: sqlite3.Connection) -> list[Lead]:
             pass
 
     log.info("Email: extracted %d leads", len(leads))
+    if fb_mails:
+        log.info("Email: %d Facebook mail(s) -> %d post(s)", fb_mails, fb_leads)
     # Alert emails carry ~10 words per job, which is not enough to gate or score
     # on. Pull the real listing before the pipeline sees them.
     return enrich_linkedin_alerts(leads)

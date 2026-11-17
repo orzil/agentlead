@@ -142,6 +142,13 @@ def job_email(conn) -> None:
     pipeline.ingest_many(conn, email_fetcher.fetch(conn), "email")
 
 
+def job_email_fb(conn) -> None:
+    """Home loop only: Facebook group-post mails every 5 min. The cloud reads
+    mail 7x/day (gaps up to 6h), far too slow for a group post; it skips
+    Facebook mail while the home heartbeat is fresh (leadagent.yml)."""
+    pipeline.ingest_many(conn, email_fetcher.fetch(conn, only={"facebook"}), "email")
+
+
 def job_facebook(conn) -> None:
     pipeline.ingest_many(conn, facebook_public_fetcher.fetch(conn), "facebook")
 
@@ -354,7 +361,8 @@ def run_forever(only: str | None = None, skip: str | None = None) -> None:
     import agency_mail
     # loop-only jobs: never in a --once pass or the default loop (home PC only)
     loop_only = [("reddit_trickle", config.REDDIT_TRICKLE_SECONDS, job_reddit_trickle),
-                 ("agency_mail", 10 * 60, agency_mail.job)]
+                 ("agency_mail", 10 * 60, agency_mail.job),
+                 ("email_fb", 5 * 60, job_email_fb)]
     pool = JOBS + loop_only
     jobs = [j for j in pool if (j[0] in wanted if wanted else j not in loop_only)
             and j[0] not in unwanted]
