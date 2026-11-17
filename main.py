@@ -149,6 +149,15 @@ def job_email_fb(conn) -> None:
     pipeline.ingest_many(conn, email_fetcher.fetch(conn, only={"facebook"}), "email")
 
 
+def job_wa_rate(conn) -> None:
+    """Home loop only: rate the cloud WhatsApp pool's unrated group names with
+    Ollama (wa_night.rate_home). In a thread: a big batch takes minutes and the
+    Reddit trickle must keep its one-feed-a-minute pace."""
+    import threading
+    import wa_night
+    threading.Thread(target=wa_night.rate_home, daemon=True, name="wa_rate").start()
+
+
 def job_facebook(conn) -> None:
     pipeline.ingest_many(conn, facebook_public_fetcher.fetch(conn), "facebook")
 
@@ -362,7 +371,8 @@ def run_forever(only: str | None = None, skip: str | None = None) -> None:
     # loop-only jobs: never in a --once pass or the default loop (home PC only)
     loop_only = [("reddit_trickle", config.REDDIT_TRICKLE_SECONDS, job_reddit_trickle),
                  ("agency_mail", 10 * 60, agency_mail.job),
-                 ("email_fb", 5 * 60, job_email_fb)]
+                 ("email_fb", 5 * 60, job_email_fb),
+                 ("wa_rate", 6 * 3600, job_wa_rate)]
     pool = JOBS + loop_only
     jobs = [j for j in pool if (j[0] in wanted if wanted else j not in loop_only)
             and j[0] not in unwanted]

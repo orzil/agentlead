@@ -999,6 +999,17 @@ groups: 0 leads); Israeli "דרושים"/freelance Facebook groups.
   `Email: N Facebook mail(s) -> M post(s)` in `reddit_loop.log`. If a full day gives 0, this
   route does not deliver and the Israeli groups have no free real-time route.
 
+### 2026-11-17 evening: quiet day diagnosed; WhatsApp names rated at home
+- **Quiet day is supply, not a fault.** 1,077 posts read, 51 scored, 1 pushed (09:15 IL).
+  r/jobboardsearch fell from ~1,350 posts/day to ~100; the feeds themselves are fresh.
+- **WhatsApp backlog was stuck at rating.** 618 live names unrated in the cloud `wa.db`
+  (free cloud LLMs time out or have no quota), select picked 0-4 a night, phone had no targets.
+  Now `wanight.yml` uploads `wa.db.enc` (artifact `wadb-<run>`, 2 days), and the home loop job
+  `wa_rate` (every 6 h, `wa_night.py --rate-home`) rates with Ollama and commits
+  `whatsapp_rated.txt` (code + 0-3); every cloud run applies it to unrated rows.
+  First run: 616 rated (504 / 59 / 30 / 23 for 0-3), select then picked 24.
+- **Watch:** qwen2.5:7b ratings are unaudited. The phone's join-sheet check is the second filter.
+
 ## Open items
 - **Or's to-do (decided 2026-11-11):** sign up to **Alignerr** (one-attempt assessment: prepare)
   and **Mercor** (CV + about 20 min AI interview). The profile text is in `talent_networks.md`.
