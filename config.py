@@ -230,7 +230,13 @@ REDDIT_SEARCHES = [
 REDDIT_SEARCH_SUBS = ["jobboardsearch", "b2bforhire", "programmers_forhire",
                       "hiddenjobsdev", "softwareengineerjobs", "developers_hire",
                       "forhirefreelance", "freelancing", "remoteaccountingroles",
-                      "techjobs", "devjobs", "claudeworkflows", "remoteworking"]
+                      "techjobs", "devjobs", "claudeworkflows", "remoteworking",
+                      # 2026-11-17, measured on Arctic Shift (newest 100 posts, title
+                      # filter + gate): passes per day 2.75 / 1.54 / 0.24 / 0.19 / 0.10,
+                      # the rest under 0.1 but nearly free to read
+                      "gameDevClassifieds", "RemoteJobs", "DevOpsJobs", "remotepython",
+                      "WebDevJobs", "hiringcafe", "jobbit", "remotejs", "n8n_ai_agents",
+                      "AI_developers"]
 REDDIT_SEARCH_TITLE_RE = re.compile(r"\b(hiring|task|paid)\b", re.I)
 # Consecutive non-200, non-429 answers from one feed label before the trickle
 # raises (-> one throttled Telegram alert). The 403 above ran 6 days unseen.
@@ -241,7 +247,9 @@ REDDIT_FEED_FAIL_ALERT = 30
 # about one request per 10-20 s window from ANY IP (x-ratelimit-remaining 0 after
 # a single call), so bursting 19 feeds 7x/day in the cloud mostly collected 429s.
 # One a minute, all day, reaches every feed about every 25 min.
-REDDIT_TRICKLE_SECONDS = int(env("REDDIT_TRICKLE_SECONDS", "60"))
+# 40 s since 2026-11-17: the feeds come from Arctic Shift now, not Reddit, and 39
+# feeds at 60 s would stretch a full round to ~40 min.
+REDDIT_TRICKLE_SECONDS = int(env("REDDIT_TRICKLE_SECONDS", "40"))
 # The cloud skips its Reddit jobs while the home trickle's heartbeat (GitHub repo
 # variable, epoch seconds) is younger than this.
 REDDIT_HOME_FRESH_SECONDS = 2 * 3600
