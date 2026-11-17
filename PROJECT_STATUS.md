@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-11-16*
+*Last updated: 2026-11-17*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -982,6 +982,22 @@ groups: 0 leads); Israeli "דרושים"/freelance Facebook groups.
 - No new WhatsApp invite links from web search (search engines do not index them);
   supply now depends on the fixed night hunt and in-group links.
 - Telegram channels: 2 leads >=6 in 30 days from 51 channels; left as is.
+
+## 2026-11-17: Facebook group mail wired end to end, nothing arriving yet
+
+- **Reddit API app is not possible.** Reddit refuses self-service app creation
+  (Responsible Builder Policy, approval needed). Dropped; the 13 direct sub feeds stay.
+- **Or's side is done:** joined the relevant groups from `facebook_notify_list.md`,
+  account email frequency "All", Groups email toggle on (about 11:00 IL).
+- **Home loop reads Facebook mail every 5 min** (`email_fb` job in `reddit_loop.pyw`,
+  `email_fetcher.fetch(only={"facebook"})`). The cloud read mail only 7 times a day. While
+  the home heartbeat is fresh the cloud sets `EMAIL_SKIP_SOURCES=facebook`, so one post is
+  not pushed from two DBs.
+- **Measured at 14:45 IL: 0 group mails** in about 3.5 h (Gmail search and the 5-min IMAP
+  pass agree; spam is not visible to either). The parser is still unverified on real mail.
+- **Next:** check again on 2026-11-18. The log line to count is
+  `Email: N Facebook mail(s) -> M post(s)` in `reddit_loop.log`. If a full day gives 0, this
+  route does not deliver and the Israeli groups have no free real-time route.
 
 ## Open items
 - **Or's to-do (decided 2026-11-11):** sign up to **Alignerr** (one-attempt assessment: prepare)
