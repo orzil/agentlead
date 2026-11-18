@@ -1,6 +1,7 @@
 """Home Reddit trickle, started from the Startup folder (Task Scheduler is
-access-denied on this account, same as wa_loop). One Reddit feed a minute plus
-the cloud-lead sync; logs to reddit_loop.log. See config.REDDIT_TRICKLE_SECONDS.
+access-denied on this account, same as wa_loop). One Reddit feed every 40 s plus
+the cloud-lead sync, Facebook mail and WhatsApp name rating; logs to
+reddit_loop.log. See config.REDDIT_TRICKLE_SECONDS.
 
 Restarts itself if the loop ever dies: a pythonw process has no console, so a
 crash on 2026-11-06 went unnoticed for 2 days."""

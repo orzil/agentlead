@@ -1024,8 +1024,22 @@ groups: 0 leads); Israeli "דרושים"/freelance Facebook groups.
   newest post 0.1 h old, bodies included, URLs identical to the RSS ones (16 of 22 r/mljobs
   posts were already in the DB by URL). Home trickle and the cloud `reddit` / `reddit_search`
   jobs all use it. Removed posts come with a title only. PullPush was tried too: 429.
-- **Next:** with a per-sub archive there is no feed limit, so add more hiring subs
-  (the old search's hits also came from r/stemjobs, r/nearskilljobs and others).
+- **Done 21:05 IL: 10 hiring subs added** after measuring ~75 candidates (newest 100 posts each,
+  title filter + gate): gameDevClassifieds 2.75 passes/day, RemoteJobs 1.54, DevOpsJobs 0.24,
+  remotepython 0.19, WebDevJobs 0.10, hiringcafe, jobbit, remotejs, n8n_ai_agents, AI_developers
+  (<0.1 each). Not added: cofounderhunt (0.51, partnership posts), MachineLearning, Fiverr;
+  startups / smallbusiness / vibecoding gave 0. Trickle is one feed per 40 s, 39 feeds, a
+  round every ~26 min.
+- **2026-11-18 morning:** Arctic Shift answered all night (702 feed reads by 09:17). The PC
+  slept 09:17-09:54 and the home loop stopped with it.
+
+### Next session
+- Count Facebook group mails over a full day (`Email: N Facebook mail(s)` in `reddit_loop.log`,
+  Gmail `from:facebookmail.com`). 0 mails as of 2026-11-17 20:53 IL, ~10 h after Or switched the
+  groups to "All posts". If mails arrive, check `_parse_facebook` on a real one; if none, tell
+  Or the route does not deliver.
+- Pushes/day for 3 days against the 1.4/day baseline (2026-11-17 had 1).
+- Tune `_ollama_confirm` (drops some good group names).
 
 ## Open items
 - **Or's to-do (decided 2026-11-11):** sign up to **Alignerr** (one-attempt assessment: prepare)

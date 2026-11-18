@@ -66,7 +66,8 @@ python -X utf8 discover_whatsapp_groups.py --search --write   # find joinable Wh
 python -X utf8 discover_fb_groups.py --write # FB group join list (add --search/--probe in CLOUD)
 python -X utf8 sync_cloud.py                 # pull + decrypt the newest cloud leads.db.enc, merge
 python -X utf8 main.py --wa-pass             # one WhatsApp phone pass (what wa_loop runs)
-python -X utf8 main.py --only reddit_trickle,cloud_sync   # home Reddit loop (what reddit_loop.pyw runs)
+python -X utf8 main.py --only reddit_trickle,cloud_sync,agency_mail,email_fb,wa_rate   # home loop (what reddit_loop.pyw runs)
+python -X utf8 wa_night.py --rate-home       # rate the cloud's unrated WhatsApp group names with local Ollama
 python -X utf8 wa_phone.py --wifi-setup      # cable plugged in: enable the Wi-Fi adb fallback
 python -X utf8 wa_phone.py --add-targets f.txt  # queue vetted invite links (name | url) ahead of the hunt list
 ```
@@ -104,7 +105,7 @@ dedup (URL hash + fuzzy text vs last 7 days)  →  prefilter.classify()  →  sc
   `GEMINI_MODEL_PREFERENCE`, and retries 429/500/503. `generate()` is the generic Gemini helper
   reused by `replier.py`. Returns `None` when no backend is configured → lead is stored unscored
   for a later `--score-backlog` pass.
-- **Routing thresholds** (`config.py`, env-overridable): score ≥ `PUSH_THRESHOLD` (8) → instant
+- **Routing thresholds** (`config.py`, env-overridable): score ≥ `PUSH_THRESHOLD` (6) → instant
   Telegram push (+ optional pitch draft + auto-reply consideration); ≥ `DIGEST_THRESHOLD` (6) →
   daily digest at `DIGEST_HOUR`; below → stored in DB only.
 
@@ -156,11 +157,15 @@ one job tuple.
   `.json` 403; the HTML listing is a JS shell). All sub feeds now come from **Arctic Shift**
   (`reddit_fetcher.ARCTIC_URL`, free keyless archive, posts minutes old, JSON with bodies, same
   permalinks so dedup holds). It needs a `subreddit` on every query, so there is no sitewide
-  search. It is a volunteer service: keep the one-request-a-minute pace, expect the odd 422,
-  and if it dies the only routes left are F5Bot mail or an approved Reddit API app.
+  search. It is a volunteer service: keep the slow pace (one request per 40 s), expect the odd
+  422, and if it dies the only routes left are F5Bot mail or an approved Reddit API app (both
+  need Or). `_parse_feed` (Atom) is kept but unused for subs; `_parse_posts` reads the JSON.
+  Adding a sub is cheap now, but measure it first: of ~75 candidates scanned 2026-11-17 only
+  r/gameDevClassifieds (2.75 gate-passing posts/day) and r/RemoteJobs (1.5) mattered; big
+  communities (r/startups, r/smallbusiness, r/vibecoding) gave 0.
 - **Reddit sitewide search is 403 keyless since 2026-11-10** (www, old, `.json`, per-sub
   `restrict_sr` — all probed). It ran dead for 6 days unnoticed while being 30% of leads >=6.
-  The 13 subs its good hits came from (`REDDIT_SEARCH_SUBS`) are now read directly, keep the
+  The subs its good hits came from (`REDDIT_SEARCH_SUBS`, 23 since 2026-11-17) are read directly, keep the
   `r/search` label, and are cut to title `hiring|task|paid` + a domain term *before* ingest
   (r/jobboardsearch alone posts ~1,350/day). The queries below run only with
   `REDDIT_CLIENT_ID/SECRET` (app-only OAuth, `_oauth_token`). A feed failing 30 times in a
@@ -175,8 +180,8 @@ one job tuple.
 `notifier` split on `/` to get the root (`r/forhire` → `r`, `facebook/<group>` → `facebook`), and
 several `config.py` sets key off it (`DOMAIN_REQUIRED_SOURCES`, `INTENT_REQUIRED_SOURCES`,
 `FT_DEFAULT_SOURCES`, `GATE_BYPASS_SOURCES`). Keep source labels consistent with those sets when
-adding or renaming a fetcher. Sources fall back gracefully (e.g. `reddit_fetcher` uses the public
-RSS feed when no API creds are set).
+adding or renaming a fetcher. Sources fall back gracefully (e.g. `reddit_fetcher` reads Arctic
+Shift when no API creds are set).
 
 **Facebook group discovery runs at night, in many small cloud runs.**
 `.github/workflows/fbnight.yml` fires every 30 min from 20:00–05:00 Israel. The cadence *is* the
@@ -286,11 +291,28 @@ to 2h to come home. Don't slow these back down without a measured reason.
 leads >=6 in 30 days, 32 of them from sitewide search). Anonymous Reddit allows about one
 request per 10-20 s window from *any* IP, home included (`x-ratelimit-remaining: 0` after a
 single call), so the cloud's 19-feed bursts mostly collected 429s. `reddit_loop.pyw` (Startup
-folder, log `reddit_loop.log`) reads ONE feed a minute, rotating subs + `REDDIT_SEARCHES`
+folder, log `reddit_loop.log`) reads ONE feed every 40 s (`REDDIT_TRICKLE_SECONDS`), rotating
+`REDDIT_SUBS` + `REDDIT_SEARCH_SUBS` through Arctic Shift since 2026-11-17
 (cursor in kv `reddit_trickle_i`; a 429 waits out `x-ratelimit-reset` without advancing it), so
-each feed is checked every ~29 min (29 feeds: 16 subs + 13 search-subs). It sets the repo variable `REDDIT_HOME_AT` every 20 min;
+each feed is checked every ~26 min (39 feeds: 16 subs + 23 search-subs). It sets the repo variable `REDDIT_HOME_AT` every 20 min;
 `leadagent.yml` skips `reddit,reddit_search` while that is < 2h old, so the cloud takes Reddit
 back by itself if the PC is off. `reddit_trickle` is a loop-only job, never in a `--once` pass.
+
+**The home loop does more than Reddit** (`reddit_loop.pyw`, all loop-only jobs): `cloud_sync`,
+`agency_mail`, `email_fb` (Facebook notification mail every 5 min; the cloud sets
+`EMAIL_SKIP_SOURCES=facebook` while the heartbeat is fresh; a dropped Gmail connection is
+logged, not alerted) and `wa_rate` (every 6 h, in a thread). It stops while the PC sleeps
+(seen 2026-11-18 09:17-09:54) and the cloud only takes over after 2 h.
+
+**WhatsApp group names are rated at home (2026-11-17).** The cloud's free LLMs mostly fail,
+which left 618 names unrated and the night list empty. `wanight.yml` uploads the encrypted
+`wa.db` as artifact `wadb-<run>` (2 days); `wa_night.rate_home` downloads it, rates unrated
+names with local Ollama, and commits `whatsapp_rated.txt` (code + score, no lead data), which
+the cloud applies with `apply_rated` (the file wins for its codes). Ollama is unreliable both
+ways: the batch pass is too generous (a motorbike group scored 3), so every 2-3 gets a strict
+single-name `_ollama_confirm`, which in turn drops some good Israeli AI/dev names unless a
+`WA_FREELANCE/BUYER/CV_GROUP_RE` regex matches. The first batch was corrected by hand; later
+batches are unaudited, so spot-check `whatsapp_top50.md` when joins look off.
 
 **Israeli Facebook groups have one real-time route: notification mail (2026-11-16).** Scraping
 is off (`FB_PUBLIC_ENABLED=0`, Meta blocks GitHub IPs) and the DDG index is days late and
