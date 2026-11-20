@@ -18,6 +18,7 @@ forallsales
 foranalysts
 forchiefs
 fordesigner
+forfrontend
 forgamedev
 forhr
 forproducts
