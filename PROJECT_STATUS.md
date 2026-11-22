@@ -1,6 +1,6 @@
 # AgentLead — Project Status & Session Log
 
-*Last updated: 2026-11-17*
+*Last updated: 2026-11-21*
 
 A zero-cost lead-generation agent that monitors freelance/contract opportunities
 across the web, filters them to Or's niches (computer vision, OCR, image
@@ -1033,12 +1033,85 @@ groups: 0 leads); Israeli "דרושים"/freelance Facebook groups.
 - **2026-11-18 morning:** Arctic Shift answered all night (702 feed reads by 09:17). The PC
   slept 09:17-09:54 and the home loop stopped with it.
 
+## 2026-11-21: diagnosis (Or: "still very few leads", saw a relevant FB post by hand)
+
+**The pipeline is healthy and the shortage is supply.** Cloud runs all succeed, 0 scorer errors, 0
+backlog, and the 4-5 near misses since 11-18 are correctly off-niche. Leads >=6 over 14 days:
+53 (Reddit 45, WhatsApp 5, others 3, **Facebook 0**, LinkedIn 0). Pushes/day 11-17..11-21:
+4, 6, 0, 3, 3 (up from the 1.4 baseline, below early November's ~5).
+
+**Every Facebook route is dead, so the post Or saw could not have been caught:**
+- Scraping: off (`FB_PUBLIC_ENABLED=0`, Meta blocks GitHub IPs).
+- `facebook/search`: DDG answers HTTP 202 on the **first** query of every `fbnight` run; 0 leads
+  since 11-11.
+- **Notification mail: does not deliver. Verdict reached.** In 4 days after "All posts" +
+  account email "All", Gmail got 0 group-post mails (spam checked too). Only "you're now a member
+  of..." mails arrived. Those are the 7 mails that parsed to 0 posts on 11-18.
+- **Phone push (candidate 4th route):** the S9 has `com.facebook.katana` logged in to Or's
+  account, and the Groups channel (`10%#$group%#$...`) is enabled at importance 5. Android's
+  `post_frequency` shows 494 Facebook notifications on 11-19, 19 on 11-20, but none stay in the
+  shade. A 25 min read-only probe (Sat 20:48-21:14 IL) saw 0 group posts. **Running until about
+  15:15 IL on 11-22:** a detached logger (`%USERPROFILE%\fb_notify_probe.py`, pid 16096) polls
+  `dumpsys notification --noredact` every 60 s into the gitignored `fb_notify_probe.log`. If group
+  posts appear there, build `fb_notify.py` like `wa_notify.py`: read the shade only, no taps,
+  nothing sent to Facebook.
+- The 11-18 "Did you publish this ad?" security mail is Or's own ad: the phone shows it as
+  approved for his own page. It is not a compromise.
+
+**Or's example would have been buried even if it had been read.** The post was a one-line ask
+for someone who can build a voice AI agent for businesses, from the group `1027511938680919`
+(דרושים בתחום Ai בינה מלאכותית). Or: "not classic but I could do the job". The gate passed it; qwen2.5:7b scored it
+**2**, reasoning "no budget, vague scope". The rubric's profile had no AI agents or automation.
+- **Rubric:** the profile now covers AI agents, chatbots (text and voice), LLM integration,
+  RAG and n8n/Make/Zapier. The 7-8 band covers "a business asking for someone to build one".
+  A new hard rule says a short "who can build..." ask in a group is a lead, and a missing budget
+  or scope there does not lower the score. Alone this moved the example 2 -> 4.
+- **`scorer.enforce_client_ask`** (the mirror of `enforce_advice`): a <=700-char post on
+  facebook/whatsapp/telegram/r that matches `config.CLIENT_ASK_RE` + `AI_BUILD_RE` is floored at
+  `CLIENT_ASK_FLOOR` (6). It is not floored when the model says offer, seeker, full-time,
+  location, equity, advice or unpaid, when it says the work is unrelated to his skills, or when it
+  flags low pay and the post names a sum. Invented "crowded" / "may be filled" flags are ignored:
+  the 7B model produced both for the one-line example.
+- **A/B on Ollama, old vs new (69 posts):** example 2 -> 7. Short asks with >=6: 1 -> 4 of 8.
+  Noise: 0 of 30 crossed 6 (mean 1.2 -> 1.8). Good leads: 6 of 15 >=6 both ways. Re-run on the
+  final code: example 6 and 7, the AI-startup marketer false positive 2 and 2, Copilot-Studio
+  agents ask 7 and 7. A 30-day replay of the floor on stored scores lifts 2 posts.
+- **Supply is still the cause.** In 30 days only 8 short "build me an AI thing" asks reached the
+  scorer from all direct channels, and the gate killed 5 more, all correctly. These posts live in
+  Facebook groups, which nothing reads.
+- `reddit_loop.pyw` was restarted (pid 49500) so the home loop loads the new scorer. `wa_loop`
+  spawns a fresh process per pass. **The cloud gets it only after a push.**
+
+**Or's groups ranked** (read once from facebook.com/groups/joins in his Chrome, no clicks
+inside groups): 74 joined + 4 pending, 31 relevant, written into `facebook_notify_list.md`
+(tiers A-D, plus the 14 listed groups he is not in).
+
+**2026-11-22: actual settings, read in Or's Chrome** (Joined → Manage notifications, read and
+Cancel, nothing saved). Or believed he had set them all.
+- In-app **All posts: 9 of 30**: `458346604817578`, `1502756793303704`, `freelance.hightech`,
+  `216499291720732`, `1920854911477422`, `482067651607538`, `israelaiorg`,
+  `startups.investors.entrepreneurs.mentors.founders`, `1831991027038183`.
+- **Highlights: the other 21**, including `1027511938680919` (where his voice-agent example was
+  posted), `cladue`, `1129872654348077`, `367262456327`, `freelancersnetworkingIL`,
+  `1266824747259615`, `automationisrael`, `MDLI1`.
+- **All 21 switched to "All posts"** on Or's go ("do all by yourself"): saved, and a reload
+  re-read 4 of them as All posts. Facebook does not seem to revert it, so the earlier
+  Highlights were most likely never saved.
+- **Push is "Highlights" on all 30.** The desktop dialog offers push only as Highlights
+  ("Suggested posts") or Off, with no All posts option. So the phone is pushed suggested posts
+  only, even for All-posts groups. This explains the empty probe. Whether the Android app offers
+  "All posts" for push is unchecked: that means tapping in Or's Facebook app, so Or checks it.
+- **The probe was blind.** The S9's USB link dropped, and the probe ran `adb -s <USB serial>`
+  only, so it failed silently after its 21:16 start. The shade read once over Wi-Fi at 09:33
+  still held only the same 4 non-group notifications. The probe now falls back to Wi-Fi and was
+  restarted for 24 h (pid 14340, until about 09:34 on 11-23).
+
 ### Next session
-- Count Facebook group mails over a full day (`Email: N Facebook mail(s)` in `reddit_loop.log`,
-  Gmail `from:facebookmail.com`). 0 mails as of 2026-11-17 20:53 IL, ~10 h after Or switched the
-  groups to "All posts". If mails arrive, check `_parse_facebook` on a real one; if none, tell
-  Or the route does not deliver.
-- Pushes/day for 3 days against the 1.4/day baseline (2026-11-17 had 1).
+- Read `fb_notify_probe.log`: count `ch=group` lines. If there are some, build `fb_notify.py`
+  (poll every 1-2 min from the home loop, label `facebook/<group>`, title + text as `raw_text`).
+  If there are none, Facebook has no free real-time route left; say so to Or and stop spending on it.
+  Push "Highlights" means only suggested posts arrive, so a handful of `ch=group` lines would be a
+  sample, not full coverage.
 - Tune `_ollama_confirm` (drops some good group names).
 
 ## Open items

@@ -35,8 +35,10 @@ THE ENGINEER'S PROFILE
 He takes on: proof-of-concepts (POCs), contract work, part-time roles, and
 scoped projects in: computer vision, image processing, OCR / document
 intelligence, machine learning, advanced algorithms and algorithmic problem
-solving, data visualization, and simple AI-integrated web projects (e.g.
-landing pages with an AI feature). He works remotely or in Israel, in Hebrew
+solving, data visualization, simple AI-integrated web projects (e.g.
+landing pages with an AI feature), and applied AI builds for businesses: AI
+agents and chatbots (text or voice), LLM/GPT integrations, RAG, and AI
+automations (n8n, Make, Zapier). He works remotely or in Israel, in Hebrew
 or English.
 
 YOUR TASK
@@ -49,7 +51,9 @@ SCORING RUBRIC
 9-10 Direct hit: explicitly seeking a freelancer/contractor/POC in CV, OCR,
      image processing, or algorithms. Clear project, reachable poster.
 7-8  Strong: freelance/contract/part-time work in ML, data viz, or AI web
-     integration; or a CV/OCR need phrased vaguely but clearly outsourceable.
+     integration; a business asking for someone to build an AI agent,
+     chatbot, voice bot, LLM integration or AI automation; or a CV/OCR need
+     phrased vaguely but clearly outsourceable.
 5-6  Plausible: right engagement model (freelance/contract/part-time) in an
      adjacent domain the engineer could serve.
 3-4  Weak: tech-related but wrong specialty (pure frontend, DevOps, mobile),
@@ -61,6 +65,12 @@ SCORING RUBRIC
 HARD RULES
 - A post where the author OFFERS their own services scores 1-2, no matter how
   relevant the domain. Only posts SEEKING someone are leads.
+- A short post in a group or chat asking for someone to build or do something
+  ("מחפש מישהו שיודע לבנות...", "מי יודע לבנות...", "looking for someone who
+  can build...") is a client asking for paid work - a lead. Such posts almost
+  never state a budget or a detailed scope; that is normal for a direct
+  message channel and does NOT lower the score. Seeking someone is what a lead
+  looks like; do not flag it as a weakness.
 - Full-time-only salaried roles score 1-3 even in a perfect domain - the
   engineer does not want full-time positions at all.
 - Unpaid asks score 1-2: volunteer work, community data-collection/labeling
@@ -474,6 +484,49 @@ def enforce_advice(score: LeadScore | None, lead: Lead) -> LeadScore | None:
     return score
 
 
+# What the model itself says that rules a client ask OUT of the floor. "no budget"
+# and "vague scope" are deliberately absent: they are exactly the false weakness the
+# floor exists to undo. So are "crowded" and "may be filled": on Or's one-line
+# example qwen2.5:7b invented "may be crowded with applicants" and "over a month
+# old" in back-to-back runs (2026-11-21), and a short group post states neither.
+# Money flags count only when the post actually names a sum.
+_ASK_BLOCK_FLAG_RE = re.compile(
+    r"full.?time|location|equity|advice|offer|seeker|self.?promo|unpaid|volunteer", re.IGNORECASE)
+_ASK_MONEY_FLAG_RE = re.compile(r"low.?budget|below.?target", re.IGNORECASE)
+_MONEY_IN_TEXT_RE = re.compile(r"[$€£₪]\s?\d|\d\s?(?:[$€£₪]|k\b|usd|nis|eur|ש\"?ח|שקל)", re.IGNORECASE)
+_ASK_BLOCK_SUMMARY_RE = re.compile(
+    r"offer(s|ing)\s+(their|his|her|its|our)?\s*(own\s+)?(services|expertise|help)|self.?promot|"
+    r"promot(es|ing)\s+(a|an|their|his|her)|advertis|seeking\s+(a\s+)?(job|work|employment|clients)|"
+    r"course|webinar|workshop|event|lecture|meetup|full.?time|"
+    # the floor overrides the model's budget doubts, never its domain judgment: an
+    # "AI startup hiring a social marketer" matched AI_BUILD_RE on the company blurb
+    r"no\s+(clear\s+|direct\s+)?(connection|relation|link)|not\s+(directly\s+|clearly\s+)?"
+    r"(related|aligned|relevant|connected)|unrelated|outside\s+(the\s+)?(engineer|his)", re.IGNORECASE)
+
+
+def enforce_client_ask(score: LeadScore | None, lead: Lead) -> LeadScore | None:
+    """Floor a short direct-channel ask to build an AI/CV thing at CLIENT_ASK_FLOOR.
+    The mirror image of enforce_advice. Or's example, "מחפש מישהו/י שיודעים לבנות
+    סוכן AI קולי לעסקים" from a Facebook group, scored 2 (old rubric) and 4 (new
+    rubric) on qwen2.5:7b, both times for "no budget, vague scope". A group ask
+    never states either, and the 7B model does not follow a rule that says so."""
+    if score is None or score.score >= config.CLIENT_ASK_FLOOR:
+        return score
+    raw = lead.raw_text or ""
+    if ((lead.source or "").split("/")[0] not in config.CLIENT_ASK_SOURCES
+            or len(raw) > config.CLIENT_ASK_MAX_CHARS
+            or not config.CLIENT_ASK_RE.search(raw) or not config.AI_BUILD_RE.search(raw)):
+        return score
+    flags = " ".join(score.red_flags or [])
+    if (_ASK_BLOCK_FLAG_RE.search(flags)
+            or (_ASK_MONEY_FLAG_RE.search(flags) and _MONEY_IN_TEXT_RE.search(raw))
+            or _ASK_BLOCK_SUMMARY_RE.search(score.summary or "")):
+        return score
+    score.reasoning = f"[client ask: was {score.score}/10] {score.reasoning or ''}".strip()
+    score.score = config.CLIENT_ASK_FLOOR
+    return score
+
+
 def _fix_language(score: LeadScore | None, lead: Lead) -> LeadScore | None:
     """Re-score once on the free cloud providers when the local model answered in
     Chinese; if that fails too, keep the lead but mark it and hold it below the
@@ -496,7 +549,7 @@ def _fix_language(score: LeadScore | None, lead: Lead) -> LeadScore | None:
 def score_lead(lead: Lead) -> LeadScore | None:
     """Returns a LeadScore, or None when no backend is configured (store-only mode)."""
     s = _fix_language(_score_lead_any(lead), lead)
-    return enforce_advice(enforce_full_time(s), lead)
+    return enforce_client_ask(enforce_advice(enforce_full_time(s), lead), lead)
 
 
 def _score_lead_any(lead: Lead) -> LeadScore | None:

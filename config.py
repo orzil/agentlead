@@ -874,6 +874,32 @@ _ENGAGE_HE = [
 DOMAIN_RE = re.compile("|".join(_DOMAIN_EN + _DOMAIN_HE + _DOMAIN_HE_WEAK), re.IGNORECASE)
 ENGAGE_RE = re.compile("|".join(_ENGAGE_EN + _ENGAGE_HE), re.IGNORECASE)
 
+# Client-ask floor (scorer.enforce_client_ask), 2026-11-21. Or's example from a
+# Facebook group, "מחפש מישהו/י שיודעים לבנות סוכן AI קולי לעסקים", scored 2/10:
+# the 7B model reads "no budget, vague scope" as weakness, but a direct-channel ask
+# almost never states either. A SHORT post on a direct channel that asks for a person
+# to build an AI/CV thing is floored at CLIENT_ASK_FLOOR, unless the model flagged it
+# as an offer, full-time, low pay, location-locked, equity or advice. Replayed over
+# 30 days of stored leads it lifted 1 post: such asks are rare in what the agent reads.
+CLIENT_ASK_RE = re.compile(
+    r"(מחפש|מחפשת|מחפשים)\s+(מישהו|מישהי|מי\s+ש|מפתח|מתכנת|פרילנסר|מומחה|איש\s+מקצוע|חברה\s+ש|סטודיו)"
+    r"|מי\s+(יודע|יודעת|יכול|יכולה|בונה|מפתח|עושה|מכיר|מכירה)\b"
+    r"|(מישהו|מישהי)(\s*/\s*[יה])?\s+ש(יודע|יודעת|יודעים|יבנה|תבנה|בונה|מתמחה|יפתח|יכול|יכולה|עושה)"
+    r"|צריכ?(ה|ים)?\s+(מישהו|מישהי|מפתח|מתכנת|מומחה|פרילנסר)"
+    r"|looking\s+for\s+(someone|somebody|an?\s+(freelancer|developer|dev|engineer|expert|contractor|agency))"
+    r"\s+(who|to|that|with)"
+    r"|need\s+(someone|somebody|an?\s+(freelancer|developer|dev|engineer|expert))\s+(who|to|that)"
+    r"|(anyone|someone)\s+(who\s+)?can\s+(build|develop|create|set\s+up|make)\b",
+    re.IGNORECASE)
+AI_BUILD_RE = re.compile(
+    r"סוכן|סוכני|בוט|צ.?אט\s*בוט|אוטומצי|בינה\s+מלאכותית|\bAI\b|\bGPT|\bLLM|n8n|make\.com|zapier|\bRAG\b"
+    r"|ראי[י]?ה\s+ממוחשבת|עיבוד\s+תמונ|זיהוי\s+(תמונ|פנים|אובייקט|כתב)|\bOCR\b|computer\s+vision"
+    r"|image\s+processing|chat\s*bot|voice\s+(agent|bot|ai)|ai\s+agent|machine\s+learning|למידת\s+מכונה",
+    re.IGNORECASE)
+CLIENT_ASK_SOURCES = {"facebook", "whatsapp", "telegram", "r"}   # source roots
+CLIENT_ASK_MAX_CHARS = 700
+CLIENT_ASK_FLOOR = 6
+
 # Discussion subreddits (r/ entries of INTENT_REQUIRED_SOURCES): ENGAGE_RE is too
 # loose there - "project" and "contract" appear in every showcase and essay
 # (2026-11-13: an "Agent Control Language" research post and a "your agent found

@@ -6,7 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **AgentLead** is a zero-cost lead-generation agent for a freelance AI engineer (Or) based in
 Israel. It polls ~16 families of free sources for freelance/contract gigs in computer vision,
-OCR, image processing, ML, algorithms, data viz, and AI-integrated web, filters noise with a
+OCR, image processing, ML, algorithms, data viz, AI-integrated web, and AI agents/bots/
+automations for businesses (Or, 2026-11-21: "not classic but I could do the job"), filters noise with a
 regex gate + free-tier LLM scoring (1–10), pushes strong leads to Telegram, and can auto-reply
 on Reddit — the only remaining channel with a legitimate posting API.
 
@@ -32,6 +33,10 @@ survive a cancelled run. If you add a slow fetcher, put it with them, or split t
 (`qwen2.5:7b`) once Gemini's daily quota dies. Measured 2026-08-06: that quota is ~20 requests/day
 on Or's key and behaves project-wide, so Ollama does most of the volume. A per-day 429 short-
 circuits rather than retrying — retrying it cost ~70s per lead and never succeeded.
+`score_lead` ends with deterministic guards, because the 7B model does not follow nuanced
+rules: `enforce_full_time` and `enforce_advice` cap scores, and `enforce_client_ask` floors a
+short direct-channel "who can build me an AI agent/bot/CV thing" ask at 6 (2026-11-21). Or's
+one-line Facebook example had scored 2 for "no budget, vague scope".
 
 **Hard constraint: everything must stay free-tier.** No paid APIs, no VPS, no Apify. Scoring is
 Gemini free tier (or local Ollama); notifications are a Telegram bot; most sources are public
@@ -317,9 +322,12 @@ batches are unaudited, so spot-check `whatsapp_top50.md` when joins look off.
 **Israeli Facebook groups have one real-time route: notification mail (2026-11-16).** Scraping
 is off (`FB_PUBLIC_ENABLED=0`, Meta blocks GitHub IPs) and the DDG index is days late and
 usually walled. `facebook_notify_list.md` is the list Or switches to "All posts";
-`email_fetcher._parse_facebook` emits one lead per post link, labelled `facebook/<group>`. It
-was built on synthetic mails — the inbox had no group-post mail in 60 days — so check it
-against the first real one.
+`email_fetcher._parse_facebook` emits one lead per post link, labelled `facebook/<group>`.
+**Measured 2026-11-21: this route does not deliver.** In 4 days with "All posts" set and account
+email set to "All", 0 group-post mails arrived; only "you're now a member of" mails came. The
+remaining candidate is the phone. The S9's Facebook app has its Groups channel enabled, and
+the shade can be read like `wa_notify.py` reads WhatsApp's, with no taps. That is under
+measurement: see `PROJECT_STATUS.md` 2026-11-21.
 
 **Git Bash heredocs eat backslashes.** A regex written to a file through `python - <<'EOF'`
 lost its `\b` (became a literal backspace) and silently matched nothing. Edit code with the

@@ -6,6 +6,54 @@ ban-safe real-time route is Facebook's own notification mail, which the agent al
 reads from Gmail every 5 minutes. In 60 days the inbox received **zero** group-post
 mails, so this has never been switched on.
 
+**Update 2026-11-21: the mail route does not deliver.** 4 days after Or set "All posts"
+and email "All", 0 group-post mails arrived. The candidate route now is the phone's
+push notifications (see `PROJECT_STATUS.md` 2026-11-21). The ranked list below is
+what any route should cover.
+
+## Or's own groups, ranked (read from facebook.com/groups/joins, 2026-11-21)
+
+74 joined + 4 pending. 31 are relevant; the rest are unrelated to work.
+
+**2026-11-22: all 30 joined ones are set to "All posts"** (in-app; 21 were still on
+Highlights). Push stays "Highlights" on every group: the desktop dialog offers push only as
+Highlights or Off.
+
+**A. Work is posted here (freelance and "דרושים").**
+`1027511938680919` דרושים בתחום Ai בינה מלאכותית (Or's voice-agent example came from
+here), `1129872654348077` דרושים פרילנסרים וטאלנטים בדיגיטל, `367262456327` Israel
+Freelance Developers, `freelancersnetworkingIL` Freelancers Networking - Israel,
+`458346604817578` דרושים - עבודות פרילנסרים, `1502756793303704` מתכנתים פרילנסרים,
+`freelance.hightech` פרילנסרים בהייטק, `197859277728196` משרות פרילאנסר/שכיר ב-Remote,
+`216499291720732` Outsourced Software Development Projects & Freelancing Work (global),
+`1920854911477422` דרושים מתכנתים ואנשי פיתוח.
+
+**B. Israeli AI and automation communities (business owners ask "who can build a bot").**
+`cladue` קלוד - הקהילה הישראלית, `1266824747259615` AI Agents Israel, `automationisrael`
+הכול על אוטומציות AI, `482067651607538` אופק עסקי - אוטומציה ובינה מלאכותית, `israelaiorg`
+ארגון ה-AI הישראלי, `aichatgptisrael` חושבים AI, `397858149784670` בינה מלאכותית בגובה
+העיניים, `1958696927869936` ai4all, `supertool` Supertools, `ai.israel.official` (pending).
+
+**C. Founders and agency owners.**
+`223303087850326` המשבשים, `startupforstartup` Startup for Startup,
+`startups.investors.entrepreneurs.mentors.founders` (global), `datin1` GoHighLevel agency
+owners (global, outsource automation), `1057648599597645` AI Automation Community USA.
+
+**D. CV / ML practitioner groups (rare asks, but in the core niche).**
+`1831991027038183` Computer Vision Israel, `cvonly`, `computervisionandimageprocessing`,
+`ComputerVisionGroup`, `MDLI1`, `DataScienceIsrael`.
+
+Left out on purpose: full-time boards (`Software.Developers.Israel`, `720332212292765`,
+`israel.hightech`, `289504808119115`, `ml.jobs.il`, `1561775530783547`, `aimlpljobs`,
+`datasciencejob`), plus AI trading bots (`aiautomationexperts`), general ML chat and CS
+puzzles.
+
+**On this file's list but Or is not a member** (joining is his call): זירת פרילנסרים
+`279218118861800`, `developersmeetstartups`, `n8nil`, `320942198348539`, `262663949723327`,
+`557735016862777`, `776851981391261`, `jobsFor.High.tech`, `appsentrepreneur`,
+`yazamutIsrael`, `506523693145809`, `7588730134550590`, `drushimboneiatarim`,
+`high.tech.part.time.jobs.israel`.
+
 ## Step 1 — account setting (once)
 
 Facebook → Settings & privacy → Settings → Notifications → **Email** →
@@ -43,6 +91,7 @@ Gmail files these under Social; that is fine, the agent reads the whole inbox.
 | 18 | דרושים פרילנסרים קבלני משנה בכל התחומים | https://www.facebook.com/groups/557735016862777 |
 | 19 | פרילנסרים ומשרות פרילנס Jobonline | https://www.facebook.com/groups/776851981391261 |
 | 20 | דרושים להייטק & פרילנסרים | https://www.facebook.com/groups/jobsFor.High.tech |
+| 21 | (Or found a voice-AI-agent client ask here, 2026-11-21) | https://www.facebook.com/groups/1027511938680919 |
 
 ### Tier B — founders and business owners (work shows up as "who can build…")
 
