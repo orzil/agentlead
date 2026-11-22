@@ -1097,10 +1097,16 @@ Cancel, nothing saved). Or believed he had set them all.
 - **All 21 switched to "All posts"** on Or's go ("do all by yourself"): saved, and a reload
   re-read 4 of them as All posts. Facebook does not seem to revert it, so the earlier
   Highlights were most likely never saved.
-- **Push is "Highlights" on all 30.** The desktop dialog offers push only as Highlights
-  ("Suggested posts") or Off, with no All posts option. So the phone is pushed suggested posts
-  only, even for All-posts groups. This explains the empty probe. Whether the Android app offers
-  "All posts" for push is unchecked: that means tapping in Or's Facebook app, so Or checks it.
+- **Push is "Highlights" on all 30, and nothing else exists.** The desktop dialog and the
+  Android app (checked on the S9 12:22, nothing changed) both offer push only as נבחרים / Highlights
+  ("suggested posts") or כבוי / Off. Phone push will never carry every group post.
+- **The in-app bell does carry them.** facebook.com/notifications at 12:25 listed group posts
+  as "Now in <group>: "<first ~50 chars>..."", 3-6 min old, from the groups on All posts (some
+  of the 9 older ones going back 6 days). This is the only real-time feed of Or's groups. It is
+  readable only inside Or's logged-in Facebook (browser or app), which the "never automate Or's
+  Facebook account" rule forbids. Or decides. Candidate if he says yes: the S9 opens the app's
+  notifications tab every ~10 min, dumps it read-only, and ingests group + snippet (no URL in
+  a dump).
 - **The probe was blind.** The S9's USB link dropped, and the probe ran `adb -s <USB serial>`
   only, so it failed silently after its 21:16 start. The shade read once over Wi-Fi at 09:33
   still held only the same 4 non-group notifications. The probe now falls back to Wi-Fi and was
