@@ -75,6 +75,8 @@ python -X utf8 main.py --only reddit_trickle,cloud_sync,agency_mail,email_fb,wa_
 python -X utf8 wa_night.py --rate-home       # rate the cloud's unrated WhatsApp group names with local Ollama
 python -X utf8 wa_phone.py --wifi-setup      # cable plugged in: enable the Wi-Fi adb fallback
 python -X utf8 wa_phone.py --add-targets f.txt  # queue vetted invite links (name | url) ahead of the hunt list
+pythonw -X utf8 fb_bell.py                   # Facebook bell receiver for fb_bell_ext/ (127.0.0.1:8765, log fb_bell.log)
+python -X utf8 fb_bell.py --stats            # what the bell reader caught
 ```
 
 **Never run `--search` or `--probe` (Facebook or DuckDuckGo) from Or's machine.** A Facebook
@@ -319,15 +321,27 @@ single-name `_ollama_confirm`, which in turn drops some good Israeli AI/dev name
 `WA_FREELANCE/BUYER/CV_GROUP_RE` regex matches. The first batch was corrected by hand; later
 batches are unaudited, so spot-check `whatsapp_top50.md` when joins look off.
 
-**Israeli Facebook groups have one real-time route: notification mail (2026-11-16).** Scraping
-is off (`FB_PUBLIC_ENABLED=0`, Meta blocks GitHub IPs) and the DDG index is days late and
-usually walled. `facebook_notify_list.md` is the list Or switches to "All posts";
-`email_fetcher._parse_facebook` emits one lead per post link, labelled `facebook/<group>`.
-**Measured 2026-11-21: this route does not deliver.** In 4 days with "All posts" set and account
-email set to "All", 0 group-post mails arrived; only "you're now a member of" mails came. The
-remaining candidate is the phone. The S9's Facebook app has its Groups channel enabled, and
-the shade can be read like `wa_notify.py` reads WhatsApp's, with no taps. That is under
-measurement: see `PROJECT_STATUS.md` 2026-11-21.
+**Israeli Facebook groups: the bell reader (2026-11-22).** Scraping is off (`FB_PUBLIC_ENABLED=0`,
+Meta blocks GitHub IPs). Mail, phone push and desktop push never carry group posts (all
+measured; per-group push offers only Highlights/Off). Only the in-app bell lists them, within
+minutes, for the 30 groups set to "All posts" (`facebook_notify_list.md`).
+`fb_bell_ext/` is an unpacked MV3 extension in Or's Facebook Chrome profile. It is the one
+exception to "never automate his account", on Or's "test it", and it is read-only: it never
+clicks, scrolls or calls Facebook APIs. It keeps one pinned facebook.com/notifications tab, where
+Facebook pushes new entries live and a MutationObserver reads them. A reload every 30-45 min
+(07:00-23:30, never while Or is on the tab) is the safety net. Any checkpoint, login or block
+sign stops it for 3 days and alerts Telegram.
+`fb_bell.py` receives on 127.0.0.1:8765 and makes each entry a `facebook/<group>` lead: post
+URL plus the ~50-char snippet, through `pipeline.ingest`. Facts that cost time:
+- `multi_permalinks` is a comma list, newest first; the snippet belongs to the first post.
+- "has N new posts." entries have no text and are skipped.
+- Some entries end "22m · 1 reaction · 9 comments".
+- Entries up to 24 h old are ingested; the morning reload catches up the night, and URL dedup
+  stops repeat pushes.
+- Keep httpx logging off INFO: its URLs carry the API keys.
+
+**The receiver does not survive a reboot yet:** start `fb_bell.py` again by hand (to-do in
+`PROJECT_STATUS.md`).
 
 **Git Bash heredocs eat backslashes.** A regex written to a file through `python - <<'EOF'`
 lost its `\b` (became a literal backspace) and silently matched nothing. Edit code with the
@@ -387,7 +401,7 @@ Nearly all behavior is data in `config.py`, loaded from `.env` via a minimal bui
 2. **Low competition matters** — marketplace bid-wars (20+ bids) are near-worthless; direct
    channels (Facebook/Telegram/Reddit DMs) are preferred. Freelancer.com is on trial/skepticism.
 3. **Zero cost forever, and never automate the user's Facebook account** (logged-out scraping
-   only; email covers the rest).
+   only). The single exception is the read-only bell reader `fb_bell_ext/` (Or, 2026-11-22).
 4. **Based in Israel — remote or on-site-in-Israel only.** Roles locked to another
    country/region with no remote-from-Israel option (US-only, US work authorization/citizenship
    required, LATAM-only, UK-only, on-site abroad) are gated out as `gate_location`; the LLM

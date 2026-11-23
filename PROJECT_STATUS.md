@@ -1112,12 +1112,46 @@ Cancel, nothing saved). Or believed he had set them all.
   still held only the same 4 non-group notifications. The probe now falls back to Wi-Fi and was
   restarted for 24 h (pid 14340, until about 09:34 on 11-23).
 
+**2026-11-22: research + desktop-push test** (report, local only and git-excluded:
+`reports/Facebook group posts real time.md`). No official API, RSS or scraper route reaches
+private groups; the mbasic scrapers are dead; stealth browsers have no Facebook record. Top
+no-risk candidate was desktop Chrome push read from Windows. **Tested and dead:** Chrome
+already had facebook.com push allowed and Facebook's "Chrome push" on (Windows had Chrome
+toasts off, but Chrome's own `Platform Notifications` store records every push it gets).
+Since ~11-17 it holds ~590 Facebook pushes: page/Instagram comments and "you are now a member"
+notices, **0 group posts**. Desktop push follows the same per-group Highlights/Off setting.
+Remaining route (needs Or's yes, bends the no-automation rule): an unpacked MV3 extension in
+his own Chrome watching one facebook.com/notifications tab (~190 loads/day, kill switch on any
+checkpoint).
+
+**2026-11-22 18:15: bell reader live (TEST).** Or said "test it" and loaded `fb_bell_ext/`
+unpacked in his Facebook Chrome profile; `fb_bell.py` receives on 127.0.0.1:8765 (log
+`fb_bell.log`, `--stats`). First load: 14 entries 16 s after install, newest 1 min old, 11 fresh
+ones gated/scored, none ≥6. Learned: `multi_permalinks` is a comma list of post ids (newest
+first; the snippet is the first post's), and "has N new posts." entries carry no text, so they
+are logged but not ingested. Snippets are only ~50 chars. **Live confirmed 18:28:** a post 1 min
+old arrived in the open tab with no reload (an ad, gated); the re-sent old ones deduped by URL.
+An entry whose age label did not parse is now treated as fresh when unread (one was dropped).
+**23:10 night prep:** `FRESH_MINUTES` 60 → 24 h (no reloads 23:30-07:00, so the morning reload
+is the night's catch-up; an 8 h old entry also arrived live). Entries ending "22m · 1 reaction ·
+9 comments" now parse (age + snippet, `_TAIL_RE`). PC sleep is "never" on AC and DC. A
+tonight-only watchdog (scratchpad `fb_bell_watchdog.ps1`, log `fb_bell_watchdog.log`) restarts
+the receiver if port 8765 closes, until 09:00 on 11-23. `--score-test` on a one-line Hebrew
+"who can build an AI agent for my business" scores 7.
+**Night 11-22→23:** ran unattended. 62 live entries and 16 on reloads; 6 scored, 21 gated, 29
+dedup, 0 ≥6 (nothing relevant was posted). Live entries kept arriving at night with no reload
+(00:32, 06:24). The phone probe ended with **0 `ch=group`** in ~24 h: the phone-push route is
+closed; the bell reader replaces it.
+
 ### Next session
-- Read `fb_notify_probe.log`: count `ch=group` lines. If there are some, build `fb_notify.py`
-  (poll every 1-2 min from the home loop, label `facebook/<group>`, title + text as `raw_text`).
-  If there are none, Facebook has no free real-time route left; say so to Or and stop spending on it.
-  Push "Highlights" means only suggested posts arrive, so a handful of `ch=group` lines would be a
-  sample, not full coverage.
+- **Bell reader survives a PC restart (Or, 2026-11-22).** Today `fb_bell.py` is started by hand
+  and dies on reboot; Chrome reopens the extension, but it has nobody to POST to. Start the
+  receiver from `reddit_loop.pyw` (or its own Startup-folder shortcut, like `wa_loop`), check it
+  is alive from the home loop, and alert on Telegram when no heartbeat arrived for ~2 h in
+  07:00-23:30.
+- After ~a week of the bell reader: count leads ≥6 from `facebook/*` vs. before. If the ~50-char
+  snippet is too short to score, consider letting Or tap through from Telegram rather than
+  opening posts automatically.
 - Tune `_ollama_confirm` (drops some good group names).
 
 ## Open items

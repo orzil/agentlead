@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "AgentLead bell reader",
+  "version": "0.1.0",
+  "description": "Read-only: reads the group-post lines on facebook.com/notifications and hands them to the local AgentLead receiver (127.0.0.1:8765). Never clicks, scrolls, posts or calls Facebook APIs.",
+  "permissions": ["alarms", "tabs", "storage"],
+  "host_permissions": ["https://www.facebook.com/*", "http://127.0.0.1:8765/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
